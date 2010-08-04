@@ -10,3 +10,6 @@
 /home/twl/Development/alaris/alaris/bin/Debug/plugins/FeedHandlerPlugin.dll
 /home/twl/Development/alaris/FeedHandlerPlugin/obj/Debug/FeedHandlerPlugin.dll
 /home/twl/Development/alaris/FeedHandlerPlugin/obj/Debug/FeedHandlerPlugin.dll.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/plugins/alaris-mysqld.exe
+/home/twl/Development/alaris/alaris/bin/Debug/plugins/alaris-mysqld.exe.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/plugins/mysql.data.dll

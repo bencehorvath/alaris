@@ -243,7 +243,7 @@ namespace Alaris.Core
 			Utilities.AdminNick = _anick;
 			Utilities.AdminHost = _ahost;
 			
-			var mysqlRegex = new Regex(@"mysql_enabled\s=\s(?<enabled>0|1)\s*\n*\r*mysql_data\s=\s(?<host>\S+),(?<user>\S+),(?<pass>\S+),(?<db>\S+)");
+			var mysqlRegex = new Regex(@"mysql_enabled\s=\s(?<enabled>\d)\s*\n*\r*mysql_data=(?<host>\S+),(?<user>\S+),(?<pass>\S+),(?<db>\S+)");
 			
 			if(!mysqlRegex.IsMatch(config))
 				throw new ConfigFileInvalidException("The specified configuration file is invalid.");

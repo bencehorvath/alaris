@@ -8,3 +8,6 @@
 /home/twl/Development/alaris/alaris/bin/Debug/plugins/ChannelRightsPlugin.dll
 /home/twl/Development/alaris/ChannelRightsPlugin/obj/Debug/ChannelRightsPlugin.dll
 /home/twl/Development/alaris/ChannelRightsPlugin/obj/Debug/ChannelRightsPlugin.dll.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/plugins/alaris-mysqld.exe
+/home/twl/Development/alaris/alaris/bin/Debug/plugins/alaris-mysqld.exe.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/plugins/mysql.data.dll

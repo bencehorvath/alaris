@@ -1,0 +1,5 @@
+/home/twl/Development/alaris/alaris/bin/Debug/mysql.data.dll
+/home/twl/Development/alaris/alaris/bin/Debug/alaris-mysqld.exe.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/alaris-mysqld.exe
+/home/twl/Development/alaris/alaris-mysqld/obj/Debug/alaris-mysqld.exe
+/home/twl/Development/alaris/alaris-mysqld/obj/Debug/alaris-mysqld.exe.mdb

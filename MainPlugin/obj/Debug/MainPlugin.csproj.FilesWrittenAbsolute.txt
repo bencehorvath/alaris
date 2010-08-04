@@ -8,3 +8,6 @@
 /home/twl/Development/alaris/alaris/bin/Debug/plugins/MainPlugin.dll
 /home/twl/Development/alaris/MainPlugin/obj/Debug/MainPlugin.dll
 /home/twl/Development/alaris/MainPlugin/obj/Debug/MainPlugin.dll.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/plugins/alaris-mysqld.exe
+/home/twl/Development/alaris/alaris/bin/Debug/plugins/alaris-mysqld.exe.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/plugins/mysql.data.dll

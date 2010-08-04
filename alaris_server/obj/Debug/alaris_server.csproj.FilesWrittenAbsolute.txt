@@ -8,3 +8,6 @@
 /home/twl/Development/alaris/alaris/bin/Debug/alaris_server.exe
 /home/twl/Development/alaris/alaris_server/obj/Debug/alaris_server.exe
 /home/twl/Development/alaris/alaris_server/obj/Debug/alaris_server.exe.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/alaris-mysqld.exe
+/home/twl/Development/alaris/alaris/bin/Debug/alaris-mysqld.exe.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/mysql.data.dll
