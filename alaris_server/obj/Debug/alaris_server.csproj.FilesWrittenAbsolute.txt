@@ -1,0 +1,10 @@
+/home/twl/Development/alaris/alaris/bin/Debug/alaris.exe
+/home/twl/Development/alaris/alaris/bin/Debug/alaris.exe.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/AlarisAPI.dll
+/home/twl/Development/alaris/alaris/bin/Debug/AlarisAPI.dll.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/irc.dll
+/home/twl/Development/alaris/alaris/bin/Debug/irc.dll.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/alaris_server.exe.mdb
+/home/twl/Development/alaris/alaris/bin/Debug/alaris_server.exe
+/home/twl/Development/alaris/alaris_server/obj/Debug/alaris_server.exe
+/home/twl/Development/alaris/alaris_server/obj/Debug/alaris_server.exe.mdb

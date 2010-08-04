@@ -3,27 +3,10 @@
   <MonoDevelop.Ide.DebuggingService>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService>
-  <MonoDevelop.Ide.Workbench ActiveDocument="irc/AssemblyInfo.cs" ctype="Workbench">
-    <Files>
-      <File FileName="irc/WhoisInfo.cs" Line="1" Column="1" />
-      <File FileName="irc/Ctcp/CtcpListener.cs" Line="1" Column="1" />
-      <File FileName="irc/Ctcp/CtcpResponder.cs" Line="1" Column="1" />
-      <File FileName="irc/Ctcp/CtcpSender.cs" Line="1" Column="1" />
-      <File FileName="irc/Ctcp/CtcpUtil.cs" Line="1" Column="1" />
-      <File FileName="irc/Dcc/DccChatSession.cs" Line="1" Column="1" />
-      <File FileName="irc/Dcc/DccFileInfo.cs" Line="1" Column="1" />
-      <File FileName="irc/Dcc/DccFileSession.cs" Line="1" Column="1" />
-      <File FileName="irc/Dcc/DccFileSessionManager.cs" Line="1" Column="1" />
-      <File FileName="irc/Dcc/DccListener.cs" Line="1" Column="1" />
-      <File FileName="irc/Dcc/DccUserInfo.cs" Line="34" Column="4" />
-      <File FileName="irc/Dcc/DccUtil.cs" Line="1" Column="1" />
-      <File FileName="irc/AssemblyInfo.cs" Line="28" Column="36" />
-    </Files>
+  <MonoDevelop.Ide.Workbench ctype="Workbench">
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="irc" expanded="True" selected="True" />
-        </State>
+        <State expanded="True" />
       </Pad>
       <Pad Id="ClassPad">
         <State expanded="True" selected="True" />

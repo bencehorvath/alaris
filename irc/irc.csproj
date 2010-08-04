@@ -10,7 +10,7 @@
     <Description>Alaris' IRC library.
 Thanks to Thresher</Description>
     <AssemblyName>irc</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <RootNamespace>irc</RootNamespace>
     <ReleaseVersion>2.3</ReleaseVersion>
   </PropertyGroup>

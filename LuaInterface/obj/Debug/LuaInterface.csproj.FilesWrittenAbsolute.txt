@@ -1,0 +1,6 @@
+/home/twl/Development/alaris/LuaInterface/bin/Debug/Yanesdk.dll
+/home/twl/Development/alaris/LuaInterface/bin/Debug/lua513net.dll
+/home/twl/Development/alaris/LuaInterface/bin/Debug/LuaInterface.dll.mdb
+/home/twl/Development/alaris/LuaInterface/bin/Debug/LuaInterface.dll
+/home/twl/Development/alaris/LuaInterface/obj/Debug/LuaInterface.dll
+/home/twl/Development/alaris/LuaInterface/obj/Debug/LuaInterface.dll.mdb

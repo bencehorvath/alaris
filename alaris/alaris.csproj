@@ -8,7 +8,7 @@
     <ProjectGuid>{827FC720-BEE2-4357-B29F-0C2BDF51472D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AssemblyName>alaris</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <Description>Alaris IRC Bot</Description>
     <RootNamespace>Alaris</RootNamespace>
     <StartupObject>Alaris.Core.Entry</StartupObject>
