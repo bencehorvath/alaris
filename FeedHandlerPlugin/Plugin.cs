@@ -73,10 +73,11 @@ namespace Alaris.FeedHandlerPlugin
 		
 		public void Start()
 		{
-			FeedFactory.CreateFeedRunner(new Uri("http://github.com/mangos/mangos/commits/master.atom"), ref _connection, _channels, "mangos", 10000, "@mangos");
+			var mang = FeedFactory.CreateFeedRunner(new Uri("http://github.com/mangos/mangos/commits/master.atom"), ref _connection, _channels, "mangos", 10000, "@mangos");
 			
-			FeedFactory.CreateFeedRunner(new Uri("http://github.com/Twl/alaris/commits/master.atom"), ref _connection, _channels, "alaris", 11000, "@alaris");
-			
+			var alar = FeedFactory.CreateFeedRunner(new Uri("http://github.com/Twl/alaris/commits/master.atom"), ref _connection, _channels, "alaris", 11000, "@alaris");
+			FeedFactory.FeedRunners.Add(mang);
+			FeedFactory.FeedRunners.Add(alar);
 			
 			FeedFactory.StartRunners();
 	

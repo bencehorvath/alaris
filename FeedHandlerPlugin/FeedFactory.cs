@@ -23,7 +23,7 @@ namespace Alaris.FeedHandlerPlugin
 {
 	public static class FeedFactory
 	{
-		public static List<FeedRunner> FeedRunners;
+		public static List<FeedRunner> FeedRunners = new List<FeedRunner>();
 		
 		static FeedFactory ()
 		{
