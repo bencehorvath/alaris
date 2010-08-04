@@ -280,7 +280,8 @@ namespace Alaris.Extras
 			var match = getBrandRegex.Match(content);
 			string cpu = (match.Groups["first"].ToString() + " " + match.Groups["second"].ToString());
 			
-			return cpu.Substring(1);
+			//return cpu.Substring(1);
+			return cpu;
 			
         }
 	}
