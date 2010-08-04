@@ -25,7 +25,7 @@ namespace Alaris.Extras
 		public void RefreshDatabaseManager()
 		{
 			var channel = new TcpChannel();
-			ChannelServices.RegisterChannel(channel, true);
+			ChannelServices.RegisterChannel(channel, false);
 			
 			_manager = (DatabaseManager)Activator.GetObject(typeof(DatabaseManager), "tcp://localhost:9091/DatabaseManager");
 			

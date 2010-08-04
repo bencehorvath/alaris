@@ -33,7 +33,7 @@ namespace Alaris.Core
 		private List<string> _channels = new List<string>();
 		private string _anick, _auser, _ahost;
 		private CrashHandler sCrashHandler = Singleton<CrashHandler>.Instance;
-		private ClusterManager sClusterManager;
+		private DatabaseManager sDatabaseManager = Singleton<DatabaseManager>.Instance;
 		private readonly Guid _guid = Guid.NewGuid();
 		private readonly string _configfile;
 		private const int listener_port = 35221;
@@ -47,7 +47,7 @@ namespace Alaris.Core
 		/// MySQL data (host, user etc.).
 		/// Size: 4 (DB is last)
 		/// </summary>
-		public string[] MysqlData = null;
+		public string[] MysqlData = new string[4];
 		
 		/// <summary>
 		/// Determines whether the communication to and dependance of alaris_server is set.
@@ -140,18 +140,8 @@ namespace Alaris.Core
 			
 			// start database server.
 			if(MysqlEnabled)
-			{
-				var opts = new ProcessStartInfo();
-				opts.CreateNoWindow = false;
-				opts.WindowStyle = ProcessWindowStyle.Normal;
-				opts.FileName = "/usr/bin/mono";
-				opts.Arguments = "alaris-mysqld.exe";
-				Process.Start(opts);
-				
-				Thread.Sleep(1000);
-				
-				sClusterManager = Singleton<ClusterManager>.Instance;
-				
+			{	
+				sDatabaseManager.Initialize(MysqlData[0], MysqlData[1], MysqlData[2], MysqlData[3]);
 			}
 			
 			Connect();

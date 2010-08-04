@@ -148,11 +148,19 @@ namespace Alaris.Core
 			
 			if(msg.StartsWith("@sayid ") && MysqlEnabled)
 			{
-				var id = Convert.ToInt32(msg.Remove(0,7));
+				int id = 0;
+				try { id = Convert.ToInt32(msg.Remove(0,7)); }
+				catch { return; }
 				
-				var row = sClusterManager.GetDatabaseManager().QueryFirstRow("SELECT message FROM messages WHERE id = '"+id+"'");
+				var row = sDatabaseManager.QueryFirstRow("SELECT msg FROM messages WHERE id = '"+id+"'");
 				
-				_connection.Sender.PublicMessage(chan, row["message"].ToString());
+				if(row == null)
+				{
+					_connection.Sender.PublicMessage(chan, "Nincs ilyen sor.");
+					return;
+				}
+				
+				_connection.Sender.PublicMessage(chan, row["msg"].ToString());
 			}
 			
 			_manager.RunPublicHandlers(user, chan, msg);

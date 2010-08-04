@@ -36,10 +36,16 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dep\MySql.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAlaris.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="DatabaseManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\irc\irc.csproj">

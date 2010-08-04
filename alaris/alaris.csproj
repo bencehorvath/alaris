@@ -55,17 +55,15 @@
     <Reference Include="Mono.Debugger, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\dep\mysql.data.dll</HintPath>
+      <HintPath>..\dep\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Remoting" />
-    <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alaris.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="ScriptManager.cs" />
-    <Compile Include="Log.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="PublicMessageHandler.cs" />
     <Compile Include="API.cs" />
@@ -92,10 +90,6 @@
     <ProjectReference Include="..\AlarisAPI\AlarisAPI.csproj">
       <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
       <Name>AlarisAPI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\alaris-mysqld\alaris-mysqld.csproj">
-      <Project>{70CE9E95-D47E-4A01-A85D-BC76BC1E95AC}</Project>
-      <Name>alaris-mysqld</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
