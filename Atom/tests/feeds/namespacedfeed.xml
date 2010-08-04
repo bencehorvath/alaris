@@ -1,0 +1,318 @@
+<atom:feed
+ xmlns:atom='http://purl.org/atom/ns#'
+ version='0.3'>
+  <atom:title>The 80/20 Solution</atom:title>
+  <atom:link
+   rel='alternate'
+   type='text/html'
+   href='http://www.eighty-twenty.net/blog' />
+  <atom:modified>2004-02-04T15:04:03-06:00</atom:modified>
+  <atom:tagline>It's just good enough</atom:tagline>
+  <atom:generator
+   name='PLT'>http://pltscheme.org</atom:generator>
+  <atom:author>
+    <atom:name>Gordon Weakliem</atom:name>
+    <atom:email>gweakliem@oddpost.com</atom:email>
+    <atom:url>http://www.eighty-twenty.net/blog</atom:url>
+  </atom:author>
+  <atom:copyright>Copyright 2003, Gordon
+  Weakliem</atom:copyright>
+  <atom:entry>
+    <atom:modified>2004-02-04T15:04:03-06:00</atom:modified>
+    <atom:issued>2004-02-04T15:04:03-06:00</atom:issued>
+    <atom:id>urn:www-eighty-twenty-net:1061</atom:id>
+    <atom:link
+     type='text/html'
+     rel='alternate'
+     href='http://www.eighty-twenty.net/blog/urn:www-eighty-twenty-net:1061.html' />
+    <atom:title>Atom.NET</atom:title>
+    <atom:summary>My first brush with Atom.NET was a bit
+    disappointing</atom:summary>
+    <atom:author>
+      <atom:name>Gordon Weakliem</atom:name>
+    </atom:author>
+    <atom:created>2004-02-04T14:06:06-07:00</atom:created>
+    <dc:subject
+     xmlns:dc='http://purl.org/dc/elements/1.1/'>
+    weblog</dc:subject>
+    <atom:content
+     type='application/xhtml+xml'
+     lang='en-us'>
+      <xhtml:div
+       xmlns:xhtml='http://www.w3.org/1999/xhtml'>I ran across a
+      mention of 
+      <xhtml:a
+       href='http://atomnet.sourceforge.net/'>Atom.NET</xhtml:a>
+      , which piqued my interest since I've been writing an Atom
+      0.3 posting library. Unfortunately, Atom.NET has a couple
+      of shortcomings, from my perspective: 
+      <xhtml:ul>
+        <xhtml:li>It doesn't allow for extensibility; for
+        instance, I use &lt;dc:subject&gt; to indicate categories
+        on entries, but there's no way to expose that in the
+        Atom.NET model. That is to say, there's no extensibility
+        points.</xhtml:li>
+        <xhtml:li>Worse still, Atom.NET won't parse valid feeds
+        such as 
+        <xhtml:a
+         href='http://www.feedvalidator.org/check?url=http%3A%2F%2Fwww.eighty-twenty.net%2Fblog%3Fflav%3Datom'>
+        my own</xhtml:a>
+        .</xhtml:li>
+        <xhtml:li>The methods for reading and writing Atom
+        content are at the feed level only, but the Atom API
+        specifies that posts are created by submitting an
+        &lt;atom:entry&gt; element. So Atom.NET can't be used for
+        for implementing the posting API.</xhtml:li>
+        <xhtml:li>In general, I think that the ToString() method
+        on the objects in the Atom.Core namespace would be more
+        useful if it output the XML representation of each Atom
+        object. At the least, the objects should be
+        XML-serializable as Atom format.</xhtml:li>
+      </xhtml:ul>
+      </xhtml:div>
+    </atom:content>
+  </atom:entry>
+  <atom:entry>
+    <atom:modified>2004-02-02T17:45:51-06:00</atom:modified>
+    <atom:issued>2004-02-02T17:45:51-06:00</atom:issued>
+    <atom:id>urn:www-eighty-twenty-net:1060</atom:id>
+    <atom:link
+     type='text/html'
+     rel='alternate'
+     href='http://www.eighty-twenty.net/blog/urn:www-eighty-twenty-net:1060.html' />
+    <atom:title>Confessions Of a Conditional-GET
+    Ignorer</atom:title>
+    <atom:summary>I'm not handling ETags or conditional get, but
+    there's an excuse</atom:summary>
+    <atom:author>
+      <atom:name>Gordon Weakliem</atom:name>
+    </atom:author>
+    <atom:created>2004-02-02T16:47:40-07:00</atom:created>
+    <dc:subject
+     xmlns:dc='http://purl.org/dc/elements/1.1/'>
+    weblog/wordup</dc:subject>
+    <atom:content
+     type='application/xhtml+xml'
+     lang='en-us'>
+      <xhtml:div
+       xmlns:xhtml='http://www.w3.org/1999/xhtml'>
+      <xhtml:a
+       href='http://weblog.infoworld.com/udell/2004/02/02.html#a907'>
+      Jon Udell has outed me as an Conditional-GET
+      ignorer</xhtml:a>
+      . I started to implement this, but the archive link is more
+      important to me right now. I'm not sure what my hits / day
+      or bandwidth stats are, but I haven't been hit with an
+      overage charge yet, so ETags &amp; Conditional-Get haven't
+      bubbled up my priority list yet.</xhtml:div>
+    </atom:content>
+  </atom:entry>
+  <atom:entry>
+    <atom:modified>2004-01-31T16:53:25-06:00</atom:modified>
+    <atom:issued>2004-01-31T16:53:25-06:00</atom:issued>
+    <atom:id>urn:www-eighty-twenty-net:1059</atom:id>
+    <atom:link
+     type='text/html'
+     rel='alternate'
+     href='http://www.eighty-twenty.net/blog/urn:www-eighty-twenty-net:1059.html' />
+    <atom:title>Future Enhancements</atom:title>
+    <atom:summary>There's nothing like writing your own weblog
+    software to get you thinking about your
+    content.</atom:summary>
+    <atom:author>
+      <atom:name>Gordon Weakliem</atom:name>
+    </atom:author>
+    <atom:created>2004-01-31T15:54:56-07:00</atom:created>
+    <dc:subject
+     xmlns:dc='http://purl.org/dc/elements/1.1/'>
+    weblog/wordup</dc:subject>
+    <atom:content
+     type='application/xhtml+xml'
+     lang='en-us'>
+      <xhtml:div
+       xmlns:xhtml='http://www.w3.org/1999/xhtml'>
+        <xhtml:p>There's nothing like writing your own weblog
+        software to get you thinking about your content. 
+        <xhtml:a
+         href='http://weblog.infoworld.com/udell/2004/01/31.html'
+         class='HiJon'>Jon Udell's latest on analyzing blog
+        content</xhtml:a>
+        , along with his recent entries on 
+        <xhtml:a
+         href='http://weblog.infoworld.com/udell/2004/01/22.html#a839'>
+        Dynamic Categories</xhtml:a>
+        , bring to mind some thoughts I've been percolating for a
+        while. One thing I've found is that while my weblog
+        supports categories, I'm not really thrilled about static
+        categories as an organizational device. One thing I've
+        been thinking recently is that it might be nice to be
+        able to annotate posts with other items that I find
+        related to an original post, both as part of the
+        authoring process, and after the fact. Sometimes, I'll
+        find a post that gets me thinking about a topic, but it's
+        not directly relevant, or I just don't want to take the
+        effort to work the link into my writing. Other times,
+        I'll find an article after posting an item and it'll
+        restart a train of thought that inspired the earlier
+        post; I'll want to annotate the original, but not change
+        anything in the actual content. I've been thinking that I
+        could use &lt;link rel="related"&gt; tags inside of the
+        Atom entries where my posts are stored, and then have the
+        render output those as html &lt;a&gt; tags. Querying on
+        related link tags, or spidering link tags, would probably
+        be more revealing than static categories.</xhtml:p>
+        <xhtml:img
+         src='http://www.eighty-twenty.net/pix/atomposter.png'
+         align='center' />
+        <xhtml:p>This weblog implements the Atom 0.3 API for
+        posting. My posting interface is pretty primitive, but
+        it's pretty satisfying to use. I've been working off and
+        on on moving that code into a NewsGator compatible (also
+        SharpReader and RSS Bandit compatible) plugin, but my
+        current interface works well enough, and whatever free
+        time I have has been occupied with working on the WordUp!
+        engine.</xhtml:p>
+        <xhtml:p>You may have noticed that there's a tag on the
+        right for the Archives, but there's no link. That's next
+        on my to do list, I've started implementing the code for
+        it. I'd also like to import my old entries from my Radio
+        weblog, but there's not really any point until I can make
+        them accessible. Finally, I realized recently that the
+        articles that were imported from my pyBlosxom weblog have
+        attributes stripped from the HTML markup, due to buggy
+        XSLT. I've fixed the XSLT, but again, there's not much
+        point fixing it until I can make those entries accessible
+        again.</xhtml:p>
+      </xhtml:div>
+    </atom:content>
+  </atom:entry>
+  <atom:entry>
+    <atom:modified>2004-01-31T16:29:13-06:00</atom:modified>
+    <atom:issued>2004-01-31T16:29:13-06:00</atom:issued>
+    <atom:id>urn:www-eighty-twenty-net:1058</atom:id>
+    <atom:link
+     type='text/html'
+     rel='alternate'
+     href='http://www.eighty-twenty.net/blog/urn:www-eighty-twenty-net:1058.html' />
+    <atom:title>Venture Capital</atom:title>
+    <atom:summary>Thoughts about business from a
+    programmer</atom:summary>
+    <atom:author>
+      <atom:name>Gordon Weakliem</atom:name>
+    </atom:author>
+    <atom:created>2004-01-31T15:30:43-07:00</atom:created>
+    <atom:content
+     type='application/xhtml+xml'
+     lang='en-us'>
+      <xhtml:div
+       xmlns:xhtml='http://www.w3.org/1999/xhtml'>I saw the movie
+      Tucker last night, it's an old movie from 1988, but I'd
+      never seen it. I remember a lot of buzz around it back when
+      it was new, but really, it was pretty mediorcre. My initial
+      reaction was that Tucker was a terrible businessman, he was
+      a one-man dotcom boom. True, if the movie's correct, he did
+      get screwed by the Big 3 and the government, but he asked
+      for it in a lot of ways. All this was brought to mind
+      reading 
+      <xhtml:a
+       href='http://www.tbray.org/ongoing/When/200x/2004/01/29/TermsheetBounce'>
+      Tim Bray's account of VC funding</xhtml:a>
+      . Every time I read something like this, I have to wonder
+      why someone would sell a big chunk of their enterprise to 
+      <xhtml:acronym
+       title='Venture Capitalits (not Viet Cong)'>
+      VCs</xhtml:acronym>
+      . Well, I know the reason, it's because you need money to
+      run a business, but I still think that you'd either have to
+      need a lot of capital (heavy manufacturing, not
+      programming), be really desperate, know the investor really
+      well, or not care much about your company to submit to some
+      of the terms Tim describes. I feel pretty much the same way
+      about public companies, what's the point of asking the
+      whole world to be your boss? I know, money. Of course, it's
+      easy for me to say all that, not being a business
+      owner.</xhtml:div>
+    </atom:content>
+  </atom:entry>
+  <atom:entry>
+    <atom:modified>2004-01-29T14:42:01-06:00</atom:modified>
+    <atom:issued>2004-01-29T14:42:01-06:00</atom:issued>
+    <atom:id>urn:www-eighty-twenty-net:1057</atom:id>
+    <atom:link
+     type='text/html'
+     rel='alternate'
+     href='http://www.eighty-twenty.net/blog/urn:www-eighty-twenty-net:1057.html' />
+    <atom:title>Still More On Inheritance</atom:title>
+    <atom:summary>Another post gets me thinking about inheritance
+    and default syntax in languages.</atom:summary>
+    <atom:author>
+      <atom:name>Gordon Weakliem</atom:name>
+    </atom:author>
+    <atom:created>2004-01-29T13:43:23-07:00</atom:created>
+    <dc:subject
+     xmlns:dc='http://purl.org/dc/elements/1.1/'>
+    programming</dc:subject>
+    <atom:content
+     type='application/xhtml+xml'
+     lang='en-us'>
+      <xhtml:div
+       xmlns:xhtml='http://www.w3.org/1999/xhtml'>Via Patrick
+      Logan, I found this item on 
+      <xhtml:a
+       href='http://beust.com/weblog/archives/000077.html'>JUnit
+      and Inheritance</xhtml:a>
+      over at Cedric Beust's weblog very interesting. Hristo
+      makes a comment that "inheritance IS evil and should almost
+      always be replaced with compositions (or AOP
+      introductions)". That's the approach that NUnit 2.0 takes,
+      where the 
+      <xhtml:code>[Setup]</xhtml:code>
+      and 
+      <xhtml:code>[TearDown]</xhtml:code>
+      attributes substitute for the overridden methods. Hani
+      follows this with "Inheritance isn't evil, people who don't
+      understand it or design for it are. It REALLY isn't hard to
+      be explicit and conscious of exactly where your subclass
+      points are, and use access modifiers (with smart use of
+      final) to clearly spell out this contract.". Bo follows up
+      with "As for 'forgetting' to call super I think this is a
+      pretty huge thing to forget. "Those observations lead to
+      two questions: 
+      <xhtml:ol>
+        <xhtml:li>Wouldn't it be better to design Java-like
+        languages so that 
+        <xhtml:code>final</xhtml:code>
+        (
+        <xhtml:code>sealed</xhtml:code>
+        ) is the default, and force the programmer to state their
+        intention with something like 
+        <xhtml:code>overrideable</xhtml:code>
+        ? Jon Tirsen points out that C# is better in this regard,
+        because it forces you to declare intent when declaring
+        and overridable method and when overriding a
+        method.</xhtml:li>
+        <xhtml:li>For the issue of calling 
+        <xhtml:code>super</xhtml:code>
+        , shouldn't the desired behavior be the default? Why not
+        create syntax to force the programmer to state intention
+        if they were doing something unusual?</xhtml:li>
+        <xhtml:li>Hani talks about a contract, yet Java provides
+        no mechanism for indicating contracts like "must call
+        super" or "may omit the call to super", outside of
+        freeform text. In fact, a non-final method in a non-final
+        class seems like an invitation to override. So does final
+        as default constitute "smart" use of final?</xhtml:li>
+      </xhtml:ol>
+      After years of doing C++, I finally reached a point where
+      everything got declared 
+      <xhtml:code>const</xhtml:code>
+      and 
+      <xhtml:code>private</xhtml:code>
+      until I had a reason to not have it that way, which was a
+      drag. I suppose the indication that there's been progress
+      is that there's no volume 2 of "Essential
+      Java".</xhtml:div>
+    </atom:content>
+  </atom:entry>
+</atom:feed>
+

@@ -1,0 +1,8 @@
+TODO
+----
+
+- html sanitization
+- atom discovery
+- add DTD support (see: http://www.mnot.net/drafts/draft-nottingham-atom-format-02.html#rfc.section.2)
+- rss <-> atom converter
+- atom sample aggregator

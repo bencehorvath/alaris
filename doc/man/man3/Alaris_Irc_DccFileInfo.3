@@ -1,0 +1,108 @@
+.TH "Alaris::Irc::DccFileInfo" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Irc::DccFileInfo \- 
+.PP
+Manages the information about the file being transfered.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDccFileInfo\fP (FileInfo fileInfo, long completeFileSize)"
+.br
+.RI "\fICreate a new instance using information sent from the remote user in his DCC Send message. \fP"
+.ti -1c
+.RI "\fBDccFileInfo\fP (FileInfo fileInfo)"
+.br
+.RI "\fICreate a new instance using the file information from a local file to be sent to a remote user. \fP"
+.ti -1c
+.RI "\fBDccFileInfo\fP (string fileName)"
+.br
+.RI "\fICreate a new instance using the file information from a local file to be sent to a remote user. \fP"
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "long \fBFileStartingPosition\fP\fC [get]\fP"
+.br
+.RI "\fIWhere to start reading or writing a file. Used during DCC Resume actions. \fP"
+.ti -1c
+.RI "long \fBBytesTransfered\fP\fC [get]\fP"
+.br
+.RI "\fIThe number of bytes sent or received so far. This Property is thread safe. \fP"
+.ti -1c
+.RI "long \fBCompleteFileSize\fP\fC [get]\fP"
+.br
+.RI "\fIThe length of the file. This number is either the actual size of a file being sent or the number sent in the DCC SEND request. \fP"
+.ti -1c
+.RI "string \fBDccFileName\fP\fC [get]\fP"
+.br
+.RI "\fIThe file's name with all spaces converted to underscores and without the path. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Manages the information about the file being transfered. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Alaris.Irc.DccFileInfo.DccFileInfo (FileInfo fileInfo, long completeFileSize)"
+.PP
+Create a new instance using information sent from the remote user in his DCC Send message. \fBParameters:\fP
+.RS 4
+\fIfileInfo\fP The file being received
+.br
+\fIcompleteFileSize\fP The size of the file being received as specified in the DCC Send request.
+.RE
+.PP
+
+.SS "Alaris.Irc.DccFileInfo.DccFileInfo (FileInfo fileInfo)"
+.PP
+Create a new instance using the file information from a local file to be sent to a remote user. \fBParameters:\fP
+.RS 4
+\fIfileInfo\fP The local file being sent
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the file does not already exist.
+.RE
+.PP
+
+.SS "Alaris.Irc.DccFileInfo.DccFileInfo (string fileName)"
+.PP
+Create a new instance using the file information from a local file to be sent to a remote user. \fBParameters:\fP
+.RS 4
+\fIfileName\fP The full pathname of local file being sent
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the file does not already exist.
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "long Alaris.Irc.DccFileInfo.BytesTransfered\fC [get]\fP"
+.PP
+The number of bytes sent or received so far. This Property is thread safe. A read-only long.
+.SS "long Alaris.Irc.DccFileInfo.CompleteFileSize\fC [get]\fP"
+.PP
+The length of the file. This number is either the actual size of a file being sent or the number sent in the DCC SEND request. A read-only long.
+.SS "string Alaris.Irc.DccFileInfo.DccFileName\fC [get]\fP"
+.PP
+The file's name with all spaces converted to underscores and without the path. A read-only string.
+.SS "long Alaris.Irc.DccFileInfo.FileStartingPosition\fC [get]\fP"
+.PP
+Where to start reading or writing a file. Used during DCC Resume actions. A read-only long indicating the location within the file.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

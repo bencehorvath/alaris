@@ -1,0 +1,1693 @@
+.TH "Alaris::Irc::Sender" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Irc::Sender \- 
+.PP
+This class is used to send all the IRC commands except for CTCP and DCC messages. Instances of this class are retrieved as properties of the \fBConnection\fP object. All methods in this class are thread safe.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAlaris::Irc::CommandBuilder\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBJoin\fP (string channel)"
+.br
+.RI "\fIJoin the specified channel. \fP"
+.ti -1c
+.RI "void \fBJoin\fP (string channel, string password)"
+.br
+.RI "\fIJoin a passworded channel. \fP"
+.ti -1c
+.RI "void \fBNick\fP (string newNick)"
+.br
+.RI "\fIChange the user's nickname. \fP"
+.ti -1c
+.RI "void \fBNickServ\fP (string password)"
+.br
+.RI "\fIIdentifies the bot with NickServ. \fP"
+.ti -1c
+.RI "void \fBNickServRegister\fP (string password, string email)"
+.br
+.RI "\fIRegister's the nick with NickServ. \fP"
+.ti -1c
+.RI "void \fBNames\fP (params string[] channels)"
+.br
+.RI "\fIRequest a list of all nicknames on a given channel. \fP"
+.ti -1c
+.RI "void \fBAllNames\fP ()"
+.br
+.RI "\fIRequest a list of all visible channels along with their users. If the server allows this kind of request then expect a rather large reply. \fP"
+.ti -1c
+.RI "void \fBList\fP (params string[] channels)"
+.br
+.RI "\fIRequest basic information about a channel, i.e. number of visible users and topic. \fP"
+.ti -1c
+.RI "void \fBAllList\fP ()"
+.br
+.RI "\fIRequest basic information for all the channels on the current network. \fP"
+.ti -1c
+.RI "void \fBChangeTopic\fP (string channel, string newTopic)"
+.br
+.RI "\fIChange the topic of the given channel. \fP"
+.ti -1c
+.RI "void \fBClearTopic\fP (string channel)"
+.br
+.RI "\fIClear the channel's topic. \fP"
+.ti -1c
+.RI "void \fBRequestTopic\fP (string channel)"
+.br
+.RI "\fIRequest the topic for the given channel. \fP"
+.ti -1c
+.RI "void \fBPart\fP (string reason, params string[] channels)"
+.br
+.RI "\fILeave the given channel. \fP"
+.ti -1c
+.RI "void \fBPart\fP (string channel)"
+.br
+.RI "\fILeave a channel without giving a reason. \fP"
+.ti -1c
+.RI "void \fBPublicNotice\fP (string channel, string message)"
+.br
+.RI "\fISend a notice to a channel. \fP"
+.ti -1c
+.RI "void \fBPrivateNotice\fP (string nick, string message)"
+.br
+.RI "\fISend a notice to a user. \fP"
+.ti -1c
+.RI "void \fBPublicMessage\fP (string channel, string message)"
+.br
+.RI "\fISend a message to all the users in a channel. \fP"
+.ti -1c
+.RI "void \fBPrivateMessage\fP (string nick, string message)"
+.br
+.RI "\fISend a message to a user. \fP"
+.ti -1c
+.RI "void \fBInvite\fP (string who, string channel)"
+.br
+.RI "\fIInvite a user to a channel. \fP"
+.ti -1c
+.RI "void \fBKick\fP (string channel, string reason, params string[] nicks)"
+.br
+.RI "\fIKick a user off a channel. \fP"
+.ti -1c
+.RI "void \fBIson\fP (string nick)"
+.br
+.RI "\fIRequest to know if a user is currenlty on IRC. \fP"
+.ti -1c
+.RI "void \fBWho\fP (string mask, bool operatorsOnly)"
+.br
+.RI "\fIRequest a list of users who match a given query. \fP"
+.ti -1c
+.RI "void \fBAllWho\fP ()"
+.br
+.RI "\fIRequest a list all visible users (whose mode is not +i) and those who don't have a common channel with the requesting client are listed. \fP"
+.ti -1c
+.RI "void \fBWhois\fP (string nick)"
+.br
+.RI "\fIRequest detailed information about a given user. \fP"
+.ti -1c
+.RI "void \fBAway\fP (string message)"
+.br
+.RI "\fISet the user status to away and set an automatic reply to any private message. \fP"
+.ti -1c
+.RI "void \fBUnAway\fP ()"
+.br
+.RI "\fITurns off the away status and the accompanying message. \fP"
+.ti -1c
+.RI "void \fBWhowas\fP (string nick)"
+.br
+.RI "\fIRequest information about a user who is no longer on IRC. \fP"
+.ti -1c
+.RI "void \fBWhowas\fP (string nick, int count)"
+.br
+.RI "\fIRequest information about a user who is no longer on IRC but with a maximum number of responses. \fP"
+.ti -1c
+.RI "void \fBRequestUserModes\fP ()"
+.br
+.RI "\fIRequest the modes set for this user. \fP"
+.ti -1c
+.RI "void \fBChangeUserMode\fP (\fBModeAction\fP action, \fBUserMode\fP mode)"
+.br
+.RI "\fIChanges this client's mode. To change another nick's mode use \fBChangeChannelMode\fP. \fP"
+.ti -1c
+.RI "void \fBChangeChannelMode\fP (string channel, \fBModeAction\fP action, \fBChannelMode\fP mode, string param)"
+.br
+.RI "\fIChange a channel's mode. \fP"
+.ti -1c
+.RI "void \fBRequestChannelList\fP (string channel, \fBChannelMode\fP mode)"
+.br
+.RI "\fIRequest the list of users that a channel keeps for the given mode.. \fP"
+.ti -1c
+.RI "void \fBRequestChannelModes\fP (string channel)"
+.br
+.RI "\fIRequest the modes of a channel. \fP"
+.ti -1c
+.RI "void \fBAction\fP (string channel, string description)"
+.br
+.RI "\fISend an action message to a channel. \fP"
+.ti -1c
+.RI "void \fBPrivateAction\fP (string nick, string description)"
+.br
+.RI "\fISend an action message to a user instead of a channel. \fP"
+.ti -1c
+.RI "void \fBRegister\fP (string newNick)"
+.br
+.RI "\fIRegister this connection with the IRC server. \fP"
+.ti -1c
+.RI "void \fBRaw\fP (string message)"
+.br
+.RI "\fISend an arbitrary text message to the IRC server. \fP"
+.ti -1c
+.RI "void \fBVersion\fP ()"
+.br
+.RI "\fIRequest the version of the IRC server program. \fP"
+.ti -1c
+.RI "void \fBVersion\fP (string targetServer)"
+.br
+.RI "\fIUsed to query the version of the IRC server program. \fP"
+.ti -1c
+.RI "void \fBMotd\fP ()"
+.br
+.RI "\fIRequest the 'Message Of The Day' from the current server. \fP"
+.ti -1c
+.RI "void \fBMotd\fP (string targetServer)"
+.br
+.RI "\fIRequest the 'Message Of The Day' from the given server. \fP"
+.ti -1c
+.RI "void \fBTime\fP ()"
+.br
+.RI "\fIRequest the local time from the current server. \fP"
+.ti -1c
+.RI "void \fBTime\fP (string targetServer)"
+.br
+.RI "\fIRequest the local time from the given server. \fP"
+.ti -1c
+.RI "void \fBWallops\fP (string message)"
+.br
+.RI "\fISend a message to all users who have the 'w' user mode set. \fP"
+.ti -1c
+.RI "void \fBInfo\fP ()"
+.br
+.RI "\fIRequest information about the software of the current IRC server. \fP"
+.ti -1c
+.RI "void \fBInfo\fP (string target)"
+.br
+.RI "\fIRequest information about the software of the target IRC server. \fP"
+.ti -1c
+.RI "void \fBAdmin\fP ()"
+.br
+.RI "\fIRequest information about the administrator of the current IRC server. \fP"
+.ti -1c
+.RI "void \fBAdmin\fP (string target)"
+.br
+.RI "\fIRequest information about the administrator of the target IRC server. \fP"
+.ti -1c
+.RI "void \fBLusers\fP ()"
+.br
+.RI "\fIRequest statistics about the size of the IRC network. \fP"
+.ti -1c
+.RI "void \fBLusers\fP (string hostMask, string targetServer)"
+.br
+.RI "\fIRequest statistics about the size of the IRC network. \fP"
+.ti -1c
+.RI "void \fBLinks\fP ()"
+.br
+.RI "\fIRequest all server names which are known by the current server. \fP"
+.ti -1c
+.RI "void \fBLinks\fP (params string[] masks)"
+.br
+.RI "\fIRequest all server names which are known by the target server and which match a given host mask. \fP"
+.ti -1c
+.RI "void \fBStats\fP (\fBStatsQuery\fP query)"
+.br
+.RI "\fIRequest certain kinds of statistics about the current server. \fP"
+.ti -1c
+.RI "void \fBStats\fP (\fBStatsQuery\fP query, string targetServer)"
+.br
+.RI "\fIRequest certain kinds of statistics about the current server. \fP"
+.ti -1c
+.RI "void \fBKill\fP (string nick, string reason)"
+.br
+.RI "\fIForcefully disconnect a user form the IRC server. This can only be used by Operators. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is used to send all the IRC commands except for CTCP and DCC messages. Instances of this class are retrieved as properties of the \fBConnection\fP object. All methods in this class are thread safe. 
+
+Due to the asynchronous nature of IRC, none of these commands have a return value. To get that value (or possibly an error) the client must handle the corresponding event. For example, to check if a user is online the client would send \fBSender.Ison\fP then check the value of the \fBListener.OnIson\fP event to receive the answer.
+.PP
+When a command can return an error, the possible error replies are listed. An error message will be sent via the \fBListener.OnError\fP event with one of the listed error codes as a parameter. When checking for these errors use the constants from \fBReplyCode\fP. 
+.PP
+The maximum length of any command string sent to the server is 512 characters.
+.PP
+.PP
+.nf
+Create a Connection object which will automatically create its own Sender
+            Connection connection = new Connection( args, false, false );       
+Send commands using the Connection object and its Sender instance.
+No need to keep a separate reference to the Sender object
+            connection.Sender.PublicMessage('#thresher', 'hello');
+.fi
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Alaris.Irc.Sender.Action (string channel, string description)"
+.PP
+Send an action message to a channel. This is actually a CTCP command but it is so widely used that it is included here. These are the ' Laughs' type messages.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The target channel.
+.br
+\fIdescription\fP A description of the action. If this is too long it will be truncated.
+.RE
+.PP
+.PP
+.nf
+Express an emotion...
+                    connection.Sender.Action('#thresher', 'Kicks down the door' );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel name is not valid. Will also be thrown if the description is null or empty.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnAction\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Admin (string target)"
+.PP
+Request information about the administrator of the target IRC server. This returns information such as the administrator's email address, geographical location and whatever else the IRC is configured to send as a response. 
+.PP
+Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHSERVER 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fItarget\fP Either a user nickname or a specific IRC server connected to the current network. If it is a nickname then return the information about the server to which 'nick' is connected. Can include wildcards.
+.RE
+.PP
+.PP
+.nf
+Request info about the administrator of the specified server
+                    connection.Sender.Admin( 'sunray.sharkbite.org' );
+Request info about the administrator of the server Bob is connected to
+                    connection.Sender.Admin('Bob');
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnAdmin\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Admin ()"
+.PP
+Request information about the administrator of the current IRC server. This returns information such as the administrator's email address, geographical location and whatever else the IRC is configured to send as a response.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnAdmin\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.AllList ()"
+.PP
+Request basic information for all the channels on the current network. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_TOOMANYMATCHES 
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnList\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.AllNames ()"
+.PP
+Request a list of all visible channels along with their users. If the server allows this kind of request then expect a rather large reply. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_TOOMANYMATCHES 
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnNames\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.AllWho ()"
+.PP
+Request a list all visible users (whose mode is not +i) and those who don't have a common channel with the requesting client are listed. \fBSee also:\fP
+.RS 4
+\fBListener.OnWho\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Away (string message)"
+.PP
+Set the user status to away and set an automatic reply to any private message. This functions as a kind of IRC answering machine. It is normally used to indicate that the user is away from IRC.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP The message that will be sent back to others when you are away. Overly long message will be truncated.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the message is null or empty.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnAway\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.ChangeChannelMode (string channel, \fBModeAction\fP action, \fBChannelMode\fP mode, string param)"
+.PP
+Change a channel's mode. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NEEDMOREPARAMS 
+.IP "\(bu" 2
+ERR_KEYSET 
+.IP "\(bu" 2
+ERR_NOCHANMODES 
+.IP "\(bu" 2
+ERR_CHANOPRIVSNEEDED 
+.IP "\(bu" 2
+ERR_USERNOTINCHANNEL 
+.IP "\(bu" 2
+ERR_UNKNOWNMODE 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The target channel.
+.br
+\fIaction\fP Add or remove.
+.br
+\fImode\fP The target mode.
+.br
+\fIparam\fP An optional parameter for certain modes. If the mode does not require one this should be null.
+.RE
+.PP
+.PP
+.nf
+Give 'nick' the ability to talk on a moderated channel, i.e. add Voice
+                    connection.Sender.ChangeChannelMode('#thresher', ModeAction.Add, ChannelMode.Voice,'nick' );
+Make a channel private
+                    connection.Sender.ChangeChannelMode( '#thresher', ModeAction.Add, ChannelMode.Private, null );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel name is invalid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnChannelModeChange\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.ChangeTopic (string channel, string newTopic)"
+.PP
+Change the topic of the given channel. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NEEDMOREPARAMS 
+.IP "\(bu" 2
+ERR_NOTONCHANNEL 
+.IP "\(bu" 2
+ERR_CHANOPRIVSNEEDED 
+.IP "\(bu" 2
+ERR_NOCHANMODES 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The target channel.
+.br
+\fInewTopic\fP The new topic.
+.RE
+.PP
+.PP
+.nf
+                connection.Sender.ChangeTopic( '#thresher','Beta 27 Released' );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel name is not valid or the topic is null.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnTopicChanged\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.ChangeUserMode (\fBModeAction\fP action, \fBUserMode\fP mode)"
+.PP
+Changes this client's mode. To change another nick's mode use \fBChangeChannelMode\fP. Away cannot be set here but should be set using \fBSender.Away\fP or removed using \fBSender.UnAway\fP.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIaction\fP Add or remove a mode.
+.br
+\fImode\fP The mode to be changed.
+.RE
+.PP
+.PP
+.nf
+Turn off invisibility
+                    connection.Sender.ChangeUserMode( ModeAction.Remove, UserMode.Invisible );
+Turn on wallops (and get a lot of IRC garbage)
+                    connection.Sender.ChangeUserMode( ModeAction.Add, UserMode.Wallops );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the UserMode parameter is Away.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnUserModeChange\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.ClearTopic (string channel)"
+.PP
+Clear the channel's topic. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NEEDMOREPARAMS 
+.IP "\(bu" 2
+ERR_NOTONCHANNEL 
+.IP "\(bu" 2
+ERR_CHANOPRIVSNEEDED 
+.IP "\(bu" 2
+ERR_NOCHANMODES 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The target channel.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel name is not valid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnTopicChanged\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Info (string target)"
+.PP
+Request information about the software of the target IRC server. This returns information describing the server: its version, when it was compiled, the patchlevel, when it was started, and any other miscellaneous information which may be considered relevant.
+.PP
+Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHSERVER 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fItarget\fP Either a user nickname or a specific IRC server connected to the current network. If it is a nickname then return the information about the server to which 'nick' is connected. Can include wildcards.
+.RE
+.PP
+.PP
+.nf
+Query a specific server
+                    connection.Sender.Info( 'sunray.sharkbite.org' );
+Query the server Bob is connected to
+                    connection.Sender.Info('Bob');
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnInfo\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Info ()"
+.PP
+Request information about the software of the current IRC server. This returns information describing the server: its version, when it was compiled, the patchlevel, when it was started, and any other miscellaneous information which may be considered relevant.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnInfo\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Invite (string who, string channel)"
+.PP
+Invite a user to a channel. The parameter nickname is the nickname of the person to be invited to the target channel channel. There is no requirement that the channel the target user is being invited to must exist or be a valid channel. However, if the channel exists, only members of the channel are allowed to invite other users. When the channel has invite-only flag set, only channel operators may an invite.
+.PP
+Only the user inviting and the user being invited will receive notification of the invitation. Other channel members are not notified. (This is unlike the mode changes, and is occasionally the source of trouble for users.)
+.PP
+After the invite is sent the IRC server will signal that it was correctly received by calling \fBListener.OnInviteSent\fP. 
+.PP
+Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NEEDMOREPARAMS 
+.IP "\(bu" 2
+ERR_NOSUCHNICK 
+.IP "\(bu" 2
+ERR_NOTONCHANNEL 
+.IP "\(bu" 2
+ERR_USERONCHANNEL 
+.IP "\(bu" 2
+ERR_CHANOPRIVSNEEDED 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwho\fP The nick of the person to invite
+.br
+\fIchannel\fP The channel they are invited to join.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the nickname or channel is not valid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnInviteSent\fP, \fBListener.OnInvite\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Ison (string nick)"
+.PP
+Request to know if a user is currenlty on IRC. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NEEDMOREPARAMS 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fInick\fP Target user.
+.RE
+.PP
+.PP
+.nf
+Query for a nick
+                    connection.Sender.Ison( 'joe' );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the nickname is not valid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnIson\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Join (string channel, string password)"
+.PP
+Join a passworded channel. \fBParameters:\fP
+.RS 4
+\fIchannel\fP Channel to join
+.br
+\fIpassword\fP The channel's pasword. Cannot be null or empty.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel name is not valid or the password is null.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnJoin\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Join (string channel)"
+.PP
+Join the specified channel. Once a user has joined a channel, he receives information about all commands his server receives affecting the channel. This includes JOIN, MODE, KICK, PART, QUIT and of course PRIVMSG/NOTICE. This allows channel members to keep track of the other channel members, as well as channel modes.
+.PP
+If a JOIN is successful, the user receives a JOIN message as confirmation and is then sent the channel's topic ( \fBListener.OnTopicRequest\fP and the list of users who are on the channel ( \fBListener.OnNames\fP ), which MUST include the user joining.
+.PP
+Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NEEDMOREPARAMS 
+.IP "\(bu" 2
+ERR_BANNEDFROMCHAN 
+.IP "\(bu" 2
+ERR_INVITEONLYCHAN 
+.IP "\(bu" 2
+ERR_BADCHANNELKEY 
+.IP "\(bu" 2
+ERR_CHANNELISFULL 
+.IP "\(bu" 2
+ERR_BADCHANMASK 
+.IP "\(bu" 2
+ERR_NOSUCHCHANNEL 
+.IP "\(bu" 2
+ERR_TOOMANYCHANNELS 
+.IP "\(bu" 2
+ERR_TOOMANYTARGETS 
+.IP "\(bu" 2
+ERR_UNAVAILRESOURCE 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The channel to join. Channel names must begin with '&', '#', '+' or '!'.
+.RE
+.PP
+.PP
+.nf
+Most channels you will see begin with the '#'. The others are reserved
+for special channels and may not even be available on a particular server.
+                    connection.Sender.Join('#thresher');
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel name is not valid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnJoin\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Kick (string channel, string reason, params string[] nicks)"
+.PP
+Kick a user off a channel. Possible Replies 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NEEDMOREPARAMS 
+.IP "\(bu" 2
+ERR_NOSUCHCHANNEL 
+.IP "\(bu" 2
+ERR_BADCHANMASK 
+.IP "\(bu" 2
+ERR_CHANOPRIVSNEEDED 
+.IP "\(bu" 2
+ERR_USERNOTINCHANNEL 
+.IP "\(bu" 2
+ERR_NOTONCHANNEL 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fInicks\fP One or more users to kick.
+.br
+\fIchannel\fP Which channel to kick the user from.
+.br
+\fIreason\fP Why.
+.RE
+.PP
+.PP
+.nf
+Kick a single user
+                    connection.Sender.Kick('#thresher','No Perl please','lwall' );
+Kicks several users at once
+                    connection.Sender.Kick( '#thresher', 'Bye', 'John','Dick','Harry' );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the nickname or channel is not valid or the reason is null.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnKick\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Kill (string nick, string reason)"
+.PP
+Forcefully disconnect a user form the IRC server. This can only be used by Operators. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOPRIVILEGES 
+.IP "\(bu" 2
+ERR_NEEDMOREPARAMS 
+.IP "\(bu" 2
+ERR_NOSUCHNICK 
+.IP "\(bu" 2
+ERR_CANTKILLSERVER 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fInick\fP User to kill
+.br
+\fIreason\fP The reason for disconnecting the user.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the nick is not valid or the reason is null.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnKill\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Links (params string[] masks)"
+.PP
+Request all server names which are known by the target server and which match a given host mask. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHSERVER 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fImasks\fP Either a single string which acts as a host mask filter for the query. Or two strings with the first as host mask and the second a target server. Any other arguments will be ignored.
+.RE
+.PP
+.PP
+.nf
+Request names from the current server
+                    connection.Sender.Links();
+Request names of all servers ending in '.net' from the current server
+                    connection.Sender.Links('*.edu' );
+Request names of all servers ending in '.edu' from '*.gnome.org' servers
+                    connection.Sender.Links('*.edu', '*.gnome.org');
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the masks are too long.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnLinks\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Links ()"
+.PP
+Request all server names which are known by the current server. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHSERVER 
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnLinks\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.List (params string[] channels)"
+.PP
+Request basic information about a channel, i.e. number of visible users and topic. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_TOOMANYMATCHES 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannels\fP One or more channel names.
+.RE
+.PP
+.PP
+.nf
+Make the request for a single channel
+                    connection.Sender.List( '#test' );
+Make the request for several channels at once
+                    connection.Sender.List( '#test','#alpha',#'bravo' );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If any of the channels are not valid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnList\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Lusers (string hostMask, string targetServer)"
+.PP
+Request statistics about the size of the IRC network. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHSERVER 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhostMask\fP Limits the kinds of servers included in the response by specifiying a hostname string. Can include wildcards.
+.br
+\fItargetServer\fP Specifies the server that should process the request. Can be null to indicate that the current server should handle the request. Can include wildcards.
+.RE
+.PP
+.PP
+.nf
+Request stats from the current server
+                    connection.Sender.Lusers();
+Request stats about all servers ending in '.net' from the current server
+                    connection.Sender.Lusers('*.net', null );
+Request stats about all servers ending in '.net' from 'west.gamesnet.net'
+                    connection.Sender.Lusers('*.net', 'west.gamesnet.net');
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the host mask and server names are too long.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnLusers\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Lusers ()"
+.PP
+Request statistics about the size of the IRC network. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHSERVER 
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnLusers\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Motd (string targetServer)"
+.PP
+Request the 'Message Of The Day' from the given server. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOMOTD 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fItargetServer\fP The FQDN of the IRC server to query. Wildcards are allowed. Must be a server part of the same IRC network this connection is connected to.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnMotd\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Motd ()"
+.PP
+Request the 'Message Of The Day' from the current server. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOMOTD 
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnMotd\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Names (params string[] channels)"
+.PP
+Request a list of all nicknames on a given channel. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_TOOMANYMATCHES 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannels\fP One or more channel names.
+.RE
+.PP
+.PP
+.nf
+Make the request for a single channel
+                    connection.Sender.Names( '#test' );
+Make the request for several channels at once
+                    connection.Sender.Names( '#test','#alpha','#bravo' );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If any of the channels are not valid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnNames\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Nick (string newNick)"
+.PP
+Change the user's nickname. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NONICKNAMEGIVEN 
+.IP "\(bu" 2
+ERR_ERRONEUSNICKNAME 
+.IP "\(bu" 2
+ERR_NICKNAMEINUSE 
+.IP "\(bu" 2
+ERR_NICKCOLLISION 
+.IP "\(bu" 2
+ERR_UNAVAILRESOURCE 
+.IP "\(bu" 2
+ERR_RESTRICTED 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fInewNick\fP The new nickname
+.RE
+.PP
+.PP
+.nf
+Make sure and verify that the nick is valid and of the right length
+                    string nick = GetUserInput();
+                    if( Rfc2812Util.IsValidNick( connection, nick) ) { 
+                    connection.Sender.Nick( nick );
+                    }
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the nickname is not valid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnNick\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.NickServ (string password)"
+.PP
+Identifies the bot with NickServ. \fBParameters:\fP
+.RS 4
+\fIpassword\fP The password for the nick 
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.NickServRegister (string password, string email)"
+.PP
+Register's the nick with NickServ. \fBParameters:\fP
+.RS 4
+\fIpassword\fP The password for the nick. 
+.br
+\fIemail\fP The e-mail to which the confirmation code will be sent to. 
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Part (string channel)"
+.PP
+Leave a channel without giving a reason. \fBParameters:\fP
+.RS 4
+\fIchannel\fP The channel to leave.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel name is not valid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPart\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Part (string reason, params string[] channels)"
+.PP
+Leave the given channel. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NEEDMOREPARAMS 
+.IP "\(bu" 2
+ERR_NOSUCHCHANNEL 
+.IP "\(bu" 2
+ERR_NOTONCHANNEL 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreason\fP A goodbye message.
+.br
+\fIchannels\fP One or more channels to leave.
+.RE
+.PP
+.PP
+.nf
+Leave a single channel
+                    connection.Sender.Part('Goodbye', '#test' );
+Leave several at once
+                    connection.Sender.Part( 'Goodbye', '#test','#alpha',#'bravo' );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel name is not valid or the reason is null.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPart\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.PrivateAction (string nick, string description)"
+.PP
+Send an action message to a user instead of a channel. \fBParameters:\fP
+.RS 4
+\fInick\fP The target user.
+.br
+\fIdescription\fP A description of the action. If this is too long it will be truncated.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the nickname is not valid. Will also be thrown if the description is null or empty.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPrivateAction\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.PrivateMessage (string nick, string message)"
+.PP
+Send a message to a user. If the target user status is away, the \fBListener.OnAway\fP event will be called along with the away message if any. 
+.PP
+Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NORECIPIENT 
+.IP "\(bu" 2
+ERR_NOTEXTTOSEND 
+.IP "\(bu" 2
+ERR_NOSUCHNICK 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fInick\fP The target user.
+.br
+\fImessage\fP A message. If the message is too long it will be broken up into smaller piecese which will be sent sequentially.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the nickname is not valid or if the message is null or empty.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPrivate\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.PrivateNotice (string nick, string message)"
+.PP
+Send a notice to a user. The difference between a notice and a normal message is that automatic replies must never be sent in response to a notice. This rule applies to servers too - they must not send any error reply back to the client on receipt of a notice. The object of this rule is to avoid loops between clients automatically sending something in response to something it received. See \fBSender.PrivateMessage\fP for possible errors.
+.PP
+\fBParameters:\fP
+.RS 4
+\fInick\fP The target nickname.
+.br
+\fImessage\fP Text message. If the text is too large to be sent in one piece it will be broken up into smaller strings which will then be sent individually.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the nick is not valid or the message is empty or null.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPrivateNotice\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.PublicMessage (string channel, string message)"
+.PP
+Send a message to all the users in a channel. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_CANNOTSENDTOCHAN 
+.IP "\(bu" 2
+ERR_NOTEXTTOSEND 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The target channel.
+.br
+\fImessage\fP A message. If the message is too long it will be broken up into smaller piecese which will be sent sequentially.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel name is not valid or if the message is null.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPublic\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.PublicNotice (string channel, string message)"
+.PP
+Send a notice to a channel. The difference between a notice and a normal message is that automatic replies must never be sent in response to a notice. This rule applies to servers too - they must not send any error reply back to the client on receipt of a notice. The object of this rule is to avoid loops between clients automatically sending something in response to something it received. See \fBSender.PublicMessage\fP for possible errors.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The target channel.
+.br
+\fImessage\fP Text message. If the text is too large to be sent in one piece it will be broken up into smaller strings which will then be sent individually.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel name is not valid or the message is empty or null.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPublicNotice\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Raw (string message)"
+.PP
+Send an arbitrary text message to the IRC server. Messages that are too long will be truncated. There is no corresponding events so it will be necessary to check for standard reply codes and possibly errors.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP A text message.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the message is null or empty.
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Register (string newNick)"
+.PP
+Register this connection with the IRC server. This method should be called when the initial attempt to register with the IRC server fails because the nick is already taken. To be informed when this fails you must be subscribed to \fBListener.OnNickError\fP. If \fBConnection.HandleNickTaken\fP is set to true (which is its default value) then Thresher will automatically create an alternate nick and use that. The new nick can be retrieved by calling Connection.ConnectionData.Nick.
+.PP
+\fBParameters:\fP
+.RS 4
+\fInewNick\fP The changed nick name.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBNameGenerator\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.RequestChannelList (string channel, \fBChannelMode\fP mode)"
+.PP
+Request the list of users that a channel keeps for the given mode.. Each channel maintains a list of those banned, those excepted from a ban, those on automatic invite, and the channel creator. Use this method to retreieve one of those lists.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The taregt channel.
+.br
+\fImode\fP Must be one of: Ban, Exception, Invitation, or ChannelCreator. 
+.RE
+.PP
+.PP
+.nf
+Request the channel's banned list
+                    connection.Sender.RequestChannelList('#thresher', ChannelMode.Ban );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel is invalid or the ChannelMode is not one of the 4 allowed types.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnChannelList\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.RequestChannelModes (string channel)"
+.PP
+Request the modes of a channel. \fBParameters:\fP
+.RS 4
+\fIchannel\fP The target channel.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel is invalid, null, or empty.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnChannelModeRequest\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.RequestTopic (string channel)"
+.PP
+Request the topic for the given channel. The reply will be sent via the \fBListener.OnTopicRequest\fP event. If there is no topic then \fBListener.OnError\fP will be called with a code of ReplyCode.RPL_NOTOPIC. 
+.PP
+Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NEEDMOREPARAMS 
+.IP "\(bu" 2
+ERR_NOTONCHANNEL 
+.IP "\(bu" 2
+ERR_CHANOPRIVSNEEDED 
+.IP "\(bu" 2
+ERR_NOCHANMODES 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The target channel.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the channel name is not valid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnTopicRequest\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.RequestUserModes ()"
+.PP
+Request the modes set for this user. \fBSee also:\fP
+.RS 4
+\fBListener.OnUserModeRequest\fP, \fBUserMode\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Stats (\fBStatsQuery\fP query, string targetServer)"
+.PP
+Request certain kinds of statistics about the current server. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHSERVER 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIquery\fP The type of query to send. See \fBStatsQuery\fP for choice.
+.br
+\fItargetServer\fP Specifies the server that should process the request. Can include wildcards.
+.RE
+.PP
+.PP
+.nf
+Request list of Operators from the server 'irc.gnome.org'
+                    connection.Sender.Stats( StatsQuery.Operators, 'irc.gnome.org' );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the target server name is too long.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnStats\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Stats (\fBStatsQuery\fP query)"
+.PP
+Request certain kinds of statistics about the current server. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHSERVER 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIquery\fP The type of query to send. See \fBStatsQuery\fP for choice.
+.RE
+.PP
+.PP
+.nf
+Request server link stats
+                    connection.Sender.Stats( StatsQuery.Connections );
+.fi
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnStats\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Time (string targetServer)"
+.PP
+Request the local time from the given server. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHSERVER 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fItargetServer\fP The FQDN of the IRC server to query. Wildcards are allowed. Must be a server part of the same IRC network this connection is connected to.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnTime\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Time ()"
+.PP
+Request the local time from the current server. \fBSee also:\fP
+.RS 4
+\fBListener.OnTime\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.UnAway ()"
+.PP
+Turns off the away status and the accompanying message. 
+.SS "void Alaris.Irc.Sender.Version (string targetServer)"
+.PP
+Used to query the version of the IRC server program. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHSERVER 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fItargetServer\fP The FQDN of the IRC server to query. Wildcards are allowed. Must be a server part of the same IRC network this connection is connected to.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnVersion\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Version ()"
+.PP
+Request the version of the IRC server program. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHSERVER 
+.PP
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnVersion\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Wallops (string message)"
+.PP
+Send a message to all users who have the 'w' user mode set. This will likely be forbidden to all but IRC OPS.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP Any text message.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the message is empty or null.
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Who (string mask, bool operatorsOnly)"
+.PP
+Request a list of users who match a given query. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_TOOMANYLINES 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fImask\fP The mask passed to Who is matched against a users' host, real name or nickname. It uses the wildcard system of matching where the '*' can stand for any number of characters and '?' stands for any single character. The query will only match against one component so it is not possible to match against both nick and host for example. 
+.br
+\fIoperatorsOnly\fP True if the query should only try to match the mask to users designated operators.
+.RE
+.PP
+.PP
+.nf
+Find all users from Russia, i.e. who have .ru in their hostnames
+                    connection.Sender.Who('*.ru', false );
+Find all users from clan [DX], i.e. have '[DX]' in their nick
+                    connection.Sender.Who('[DX]*', false );
+.fi
+.PP
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the mask is null,empty, or too long.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnWho\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Whois (string nick)"
+.PP
+Request detailed information about a given user. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NOSUCHNICK 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fInick\fP The nick of the query subject.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the nick is invalid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnWhois\fP, \fBWhoisInfo\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Whowas (string nick, int count)"
+.PP
+Request information about a user who is no longer on IRC but with a maximum number of responses. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NONICKNAMEGIVEN 
+.IP "\(bu" 2
+ERR_WASNOSUCHNICK 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcount\fP The maximum number of replies the IRC server should send back.
+.br
+\fInick\fP Target nick
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the nick is invalid or if count is less than or equal to zero.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnWhowas\fP
+.PP
+.RE
+.PP
+
+.SS "void Alaris.Irc.Sender.Whowas (string nick)"
+.PP
+Request information about a user who is no longer on IRC. Possible Errors 
+.PD 0
+
+.IP "\(bu" 2
+ERR_NONICKNAMEGIVEN 
+.IP "\(bu" 2
+ERR_WASNOSUCHNICK 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fInick\fP Target nick
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the nick is invalid.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnWhowas\fP
+.PP
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

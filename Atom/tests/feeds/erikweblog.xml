@@ -1,0 +1,1041 @@
+<feed version="0.3"
+    xmlns="http://purl.org/atom/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xml:lang="en">
+
+    <title>Erik&#39;s Linkblog</title>
+    <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/"/>
+    <modified>2004-03-05T21:57:41Z</modified>
+
+    <author>
+        <name>Erik C. Thauvin</name>
+        <url>http://www.thauvin.net/linkblog/</url>
+        <email>erik@thauvin.net</email>
+    </author>
+
+    <tagline>The Link is Out There!</tagline>
+    <generator url="http://wwww.imacination.com/jtalk/" version="jTalk v1.0.32">jTalk</generator>
+    <copyright>Copyright (c) 2004 Erik C. Thauvin</copyright>
+
+    <entry>
+        <title>[Mar 5, 2004 13:57 PST] 13 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-05#Beat:956"/>
+        <modified>2004-03-05T21:57:41Z</modified>
+        <issued>2004-03-05T13:57:41-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-05:links.2004.03.05.956</id>
+        <created>2004-03-05T21:57:41Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<img border="0" src="http://www.thauvin.net/sponsors/SponsorServlet/rss/banner?id=7" alt="Category: Sponsor" title="Category: Sponsor" align="left"><a href="http://www.thauvin.net/sponsors/SponsorServlet/rss?id=7"><b>ReportMill</b></a> &mdash; the best Java reporting tool available.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#520"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.javalobby.org/thread.jspa?forumID=61&amp;threadID=11716"><b>JINI Community Event</b></a>. The JINI Community is organizing its seventh Jini Community Meeting, March 23-25 in Boston, MA.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#521"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.sys-con.com/story/?storyid=43922&amp;rss=1"><b>Sun Claims GPL Would Fork Java</b></a>. Sun draws the line at open sourcing the stuff.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#522"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://java.sun.com/developer/technicalArticles/Interviews/gaming/"><b>Java Technology Gets in the Game</b></a>: A Conversation with Chief Gaming Officer, Chris Melissinos.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#523"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Russ &mdash; <a href="http://www.russellbeattie.com/notebook/1006560.html"><b>Back to SHOUTcast</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#524"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Dave &mdash; <a href="http://rollerweblogger.org/page/roller/20040305#hard_to_imagine_a_worse"><b>Hard to imagine a worse model for UI development than HTTP</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#525"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Eric &mdash; <a href="http://jroller.com/page/ericfj/20040305#running_junit_from_ant_in"><b>Running Junit from Ant in Eclipse</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#526"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Nick &mdash; <a href="http://www.systemmobile.com/blog/index.php?p=56&amp;more=1&amp;c=1&amp;tb=1&amp;pb=1"><b>Sun's Junk Status</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#527"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Brian &mdash; <a href="http://kasparov.skife.org/blog/2004/03/05#groovy-rpm"><b>Groovy RPM =)</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#528"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/macblog.gif" alt="Categories: Mac, Blog" align="left" border="0"></a>Paul&nbsp; &mdash; <a href="http://www.internet-nexus.com/2004_02_29_archive.htm#107851244631180095"><b>How will Apple grow?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#529"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/development.gif" alt="Categories: Development" align="left" border="0"></a>Guide:&nbsp;<a href="http://www.osdir.com/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=203"><b>Subversion for CVS Users</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#530"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Mike &mdash; <a href="http://techdirt.com/articles/20040305/1119212.shtml"><b>Geeks Aren't Just Guys</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#531"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://www.informationweek.com/story/showArticle.jhtml?articleID=18300025"><b>Operator Of Bob Vila Web Site Sued For Spamming</b></a>. <em>Didn't he get sued a few years back because he&nbsp;actually wasn't a&nbsp;licensed general contractor?</em>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#532"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/movies.gif" alt="Categories: Movies" align="left" border="0"></a><a href="http://www.newsisfree.com/iclick/i,33177399,703,f/"><b>Filming starts on new 'Batman' movie</b></a>. Christian Bale, Michael Caine, Gary Oldman, Morgan Freeman and Katie Holmes.]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 5, 2004 10:41 PST] 28 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-05#Beat:820"/>
+        <modified>2004-03-05T18:41:29Z</modified>
+        <issued>2004-03-05T10:41:29-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-05:links.2004.03.05.820</id>
+        <created>2004-03-05T18:41:29Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#492"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.ibm.com/developerworks/library/j-slik/index.html?ca=drs-j1004"><b>Design cross-platform Java UIs with native performance</b></a>. Can you write Java code that compiles across several platforms but still performs as fast as native code?
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#493"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.ibm.com/developerworks/library/j-aopsc2.html?ca=drs-j1004"><b>Use AOP to maintain legacy Java applications</b></a>. If you've ever inherited and then had to maintain a Java-based legacy application, then this article is for you.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#494"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Daniel &mdash; <a href="http://weblogs.java.net/pub/wlg/1091"><b>Internet Applications</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#495"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.thauvin.net/blog/stories.jsp?id=95"><strong>Erik's Pulse</strong></a> has been <a href="http://www.sys-con.com/java/newsletters/in176.cfm">published</a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#496"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/development.gif" alt="Categories: Development" align="left" border="0"></a><a href="http://otn.oracle.com/pub/notes/technote_encodings.html"><b>Choosing XML Character Encodings</b></a>. This Technical Note offers some best practices for applying character encodings to XML.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#497"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.theserverside.com/news/thread.jsp?thread_id=24347"><b>Java.sun.com's letter to the community on their downtime</b></a>. The Sun Developer Team has come out with a letter to the community, letting us know about their upgrade.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#498"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Bhagvan &mdash; <a href="http://jroller.com/page/bhagvank/20040304#java_server_faces_is_it"><b>Java Server Faces : Is it ready for enterprise ?? (Part One)</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#499"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobilejavablog.gif" alt="Categories: Mobile, Java, Blog" align="left" border="0"></a>Rusty &mdash; <a href="http://www.cafeaulait.org/#news2004March5"><b>Sun has released the J2ME Web Services Specification</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#500"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Dion &mdash; <a href="http://www.theserverside.com/news/thread.jsp?thread_id=24345"><b>JBoss releases Nukes on JBoss 1.0</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#501"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Nicholas &mdash; <a href="http://jroller.com/page/nicholas/20040304#webstart_not_getting_latest_jars"><b>WebStart not getting latest jars</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#502"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Matt &mdash; <a href="http://raibledesigns.com/page/rd/20040305#great_css_designs"><b>Great CSS Designs</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#503"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Vinny &mdash; <a href="http://www.j2eegeek.com/blog/archives/2004_03_01_j2eegeek_archive.html#107846192088790191"><b>Java Servlet and JSP Cookbook</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#504"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Leslie &mdash; <a href="http://www.decafbad.com/blog/links/boodjocjod.html"><b>Quick Links</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#505"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Bill &mdash; <a href="http://www.pycs.net/bbum/2004/3/4/#200403041"><b>GNU GPL: Free as in herpes</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#506"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Dan &mdash; <a href="http://www.scraprap.com/.3c3ec9a9"><b>Ask Jeeves pays $343 million for Excite and iWon</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#507"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/technologyblog.gif" alt="Categories: Technology, Blog" align="left" border="0"></a>Jeremy &mdash; <a href="http://loosewire.typepad.com/blog/2004/03/x1_goes_pro.html"><b>X1 Goes Pro</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#508"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/technologyblog.gif" alt="Categories: Technology, Blog" align="left" border="0"></a>Rogers &mdash; <a href="http://www.cadenhead.org/workbench/2004/03/05.html#a1460"><b>Translator converts Atom feeds to RSS 2.0</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#509"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Simon &mdash; <a href="http://simon.incutio.com/archive/2004/03/05/handyExtensions"><b>Two handy FireFox extensions</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#510"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Sylvain &mdash; <a href="http://www.anyware-tech.com/blogs/sylvain/archives/000106.html"><b>Where is Avalon going?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#511"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Damien &mdash; <a href="http://jroller.com/page/kame/20040304#re_c_wrapper_generator_for"><b>Re: C++ wrapper generator for Java classes?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#512"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Glen &mdash; <a href="http://jroller.com/page/gstamp/20040304#boolean_getboolean"><b>Boolean.getBoolean()</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#513"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Karl &mdash; <a href="http://www.wordsoup.com/word/archives/001375.html"><b>Blog Vampires</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#514"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/windows.gif" alt="Categories: Windows" align="left" border="0"></a><a href="http://sourceforge.net/project/shownotes.php?release_id=221700"><b>WinSCP 3.5.6</b></a>, a SFTP and SCP client for Windows using SSH.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#515"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a><a href="http://linuxtoday.com/news_story.php3?ltsn=2004-03-05-021-26-NW-HE-RH"><b>Fedora Core 1 Ported to AMD64</b></a>. Red Hat and the Fedora Project today announced the availability of a port of Fedora Core 1 to AMD64.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#516"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a><a href="http://news.bbc.co.uk/go/click/rss/0.91/public/-/2/hi/technology/3535669.stm"><b>SCO reveals more Linux payments</b></a>. SCO is suing more users of the open source operating system, as well as taking cash from some of them.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#517"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobile.gif" alt="Categories: Mobile" align="left" border="0"></a><a href="http://news.com.com/2100-1041_3-5170489.html?part=rss&amp;tag=feed&amp;subj=news"><b>Psion's biggest shareholder pans Symbian sale</b></a>. A company that holds 13 percent of Psion is the first to announce opposition to the planned sale of Psion's stake in the smart-phone joint venture to Nokia.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#518"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://news.netcraft.com/archives/2004/03/05/spams_tenth_birthday_today.html"><b>Spam's Tenth Birthday Today</b></a>. Spam's tenth anniversary is today.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-05#519"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/sponsor.gif" alt="Categories: Sponsor" align="left" border="0"></a>Today's sponsor is <a href="http://reportmill.com/index_erik.html"><b>ReportMill Software</b></a>.]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 4, 2004 15:35 PST] 21 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-04#Beat:024"/>
+        <modified>2004-03-04T23:35:56Z</modified>
+        <issued>2004-03-04T15:35:56-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-04:links.2004.03.04.024</id>
+        <created>2004-03-04T23:35:56Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#471"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a>Tutorial: <a href="http://www-106.ibm.com/developerworks/edu/i-dw-wes-jsf-i.html?ca=dnt-59"><b>Developing JavaServer Faces Applications Using WebSphere Studio 5.1.1</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#472"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www-106.ibm.com/developerworks/library/j-roadmap.html?ca=dnt-59"><strong>Getting on the open road: Migrate to the Java platform</strong></a>. A three-part series of roadmaps designed to assist developers of .NET, Windows client/server, and ASP applications make the jump to the Java platform.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#473"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a>Java programming dynamics, Part 6: <a href="http://www-106.ibm.com/developerworks/library/j-dyn0302.html?ca=dnt-59"><strong>Aspect-oriented changes with Javassist</strong></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#474"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a>Tune Eclipse's Startup performance with the <a href="http://www-106.ibm.com/developerworks/library/os-ecspy1/?ca=dnt-59"><strong>Runtime Spy</strong></a>, Part 1.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#475"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/development.gif" alt="Categories: Development" align="left" border="0"></a><a href="http://www.ibm.com/developerworks/xml/library/x-stand4/?ca=drs-t59"><b>A survey of XML standards</b></a>, Part 4.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#476"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobile.gif" alt="Categories: Mobile" align="left" border="0"></a><a href="http://www.ibm.com/developerworks/library/wi-elite23/?ca=drs-t59"><b>Secrets of the wireless elite: Alexei Polyakov</b></a>. A Russian developer in Japan talks about why westerners are going to be gratified by 3G.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#477"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobileblog.gif" alt="Categories: Mobile, Blog" align="left" border="0"></a>Russ &mdash; <a href="http://www.russellbeattie.com/notebook/1006552.html"><b>Jabber Goes Mobile</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#478"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobileblog.gif" alt="Categories: Mobile, Blog" align="left" border="0"></a>Frank&nbsp;&mdash; <a href="http://www.mobitopia.com/20040304.html#224226"><b>The fastest and cheapest pipe will win content</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#479"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/news.gif" alt="Categories: News" align="left" border="0"></a><a href="http://www.nytimes.com/2004/03/04/technology/04CND-DELL.html?ex=1393822800&amp;en=39bd8467d68d87fa&amp;ei=5007&amp;partner=USERLAND"><b>Dell Founder Steps Down as Chief Executive but Remains Chairman</b></a>. Michael Dell, step down as chief executive, but remain chairman.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#480"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Neil &mdash; <a href="http://jroller.com/page/nweber/20040304#jtwister_now_that_s_what"><b>JTwister &mdash; Now that's what I'm talking about</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#481"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Paul &mdash; <a href="http://radio.javaranch.com/2004/03/04/1078429442000.html"><b>Copying files in Java</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#482"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobilejavablog.gif" alt="Categories: Mobile, Java, Blog" align="left" border="0"></a>Steve &mdash; <a href="http://feeds.feedburner.com/LineOfSiteXML?m=20"><b>just where is the Palm MIDP 2.0 public beta?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#483"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Matt &mdash; <a href="http://raibledesigns.com/page/rd/20040304#jag_similar_to_appfuse_but"><b>JAG - similar to AppFuse, but offers more choices</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#484"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Hani &mdash; <a href="http://jroller.com/page/fate/20040304#eclipse_laf_huh"><b>Eclipse LAF: HUH?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#485"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Cameron &mdash; <a href="http://jroller.com/page/cpurdy/20040304#looking_for_a_swing_developer"><b>Looking for a Swing developer ..</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#486"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Carl &mdash; <a href="http://www.sixty4bit.com/mt/archives/2004/03/04/benchmarks_for_append.html"><b>Benchmarks for .append()</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#487"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Cedric &mdash; <a href="http://beust.com/weblog/archives/000091.html"><b>SGen clarifications</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#488"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://sourceforge.net/project/showfiles.php?group_id=103600"><b>JMWS 0.0.1</b></a>, a Java Managed Web System.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#489"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/tv.gif" alt="Categories: TV" align="left" border="0"></a><a href="http://news.com.com/2100-1047_3-5170156.html?part=rss&amp;tag=feed&amp;subj=news"><b>TiVo revenue up 85 percent</b></a>; loss narrows.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#490"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/hardware.gif" alt="Categories: Hardware" align="left" border="0"></a>Review: <a href="http://www.pcmag.com/article2/0,4149,1542579,00.asp?kc=PCRSS02129TX1K0000530"><b>Acer Ferrari 3000</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#491"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/movies.gif" alt="Categories: Movies" align="left" border="0"></a><a href="http://news.bbc.co.uk/go/click/rss/0.91/public/-/2/hi/entertainment/3534299.stm"><b>Court stops DVD-copying software</b></a>. A New York court bans sales of a DVD-copying program, after a similar ruling in California.]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 4, 2004 07:48 PST] 10 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-04#Beat:700"/>
+        <modified>2004-03-04T15:48:03Z</modified>
+        <issued>2004-03-04T07:48:03-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-04:links.2004.03.04.700</id>
+        <created>2004-03-04T15:48:03Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#461"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Merrick &mdash; <a href="http://jroller.com/page/mschinc/20040304#first_impressions_of_sgen"><b>First Impressions of SGen</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#462"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a><a href="http://www.nwfusion.com/news/2004/0304canamed.html?fsrc=netflash-rss"><b>CA named as SCO licensee</b></a>. Computer Associates has licensed The SCO Group's Intellectual Property License for Linux.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#463"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://freshmeat.net/releases/153249/"><b>PHP or Java Class Code Generator 1.0</b></a>. A generator of classes for accessing databases in the Java-beans style.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#464"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://www.eweek.com/article2/0,4149,1542577,00.asp?kc=EWRSS03119TX1K0000594"><b>Sweden Adopts EU Ban on Spam</b></a>. Sweden has belatedly adopted a European Union ban on unsolicited e-mail.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#465"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/perl.gif" alt="Categories: Perl" align="left" border="0"></a><a href="http://use.perl.org/articles/04/03/01/181242.shtml"><b>Perl 5.005_04</b></a> Released.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#466"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.theregister.co.uk/content/4/36020.html"><b>Sun Java site running sluggish on decaf</b></a>. Doctor orders cache injection.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#467"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/macblog.gif" alt="Categories: Mac, Blog" align="left" border="0"></a>Paul &mdash; <a href="http://www.internet-nexus.com/2004_02_29_archive.htm#107841363080971233"><b>Pepsi Super Bowl promo failing, Apple's 100 million song goal in serious danger</b></a>. <em>I've yet to see any of the bottles at&nbsp;my local grocery store.</em>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#468"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://sourceforge.net/project/showfiles.php?group_id=86360"><b>JTGL 0.65b</b></a>. Java Tiny Gfx Layer.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#469"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/music.gif" alt="Categories: Music" align="left" border="0"></a>Survey: <a href="http://zdnet.com.com/2100-1105_2-5169508.html"><b>Employees still swapping at work</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#470"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/news.gif" alt="Categories: News" align="left" border="0"></a><a href="http://zdnet.com.com/2100-1104-5169674.html"><b>Gates downplays Mickey Mouse rumors</b></a>. No bid, focused on software.]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 4, 2004 06:10 PST] 18 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-04#Beat:632"/>
+        <modified>2004-03-04T14:10:17Z</modified>
+        <issued>2004-03-04T06:10:17-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-04:links.2004.03.04.632</id>
+        <created>2004-03-04T14:10:17Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#443"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a>Mike &mdash; <a href="http://techdirt.com/articles/20040304/0111226.shtml"><b>AOL Launches Its Own Social Network Around ICQ</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#444"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/wireless.gif" alt="Categories: Wireless" align="left" border="0"></a>Mike &mdash; <a href="http://techdirt.com/news/wireless/article/3534"><b>Sell Your Own WiFi Access</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#445"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Ben &mdash; <a href="http://www.benpoole.com/weblog/200403040919"><b>Java agents</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#446"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11695"><b>Blitz JavaSpaces 2.0.1</b></a>, an open source JavaSpaces implementation.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#447"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a><a href="http://www.theregister.co.uk/content/4/36007.html"><b>&lsquo;We're just like the RIAA,&rsquo; says SCO</b></a>. Is your daughter safe?
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#448"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11696"><b>GUIFFY 6.0</b></a>, a diff/merge utility.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#449"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a>New <a href="http://www.jsurfer.org/article.php?sid=896"><b>IBM Software PowerPack evaluation program for Java</b></a> and .Net developers.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#450"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Hugo &mdash; <a href="http://jroller.com/page/hugopinto/20040304#is_jboss_s_source_still"><b>Is JBoss's source still open?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#451"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Kevin &mdash; <a href="http://kevinj.develop.com/weblog/view.do?id=1078398141318"><b>Entity Beans and Me!</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#452"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobilejava.gif" alt="Categories: Mobile, Java" align="left" border="0"></a><a href="http://sourceforge.net/project/showfiles.php?group_id=61907"><b>jtReversi 0.87</b></a>, a J2ME Reversi game.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#453"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobileblog.gif" alt="Categories: Mobile, Blog" align="left" border="0"></a>Michael &mdash; <a href="http://www.enterprisej2me.com/blog/java/?postid=38"><b>Configure mobile phhones</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#454"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://www.theregister.co.uk/content/22/36014.html"><b>Revealed: the true cost of broadband</b></a>. Move to Sweden, avoid Switzerland.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#455"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.sys-con.com/story/?storyid=43915&amp;rss=1"><b>How to Render Real-time Situation Displays I0x Faster Than Swing</b></a>. Interested in a way to accelerate Swing by a factor of ten or even twenty?
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#456"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/wireless.gif" alt="Categories: Wireless" align="left" border="0"></a><a href="http://www.infosyncworld.com/news/n/4673.html"><b>World's first Bluetooth 1.2-certified product</b></a>. CSR's notebook PC.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#457"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Daniel &mdash; <a href="http://weblogs.java.net/pub/wlg/1090"><b>Coming to Java from .Net</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#458"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11697"><b>JGoodies Forms 1.0.4</b></a> and <a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11698"><b>JGoodies Looks 1.2.1</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#459"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Leo &mdash; <a href="http://jroller.com/page/lsd/20040304#rethinking_attributes"><b>Rethinking attributes</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#460"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a><a href="http://www.theregister.co.uk/content/4/36017.html"><b>Email 'leak' suggests SCO got up to $100m from MS</b></a>. VC and IP deals cited as the route.]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 4, 2004 00:59 PST] 14 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-04#Beat:416"/>
+        <modified>2004-03-04T08:59:14Z</modified>
+        <issued>2004-03-04T00:59:14-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-04:links.2004.03.04.416</id>
+        <created>2004-03-04T08:59:14Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#429"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Joseph &mdash; <a href="http://www.sdlambdas.com/page/jyyi/20040303#minimalist_guide_to_installing_apache"><b>Minimalist Guide to Installing Apache 2.0.48, Tomcat 5.0.19, and JK2</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#430"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.alphaworks.ibm.com/tech/bridge2java?open&amp;ca=daw-rss-s8"><b>Interface Tool for Java</b></a>. A tool that allows Java programs to communicate with ActiveX objects.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#431"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Matt &mdash; <a href="http://postneo.com/2004/03/04.html#a3316"><b>Atom API: I Want My SOAP!</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#432"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Russ &mdash; <a href="http://www.russellbeattie.com/notebook/1006529.html"><b>MySQL JDBC Driver and Tomcat Pooling</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#433"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Chris &mdash; <a href="http://jroller.com/page/cblackbu/20040304#eclipse_new_look_and_feel"><b>Eclipse New Look and Feel</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#434"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linuxblog.gif" alt="Categories: Linux, Blog" align="left" border="0"></a>Jesus &mdash; <a href="http://jroller.com/page/jmrodri/20040304#mozilla_thunderbird_vs_ximian_evolution"><b>Mozilla Thunderbird vs. Ximian Evolution</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#435"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Nick &mdash; <a href="http://www.systemmobile.com/blog/index.php?p=55&amp;more=1&amp;c=1&amp;tb=1&amp;pb=1"><b>Parsing HTML as XML</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#436"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Wolf &mdash; <a href="http://carlsbadcubes.com/blog/2004/03/03#swix11"><b>Swiml 1.1</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#437"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Leslie &mdash; <a href="http://www.decafbad.com/blog/links/boodjocjoc.html"><b>Quick Links</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#438"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/news.gif" alt="Categories: News" align="left" border="0"></a><a href="http://us.rd.yahoo.com/ask/rss/?http://ask.yahoo.com/ask/20040304.html"><b>Can a person convicted of a crime serve as president?</b></a> 35 years old, natural-born U.S. citizen, must have resided in the U.S. for at least 14 years at the time of the election.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#439"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Jean-Philippe &mdash; <a href="http://jean-philippe.leboeuf.name/notebook/archives/000196.html"><b>Voil&agrave; pourquoi je suis nul en informatique</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#440"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Jeremy &mdash; <a href="http://jeremy.zawodny.com/blog/archives/001686.html"><b>Amazon.com's new RSS Feeds</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#441"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/technologyblog.gif" alt="Categories: Technology, Blog" align="left" border="0"></a>Robert &mdash; <a href="http://radio.weblogs.com/0001011/2004/03/04.html#a6787"><b>Did the CIA write viruses to bring down Soviet Union</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-04#442"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/windowsblog.gif" alt="Categories: Windows, Blog" align="left" border="0"></a>Todd &mdash; <a href="http://www.geeknewscentral.com/archives/002311.html"><b>300 Tweaks to Windows XP</b></a>.]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 3, 2004 18:20 PST] 24 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-03#Beat:139"/>
+        <modified>2004-03-04T02:20:10Z</modified>
+        <issued>2004-03-03T18:20:10-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-03:links.2004.03.03.139</id>
+        <created>2004-03-04T02:20:10Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#405"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.ftponline.com/javapro/2004_03/online/jgen_kkreft_03_03_04/"><strong>Language Features of Java Generics</strong></a>. Get the lowdown on J2SE's new support of generics in the core language of its upcoming 1.5 release.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#406"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.ftponline.com/javapro/2004%5F03/online/web%5Fakolawa%5F03%5F03%5F04/"><strong>Using Java to Prevent Attacks</strong></a>. Follow two important rules to prevent your Java application from falling victim to attacks.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#407"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.ftponline.com/javapro/2004_03/online/code_gnaccarato_03_03_04/"><strong>Writing a Code Generator in Java</strong></a>. Design and implement a flexible, Java code-generation system that is easy to maintain, intuitive to work with, and based on IOM.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#408"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a>XEsoft Releases <a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11688"><b>XMLFace 1.3</b></a>. A a toolkit for building Swing and/or SWT based application using an easy to use (and extensible) XML based language.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#409"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.onjava.com/pub/a/onjava/2004/03/03/filters.html"><b>Another Java Servlet Filter Most Web Applications Should Have</b></a>. Activate client-side caching.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#410"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a>JCP Releases <a href="http://www.theserverside.com/news/thread.jsp?thread_id=24318"><b>JavaServer Faces 1.0</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#411"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linuxblog.gif" alt="Categories: Linux, Blog" align="left" border="0"></a>Russ&nbsp; &mdash; <a href="http://www.russellbeattie.com/notebook/1006511.html"><b>What to do about EV1?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#412"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobile.gif" alt="Categories: Mobile" align="left" border="0"></a><a href="http://www.phonescoop.com/news/item.php?n=803"><b>Verizon Introduces New Forward-to-Plane Service</b></a>. $10/month.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#413"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Brian &mdash; <a href="http://www.orablogs.com/duffblog/archives/000152.html"><b>No JavaOne For Me</b></a> .
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#414"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Simon &mdash; <a href="http://weblogs.java.net/pub/wlg/1078"><b>Displaying international characters in JSP</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#415"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Dion &mdash; <a href="http://www.almaer.com/blog/archives/000077.html"><b>iPlanet upgrade on java.sun.com the problem? Ouch</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#416"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/technologyblog.gif" alt="Categories: Technology, Blog" align="left" border="0"></a>Mike &mdash; <a href="http://www.mikekrisher.com/index.php?p=168&amp;c=1"><b>Jabber for devices!</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#417"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Cedric &mdash; <a href="http://beust.com/weblog/archives/000090.html"><b>SGen: an XDoclet killer</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#418"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Rui &mdash; <a href="http://the.taoofmac.com/space/blog/2004-03-03"><b>No Time, Some Links</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#419"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://sourceforge.net/project/showfiles.php?group_id=64348"><b>iReport 0.2.3</b></a> for JasperReports.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#420"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/macblog.gif" alt="Categories: Mac, Blog" align="left" border="0"></a>Diego &mdash; <a href="http://www.dynamicobjects.com/d2r/archives/002607.html"><b>two weeks with a mac</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#421"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://freshmeat.net/releases/153226/"><b>jTDS 0.7.1</b></a>. A JDBC driver for MS SQL Server.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#422"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/news.gif" alt="Categories: News" align="left" border="0"></a><a href="http://www.newsforge.com/article.pl?sid=04/03/03/2354211"><b>Judge orders SCO, IBM to produce disputed code</b></a>. For a change, the SCO Group had no comment, because Judge Wells told it not to issue any.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#423"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/news.gif" alt="Categories: News" align="left" border="0"></a><a href="http://www.crn.com/components/weblogs/article.asp?ArticleID=48373"><b>Sun Microsystems Names Sueltz's Successor</b></a>. Marissa Peterson, executive vice president of worldwide operations.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#424"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/tv.gif" alt="Categories: TV" align="left" border="0"></a>Review: <a href="http://www.pcmag.com/article2/0,4149,1542058,00.asp?kc=PCRSS02129TX1K0000530"><b>ReplayTV 5504</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#425"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.infoworld.com/article/04/03/03/HNeclipseorg_1.html"><b>Eclipse board names new member</b></a>. Four new members.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#426"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a><a href="http://news.netcraft.com/archives/2004/03/03/court_that_will_hear_sco_v_autozone_lawsuit_itself_runs_linux.html"><b>Court that will hear SCO v AutoZone lawsuit itself runs Linux</b></a>. Presumably, SCO's lawyers filed the lawsuit using a system that it contends infringes its intellectual property.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#427"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/wireless.gif" alt="Categories: Wireless" align="left" border="0"></a>Mike &mdash; <a href="http://techdirt.com/articles/20040303/1153217.shtml"><b>Free WiFi Catching On At Airports</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#428"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://story.news.yahoo.com/news?tmpl=story2&amp;u=/ap/20040304/ap_on_hi_te/internet_sales_tax"><b>States Bent on Collecting Internet Taxes</b></a>. Remember all those gifts you bought online during the holidays? Now it's time to pay sales tax on them...]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 3, 2004 09:00 PST] 13 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-03#Beat:750"/>
+        <modified>2004-03-03T17:00:32Z</modified>
+        <issued>2004-03-03T09:00:32-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-03:links.2004.03.03.750</id>
+        <created>2004-03-03T17:00:32Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#392"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Rusty &mdash; <a href="http://www.cafeaulait.org/#news2004March3"><b>I'm pleased to announce the release of the XML 1.1 Bible</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#393"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://sourceforge.net/project/showfiles.php?group_id=91613"><b>SwingWT 0.80</b></a>. An implementation of the Java Swing and AWT APIs which instead drives SWT applications.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#394"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/development.gif" alt="Categories: Development" align="left" border="0"></a><a href="http://www.newsforge.com/article.pl?sid=04/03/02/0059255"><b>How to hire great open source developers</b></a>. Many companies have employment policies that stipulate that the company owns anything its employees develop.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#395"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Pelle &mdash; <a href="http://talk.org/archives/000247.html"><b>Open Source like Java CPU</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#396"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/technology.gif" alt="Categories: Technology" align="left" border="0"></a>Rogers &mdash; <a href="http://www.cadenhead.org/workbench/2004/03/03.html#a1427"><b>Google: 10,000 dancing Linux servers</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#397"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Eric &mdash; <a href="http://jroller.com/page/ericfj/20040303#getting_started_with_eclipse_and"><b>Getting Started with Eclipse, and Using VSS, Oracle, and Tomcat</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#398"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://sourceforge.net/project/showfiles.php?group_id=54621"><b>OpenWFE 0.6.1</b></a>, an open source java workflow engine.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#399"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/news.gif" alt="Categories: News" align="left" border="0"></a><a href="http://news.com.com/2100-1036_3-5168998.html?part=rss&amp;tag=feed&amp;subj=news"><b>Ex-WorldCom CEO surrenders to FBI</b></a>. Bernard Ebbers turns himself in.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#400"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/music.gif" alt="Categories: Music" align="left" border="0"></a>Mike &mdash; <a href="http://techdirt.com/articles/20040303/0724253.shtml"><b>RIAA's Latest Tactic To Drive File Sharers Underground</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#401"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Dion &mdash; <a href="http://www.almaer.com/blog/archives/000075.html"><b>WebLogic Configuration: Part 2</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#402"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mac.gif" alt="Categories: Mac" align="left" border="0"></a><a href="http://www.macminute.com/2004/03/03/capps"><b>Finder co-designer not keen on current user interface</b></a>. Steve Capps, co-designer of the Finder. <em>Amen.</em>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#403"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a><a href="http://newsvac.newsforge.com/article.pl?sid=04/03/03/1249232"><b>Swapping Red Hat for a Fedora</b></a>. Fedora is meant for those who want to stay on the bleeding edge of Linux development.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#404"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Rafe &mdash; <a href="http://rc3.org/cgi-bin/less.pl?arg=6011"><b>Will miracles never cease?</b></a>]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 3, 2004 06:04 PST] 11 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-03#Beat:628"/>
+        <modified>2004-03-03T14:04:26Z</modified>
+        <issued>2004-03-03T06:04:26-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-03:links.2004.03.03.628</id>
+        <created>2004-03-03T14:04:26Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#381"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Carlos &mdash; <a href="http://www.manageability.org/polls/what-is-the-best-java-web-framework"><b>What is the best Java framework for Web development?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#382"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Glen &mdash; <a href="http://jroller.com/page/gstamp/20040303#poi_2_5_final_released"><b>POI 2.5 FINAL Released</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#383"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/windowsblog.gif" alt="Categories: Windows, Blog" align="left" border="0"></a>Robert &mdash; <a href="http://radio.weblogs.com/0001011/2004/03/03.html#a6779"><b>Visual Studio tips</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#384"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a>JavaPerformanceTuning Newsletter: <a href="http://www.javaperformancetuning.com/news/contents039.shtml"><strong>Fast Random Access</strong></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#385"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a>JavaLobby Newsletter: <a href="http://www.javalobby.com/nl/archive/jlnews_20040302o.html"><strong>HomePod in the house, and JavaOne for $24.95</strong></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#386"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a><a href="http://lwn.net/Articles/73998/"><b>SCO announces quarterly results, first user target</b></a>. The lucky winner is AutoZone.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#387"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/books.gif" alt="Categories: Books" align="left" border="0"></a>Review: <a href="http://newsvac.newsforge.com/article.pl?sid=04/03/03/127236"><b>Java Regular Expressions</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#388"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/technology.gif" alt="Categories: Technology" align="left" border="0"></a><a href="http://www.theregister.co.uk/content/55/35985.html"><b>Passwords are passport to theft</b></a>. How secure are you?
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#389"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Daniel &mdash; <a href="http://weblogs.java.net/pub/wlg/1077"><b>Getting Testy</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#390"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://news.oreillynet.com/pub/n/2172"><b>Go Daddy Backs Up ICANN in Fight with VeriSign</b></a>. Domain registrar Go Daddy has agreed to pay ICANN's legal bills, up to $100,000.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#391"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Pelle &mdash; <a href="http://talk.org/archives/000246.html"><b>Japanese for Nerds</b></a>.]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 3, 2004 03:01 PST] 18 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-03#Beat:500"/>
+        <modified>2004-03-03T11:01:15Z</modified>
+        <issued>2004-03-03T03:01:15-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-03:links.2004.03.03.500</id>
+        <created>2004-03-03T11:01:15Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#363"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.devchannel.org/article.pl?sid=04/03/02/183211"><b>Converting XML to PDF</b></a>, using FOP.&nbsp;
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#364"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.devx.com/tips/Tip/20309?trk=DXRSS_JAVA"><b>Autoboxing/Unboxing</b></a>. The problem with the collection API is that you cannot put primitive data types into it.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#365"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a>Atlassian releases <a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11675"><b>JIRA 2.6</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#366"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11676"><b>Multivalent PDF Tools</b></a>, a free set of PDF manipulation tools.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#367"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://www.nytimes.com/2004/03/03/politics/03SCOT.html?ex=1393736400&amp;en=7a30ab47cef8081a&amp;ei=5007&amp;partner=USERLAND"><b>Justices Hear Arguments on Internet Pornography Law</b></a>. The Supreme Court heard oral arguments about Internet pornography.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#368"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/gadgets.gif" alt="Categories: Gadgets" align="left" border="0"></a>Alan &mdash; <a href="http://www.engadget.com/"><b>Engadget</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#369"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/windowsblog.gif" alt="Categories: Windows, Blog" align="left" border="0"></a>Bernard &mdash; <a href="http://www.livejournal.com/users/bchoi/95392.html"><b>Tail for Win32</b></a>. There's also Paul's <a href="http://www.jibble.org/jlogtailer.php">jLogTailer</a>, on the Java-side.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#370"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Daniel &mdash; <a href="http://jroller.com/page/soxbox/20040303#googlebot_doesn_t_play_nice"><b>Googlebot doesn't play nice</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#371"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Hani &mdash; <a href="http://jroller.com/page/fate/20040303#jboss_thoughtspeak"><b>JBoss thoughtspeak</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#372"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Anthony &mdash; <a href="http://jroller.com/page/aperritano/20040302#building_eclipse_plugins_redux"><b>Building Eclipse plugins redux</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#373"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Leslie &mdash; <a href="http://www.decafbad.com/blog/links/boodjocjob.html"><b>Quick Links</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#374"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Aaron Johnson &mdash; <a href="http://cephas.net/blog/2004/03/02/struts_java_tips_issue_1.html"><b>Struts &amp; Java Tips: Issue #1</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#375"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Ovidiu &mdash; <a href="http://www.webweavertech.com/ovidiu/weblog/archives/000318.html"><b>Virus attack on Apache committers</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#376"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/humour.gif" alt="Categories: Humour" align="left" border="0"></a>Philip&nbsp; &mdash; <a href="http://blogs.law.harvard.edu/philg/2004/03/02#a3972"><b>Mel Gibson and the Passion movie again...</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#377"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/zauruspda.gif" alt="Categories: Zaurus, PDA" align="left" border="0"></a>Review: <a href="http://www.linuxdevices.com/news/NS4805364289.html"><b>Zaurus SL-5600 Linux PDA</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#378"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.infoworld.com/cgi-bin/redirect?source=rss&amp;url=http://www.infoworld.com/article/04/03/02/HNjavasource_1.html"><b>IBM open source Java proposal puzzles Sun official</b></a>. Schwartz stresses platform compatibility.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#379"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/movies.gif" alt="Categories: Movies" align="left" border="0"></a><a href="http://news.bbc.co.uk/go/click/rss/0.91/public/-/2/hi/entertainment/3528297.stm"><b>Third Spider-Man film 'under way'</b></a>. Sony confirms a third Spider-Man movie is to be made, according to a report.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-03#380"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/gadgets.gif" alt="Categories: Gadgets" align="left" border="0"></a><a href="http://news.bbc.co.uk/1/hi/technology/3526441.stm"><b>BBC does Top Ten Gadgets of 2004</b></a>. [via <a href="http://www.mobitopia.com/irc.jsp">Mobitopia</a>]]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 2, 2004 15:53 PST] 20 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-02#Beat:037"/>
+        <modified>2004-03-02T23:53:26Z</modified>
+        <issued>2004-03-02T15:53:26-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-02:links.2004.03.02.037</id>
+        <created>2004-03-02T23:53:26Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#343"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Daniel&nbsp;&mdash; <a href="http://weblogs.java.net/pub/wlg/1073"><b>JavaOne Notifications</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#344"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11666"><b>Excelsior FlawDetector 1.0 beta 4</b></a>, a Java static testing and consistency checking tool.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#345"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Matthew &mdash; <a href="http://www.silent-penguin.com/archives/001670.html"><b>Cocoon Portal at CeBIT</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#346"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobileblog.gif" alt="Categories: Mobile, Blog" align="left" border="0"></a>Ewan &mdash; <a href="http://www.mobitopia.com/20040302.html#161831"><b>Scottish Schools Ban Camera Phones</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#347"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Rusty &mdash; <a href="http://www.cafeconleche.org/#news2004March2"><b>Xalan-Java 2.6.0</b></a> and <a href="http://www.cafeaulait.org/#news2004March2"><b>ArgoUML 0.15.4</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#348"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Dion &mdash; <a href="http://www.theserverside.com/news/thread.jsp?thread_id=24286"><b>Oracle Releases OC4J 10g Developer Preview 2</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#349"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Marc &mdash; <a href="http://www.logemann.org/day/archives/000060.html"><b>Java System.out debugging</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#350"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Matt &mdash; <a href="http://raibledesigns.com/page/rd/20040302#ann_anthill_1_7_0"><b>Anthill 1.7.0 Released!</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#351"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Talip &mdash; <a href="http://jroller.com/page/talipozturk/20040302#java_serialization_part_ii_inheritance"><b>Java Serialization Part II: Inheritance</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#352"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Norman &mdash; <a href="http://members.capmac.org/~orb/blog.cgi/tech/java/javablues2.html"><b>JavaOne blues, verse 2</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#353"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Cedric &mdash; <a href="http://beust.com/weblog/archives/000089.html"><b>The value of free? Not much</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#354"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/zauruspda.gif" alt="Categories: Zaurus, PDA" align="left" border="0"></a><a href="http://sourceforge.net/project/showfiles.php?group_id=103070"><b>JSquiggle 1.5</b></a>, a peer-to-peer wireless sketch pad.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#355"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mac.gif" alt="Categories: Mac" align="left" border="0"></a><a href="http://www.macminute.com/2004/03/02/ceoratings"><b>Jobs dominates in Forbes CEO ratings</b></a>. For over a year, Forbes has been asking its readers to rate the performance of America's most notable CEOs on a monthly basis...
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#356"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://freshmeat.net/releases/153056/"><b>Jess 7.0pre-a1</b></a>, a rule engine.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#357"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a><a href="http://www.alwayson-network.com/comments.php?id=P3088_0_7_0_C"><b>8% of Linux developers think SCO has merit</b></a>. 73% believe the SCO Group's legal attacks on the open-source operating system lack merit.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#358"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/pda.gif" alt="Categories: PDA" align="left" border="0"></a><a href="http://www.infosyncworld.com/news/n/4667.html"><b>Palm OS 6 simulator available for developers</b></a>. From PalmSource for Cobalt.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#359"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/technologyblog.gif" alt="Categories: Technology, Blog" align="left" border="0"></a>Mike &mdash; <a href="http://techdirt.com/articles/20040302/139250.shtml"><b>Court Says No Go On FCC's Telecom Rules</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#360"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/technology.gif" alt="Categories: Technology" align="left" border="0"></a><a href="http://us.rd.yahoo.com/dailynews/rss/tech/*http://story.news.yahoo.com/news?tmpl=story2&amp;u=/washpost/20040302/tc_washpost/a23307_2004mar2"><b>Senators Try to Smoke Out Spyware</b></a>. Three U.S. senators are tackling the growing problem of "spyware".
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#361"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Chris &mdash; <a href="http://radio.weblogs.com/0130966/2004/03/02.html"><b>How To Add a Custom JSP Tag Library to JDeveloper 10g</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#362"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/windows.gif" alt="Categories: Windows" align="left" border="0"></a>Microsoft Releases <a href="http://www.eweek.com/article2/0,4149,1541776,00.asp?kc=EWRSS03119TX1K0000594"><b>BizTalk Server 2004</b></a>.]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 2, 2004 05:09 PST] 25 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-02#Beat:589"/>
+        <modified>2004-03-02T13:09:21Z</modified>
+        <issued>2004-03-02T05:09:21-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-02:links.2004.03.02.589</id>
+        <created>2004-03-02T13:09:21Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#311"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/macblog.gif" alt="Categories: Mac, Blog" align="left" border="0"></a>Erik &mdash; <a href="http://nslog.com/archives/2004/03/01/mactech_renewal.php"><b>MacTech Renewal</b></a>. <em>We got a couple settlement checks too.</em>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#312"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/macblog.gif" alt="Categories: Mac, Blog" align="left" border="0"></a>Steven &mdash; <a href="http://stevenf.com/mt/archives/000544.php"><b>WebDesktop 2.2</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#313"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a>Tutorial: <a href="http://newsvac.newsforge.com/article.pl?sid=04/03/01/2113247"><b>SpamAssassin-ClamAV-Procmail-Howto</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#314"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/news.gif" alt="Categories: News" align="left" border="0"></a><a href="http://www.kuro5hin.org/story/2004/3/1/13940/79585"><b>How to Stop Receiving Credit Card Offers</b></a>. Tired of annoying "pre-approved" credit card offers?
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#315"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobilejavablog.gif" alt="Categories: Mobile, Java, Blog" align="left" border="0"></a>Martin &mdash; <a href="http://www.mobitopia.com/20040302.html#032109"><b>Direct Handset Application Downloads</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#316"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Luke &mdash; <a href="http://www.neuro-tech.net/archives/000448.html"><b>Open up Java?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#317"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Andy &mdash; <a href="http://www.toolshed.com/blog/News/SlashdotUT.html,v"><b>What is Unit Testing?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#318"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.devx.com/Java/Article/20184?trk=DXRSS_JAVA"><b>JMS Enables Concurrent Processing in EJB</b></a>. JMS provides an elegant solution for overcoming the restrictions you face when developing concurrent applications with EJB.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#319"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobilejava.gif" alt="Categories: Mobile, Java" align="left" border="0"></a><a href="http://www.devx.com/wireless/Article/20154?trk=DXRSS_WIFI"><b>Push Your MIDlets to Do a Lot More with MIDP 2.0 PushRegistry</b></a>. Learn how to push your MIDlets up to first-class status on a range of mobile devices using the PushRegistry.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#320"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Guillaume &mdash; <a href="http://glaforge.free.fr/weblog/?itemid=74"><b>Heads-up on File/Stream groovy methods</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#321"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Lowem &mdash; <a href="http://jroller.com/page/lowem/20040301#toyota_volta_hybrid_supercar"><b>Toyota Volta - hybrid supercar</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#322"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobilejavablog.gif" alt="Categories: Mobile, Java, Blog" align="left" border="0"></a>Fred &mdash; <a href="http://jroller.com/page/shareme/20040302#jdj_makes_last_stand_with"><b>JDJ Makes Last Stand with Last J2ME Column</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#323"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Leslie &mdash; <a href="http://www.decafbad.com/blog/links/boodjocjoa.html"><b>Quick Links</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#324"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/music.gif" alt="Categories: Music" align="left" border="0"></a>Jeremy &mdash; <a href="http://loosewire.typepad.com/blog/2004/03/belkins_new_ipo.html"><b>Belkin's New iPod Microphone Adapter</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#325"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Ted &mdash; <a href="http://www.neward.net/ted/weblog/index.jsp?date=20040301#1078203669000"><b>YAGNI != No planning</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#326"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/music.gif" alt="Categories: Music" align="left" border="0"></a>Analyst: <a href="http://www.macminute.com/2004/03/01/ipodrevenue"><b>iPod to account for $1 billion in Apple revenue</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#327"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/technologyblog.gif" alt="Categories: Technology, Blog" align="left" border="0"></a>Todd &mdash; <a href="http://www.geeknewscentral.com/archives/002304.html"><b>Don't microwave your new $20.00 dollar bills</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#328"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>James&mdash; <a href="http://radio.weblogs.com/0112098/2004/03/02.html#a460"><b>eclipse, groovy and dynaop</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#329"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://sourceforge.net/project/showfiles.php?group_id=101676"><b>Jxtray 0.1</b></a>, a Java Database Explorer.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#337"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11665"><b>yGuard 1.3.1</b></a>, an Ant bytecode obfuscation tool.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#338"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/technology.gif" alt="Categories: Technology" align="left" border="0"></a><a href="http://developers.slashdot.org/article.pl?sid=04/03/02/0842229"><b>Audacity 1.2.0</b></a>. Multi-platform sound editing tool.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#339"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Frank &mdash; <a href="http://www.gadgetguy.de/archives/000727.php"><b>SAP Executive Blogs</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#340"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Julian &mdash; <a href="http://www.nsftools.com/blog/blog-03-2004.htm#03-02-04"><b>How To Spot A Fake Programmer</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#341"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/macblog.gif" alt="Categories: Mac, Blog" align="left" border="0"></a>Sylvain &mdash; <a href="http://www.anyware-tech.com/blogs/sylvain/archives/000103.html"><b>Apple's hidden X11 installer</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-02#342"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://www.eweek.com/article2/0,4149,1541421,00.asp?kc=EWRSS03119TX1K0000594"><b>Yahoo Adopts New Fees to Explore Web</b></a>. Adopting a new system for indexing Web pages that will charge businesses to include more material.]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 1, 2004 16:05 PST] 15 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-01#Beat:045"/>
+        <modified>2004-03-02T00:05:52Z</modified>
+        <issued>2004-03-01T16:05:52-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-01:links.2004.03.01.045</id>
+        <created>2004-03-02T00:05:52Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#296"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a>JIDE Software new releases: <a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11657"><b>JIDE Docking Framework 1.4.1, JIDE Components 1.3.2, JIDE Grids 1.2.1 and JIDE Dialogs 1.0.1</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#297"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11656"><b>Cayenne ORM Milestone M3</b></a>, a unique open source Object Relational Framework written in Java.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#298"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/technology.gif" alt="Categories: Technology" align="left" border="0"></a><a href="http://www.sys-con.com/story/?storyid=43871&amp;rss=1"><b>"Professional Open Source"</b></a> - VP Discusses JBoss's Venture Funding Strategy.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#299"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/macblog.gif" alt="Categories: Mac, Blog" align="left" border="0"></a>Matthew &mdash; <a href="http://www.silent-penguin.com/archives/001668.html"><b>Collaboration works</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#300"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Russ &mdash; <a href="http://www.russellbeattie.com/notebook/1006477.html"><b>Spain: Time Europe Special Report</b></a> and <a href="http://www.russellbeattie.com/notebook/1006482.html"><b>Confirmation and Affirmation</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#301"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>David &mdash; <a href="http://www.davidflanagan.com/blog/000029.html"><b>Updated Examples from Java Examples in a Nutshell</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#302"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobilejavablog.gif" alt="Categories: Mobile, Java, Blog" align="left" border="0"></a>Alan &mdash; <a href="http://jroller.com/page/kalimantan/20040301#j2me_tv_looks_at_the"><b>J2ME TV looks at the Oscars</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#303"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/macblog.gif" alt="Categories: Mac, Blog" align="left" border="0"></a>Brent &mdash; <a href="http://inessential.com/?comments=1&amp;postid=2825"><b>cocoa.mamasam donation</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#304"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Rickard &mdash; <a href="http://jroller.com/page/rickard/20040301#updating_client_caches"><b>Updating client caches</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#305"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Rogers &mdash; <a href="http://www.cadenhead.org/workbench/2004/03/01.html#a1407"><b>2.7 million bloggers doesn't impress AP</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#306"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Lance &mdash; <a href="http://www.brainopolis.com/roller/page/lance/20040301#atom4j1"><b>Atom4J</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#307"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Kevin &mdash; <a href="http://www.blueskyonmars.com/archives/2004/03/01/index.html"><b>Charles Miller defends YAGNI</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#308"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://sourceforge.net/project/shownotes.php?release_id=220801"><b>JMP3Renamer 1.9</b></a>, a small tool written which renames downloaded MP3 files with the help of CDDB entries.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#309"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a><a href="http://www.eweek.com/article2/0,4149,1541140,00.asp?kc=EWRSS03119TX1K0000594"><b>SCO Reveals its First Linux Licensee</b></a>&nbsp;and suffered a setback in the German courts.&nbsp;
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#310"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://www.theregister.co.uk/content/55/35938.html"><b>Mossad website 'hacker' walks free</b></a>. And gets pat on head for 'acting in the public good'.]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 1, 2004 09:53 PST] 7 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-01#Beat:787"/>
+        <modified>2004-03-01T17:53:50Z</modified>
+        <issued>2004-03-01T09:53:50-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-01:links.2004.03.01.787</id>
+        <created>2004-03-01T17:53:50Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#289"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Rick &mdash; <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=36581"><b>I think I'm done with thought leaders</b></a>. (For <a href="http://epesh.blog-city.com/">Joe</a>)
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#290"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Chris &mdash; <a href="http://www.cwinters.com/News/show/?news_id=1173"><b>Spring: Telling the framework where to load beans</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#291"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://freshmeat.net/releases/152952/"><b>JPluck 2.1.2</b></a>, a Plucker document creation toolkit.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#292"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://www.theregister.co.uk/content/55/35937.html"><b>UUNet tops spammer-hosting super league</b></a>. ISPs harbour world's worst offenders.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#293"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/news.gif" alt="Categories: News" align="left" border="0"></a><a href="http://news.bbc.co.uk/go/click/rss/0.91/public/-/2/hi/uk_news/3523303.stm"><b>Soft drink is purified tap water</b></a>. Dasani.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#294"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/movies.gif" alt="Categories: Movies" align="left" border="0"></a><a href="http://us.rd.yahoo.com/dailynews/rss/762/*http://story.news.yahoo.com/news?tmpl=story2&amp;u=/nm/film_oscars_list_dc"><b>Complete List of Academy Award Winners</b></a>. The list of winners at the 76th Annual Academy Awards.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#295"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.alphaworks.ibm.com/tech/sa4j?open&amp;ca=daw-rss-s8"><b>Structural Analysis for Java</b></a>. A technology that analyzes structural dependencies of Java applications...]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 1, 2004 07:49 PST] 14 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-01#Beat:700"/>
+        <modified>2004-03-01T15:49:00Z</modified>
+        <issued>2004-03-01T07:49:00-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-01:links.2004.03.01.700</id>
+        <created>2004-03-01T15:49:00Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#275"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/linux.gif" alt="Categories: Linux" align="left" border="0"></a><a href="http://www.devchannel.org/article.pl?sid=04/03/01/1243252"><b>Intel Hyper-Threading on Linux: Fact or Myth</b></a>. Hyper-Threading is a performance enhancement that was an after thought of the original P4 design.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#276"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://www.miami.com/mld/miamiherald/news/8052075.htm"><b>First Misleading Domain Name Jail-term</b></a>. Luring kids to porn websites brings prison term.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#277"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Rusty &mdash; <a href="http://www.cafeaulait.org/#news2004March1"><b>jTDS 0.7</b></a>, <a href="http://www.cafeaulait.org/#news2004March1"><b>ImageInfo 1.5</b></a> and <a href="http://www.cafeaulait.org/#news2004March1"><b>JFugue</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#278"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Carsten &mdash; <a href="http://www.osoco.net/weblogs/rael/archives/000235.html"><b>Is Eclipse M7 usable?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#279"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/tv.gif" alt="Categories: TV" align="left" border="0"></a>Joey &mdash; <a href="http://www.joeygibson.com/blog/2004/03/01#Oscars"><b>The Oscars</b></a>. <em>I agree wholeheartedly.</em>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#280"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/macblog.gif" alt="Categories: Mac, Blog" align="left" border="0"></a>Paul &mdash; <a href="http://www.internet-nexus.com/2004_02_29_archive.htm#107814798259986593"><b>Microsoft Xbox 2 Software Development Kit is ... Based on Apple Technology?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#281"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mac.gif" alt="Categories: Mac" align="left" border="0"></a><a href="http://www.macminute.com/2004/03/01/shake"><b>Apple's Shake at the Oscars</b></a>. For the seventh year in a row, a film using Apple's Shake compositing software won "Best Visual Effects" at the Oscars...
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#282"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/music.gif" alt="Categories: Music" align="left" border="0"></a>Forbes: <a href="http://www.macminute.com/2004/03/01/itvnap"><b>iTunes Vs. Napster</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#283"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a>Netcraft: <a href="http://news.netcraft.com/archives/2004/03/01/most_reliable_hosting_providers_during_february.html"><b>Most Reliable Hosting Providers during February</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#284"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Dave &mdash; <a href="http://rollerweblogger.org/page/roller/20040301#today_we_learn"><b>Today we learn</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#285"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Andrew &mdash; <a href="http://codist.typepad.com/the_codist/2004/03/using_java_for_.html"><b>Using Java For Soft Real-Time Simulation</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#286"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://sourceforge.net/project/showfiles.php?group_id=86139"><b>JPOX 1.0.0 Beta 2</b></a>. Java Persistent Objects.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#287"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://www.fileforum.com/detail.php3?fid=1009574294"><b>OpenOffice.org for Windows 1.1.1rc</b></a> and <a href="http://www.fileforum.com/detail.php3?fid=1009574716"><b>OpenOffice.org for Linux 1.1.1rc</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#288"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Matt &mdash; <a href="http://raibledesigns.com/page/rd/20040301#appfuse_1_4_released"><b>AppFuse 1.4 Released!</b></a>]]>
+        </content>
+    </entry>
+
+    <entry>
+        <title>[Mar 1, 2004 04:45 PST] 37 Links</title>
+        <link rel="alternate" type="text/html" href="http://www.thauvin.net/linkblog/?date=2004-03-01#Beat:572"/>
+        <modified>2004-03-01T12:45:06Z</modified>
+        <issued>2004-03-01T04:45:06-08:00</issued>
+        <id>tag:erik@thauvin.net,2004-03-01:links.2004.03.01.572</id>
+        <created>2004-03-01T12:45:06Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.thauvin.net/linkblog/">
+            <![CDATA[<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#238"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.devchannel.org/article.pl?sid=04/02/25/2152214"><b>Marrying Java to C for numerical computing</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#239"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11635"><b>JNode 1.6</b></a> and <a href="http://www.javalobby.org/thread.jspa?forumID=17&amp;threadID=11645"><b>JasperAssistant 1.0.8</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#240"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://www.sys-con.com/story/?storyid=43802&amp;rss=1"><b>Java Serialization</b></a>. Lesson 7.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#241"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Diego &mdash; <a href="http://www.dynamicobjects.com/d2r/archives/002600.html"><b>feedvalidator bug or feature?</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#242"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/music.gif" alt="Categories: Music" align="left" border="0"></a>Matt &mdash; <a href="http://postneo.com/2004/02/29.html#a3314"><b>Katy Rose</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#243"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Russ is catching up: 
+<ul>
+<li><a href="http://www.russellbeattie.com/notebook/1006432.html"><b>Mini Addition to the Mobile Family</b></a></li>
+<li><a href="http://www.russellbeattie.com/notebook/1006445.html"><b>Two Years Ago: My First Thoughts on Weblogs</b></a></li>
+<li><a href="http://www.russellbeattie.com/notebook/1006447.html"><b>FireFox: Edit CSS Plugin</b></a></li>
+<li><a href="http://www.russellbeattie.com/notebook/1006450.html"><b>Tomcat Web App Deployment Danger</b></a></li>
+<li><a href="http://www.russellbeattie.com/notebook/1006451.html"><b>NetFlix: So Great While It Lasts</b></a></li>
+<li><a href="http://www.russellbeattie.com/notebook/1006453.html"><b>Microsoft's Mobile Plan</b></a></li>
+<li><a href="http://www.russellbeattie.com/notebook/1006460.html"><b>Moto Redux and PumaTech now IntelliSync</b></a></li>
+<li><a href="http://www.russellbeattie.com/notebook/1006466.html"><b>The Smartphone Universe: New Report</b></a></li>
+</ul>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#244"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobileblog.gif" alt="Categories: Mobile, Blog" align="left" border="0"></a>Frank&nbsp;&mdash; <a href="http://www.mobitopia.com/20040228.html#215412"><b>Joi Ito's $3500 GPRS bill</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#245"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobile.gif" alt="Categories: Mobile" align="left" border="0"></a><a href="http://www.phonescoop.com/news/item.php?n=801"><b>SanDisk Reveals Tiny New Memory Cards for Phones</b></a>. T-Flash.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#246"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Tim &mdash; <a href="http://tim.littlebluefrog.com/archives/000119.html"><b>Java v. C++ from a different perspective</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#247"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Bhagvan &mdash; <a href="http://jroller.com/page/bhagvank/20040229#software_architecture_analysis_method_saam"><b>Software Architecture Analysis Method (SAAM)</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#248"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Kevin &mdash; <a href="http://www.blueskyonmars.com/archives/2004/02/29/index.html"><b>MSDN article about platform selection even mentions Linux and Mac OS</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#249"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Rusty &mdash; <a href="http://www.cafeaulait.org/#news2004February28"><b>JSwat 2.24</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#250"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Carsten &mdash; <a href="http://www.osoco.net/weblogs/rael/archives/000234.html"><b>Apache Portals PMC</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#251"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>J Aaron &mdash; <a href="http://www.jadetower.org/muses/archives/000032.html"><b>Avalon HOWTO's</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#252"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>David &mdash; <a href="http://www.davidflanagan.com/blog/000028.html"><b>Static Import Surprises</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#253"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Malcom &mdash; <a href="http://weblogs.java.net/pub/wlg/1069"><b>Adapt the Java style for your own</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#254"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Keith &mdash; <a href="http://joust.kano.net/weblog/archives/000075.html"><b>How different browsers interpret HTML font sizes</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#255"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Leo &mdash; <a href="http://jroller.com/page/lsd/20040229#jicarilla_platform_0_4a_release"><b>jicarilla-platform 0.4a release</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#256"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Mark &mdash; <a href="http://people.etango.com/~markm/archives/2004/02/29/gmt_vs_utc.html"><b>GMT vs. UTC</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#257"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Cheah &mdash; <a href="http://blog.codefront.net/archives/2004/03/01/the_best_list_of_css_filters_so_far.php"><b>The best list of CSS filters, so far</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#258"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobilejavablog.gif" alt="Categories: Mobile, Java, Blog" align="left" border="0"></a>Alan &mdash; <a href="http://jroller.com/page/kalimantan/20040301#russell_beattie_s_invasion_of"><b>Russell Beattie's Invasion of the J2ME Snatchers</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#259"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Weiqi &mdash; <a href="http://www.weiqigao.com/blog/2004/02/28/1077977543000.html"><b>Subversion: First Impression</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#260"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Daniel &mdash; <a href="http://jroller.com/page/dbr/20040228#let_the_compiler_help_you2"><b>Let the compiler help you, Laird!</b></a>
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#261"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Daniel &mdash; <a href="http://weblogs.java.net/pub/wlg/1070"><b>Concurrency Utilities</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#262"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/blog.gif" alt="Categories: Blog" align="left" border="0"></a>Leslie &mdash; <a href="http://www.decafbad.com/blog/links/boodjobjbi.html"><b>Quick Links</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#263"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/macblog.gif" alt="Categories: Mac, Blog" align="left" border="0"></a>Bill &mdash; <a href="http://www.pycs.net/bbum/2004/2/28/#200402281"><b>Subversion, Xcode projects, and Diffs</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#264"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Bill &mdash; <a href="http://www.ideaspace.net/users/wkearney/archives/entries/000594.html?f=1"><b>Hash generator</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#265"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobileblog.gif" alt="Categories: Mobile, Blog" align="left" border="0"></a>Christian &mdash; <a href="http://www.christianlindholm.com/christianlindholm/2004/02/getting_most_ou.html"><b>Getting most out of Series 60 - My selected gems</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#266"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/mobilejavablog.gif" alt="Categories: Mobile, Java, Blog" align="left" border="0"></a>Steve &mdash; <a href="http://feeds.feedburner.com/LineOfSiteXML?m=19"><b>more on palm MIDP 2.0</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#267"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/developmentblog.gif" alt="Categories: Development, Blog" align="left" border="0"></a>Rui &mdash; <a href="http://the.taoofmac.com/space/Bayesian"><b>Bayesian</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#268"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/movies.gif" alt="Categories: Movies" align="left" border="0"></a>Martin &mdash; <a href="http://www.copydesk.co.uk/archive/2004_03_01_index.shtml#107813309816301467"><b>One film to rule them all</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#269"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/windows.gif" alt="Categories: Windows" align="left" border="0"></a><a href="http://sourceforge.net/project/shownotes.php?release_id=220599"><b>FileZilla 2.2.4c</b></a>, a nice FTP client.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#270"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://sourceforge.net/project/shownotes.php?release_id=220343"><b>Quartz 1.3.3</b></a>. An enterprise-level scheduler.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#271"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/java.gif" alt="Categories: Java" align="left" border="0"></a><a href="http://sourceforge.net/project/showfiles.php?group_id=28662"><b>JFCUnit 2.03</b></a>. An extension to the JUnit framework to execute unit tests against code that presents a Swing GUI based interface.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#272"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a><a href="http://www.eweek.com/article2/0,4149,1540574,00.asp?kc=EWRSS03119TX1K0000594"><b>ICANN Responds to VeriSign Suit</b></a>. <em>Disappointed</em>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#273"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/internet.gif" alt="Categories: Internet" align="left" border="0"></a>Netcraft: <a href="http://news.netcraft.com/archives/2004/03/01/march_2004_web_server_survey.html"><b>March 2004 Web Server Survey</b></a>.
+<br>
+<br>
+<a href="http://www.thauvin.net/linkblog/?date=2004-03-01#274"><img width="20" height="20" src="http://www.thauvin.net/linkblog/images/categories/javablog.gif" alt="Categories: Java, Blog" align="left" border="0"></a>Adrian &mdash; <a href="http://www.intencha.com/adrian/000041.php"><b>Java Coding Style</b></a>.]]>
+        </content>
+    </entry>
+   
+</feed>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFCDD130-C3FA-4560-A936-69F683AE071F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <Description>Alaris' IRC library.
+Thanks to Thresher</Description>
+    <AssemblyName>irc</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>irc</RootNamespace>
+    <ReleaseVersion>2.3</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateDocumentation>true</GenerateDocumentation>
+    <NoWarn>168,219,414,419,618,1574,1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ChannelModeInfo.cs" />
+    <Compile Include="CommandBuilder.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="ConnectionArgs.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Identd.cs" />
+    <Compile Include="IParser.cs" />
+    <Compile Include="Listener.cs" />
+    <Compile Include="NameGenerator.cs" />
+    <Compile Include="ReplyCode.cs" />
+    <Compile Include="Rfc2812Util.cs" />
+    <Compile Include="Sender.cs" />
+    <Compile Include="ServerProperties.cs" />
+    <Compile Include="TextColor.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="WhoisInfo.cs" />
+    <Compile Include="Ctcp\CtcpListener.cs" />
+    <Compile Include="Ctcp\CtcpResponder.cs" />
+    <Compile Include="Ctcp\CtcpSender.cs" />
+    <Compile Include="Ctcp\CtcpUtil.cs" />
+    <Compile Include="Dcc\DccChatSession.cs" />
+    <Compile Include="Dcc\DccFileInfo.cs" />
+    <Compile Include="Dcc\DccFileSession.cs" />
+    <Compile Include="Dcc\DccFileSessionManager.cs" />
+    <Compile Include="Dcc\DccListener.cs" />
+    <Compile Include="Dcc\DccUserInfo.cs" />
+    <Compile Include="Dcc\DccUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="irc.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib" />
+    <Reference Include="Mono.Data" />
+    <Reference Include="Mono.Http" />
+    <Reference Include="Mono.Posix" />
+    <Reference Include="Mono.Security" />
+    <Reference Include="monodoc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

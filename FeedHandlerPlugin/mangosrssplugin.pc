@@ -1,0 +1,6 @@
+Name: MangosRssPlugin
+Description: MangosRssPlugin
+Version: 1.6
+
+Requires: 
+Libs: -r:./build/lib/alaris/MangosRssPlugin.dll

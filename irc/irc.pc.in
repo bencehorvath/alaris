@@ -1,0 +1,7 @@
+Name: irc
+Description: Alaris' IRC library.
+Thanks to Thresher
+Version: 1.6
+
+Requires: 
+Libs: -r:@expanded_libdir@/@PACKAGE@/irc.dll

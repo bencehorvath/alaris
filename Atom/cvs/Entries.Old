@@ -1,0 +1,18 @@
+D/Atom.AdditionalElements////
+D/Atom.Core////
+D/Atom.Core.Collections////
+D/Atom.Utils////
+D/mvpxml////
+D/tests////
+/AUTHORS.txt/1.2/Sun Oct 10 10:20:54 2004//
+/AssemblyInfo.cs/1.10/Sun Oct 10 10:20:54 2004//
+/AtomReader.cs/1.5/Sun Oct 10 10:20:54 2004//
+/AtomWriter.cs/1.7/Sun Oct 10 10:20:54 2004//
+/CHANGES.txt/1.24/Sun Oct 10 10:20:54 2004//
+/COPYING.txt/1.1.1.1/Sun Oct 10 10:20:54 2004//
+/Makefile/1.6/Sun Oct 10 10:20:54 2004//
+/README.txt/1.6/Sun Oct 10 10:20:54 2004//
+/TODO.txt/1.8/Sun Oct 10 10:20:54 2004//
+/atomnet.build/1.8/Sun Oct 10 10:20:54 2004//
+/mediatypes.txt/1.3/Sun Oct 10 10:20:54 2004//
+D/Atom.Core.AbstractClasses////

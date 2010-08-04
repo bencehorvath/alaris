@@ -1,0 +1,204 @@
+.TH "Alaris::Irc::DccFileSession" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Irc::DccFileSession \- 
+.PP
+Allows the user to send and receive files from other IRC users.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBStop\fP ()"
+.br
+.RI "\fIStop the file transfer. \fP"
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.RI "\fISummary information about this session. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBGet\fP (\fBConnection\fP connection, string nick, string fileName, bool turbo)"
+.br
+.RI "\fIAsk a remote user to send a file. The remote user may or may not respond and there is no fixed time within which he must respond. A response will come in the form of a DCC Send request. \fP"
+.ti -1c
+.RI "static \fBDccFileSession\fP \fBSend\fP (\fBDccUserInfo\fP dccUserInfo, string listenIPAddress, int listenPort, \fBDccFileInfo\fP dccFileInfo, int bufferSize, bool turbo)"
+.br
+.RI "\fIAttempt to send a file to a remote user. Start listening on the given port and address. If the remote user does not accept the offer within the timeout period the the session will be closed. \fP"
+.ti -1c
+.RI "static \fBDccFileSession\fP \fBReceive\fP (\fBDccUserInfo\fP dccUserInfo, \fBDccFileInfo\fP dccFileInfo, bool turbo)"
+.br
+.RI "\fIAnother user has offered to send a file. This method should be called to accept the offer and save the file to the give location. The parameters needed to call this method are provided by the \fCOnDccFileTransferRequest()\fP event. \fP"
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "string \fBID\fP\fC [get]\fP"
+.br
+.RI "\fIA unique identifier for this session. \fP"
+.ti -1c
+.RI "\fBDccUserInfo\fP \fBUser\fP\fC [get]\fP"
+.br
+.RI "\fIThe \fBDccUserInfo\fP object associated with this \fBDccFileSession\fP. \fP"
+.ti -1c
+.RI "\fBDccFileInfo\fP \fBFile\fP\fC [get]\fP"
+.br
+.RI "\fIThe \fBDccFileInfo\fP object associated with this \fBDccFileSession\fP. \fP"
+.ti -1c
+.RI "\fBDccUserInfo\fP \fBClientInfo\fP\fC [get]\fP"
+.br
+.RI "\fIThe information about the remote user. \fP"
+.in -1c
+.SS "Events"
+
+.in +1c
+.ti -1c
+.RI "FileTransferTimeoutEventHandler \fBOnFileTransferTimeout\fP"
+.br
+.RI "\fIThe remote user did not accept the file within the timeout period. \fP"
+.ti -1c
+.RI "FileTransferStartedEventHandler \fBOnFileTransferStarted\fP"
+.br
+.RI "\fIThe file transfer connection is open and data will be sent or received. \fP"
+.ti -1c
+.RI "FileTransferInterruptedEventHandler \fBOnFileTransferInterrupted\fP"
+.br
+.RI "\fIThe file transfer was interrupted and did not complete. \fP"
+.ti -1c
+.RI "FileTransferCompletedEventHandler \fBOnFileTransferCompleted\fP"
+.br
+.RI "\fIThe file transfer was successful. \fP"
+.ti -1c
+.RI "FileTransferProgressEventHandler \fBOnFileTransferProgress\fP"
+.br
+.RI "\fIHow much of the file has been sent or received so far. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Allows the user to send and receive files from other IRC users. 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static void Alaris.Irc.DccFileSession.Get (\fBConnection\fP connection, string nick, string fileName, bool turbo)\fC [static]\fP"
+.PP
+Ask a remote user to send a file. The remote user may or may not respond and there is no fixed time within which he must respond. A response will come in the form of a DCC Send request. \fBParameters:\fP
+.RS 4
+\fIconnection\fP The connection the remotes user is on.
+.br
+\fInick\fP Who to send the request to.
+.br
+\fIfileName\fP The name of the file to have sent. This should not contain any spaces.
+.br
+\fIturbo\fP True to use send-ahead mode for transfers.
+.RE
+.PP
+
+.SS "static \fBDccFileSession\fP Alaris.Irc.DccFileSession.Receive (\fBDccUserInfo\fP dccUserInfo, \fBDccFileInfo\fP dccFileInfo, bool turbo)\fC [static]\fP"
+.PP
+Another user has offered to send a file. This method should be called to accept the offer and save the file to the give location. The parameters needed to call this method are provided by the \fCOnDccFileTransferRequest()\fP event. This method should be called from within a try/catch block in case it is unable to connect or there are other socket errors.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdccUserInfo\fP Information on the remote user.
+.br
+\fIdccFileInfo\fP The local file that will hold the data being sent. If the file is the result of a previous incomplete download the the attempt will be made to resume where the previous left off.
+.br
+\fIturbo\fP Will the send ahead protocol be used.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A unique session instance for this file and remote user.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the listen port is already in use.
+.RE
+.PP
+
+.SS "static \fBDccFileSession\fP Alaris.Irc.DccFileSession.Send (\fBDccUserInfo\fP dccUserInfo, string listenIPAddress, int listenPort, \fBDccFileInfo\fP dccFileInfo, int bufferSize, bool turbo)\fC [static]\fP"
+.PP
+Attempt to send a file to a remote user. Start listening on the given port and address. If the remote user does not accept the offer within the timeout period the the session will be closed. This method should be called from within a try/catch block in case there are socket errors. This methods will also automatically handle a Resume if the remote client requests it.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdccUserInfo\fP The information about the remote user.
+.br
+\fIlistenIPAddress\fP The IP address of the local machine in dot quad format (e.g. 192.168.0.25). This is the address that will be sent to the remote user. The IP address of the NAT machine must be used if the client is behind a NAT/Firewall system. 
+.br
+\fIlistenPort\fP The port that the session will listen on.
+.br
+\fIdccFileInfo\fP The file to be sent. If the file name has spaces in it they will be replaced with underscores when the name is sent.
+.br
+\fIbufferSize\fP The size of the send buffer. Generally should be between 4k and 32k.
+.br
+\fIturbo\fP True to use send-ahead mode for transfers.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+A unique session instance for this file and remote user.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIArgumentException\fP If the listen port is already in use.
+.RE
+.PP
+
+.SS "void Alaris.Irc.DccFileSession.Stop ()"
+.PP
+Stop the file transfer. 
+.SS "override string Alaris.Irc.DccFileSession.ToString ()"
+.PP
+Summary information about this session. \fBReturns:\fP
+.RS 4
+Simple information about this session in human readable format.
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "\fBDccUserInfo\fP Alaris.Irc.DccFileSession.ClientInfo\fC [get]\fP"
+.PP
+The information about the remote user. A read only instance of \fBDccUserInfo\fP.
+.SS "\fBDccFileInfo\fP Alaris.Irc.DccFileSession.File\fC [get]\fP"
+.PP
+The \fBDccFileInfo\fP object associated with this \fBDccFileSession\fP. 
+.SS "string Alaris.Irc.DccFileSession.ID\fC [get]\fP"
+.PP
+A unique identifier for this session. Uses the TCP/IP port prefixed by an 'S' if this session is serving the file or a 'C' if this session is receiving the file.
+.SS "\fBDccUserInfo\fP Alaris.Irc.DccFileSession.User\fC [get]\fP"
+.PP
+The \fBDccUserInfo\fP object associated with this \fBDccFileSession\fP. 
+.SH "Event Documentation"
+.PP 
+.SS "FileTransferCompletedEventHandler Alaris.Irc.DccFileSession.OnFileTransferCompleted"
+.PP
+The file transfer was successful. 
+.SS "FileTransferInterruptedEventHandler Alaris.Irc.DccFileSession.OnFileTransferInterrupted"
+.PP
+The file transfer was interrupted and did not complete. 
+.SS "FileTransferProgressEventHandler Alaris.Irc.DccFileSession.OnFileTransferProgress"
+.PP
+How much of the file has been sent or received so far. 
+.SS "FileTransferStartedEventHandler Alaris.Irc.DccFileSession.OnFileTransferStarted"
+.PP
+The file transfer connection is open and data will be sent or received. 
+.SS "FileTransferTimeoutEventHandler Alaris.Irc.DccFileSession.OnFileTransferTimeout"
+.PP
+The remote user did not accept the file within the timeout period. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

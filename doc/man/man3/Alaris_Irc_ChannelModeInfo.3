@@ -1,0 +1,57 @@
+.TH "Alaris::Irc::ChannelModeInfo" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Irc::ChannelModeInfo \- 
+.PP
+A simple struct designed to hold al the attributes that are contain in a Channel mode.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBModeAction\fP \fBAction\fP\fC [get, set]\fP"
+.br
+.RI "\fIWhether the mode is being added or removed. In the case of a Channel mode request this will always be 'added'. \fP"
+.ti -1c
+.RI "\fBChannelMode\fP \fBMode\fP\fC [get, set]\fP"
+.br
+.RI "\fIWhat mode is being added or removed. \fP"
+.ti -1c
+.RI "string \fBParameter\fP\fC [get, set]\fP"
+.br
+.RI "\fIAny additional parameters that belong to the mode. For example user masks or a maximum numbers of user allowed in a channel. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+A simple struct designed to hold al the attributes that are contain in a Channel mode. 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "override string Alaris.Irc.ChannelModeInfo.ToString ()"
+.SH "Property Documentation"
+.PP 
+.SS "\fBModeAction\fP Alaris.Irc.ChannelModeInfo.Action\fC [get, set]\fP"
+.PP
+Whether the mode is being added or removed. In the case of a Channel mode request this will always be 'added'. 
+.SS "\fBChannelMode\fP Alaris.Irc.ChannelModeInfo.Mode\fC [get, set]\fP"
+.PP
+What mode is being added or removed. 
+.SS "string Alaris.Irc.ChannelModeInfo.Parameter\fC [get, set]\fP"
+.PP
+Any additional parameters that belong to the mode. For example user masks or a maximum numbers of user allowed in a channel. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

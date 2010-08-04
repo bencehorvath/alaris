@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<feed xmlns="http://purl.org/atom/ns#" xmlns:date="http://exslt.org/dates-and-times" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dbxml="http://www.sleepycat.com/2002/dbxml" version="0.3"><title>randomthoughts</title><link rel="alternate" type="text/html" href="http://randomthoughts.vandorp.ca/syncato/WK/blog"/><author><name>Darryl VanDorp</name></author><modified xmlns="">2004-03-01T15:22:08Z</modified><entry xmlns=""><title>Simple instructions to compile python C extensions in windows</title><link rel="alternate" type="text/html" href="http://randomthoughts.vandorp.ca/syncato/WK/blog/758?t=item"/><summary>Cut and paste from the twisted-python mailing list (Philip J Eby) slightly edited for my own reference: Here's a simpler version of the instructions: Get your machine set up to build extensions using the distutils Download the python package and run 'setup.py install' Step 1 is a bit more complex...</summary><content type="text/html" mode="escaped"><![CDATA[
+<p>
+Cut and paste from the <a href="http://twistedmatrix.com/pipermail/twisted-python">twisted-python</a> mailing
+list (Philip J Eby) slightly edited for my own reference:
+<blockquote>
+Here's a simpler version of the instructions:
+<ol>
+<li> Get your machine set up to build extensions using the distutils</li>
+<li> Download the python package and run 'setup.py install'</li>
+
+</ol>
+Step 1 is a bit more complex than step 2, but is worth the trouble because it means you can build any Python extension for Windows without the author needing to produce a binary package for you.  It amounts to:
+<ol type="A">
+<li> Install MinGW or Cygwin.  I personally prefer Cygwin because there aren't so many things to install.  Just pop over to <a href="http://cygwin.com" title="cygwin.com">cygwin.com</a>, click "install now", and be sure to include the GCC compiler when you're asked what packages you want.  (DON'T install the Cygwin Python, btw, unless you have a good reason.  You don't need it if you're building extensions for Windows Python.)  Anyway, when you're done with the Cygwin install, you'll have a nice icon that opens up a Cygwin shell, which is a convenient prompt to run things from.</li>
+
+<li> ensure that the MinGW or Cygwin tools are on your system path.  E.g. add 'C:\cygwin\bin' to your PATH.</li>
+
+<li> add a distutils.cfg file to your C:\Python2x\Lib\distutils directory, containing the lines:</li>
+</ol>
+<pre>
+[build]
+compiler=mingw32
+</pre>
+this will make GCC your default compiler for any C extensions you build in future, so you won't need to do any of that '-c mingw32' junk.
+
+Once you've done this, you can happily run 'python setup.py install' to install C extensions. 
+
+<a href="http://twistedmatrix.com/pipermail/twisted-python/2004-February/007205.html">(source)</a>
+</blockquote>
+</p>
+<p>
+<strong>Update:</strong> Removed step which was specific to installing pycrypto 
+</p>
+]]></content><modified>2004-02-27T12:27:23-06:00</modified><issued>2004-02-27T12:27:23-06:00</issued><id>http://randomthoughts.vandorp.ca/syncato/WK/blog/758?t=item</id></entry><entry xmlns=""><title>Run roundup under daemontools</title><link rel="alternate" type="text/html" href="http://randomthoughts.vandorp.ca/syncato/WK/blog/757?t=item"/><summary>I'm a fan of daemontools to make sure my services are running and running and running... well, you get the idea. So a two second tip to get your roundup tracker running reliably under daemontools. Firstly, you need daemontools installed: $emerge daemontools Your milage will vary depending on your linux...</summary><content type="text/html" mode="escaped"><![CDATA[
+<p>
+I'm a fan of <a href="http://cr.yp.to/daemontools.html">daemontools</a> to make sure my
+services are running and running and running... well, you get the idea. So a two second
+tip to get your <a href="http://roundup.sf.net">roundup</a> tracker running reliably under
+daemontools. Firstly, you need daemontools installed:
+</p>
+<pre>
+$emerge daemontools
+</pre>
+<p>
+Your milage will vary depending on your linux distribution of course :)
+</p>
+<p>
+Now I created (as root) my service directory:
+</p>
+<pre>
+$mkdir /etc/roundup-qa
+</pre>
+<p>
+Create your <em>run</em> file in /etc/roundup-qa:
+</p>
+<pre>
+<pre>
+#!/bin/sh
+exec 2&gt;&amp;1
+exec setgiduid your-roundup-user roundup-server -p 8090 /opt/roundup/trackers/qa
+</pre></pre>
+<p>
+Create log directories and chown it to your-roundup-user:
+</p>
+<pre>
+$mkdir /etc/roundup-qa/log
+$mkdir /etc/roundup-qa/log/main
+$chown your-roundup-user /etc/roundup-qa/log/main
+</pre>
+<p>Create your <em>run</em> file for the log:</p>
+<pre>
+#!/bin/sh
+exec setgiduid your-roundup-user multilog t ./main
+</pre>
+<p>Link the service directory so daemontools knows to run our service:</p>
+<pre>
+$ln -s /etc/roundup-qa /service/roundup-qa
+</pre>
+<p>Start svscan:</p>
+<pre>
+$/etc/init.d/svscan start
+</pre>
+<p>Again depending on linux distribution your milage may vary on that command. Wait up to 5 seconds
+and your tracker will run and run and run....</p>
+<p>
+If you want to stop your tracker:</p>
+<pre>
+$svc -d /service/roundup-qa
+</pre>
+<p>Start your tracker</p>
+<pre>
+$svc -u /service/roundup-qa
+</pre>
+]]></content><modified>2004-02-27T10:11:27-06:00</modified><issued>2004-02-27T10:11:27-06:00</issued><id>http://randomthoughts.vandorp.ca/syncato/WK/blog/757?t=item</id></entry><entry xmlns=""><title>...and then there was atom</title><link rel="alternate" type="text/html" href="http://randomthoughts.vandorp.ca/syncato/WK/blog/756?t=item"/><summary>syncato is an xml fragment system. This humble site uses syncato to power this weblog. atom is an XML based syndication format. Sounds like a match made in heaven. A great big long time later (because i don't know xsl very well) an xsl stylesheet is created which transforms syncato...</summary><content type="text/html" mode="escaped"><![CDATA[
+<p>
+<a href="http://www.syncato.org">syncato</a> is an xml fragment system. This humble site uses syncato
+to power this weblog. <a href="http://www.mnot.net/drafts/draft-nottingham-atom-format-02.html">atom</a>
+is an XML based syndication format. Sounds like a match made in heaven. A great big long time later
+(because i don't know xsl very well) an <a href="http://randomthoughts.vandorp.ca/repos/projects/syncato/trunk/dist/stylesheets/atom.xsl">
+xsl stylesheet</a> is created which transforms syncato items
+into <a href="http://randomthoughts.vandorp.ca/syncato/WK/blog?t=atom">an atom feed</a>. Mysteriously
+enough it even <a href="http://feedvalidator.org/check.cgi?url=http://randomthoughts.vandorp.ca/syncato/WK/blog?t=atom">
+validates</a>. It's of course broken in subtle ways but I'll fix those.
+</p>
+<p>No muss, no fuss and no tears.</p>
+]]></content><modified>2004-02-25T14:22:18-06:00</modified><issued>2004-02-25T14:22:18-06:00</issued><id>http://randomthoughts.vandorp.ca/syncato/WK/blog/756?t=item</id></entry><entry xmlns=""><title>bloglines</title><link rel="alternate" type="text/html" href="http://randomthoughts.vandorp.ca/syncato/WK/blog/755?t=item"/><summary>I've joined others who are using bloglines these days. It's all the rage. I was using blo.gs but you don't actually read feeds there, you can only check when they've been updated. Everyone using bloglines. Set your subscriptions to public so we can all so who's subscribed to who....</summary><content type="text/html" mode="escaped"><![CDATA[
+<p>
+I've <a href="http://www.intertwingly.net/blog/1716.html">joined</a>
+<a href="http://www.xmldatabases.org/WK/blog/1198_Trying_out_Bloglines.item">others</a> who are using
+<a href="http://bloglines.com">bloglines</a> these days. It's all the rage. I was using <a href="http://blo.gs">blo.gs</a>
+but you don't actually read feeds there, you can only check when they've been updated.
+</p>
+<p>Everyone using bloglines. Set your subscriptions to public so we can all so who's subscribed to who.</p>
+]]></content><modified>2004-02-24T13:44:05-07:00</modified><issued>2004-02-24T13:44:05-07:00</issued><id>http://randomthoughts.vandorp.ca/syncato/WK/blog/755?t=item</id></entry><entry xmlns=""><title>Gnome applets with Python</title><link rel="alternate" type="text/html" href="http://randomthoughts.vandorp.ca/syncato/WK/blog/754?t=item"/><summary>First stumbled accross this in GNOME Developer News but it had a dead link to the actual tutorial. Found an updated link on the pygtk website....</summary><content type="text/html" mode="escaped"><![CDATA[
+<p>
+First stumbled accross this in <a href="http://developer.gnome.org/news/summary/2004_February8_February14.html#8" title="Gnome weekly news">GNOME
+Developer News</a> but it had a dead link to the actual tutorial. Found an
+<a href="http://pygtk.org/articles/applets_arturogf">updated link</a> on the
+<a href="http://pygtk.org">pygtk website</a>.
+</p>
+]]></content><modified>2004-02-23T16:17:17-07:00</modified><issued>2004-02-23T16:17:17-07:00</issued><id>http://randomthoughts.vandorp.ca/syncato/WK/blog/754?t=item</id></entry><entry xmlns=""><title>Colour me embarassed</title><link rel="alternate" type="text/html" href="http://randomthoughts.vandorp.ca/syncato/WK/blog/753?t=item"/><summary>I got my first nod from the Daily Python-URL which I discovered by running an awstats update on my apache logs. I browse over to my site and... um, it's down... Did the load from the Daily Python-URL crash it? I have no idea. Even more incentive to upgrade to...</summary><content type="text/html" mode="escaped"><![CDATA[
+<p>
+I got my first nod from the <a href="http://www.pythonware.com/daily" title="Daily Python-URL">Daily Python-URL</a>
+which I discovered by running an <a href="http://awstats.sf.net">awstats</a> update on my apache logs. I browse over
+to my site and... um, it's down... Did the load from the Daily Python-URL crash it? I have no idea. Even more incentive
+to upgrade to <a href="http://www.xmldatabases.org/WK/blog">Kimbro Staken's</a> lateset code for <a href="http://syncato.org">syncato</a>.
+(which this humble weblog runs on)
+</p>
+<p>Maybe it's time to code a quick jabber bot to IM me when the site goes down.</p>
+]]></content><modified>2004-02-23T13:49:58-07:00</modified><issued>2004-02-23T13:49:58-07:00</issued><id>http://randomthoughts.vandorp.ca/syncato/WK/blog/753?t=item</id></entry><entry xmlns=""><title>Quote of the day</title><link rel="alternate" type="text/html" href="http://randomthoughts.vandorp.ca/syncato/WK/blog/752?t=item"/><summary>From Joel Spolsky: I'm forced to conclude that Microsoft has grown so large they are living in a reality-distortion field. source...</summary><content type="text/html" mode="escaped"><![CDATA[From Joel Spolsky:
+<blockquote>
+I'm forced to conclude that Microsoft has grown so large they are living in a reality-distortion field.
+</blockquote>
+<a href="http://www.joelonsoftware.com/items/2004/02/20.html">source</a>
+]]></content><modified>2004-02-20T15:28:40-07:00</modified><issued>2004-02-20T15:28:40-07:00</issued><id>http://randomthoughts.vandorp.ca/syncato/WK/blog/752?t=item</id></entry><entry xmlns=""><title>A gentle introduction to the roundup API part 2</title><link rel="alternate" type="text/html" href="http://randomthoughts.vandorp.ca/syncato/WK/blog/751?t=item"/><summary>In a prior article (and I use the term article loosely) I described briefly how you can connect to roundup and start to perform interactive queries against the tracker outside of the web, command-line, and email interfaces. Upon re-reading it myself, I noticed there are a few things that should...</summary><content type="text/html" mode="escaped"><![CDATA[
+<p>
+In a prior
+<em>
+<a href="http://randomthoughts.vandorp.ca/syncato/WK/blog/744?t=item" title="A gentle introduction to the roundup API">
+article</a>
+</em>
+(and I use the term article loosely) I described briefly how you can connect to roundup and start to
+perform interactive queries against the tracker outside of the web, command-line, and email interfaces. Upon re-reading
+it myself, I noticed there are a few things that should be pointed out.
+</p>
+<p>
+First off, when accessing roundup there is what we call a
+<em>
+global lock
+</em>.
+What this means is, once a connection
+is made to the tracker, no other connections are allowed until the first connection is finished. In practical terms, once
+you establish a connection interactively the web, command-line, and email interfaces will no longer respond. So, any
+scripts which access roundup should try and get their work done and exit as quickly as they can.
+</p>
+<pre>
+>>>from roundup import instance
+>>>tracker = instance.open('/my/tracker/location')
+>>>db = tracker.open('someuser')
+>>>#perform some stuff here
+>>>db.close()  #close the connection
+</pre>
+<p>
+I also had some statments like
+<pre>
+>>>issues = db.issue.list()
+</pre>
+By way of explanation, what we are basically doing is:
+<pre>
+db.classname.list()
+</pre>
+And
+<em>classname</em>
+ can be any of the classes in the tracker. I guess the next logical question is, what classes
+are in the tracker? Easy, if you have admin permissions in the tracker by default you have menu item in the web interface
+which displays all the classes. Since we talking python and scripting, there's an API function:
+<pre>
+>>>db.getclasses()
+['file', 'issue', 'keyword', 'msg', 'priority', 'query', 'status', 'user']
+</pre>
+</p>
+<p>
+Oh and an API function that I'll touch on briefy is <em>filter()</em>:
+<pre>
+>>>startdate = '2004-01-01'
+>>>enddate   = '2004-01-31'
+>>>matches = db.issue.filter(None,{'creation':'from' +startdate+ 'to' +enddate})
+>>>matches
+['24', '25', '26', '27']
+</pre>
+So what magic is this? Well, basically the <em>matches</em> variable contains a list of
+issues that were created between <em>startdate</em> and <em>enddate</em>. Cool eh?
+</p>
+<p>
+I think that I've gone over enough of roundup's API functions to illustrate that we can do
+all sorts of powerfull things including searching. There are more API functions that
+can be found in the <a href="http://roundup.sourceforge.net/apidocs/roundup">online API documentation</a> which can be
+a fine resource if your into reading those sorts of things.
+</p>
+<p>
+I guess the next step is put all we've gone over
+into some sort of useful script. Sounds like a task for another day...
+</p>
+]]></content><modified>2004-02-20T14:38:08-07:00</modified><issued>2004-02-20T14:38:08-07:00</issued><id>http://randomthoughts.vandorp.ca/syncato/WK/blog/751?t=item</id></entry><entry xmlns=""><title>I'm not a geek</title><link rel="alternate" type="text/html" href="http://randomthoughts.vandorp.ca/syncato/WK/blog/750?t=item"/><summary>I do not a have todo.txt file. At a minimum I'm not an Alpha Geek....</summary><content type="text/html" mode="escaped"><![CDATA[
+<p>
+<a href="http://craphound.com/lifehacksetcon04.txt" title="Tech Secrets of Overprolific Alpha Geeks">I do not a have todo.txt file.</a> At a minimum I'm not an Alpha Geek.
+</p>
+]]></content><modified>2004-02-17T22:14:27-07:00</modified><issued>2004-02-17T22:14:27-07:00</issued><id>http://randomthoughts.vandorp.ca/syncato/WK/blog/750?t=item</id></entry><entry xmlns=""><title>PEAK 0.5a3 released</title><link rel="alternate" type="text/html" href="http://randomthoughts.vandorp.ca/syncato/WK/blog/749?t=item"/><summary>PEAK 0.5a3 has been released. Still for those that are willing to use alpha software, but I use it a lot for my little projects....</summary><content type="text/html" mode="escaped"><![CDATA[
+<p>
+<a href="http://peak.telecommunity.com" title="peak homepage">PEAK</a> 0.5a3 has been released. Still for those that are willing to use alpha software, but I use it a lot for my little projects.
+</p> 
+]]></content><modified>2004-02-16T19:04:32-07:00</modified><issued>2004-02-16T19:04:32-07:00</issued><id>http://randomthoughts.vandorp.ca/syncato/WK/blog/749?t=item</id></entry></feed>

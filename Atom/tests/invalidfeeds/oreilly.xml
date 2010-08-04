@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<feed version="0.3" xmlns="http://purl.org/atom/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+  <title type="text/plain">Meerkat</title>
+  <tagline type="text/plain">An Open Wire Service.</tagline>
+  <link rel="alternate" type="text/html" href="http://meerkat.oreillynet.com/" />
+  <id>tag:meerkat.oreillynet.com,2004:/</id>
+  <generator url="http://meerkat.oreillynet.com/" version="1.7">Meerkat</generator>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1515888</id>
+    <title type="text/plain">When Pythons Attack</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/python/2004/02/05/learn_python.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    Mark Lutz, coauthor of the recently released Learning Python, 2nd Edition, offers tips, gleaned from his first-hand experience as a Python trainer, on the most common programming and coding mistakes that new Python programmers make. For seasoned Python programmers, Mark offers tips on working with Python's larger features, such as datatypes, functions, modules, and classes. 
+   
+]]>
+</content>
+    <issued>2004-02-05T04:02:11Z</issued>
+    <modified>2004-02-05T04:02:11Z</modified>
+    <author><name>Mark Lutz</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>Mark Lutz</dc:creator>
+    <dc:subject>Python</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1515878</id>
+    <title type="text/plain">Introducing LAMP Tuning Techniques</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/onlamp/2004/02/05/lamp_tuning.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    Having a successful web site can be a mixed blessing. It's nice to reach more people, but it's painful to run up against hardware limits. Fortunately, LAMP sites have several tuning options, from tweaking parameters to replacing components. Adam Pedersen explains.
+   
+]]>
+</content>
+    <issued>2004-02-05T04:02:11Z</issued>
+    <modified>2004-02-05T04:02:11Z</modified>
+    <author><name>Adam Pedersen</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>Adam Pedersen</dc:creator>
+    <dc:subject>ONLamp, Application Development</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1515877</id>
+    <title type="text/plain">Printing Clients and Servers</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/bsd/2004/02/05/Big_Scary_Daemons.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    Though plain-text configuration files often work nicely, some Unixisms are terse -- printcap printer configuration comes to mind. They're not as bad as they seem, though. Michael Lucas explains how to configure printers and print clients, even printing to multiple printers on separate networks.
+   
+]]>
+</content>
+    <issued>2004-02-05T04:02:11Z</issued>
+    <modified>2004-02-05T04:02:11Z</modified>
+    <author><name>Michael Lucas</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>Michael Lucas</dc:creator>
+    <dc:subject>BSD, FreeBSD</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:type>Big Scary Daemons</dc:type>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1506280</id>
+    <title type="text/plain">Cooking with Apache, Part 2</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/apache/2004/01/29/apache_ckbk.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    At the end of 2003, we published our first batch of recipes from O'Reilly's Apache Cookbook. This week, we've excerpted three more samples. Find out how to make part of your web site available via SSL, how to place a CGI program in a directory that contains non-CGI documents, and how to redirect a 404 (&quot;not found&quot;) page to another page (such as the front page of the site) in these latest samplings.
+   
+]]>
+</content>
+    <issued>2004-01-29T04:01:12Z</issued>
+    <modified>2004-01-29T04:01:12Z</modified>
+    <author><name>Rich Bowen, Ken Coar</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>Rich Bowen, Ken Coar</dc:creator>
+    <dc:subject>Apache</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1506233</id>
+    <title type="text/plain">MySQL Crash Course, Part 3</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/php/2004/01/29/php_foundations.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    Almost every serious web application uses a relational database to store its data. At some point, you'll have to learn how to use them. John Coggeshall explains how to make the most of the SQL SELECT statement across multiple tables.
+   
+]]>
+</content>
+    <issued>2004-01-29T04:01:14Z</issued>
+    <modified>2004-01-29T04:01:14Z</modified>
+    <author><name>John Coggeshall</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>John Coggeshall</dc:creator>
+    <dc:subject>PHP, Database, Getting Started</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:type>PHP Foundations</dc:type>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1506232</id>
+    <title type="text/plain">The New Breed of Version Control Systems</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/onlamp/2004/01/29/scm_overview.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    CVS, part of the glue that holds open source development together, is showing its age. Many competitors have emerged recently, fixing misfeatures and adding new ideas. Shlomi Fish explores several current open source version control systems that may be better than CVS for your needs.
+   
+]]>
+</content>
+    <issued>2004-01-29T04:01:14Z</issued>
+    <modified>2004-01-29T04:01:14Z</modified>
+    <author><name>Shlomi Fish</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>Shlomi Fish</dc:creator>
+    <dc:subject>ONLamp, Programming</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1498295</id>
+    <title type="text/plain">Ruby's Present and Future</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/onlamp/2003/12/18/ruby_con.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    Ruby's been around for ten years and continues to grow in popularity and usage. What's next for the language? That's just one of the questions answered at the 2003 Ruby Conference. Mike Stok was there. He covers all three days of the conference.
+   
+]]>
+</content>
+    <issued>2004-01-23T02:01:35Z</issued>
+    <modified>2004-01-23T02:01:35Z</modified>
+    <author><name>Mike Stok</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>Mike Stok</dc:creator>
+    <dc:subject>ONLamp, Programming</dc:subject>
+    <dc:publisher>O'Reilly and Associates</dc:publisher>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2003, O'Reilly and Associates</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1498294</id>
+    <title type="text/plain">MySQL Crash Course</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/php/2003/12/23/php_foundations.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    Almost every serious web application uses a relational database to store its data. At some point, you'll have to learn how to use them. John Coggeshall explains the basics of relational databases with MySQL.
+   
+]]>
+</content>
+    <issued>2004-01-23T02:01:35Z</issued>
+    <modified>2004-01-23T02:01:35Z</modified>
+    <author><name>John Coggeshall</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>John Coggeshall</dc:creator>
+    <dc:subject>PHP, Database, Getting Started</dc:subject>
+    <dc:publisher>O'Reilly and Associates</dc:publisher>
+    <dc:type>PHP Foundations</dc:type>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2003, O'Reilly and Associates</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1498293</id>
+    <title type="text/plain">Cooking with Apache</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/apache/2003/12/23/apache_ckbk.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    The recently released Apache Cookbook contains over 100 solutions to problems that webmasters, web administrators, programmers, and anyone who works with Apache have come upon at one time or another. This week we've excerpted sample recipes from the book that contain solutions to problems with virtual hosting, highlighting PHP source, and enabling WebDAV. 
+   
+]]>
+</content>
+    <issued>2004-01-23T02:01:35Z</issued>
+    <modified>2004-01-23T02:01:35Z</modified>
+    <author><name>Ken Coar, Rich Bowen</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>Ken Coar, Rich Bowen</dc:creator>
+    <dc:subject>Apache</dc:subject>
+    <dc:publisher>O'Reilly and Associates</dc:publisher>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2003, O'Reilly and Associates</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1498292</id>
+    <title type="text/plain">The Best of ONLamp 2003</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/onlamp/2003/12/23/best_of_2003.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    This year, 2003, was a big one for ONLamp. With 200+ articles under our belt, what did we like best? Where are we going next year?
+   
+]]>
+</content>
+    <issued>2004-01-23T02:01:35Z</issued>
+    <modified>2004-01-23T02:01:35Z</modified>
+    <author><name>chromatic</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>chromatic</dc:creator>
+    <dc:subject>ONLamp</dc:subject>
+    <dc:publisher>O'Reilly and Associates</dc:publisher>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2003, O'Reilly and Associates</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1498291</id>
+    <title type="text/plain">RouteWord Solutions</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/onlamp/2003/12/31/routeword_answers.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    We've run the puzzles, now find out the answers! Here are the solutions to the 30 RouteWord puzzles Andrew Odewahn provided for us.
+   
+]]>
+</content>
+    <issued>2004-01-23T02:01:35Z</issued>
+    <modified>2004-01-23T02:01:35Z</modified>
+    <author><name>Andrew Odewahn</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>Andrew Odewahn</dc:creator>
+    <dc:subject>ONLamp</dc:subject>
+    <dc:publisher>O'Reilly and Associates</dc:publisher>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2003, O'Reilly and Associates</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1498290</id>
+    <title type="text/plain">A Day in the Life of #Apache</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/apache/2004/01/08/apacheckbk.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    In this installment of his new series based on conversations on the IRC channel, #Apache, Rich Bowen tackles configuration issues in the sometimes bewildering world of virtual hosts. By the time he's through, Rich will have even the most confused Apache administrator creating a functioning virtual host configuration. Rich is coauthor of the recently released Apache Cookbook.
+   
+]]>
+</content>
+    <issued>2004-01-23T02:01:35Z</issued>
+    <modified>2004-01-23T02:01:35Z</modified>
+    <author><name>Rich Bowen</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>Rich Bowen</dc:creator>
+    <dc:subject>Apache</dc:subject>
+    <dc:publisher>O'Reilly and Associates</dc:publisher>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly and Associates</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1498289</id>
+    <title type="text/plain">Mobile Email with UUCP</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/onlamp/2004/01/09/uucp.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    If you're a mobile user, you're probably familiar with webmail, IMAP, and secure SMTP. You probably also know the frustration of long transfers on slow links. A well-aged Internet protocol may be the answer. Sean Reifschneider reintroduces UUCP, a batch command protocol.
+   
+]]>
+</content>
+    <issued>2004-01-23T02:01:35Z</issued>
+    <modified>2004-01-23T02:01:35Z</modified>
+    <author><name>Sean Reifschneider</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>Sean Reifschneider</dc:creator>
+    <dc:subject>ONLamp, Email</dc:subject>
+    <dc:publisher>O'Reilly and Associates</dc:publisher>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly and Associates</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1498288</id>
+    <title type="text/plain">MySQL Crash Course, Part 2</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/php/2004/01/09/php_foundations.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    Almost every serious web application uses a relational database to store its data. At some point, you'll have to learn how to use it. John Coggeshall explains how to change tables, select only the data you want, and delete rows from MySQL.
+   
+]]>
+</content>
+    <issued>2004-01-23T02:01:35Z</issued>
+    <modified>2004-01-23T02:01:35Z</modified>
+    <author><name>John Coggeshall</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>John Coggeshall</dc:creator>
+    <dc:subject>PHP, Database, Getting Started</dc:subject>
+    <dc:publisher>O'Reilly and Associates</dc:publisher>
+    <dc:type>PHP Foundations</dc:type>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly and Associates</dc:rights>
+  </entry>
+
+  <entry>
+    <id>tag:meerkat.oreillynet.com,2004:/?id=1498287</id>
+    <title type="text/plain">Bacula: Cross-Platform Client-Server Backups</title>
+    <link rel="alternate" type="text/html" href="http://www.onlamp.com/pub/a/onlamp/2004/01/09/bacula.html" />
+    <content type="text/html" xml:base="http://meerkat.oreillynet.com/" xml:lang="en" xml:space="preserve" mode="escaped">
+<![CDATA[
+
+    Bacula may not be the first name that comes to mind when you think of open source backup software. Dan Langille claims it's effective and useful, despite the odd name. He describes configuration and usage across multiple platforms and hardwares.
+   
+]]>
+</content>
+    <issued>2004-01-23T02:01:35Z</issued>
+    <modified>2004-01-23T02:01:35Z</modified>
+    <author><name>Dan Langille</name></author>
+    <dc:source>ONLamp.com</dc:source>
+    <dc:creator>Dan Langille</dc:creator>
+    <dc:subject>ONLamp</dc:subject>
+    <dc:publisher>O'Reilly and Associates</dc:publisher>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly and Associates</dc:rights>
+  </entry>
+
+
+</feed>

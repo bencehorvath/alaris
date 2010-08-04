@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_alaris_1_1_irc_1_1_dcc_file_session.html#a2c867b8139274f30cbfe1104af85ec25" title="Another user has offered to send a file. This method should be called to accept the..." alt="" coords="283,5,509,35"/>
+<area shape="rect" id="node5" href="$class_alaris_1_1_irc_1_1_dcc_file_session.html#a6e5c8fe20827e4a170296afb6994c1ad" title="Attempt to send a file to a remote user. Start listening on the given port and address..." alt="" coords="291,59,501,88"/>
+</map>

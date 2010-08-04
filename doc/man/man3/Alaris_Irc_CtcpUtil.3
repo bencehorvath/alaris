@@ -1,0 +1,100 @@
+.TH "Alaris::Irc::CtcpUtil" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Irc::CtcpUtil \- 
+.PP
+Constants and utility methods to support CTCP.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBCreateTimestamp\fP ()"
+.br
+.RI "\fIGenerate a timestamp string suitable for the CTCP Ping command. \fP"
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const string \fBFinger\fP = 'FINGER'"
+.br
+.RI "\fICTCP Finger. \fP"
+.ti -1c
+.RI "const string \fBUserInfo\fP = 'USERINFO'"
+.br
+.RI "\fICTCP USERINFO. \fP"
+.ti -1c
+.RI "const string \fBVersion\fP = 'VERSION'"
+.br
+.RI "\fICTCP VERSION. \fP"
+.ti -1c
+.RI "const string \fBSource\fP = 'SOURCE'"
+.br
+.RI "\fICTCP SOURCE. \fP"
+.ti -1c
+.RI "const string \fBClientInfo\fP = 'CLIENTINFO'"
+.br
+.RI "\fICTCP CLIENTINFO. \fP"
+.ti -1c
+.RI "const string \fBErrorMessage\fP = 'ERRMSG'"
+.br
+.RI "\fICTCP ERRMSG. \fP"
+.ti -1c
+.RI "const string \fBPing\fP = 'PING'"
+.br
+.RI "\fICTCP PING. \fP"
+.ti -1c
+.RI "const string \fBTime\fP = 'TIME'"
+.br
+.RI "\fICTCP TIME. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Constants and utility methods to support CTCP. 
+
+The CTCP constants should be used to test incoming CTCP queries for their type and as the CTCP command for outgoing ones. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static string Alaris.Irc.CtcpUtil.CreateTimestamp ()\fC [static]\fP"
+.PP
+Generate a timestamp string suitable for the CTCP Ping command. \fBReturns:\fP
+.RS 4
+The current time as a string.
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "const string \fBAlaris.Irc.CtcpUtil.ClientInfo\fP = 'CLIENTINFO'"
+.PP
+CTCP CLIENTINFO. 
+.SS "const string \fBAlaris.Irc.CtcpUtil.ErrorMessage\fP = 'ERRMSG'"
+.PP
+CTCP ERRMSG. 
+.SS "const string \fBAlaris.Irc.CtcpUtil.Finger\fP = 'FINGER'"
+.PP
+CTCP Finger. 
+.SS "const string \fBAlaris.Irc.CtcpUtil.Ping\fP = 'PING'"
+.PP
+CTCP PING. 
+.SS "const string \fBAlaris.Irc.CtcpUtil.Source\fP = 'SOURCE'"
+.PP
+CTCP SOURCE. 
+.SS "const string \fBAlaris.Irc.CtcpUtil.Time\fP = 'TIME'"
+.PP
+CTCP TIME. 
+.SS "const string \fBAlaris.Irc.CtcpUtil.UserInfo\fP = 'USERINFO'"
+.PP
+CTCP USERINFO. 
+.SS "const string \fBAlaris.Irc.CtcpUtil.Version\fP = 'VERSION'"
+.PP
+CTCP VERSION. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

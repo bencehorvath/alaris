@@ -1,0 +1,133 @@
+.TH "Alaris::Core::AlarisBot" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Core::AlarisBot \- 
+.PP
+The main class for \fBAlaris\fP.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAlarisBot\fP ()"
+.br
+.RI "\fICreates a new instacne of \fBAlaris\fP bot. \fP"
+.ti -1c
+.RI "\fBCrashHandler\fP \fBGetCrashHandler\fP ()"
+.br
+.RI "\fIGets the class' current crash handler. \fP"
+.ti -1c
+.RI "void \fBReadConfig\fP (string configfile)"
+.br
+.RI "\fIReads and parses the specified config file. \fP"
+.ti -1c
+.RI "void \fBConnect\fP ()"
+.br
+.RI "\fIEstablishes the connection to the previously specified server. \fP"
+.ti -1c
+.RI "void \fBDisconnect\fP (string rsr)"
+.br
+.RI "\fIDisconnects the bot from the IRC server. \fP"
+.ti -1c
+.RI "void \fBSendMsg\fP (string channel, string message)"
+.br
+.RI "\fISends the given message to the specified channel. \fP"
+.ti -1c
+.RI "void \fBOnPublicMessage\fP (\fBUserInfo\fP user, string chan, string msg)"
+.br
+.RI "\fIThe method called when a public message occurs in one of the channels the bot is on. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBOnRegistered\fP ()"
+.br
+.RI "\fIMethod run when the bot is registered to the IRC server. \fP"
+.ti -1c
+.RI "void \fBOnCtcpRequest\fP (string command, \fBUserInfo\fP user)"
+.br
+.RI "\fIMethod run when the bot receives a CTCP request. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+The main class for \fBAlaris\fP. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Alaris.Core.AlarisBot.AlarisBot ()"
+.PP
+Creates a new instacne of \fBAlaris\fP bot. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Alaris.Core.AlarisBot.Connect ()"
+.PP
+Establishes the connection to the previously specified server. 
+.SS "void Alaris.Core.AlarisBot.Disconnect (string rsr)"
+.PP
+Disconnects the bot from the IRC server. \fBParameters:\fP
+.RS 4
+\fIrsr\fP Reason for disconnect. 
+.RE
+.PP
+
+.SS "\fBCrashHandler\fP Alaris.Core.AlarisBot.GetCrashHandler ()"
+.PP
+Gets the class' current crash handler. \fBReturns:\fP
+.RS 4
+The crash handler. 
+.RE
+.PP
+
+.SS "void Alaris.Core.AlarisBot.OnCtcpRequest (string command, \fBUserInfo\fP user)\fC [protected]\fP"
+.PP
+Method run when the bot receives a CTCP request. \fBParameters:\fP
+.RS 4
+\fIcommand\fP The CTCP command. 
+.br
+\fIuser\fP Data about the user who sent it. 
+.RE
+.PP
+
+.SS "void Alaris.Core.AlarisBot.OnPublicMessage (\fBUserInfo\fP user, string chan, string msg)"
+.PP
+The method called when a public message occurs in one of the channels the bot is on. \fBParameters:\fP
+.RS 4
+\fIuser\fP The data about the user who sent the message. 
+.br
+\fIchan\fP The channel where the message occured. 
+.br
+\fImsg\fP The message that was sent. 
+.RE
+.PP
+
+.SS "void Alaris.Core.AlarisBot.OnRegistered ()\fC [protected]\fP"
+.PP
+Method run when the bot is registered to the IRC server. 
+.SS "void Alaris.Core.AlarisBot.ReadConfig (string configfile)"
+.PP
+Reads and parses the specified config file. \fBParameters:\fP
+.RS 4
+\fIconfigfile\fP The config file name. 
+.RE
+.PP
+
+.SS "void Alaris.Core.AlarisBot.SendMsg (string channel, string message)"
+.PP
+Sends the given message to the specified channel. \fBParameters:\fP
+.RS 4
+\fIchannel\fP A System.String 
+.br
+\fImessage\fP A System.String 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

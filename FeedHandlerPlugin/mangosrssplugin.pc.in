@@ -1,0 +1,6 @@
+Name: MangosRssPlugin
+Description: MangosRssPlugin
+Version: 1.6
+
+Requires: 
+Libs: -r:@expanded_libdir@/@PACKAGE@/MangosRssPlugin.dll

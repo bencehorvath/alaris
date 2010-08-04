@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{362EB959-5C30-4674-80D2-3AC4516309F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LuaPlugin</RootNamespace>
+    <ReleaseVersion>1.6</ReleaseVersion>
+    <AssemblyName>LuaPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\alaris\bin\Debug\plugins</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\alaris\bin\Release\plugins</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Plugin.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="lua51, Version=0.0.0.0, Culture=neutral, PublicKeyToken=1e1fb15b02227b8a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\mono\luainterface\Built\lua51.dll</HintPath>
+    </Reference>
+    <Reference Include="LuaInterface, Version=2.0.0.35679, Culture=neutral, PublicKeyToken=1e1fb15b02227b8a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\mono\luainterface\Built\LuaInterface.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AlarisAPI\AlarisAPI.csproj">
+      <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
+      <Name>AlarisAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\irc\irc.csproj">
+      <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
+      <Name>irc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\alaris\alaris.csproj">
+      <Project>{827FC720-BEE2-4357-B29F-0C2BDF51472D}</Project>
+      <Name>alaris</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

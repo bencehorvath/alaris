@@ -1,0 +1,1879 @@
+.TH "Alaris.Irc" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris.Irc \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBChannelModeInfo\fP"
+.br
+.RI "\fIA simple struct designed to hold al the attributes that are contain in a Channel mode. \fP"
+.ti -1c
+.RI "class \fBCommandBuilder\fP"
+.br
+.RI "\fI\fBCommandBuilder\fP provides the support methods needed by its subclasses to build correctly formatted messages for the IRC server. It is never itself instantiated. \fP"
+.ti -1c
+.RI "class \fBConnection\fP"
+.br
+.RI "\fIThis class manages the connection to the IRC server and provides access to all the objects needed to send and receive messages. \fP"
+.ti -1c
+.RI "struct \fBConnectionArgs\fP"
+.br
+.RI "\fIA collection of parameters necessary to establish an IRC connection. \fP"
+.ti -1c
+.RI "class \fBCtcpListener\fP"
+.br
+.RI "\fIThis class is used to send CTCP specific events. Once registered with this object the client can receive notification of all CTCP requests, pings, and replies. Instances of this class are not created directly but are retrieved as a property from a \fBConnection\fP object. \fP"
+.ti -1c
+.RI "class \fBCtcpResponder\fP"
+.br
+.RI "\fIA class which automatically responds to CTCP queries. The replies it sends are configurable by the client. \fP"
+.ti -1c
+.RI "class \fBCtcpSender\fP"
+.br
+.RI "\fIThis class allows the client to send CTCP commands. There is no limit on what commands can actually be sent, however, the accepted CTCP commands are: \fBUserInfo\fP, Finger, Version, Source, ClientInfo, ErrMsg, and Time. \fP"
+.ti -1c
+.RI "class \fBCtcpUtil\fP"
+.br
+.RI "\fIConstants and utility methods to support CTCP. \fP"
+.ti -1c
+.RI "class \fBDccChatSession\fP"
+.br
+.RI "\fIEstablish a DCC Chat connection with a remote user. \fP"
+.ti -1c
+.RI "class \fBDccFileInfo\fP"
+.br
+.RI "\fIManages the information about the file being transfered. \fP"
+.ti -1c
+.RI "class \fBDccFileSession\fP"
+.br
+.RI "\fIAllows the user to send and receive files from other IRC users. \fP"
+.ti -1c
+.RI "class \fBDccFileSessionManager\fP"
+.br
+.RI "\fIThis class checks each file session to see if it has not had any activity within the timeout period so that inactive sessions can be closed. \fP"
+.ti -1c
+.RI "class \fBDccListener\fP"
+.br
+.RI "\fI\fBDccListener\fP listens for incoming DCC requests on any \fBConnection\fP in which DCC is enabled. This class follows the singleton pattern and there so there is only a single instance which listens to all connections. \fP"
+.ti -1c
+.RI "class \fBDccUserInfo\fP"
+.br
+.RI "\fIThis class encapsulates all the information known about a remote user in the context of a DCC session. \fP"
+.ti -1c
+.RI "class \fBDccUtil\fP"
+.br
+.RI "\fIUtility methods needed to handle DCC requests. \fP"
+.ti -1c
+.RI "class \fBIdentd\fP"
+.br
+.RI "\fIAn Ident daemon is still used by some IRC networks for authentication. It is a simple service which when queried by a remote system returns a username. The server is controlled via static methods all of which are Thread safe. \fP"
+.ti -1c
+.RI "interface \fBIParser\fP"
+.br
+.RI "\fIClasses should implement this Interface in order to act as custom parsers for the raw messages received from IRC servers. \fP"
+.ti -1c
+.RI "class \fBListener\fP"
+.br
+.RI "\fIThis class parses messages received from the IRC server and raises the appropriate event. \fP"
+.ti -1c
+.RI "class \fBNameGenerator\fP"
+.br
+.RI "\fIGenerates random, made-up names. The names appear to be language neutral (sort of). \fP"
+.ti -1c
+.RI "class \fBRfc2812Util\fP"
+.br
+.RI "\fIRFC 2812 Utility methods. \fP"
+.ti -1c
+.RI "class \fBSender\fP"
+.br
+.RI "\fIThis class is used to send all the IRC commands except for CTCP and DCC messages. Instances of this class are retrieved as properties of the \fBConnection\fP object. All methods in this class are thread safe. \fP"
+.ti -1c
+.RI "class \fBServerProperties\fP"
+.br
+.RI "\fIEncapsulates the collection of properties sent by the IRC server after registration. \fP"
+.ti -1c
+.RI "class \fBTextColor\fP"
+.br
+.RI "\fIThis class conatins a set of methods for adding and removing mIRC color and other control codes. \fP"
+.ti -1c
+.RI "class \fBUserInfo\fP"
+.br
+.RI "\fIA convenient holder of user information. Instances of this class are created internally. \fP"
+.ti -1c
+.RI "class \fBWhoisInfo\fP"
+.br
+.RI "\fIThe collection of information about a user returned by a Whois query. Instances of this class are created internally. \fP"
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBModeAction\fP { \fBAdd\fP =  43, \fBRemove\fP =  45 }"
+.br
+.RI "\fIWhether a mode has been added or removed. \fP"
+.ti -1c
+.RI "enum \fBUserMode\fP { \fBAway\fP =  97, \fBWallops\fP = 119, \fBInvisible\fP = 105, \fBOperator\fP = 111, \fBRestricted\fP = 114, \fBLocalOperator\fP =  79, \fBServerNotices\fP =  115 }"
+.br
+.RI "\fIThe possible user modes. \fP"
+.ti -1c
+.RI "enum \fBChannelMode\fP { \fBChannelCreator\fP =  79, \fBChannelOperator\fP =  111, \fBHalfChannelOperator\fP =  104, \fBVoice\fP =  118, \fBAnonymous\fP =  97, \fBInviteOnly\fP =  105, \fBModerated\fP =  109, \fBNoOutside\fP =  110, \fBQuiet\fP =  113, \fBPrivate\fP =  112, \fBSecret\fP =  115, \fBServerReop\fP =  114, \fBTopicSettable\fP =  116, \fBPassword\fP =  107, \fBUserLimit\fP =  108, \fBBan\fP =  98, \fBException\fP =  101, \fBInvitation\fP =  73 }"
+.br
+.RI "\fIPossible channel modes. \fP"
+.ti -1c
+.RI "enum \fBStatsQuery\fP { \fBConnections\fP =  108, \fBCommandUsage\fP =  109, \fBOperators\fP =  111, \fBUptime\fP =  117 }"
+.br
+.RI "\fIThe possible stats message query parameters. \fP"
+.ti -1c
+.RI "enum \fBMircColor\fP { \fBWhite\fP =  0, \fBBlack\fP =  1, \fBBlue\fP =  2, \fBGreen\fP =  3, \fBLightRed\fP =  4, \fBBrown\fP =  5, \fBPurple\fP =  6, \fBOrange\fP =  7, \fBYellow\fP =  8, \fBLightGreen\fP =  9, \fBCyan\fP =  10, \fBLightCyan\fP =  11, \fBLightBlue\fP =  12, \fBPink\fP =  13, \fBGrey\fP =  14, \fBLightGrey\fP =  15, \fBTransparent\fP =  99 }"
+.br
+.RI "\fIAll recognized mIRC colors. \fP"
+.ti -1c
+.RI "enum \fBReplyCode\fP { \fBRPL_WELCOME\fP =  001, \fBRPL_YOURHOST\fP =  002, \fBRPL_CREATED\fP =  003, \fBRPL_MYINFO\fP =  004, \fBRPL_BOUNCE\fP =  005, \fBRPL_USERHOST\fP =  302, \fBRPL_ISON\fP =  303, \fBRPL_AWAY\fP =  301, \fBRPL_UNAWAY\fP =  305, \fBRPL_NOWAWAY\fP =  306, \fBRPL_WHOISUSER\fP =  311, \fBRPL_WHOISSERVER\fP =  312, \fBRPL_WHOISOPERATOR\fP =  313, \fBRPL_WHOISIDLE\fP =  317, \fBRPL_ENDOFWHOIS\fP =  318, \fBRPL_WHOISCHANNELS\fP =  319, \fBRPL_WHOWASUSER\fP =  314, \fBRPL_ENDOFWHOWAS\fP =  369, \fBRPL_LISTSTART\fP =  321, \fBRPL_LIST\fP =  322, \fBRPL_LISTEND\fP =  323, \fBRPL_UNIQOPIS\fP =  325, \fBRPL_CHANNELMODEIS\fP =  324, \fBRPL_NOTOPIC\fP =  331, \fBRPL_TOPIC\fP =  332, \fBRPL_INVITING\fP =  341, \fBRPL_SUMMONING\fP =  342, \fBRPL_INVITELIST\fP =  346, \fBRPL_ENDOFINVITELIST\fP =  347, \fBRPL_EXCEPTLIST\fP =  348, \fBRPL_ENDOFEXCEPTLIST\fP =  349, \fBRPL_VERSION\fP =  351, \fBRPL_WHOREPLY\fP =  352, \fBRPL_ENDOFWHO\fP =  315, \fBRPL_NAMREPLY\fP =  353, \fBRPL_ENDOFNAMES\fP =  366, \fBRPL_LINKS\fP =  364, \fBRPL_ENDOFLINKS\fP =  365, \fBRPL_BANLIST\fP =  367, \fBRPL_ENDOFBANLIST\fP =  368, \fBRPL_INFO\fP =  371, \fBRPL_ENDOFINFO\fP =  374, \fBRPL_MOTDSTART\fP =  375, \fBRPL_MOTD\fP =  372, \fBRPL_ENDOFMOTD\fP =  376, \fBRPL_YOUREOPER\fP =  381, \fBRPL_REHASHING\fP =  382, \fBRPL_YOURESERVICE\fP =  383, \fBRPL_TIME\fP =  391, \fBRPL_USERSSTART\fP =  392, \fBRPL_USERS\fP =  393, \fBRPL_ENDOFUSERS\fP =  394, \fBRPL_NOUSERS\fP =  395, \fBRPL_TRACELINK\fP =  200, \fBRPL_TRACECONNECTING\fP =  201, \fBRPL_TRACEHANDSHAKE\fP =  202, \fBRPL_TRACEUNKNOWN\fP =  203, \fBRPL_TRACEOPERATOR\fP =  204, \fBRPL_TRACEUSER\fP =  205, \fBRPL_TRACESERVER\fP =  206, \fBRPL_TRACESERVICE\fP =  207, \fBRPL_TRACENEWTYPE\fP =  208, \fBRPL_TRACECLASS\fP =  209, \fBRPL_TRACERECONNECT\fP =  210, \fBRPL_TRACELOG\fP =  261, \fBRPL_TRACEEND\fP =  262, \fBRPL_STATSLINKINFO\fP =  211, \fBRPL_STATSCOMMANDS\fP =  212, \fBRPL_ENDOFSTATS\fP =  219, \fBRPL_STATSUPTIME\fP =  242, \fBRPL_STATSOLINE\fP =  243, \fBRPL_UMODEIS\fP =  221, \fBRPL_SERVLIST\fP =  234, \fBRPL_SERVLISTEND\fP =  235, \fBRPL_LUSERCLIENT\fP =  251, \fBRPL_LUSEROP\fP =  252, \fBRPL_LUSERUNKNOWN\fP =  253, \fBRPL_LUSERCHANNELS\fP =  254, \fBRPL_LUSERME\fP =  255, \fBRPL_ADMINME\fP =  256, \fBRPL_ADMINLOC1\fP =  257, \fBRPL_ADMINLOC2\fP =  258, \fBRPL_ADMINEMAIL\fP =  259, \fBRPL_TRYAGAIN\fP =  263, \fBERR_NOSUCHNICK\fP =  401, \fBERR_NOSUCHSERVER\fP =  402, \fBERR_NOSUCHCHANNEL\fP =  403, \fBERR_CANNOTSENDTOCHAN\fP =  404, \fBERR_TOOMANYCHANNELS\fP =  405, \fBERR_WASNOSUCHNICK\fP =  406, \fBERR_TOOMANYTARGETS\fP =  407, \fBERR_NOSUCHSERVICE\fP =  408, \fBERR_NOORIGIN\fP =  409, \fBERR_NORECIPIENT\fP =  411, \fBERR_NOTEXTTOSEND\fP =  412, \fBERR_NOTOPLEVEL\fP =  413, \fBERR_WILDTOPLEVEL\fP =  414, \fBERR_BADMASK\fP =  415, \fBERR_TOOMANYLINES\fP =  416, \fBERR_UNKNOWNCOMMAND\fP =  421, \fBERR_NOMOTD\fP =  422, \fBERR_NOADMININFO\fP =  423, \fBERR_FILEERROR\fP =  424, \fBERR_NONICKNAMEGIVEN\fP =  431, \fBERR_ERRONEUSNICKNAME\fP =  432, \fBERR_NICKNAMEINUSE\fP =  433, \fBERR_NICKCOLLISION\fP =  436, \fBERR_UNAVAILRESOURCE\fP =  437, \fBERR_USERNOTINCHANNEL\fP =  441, \fBERR_NOTONCHANNEL\fP =  442, \fBERR_USERONCHANNEL\fP =  443, \fBERR_NOLOGIN\fP =  444, \fBERR_SUMMONDISABLED\fP =  445, \fBERR_USERSDISABLED\fP =  446, \fBERR_NOTREGISTERED\fP =  451, \fBERR_NEEDMOREPARAMS\fP =  461, \fBERR_ALREADYREGISTRED\fP =  462, \fBERR_NOPERMFORHOST\fP =  463, \fBERR_PASSWDMISMATCH\fP =  464, \fBERR_YOUREBANNEDCREEP\fP =  465, \fBERR_YOUWILLBEBANNED\fP =  466, \fBERR_KEYSET\fP =  467, \fBERR_CHANNELISFULL\fP =  471, \fBERR_UNKNOWNMODE\fP =  472, \fBERR_INVITEONLYCHAN\fP =  473, \fBERR_BANNEDFROMCHAN\fP =  474, \fBERR_BADCHANNELKEY\fP =  475, \fBERR_BADCHANMASK\fP =  476, \fBERR_NOCHANMODES\fP =  477, \fBERR_BANLISTFULL\fP =  478, \fBERR_NOPRIVILEGES\fP =  481, \fBERR_CHANOPRIVSNEEDED\fP =  482, \fBERR_CANTKILLSERVER\fP =  483, \fBERR_RESTRICTED\fP =  484, \fBERR_UNIQOPPRIVSNEEDED\fP =  485, \fBERR_NOOPERHOST\fP =  491, \fBERR_UMODEUNKNOWNFLAG\fP =  501, \fBERR_USERSDONTMATCH\fP =  502, \fBConnectionFailed\fP =  1000, \fBIrcServerError\fP =  1001, \fBBadDccEndpoint\fP =  1002, \fBUnparseableMessage\fP =  1003, \fBUnableToResume\fP =  1004, \fBUnknownEncryptionProtocol\fP =  1005, \fBBadDccAcceptValue\fP =  1006, \fBBadResumePosition\fP =  1007, \fBDccConnectionRefused\fP =  1008 }"
+.br
+.RI "\fINumeric message codes taken from RFC 2812. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "delegate void \fBReplyEventHandler\fP (\fBReplyCode\fP code, string message)"
+.br
+.RI "\fIMessages that are not handled by other events and are not errors. \fP"
+.ti -1c
+.RI "delegate void \fBErrorMessageEventHandler\fP (\fBReplyCode\fP code, string message)"
+.br
+.RI "\fIError messages from the IRC server. \fP"
+.ti -1c
+.RI "delegate void \fBAwayEventHandler\fP (string nick, string awayMessage)"
+.br
+.RI "\fIA Notice or Private message was sent to someone whose status is away. \fP"
+.ti -1c
+.RI "delegate void \fBInviteSentEventHandler\fP (string nick, string channel)"
+.br
+.RI "\fIAn Invite message was successfully sent to another user. \fP"
+.ti -1c
+.RI "delegate void \fBNickErrorEventHandler\fP (string badNick, string reason)"
+.br
+.RI "\fICalled when a nick change fails. \fP"
+.ti -1c
+.RI "delegate void \fBPingEventHandler\fP (string message)"
+.br
+.RI "\fICalled when a server sends a keep-alive Ping. \fP"
+.ti -1c
+.RI "delegate void \fBRegisteredEventHandler\fP ()"
+.br
+.RI "\fI\fBConnection\fP with IRC server is open and registered. \fP"
+.ti -1c
+.RI "delegate void \fBDisconnectingEventHandler\fP ()"
+.br
+.RI "\fIThis connection is about to be closed. \fP"
+.ti -1c
+.RI "delegate void \fBDisconnectedEventHandler\fP ()"
+.br
+.RI "\fIThis connection has been closed. \fP"
+.ti -1c
+.RI "delegate void \fBPublicNoticeEventHandler\fP (\fBUserInfo\fP user, string channel, string notice)"
+.br
+.RI "\fIA Notice type message was sent to a channel. \fP"
+.ti -1c
+.RI "delegate void \fBPrivateNoticeEventHandler\fP (\fBUserInfo\fP user, string notice)"
+.br
+.RI "\fIA private Notice type message was sent to the user. \fP"
+.ti -1c
+.RI "delegate void \fBJoinEventHandler\fP (\fBUserInfo\fP user, string channel)"
+.br
+.RI "\fISomeone has joined a channel. \fP"
+.ti -1c
+.RI "delegate void \fBActionEventHandler\fP (\fBUserInfo\fP user, string channel, string description)"
+.br
+.RI "\fIAn action message was sent to a channel. \fP"
+.ti -1c
+.RI "delegate void \fBPrivateActionEventHandler\fP (\fBUserInfo\fP user, string description)"
+.br
+.RI "\fIA private action message was sent to the user. \fP"
+.ti -1c
+.RI "delegate void \fBPublicMessageEventHandler\fP (\fBUserInfo\fP user, string channel, string message)"
+.br
+.RI "\fIA public message was sent to a channel. \fP"
+.ti -1c
+.RI "delegate void \fBNickEventHandler\fP (\fBUserInfo\fP user, string newNick)"
+.br
+.RI "\fIA user changed his nickname. \fP"
+.ti -1c
+.RI "delegate void \fBPrivateMessageEventHandler\fP (\fBUserInfo\fP user, string message)"
+.br
+.RI "\fIA private message was sent to the user. \fP"
+.ti -1c
+.RI "delegate void \fBTopicEventHandler\fP (\fBUserInfo\fP user, string channel, string newTopic)"
+.br
+.RI "\fIA channel's topic has changed. \fP"
+.ti -1c
+.RI "delegate void \fBTopicRequestEventHandler\fP (string channel, string topic)"
+.br
+.RI "\fIThe response to a \fBSender.RequestTopic\fP command. \fP"
+.ti -1c
+.RI "delegate void \fBPartEventHandler\fP (\fBUserInfo\fP user, string channel, string reason)"
+.br
+.RI "\fISomeone has left a channel. \fP"
+.ti -1c
+.RI "delegate void \fBQuitEventHandler\fP (\fBUserInfo\fP user, string reason)"
+.br
+.RI "\fISomeone has quit IRC. \fP"
+.ti -1c
+.RI "delegate void \fBInviteEventHandler\fP (\fBUserInfo\fP user, string channel)"
+.br
+.RI "\fIThe user has been invited to a channel. \fP"
+.ti -1c
+.RI "delegate void \fBKickEventHandler\fP (\fBUserInfo\fP user, string channel, string kickee, string reason)"
+.br
+.RI "\fISomeone has been kicked from a channel. \fP"
+.ti -1c
+.RI "delegate void \fBNamesEventHandler\fP (string channel, string[] nicks, bool last)"
+.br
+.RI "\fIThe response to a \fBSender.Names\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBListEventHandler\fP (string channel, int visibleNickCount, string topic, bool last)"
+.br
+.RI "\fIThe response to a \fBSender.List\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBIsonEventHandler\fP (string nicks)"
+.br
+.RI "\fIThe response to a \fBSender.Ison\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBWhoEventHandler\fP (\fBUserInfo\fP user, string channel, string ircServer, string mask, int hopCount, string realName, bool last)"
+.br
+.RI "\fIThe response to a \fBSender.Who\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBWhoisEventHandler\fP (\fBWhoisInfo\fP whoisInfo)"
+.br
+.RI "\fIThe response to a \fBSender.Whois\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBWhowasEventHandler\fP (\fBUserInfo\fP user, string realName, bool last)"
+.br
+.RI "\fIThe response to a \fBSender.Whowas\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBUserModeChangeEventHandler\fP (\fBModeAction\fP action, \fBUserMode\fP mode)"
+.br
+.RI "\fIThis user's mode has changed. \fP"
+.ti -1c
+.RI "delegate void \fBUserModeRequestEventHandler\fP (\fBUserMode\fP[] modes)"
+.br
+.RI "\fIThe response to a \fBSender.RequestUserModes\fP command for this user. \fP"
+.ti -1c
+.RI "delegate void \fBChannelModeRequestEventHandler\fP (string channel, \fBChannelModeInfo\fP[] modes)"
+.br
+.RI "\fIThe response to a \fBSender.RequestChannelModes\fP command. \fP"
+.ti -1c
+.RI "delegate void \fBChannelModeChangeEventHandler\fP (\fBUserInfo\fP who, string channel, \fBChannelModeInfo\fP[] modes)"
+.br
+.RI "\fIA channel's mode has changed. \fP"
+.ti -1c
+.RI "delegate void \fBChannelListEventHandler\fP (string channel, \fBChannelMode\fP mode, string item, \fBUserInfo\fP who, long whenSet, bool last)"
+.br
+.RI "\fIResponse to a \fBSender.RequestChannelList\fP command. \fP"
+.ti -1c
+.RI "delegate void \fBCtcpReplyEventHandler\fP (string command, \fBUserInfo\fP who, string reply)"
+.br
+.RI "\fISomeone has replied to a Ctcp request sent by this client. \fP"
+.ti -1c
+.RI "delegate void \fBCtcpRequestEventHandler\fP (string command, \fBUserInfo\fP who)"
+.br
+.RI "\fISomeone has sent a Ctcp request. \fP"
+.ti -1c
+.RI "delegate void \fBCtcpPingReplyEventHandler\fP (\fBUserInfo\fP who, string timestamp)"
+.br
+.RI "\fISomeone has replied to a Ctcp ping request sent by this client. \fP"
+.ti -1c
+.RI "delegate void \fBCtcpPingRequestEventHandler\fP (\fBUserInfo\fP who, string timestamp)"
+.br
+.RI "\fISomeone has sent a Ctcp Ping request. \fP"
+.ti -1c
+.RI "delegate void \fBDccChatRequestEventHandler\fP (\fBDccUserInfo\fP dccUserInfo)"
+.br
+.RI "\fISomeone has requested a DCC chat session. \fP"
+.ti -1c
+.RI "delegate void \fBChatSessionOpenedEventHandler\fP (\fBDccChatSession\fP session)"
+.br
+.RI "\fIA DCC chat session has been opened with a remote user. \fP"
+.ti -1c
+.RI "delegate void \fBChatSessionClosedEventHandler\fP (\fBDccChatSession\fP session)"
+.br
+.RI "\fIA DCC chat session has been closed. \fP"
+.ti -1c
+.RI "delegate void \fBChatMessageReceivedEventHandler\fP (\fBDccChatSession\fP session, string message)"
+.br
+.RI "\fIA DCC chat message was received from the remote user. \fP"
+.ti -1c
+.RI "delegate void \fBChatRequestTimeoutEventHandler\fP (\fBDccChatSession\fP session)"
+.br
+.RI "\fIWhen trying to initiate a DCC chat request the remote user did not respond within the alotted time. \fP"
+.ti -1c
+.RI "delegate void \fBDccSendRequestEventHandler\fP (\fBDccUserInfo\fP dccUserInfo, string fileName, int size, bool turbo)"
+.br
+.RI "\fIAnother user has offered to send a file. \fP"
+.ti -1c
+.RI "delegate void \fBFileTransferTimeoutEventHandler\fP (\fBDccFileSession\fP session)"
+.br
+.RI "\fIThere has been no activity in this session for the timeout period. The session is automatically closed and this event is raised. \fP"
+.ti -1c
+.RI "delegate void \fBFileTransferStartedEventHandler\fP (\fBDccFileSession\fP session)"
+.br
+.RI "\fIThe file transfer connection has been successfully opened and the data transfer has begun. \fP"
+.ti -1c
+.RI "delegate void \fBFileTransferInterruptedEventHandler\fP (\fBDccFileSession\fP session)"
+.br
+.RI "\fISomething happened to stop the transfer before it was completed. Normally this will be due to one of the sides canceling the transfer. \fP"
+.ti -1c
+.RI "delegate void \fBFileTransferCompletedEventHandler\fP (\fBDccFileSession\fP session)"
+.br
+.RI "\fIA file was succefully transfered. \fP"
+.ti -1c
+.RI "delegate void \fBFileTransferProgressEventHandler\fP (\fBDccFileSession\fP session, int bytesSent)"
+.br
+.RI "\fICalled for each successful data block transfer. This allows the developer to show a transfer progress display of some kind. \fP"
+.ti -1c
+.RI "delegate void \fBDccGetRequestEventHandler\fP (\fBDccUserInfo\fP dccUserInfo, string fileName, bool turbo)"
+.br
+.RI "\fIA remote user has requested a file. To respond use \fBDccFileSession.Send\fP with the relevant information. \fP"
+.ti -1c
+.RI "delegate void \fBRawMessageReceivedEventHandler\fP (string message)"
+.br
+.RI "\fIThe full unparsed text messages received from the IRC server. It includes all messages received except for those exchanged during a DCC chat. \fP"
+.ti -1c
+.RI "delegate void \fBRawMessageSentEventHandler\fP (string message)"
+.br
+.RI "\fIThe full unparsed text messages sent to the IRC server. It includes all messages sent except for those exchanged during a DCC chat. \fP"
+.ti -1c
+.RI "delegate void \fBVersionEventHandler\fP (string versionInfo)"
+.br
+.RI "\fIThe response to a \fBSender.Version\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBMotdEventHandler\fP (string message, bool last)"
+.br
+.RI "\fIThe server's 'Message of the Day' if any. \fP"
+.ti -1c
+.RI "delegate void \fBTimeEventHandler\fP (string time)"
+.br
+.RI "\fIThe response to a \fBSender.Time\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBInfoEventHandler\fP (string message, bool last)"
+.br
+.RI "\fIThe response to an \fBSender.Info\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBAdminEventHandler\fP (string message)"
+.br
+.RI "\fIThe response to an \fBSender.Admin\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBLusersEventHandler\fP (string message)"
+.br
+.RI "\fIThe response to a \fBSender.Lusers\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBLinksEventHandler\fP (string mask, string hostname, int hopCount, string serverInfo, bool done)"
+.br
+.RI "\fIThe response to a \fBSender.Links\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBStatsEventHandler\fP (\fBStatsQuery\fP queryType, string message, bool done)"
+.br
+.RI "\fIThe response to a \fBSender.Stats\fP request. \fP"
+.ti -1c
+.RI "delegate void \fBKillEventHandler\fP (\fBUserInfo\fP user, string nick, string reason)"
+.br
+.RI "\fISomeone was disconnected from the server via a Kill. \fP"
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBAlaris::Irc::ChannelMode\fP"
+.PP
+Possible channel modes. 
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIChannelCreator \fP\fP
+The mode 'O' is only used in conjunction with 'safe channels' and SHALL NOT be manipulated by users. Servers use it to give the user creating the channel the status of 'channel creator'. 
+.TP
+\fB\fIChannelOperator \fP\fP
+The mode 'o' is used to toggle the operator status of a channel member. Should include a nick or user mask parameter. 
+.TP
+\fB\fIHalfChannelOperator \fP\fP
+The mode 'h' is used to toggle the non-standard but common half-operator status of a channel member. Should include a nick or user mask parameter. 
+.TP
+\fB\fIVoice \fP\fP
+The mode 'v' is used to give and take voice privilege to/from a channel member. Users with this privilege can talk on moderated channels. Should include a nick or user mask parameter. 
+.TP
+\fB\fIAnonymous \fP\fP
+The channel flag 'a' defines an anonymous channel. This means that when a message sent to the channel is sent by the server to users, and the origin is a user, then it MUST be masked. No param required. 
+.TP
+\fB\fIInviteOnly \fP\fP
+When the channel flag 'i' is set, new members are only accepted if their mask matches Invite-list or they have been invited by a channel operator. This flag also restricts the usage of the INVITE command to channel operators. No param required. 
+.TP
+\fB\fIModerated \fP\fP
+The channel flag 'm' is used to control who may speak on a channel. When it is set, only channel operators, and members who have been given the voice privilege may send messages to the channel. No param required. 
+.TP
+\fB\fINoOutside \fP\fP
+When the channel flag 'n' is set, only channel members MAY send messages to the channel. No param required 
+.TP
+\fB\fIQuiet \fP\fP
+The channel flag 'q' is for use by servers only. When set, it restricts the type of data sent to users about the channel operations: other user joins, parts and nick changes are not sent. From a user's point of view, the channel contains only one user. 
+.TP
+\fB\fIPrivate \fP\fP
+The channel flag 'p' is used to mark a channel 'private' and the channel flag 's' to mark a channel 'secret'. Both properties are similar and conceal the existence of the channel from other users. No param required. 
+.TP
+\fB\fISecret \fP\fP
+When a channel is 'secret', in addition to the restrictions of Private, the server will act as if the channel does not exist for queries like the TOPIC, LIST, NAMES commands. Note that there is one exception to this rule: servers will correctly reply to the MODE command. Finally, secret channels are not accounted for in the reply to the LUSERS command when the mask parameter is specified. No param required. 
+.TP
+\fB\fIServerReop \fP\fP
+The channel flag 'r' is only available on channels which name begins with the character '!' and MAY only be toggled by the 'channel
+		    creator'. No param required. 
+.TP
+\fB\fITopicSettable \fP\fP
+The channel flag 't' is used to restrict the usage of the TOPIC command to channel operators. No param required. 
+.TP
+\fB\fIPassword \fP\fP
+When a channel key is set (by using the mode 'k'), servers MUST reject their local users request to join the channel unless this key is given. Param is the channel password. 
+.TP
+\fB\fIUserLimit \fP\fP
+A user limit may be set on channels by using the channel flag 'l'. When the limit is reached, servers MUST forbid their local users to join the channel. Param is a whole number indicating the max number of users. 
+.TP
+\fB\fIBan \fP\fP
+When a user requests to join a channel, his local server checks if the user's address matches any of the ban masks set for the channel. If a match is found, the user request is denied unless the address also matches an exception mask set for the channel. Param is a nick or user mask. 
+.TP
+\fB\fIException \fP\fP
+An error ocurred. 
+.TP
+\fB\fIInvitation \fP\fP
+For channels which have the invite-only flag set, users whose address matches an invitation mask set for the channel are allowed to join the channel without any invitation. Param is a nick or user mask. 
+.SS "enum \fBAlaris::Irc::MircColor\fP"
+.PP
+All recognized mIRC colors. 
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIWhite \fP\fP
+.TP
+\fB\fIBlack \fP\fP
+.TP
+\fB\fIBlue \fP\fP
+.TP
+\fB\fIGreen \fP\fP
+.TP
+\fB\fILightRed \fP\fP
+.TP
+\fB\fIBrown \fP\fP
+.TP
+\fB\fIPurple \fP\fP
+.TP
+\fB\fIOrange \fP\fP
+.TP
+\fB\fIYellow \fP\fP
+.TP
+\fB\fILightGreen \fP\fP
+.TP
+\fB\fICyan \fP\fP
+.TP
+\fB\fILightCyan \fP\fP
+.TP
+\fB\fILightBlue \fP\fP
+.TP
+\fB\fIPink \fP\fP
+.TP
+\fB\fIGrey \fP\fP
+.TP
+\fB\fILightGrey \fP\fP
+.TP
+\fB\fITransparent \fP\fP
+
+.SS "enum \fBAlaris::Irc::ModeAction\fP"
+.PP
+Whether a mode has been added or removed. 
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIAdd \fP\fP
+Mode added. 
+.TP
+\fB\fIRemove \fP\fP
+Mode removed. 
+.SS "enum \fBAlaris::Irc::ReplyCode\fP"
+.PP
+Numeric message codes taken from RFC 2812. 
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIRPL_WELCOME \fP\fP
+IRC: Welcome to the Internet Relay Networ [nick]![user]@[host]. 
+.TP
+\fB\fIRPL_YOURHOST \fP\fP
+IRC: Your host is [servername], running version [ver]. 
+.TP
+\fB\fIRPL_CREATED \fP\fP
+IRC: This server was created [date]. 
+.TP
+\fB\fIRPL_MYINFO \fP\fP
+IRC: [servername] [version] [available user modes [available channel modes]. Description: The server sends Replies 001 to 004 to a user upon successful registration. 
+.TP
+\fB\fIRPL_BOUNCE \fP\fP
+IRC: Try server [server name], port [port number]. Description: Sent by the server to a user to suggest an alternative server. This is often used when the connection is refused because the server is already full. 
+.TP
+\fB\fIRPL_USERHOST \fP\fP
+IRC: :*1[reply] *( ' ' [reply] ). Description: Reply format used by USERHOST to list replies to the query list. The reply string is composed as follows: reply = nickname [ '*' ] '=' ( '+' / '-' ) hostname The '*' indicates whether the client has registered as an Operator. The '-' or '+' characters represent whether the client has set an AWAY message or not respectively. 
+.TP
+\fB\fIRPL_ISON \fP\fP
+IRC: :*1[nick] *( ' ' [nick] ). Description: Reply format used by ISON to list replies to the query list. 
+.TP
+\fB\fIRPL_AWAY \fP\fP
+IRC: [nick] :[away message]. 
+.TP
+\fB\fIRPL_UNAWAY \fP\fP
+IRC: :You are no longer marked as being away. 
+.TP
+\fB\fIRPL_NOWAWAY \fP\fP
+IRC: :You have been marked as being away. Description: These replies are used with the AWAY command (if allowed). RPL_AWAY is sent to any client sending a PRIVMSG to a client which is away. RPL_AWAY is only sent by the server to which the client is connected. Replies RPL_UNAWAY and RPL_NOWAWAY are sent when the client removes and sets an AWAY message. 
+.TP
+\fB\fIRPL_WHOISUSER \fP\fP
+IRC: [nick] [user] [host] * :[real name]. 
+.TP
+\fB\fIRPL_WHOISSERVER \fP\fP
+IRC: [nick] [server] :[server info]. 
+.TP
+\fB\fIRPL_WHOISOPERATOR \fP\fP
+IRC: [nick] :is an IRC operator. 
+.TP
+\fB\fIRPL_WHOISIDLE \fP\fP
+IRC: [nick] [integer] :seconds idle. 
+.TP
+\fB\fIRPL_ENDOFWHOIS \fP\fP
+IRC: [nick] :End of WHOIS list. 
+.TP
+\fB\fIRPL_WHOISCHANNELS \fP\fP
+IRC: [nick] :*( ( '@' / '+' ) [channel] ' ' ). Description: Replies 311 - 313, 317 - 319 are all replies generated in response to a WHOIS message. Given that there are enough parameters present, the answering server MUST either formulate a reply out of the above numerics (if the query nick is found) or return an error reply. The '*' in RPL_WHOISUSER is there as the literal character and not as a wild card. For each reply set, only RPL_WHOISCHANNELS may appear more than once (for long lists of channel names). The '@' and '+' characters next to the channel name indicate whether a client is a channel operator or has been granted permission to speak on a moderated channel. The RPL_ENDOFWHOIS reply is used to mark the end of processing a WHOIS message. 
+.TP
+\fB\fIRPL_WHOWASUSER \fP\fP
+IRC: [nick] [user] [host] * :[real name]. 
+.TP
+\fB\fIRPL_ENDOFWHOWAS \fP\fP
+IRC: [nick] :End of WHOWAS. Description: When replying to a WHOWAS message, a server MUST use the replies RPL_WHOWASUSER, RPL_WHOISSERVER or ERR_WASNOSUCHNICK for each nickname in the presented list. At the end of all reply batches, there MUST be RPL_ENDOFWHOWAS (even if there was only one reply and it was an error). 
+.TP
+\fB\fIRPL_LISTSTART \fP\fP
+Description: Obsolete. Not used. 
+.TP
+\fB\fIRPL_LIST \fP\fP
+IRC: [channel] [# visible] :[topic]. 
+.TP
+\fB\fIRPL_LISTEND \fP\fP
+IRC: :End of LIST. Description: Replies RPL_LIST, RPL_LISTEND mark the actual replies with data and end of the server's response to a LIST command. If there are no channels available to return, only the end reply MUST be sent. 
+.TP
+\fB\fIRPL_UNIQOPIS \fP\fP
+IRC: [channel] [nickname]. 
+.TP
+\fB\fIRPL_CHANNELMODEIS \fP\fP
+IRC: [channel] [mode] [mode params]. 
+.TP
+\fB\fIRPL_NOTOPIC \fP\fP
+IRC: [channel] :No topic is set. 
+.TP
+\fB\fIRPL_TOPIC \fP\fP
+IRC: [channel] :[topic]. Description: When sending a TOPIC message to determine the channel topic, one of two replies is sent. If the topic is set, RPL_TOPIC is sent back else RPL_NOTOPIC. 
+.TP
+\fB\fIRPL_INVITING \fP\fP
+IRC: [channel] [nick]. Description: Returned by the server to indicate that the attempted INVITE message was successful and is being passed onto the end client. 
+.TP
+\fB\fIRPL_SUMMONING \fP\fP
+IRC: [user] :Summoning user to IRC. Description: Returned by a server answering a SUMMON message to indicate that it is summoning that user. 
+.TP
+\fB\fIRPL_INVITELIST \fP\fP
+IRC: [channel] [invitemask]. 
+.TP
+\fB\fIRPL_ENDOFINVITELIST \fP\fP
+IRC: [channel] :End of channel invite list. Description: When listing the 'invitations masks' for a given channel, a server is required to send the list back using the RPL_INVITELIST and RPL_ENDOFINVITELIST messages. A separate RPL_INVITELIST is sent for each active mask. After the masks have been listed (or if none present) a RPL_ENDOFINVITELIST MUST be sent. 
+.TP
+\fB\fIRPL_EXCEPTLIST \fP\fP
+IRC: [channel] [exceptionmask]. 
+.TP
+\fB\fIRPL_ENDOFEXCEPTLIST \fP\fP
+IRC: [channel] :End of channel exception list. Description: When listing the 'exception masks' for a given channel, a server is required to send the list back using the RPL_EXCEPTLIST and RPL_ENDOFEXCEPTLIST messages. A separate RPL_EXCEPTLIST is sent for each active mask. After the masks have been listed (or if none present) a RPL_ENDOFEXCEPTLIST MUST be sent. 
+.TP
+\fB\fIRPL_VERSION \fP\fP
+IRC: [version].[debuglevel] [server] :[comments]. Description: Reply by the server showing its version details. The [version] is the version of the software being used (including any patchlevel revisions) and the [debuglevel] is used to indicate if the server is running in 'debug mode'. The 'comments' field may contain any comments about the version or further version details. 
+.TP
+\fB\fIRPL_WHOREPLY \fP\fP
+IRC: [channel] [user] [host] [server] [nick ( 'H' / 'G' ] ['*'] [ ( '@' / '+' ) :[hopcount] [real name]. 
+.TP
+\fB\fIRPL_ENDOFWHO \fP\fP
+IRC: [name] :End of WHO list. Description: The RPL_WHOREPLY and RPL_ENDOFWHO pair are used to answer a WHO message. The RPL_WHOREPLY is only sent if there is an appropriate match to the WHO query. If there is a list of parameters supplied with a WHO message, a RPL_ENDOFWHO MUST be sent after processing each list item with [name] being the item. 
+.TP
+\fB\fIRPL_NAMREPLY \fP\fP
+IRC: ( '=' / '*' / '@' ) [channel :[ '@' / '+' ] [nick] *( ' ' [ '@' / '+' ] [nick]. Description: '@' is used for secret channels, '*' for private channels, and '=' for others (public channels). 
+.TP
+\fB\fIRPL_ENDOFNAMES \fP\fP
+IRC: [channel] :End of NAMES list. Description: To reply to a NAMES message, a reply pair consisting of RPL_NAMREPLY and RPL_ENDOFNAMES is sent by the server back to the client. If there is no channel found as in the query, then only RPL_ENDOFNAMES is returned. The exception to this is when a NAMES message is sent with no parameters and all visible channels and contents are sent back in a series of RPL_NAMEREPLY messages with a RPL_ENDOFNAMES to mark the end. 
+.TP
+\fB\fIRPL_LINKS \fP\fP
+IRC: [mask] [server] :[hopcount] [server info]. 
+.TP
+\fB\fIRPL_ENDOFLINKS \fP\fP
+IRC: [mask] :End of LINKS list. Description: In replying to the LINKS message, a server MUST send replies back using the RPL_LINKS numeric and mark the end of the list using an RPL_ENDOFLINKS reply. 
+.TP
+\fB\fIRPL_BANLIST \fP\fP
+IRC: [channel] [banmask]. 
+.TP
+\fB\fIRPL_ENDOFBANLIST \fP\fP
+IRC: [channel] :End of channel ban list. Description: When listing the active 'bans' for a given channel, a server is required to send the list back using the RPL_BANLIST and RPL_ENDOFBANLIST messages. A separate RPL_BANLIST is sent for each active banmask. After the banmasks have been listed (or if none present) a RPL_ENDOFBANLIST MUST be sent. 
+.TP
+\fB\fIRPL_INFO \fP\fP
+IRC: :[string]. 
+.TP
+\fB\fIRPL_ENDOFINFO \fP\fP
+IRC: :End of INFO list. Description: A server responding to an INFO message is required to send all its 'info' in a series of RPL_INFO messages with a RPL_ENDOFINFO reply to indicate the end of the replies. 
+.TP
+\fB\fIRPL_MOTDSTART \fP\fP
+IRC: :- [server] Message of the day -. 
+.TP
+\fB\fIRPL_MOTD \fP\fP
+IRC: :- [text]. 
+.TP
+\fB\fIRPL_ENDOFMOTD \fP\fP
+IRC: :End of MOTD command. Description: When responding to the MOTD message and the MOTD file is found, the file is displayed line by line, with each line no longer than 80 characters, using RPL_MOTD format replies. These MUST be surrounded by a RPL_MOTDSTART (before the RPL_MOTDs) and an RPL_ENDOFMOTD (after). 
+.TP
+\fB\fIRPL_YOUREOPER \fP\fP
+IRC: :You are now an IRC operator. Description: RPL_YOUREOPER is sent back to a client which has just successfully issued an OPER message and gained operator status. 
+.TP
+\fB\fIRPL_REHASHING \fP\fP
+IRC: [config file] :Rehashing. Description: If the REHASH option is used and an operator sends a REHASH message, an RPL_REHASHING is sent back to the operator. 
+.TP
+\fB\fIRPL_YOURESERVICE \fP\fP
+IRC: You are service [servicename]. Description: Sent by the server to a service upon successful registration. 
+.TP
+\fB\fIRPL_TIME \fP\fP
+IRC: [server] :[string showing server's local time]. Description: When replying to the TIME message, a server MUST send the reply using the RPL_TIME format above. The string showing the time need only contain the correct day and time there. There is no further requirement for the time string. 
+.TP
+\fB\fIRPL_USERSSTART \fP\fP
+IRC: :UserID Terminal Host. 
+.TP
+\fB\fIRPL_USERS \fP\fP
+IRC: :[username] [ttyline] [hostname]. 
+.TP
+\fB\fIRPL_ENDOFUSERS \fP\fP
+IRC: :End of users. 
+.TP
+\fB\fIRPL_NOUSERS \fP\fP
+IRC: :Nobody logged in. Description: If the USERS message is handled by a server, the replies RPL_USERSTART, RPL_USERS, RPL_ENDOFUSERS and RPL_NOUSERS are used. RPL_USERSSTART MUST be sent first, following by either a sequence of RPL_USERS or a single RPL_NOUSER. Following this is RPL_ENDOFUSERS. 
+.TP
+\fB\fIRPL_TRACELINK \fP\fP
+IRC: Link [version and debug level] [destination [next server] V[protocol version [link uptime in seconds] [backstream sendq [upstream sendq]. 
+.TP
+\fB\fIRPL_TRACECONNECTING \fP\fP
+IRC: Try. [class] [server]. 
+.TP
+\fB\fIRPL_TRACEHANDSHAKE \fP\fP
+IRC: H.S. [class] [server]. 
+.TP
+\fB\fIRPL_TRACEUNKNOWN \fP\fP
+IRC: ???? [class] [[client IP address in dot form]]. 
+.TP
+\fB\fIRPL_TRACEOPERATOR \fP\fP
+IRC: Oper [class] [nick]. 
+.TP
+\fB\fIRPL_TRACEUSER \fP\fP
+IRC: User [class] [nick]. 
+.TP
+\fB\fIRPL_TRACESERVER \fP\fP
+IRC: Serv [class] [int]S [int]C [server [nick!user|*!*]@[host|server] V[protocol version]. 
+.TP
+\fB\fIRPL_TRACESERVICE \fP\fP
+IRC: Service [class] [name] [type] [active type]. 
+.TP
+\fB\fIRPL_TRACENEWTYPE \fP\fP
+IRC: [newtype] 0 [client name]. 
+.TP
+\fB\fIRPL_TRACECLASS \fP\fP
+IRC: Class [class] [count]. 
+.TP
+\fB\fIRPL_TRACERECONNECT \fP\fP
+IRC: Class [class] [count] Unused. 
+.TP
+\fB\fIRPL_TRACELOG \fP\fP
+IRC: File [logfile] [debug level]. 
+.TP
+\fB\fIRPL_TRACEEND \fP\fP
+IRC: [server name] [version and debug level] :End of TRACE. Description: The RPL_TRACE are all returned by the server in response to the TRACE message. How many are returned is dependent on the TRACE message and whether it was sent by an operator or not. There is no predefined order for which occurs first. Replies RPL_TRACEUNKNOWN, RPL_TRACECONNECTING and RPL_TRACEHANDSHAKE are all used for connections which have not been fully established and are either unknown, still attempting to connect or in the process of completing the 'server handshake'. RPL_TRACELINK is sent by any server which handles a TRACE message and has to pass it on to another server. The list of RPL_TRACELINKs sent in response to a TRACE command traversing the IRC network should reflect the actual connectivity of the servers themselves along that path. RPL_TRACENEWTYPE is to be used for any connection which does not fit in the other categories but is being displayed anyway. RPL_TRACEEND is sent to indicate the end of the list. 
+.TP
+\fB\fIRPL_STATSLINKINFO \fP\fP
+IRC: [linkname] [sendq] [sent messages [sent Kbytes] [received messages [received Kbytes] [time open]. Description: reports statistics on a connection. [linkname] identifies the particular connection, [sendq] is the amount of data that is queued and waiting to be sent [sent messages] the number of messages sent, and [sent Kbytes] the amount of data sent, in Kbytes. [received messages] and [received Kbytes] are the equivalent of [sent messages] and [sent Kbytes] for received data, respectively. [time open] indicates how long ago the connection was opened, in seconds. 
+.TP
+\fB\fIRPL_STATSCOMMANDS \fP\fP
+IRC: [command] [count] [byte count] [remote count]. Description: reports statistics on commands usage. 
+.TP
+\fB\fIRPL_ENDOFSTATS \fP\fP
+IRC: [stats letter] :End of STATS report. 
+.TP
+\fB\fIRPL_STATSUPTIME \fP\fP
+IRC: :Server Up d days d:02d:02d. Description: reports the server uptime. 
+.TP
+\fB\fIRPL_STATSOLINE \fP\fP
+IRC: O [hostmask] * [name]. Description: reports the allowed hosts from where user may become IRC operators. 
+.TP
+\fB\fIRPL_UMODEIS \fP\fP
+IRC: [user mode string]. Description: To answer a query about a client's own mode, RPL_UMODEIS is sent back. 
+.TP
+\fB\fIRPL_SERVLIST \fP\fP
+IRC: [name] [server] [mask] [type] [hopcount] [info]. 
+.TP
+\fB\fIRPL_SERVLISTEND \fP\fP
+IRC: [mask] [type] :End of service listing. Description: When listing services in reply to a SERVLIST message, a server is required to send the list back using the RPL_SERVLIST and RPL_SERVLISTEND messages. A separate RPL_SERVLIST is sent for each service. After the services have been listed (or if none present) a RPL_SERVLISTEND MUST be sent. 
+.TP
+\fB\fIRPL_LUSERCLIENT \fP\fP
+IRC: :There are [integer] users and [integer services on [integer] servers. 
+.TP
+\fB\fIRPL_LUSEROP \fP\fP
+IRC: [integer] :operator(s) online. 
+.TP
+\fB\fIRPL_LUSERUNKNOWN \fP\fP
+IRC: [integer] :unknown connection(s). 
+.TP
+\fB\fIRPL_LUSERCHANNELS \fP\fP
+IRC: [integer] :channels formed. 
+.TP
+\fB\fIRPL_LUSERME \fP\fP
+IRC: :I have [integer] clients and [integer servers. Description: In processing an LUSERS message, the server sends a set of replies from RPL_LUSERCLIENT, RPL_LUSEROP, RPL_USERUNKNOWN, RPL_LUSERCHANNELS and RPL_LUSERME. When replying, a server MUST send back and RPL_LUSERME. The other replies are only sent back if a non-zero count is found for them. 
+.TP
+\fB\fIRPL_ADMINME \fP\fP
+IRC: [server] :Administrative info. 
+.TP
+\fB\fIRPL_ADMINLOC1 \fP\fP
+IRC: :[admin info]. 
+.TP
+\fB\fIRPL_ADMINLOC2 \fP\fP
+IRC: :[admin info]. 
+.TP
+\fB\fIRPL_ADMINEMAIL \fP\fP
+IRC: :[admin info]. Description: When replying to an ADMIN message, a server is expected to use replies RPL_ADMINME through to RPL_ADMINEMAIL and provide a text message with each. For RPL_ADMINLOC1 a description of what city, state and country the server is in is expected, followed by details of the institution (RPL_ADMINLOC2) and constly the administrative contact for the server (an email address here is REQUIRED) in RPL_ADMINEMAIL. 
+.TP
+\fB\fIRPL_TRYAGAIN \fP\fP
+IRC: [command] :Please wait a while and try again. Description: When a server drops a command without processing it, it MUST use the reply RPL_TRYAGAIN to inform the originating client. 
+.TP
+\fB\fIERR_NOSUCHNICK \fP\fP
+IRC: [nickname] :No such nick/channel. Description: Used to indicate the nickname parameter supplied to a command is currently unused. 
+.TP
+\fB\fIERR_NOSUCHSERVER \fP\fP
+IRC: [server name] :No such server. Description: Used to indicate the server name given currently does not exist. 
+.TP
+\fB\fIERR_NOSUCHCHANNEL \fP\fP
+IRC: [channel name] :No such channel. Description: Used to indicate the given channel name is invalid. 
+.TP
+\fB\fIERR_CANNOTSENDTOCHAN \fP\fP
+IRC: [channel name] :Cannot send to channel. Description: Sent to a user who is either (a) not on a channel which is mode +n or (b) not a chanop (or mode +v) on a channel which has mode +m set or where the user is banned and is trying to send a PRIVMSG message to that channel. 
+.TP
+\fB\fIERR_TOOMANYCHANNELS \fP\fP
+IRC: [channel name] :You have joined too many channels. Description: Sent to a user when they have joined the maximum number of allowed channels and they try to join another channel. 
+.TP
+\fB\fIERR_WASNOSUCHNICK \fP\fP
+IRC: [nickname] :There was no such nickname. Description: Returned by WHOWAS to indicate there is no history information for that nickname. 
+.TP
+\fB\fIERR_TOOMANYTARGETS \fP\fP
+IRC: [target] :[error code] recipients. [abort message]. Description: Returned to a client which is attempting to send a PRIVMSG/NOTICE using the user destination format and for a user which has several occurrences. Returned to a client which trying to send a PRIVMSG/NOTICE to too many recipients. Returned to a client which is attempting to JOIN a safe channel using the shortname when there are more than one such channel. 
+.TP
+\fB\fIERR_NOSUCHSERVICE \fP\fP
+IRC: [service name] :No such service. Description: Returned to a client which is attempting to send a SQUERY to a service which does not exist. 
+.TP
+\fB\fIERR_NOORIGIN \fP\fP
+IRC: :No origin specified. Description: PING or PONG message missing the originator parameter. 
+.TP
+\fB\fIERR_NORECIPIENT \fP\fP
+IRC: :No recipient given ([command]). 
+.TP
+\fB\fIERR_NOTEXTTOSEND \fP\fP
+IRC: :No text to send. 
+.TP
+\fB\fIERR_NOTOPLEVEL \fP\fP
+IRC: [mask] :No toplevel domain specified. 
+.TP
+\fB\fIERR_WILDTOPLEVEL \fP\fP
+IRC: [mask] :Wildcard in toplevel domain. 
+.TP
+\fB\fIERR_BADMASK \fP\fP
+IRC: PRIVMSG $[server]' or 'PRIVMSG #[host]" is attempted. Description: 412 - 415 are returned by PRIVMSG to indicate that the message wasn't delivered for some reason. ERR_NOTOPLEVEL and ERR_WILDTOPLEVEL are errors that are returned when an invalid use of 
+.TP
+\fB\fIERR_TOOMANYLINES \fP\fP
+A query returned too many results. This is not an offical part of the RFC but added since it seems to be in use. 
+.TP
+\fB\fIERR_UNKNOWNCOMMAND \fP\fP
+IRC: [command] :Unknown command. Description: Returned to a registered client to indicate that the command sent is unknown by the server. 
+.TP
+\fB\fIERR_NOMOTD \fP\fP
+IRC: :MOTD File is missing. Description: Server's MOTD file could not be opened by the server. 
+.TP
+\fB\fIERR_NOADMININFO \fP\fP
+IRC: [server] :No administrative info available. Description: Returned by a server in response to an ADMIN message when there is an error in finding the appropriate information. 
+.TP
+\fB\fIERR_FILEERROR \fP\fP
+IRC: :File error doing [file op] on [file]. Description: Generic error message used to report a failed file operation during the processing of a message. 
+.TP
+\fB\fIERR_NONICKNAMEGIVEN \fP\fP
+IRC: :No nickname given. Description: Returned when a nickname parameter expected for a command and isn't found. 
+.TP
+\fB\fIERR_ERRONEUSNICKNAME \fP\fP
+IRC: [nick] :Erroneous nickname. Description: Returned after receiving a NICK message which contains characters which do not fall in the defined set. See section 2.3.1 for details on valid nicknames. 
+.TP
+\fB\fIERR_NICKNAMEINUSE \fP\fP
+IRC: [nick] :Nickname is already in use. Description: Returned when a NICK message is processed that results in an attempt to change to a currently existing nickname. 
+.TP
+\fB\fIERR_NICKCOLLISION \fP\fP
+IRC: [nick] :Nickname collision KILL from [user]@[host]. Description: Returned by a server to a client when it detects a nickname collision (registered of a NICK that already exists by another server). 
+.TP
+\fB\fIERR_UNAVAILRESOURCE \fP\fP
+IRC: [nick/channel] :Nick/channel is temporarily unavailable. Description: Returned by a server to a user trying to join a channel currently blocked by the channel delay mechanism. Returned by a server to a user trying to change nickname when the desired nickname is blocked by the nick delay mechanism. 
+.TP
+\fB\fIERR_USERNOTINCHANNEL \fP\fP
+IRC: [nick] [channel] :They aren't on that channel. Description: Returned by the server to indicate that the target user of the command is not on the given channel. 
+.TP
+\fB\fIERR_NOTONCHANNEL \fP\fP
+IRC: [channel] :You're not on that channel. Description: Returned by the server whenever a client tries to perform a channel affecting command for which the client isn't a member. 
+.TP
+\fB\fIERR_USERONCHANNEL \fP\fP
+IRC: [user] [channel] :is already on channel. Description: Returned when a client tries to invite a user to a channel they are already on. 
+.TP
+\fB\fIERR_NOLOGIN \fP\fP
+IRC: [user] :User not logged in. Description: Returned by the summon after a SUMMON command for a user was unable to be performed since they were not logged in. 
+.TP
+\fB\fIERR_SUMMONDISABLED \fP\fP
+IRC: :SUMMON has been disabled. Description: Returned as a response to the SUMMON command. MUST be returned by any server which doesn't implement it. 
+.TP
+\fB\fIERR_USERSDISABLED \fP\fP
+IRC: :USERS has been disabled. Description: Returned as a response to the USERS command. MUST be returned by any server which does not implement it. 
+.TP
+\fB\fIERR_NOTREGISTERED \fP\fP
+IRC: :You have not registered. Description: Returned by the server to indicate that the client MUST be registered before the server will allow it to be parsed in detail. 
+.TP
+\fB\fIERR_NEEDMOREPARAMS \fP\fP
+IRC: [command] :Not enough parameters. Description: Returned by the server by numerous commands to indicate to the client that it didn't supply enough parameters. 
+.TP
+\fB\fIERR_ALREADYREGISTRED \fP\fP
+IRC: :Unauthorized command (already registered). Description: Returned by the server to any link which tries to change part of the registered details (such as password or user details from second USER message). 
+.TP
+\fB\fIERR_NOPERMFORHOST \fP\fP
+IRC: :Your host isn't among the privileged. Description: Returned to a client which attempts to register with a server which does not been setup to allow connections from the host the attempted connection is tried. 
+.TP
+\fB\fIERR_PASSWDMISMATCH \fP\fP
+IRC: :Password incorrect. Description: Returned to indicate a failed attempt at registering a connection for which a password was required and was either not given or incorrect. 
+.TP
+\fB\fIERR_YOUREBANNEDCREEP \fP\fP
+IRC: :You are banned from this server. Description: Returned after an attempt to connect and register yourself with a server which has been setup to explicitly deny connections to you. 
+.TP
+\fB\fIERR_YOUWILLBEBANNED \fP\fP
+IRC: :You are banned from this server. Description: Sent by a server to a user to inform that access to the server will soon be denied. 
+.TP
+\fB\fIERR_KEYSET \fP\fP
+IRC: [channel] :Channel key already set. 
+.TP
+\fB\fIERR_CHANNELISFULL \fP\fP
+IRC: [channel] :Cannot join channel (+l). 
+.TP
+\fB\fIERR_UNKNOWNMODE \fP\fP
+IRC: [char] :is unknown mode char to me for [channel]. 
+.TP
+\fB\fIERR_INVITEONLYCHAN \fP\fP
+IRC: [channel] :Cannot join channel (+i). 
+.TP
+\fB\fIERR_BANNEDFROMCHAN \fP\fP
+IRC: [channel] :Cannot join channel (+b). 
+.TP
+\fB\fIERR_BADCHANNELKEY \fP\fP
+IRC: [channel] :Cannot join channel (+k). 
+.TP
+\fB\fIERR_BADCHANMASK \fP\fP
+IRC: [channel] :Bad Channel Mask. 
+.TP
+\fB\fIERR_NOCHANMODES \fP\fP
+IRC: [channel] :Channel doesn't support modes. 
+.TP
+\fB\fIERR_BANLISTFULL \fP\fP
+IRC: [channel] [char] :Channel list is full. 
+.TP
+\fB\fIERR_NOPRIVILEGES \fP\fP
+IRC: :Permission Denied- You're not an IRC operator. Description: Any command requiring operator privileges to operate MUST return this error to indicate the attempt was unsuccessful. 
+.TP
+\fB\fIERR_CHANOPRIVSNEEDED \fP\fP
+IRC: [channel] :You're not channel operator. Description: Any command requiring 'chanop' privileges (such as MODE messages) MUST return this error if the client making the attempt is not a chanop on the specified channel. 
+.TP
+\fB\fIERR_CANTKILLSERVER \fP\fP
+IRC: :You can't kill a server! Description: Any attempts to use the KILL command on a server are to be refused and this error returned directly to the client. 
+.TP
+\fB\fIERR_RESTRICTED \fP\fP
+IRC: :Your connection is restricted! Description: Sent by the server to a user upon connection to indicate the restricted nature of the connection (user mode '+r'). 
+.TP
+\fB\fIERR_UNIQOPPRIVSNEEDED \fP\fP
+IRC: :You're not the original channel operator. Description: Any MODE requiring 'channel creator' privileges MUST return this error if the client making the attempt is not a chanop on the specified channel. 
+.TP
+\fB\fIERR_NOOPERHOST \fP\fP
+IRC: :No O-lines for your host. Description: If a client sends an OPER message and the server has not been configured to allow connections from the client's host as an operator, this error MUST be returned. 
+.TP
+\fB\fIERR_UMODEUNKNOWNFLAG \fP\fP
+IRC: :Unknown MODE flag. Description: Returned by the server to indicate that a MODE message was sent with a nickname parameter and that the a mode flag sent was not recognized. 
+.TP
+\fB\fIERR_USERSDONTMATCH \fP\fP
+IRC: :Cannot change mode for other users. Description: Error sent to any user trying to view or change the user mode for a user other than themselves. 
+.TP
+\fB\fIConnectionFailed \fP\fP
+When the TCP/IP connection unexpectedly fails. 
+.TP
+\fB\fIIrcServerError \fP\fP
+The IRC server sent an 'ERROR' message for some reason. 
+.TP
+\fB\fIBadDccEndpoint \fP\fP
+When the socket connection information sent by the remote user in a DCC request is bad. 
+.TP
+\fB\fIUnparseableMessage \fP\fP
+A message from the IRC server that cannot be parsed. This may be because the message is intended to cause problems, it may be an unsupported protocol such as DCC Voice, or it may be that the Thresher parser simply cannot understand it. 
+.TP
+\fB\fIUnableToResume \fP\fP
+Normally a DCC Resume message is sent in response to a DCC Send. This error is signaled when a DCC Resume message is received without a previous Send or the Send session has timed out. 
+.TP
+\fB\fIUnknownEncryptionProtocol \fP\fP
+Signaled when a DCC Get or SEND contains an encryption protocol that Thresher does not support. 
+.TP
+\fB\fIBadDccAcceptValue \fP\fP
+When trying to resume a DCC transfer the remote user is supposed to send an Accept message with the same starting position in the file. If these numbers differ this error is raised. 
+.TP
+\fB\fIBadResumePosition \fP\fP
+If the remote user sends a DCC resume request which asks for a start position greater than or equals to the file size then this error is raised. 
+.TP
+\fB\fIDccConnectionRefused \fP\fP
+When attempting to connect to another machine using DCC and the target machine refuses the connection this error is raised. 
+.SS "enum \fBAlaris::Irc::StatsQuery\fP"
+.PP
+The possible stats message query parameters. 
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIConnections \fP\fP
+A list of server connections. 
+.TP
+\fB\fICommandUsage \fP\fP
+The usage count for each of command supported by the server. 
+.TP
+\fB\fIOperators \fP\fP
+The list of IRC operators. 
+.TP
+\fB\fIUptime \fP\fP
+The server uptime. 
+.SS "enum \fBAlaris::Irc::UserMode\fP"
+.PP
+The possible user modes. 
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIAway \fP\fP
+User is away. 
+.TP
+\fB\fIWallops \fP\fP
+User will receive server status messages. 
+.TP
+\fB\fIInvisible \fP\fP
+User cannot be seen by certain IRC queries. 
+.TP
+\fB\fIOperator \fP\fP
+The user is an IRC operator (IRCOP). 
+.TP
+\fB\fIRestricted \fP\fP
+Not used. 
+.TP
+\fB\fILocalOperator \fP\fP
+User is a channel operator/owner. 
+.TP
+\fB\fIServerNotices \fP\fP
+Marks a user for receipt of server notices. 
+.SH "Function Documentation"
+.PP 
+.SS "delegate void Alaris.Irc.ActionEventHandler (UserInfo user, string channel, string description)"
+.PP
+An action message was sent to a channel. \fBParameters:\fP
+.RS 4
+\fIuser\fP The user who expresses the action.
+.br
+\fIchannel\fP The target channel.
+.br
+\fIdescription\fP An action.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnAction\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.AdminEventHandler (string message)"
+.PP
+The response to an \fBSender.Admin\fP request. \fBParameters:\fP
+.RS 4
+\fImessage\fP An information string.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnAdmin\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.AwayEventHandler (string nick, string awayMessage)"
+.PP
+A Notice or Private message was sent to someone whose status is away. \fBParameters:\fP
+.RS 4
+\fInick\fP The nick of the user who is away.
+.br
+\fIawayMessage\fP An away message, if any, set by the user. 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnAway\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.ChannelListEventHandler (string channel, ChannelMode mode, string item, UserInfo who, long whenSet, bool last)"
+.PP
+Response to a \fBSender.RequestChannelList\fP command. \fBParameters:\fP
+.RS 4
+\fIchannel\fP The channel name.
+.br
+\fImode\fP What type is this a list? For example bans, invitation masks, etc..
+.br
+\fIitem\fP A mask or nick (in the case of ChannelCreator).
+.br
+\fIlast\fP Is this the last item. If its the last then the item paramter will be empty unless the mode is ChannelCreator.
+.br
+\fIwho\fP Who set the mask (not for ChannelCreator).
+.br
+\fIwhenSet\fP When was it set (not for ChannelCreator).
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnChannelList\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.ChannelModeChangeEventHandler (UserInfo who, string channel, ChannelModeInfo[] modes)"
+.PP
+A channel's mode has changed. \fBParameters:\fP
+.RS 4
+\fIwho\fP Who changed the mode.
+.br
+\fIchannel\fP The name of the channel.
+.br
+\fImodes\fP Objects which hold all the information about 1 or more mode changes.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnChannelModeChange\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.ChannelModeRequestEventHandler (string channel, ChannelModeInfo[] modes)"
+.PP
+The response to a \fBSender.RequestChannelModes\fP command. \fBParameters:\fP
+.RS 4
+\fIchannel\fP The name of the channel.
+.br
+\fImodes\fP Objects which hold all the information about a channel's modes.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnChannelModeRequest\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.ChatMessageReceivedEventHandler (DccChatSession session, string message)"
+.PP
+A DCC chat message was received from the remote user. \fBParameters:\fP
+.RS 4
+\fIsession\fP Which session is the source of the event.
+.br
+\fImessage\fP A string message.
+.RE
+.PP
+\fBDccChatSession.OnChatMessageReceived\fP 
+.SS "delegate void Alaris.Irc.ChatRequestTimeoutEventHandler (DccChatSession session)"
+.PP
+When trying to initiate a DCC chat request the remote user did not respond within the alotted time. \fBParameters:\fP
+.RS 4
+\fIsession\fP Which session is the source of the event.
+.RE
+.PP
+\fBDccChatSession.OnChatRequestTimeout\fP 
+.SS "delegate void Alaris.Irc.ChatSessionClosedEventHandler (DccChatSession session)"
+.PP
+A DCC chat session has been closed. \fBParameters:\fP
+.RS 4
+\fIsession\fP Which session is the source of the event.
+.RE
+.PP
+\fBDccChatSession.OnChatSessionClosed\fP 
+.SS "delegate void Alaris.Irc.ChatSessionOpenedEventHandler (DccChatSession session)"
+.PP
+A DCC chat session has been opened with a remote user. \fBParameters:\fP
+.RS 4
+\fIsession\fP Which session is the source of the event.
+.RE
+.PP
+\fBDccChatSession.OnChatSessionOpened\fP 
+.SS "delegate void Alaris.Irc.CtcpPingReplyEventHandler (UserInfo who, string timestamp)"
+.PP
+Someone has replied to a Ctcp ping request sent by this client. \fBParameters:\fP
+.RS 4
+\fIwho\fP Who sent the reply.
+.br
+\fItimestamp\fP The timestamp originally sent in the request.'</param>
+	    <see cref='\fBCtcpListener.OnCtcpPingReply\fP"/> 
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.CtcpPingRequestEventHandler (UserInfo who, string timestamp)"
+.PP
+Someone has sent a Ctcp Ping request. \fBParameters:\fP
+.RS 4
+\fIwho\fP Who sent the request.
+.br
+\fItimestamp\fP The timestamp which should be sent back.'</param>
+	    <see cref='\fBCtcpListener.OnCtcpPingRequest\fP"/> 
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.CtcpReplyEventHandler (string command, UserInfo who, string reply)"
+.PP
+Someone has replied to a Ctcp request sent by this client. \fBParameters:\fP
+.RS 4
+\fIwho\fP Who sent the reply.
+.br
+\fIcommand\fP The Ctcp command this replies to.'</param>
+	    <param name='reply'>The text of the reply.</param>
+	    <see cref='\fBCtcpListener.OnCtcpReply\fP"/> 
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.CtcpRequestEventHandler (string command, UserInfo who)"
+.PP
+Someone has sent a Ctcp request. \fBParameters:\fP
+.RS 4
+\fIwho\fP Who sent the request.
+.br
+\fIcommand\fP The Ctcp command to send to IRC.'</param>
+	    <see cref='\fBCtcpListener.OnCtcpRequest\fP"/> 
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.DccChatRequestEventHandler (DccUserInfo dccUserInfo)"
+.PP
+Someone has requested a DCC chat session. \fBParameters:\fP
+.RS 4
+\fIdccUserInfo\fP The collection of information about the remote user.
+.RE
+.PP
+\fBDccListener.OnDccChatRequest\fP 
+.SS "delegate void Alaris.Irc.DccGetRequestEventHandler (DccUserInfo dccUserInfo, string fileName, bool turbo)"
+.PP
+A remote user has requested a file. To respond use \fBDccFileSession.Send\fP with the relevant information. \fBParameters:\fP
+.RS 4
+\fIdccUserInfo\fP The requestor's information.
+.br
+\fIfileName\fP The name of the requested file.
+.br
+\fIturbo\fP True to use send-ahead mode for transfers.
+.RE
+.PP
+\fBDccListener.OnDccGetRequest\fP 
+.SS "delegate void Alaris.Irc.DccSendRequestEventHandler (DccUserInfo dccUserInfo, string fileName, int size, bool turbo)"
+.PP
+Another user has offered to send a file. \fBParameters:\fP
+.RS 4
+\fIdccUserInfo\fP The collection of information about the remote user.
+.br
+\fIfileName\fP The name of the file to be sent.
+.br
+\fIsize\fP The size in bytes of the offered file.
+.br
+\fIturbo\fP True if the sender will use send-ahead mode.
+.RE
+.PP
+\fBDccListener.OnDccSendRequest\fP 
+.SS "delegate void Alaris.Irc.DisconnectedEventHandler ()"
+.PP
+This connection has been closed. \fBSee also:\fP
+.RS 4
+\fBListener.OnDisconnected\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.DisconnectingEventHandler ()"
+.PP
+This connection is about to be closed. \fBSee also:\fP
+.RS 4
+\fBListener.OnDisconnecting\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.ErrorMessageEventHandler (ReplyCode code, string message)"
+.PP
+Error messages from the IRC server. \fBParameters:\fP
+.RS 4
+\fIcode\fP The RFC 2812 or custom numeric code.
+.br
+\fImessage\fP The error message text.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnError\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.FileTransferCompletedEventHandler (DccFileSession session)"
+.PP
+A file was succefully transfered. \fBParameters:\fP
+.RS 4
+\fIsession\fP The session in which the transfer was successfully completed.
+.RE
+.PP
+\fBDccFileSession.OnFileTransferCompleted\fP 
+.SS "delegate void Alaris.Irc.FileTransferInterruptedEventHandler (DccFileSession session)"
+.PP
+Something happened to stop the transfer before it was completed. Normally this will be due to one of the sides canceling the transfer. \fBParameters:\fP
+.RS 4
+\fIsession\fP The session in which the transfer was interrupted.
+.RE
+.PP
+\fBDccFileSession.OnFileTransferInterrupted\fP 
+.SS "delegate void Alaris.Irc.FileTransferProgressEventHandler (DccFileSession session, int bytesSent)"
+.PP
+Called for each successful data block transfer. This allows the developer to show a transfer progress display of some kind. \fBParameters:\fP
+.RS 4
+\fIsession\fP The session in which data was transfered.
+.br
+\fIbytesSent\fP The number of bytes sent in this block. The \fBDccFileSession\fP contains the cumulative number of bytes sent/received and the total number the will be processed.
+.RE
+.PP
+\fBDccFileSession.OnFileTransferProgress\fP 
+.SS "delegate void Alaris.Irc.FileTransferStartedEventHandler (DccFileSession session)"
+.PP
+The file transfer connection has been successfully opened and the data transfer has begun. \fBParameters:\fP
+.RS 4
+\fIsession\fP The session in which the transfer has started.
+.RE
+.PP
+\fBDccFileSession.OnFileTransferStarted\fP 
+.SS "delegate void Alaris.Irc.FileTransferTimeoutEventHandler (DccFileSession session)"
+.PP
+There has been no activity in this session for the timeout period. The session is automatically closed and this event is raised. \fBParameters:\fP
+.RS 4
+\fIsession\fP The session in which the timeout occurred.
+.RE
+.PP
+\fBDccFileSession.OnFileTransferTimeout\fP 
+.SS "delegate void Alaris.Irc.InfoEventHandler (string message, bool last)"
+.PP
+The response to an \fBSender.Info\fP request. \fBParameters:\fP
+.RS 4
+\fImessage\fP An information string.
+.br
+\fIlast\fP True if this is the last in the set of messages.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnInfo\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.InviteEventHandler (UserInfo user, string channel)"
+.PP
+The user has been invited to a channel. \fBParameters:\fP
+.RS 4
+\fIuser\fP Who sent the invite.
+.br
+\fIchannel\fP The target channel.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnInvite\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.InviteSentEventHandler (string nick, string channel)"
+.PP
+An Invite message was successfully sent to another user. \fBParameters:\fP
+.RS 4
+\fInick\fP The nick of the user who was invited
+.br
+\fIchannel\fP The name of the channel the user was invited to join
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnInviteSent\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.IsonEventHandler (string nicks)"
+.PP
+The response to a \fBSender.Ison\fP request. \fBParameters:\fP
+.RS 4
+\fInicks\fP If someone with this nick is on the same IRC network their nick will be returned here. Otherwise nick will be an empty string.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnIson\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.JoinEventHandler (UserInfo user, string channel)"
+.PP
+Someone has joined a channel. \fBParameters:\fP
+.RS 4
+\fIuser\fP Who joined.
+.br
+\fIchannel\fP The channel name.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnJoin\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.KickEventHandler (UserInfo user, string channel, string kickee, string reason)"
+.PP
+Someone has been kicked from a channel. \fBParameters:\fP
+.RS 4
+\fIuser\fP Who did the kicking.
+.br
+\fIchannel\fP The channel that the person was kicked from.
+.br
+\fIkickee\fP Who was kicked.
+.br
+\fIreason\fP Why the person was kicked.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnKick\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.KillEventHandler (UserInfo user, string nick, string reason)"
+.PP
+Someone was disconnected from the server via a Kill. \fBParameters:\fP
+.RS 4
+\fIuser\fP Which Operator send teh Kill command
+.br
+\fInick\fP Who was Killed.
+.br
+\fIreason\fP Why the nick was disconnected.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnKill\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.LinksEventHandler (string mask, string hostname, int hopCount, string serverInfo, bool done)"
+.PP
+The response to a \fBSender.Links\fP request. \fBParameters:\fP
+.RS 4
+\fImask\fP The hostname as it appears in IRC queries.
+.br
+\fIhostname\fP The actual hostname.
+.br
+\fIhopCount\fP The number of hops from this server to the target server.
+.br
+\fIserverInfo\fP Information about the server, usually the network name.
+.br
+\fIdone\fP True if this is the last message in the series. If it is the last it will not contain any server information.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnLinks\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.ListEventHandler (string channel, int visibleNickCount, string topic, bool last)"
+.PP
+The response to a \fBSender.List\fP request. \fBParameters:\fP
+.RS 4
+\fIchannel\fP The channel name.
+.br
+\fIvisibleNickCount\fP The number of visible users on that channel.
+.br
+\fItopic\fP The channel's topic.
+.br
+\fIlast\fP True if this is the last reply.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnList\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.LusersEventHandler (string message)"
+.PP
+The response to a \fBSender.Lusers\fP request. \fBParameters:\fP
+.RS 4
+\fImessage\fP An information string.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnLusers\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.MotdEventHandler (string message, bool last)"
+.PP
+The server's 'Message of the Day' if any. \fBParameters:\fP
+.RS 4
+\fImessage\fP An information string.
+.br
+\fIlast\fP True if this is the last in the set of messages.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnMotd\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.NamesEventHandler (string channel, string[] nicks, bool last)"
+.PP
+The response to a \fBSender.Names\fP request. \fBParameters:\fP
+.RS 4
+\fIchannel\fP The channel the user is on. '@' is used for secret channels, '*' for private channels, and '=' for public channels.
+.br
+\fInicks\fP A list of nicks on the channel. If this is the last reply then it will be empty. Nicks prefixed with a '@' are channel operators. Nicks prefixed with a '+' have voice privileges on a moderated channel, i.e. they are allowed to send public messages.
+.br
+\fIlast\fP True if this is the last names reply.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnNames\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.NickErrorEventHandler (string badNick, string reason)"
+.PP
+Called when a nick change fails. This method can be called under 2 conditions: It can arise when the user is already registered with the IRC server and is trying change his nick. Or when the user is trying to register for the first time with the IRC server and it fails.
+.PP
+Note that if the later arises then you will have to manually complete the regsitration process.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbadNick\fP The nick which caused the problem
+.br
+\fIreason\fP A message explaining the error
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnNickError\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.NickEventHandler (UserInfo user, string newNick)"
+.PP
+A user changed his nickname. \fBParameters:\fP
+.RS 4
+\fIuser\fP The user who is changing his nick.
+.br
+\fInewNick\fP The new nickname.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnNick\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.PartEventHandler (UserInfo user, string channel, string reason)"
+.PP
+Someone has left a channel. \fBParameters:\fP
+.RS 4
+\fIuser\fP The user who left.
+.br
+\fIchannel\fP The channel he left.
+.br
+\fIreason\fP The reason for leaving.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPart\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.PingEventHandler (string message)"
+.PP
+Called when a server sends a keep-alive Ping. \fBParameters:\fP
+.RS 4
+\fImessage\fP The message that the IRC server wants echoed back to it.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPing\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.PrivateActionEventHandler (UserInfo user, string description)"
+.PP
+A private action message was sent to the user. \fBParameters:\fP
+.RS 4
+\fIuser\fP The user who expresses the action.
+.br
+\fIdescription\fP An action.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPrivateAction\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.PrivateMessageEventHandler (UserInfo user, string message)"
+.PP
+A private message was sent to the user. \fBParameters:\fP
+.RS 4
+\fIuser\fP Who sent the message.
+.br
+\fImessage\fP The message.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPrivate\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.PrivateNoticeEventHandler (UserInfo user, string notice)"
+.PP
+A private Notice type message was sent to the user. \fBParameters:\fP
+.RS 4
+\fIuser\fP The user who sent the message.
+.br
+\fInotice\fP A message.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPrivateNotice\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.PublicMessageEventHandler (UserInfo user, string channel, string message)"
+.PP
+A public message was sent to a channel. \fBParameters:\fP
+.RS 4
+\fIuser\fP The user who sent the message.
+.br
+\fIchannel\fP The taregt channel.
+.br
+\fImessage\fP A message.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPublic\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.PublicNoticeEventHandler (UserInfo user, string channel, string notice)"
+.PP
+A Notice type message was sent to a channel. \fBParameters:\fP
+.RS 4
+\fIuser\fP The user who sent the message.
+.br
+\fIchannel\fP The target channel.
+.br
+\fInotice\fP A message.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnPublicNotice\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.QuitEventHandler (UserInfo user, string reason)"
+.PP
+Someone has quit IRC. \fBParameters:\fP
+.RS 4
+\fIuser\fP The user who quit.
+.br
+\fIreason\fP A goodbye message.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnQuit\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.RawMessageReceivedEventHandler (string message)"
+.PP
+The full unparsed text messages received from the IRC server. It includes all messages received except for those exchanged during a DCC chat. \fBParameters:\fP
+.RS 4
+\fImessage\fP The text received.
+.RE
+.PP
+\fBConnection.OnRawMessageReceived\fP 
+.SS "delegate void Alaris.Irc.RawMessageSentEventHandler (string message)"
+.PP
+The full unparsed text messages sent to the IRC server. It includes all messages sent except for those exchanged during a DCC chat. \fBParameters:\fP
+.RS 4
+\fImessage\fP The text sent.
+.RE
+.PP
+\fBConnection.OnRawMessageSent\fP 
+.SS "delegate void Alaris.Irc.RegisteredEventHandler ()"
+.PP
+\fBConnection\fP with IRC server is open and registered. \fBSee also:\fP
+.RS 4
+\fBListener.OnRegistered\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.ReplyEventHandler (ReplyCode code, string message)"
+.PP
+Messages that are not handled by other events and are not errors. \fBParameters:\fP
+.RS 4
+\fIcode\fP The RFC 2812 numeric code.
+.br
+\fImessage\fP The unparsed message text.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnReply\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.StatsEventHandler (StatsQuery queryType, string message, bool done)"
+.PP
+The response to a \fBSender.Stats\fP request. \fBParameters:\fP
+.RS 4
+\fIqueryType\fP What kind of query this is in response to.
+.br
+\fImessage\fP The actual response.
+.br
+\fIdone\fP True if this is the last message in the series.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnStats\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.TimeEventHandler (string time)"
+.PP
+The response to a \fBSender.Time\fP request. \fBParameters:\fP
+.RS 4
+\fItime\fP The name of the server and its local time
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnTime\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.TopicEventHandler (UserInfo user, string channel, string newTopic)"
+.PP
+A channel's topic has changed. \fBParameters:\fP
+.RS 4
+\fIuser\fP Who changed the topic.
+.br
+\fIchannel\fP Which channel had its topic changed.
+.br
+\fInewTopic\fP The new topic.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnTopicChanged\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.TopicRequestEventHandler (string channel, string topic)"
+.PP
+The response to a \fBSender.RequestTopic\fP command. \fBParameters:\fP
+.RS 4
+\fIchannel\fP The channel who topic was requested.
+.br
+\fItopic\fP The topic.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnTopicRequest\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.UserModeChangeEventHandler (ModeAction action, UserMode mode)"
+.PP
+This user's mode has changed. \fBParameters:\fP
+.RS 4
+\fIaction\fP Whether a mode was added or removed.
+.br
+\fImode\fP The mode that was changed.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnUserModeChange\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.UserModeRequestEventHandler (UserMode[] modes)"
+.PP
+The response to a \fBSender.RequestUserModes\fP command for this user. \fBParameters:\fP
+.RS 4
+\fImodes\fP The complete list of user modes as an array.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnUserModeRequest\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.VersionEventHandler (string versionInfo)"
+.PP
+The response to a \fBSender.Version\fP request. \fBParameters:\fP
+.RS 4
+\fIversionInfo\fP The information string in the form IRC: [version].[debuglevel] [server] :[comments]
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnVersion\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.WhoEventHandler (UserInfo user, string channel, string ircServer, string mask, int hopCount, string realName, bool last)"
+.PP
+The response to a \fBSender.Who\fP request. \fBParameters:\fP
+.RS 4
+\fIuser\fP The subject of the query
+.br
+\fIchannel\fP The channel the user is on
+.br
+\fIircServer\fP The name of the user's IRC server
+.br
+\fImask\fP The user's mode mask
+.br
+\fIhopCount\fP Number of network hops to the user
+.br
+\fIrealName\fP The user's real name
+.br
+\fIlast\fP True if this is the last response
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnWho\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.WhoisEventHandler (WhoisInfo whoisInfo)"
+.PP
+The response to a \fBSender.Whois\fP request. \fBParameters:\fP
+.RS 4
+\fIwhoisInfo\fP The data associated with the nick queried.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnWho\fP
+.PP
+.RE
+.PP
+
+.SS "delegate void Alaris.Irc.WhowasEventHandler (UserInfo user, string realName, bool last)"
+.PP
+The response to a \fBSender.Whowas\fP request. \fBParameters:\fP
+.RS 4
+\fIuser\fP Information on the user.
+.br
+\fIrealName\fP The user's real name.
+.br
+\fIlast\fP True if this is the final reply.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBListener.OnWhowas\fP
+.PP
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

@@ -1,0 +1,189 @@
+.TH "Alaris::Extras::Utilities" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Extras::Utilities \- 
+.PP
+Class providing useful methods for handling different things.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBSendSysStats\fP (ref \fBConnection\fP connection, string chan)"
+.br
+.RI "\fISends system stats using the specified connection. \fP"
+.ti -1c
+.RI "static void \fBSendInfo\fP (ref \fBConnection\fP connection, string chan)"
+.br
+.RI "\fISends info using the specified connection. \fP"
+.ti -1c
+.RI "static bool \fBIsAdmin\fP (\fBUserInfo\fP user)"
+.br
+.RI "\fIDetermines whether the specified user is admin or not. \fP"
+.ti -1c
+.RI "static string \fBMD5File\fP (string fileName)"
+.br
+.RI "\fICalculates the MD5 sum of a file. \fP"
+.ti -1c
+.RI "static string \fBMD5String\fP (string Value)"
+.br
+.RI "\fICalculates the MD5 hash of a string. \fP"
+.ti -1c
+.RI "static string \fBGetBotVersion\fP ()"
+.br
+.RI "\fIReturns the bot's assembly version. \fP"
+.ti -1c
+.RI "static List< string > \fBGetUrls\fP (string text)"
+.br
+.RI "\fIGets the URLs in the specified text. \fP"
+.ti -1c
+.RI "static void \fBHandleWebTitle\fP (ref \fBConnection\fP connection, string chan, string msg)"
+.br
+.RI "\fIHandles the web title command. \fP"
+.ti -1c
+.RI "static string \fBGetCpuId\fP ()"
+.br
+.RI "\fIGets the cpu brand string. \fP"
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "static string \fBAdminUser\fP\fC [get, set]\fP"
+.br
+.RI "\fIThe admin user's username. \fP"
+.ti -1c
+.RI "static string \fBAdminNick\fP\fC [get, set]\fP"
+.br
+.RI "\fIThe admin user's nick. \fP"
+.ti -1c
+.RI "static string \fBAdminHost\fP\fC [get, set]\fP"
+.br
+.RI "\fIThe admin user's hostname. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class providing useful methods for handling different things. 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static string Alaris.Extras.Utilities.GetBotVersion ()\fC [static]\fP"
+.PP
+Returns the bot's assembly version. \fBReturns:\fP
+.RS 4
+The version. 
+.RE
+.PP
+
+.SS "static string Alaris.Extras.Utilities.GetCpuId ()\fC [static]\fP"
+.PP
+Gets the cpu brand string. \fBReturns:\fP
+.RS 4
+The CPU brand string. 
+.RE
+.PP
+
+.SS "static List<string> Alaris.Extras.Utilities.GetUrls (string text)\fC [static]\fP"
+.PP
+Gets the URLs in the specified text. \fBParameters:\fP
+.RS 4
+\fItext\fP The text to search in. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The list of urls. 
+.RE
+.PP
+
+.SS "static void Alaris.Extras.Utilities.HandleWebTitle (ref \fBConnection\fP connection, string chan, string msg)\fC [static]\fP"
+.PP
+Handles the web title command. \fBParameters:\fP
+.RS 4
+\fIconnection\fP The IRC connection used. 
+.br
+\fIchan\fP The channel to send title to. 
+.br
+\fImsg\fP The message containing the url. 
+.RE
+.PP
+
+.SS "static bool Alaris.Extras.Utilities.IsAdmin (\fBUserInfo\fP user)\fC [static]\fP"
+.PP
+Determines whether the specified user is admin or not. \fBParameters:\fP
+.RS 4
+\fIuser\fP The user to check. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True if admin, otherwise false. 
+.RE
+.PP
+
+.SS "static string Alaris.Extras.Utilities.MD5File (string fileName)\fC [static]\fP"
+.PP
+Calculates the MD5 sum of a file. \fBParameters:\fP
+.RS 4
+\fIfileName\fP The file to check. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The MD5 hash. 
+.RE
+.PP
+
+.SS "static string Alaris.Extras.Utilities.MD5String (string Value)\fC [static]\fP"
+.PP
+Calculates the MD5 hash of a string. \fBParameters:\fP
+.RS 4
+\fIValue\fP The string to calculate MD5 hash of. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The MD5 hash. 
+.RE
+.PP
+
+.SS "static void Alaris.Extras.Utilities.SendInfo (ref \fBConnection\fP connection, string chan)\fC [static]\fP"
+.PP
+Sends info using the specified connection. \fBParameters:\fP
+.RS 4
+\fIconnection\fP The IRC connection. 
+.br
+\fIchan\fP The channel to send to. 
+.RE
+.PP
+
+.SS "static void Alaris.Extras.Utilities.SendSysStats (ref \fBConnection\fP connection, string chan)\fC [static]\fP"
+.PP
+Sends system stats using the specified connection. \fBParameters:\fP
+.RS 4
+\fIconnection\fP The IRC connection. 
+.br
+\fIchan\fP The channel to send to. 
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "string Alaris.Extras.Utilities.AdminHost\fC [static, get, set]\fP"
+.PP
+The admin user's hostname. 
+.SS "string Alaris.Extras.Utilities.AdminNick\fC [static, get, set]\fP"
+.PP
+The admin user's nick. 
+.SS "string Alaris.Extras.Utilities.AdminUser\fC [static, get, set]\fP"
+.PP
+The admin user's username. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

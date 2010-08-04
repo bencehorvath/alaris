@@ -1,0 +1,6 @@
+Name: AlarisAPI
+Description: AlarisAPI
+Version: 1.6
+
+Requires: 
+Libs: -r:@expanded_libdir@/@PACKAGE@/AlarisAPI.dll

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed version="0.3" xmlns="http://purl.org/atom/ns#">
+    <title>Tao of the Machine</title>
+    <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/index.html" />
+    <modified>2004-02-05T01:40:00+00:00</modified>
+    <author>
+      <name>Hans Nowak</name>
+    </author>
+    <tagline>Programming, Python, my projects, card games, books, music, Zoids, bettas, manga, cool stuff, and whatever comes to mind.</tagline>
+        <entry>
+      <title>Firedrop supports Atom 0.3</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e478" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e478</id>
+      <issued>2004-02-05T01:18:10+00:00</issued>
+      <modified>2004-02-05T01:39:41+00:00</modified>
+      <summary><![CDATA[...so this weblog now has an Atom feed as well. See the sidebar. It actually validates... for now. [updated Firedrop build notes] ... [22 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Compiling 101</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e477" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e477</id>
+      <issued>2004-02-04T05:41:00+00:00</issued>
+      <modified>2004-02-04T05:44:09+00:00</modified>
+      <summary><![CDATA[A lesson learned in compiling C code... Just because the configure script and makefiles work, doesn't mean they're up to snuff. ... [61 words]]]></summary>
+    </entry>
+    <entry>
+      <title>It's just one of those days...</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e476" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e476</id>
+      <issued>2004-02-03T04:55:58+00:00</issued>
+      <modified>2004-02-03T15:20:21+00:00</modified>
+      <summary><![CDATA[It seems all I do lately is trying to pound unwilling programs into submission, with little success. Java programs that I have no clue how to start or what they require to run. ... [76 words]]]></summary>
+    </entry>
+    <entry>
+      <title>My RSS does not validate</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e475" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e475</id>
+      <issued>2004-02-01T16:17:18+00:00</issued>
+      <modified>2004-02-01T16:39:48+00:00</modified>
+      <summary><![CDATA[...again. (Apparently people actually press that button. :-) Culprits are HTML entities like &amp;deg; and &amp;uuml; and such. I'm pretty sure this post will only add to the problem. ... [184 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Programming and creativity (2)</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e474" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e474</id>
+      <issued>2004-02-01T16:01:33+00:00</issued>
+      <modified>2004-02-01T16:16:49+00:00</modified>
+      <summary><![CDATA[Hmm, interesting points were raised in the comments to yesterday's post. A few comments of my own: Bob Ippolito: "Languages like C and Pascal don't really do less than a language like Python (because you can write Python in C).. ... [353 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Programming and creativity</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e473" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_31.html#e473</id>
+      <issued>2004-01-31T17:45:37+00:00</issued>
+      <modified>2004-01-31T18:08:51+00:00</modified>
+      <summary><![CDATA[Some thoughts: 1. Restrictions don't hamper creativity... they stimulate it. 2. But how do restrictive programming languages (e.g. statically typed) fit into this picture? ... [324 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Dirty Python tricks</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e472" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e472</id>
+      <issued>2004-01-31T01:16:18+00:00</issued>
+      <modified>2004-01-31T01:16:47+00:00</modified>
+      <summary><![CDATA[Or, abusing __getitem__ is fun. ... [5 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Python Apocrypha</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e471" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e471</id>
+      <issued>2004-01-29T03:05:28+00:00</issued>
+      <modified>2004-01-29T03:07:46+00:00</modified>
+      <summary><![CDATA[Hmm, I didn't know this site yet. It says it's an online supplement to the Python 2.1 Bible. Even for those who don't have the Bible (easy to get from eMule Borders or Amazon), the code snippets may be useful. ... [40 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Abstract methods</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e470" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e470</id>
+      <issued>2004-01-27T15:46:32+00:00</issued>
+      <modified>2004-01-27T16:06:41+00:00</modified>
+      <summary><![CDATA[Ivo Timmermans has a way to define abstract methods which is quite nice. For me, personally, a simpler implementation would suffice, though: # first version class AbstractMethodError(Exception): pass class Foo: def bar(self): raise AbstractMethodError class Bar(Foo): def bar(self): print 'yay!' Instances of Foo have a bar method that cannot be called, instances of Bar (which derives from Foo) have a "regular" bar method. ... [216 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Automatic Slashdot post generator</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e469" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e469</id>
+      <issued>2004-01-26T23:51:06+00:00</issued>
+      <modified>2004-01-27T03:17:05+00:00</modified>
+      <summary>A Python script to generate Slashdot posts. :-)</summary>
+    </entry>
+    <entry>
+      <title>Lekker weertje</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e468" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e468</id>
+      <issued>2004-01-26T22:52:49+00:00</issued>
+      <modified>2004-01-26T22:56:11+00:00</modified>
+      <summary><![CDATA[Not much of a winter here... 77&deg;F today (25&deg;C), when it's freezing in most of the US (and Europe -- hmm, snow in Greece and Turkey?). ... [51 words]]]></summary>
+    </entry>
+    <entry>
+      <title>File retriever for PyPI?</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e467" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e467</id>
+      <issued>2004-01-25T21:01:49+00:00</issued>
+      <modified>2004-01-31T18:08:35+00:00</modified>
+      <summary><![CDATA[This is just a thought, but now that the PyPI repository seems to have quite a few entries, is there also a way to easily retrieve packages? It would make sense, IMHO; you can submit software through an online form or a script; the next step would be automatic retrieval. ... [299 words]]]></summary>
+    </entry>
+    <entry>
+      <title>XL</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e466" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e466</id>
+      <issued>2004-01-25T02:28:20+00:00</issued>
+      <modified>2004-01-25T02:31:37+00:00</modified>
+      <summary><![CDATA[Here's another programming language to look out for: XL (part of the Mozart project). The compiler is not done yet, but people are working on it. ... [29 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Class methods</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e465" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_24.html#e465</id>
+      <issued>2004-01-24T18:16:38+00:00</issued>
+      <modified>2004-01-24T23:03:16+00:00</modified>
+      <summary><![CDATA[Today I used class methods for the first time in a "real" program. Before that, the need for them simply didn't arise, and even now I wonder if I really need them. ... [415 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Updates...</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e464" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e464</id>
+      <issued>2004-01-24T04:27:07+00:00</issued>
+      <modified>2004-01-24T04:35:34+00:00</modified>
+      <summary><![CDATA[Progress on the card game can be found here. I worked out mechanisms for playing creatures, and battle. (Much like Magi-Nation, aside, but not exactly the same.) ... [159 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Designing a card game (5)</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e463" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e463</id>
+      <issued>2004-01-23T02:39:27+00:00</issued>
+      <modified>2004-01-23T02:51:04+00:00</modified>
+      <summary><![CDATA[A summary of what I have so far can be found here. There are some "variables", like NUM_CORE, HAND_SIZE and NUM_DRAW. ... [266 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Designing a card game (interlude)</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e462" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e462</id>
+      <issued>2004-01-22T03:01:49+00:00</issued>
+      <modified>2004-01-22T03:19:25+00:00</modified>
+      <summary><![CDATA[Maybe I should make a redneck-themed game, that should sell well around here (or so I hope :-). I could include such staple cards as: Roadkill My Cousin, My Wife Monster Truck Bubba Wide Load Burping Contest My Brother Daryll My Other Brother Daryll Roach Infestation Huntin Dawg I wonder if people here would see the humor of it and buy the damn game. ... [70 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Designing a card game (4)</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e461" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e461</id>
+      <issued>2004-01-22T02:45:36+00:00</issued>
+      <modified>2004-01-24T04:37:22+00:00</modified>
+      <summary><![CDATA[This "thread" will probably go on for a while... bear with me. Decisions so far: There will be a potentially unlimited number of cards. ... [361 words]]]></summary>
+    </entry>
+    <entry>
+      <title>Designing a card game (3)</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e460" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e460</id>
+      <issued>2004-01-21T02:02:34+00:00</issued>
+      <modified>2004-01-21T02:22:57+00:00</modified>
+      <summary><![CDATA[A summary of the rules we have so far: There will be a potentially unlimited number of cards. There will be Goal cards. ... [467 words]]]></summary>
+    </entry>
+    <entry>
+      <title>New Firedrop release</title>
+      <link rel="alternate" type="text/html" href="http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e459" />
+      <id>http://zephyrfalcon.org/weblog/arch_d7_2004_01_17.html#e459</id>
+      <issued>2004-01-20T04:49:32+00:00</issued>
+      <modified>2004-01-20T05:03:42+00:00</modified>
+      <summary><![CDATA[In the meantime, I am still working on Firedrop. See the release notes. This is an experimental version that uses a new StatusDialog control, which may be wrapped into Wax sooner or later. ... [69 words]]]></summary>
+    </entry>
+
+</feed>

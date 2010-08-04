@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding='iso-8859-1'?>
+<entry xmlns="http://example.com/newformat#" >
+    <title>My First Entry</title>
+    <summary>A very boring entry...</summary>
+
+    <author>
+      <name>Bob B. Bobbington</name>
+    </author>
+
+    <created>2003-02-05T12:29:29</created>
+
+    <content type="application/xhtml+xml" xml:lang="en-us">
+      <p xmlns="...">Hello, <em>weblog</em> world! 2 &lt; 4!</p>
+    </content>
+</entry>

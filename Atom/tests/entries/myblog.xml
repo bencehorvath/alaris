@@ -1,0 +1,16 @@
+<entry>
+<link href="http://www.blogger.com/atom/5281182/108842575894753013" rel="service.edit" title="Generics are cool, but Python is cooler" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence</name>
+</author>
+<issued>2004-06-28T14:23:18+02:00</issued>
+<modified>2004-06-28T12:29:18Z</modified>
+
+<created>2004-06-28T12:29:18Z</created>
+<link href="http://loluyede.blogspot.com/2004/06/generics-are-cool-but-python-is-cooler.html" rel="alternate" title="Generics are cool, but Python is cooler" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-108842575894753013</id>
+<title mode="escaped" type="text/html">Generics are cool, but Python is cooler</title>
+<content mode="escaped" type="text/html" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">My friend &lt;a href="http://vvolonghi.blogspot.com/"&gt;Valentino&lt;/a&gt; has &lt;a href="http://vvolonghi.blogspot.com/2004/06/today-while-surfing-net-i-bumped-into.html"&gt;posted&lt;/a&gt; on his blog about a sample of code with C# and generics and he rewrote the sample in Python ;)&#13;&lt;br /&gt;&#13;&lt;br /&gt;Here the samples:&#13;&lt;br /&gt;&#13;&lt;br /&gt;C# 2.0:&#13;&lt;br /&gt;List integers = new List();&#13;&lt;br /&gt;for(int i=1; i&lt;=10; i++) integers.Add(i);&#13;&lt;br /&gt;int sum;&#13;&lt;br /&gt;integers.ForEach(delegate(int i){ sum+=i; });&#13;&lt;br /&gt;&#13;&lt;br /&gt;vs&#13;&lt;br /&gt;&#13;&lt;br /&gt;Python (basically any version):&#13;&lt;br /&gt;sum([x for x in xrange(11)])</content>
+
+</entry>
+

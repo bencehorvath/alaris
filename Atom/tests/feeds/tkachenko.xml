@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<feed version="0.3" xmlns="http://purl.org/atom/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">
+  <title>Signs on the Sand</title>
+  <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/" />
+  <modified>2004-02-18T16:44:04Z</modified>
+  <tagline>Oleg Tkachenko&apos;s Blog</tagline>
+  <id>tag:www.tkachenko.com,2004:/blog//1</id>
+  <generator url="http://www.movabletype.org/" version="2.661">Movable Type</generator>
+  <copyright>Copyright (c) 2004, Oleg Tkachenko</copyright>
+  <entry>
+    <title>Streaming XInclude and Intra-document References</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000166.html" />
+    <modified>2004-02-18T16:44:04Z</modified>
+    <issued>2004-02-18T18:44:04+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.166</id>
+    <created>2004-02-18T16:44:04Z</created>
+    <summary type="text/plain">It&apos;s definitely love-to-steaming-strikes-back day today. Here is another sample of how streaming XML processing approach fails. The only XInlcude feature still not implemented in XInlcude.NET project is intra-document references. And basically I have no idea how to implement it in .NET pull environment (as well as Elliotte Rusty Harold has...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>XML in .NET</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;It&apos;s definitely love-to-steaming-strikes-back day today. Here is another sample of how streaming XML processing approach fails.&lt;/p&gt;
+&lt;p&gt;The only &lt;a href=&quot;http://www.w3.org/TR/xinclude&quot;&gt;XInlcude&lt;/a&gt; feature still not implemented in &lt;a href=&quot;http://workspaces.gotdotnet.com/xinclude&quot;&gt;XInlcude.NET&lt;/a&gt; project is intra-document references. And basically I have no idea how to implement it in .NET pull environment (as well as &lt;a href=&quot;http://www.cafeconleche.org&quot;&gt;Elliotte Rusty Harold&lt;/a&gt; has &lt;a href=&quot;http://lists.w3.org/Archives/Public/www-xml-xinclude-comments/2004Jan/0017.html&quot;&gt;no idea how to implement it&lt;/a&gt; in his SAX-based implementation). What&apos;s the problem?&lt;/p&gt;
+
+      &lt;p&gt;XInclude allows the following constructs:
+&lt;pre&gt;&amp;lt;root&gt;
+   &amp;lt;element id=&quot;bar&quot;/&gt;
+   &amp;lt;xi:include xpointer=&quot;bar&quot;/&gt;
+&amp;lt;/root&gt;&lt;/pre&gt;
+After XInclude processinig above XML should resolve to 
+&lt;pre&gt;&amp;lt;root&gt;
+   &amp;lt;element id=&quot;bar&quot;/&gt;
+   &amp;lt;element id=&quot;bar&quot;/&gt;
+&amp;lt;/root&gt;
+&lt;/pre&gt;
+This is called intra-document reference. &lt;tt&gt;&amp;lt;xi:include&gt;&lt;/tt&gt; instruction having no &lt;tt&gt;href&lt;/tt&gt; attribute refers to the same document currently processed. That opens Pandora&apos;s box of implications that  basically prevents streaming XInclude processing altogether, as one obviously can&apos;t arbitrary navigate over XML stream, neither with XmlReader nor with SAX. &quot;bar&quot; as &lt;a href=&quot;http://www.w3.org/TR/xptr-framework/&quot;&gt;XPointer&lt;/a&gt; is a &lt;a href=&quot;http://www.w3.org/TR/xptr-framework/#shorthand&quot;&gt;shorthand pointer&lt;/a&gt;, pointing to the element with &quot;bar&quot; ID. (Btw, XInclude processing is recursive so the same way it may point to another &lt;tt&gt;&amp;lt;xi:include&gt;&lt;/tt&gt; element in the same document, causing double processing of the same &lt;tt&gt;&amp;lt;xi:include&gt;&lt;/tt&gt; instruction).
+&lt;/p&gt;
+&lt;p&gt;As the core class of XInclude.NET - XIncludingReader is just an XmlReader, how on earth I can get backward in forward-only XmlReader??? Seems like to implement this feature I have to cache source XML document as a whole. Too bad.&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
+    <title>ForwardXPathNavigator vs XSE: a class vs API</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000165.html" />
+    <modified>2004-02-18T15:42:17Z</modified>
+    <issued>2004-02-18T17:42:17+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.165</id>
+    <created>2004-02-18T15:42:17Z</created>
+    <summary type="text/plain">Meanwhile I managed to create simple dummy online demo of ForwardXPathNavigator (XPathNavigator implementation over XmlReader) I was talking about. Here it is....</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>XML in .NET</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;Meanwhile I managed to create simple dummy online demo of ForwardXPathNavigator (XPathNavigator implementation over XmlReader) I &lt;a href=&quot;http://www.tkachenko.com/blog/archives/000161.html&quot;&gt;was talking about&lt;/a&gt;. &lt;a href=&quot;http://www.tkachenko.com/dotnet/ForwardXPathNavigatorTest&quot;&gt;Here it is.&lt;/a&gt;&lt;/p&gt;
+
+      &lt;p&gt;It allows to test what ForwardXPathNavigator can and what cannot select. Upload XML document you like to test (please don&apos;t abuse loading huge ones), then enter XPath expression and click &quot;RunQuery&quot; button. I know it looks badly in mozilla, but I have no idea how to insert transformation result into HTML page so it gets styled in mozilla too. There are lots of issues, such as namespace declararation isn&apos;t showed etc, come on, that&apos;s not online XPath tutorial, but just simple demo.&lt;/p&gt;
+&lt;p&gt;Talking about difference between XSE and ForwardXPathNavigator, Daniel &lt;a href=&quot;http://weblogs.asp.net/cazzu/archive/2004/02/16/73985.aspx&quot;&gt;writes&lt;/a&gt;:
+&lt;blockquote&gt;Back to the issue, there&apos;s a fundamental difference in the approach between his class and my XSE API: his will consume the stream with a single query. Mine supports multiple handlers matching multiple elements at the same time. And it&apos;s still a pull-based API, where you have to iterate results, instead of being called when something you care happened (was matched).&lt;/blockquote&gt;
+
+Well, ForwardXPathNavigator wasn&apos;t designed to be compared with XSE! It&apos;s simple poor man&apos;s (XmlReader) XPathNavigator. But as XPathNavigator it allows not only evaluate XPath queries, but &lt;b&gt;to navigate&lt;/b&gt; node by node over XML too. I was planning to build XSE-like system &lt;b&gt;based&lt;/b&gt; on ForwardXPathNavigator. Actually I must admit I didn&apos;t go far from proving the concept and don&apos;t have code to publish yet (in the face of brilliant XSE impl :). The idea behind XmlUpdater/XPathFilter was the following: just navigate over XML using ForwardXPathNavigator and check each node if it matches any registered XPath patterns. On each matched node call associated with the pattern callback method, providing it with enough context to to what it want  - to skip node (transparency), to modify it etc.
+&lt;/p&gt;
+&lt;p&gt;I found pattern matching cheap enough operation and the whole prototype quite satisfying. What I dislike is too fragile nature of ForwardXPathNavigator. It&apos;s forward-only, so XPath patterns and the whole application must be too-carefully defined with forward-only concept in mind, what&apos;s not usual concept when working with XPath, right? Funny thing - ForwardXPathNavigator may move irrevocably when you just inspecting its properties  in the debugger! Count property of XPathNodeIterator becomes obviously unusabe too. To put it another way - it&apos;s to hard to work with this stuff. And benefits are not so striking by the way. May be that&apos;s my bad design, dunno...&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
+    <title>XSE idea</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000164.html" />
+    <modified>2004-02-18T14:34:36Z</modified>
+    <issued>2004-02-18T16:34:36+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.164</id>
+    <created>2004-02-18T14:34:36Z</created>
+    <summary type="text/plain">Here is Daniel clarifies things about XSE: XSE is not about querying with an specific expression language/format (i.e. XPath or SXPath). XSE is just a mechanism for encapsulating state machines checking for matches against a given expression. What the expression looks like depends on the factory that creates the strategy....</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>XML in .NET</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;Here is Daniel &lt;a href=&quot;http://weblogs.asp.net/cazzu/archive/2004/02/16/XseNotXPath.aspx&quot;&gt;clarifies things about XSE&lt;/a&gt;:
+&lt;blockquote&gt;XSE is not about querying with an specific expression language/format (i.e. XPath or SXPath). XSE is just a mechanism for encapsulating state machines checking for matches against a given expression. What the expression looks like depends on the factory that creates the strategy. &lt;br/&gt;
+Therefore, the factories I showed (i.e. my RootedPath and RelativePath) are only encapsulating code generation for different FSMs, based on an expression language that fits a need. Therefore, I could even create a factory implementing SXPath and still remain in Xml Streaming Events land.&lt;/blockquote&gt;
+&lt;blockquote&gt;The XSE idea is to provide a callback metaphor to XML parsing, instead of the pull-model of the XmlReader. In fact, it&apos;s a sort of evolution over SAX, in that at the same time it offers both worlds: pull model directly from the XseReader, events-based for your registered handlers.&lt;/blockquote&gt;
+
+Now that&apos;s finally clear to me. And the approach starts to delight me. Really, really not bad. I need to dig around it before I can say some more.
+&lt;/p&gt;
+      
+    </content>
+  </entry>
+  <entry>
+    <title>The Man&apos;s patenting XML?</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000163.html" />
+    <modified>2004-02-18T14:11:08Z</modified>
+    <issued>2004-02-18T16:11:08+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.163</id>
+    <created>2004-02-18T14:11:08Z</created>
+    <summary type="text/plain">Looks like Microsoft&apos;s patenting its XML investments. Recently we had a hubbub about Office 2003 schemas patenting, then XML scripting. Daniel like many others feel alarm, you too? Well, I&apos;m not. Patenting software ideas is stupid thing, but that&apos;s a matter of unperfect reality we live in. Everything is patented...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>XML</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;Looks like Microsoft&apos;s patenting its XML investments. Recently we had a hubbub about &lt;a href=&quot;http://news.com.com/2100-1013-5146581.html?tag=nl&quot;&gt;Office 2003 schemas patenting&lt;/a&gt;, then &lt;a href=&quot;http://www.internetnews.com/dev-news/article.php/3312091&quot;&gt;XML scripting&lt;/a&gt;. Daniel like many others &lt;a href=&quot;http://weblogs.asp.net/cazzu/archive/2004/02/17/74966.aspx&quot;&gt;feel alarm&lt;/a&gt;, you too?&lt;/p&gt;
+&lt;p&gt;Well, I&apos;m not. Patenting software ideas is stupid thing, but that&apos;s a matter of unperfect reality we live in. Everything is patented nowadays, right up to &lt;a href=&quot;http://news.bbc.co.uk/1/hi/world/asia-pacific/1418165.stm&quot;&gt;the wheel&lt;/a&gt;. So if Office XML is gonna be patented I prefer it&apos;s being patented by Microsoft. After all they are not interested to close it (aka make it die), instead they &lt;a href=&quot;http://www.microsoft.com/presspass/press/2003/nov03/11-17XMLRefSchemaEMEAPR.asp&quot;&gt;made Office schemas Royalty-Free&lt;/a&gt;. And one more reason - I&apos;m sure all we don&apos;t want to find ourself one day rewriting all Office-based solutions just because of another &lt;a href=&quot;http://lists.xml.org/archives/xml-dev/200308/msg00316.html&quot;&gt;Eolas scrooge case&lt;/a&gt; or even to pay for out-of-blue-license to some other &lt;a href=&quot;http://www.google.com/search?hl=en&amp;lr=&amp;ie=UTF-8&amp;oe=UTF-8&amp;q=litigious+bastards&amp;btnG=Google+Search&quot;&gt;litigious bastards&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;That&apos;s all sounds reasonable if that&apos;s really defensive patenting though, otherwise - be prepared.&lt;/p&gt;
+      
+    </content>
+  </entry>
+  <entry>
+    <title>New XQuery book</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000162.html" />
+    <modified>2004-02-18T12:55:17Z</modified>
+    <issued>2004-02-18T14:55:17+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.162</id>
+    <created>2004-02-18T12:55:17Z</created>
+    <summary type="text/plain">Michael Brundage&apos;s excellent XQuery reference book is finally available. [Via Michael Rys] Dr. Rys is talking about just published (February 2004) &quot;XQuery : The XML Query Language&quot; book. Michael Brundage is Technical Lead for XQuery processing at Microsoft and the recommendations are so weighty... I feel I want this book...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>Books</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;&lt;blockquote&gt;Michael Brundage&apos;s excellent XQuery reference book is finally available.&lt;/blockquote&gt;
+&lt;i&gt;[Via &lt;a href=&quot;http://sqljunkies.com/WebLog/mrys/archive/2004/02/17/1173.aspx&quot;&gt;Michael Rys&lt;/a&gt;]&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt; 
+&lt;a href=&quot;http://www.amazon.com/exec/obidos/ASIN/0321165810/blogtkachenko-20&quot;&gt;&lt;IMG SRC=&quot;http://www.tkachenko.com/blog/images/xquery-Brundage.jpg&quot; border=&quot;0&quot; alt=&quot;XQuery : The XML Query Language&quot; hspace=&quot;3&quot; vspace=&quot;3&quot; align=&quot;left&quot;&gt;&lt;/a&gt;Dr. Rys is talking about just published (February 2004) &lt;a href=&quot;http://www.amazon.com/exec/obidos/ASIN/0321165810/blogtkachenko-20&quot;&gt;&quot;XQuery : The XML Query Language&quot;&lt;/a&gt; book.&lt;/p&gt; 
+&lt;p&gt;Michael Brundage is Technical Lead for XQuery processing at Microsoft and the recommendations are so  weighty... I feel I want this book too.&lt;/p&gt;
+&lt;p&gt;&amp;#xA0;&lt;/p&gt;
+&lt;p&gt;&amp;#xA0;&lt;/p&gt;
+      
+    </content>
+  </entry>
+  <entry>
+    <title>RE: Streaming XPath and ForwardXPathNavigator</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000161.html" />
+    <modified>2004-02-16T17:20:07Z</modified>
+    <issued>2004-02-16T19:20:07+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.161</id>
+    <created>2004-02-16T17:20:07Z</created>
+    <summary type="text/plain">Ok, Dare great deal clarified things in his &quot;Combining XPath-based Filtering with Pull-based XML Parsing&quot; post: Actually Oleg is closer and yet farther from the truth than he realizes. Although I wrote about a hypothetical ForwardOnlyXPathNavigator in my article entitled Can One Size Fit All?&amp;nbsp;for XML Journal my planned article...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>XML in .NET</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;Ok, Dare great deal clarified things in his &quot;&lt;a href=&quot;http://www.25hoursaday.com/weblog/PermaLink.aspx?guid=a333b9f4-0a67-45fd-913d-3b9bc37cf4b6&quot;&gt;Combining XPath-based Filtering with Pull-based XML Parsing&lt;/a&gt;&quot; post:
+&lt;blockquote&gt;   Actually Oleg is closer and yet farther from the truth than he realizes. Although
+   I wrote about a hypothetical ForwardOnlyXPathNavigator in my article entitled &lt;a href=&quot;http://www.sys-con.com/xml/articleprint.cfm?id=727&quot;&gt;Can
+   One Size Fit All?&lt;/a&gt;&amp;nbsp;for XML Journal my planned article which should show up
+   when the MSDN XML Developer Center launches in a month or so won&apos;t be using it. Instead
+   it will be based on an XPathReader that is very similar to the one used in BizTalk
+   2004, in fact it was written by the same guy. The XPathReader works similarly
+   to Daniel Cazzulino&apos;s XseReader but uses the XPath subset described in Arpan Desai&apos;s &lt;a href=&quot;http://www.idealliance.org/papers/xml2001/papers/html/05-01-01.html&quot;&gt;Introduction
+   to Sequential XPath paper&lt;/a&gt; instead of adding proprietary extensions to XPath
+   as Daniel&apos;s does. 
+&lt;/blockquote&gt;
+&lt;/p&gt;
+
+      &lt;p&gt;So, it&apos;s forward-only XPath subset and BizTalk&apos;s XPathReader isn&apos;t hidden. Nice to hear.&lt;br/&gt;
+I wonder who this guy is. He&apos;s definitely an expert in the area. Why he doesn&apos;t blog? I&apos;m looking forward to see the article, what a pity XML dev center is postponed.
+&lt;blockquote&gt;   When the article describing the XPathReader is done it will provide source and if
+   there is interest I&apos;ll create a GotDotNet Workspace for the project although it is
+   unlikely I nor the dev who originally wrote the code will have time to maintain it.&lt;/blockquote&gt;
+I&apos;m volunteering here. I think it&apos;s important-to-have option in XML processing under .NET.
+&lt;/p&gt;
+&lt;p&gt;Meanwhile Daniel has &lt;a href=&quot;http://weblogs.asp.net/cazzu/archive/2004/02/16/XSERelease.aspx&quot;&gt;released XSE&lt;/a&gt; stuff at last (btw, I&apos;m musing if I have to adopt hype-before-release strategy? :). Really interesting. But I still believe XPath (forward-only subset of course) is the way to go. &lt;/p&gt;
+&lt;p&gt;Anyway, here is ForwardXPathNavigator I was talking about - &lt;a href=&quot;http://www.tkachenko.com/dotnet/files/ForwardXPathNavigator.zip&quot;&gt;ForwardXPathNavigator.zip&lt;/a&gt;. It&apos;s written by my buddy dev &lt;a href=&quot;mailto:vladimir@nesterovsky-bros.com&quot;&gt;Vladimir Nesterovsky&lt;/a&gt;. And here are some basic samples.
+&lt;/p&gt;
+&lt;p&gt;Selecting feed titles from RSSBandit feed list (pure forward-only selection):
+&lt;pre&gt;XmlReader r = new XmlTextReader(&quot;feedlist.xml&quot;);
+ForwardXPathNavigator nav = new ForwardXPathNavigator(r);
+XmlNamespaceManager nsm = new XmlNamespaceManager(nav.NameTable);
+nsm.AddNamespace(&quot;r&quot;, 
+    &quot;http://www.25hoursaday.com/2003/RSSBandit/feeds/&quot;);
+XPathExpression expr = 
+    nav.Compile(&quot;/r:feeds/r:feed/r:title&quot;);
+expr.SetContext(nsm);
+XPathNodeIterator ni = nav.Select(expr);
+while (ni.MoveNext()) {
+    Console.WriteLine(ni.Current.Value);
+}
+&lt;/pre&gt;
+Obviously ForwardXPathNavigator doesn&apos;t allow you to peek to forward or backward nodes. What it only stores is current node XmlReader is positioned at and some details about its direct ancestors. As Dare pointed out, expression such as &lt;tt&gt;/r:feeds/r:feed[count(r:stories-recently-viewed)&gt;10]/r:title&lt;/tt&gt; are not supported, because it cannot be done in forward-only manner. That wasn&apos;t ForwardXPathNavigator&apos;s goal anyway. In fact such query can be done in forward-only way to some extent though, but not without a help from the host environment. E.g. to select the most viewed feeds, one can select each feed, store its title, then calculate &lt;tt&gt;count(r:stories-recently-viewed/r:story)&lt;/tt&gt; and determine if the feed is popular enough to be selected:
+&lt;pre&gt;XmlReader r = new XmlTextReader(&quot;feedlist.xml&quot;);
+ForwardXPathNavigator nav = new ForwardXPathNavigator(r);
+XmlNamespaceManager nsm = new 
+    XmlNamespaceManager(nav.NameTable);
+nsm.AddNamespace(&quot;r&quot;, 
+    &quot;http://www.25hoursaday.com/2003/RSSBandit/feeds/&quot;);
+XPathExpression expr = 
+    nav.Compile(&quot;/r:feeds/r:feed&quot;);
+expr.SetContext(nsm);
+XPathExpression countExpr = 
+    nav.Compile(&quot;count(r:stories-recently-viewed/r:story)&quot;);
+countExpr.SetContext(nsm);
+XPathExpression titleExpr = 
+    nav.Compile(&quot;string(r:title)&quot;);
+titleExpr.SetContext(nsm);
+XPathNodeIterator ni = nav.Select(expr);
+while (ni.MoveNext()) {
+    string title = ni.Current.Evaluate(titleExpr) as string;
+    if ((double)ni.Current.Evaluate(countExpr) &gt; 20)
+        Console.WriteLine(title);
+}
+&lt;/pre&gt; 
+Not so elegant (mostly because lack of &lt;tt&gt;XPathNavigator.Select(string, XmlNamespaceManager)&lt;/tt&gt; method), but still feasible. Btw, instroducing some extension function, which could control ForwardXPathNavigator&apos;s cach would be quite interesting. Something like &lt;tt&gt;/r:feeds/r:feed[ext:store(r:title)][count(r:stories-recently-viewed)&gt;10]/r:title&lt;/tt&gt;. That&apos;s a pity XPath doesn&apos;t allow to create variables...
+&lt;/p&gt;
+&lt;p&gt;As I said ForwardXPathNavigator keeps some track of ancestor nodes (name, attributes etc), thus enabling some limited backward selections, such as &lt;tt&gt;/r:feeds/r:feed[r:title=&apos;The XML Files&apos;]/@category&lt;/tt&gt;! I&apos;m going to provide small aspx page where ForwardXPathNavigator can be tested online by anyone interested.&lt;/p&gt;
+&lt;p&gt;Tomorrow I&apos;ll go on spinning up the topic by presenting XmlUpdater (which is based on ForwardXPathNavigator), SAX-filter-like approach to modify XML on the fly.&lt;/p&gt;
+
+    </content>
+  </entry>
+  <entry>
+    <title>nxslt 1.4 released</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000160.html" />
+    <modified>2004-02-15T11:54:46Z</modified>
+    <issued>2004-02-15T13:54:46+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.160</id>
+    <created>2004-02-15T11:54:46Z</created>
+    <summary type="text/plain">I&apos;ve released nxslt.exe utility version 1.4. It&apos;s maintenance release. Changes are: Updated to EXSLT.NET 1.0.1. Updated to XInclude.NET 1.2. Updated project to Microsoft Visual Studio .NET 2003 (so now nxslt.exe can be built directly from VS.NET, no need to run nmake manually - EXSLT methods renaming such as nodeSet() to...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>XSLT</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;I&apos;ve released &lt;a href=&quot;http://www.tkachenko.com/dotnet/nxslt.html&quot;&gt;nxslt.exe&lt;/a&gt; utility version 1.4. It&apos;s maintenance release. Changes are:
+&lt;ul&gt;
+&lt;li&gt;Updated to &lt;a href=&quot;http://workspaces.gotdotnet.com/exslt&quot;&gt;EXSLT.NET&lt;/a&gt; 1.0.1.&lt;/li&gt;
+&lt;li&gt;Updated to &lt;a href=&quot;http://workspaces.gotdotnet.com/xinclude&quot;&gt;XInclude.NET 1.2&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Updated project to Microsoft Visual Studio .NET 2003 (so now nxslt.exe can be built directly from VS.NET, no need to run &lt;tt&gt;nmake&lt;/tt&gt; manually - EXSLT methods renaming such as nodeSet() to node-set() is done in postbuild script now).&lt;/li&gt;
+&lt;li&gt;Binary download includes three nxslt.exe versions (compiled for .NET 1.0, 1.1. and 1.2).&lt;/li&gt;
+&lt;li&gt;Usage header now indicatas what&apos;s .NET runtime nxslt.exe is running under:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;
+.NET XSLT command line utility, version 1.4 (Running under .NET 1.1)
+&lt;/pre&gt;
+&lt;/p&gt;
+&lt;p&gt;The rule is simple - nxslt.exe requires .NET Framework it&apos;s compiled for. By default nxslt.exe is compled for .NET 1.1 and thus can&apos;t run under .NET 1.0. Instead use nxslt-.NET1.0.exe version (feel free to rename it too). For testing .NET 1.2 use  nxslt-.NET1.2.exe version.
+&lt;/p&gt;
+
+&lt;p&gt;No need to say, I appreciate any comments|critics|suggestions|donations|not(spam).&lt;/p&gt;
+&lt;p&gt;Not too much, right. For the next nxslt.exe release (March probably) I&apos;m going to implement basic XSLT profiling, tracing and may be rudimentary debugging functionality. Stay tuned.&lt;/p&gt;
+      
+    </content>
+  </entry>
+  <entry>
+    <title>Warriors of Streaming XPath Order</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000159.html" />
+    <modified>2004-02-15T11:18:41Z</modified>
+    <issued>2004-02-15T13:18:41+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.159</id>
+    <created>2004-02-15T11:18:41Z</created>
+    <summary type="text/plain">Daniel writes about performant (and inevitably streaming) XML processing, introducing XSEReader (aka Xml Streaming Events Reader). While he didn&apos;t publish the implementation itself yet, but only teasing with samples of its usage, I think I get the idea. Basically I know what he&apos;s talking about. I&apos;ve been playing with such...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>XML in .NET</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;&lt;a href=&quot;http://weblogs.asp.net/cazzu/&quot;&gt;Daniel&lt;/a&gt; &lt;a href=&quot;http://weblogs.asp.net/cazzu/archive/2004/02/13/XseIntro.aspx&quot;&gt;writes&lt;/a&gt; about performant (and  inevitably streaming) XML processing, introducing XSEReader (aka Xml Streaming Events Reader). While he didn&apos;t publish the implementation itself yet, but only teasing with samples of its usage, I think I get the idea. Basically I know what he&apos;s talking about. I&apos;ve been &lt;a href=&quot;http://www.tkachenko.com/blog/archives/000094.html&quot;&gt;playing&lt;/a&gt; with such beasts, making all kinds of mistakes and finally I came up with a solution, which I think is good, but I didn&apos;t publish it yet. Why? Because I&apos;m tired to publish spoilers :) It&apos;s based on &quot;ForwardOnlyXPathNavigator&quot; aka XPathNavigator over XmlReader, &lt;a href=&quot;http://www.25hoursaday.com/weblog/SyndicationService.asmx/GetRss&quot;&gt;Dare&lt;/a&gt; is going to write about in MSDN XML Dev Center and I wait till that&apos;s published.&lt;/p&gt;
+
+      &lt;p&gt;
+May be I&apos;m mistaken, but anyway here is the idea - &quot;ForwardOnlyXPathNavigator&quot; is XPathNavigator implementation over XmlReader, which obviously supports forward-only XPath subset. My fellow developer wrote such one so may be we should publish it anyway. Having such navigator it&apos;s easy to write a class (I called it XPathFilter), which allows to register callbacks to specific nodes, identified by XPath pattern. XPathFilter travers XML document moving ForwardOnlyXPathNavigator in document order and on each node matching any registered pattern it calls callback method. In the callback it&apos;s possible to skip or modify matched node, just like in ordinar SAX filter. I&apos;ve implemented XmlUpdater class based on such technique and it&apos;s proven to be effectieve on modifying huge XML documents on the fly. For instance here is how I can change element into attribute:
+&lt;pre&gt;
+FileStream output = File.Create(&quot;ot2.xml&quot;);
+XmlUpdater updater = new XmlUpdater(File.OpenRead(&quot;otbig.xml&quot;), 
+    output); 			
+updater.AddHandler(&quot;/tstmt/book/chapter/chtitle&quot;, 
+    new NodeMatchedEventHandler(MyHandler));
+updater.Start();
+...
+public static void MyHandler(XmlUpdater xu, 
+        XPathNavigator nav, XmlWriter w) {						
+    w.WriteAttributeString(&quot;title&quot;, nav.Value);			
+}		
+&lt;/pre&gt;
+&lt;/p&gt;
+&lt;p&gt;And after I played enough with and implemented that stuff I discovered BizTalk 2004 Beta classes contain much better implementation of the same functionality in such gems as XPathReader, XmlTranslatorStream, XmlValidatingStream and XPathMutatorStream. They&apos;re amazing classes that enable streaming XML processing in much rich way than trivial XmlReader stack does.  I only wonder why they are not in System.Xml v2 ? Is there are any reasons why they are still hidden deeply inside BizTalk 2004 ?
+Probably I have to evangelize them a bit as I really like this idea.&lt;/p&gt;
+&lt;p&gt;Anyway, back to XSEReader. What I like in this approach is that it&apos;s streaming event based one (do I still miss SAX?). What I dislike is proprietary XPath-like patterns like &quot;:*&quot; (why not *.* ?), &quot;^kzu:*&quot;, XPath-like sugar like RootedPath(), RelativePath() etc. I think XPath is the way to go, no need to reinvent the wheel. Anyway, let&apos;s wait Daniel unveils all API and impl details.&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
+    <title>DevDays 2004 Israel</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000158.html" />
+    <modified>2004-02-10T16:40:06Z</modified>
+    <issued>2004-02-10T18:40:06+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.158</id>
+    <created>2004-02-10T16:40:06Z</created>
+    <summary type="text/plain">It&apos;s been Microsoft DevDays 2004 in Israel today. Well, DevDay actually. Here are the impressions I got there: One has to get up earlier to not miss the keynote. VS.NET has cool PocketPC emulator. Code Access Security is omnipotent. Lutz Roeder&apos;s .NET Reflector may hang out in the middle of...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>.NET</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;It&apos;s been Microsoft DevDays 2004 in Israel today. Well, DevDay actually. Here are the impressions I got there:
+&lt;ul&gt;
+&lt;li&gt;One has to get up earlier to not miss the keynote.&lt;/li&gt;
+&lt;li&gt;VS.NET has cool PocketPC emulator.&lt;/li&gt;
+&lt;li&gt;Code Access Security is omnipotent.&lt;/li&gt;
+&lt;li&gt;Lutz Roeder&apos;s &lt;a href=&quot;http://www.aisto.com/roeder/dotnet/&quot;&gt;.NET Reflector&lt;/a&gt; may hang out in the middle of a presentation.&lt;/li&gt;
+&lt;li&gt;WS-Security is great and &lt;a href=&quot;http://weblogs.asp.net/yosit/&quot;&gt;Yosi Taguri&lt;/a&gt; is bright speaker, but he scrolls code too fast.&lt;/li&gt;
+&lt;li&gt;Zero Deployment is amazingly simple.&lt;/li&gt;
+&lt;li&gt;They are really anxious about security nowadays. All attendants have been given &quot;&lt;a href=&quot;http://www.microsoft.com/mspress/books/5957.asp&quot;&gt;Writing Secure Code&lt;/a&gt;&quot; book for free. Aaah, bookworm&apos;s joy. &lt;i&gt;&quot;Required reading at Microsoft. - Bill Gates&quot;&lt;/i&gt; is written on the book&apos;s front page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+      
+    </content>
+  </entry>
+  <entry>
+    <title>On Making XML Namespaced On The Fly</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000157.html" />
+    <modified>2004-02-09T13:21:41Z</modified>
+    <issued>2004-02-09T15:21:41+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.157</id>
+    <created>2004-02-09T13:21:41Z</created>
+    <summary type="text/plain">This interesting trick has been discussed in microsoft.public.dotnet.xml newsgroup recently. When one has a no-namespaced XML document, such as &amp;lt;?xml version=&quot;1.0&quot;?&gt; &amp;lt;foo&gt; &amp;lt;bar&gt;Blah&amp;lt;/bar&gt; &amp;lt;/foo&gt; there is a trick in .NET, which allows to read such document as if it has some default namespace: &amp;lt;?xml version=&quot;1.0&quot;?&gt; &amp;lt;foo xmlns=&quot;http://foo.com&quot;&gt; &amp;lt;bar&gt;Blah&amp;lt;/bar&gt; &amp;lt;/foo&gt;...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>XML Tips and Tricks</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;This interesting trick has been discussed in &lt;a href=&quot;http://groups.google.com/groups?hl=en&amp;lr=&amp;ie=ISO-8859-1&amp;q=microsoft.public.dotnet.xml&amp;btnG=Google+Search&quot;&gt;microsoft.public.dotnet.xml&lt;/a&gt; newsgroup recently. When one has a no-namespaced XML document, such as
+&lt;pre&gt;&amp;lt;?xml version=&quot;1.0&quot;?&gt;
+&amp;lt;foo&gt;
+    &amp;lt;bar&gt;Blah&amp;lt;/bar&gt;    
+&amp;lt;/foo&gt;&lt;/pre&gt;
+there is a trick in .NET, which allows to read such document as if it has some default namespace:
+&lt;pre&gt;&amp;lt;?xml version=&quot;1.0&quot;?&gt;
+&amp;lt;foo xmlns=&quot;http://foo.com&quot;&gt;
+    &amp;lt;bar&gt;Blah&amp;lt;/bar&gt;    
+&amp;lt;/foo&gt;
+&lt;/pre&gt;
+&lt;/p&gt;
+
+
+      &lt;p&gt;Actually I have no idea when this could be useful, but people keep asking if this can be done (I presume they are neglecting namespaces in fact, but still I think there are real use cases for such functionality). And while it&apos;s probably not 100% clean architecturally, there is an effectieve and simple way. The crux is to read XML document not as standalone document, but as XML fragment, providing &lt;a href=&quot;http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemXmlXmlNamespaceManagerClassTopic.asp&quot;&gt;XmlNamespaceManager&lt;/a&gt; with default namespace set up. Here is the code:
+&lt;pre&gt;string xml = 
+@&quot;&amp;lt;?xml version=&quot;&quot;1.0&quot;&quot;?&gt;
+  &amp;lt;foo&gt;
+    &amp;lt;bar&gt;Blah&amp;lt;/bar&gt;    
+  &amp;lt;/foo&gt;&quot;;
+XmlNameTable nt = new NameTable();
+XmlNamespaceManager nsm = new XmlNamespaceManager(nt);
+nsm.AddNamespace(String.Empty, &quot;http://foo.com&quot;);
+XmlParserContext ctx = new XmlParserContext(nt, nsm, null, XmlSpace.Default);
+XmlTextReader r = new XmlTextReader(xml, XmlNodeType.Document, ctx);
+//Read it to XmlDocument to test
+XmlDocument doc = new XmlDocument();
+doc.Load(r);
+doc.Save(Console.Out);&lt;/pre&gt;
+
+The result is
+&lt;pre&gt;&amp;lt;?xml version=&quot;1.0&quot;?&gt;
+&amp;lt;foo xmlns=&quot;http://foo.com&quot;&gt;
+  &amp;lt;bar&gt;Blah&amp;lt;/bar&gt;
+&amp;lt;/foo&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;p&gt;I was quite surprised to see it works even when XML fragment type is XmlNodeType.Document, IMO it should work only for XmlNodeType.Element typed XML fragment. With XmlNodeType.Document it looks like inter-document namespace definition nonsense, but anyway, nice and effective trick.&lt;/p&gt;
+&lt;p&gt;Read more about &lt;a href=&quot;http://msdn.microsoft.com/library/en-us/cpguide/html/cpconreadingxmlfragmentswithxmltextreader.asp&quot;&gt;reading XML fragments with XmlTextReader&lt;/a&gt; in MSDN.&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
+    <title>XML Tips and Tricks. Conditional XPath expressions</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000156.html" />
+    <modified>2004-02-05T12:03:28Z</modified>
+    <issued>2004-02-05T14:03:28+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.156</id>
+    <created>2004-02-05T12:03:28Z</created>
+    <summary type="text/plain">I&apos;m introducing another category in my blog - XML Tips and Tricks, where I&apos;m going to post some XML, XPath, XSLT, XML Schema, XQuery etc tips and tricks. I know, many of my readers being real XML gurus know all this stuff (I encourage to correct me when I&apos;m wrong...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>XML Tips and Tricks</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;I&apos;m introducing another category in my blog - &lt;a href=&quot;http://www.tkachenko.com/blog/archives/cat_xml_tips_and_tricks.html&quot;&gt;XML Tips and Tricks&lt;/a&gt;, where I&apos;m going to post some XML, XPath, XSLT, XML Schema, XQuery etc tips and tricks. I know, many of my readers being real XML gurus know all this stuff (I encourage to correct me when I&apos;m wrong or proposing better versions though), but I hope it would be interesting for the rest and may attract  new readers.&lt;/p&gt;
+&lt;p&gt;Here is the first instalment - conditional XPath expressions.&lt;/p&gt;
+
+      &lt;p&gt;If you are like me and addicted to write &lt;pre&gt;return a&gt;b? a : b;&lt;/pre&gt; instead of
+&lt;pre&gt;if (a&gt;b)
+    return a;
+else
+    return b;&lt;/pre&gt;
+then you should be used to grumble programming in XSLT, because XPath 1.0 doesn&apos;t support conditional expressions (XPath 2.0 does though). The most notorious sample is when outputting a value into HTML table cell - you should assure it&apos;s not empty otherwise the cell will collapse into nothing in a browser. So one usually ends up with the following verbose pattern:
+&lt;pre&gt;
+&amp;lt;xsl:choose&gt;
+    &amp;lt;xsl:when test=&quot;price != &apos;&apos;&quot;&gt;
+        &amp;lt;xsl:value-of select=&quot;price&quot;/&gt;
+    &amp;lt;/xsl:when&gt;
+    &amp;lt;xsl:otherwise&gt;&amp;amp;#xA0;&amp;lt;/xsl:otherwise&gt;
+&amp;lt;/xsl:choose&gt;
+&lt;/pre&gt;
+Or when you need to output some value or &quot;n/a&quot; string if the value is empty. Quite common requirements.
+
+Things get even worse when you need to set up a variable conditionally - the only way then is to nest &lt;tt&gt;xsl:choose&lt;/tt&gt; switch within &lt;tt&gt;xsl:variable&lt;/tt&gt;, thus getting result tree fragment instead of nodeset.
+&lt;/p&gt;
+&lt;p&gt;But in fact there are tricks to address this XPath 1.0 restriction. Here they are. &lt;/p&gt;
+&lt;p&gt;For conditional nodesets the trick formula is&lt;br/&gt; &lt;b&gt;$nodeset1[$condition] | $nodeset2[not($condition)]&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;It&apos;s an union of both nodesets, filtered by mutually exclusive conditional expressions. Easy to see than depending on boolean value of the $condition one nodeset will be selected and second one filtered out. E.g. &lt;pre&gt;&amp;lt;xsl:variable name=&quot;var&quot; select=&quot;//foo[$param] | //bar[not($param)]&quot;/&gt;&lt;/pre&gt; binds $var to //foo if $param is true and to //bar otherwise.&lt;/p&gt;
+&lt;p&gt;For conditional strings or numbers the trick formula is more complicted:&lt;br/&gt; 
+&lt;b&gt;concat( substring($s1, number(not($condition))*string-length($s1)+1),&lt;br/&gt; 
+&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;substring($s2, number($condition)*string-length($s2)+1) )&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;While it looks quite convolute, the idea (Becker&apos;s method after &lt;a href=&quot;http://www.informatik.hu-berlin.de/~obecker/XSLT/&quot;&gt;Oliver Becker&lt;/a&gt;) is simple - in XPath &lt;tt&gt;number(true())&lt;/tt&gt; is 1, while &lt;tt&gt;number(false())&lt;/tt&gt; is 0 and when second argument of substring() function is greater than actual length of the string, empty string is returned. Hence &lt;tt&gt;substring($s1, number(not($condition))*string-length($s1)+1)&lt;/tt&gt; returns $s1 if $condition is true and empty string otherwise. Concatenating two such expressions in mutually exclusive way gives us conditional strings expression.&lt;br/&gt;
+There is also another variant:&lt;br/&gt;
+&lt;b&gt;concat( substring($s1, 1, number($condition)*string-length($s1)),&lt;br/&gt; 
+&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;substring($s2, 1, number(not($condition))*string-length($s2)) )&lt;/b&gt;
+&lt;/p&gt;&lt;p&gt;In practice such expressions can be great deal simplified though. For instance to output price if it&apos;s not empty or &quot;n/a&quot; otherwise one can use just &lt;pre&gt;&amp;lt;xsl:value-of select=&quot;concat(price, 
+&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;substring(&apos;n/a&apos;, (price!=&apos;&apos;)*string-length(&apos;n/a&apos;)+1))&quot;/&gt;&lt;/pre&gt;&lt;/p&gt;
+&lt;p&gt;Another interesting trick is to leverage the ability of msxsl:node-set() (or exslt:node-set) extension function to convert a string into a text node, thus enabling using aforementioned conditional nodeset trick for strings too. Here is the same sample written using this method:
+&lt;pre&gt;&amp;lt;xsl:value-of select=&quot;concat(price, 
+&amp;#160;&amp;#160;&amp;#160;&amp;#160;&amp;#160;msxsl:node-set(&apos;n/a&apos;)[current()/price=&apos;&apos;])&quot;/&gt;&lt;/pre&gt;
+Well, probably enough. Hope you had fun looking at this clumsy XPath tricks. Remember than it&apos;s the very first version of the XPath language after all and XPath 2.0 will make these tricks obsolete bringing in support for &lt;a href=&quot;http://www.w3.org/TR/xpath20/#id-conditionals&quot;&gt;conditional expressions&lt;/a&gt;, such as 
+&lt;pre&gt;&amp;lt;xsl:value-of select=&quot;if ($part/@discounted) 
+  then $part/wholesale 
+  else $part/retail&quot;/&gt;&lt;/pre&gt; Till then it&apos;s good to know these tricks.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;p&gt;Quote of the day:
+&lt;blockquote&gt;Is it possible to transform a XML document to another XML document using XSLT? How?&lt;/blockquote&gt; :)&lt;/p&gt;
+    </content>
+  </entry>
+  <entry>
+    <title>XML Bestiary: WritableXPathNavigator - InnerXml/OuterXml for XPathNavigator</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000155.html" />
+    <modified>2004-02-04T19:40:34Z</modified>
+    <issued>2004-02-04T21:40:34+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.155</id>
+    <created>2004-02-04T19:40:34Z</created>
+    <summary type="text/plain">Dare has been talking recently about the disconnects developers may feel once they make the shift from tree based (XmlDocument) to cursor based (XPathNavigator) model. My personal XML learning curve has started with DOM (I remember those long convolute ugly DOM navigational programs I wrote back in Y2K), then I...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>XML in .NET</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;&lt;a href=&quot;http://www.25hoursaday.com/weblog&quot;&gt;Dare&lt;/a&gt; has been talking recently about &lt;a href=&quot;http://www.25hoursaday.com/weblog/PermaLink.aspx?guid=05975936-0658-4193-ac26-5dbd97a4ca1c&quot;&gt;the disconnects developers may feel once they make the shift&lt;/a&gt; from tree based (XmlDocument) to cursor based (XPathNavigator) model. My personal XML learning curve has started with DOM (I remember those long convolute ugly DOM navigational programs I wrote back in Y2K), then I fell in love with SAX and only then I became XmlReader and XPathNavigator fan. But despite the fact I&apos;m probably not an average developer (as I spend most of my time dealing exclusively with XML) I can feel the disconnect too. DOM is kinda ground zero for many of us and not feeling it underfoot is a bit like flying in zero-gravity. Hurts at first, but fun and cool once you get used to it. I think that&apos;s not by accident DOM implemenation in .NET has been named XmlDocument, that reflected some basic attitude at that time, although some of us believe now &lt;a href=&quot;http://www.25hoursaday.com/weblog/PermaLink.aspx?guid=933d194b-1c5c-4a49-b325-56575ce2662c&quot;&gt;DOMDocument was a better name&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Anyway, here is my small humble contribution to XPathNavigator appreciation - WritableXPathNavigator. Well, I know, the name is confusing. It&apos;s not editable XPathNavigator, like we&apos;ll have in .NET 2.0, it&apos;s XPathNavigator, which itself can be written out. It&apos;s really small wrapper around XPathNavigator, which extends it adding InnerXml/OuterXml properties and WriteTo()/WriteContentTo() methods. That&apos;s unfortunate omission XPathNavigator doesn&apos;t have such fuctionality in .NET 1.0/1.1 and this fact adds some degree to the discronnect devs feel, because devs do like OuterXml and use it frequently. It&apos;s fixed in .NET 2.0, but till then I propose this implementation.&lt;/p&gt;
+&lt;p&gt;Here is &lt;a href=&quot;http://www.tkachenko.com/dotnet/files/WritableXPathNavigator.zip&quot;&gt;local copy&lt;/a&gt; and &lt;a href=&quot;http://www.gotdotnet.com/Community/UserSamples/Details.aspx?SampleGuid=33193951-538B-4C6B-92CE-17F38B044C6A&quot;&gt;here is&lt;/a&gt; GotDotNet&apos;s copy. Free and open source of course.&lt;/p&gt;
+&lt;p&gt;Usage pattern:
+&lt;pre&gt;XPathDocument doc = new XPathDocument(&quot;books.xml&quot;);
+XPathNavigator nav = doc.CreateNavigator();
+XPathNodeIterator ni = nav.Select(&quot;/catalog/book[title=&apos;Creepy Crawlies&apos;]&quot;);
+ni.MoveNext();
+&lt;b&gt;WritableXPathNavigator wnav = new WritableXPathNavigator(ni.Current);&lt;/b&gt;
+Console.WriteLine(&lt;b&gt;wnav.OuterXml&lt;/b&gt;); 
+Console.WriteLine(&lt;b&gt;wnav.InnerXml&lt;/b&gt;); 
+&lt;/pre&gt;
+&lt;/p&gt;
+&lt;p&gt;Couple of details - WritableXPathNavigator is XPathNavigator itself, which wraps another XPathNavigator and exposes the following additional members:&lt;br/&gt;
+&lt;b&gt;OuterXml&lt;/b&gt; - gets the XML markup representing the current node and all its child nodes.&lt;br/&gt;
+&lt;b&gt;InnerXml&lt;/b&gt; - gets the XML markup representing only the child nodes of the current node.&lt;br/&gt;
+&lt;b&gt;WriteTo(XmlWriter)&lt;/b&gt; - saves the current node to the specified XmlWriter.&lt;br/&gt;
+&lt;b&gt;WriteContentTo(XmlWriter)&lt;/b&gt; - saves all the child nodes of the current node to the specified XmlWriter.&lt;br/&gt;
+Implementation details - see sources.
+&lt;/p&gt;
+&lt;p&gt;Hope you can find it useful. As usual I appreciate any comments/bugs/critics.&lt;/p&gt;
+      
+    </content>
+  </entry>
+  <entry>
+    <title>I love XmlResolvers</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000154.html" />
+    <modified>2004-02-03T13:10:53Z</modified>
+    <issued>2004-02-03T15:10:53+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.154</id>
+    <created>2004-02-03T13:10:53Z</created>
+    <summary type="text/plain">Did you know XslTransform class allows custom XmlResolver to return not only Stream (it&apos;s only what default XmlResolver implementation - XmlUrlResolver class supports), but also XPathNavigator! Sounds like undeservedly undocumented feature. What it gives us? Really efficient advanced XML resolving scenarios such as just mentioned recently on asp.net XML forum...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>XML in .NET</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;Did you know &lt;a href=&quot;http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemXmlXslXslTransformClassTopic.asp&quot;&gt;XslTransform&lt;/a&gt; class allows custom &lt;a href=&quot;http://msdn.microsoft.com/library/en-us/cpref/html/frlrfsystemxmlxmlresolverclasstopic.asp&quot;&gt;XmlResolver&lt;/a&gt; to return not only Stream (it&apos;s only what default XmlResolver implementation - &lt;a href=&quot;http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfSystemXmlXmlUrlResolverClassTopic.asp&quot;&gt;XmlUrlResolver&lt;/a&gt; class supports), but also &lt;a href=&quot;http://msdn.microsoft.com/library/en-us/cpref/html/frlrfsystemxmlxpathxpathnavigatorclasstopic.asp&quot;&gt;XPathNavigator&lt;/a&gt;! Sounds like undeservedly undocumented feature. What it gives us? Really efficient advanced XML resolving scenarios such as just mentioned recently on &lt;a href=&quot;http://www.asp.net/Forums/ShowForum.aspx?tabindex=1&amp;ForumID=43&quot;&gt;asp.net XML forum&lt;/a&gt; - &lt;a href=&quot;http://www.asp.net/Forums/ShowPost.aspx?tabindex=1&amp;PostID=460145&quot;&gt;getting access to XML fragments from within XSLT&lt;/a&gt;. Or looking up for cached in-memory XML documents. Or constructing XML documents on the fly for XSLT, e.g. via accessing SQL Server database from within XSLT stylesheet and processing the result.  Well, part of it could be done also with &lt;a href=&quot;http://msdn.microsoft.com/library/en-us/cpref/html/frlrfsystemxmlxslxsltargumentlistclasstopic.asp&quot;&gt;XSLT parameters and extension functions&lt;/a&gt;, but XmlResolver is more powerful, flexible and elegant approach.&lt;/p&gt;
+&lt;p&gt;Here is a sample XmlFragmentResolver, which allows XSLT to get access to external XML fragments (XML fragment aka &lt;a href=&quot;http://www.w3.org/TR/2000/REC-xml-20001006#wf-entities&quot;&gt;external general parsed entity&lt;/a&gt; is well-formed XML with more than one root elements):
+&lt;pre&gt;
+public class XmlFragmentResolver : XmlUrlResolver
+{
+  override public object GetEntity(Uri absoluteUri, string role, 
+    Type ofObjectToReturn)
+  {    
+    using (FileStream fs = File.OpenRead(absoluteUri.AbsolutePath))
+    {
+      XmlTextReader r = new XmlTextReader(fs, 
+          XmlNodeType.Element, null);
+      XPathDocument doc = new XPathDocument(r);
+      return doc.CreateNavigator();
+    }
+  }
+}&lt;/pre&gt;
+
+Don&apos;t forget to pass its instance to Transform() method (in .NET 1.0 - set it to &lt;a href=&quot;http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfsystemxmlxslxsltransformclasstransformtopic18.asp&quot;&gt;XslTransform.XmlResolver&lt;/a&gt; property):
+&lt;pre&gt;xslt.Transform(doc, null, Console.Out, new XmlFragmentResolver());&lt;/pre&gt;
+And here is how then you can access XML fragments from within XSLT:
+&lt;pre&gt;&amp;lt;xsl:apply-templates select=&quot;document(&apos;d:/temp/fragment.xml&apos;)/*&quot;/&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;p&gt;Note, that instead you can load XML fragment and pass it as a parameter, but then you should know statically in advance all XML fragments/documents XSLT would ever require. XmlResolver approach allows XSLT to take over and access external documents or fragments really dynamically, e.g. when a file name cannot be known prior to the transformation.&lt;/p&gt;
+      
+    </content>
+  </entry>
+  <entry>
+    <title>On transforming WordML to HTML again</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000153.html" />
+    <modified>2004-02-03T09:06:17Z</modified>
+    <issued>2004-02-03T11:06:17+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.153</id>
+    <created>2004-02-03T09:06:17Z</created>
+    <summary type="text/plain">One of consequences of the revolutionary XML support in Microsoft Office 2003 is a possibility to unlock information in the Microsoft Office System using XML. Most likely that was deliberate decision to open Office doors for XML technology and I&apos;m sure that&apos;s winning strategy. Talking about transforming WordprocessingML (WordML) to...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>Office</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;One of consequences of the revolutionary XML support in Microsoft Office 2003 is a possibility to 
+&lt;a href=&quot;http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dno2k3ta/html/odc_unlock.asp&quot;&gt;unlock information in the Microsoft Office System using XML&lt;/a&gt;. Most likely that was deliberate decision to open Office doors for XML technology and I&apos;m sure that&apos;s winning strategy.&lt;/p&gt;
+&lt;p&gt;Talking about transforming &lt;a href=&quot;http://rep.oio.dk/Microsoft.com/officeschemas/wordprocessingml_article.htm&quot;&gt;WordprocessingML (WordML)&lt;/a&gt; to HTML, what&apos;s the state of the art nowadays? &lt;br/&gt;There are two related activities I&apos;m aware of, both Microsoft rooted. First, it&apos;s &quot;&lt;a href=&quot;http://www.microsoft.com/downloads/details.aspx?FamilyId=D5DCF263-8E19-4054-B599-70371B6CC2B4&amp;displaylang=en&quot;&gt;WordML to HTML XSL Transformation&lt;/a&gt;&quot; XSLT stylesheet available for download at &lt;a href=&quot;http://www.microsoft.com/downloads/search.aspx?displaylang=en&quot;&gt;Microsoft Download Center&lt;/a&gt;. It&apos;s huge while well documented while unsupported beta XSLT stylesheet, which transforms Word 2003 Beta 2 XML documents to HTML. Its final release, which will also support images is expected, but who knows when?&lt;br/&gt;Second, &lt;a href=&quot;http://www.gotdotnet.com/team/dbox&quot;&gt;Don Box&lt;/a&gt; is &lt;a href=&quot;http://www.gotdotnet.com/team/dbox/default.aspx?key=2004-01-11T01:23:38Z&quot;&gt;experimenting&lt;/a&gt; with Wordml2XHTML+CSS transformation, mostly for the sake of his blogging workflow. He said his stylesheet  is better (less global variables etc.). Apparently Don didn&apos;t finish it yet, so the stylesheet isn&apos;t available.
+&lt;/p&gt;
+&lt;p&gt;So one stylesheet is only for Word 2003 Beta 2 documents, second isn&apos;t ready yet, sounds bad, huh? Here is my temporary solution - original &quot;WordML Beta 2 to HTML XSL Transformation&quot; stylesheet fixed by me to support Word 2003 RTM XML documents. As usually with Microsoft stuff, &quot;beta&quot; most likely is 99% RTM version. So I fixed Beta 2 stylesheet a bit and it just works. In fact that&apos;s only namespaces that I fixed yet. I&apos;m currently testing the stylesheet with big real documents, so chances are I&apos;ll need to modify it further.
+&lt;/p&gt;&lt;p&gt;Download version 1.0 of the stylesheet here - &lt;a href=&quot;http://www.tkachenko.com/dotnet/files/Word2HTML-1.0.zip&quot;&gt;Word2HTML-1.0.zip&lt;/a&gt;. Credits due to Microsoft and personally to whoever developed the stylesheet. Any bug reports or comments are appreciated. Just post comment to this text.
+&lt;/p&gt;&lt;p&gt;
+Another idea is to implement support for images. Basically the idea is to decode images and save them as external files in XSLT external function and I don&apos;t see how to make it in portable way, so most likely I&apos;ll end up soon with two stylesheet versions - for MSXML and .NET. Stay tuned.&lt;/p&gt;
+      
+    </content>
+  </entry>
+  <entry>
+    <title>MovableType 3.0 Alpha soon</title>
+    <link rel="alternate" type="text/html" href="http://www.tkachenko.com/blog/archives/000152.html" />
+    <modified>2004-02-01T13:18:10Z</modified>
+    <issued>2004-02-01T15:18:10+02:00</issued>
+    <id>tag:www.tkachenko.com,2004:/blog//1.152</id>
+    <created>2004-02-01T13:18:10Z</created>
+    <summary type="text/plain">Six Apart has announced MovableType 3.0 Alpha testing is about to begin. Testers such as plugin developers, web standards advocates or just Movable Type users with an active commenting community are invited. Here is a list of upcoming MT 3.0 features. I keep getting 5-10 spam comments a day, so...</summary>
+    <author>
+      <name>Oleg Tkachenko</name>
+      <url>http://www.tkachenko.com</url>
+      <email>oleg@tkachenko.com</email>
+    </author>
+    <dc:subject>Blogging</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.tkachenko.com/blog/">
+      &lt;p&gt;&lt;a href=&quot;http://www.sixapart.com/&quot;&gt;Six Apart&lt;/a&gt; has announced &lt;a href=&quot;http://www.movabletype.org/news/2004_01.shtml#000885&quot;&gt;MovableType 3.0 Alpha testing&lt;/a&gt; is about to begin. Testers such as plugin developers, web standards advocates or just Movable Type users with an active commenting community are invited. &lt;a href=&quot;http://www.movabletype.org/news/2003_12.shtml#000878&quot;&gt;Here is&lt;/a&gt; a list of upcoming MT 3.0 features.&lt;br/&gt;
+I keep getting 5-10 spam comments a day, so sure I&apos;d like to test comment registration system. &lt;/p&gt;
+      
+    </content>
+  </entry>
+
+</feed>

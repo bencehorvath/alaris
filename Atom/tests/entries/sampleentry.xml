@@ -1,0 +1,11 @@
+<entry xml:lang="en-us">
+<title>The title of the entry.</title>
+<link rel="alternate" type="text/html" href="http://www.w3.org/" title="The title of the link." />
+<contributor>
+<name>Uncle Bob</name><url>http://people.w3.org/</url><email>foo@bar.com</email></contributor>
+<id>http://localhost/foo/id</id><modified>2004-02-12T17:43:22+01:00</modified>
+<issued>2004-02-12T17:43:22+01:00</issued>
+<created>2004-02-12T17:43:22+01:00</created>
+<summary>The summary of the entry.</summary>
+<content>The content of the entry.</content>
+</entry>

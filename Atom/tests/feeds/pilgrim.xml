@@ -1,0 +1,86 @@
+<feed xmlns="http://purl.org/atom/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" version="0.3" xml:base="http://diveintomark.org/" xml:lang="en">
+<title>dive into mark</title>
+<tagline>the best of all possible worlds</tagline>
+<link href="/" rel="alternate" type="text/html"></link>
+<link href="/xml/comments.xml" rel="comments" title="Recent comments" type="application/atom+xml"></link>
+<modified>2004-07-07T01:10:54Z</modified>
+<id>tag:diveintomark.org,2001-07-29:/</id>
+<copyright>Copyright 2001-2004, Mark Pilgrim, all rights reserved</copyright>
+<generator url="http://wordpress.org/" version="1.2">WordPress</generator>
+<entry>
+<author>
+<name>Mark Pilgrim</name>
+</author>
+<title>XML is tough</title>
+<link href="http://diveintomark.org/archives/2004/07/06/tough" rel="alternate" type="text/html"></link>
+<id>tag:diveintomark.org,2004-07-07:/archives/20040707011054</id>
+<issued>2004-07-07T01:10:54Z</issued>
+<created>2004-07-07T01:10:54Z</created>
+<modified>2004-07-07T01:10:54Z</modified>
+
+	<dc:subject>Those that tremble as if they were mad</dc:subject>
+<summary>You know what I want for Christmas?  Markup Barbie.  You pull a string and she says "XML is tough."  (168 words)</summary>
+<content mode="escaped" type="text/html" xml:base="http://diveintomark.org/archives/2004/07/06/tough">	&lt;p&gt;Tim Bray is learning Python and &lt;a href="http://tbray.org/ongoing/When/200x/2004/07/06/LastFirst"&gt;using my feed parser&lt;/a&gt; to parse the feeds at &lt;a href="http://planetsun.org/"&gt;Planet Sun&lt;/a&gt;.  I am suitably flattered, and I sincerely hope that one of the 57 lines in Tim&amp;#8217;s first Python program checks the &lt;a href="http://feedparser.org/docs/bozo.html"&gt;bozo bit&lt;/a&gt; so Tim can ignore the 13 Planet Sun feeds which are not well-formed XML.&lt;/p&gt;
+	&lt;p&gt;One is &lt;a href="http://www.geoffarnold.com/index.rdf"&gt;served as &lt;code&gt;text/plain&lt;/code&gt;&lt;/a&gt;, which means it can never be well-formed.&lt;/p&gt;
+	&lt;p&gt;Two (&lt;a href="http://blogs.sun.com/roller/rss/hcc"&gt;a&lt;/a&gt;, &lt;a href="http://blogs.sun.com/roller/rss/rgwk"&gt;b&lt;/a&gt;) contain invalid XML characters.&lt;/p&gt;
+	&lt;p&gt;Ten (&lt;a href="http://blog.glen-martin.com/rss/default.rss"&gt;1&lt;/a&gt;, &lt;a href="http://blogs.sun.com/roller/rss/Askar"&gt;2&lt;/a&gt;, &lt;a href="http://blogs.sun.com/roller/rss/csj"&gt;3&lt;/a&gt;, &lt;a href="http://blogs.sun.com/roller/rss/Herby"&gt;4&lt;/a&gt;, &lt;a href="http://blogs.sun.com/roller/rss/nob"&gt;5&lt;/a&gt;, &lt;a href="http://blogs.sun.com/roller/rss/shilei"&gt;6&lt;/a&gt;, &lt;a href="http://blogs.sun.com/roller/rss/takka"&gt;7&lt;/a&gt;, &lt;a href="http://www.chanezon.com/pat/weblog/index.rdf"&gt;8&lt;/a&gt;, &lt;a href="http://www.gnome.org/~calum/?flav=rss"&gt;9&lt;/a&gt;, &lt;a href="http://norman.walsh.name/atom/whatsnew.xml"&gt;10&lt;/a&gt;) are served as &lt;code&gt;text/xml&lt;/code&gt; with no &lt;code&gt;charset&lt;/code&gt; parameter.  Clients are &lt;a href="http://diveintomark.org/archives/2004/02/13/xml-media-types"&gt;required to parse such feeds as &lt;code&gt;us-ascii&lt;/code&gt;&lt;/a&gt;, but the feeds contain non-ASCII characters and are therefore not well-formed XML.&lt;/p&gt;
+	&lt;p&gt;On a positive note, it&amp;#8217;s nice to see that Norman Walsh has an Atom feed (#10 in that list).  Pity it&amp;#8217;s not well-formed.  I&amp;#8217;m sure he&amp;#8217;ll fix that in short order.  He&amp;#8217;s no bozo.&lt;/p&gt;
+	&lt;p&gt;You know what I want for Christmas?  Markup Barbie.  You pull a string and she says &amp;#8220;XML is tough.&amp;#8221;&lt;/p&gt;
+</content>
+</entry>
+<entry>
+<author>
+<name>Mark Pilgrim</name>
+</author>
+<title>Unicode Normalization Form C</title>
+<link href="http://diveintomark.org/archives/2004/07/06/nfc" rel="alternate" type="text/html"></link>
+<id>tag:diveintomark.org,2004-07-06:/archives/20040706140312</id>
+<issued>2004-07-06T14:03:12Z</issued>
+<created>2004-07-06T14:03:12Z</created>
+<modified>2004-07-06T14:17:44Z</modified>
+
+	<dc:subject>Those that tremble as if they were mad</dc:subject>
+<summary>With apologies to Emo Philips.  (155 words)</summary>
+<content mode="escaped" type="text/html" xml:base="http://diveintomark.org/archives/2004/07/06/nfc">	&lt;p&gt;I was walking across a bridge one day, and I saw a man standing on the edge, about to jump off.  So I ran over and said, &amp;#8220;Stop!  Don&amp;#8217;t do it!&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;&amp;#8220;I can&amp;#8217;t help it,&amp;#8221; he cried.  &amp;#8220;I&amp;#8217;ve lost my will to live.&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;&amp;#8220;What do you do for a living?&amp;#8221; I asked.&lt;/p&gt;
+	&lt;p&gt;He said, &amp;#8220;I create web services specifications.&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;&amp;#8220;Me too!&amp;#8221; I said.  &amp;#8220;Do you use REST web services or SOAP web services?&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;He said, &amp;#8220;REST web services.&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;&amp;#8220;Me too!&amp;#8221; I said.  &amp;#8220;Do you use text-based XML or binary XML?&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;He said, &amp;#8220;Text-based XML.&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;&amp;#8220;Me too!&amp;#8221; I said.  &amp;#8220;Do you use XML 1.0 or XML 1.1?&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;He said, &amp;#8220;XML 1.0.&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;&amp;#8220;Me too!&amp;#8221; I said.  &amp;#8220;Do you use UTF-8 or UTF-16?&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;He said, &amp;#8220;UTF-8.&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;&amp;#8220;Me too!&amp;#8221; I said.  &amp;#8220;Do you use Unicode Normalization Form C or Unicode Normalization Form KC?&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;He said, &amp;#8220;Unicode Normalization Form KC.&amp;#8221;&lt;/p&gt;
+	&lt;p&gt;&amp;#8220;Die, heretic scum!&amp;#8221; I shouted, and I pushed him over the edge.&lt;/p&gt;
+	&lt;p class="attribution"&gt;(with apologies to Emo Philips)&lt;/p&gt;
+</content>
+</entry>
+<entry>
+<author>
+<name>Mark Pilgrim</name>
+</author>
+<title>Universal Feed Parser 3.2</title>
+<link href="http://diveintomark.org/archives/2004/07/03/feed-parser-32" rel="alternate" type="text/html"></link>
+<id>tag:diveintomark.org,2004-07-04:/archives/20040704015738</id>
+<issued>2004-07-04T01:57:38Z</issued>
+<created>2004-07-04T01:57:38Z</created>
+<modified>2004-07-04T02:03:48Z</modified>
+
+	<dc:subject>Python</dc:subject>
+<summary>Have you ever wanted to parse an ill-formed CDF feed encoded as UTF-32 Little Endian with a Byte Order Mark?  Universal Feed Parser can do that.  (601 words)</summary>
+<content mode="escaped" type="text/html" xml:base="http://diveintomark.org/archives/2004/07/03/feed-parser-32">	&lt;p&gt;&lt;a href="http://feedparser.org/"&gt;Universal Feed Parser&lt;/a&gt; 3.2 is out.  You can &lt;a href="http://sourceforge.net/project/showfiles.php?group_id=112328&amp;amp;package_id=121603&amp;amp;release_id=250514"&gt;download it at SourceForge&lt;/a&gt;.&lt;/p&gt;
+	&lt;p&gt;The main new feature in version 3.2 is completely revamped handling of character encoding.  Previous versions relied on an odd combination of &amp;#8220;do it in Python&amp;#8221; and &amp;#8220;let the XML parser handle it.&amp;#8221;  This version does everything in Python, then converts the feed to UTF-8 before handing it off to the XML parser.  Every XML parser on Earth supports UTF-8.&lt;/p&gt;
+	&lt;p&gt;When I say &amp;#8220;do it in Python,&amp;#8221; I don&amp;#8217;t mean actual Python code.  Python has a surprisingly sane API for handling the insanity that is character encoding, and this makes it easy for third-party libraries to extend Python&amp;#8217;s built-in &lt;tt&gt;encodings&lt;/tt&gt; module to support additional encodings.  One such module, &lt;a href="http://cjkpython.i18n.org/"&gt;CJKCodecs&lt;/a&gt;, adds support for Chinese, Japanese, and Korean encodings.  CJKCodeces will be part of Python 2.4, but it is also downloadable for Python 2.1 and above.  Another module, &lt;a href="http://cjkpython.i18n.org/"&gt;iconv_codec&lt;/a&gt;, is a Python wrapper for the marvelous &lt;a href="http://www.gnu.org/software/libiconv/"&gt;libiconv&lt;/a&gt;, which supports several hundred encodings.  Both are highly recommended, and Universal Feed Parser will use both if available.&lt;/p&gt;
+	&lt;p&gt;Of course, nothing is ever as simple as it sounds.  In rare cases, the character encoding of the feed is explicitly specified in the &lt;tt&gt;charset&lt;/tt&gt; parameter of the &lt;tt&gt;Content-type&lt;/tt&gt; HTTP header.  But in most cases, you need to look at &lt;tt&gt;encoding&lt;/tt&gt; attribute in the XML declaration in the first line of the feed.&lt;/p&gt;
+	&lt;p&gt;Previous versions of Universal Feed Parser naively used a regular expression on the raw byte stream to find the &lt;tt&gt;encoding&lt;/tt&gt; attribute.  This works most of the time, since many character encodings are compatible with the ASCII encoding for ASCII characters.  (All the non-ASCII characters are encoded in the upper 128 characters of a byte, or in multi-byte sequences.)  However, this assumption fails for multi-byte encodings, such as UTF-16 and UTF-32.  It also fails for non-ASCII-compatible encodings, such as EBCDIC.&lt;/p&gt;
+	&lt;p&gt;&lt;a href="http://www.w3.org/TR/REC-xml/#sec-guessing-no-ext-info"&gt;Section F of the XML specification&lt;/a&gt; provides a heuristic for determining whether an XML document is in a non-ASCII-compatible encoding, and which one.  The heuristic is actually divided into two parts, because all XML documents are allowed to start with something called a Byte Order Mark (BOM), which is a specific Unicode character (U+FEFF) that looks different depending on the encoding and the byte order used in the document.  (&lt;a href="http://www.unicode.org/unicode/faq/utf_bom.html#BOM"&gt;BOM FAQ&lt;/a&gt;)  So one part of the heuristic deals with XML documents with a BOM, and the other part deals with XML without a BOM, but with an XML declaration.  It turns out that the first 4 characters &lt;tt&gt;&amp;lt;?xm&lt;/tt&gt; look different in every character encoding too.&lt;/p&gt;
+	&lt;p&gt;I am pleased to announce that Universal Feed Parser now supports both parts of this heuristic.  It can reliably detect and parse any feed encoded as UTF-32BE, UTF-32BE+BOM, UTF-32LE, UTF-32LE+BOM, UTF-16BE, UTF-16BE+BOM, UTF-16BE, UTF-16BE+BOM, UTF-8+BOM, or UTF-8.  There are &lt;a href="http://feedparser.org/tests/wellformed/encoding/"&gt;several new tests&lt;/a&gt; to confirm this.&lt;/p&gt;
+	&lt;p&gt;Also EBCDIC.  Did I mention it now supports EBCDIC?  I&amp;#8217;ve totally sold out to the BigCos.  As an adjunct to JWZ&amp;#8217;s Law of Computer Envelopment ("every program attempts to expand until it can read mail"), I declare that every aggregator attempts to expand until it can read EBCDIC.  You can use &lt;a href="http://feedparser.org/tests/wellformed/encoding/x80_ebcdic-cp-us.xml"&gt;this test case&lt;/a&gt; to track your aggregator&amp;#8217;s progress.&lt;/p&gt;
+	&lt;p&gt;As a bonus, since the entire character encoding determination is finished before the feed is handed off to a real XML parser, it works just as well for non-well-formed feeds.  Have you ever wanted to parse an ill-formed CDF feed encoded as UTF-32 Little Endian with a Byte Order Mark?  Universal Feed Parser can do that.&lt;/p&gt;
+</content>
+</entry>
+</feed>

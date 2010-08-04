@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_alaris_1_1_irc_1_1_connection.html" title="This class manages the connection to the IRC server and provides access to all the..." alt="" coords="341,173,493,203"/>
+<area shape="rect" id="node4" href="$class_alaris_1_1_irc_1_1_ctcp_responder.html" title="A class which automatically responds to CTCP queries. The replies it sends are configurable..." alt="" coords="649,80,825,109"/>
+<area shape="rect" id="node11" href="$class_alaris_1_1_irc_1_1_ctcp_listener.html" title="This class is used to send CTCP specific events. Once registered with this object..." alt="" coords="657,167,817,196"/>
+<area shape="rect" id="node18" href="$class_alaris_1_1_irc_1_1_command_builder.html" title="CommandBuilder provides the support methods needed by its subclasses to build correctly..." alt="" coords="643,304,832,333"/>
+<area shape="rect" id="node7" href="$class_alaris_1_1_irc_1_1_listener.html" title="This class parses messages received from the IRC server and raises the appropriate..." alt="" coords="33,120,164,149"/>
+<area shape="rect" id="node9" href="$class_alaris_1_1_irc_1_1_server_properties.html" title="Encapsulates the collection of properties sent by the IRC server after registration..." alt="" coords="5,173,192,203"/>
+<area shape="rect" id="node14" href="$struct_alaris_1_1_irc_1_1_connection_args.html" title="A collection of parameters necessary to establish an IRC connection." alt="" coords="8,227,189,256"/>
+<area shape="rect" id="node16" href="$class_alaris_1_1_irc_1_1_ctcp_sender.html" title="This class allows the client to send CTCP commands. There is no limit on what commands..." alt="" coords="888,265,1043,295"/>
+<area shape="rect" id="node21" href="$class_alaris_1_1_irc_1_1_sender.html" title="This class is used to send all the IRC commands except for CTCP and DCC messages..." alt="" coords="903,332,1028,361"/>
+</map>

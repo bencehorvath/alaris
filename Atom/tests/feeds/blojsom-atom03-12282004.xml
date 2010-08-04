@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="http://www.blojsom.com/atom.css" type="text/css"?>
+
+<feed version="0.3"
+    xmlns="http://purl.org/atom/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xml:lang="en">
+
+    <!-- required feed elements -->
+    <title>Bedeviled Mojo Slop</title>
+    <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/"/>
+    <modified>2003-12-25T16:08:43Z</modified>
+
+    <!-- optional feed elements -->
+    <info type="application/xhtml+xml" mode="xml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+        This is an Atom syndication feed. It is intended to be viewed in a news aggregator or syndicated to
+        another site.  Please visit the <a href="http://intertwingly.net/wiki/pie/">Atom Project</a> for
+        more information.
+        </div>
+    </info>
+
+    <!-- in a single-author feed (like an individual weblog), put author at the feed level;
+    in a multi-author feed (like a group weblog or a comments feed), put author at the entry level -->
+    <author>
+        <!-- required author elements -->
+        <name>David A. Czarnecki</name>
+        <!-- optional author elements -->
+        <url>http://www.blojsom.com/blog/</url>
+        <email>czarneckid@users.sourceforge.net</email>
+    </author>
+
+    <!-- optional feed elements -->
+    <tagline>If you have to ask, you don't want to know!</tagline>
+    <generator url="http://blojsom.sf.net" version="blojsom v2.07">blojsom</generator>
+    <copyright>Copyright (c) 2003 David A. Czarnecki</copyright>
+
+        <entry>
+        <!-- required entry elements -->
+        <title>FUH2</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/moblog/?permalink=8c78497e60992a6ea2e2299a1c57fd65.txt"/>
+        <modified>2003-12-25T16:08:43Z</modified>
+        <issued>2003-12-25T16:08:43-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-25:moblog/.8c78497e60992a6ea2e2299a1c57fd65.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-25T16:08:43Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[
+
+
+
+This message was sent using Picture Messaging from Verizon Wireless! To learn how you can snap and send pictures with your wireless phone visit http://www.verizonwireless.com/getitnow/pixmessaging.
+
+<p /><img src="http://www.blojsom.com/images/david/moblog/6b4725c02a6a9adf8dbca1559484efbb.jpg" border="0" />
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>I am evil!</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/playground/?permalink=B349DF26BB38C82F4EC946F5CDBE5CDB.txt"/>
+        <modified>2003-12-23T19:49:11Z</modified>
+        <issued>2003-12-23T19:49:11-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-23:playground/.B349DF26BB38C82F4EC946F5CDBE5CDB.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-23T19:49:11Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ Hear me roar :)
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>IntelliJ Aurora, build 1024 available</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/java/?permalink=6921896CC26869E7B6C1505A3AF6170A.txt"/>
+        <modified>2003-12-23T19:38:38Z</modified>
+        <issued>2003-12-23T19:38:38-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-23:java/.6921896CC26869E7B6C1505A3AF6170A.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-23T19:38:38Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ <a href="http://www.intellij.net/forums/thread.jsp?forum=7&thread=62456&tstart=0&trange=15">Changelog<a>. <a href="http://www.intellij.net/eap">Download</a>.
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>IntelliJ Aurora, build 1019 is available</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/java/?permalink=1C877AB817E1C16CEE5BD46D8546FB93.txt"/>
+        <modified>2003-12-23T13:14:57Z</modified>
+        <issued>2003-12-23T13:14:57-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-23:java/.1C877AB817E1C16CEE5BD46D8546FB93.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-23T13:14:57Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ <a href="http://www.intellij.net/forums/thread.jsp?forum=7&thread=62173&tstart=0&trange=15">Changelog</a>. <a href="http://www.intellij.net/eap">Download</a>.
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>blojsom 2.06 available</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/blojsom/?permalink=7CBD9085224D1DF76C47D5C4FA10CEEF.txt"/>
+        <modified>2003-12-22T14:56:42Z</modified>
+        <issued>2003-12-22T14:56:42-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-22:blojsom/.7CBD9085224D1DF76C47D5C4FA10CEEF.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-22T14:56:42Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ Notable aspects to this release of <a href="http://blojsom.sf.net">blojsom</a>:
+<ul>
+<li>Added Edit Blog Users plugin to allow a defined set of "administrators" to add and delete users.</li>
+<li>Added Edit Blog Authorization plugin to allow you to add new authors to your blog. </li>
+<li>Added Edit Blog Plugins plugin to allow you to edit the flavor-based plugin chains for your blog. </li>
+</ul>
+This completes the initial cut at web-based administration. Adding and deleting users dynamically was an RFE since mid-August. Now it's time to add web-based administration for some of the other plugins like the <a href="http://blojsom.sourceforge.net/plugins/macro-expansion.html">macro expansion plugin</a>.
+<p></p>
+Full <a href="http://blojsom.sourceforge.net/changes.html#2.06">changelog</a>. Upgrading instructions <a href="http://blojsom.sourceforge.net/upgrading.html#Upgrading+from+blojsom+2.05+to+blojsom+2.06">here</a>.
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>blojsom ... 3000 downloads and counting!</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/blojsom/?permalink=B1026935E08BC9362A5D8C79F3041AAD.txt"/>
+        <modified>2003-12-19T11:26:11Z</modified>
+        <issued>2003-12-19T11:26:11-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-19:blojsom/.B1026935E08BC9362A5D8C79F3041AAD.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-19T11:26:11Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ In less than a year, <a href="http://blojsom.sf.net">blojsom</a> has hit 3000 downloads. Thanks is about all I can say. I'm sure <a href="http://www.javaslash.org/blog/">Mark</a> would reiterate that sentiment.
+<p></p>
+Just some of the feature highlights of where blojsom is currently at:
+<ul>
+<li>Multi-user support allowing you to support separate blog instances with a single installation of blojsom.</li>
+<li>Web-based administration for configuring blog properties, templates, flavors, plugins, editing entries, editing categories, uploading files, and user administration.</li>
+<li>Plugin support to allow developers to extend the capabilities of blojsom.</li>
+<li>Customizable templating system allowing you to choose the appropriate presentation technology. JSP and Velocity supported "out of the box". FreeMarker supported as an add-on download.</li>
+<li>XML-RPC support for remote editing via the Blogger API, MetaWeblog API, or Atom API.</li>
+<li>No database required.</li>
+<li>Customizable interface for retrieving blog entries and categories allowing for extension to other backend storage mechanisms like a database.</li>
+</ul>
+Again, thanks!
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>IntelliJ Aurora, build 998 is available</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/java/?permalink=0F8D28AE7D517455C18BB470D1954F28.txt"/>
+        <modified>2003-12-18T22:17:35Z</modified>
+        <issued>2003-12-18T22:17:35-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-18:java/.0F8D28AE7D517455C18BB470D1954F28.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-18T22:17:35Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ <a href="http://www.intellij.net/forums/thread.jsp?forum=7&thread=61349&tstart=0&trange=15">Changelog</a>. <a href="http://www.intellij.net/eap">Download</a>. I'll have to check out the UI designer as they've added internationalization (i18n) support this go-round. <a href="http://www.amazon.com/exec/obidos/ASIN/0596000197/">Wrote a book</a> on that :)
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>Edit blog authorization plugin ... done</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/blojsom/?permalink=050E0E5F6F72B37E65E26F2B8D969341.txt"/>
+        <modified>2003-12-18T01:43:48Z</modified>
+        <issued>2003-12-18T01:43:48-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-18:blojsom/.050E0E5F6F72B37E65E26F2B8D969341.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-18T01:43:48Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ So, this plugin allows you to add authorized users to your blog. Useful if you've got a single blog that you want multiple people to be able to post to, modify blog properties, add/edit/delete categories, etc... Just more fodder for the "Administer blojsom via the web" category. That category is really starting to take shape and is kicking major ass!
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>Queer Eye for the Dictator Guy</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/general/?permalink=6F9CAEF34D2F05D15D7EE20420AE762A.txt"/>
+        <modified>2003-12-17T22:47:58Z</modified>
+        <issued>2003-12-17T22:47:58-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-17:general/.6F9CAEF34D2F05D15D7EE20420AE762A.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-17T22:47:58Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ Don't ask, don't tell? Not when you've got to get one of the most sought after dictators in the world ready for the media blitz!
+<p></p>
+<img src="http://www.blojsom.com/resources/david/queereye-saddam.jpg" border="0"/>
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>The Apocalypse in 2004 or Dirty Dancing: Havana Nights</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/general/?permalink=BCD765CC6E00139493D7E85E3CCF7FEC.txt"/>
+        <modified>2003-12-17T20:38:44Z</modified>
+        <issued>2003-12-17T20:38:44-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-17:general/.BCD765CC6E00139493D7E85E3CCF7FEC.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-17T20:38:44Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ So, there are going to be a few movies coming out in 2004. One of them is <a href="http://www.artisanent.com/ComingAttractions/HavanaNights.html">Dirty Dancing: Havana Nights</a>. Don't ask me how I came to this page. OK, it was via a link from <a href="http://www.fuckedcompany.com/">Fucked Company</a>. Here's the kicker (my emphasis).
+<blockquote>
+Dirty Dancing: Havana Nights tells a timeless story of a young woman's discovery of love, sensuality and independence - but with a sizzling style and rhythm all its own.  In planning this new chapter in a <i><b>beloved franchise</b></i>, Artisan Entertainment and Miramax Films have put together a team of creative dynamos from worlds of film, music and dance.
+</blockquote>
+Wow ... just wow! OK, where do we begin?
+<ul>
+<li>Who in the fuck thought Dirty Dancing was a franchise?</li>
+<li>Creative dynamos? The one bit of creativity these douchebags did manage to eek out was not calling the movie, "Dirty Dancing 2: (some assinine tagline)"</li>
+<li>"The resulting film is certain to give audiences - from newcomers to those who cherish the first Dirty Dancing - the time of their lives, and then some." - Uggggggh. They quoted that song ... that awful, awful song!</li>
+</ul>
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>Mac OS X 10.3.2 update available</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/macintosh/?permalink=EF3AAE553E506BF06C105A7EDD66B36B.txt"/>
+        <modified>2003-12-17T19:45:04Z</modified>
+        <issued>2003-12-17T19:45:04-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-17:macintosh/.EF3AAE553E506BF06C105A7EDD66B36B.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-17T19:45:04Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ Check your software update.
+<p></p>
+<blockquote>The 10.3.2 Update delivers enhanced functionality and improved reliability for Mac OS X v10.3 "Panther" and is recommended for all users.
+<p></p>
+Key enhancements include:
+<p></p>
+improved file sharing and directory services for mixed Mac and PC networks
+more robust printing to PostScript printers<br>
+improved font management<br>
+updated Mail and Address Book applications<br>
+new ATI and NVIDIA graphics drivers<br>
+FileVault, FireWire 800, WebDAV and USB Printing improvements from Update 10.3.1<br>
+previous standalone security updates<br>
+<p></p>
+For detailed information on this Update, please visit this website:<a href="http://www.info.apple.com/kbnum/n25652 ">http://www.info.apple.com/kbnum/n25652 </a></blockquote>
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>blojsom RFE 790462: Blojsom 2 : dynamically adding new users</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/blojsom/?permalink=A0176152A98C7BB9A88E213862F20035.txt"/>
+        <modified>2003-12-17T15:42:41Z</modified>
+        <issued>2003-12-17T15:42:41-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-17:blojsom/.A0176152A98C7BB9A88E213862F20035.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-17T15:42:41Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ RFE:<br>
+<blockquote><i> In blojsom 2.0, it would be great to have a way to add a
+new user without having to restart the servlet.
+
+This would allow people providing hosted blojsom
+services to add users without too much pain.</i></blockquote>
+Response:<br>
+<blockquote><i>This functionality will be available in blojsom 2.06.</i></blockquote>
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>Cristal</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/moblog/?permalink=b51966eec788613f4cc9874fbd0222fb.txt"/>
+        <modified>2003-12-16T15:49:07Z</modified>
+        <issued>2003-12-16T15:49:07-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-16:moblog/.b51966eec788613f4cc9874fbd0222fb.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-16T15:49:07Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[
+
+
+
+This message was sent using Picture Messaging from Verizon Wireless! To learn how you can snap and send pictures with your wireless phone visit http://www.verizonwireless.com/getitnow/pixmessaging.
+
+<p /><img src="http://www.blojsom.com/images/david/moblog/ed500aab82a0176c8cc02198cdc8fb04.jpg" border="0" />
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>blojsom 2.05 available</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/blojsom/?permalink=6A39B95C1EBCDB6BC0FE4B614630D252.txt"/>
+        <modified>2003-12-16T09:31:50Z</modified>
+        <issued>2003-12-16T09:31:50-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-16:blojsom/.6A39B95C1EBCDB6BC0FE4B614630D252.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-16T09:31:50Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ Notable aspects to this release of <a href="http://blojsom.sf.net">blojsom</a>:
+<ul>
+<li>Added File Upload plugin to allow you to upload resources to your blog from the web.</li>
+<li>Added Edit Blog Entries plugin to allow you to edit blog entries from the web.</li>
+<li>Added Edit Blog Flavors plugin to allow you to add new flavors from the web.</li>
+<li>Added <a href="http://www.freemarker.org">FreeMarker</a> dispatcher (add-on) to allow users to develop templates in FreeMarker.</li>
+<li>Updated <a href="http://www.intertwingly.net/wiki/pie/">Atom</a> templates to 0.3 snapshot.</li>
+</ul>
+Full <a href="http://blojsom.sourceforge.net/changes.html#2.05">changelog</a>. Upgrading instructions <a href="http://blojsom.sourceforge.net/upgrading.html#Upgrading+from+blojsom+2.04+to+blojsom+2.05">here</a>.
+ ]]>
+        </content>
+    </entry>
+        <entry>
+        <!-- required entry elements -->
+        <title>Christmas Tree photo</title>
+        <link rel="alternate" type="text/html" href="http://www.blojsom.com/blog/general/?permalink=3A0BF8F1E2193E5039841BCF189043EE.txt"/>
+        <modified>2003-12-15T22:56:50Z</modified>
+        <issued>2003-12-15T22:56:50-05:00</issued>
+        <id>tag:czarneckid@users.sourceforge.net,2003-12-15:general/.3A0BF8F1E2193E5039841BCF189043EE.txt</id>
+
+        <!-- optional entry elements -->
+        <created>2003-12-15T22:56:50Z</created>
+        <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.blojsom.com">
+            <![CDATA[ <img src="http://www.blojsom.com/resources/david/christmas-tree-2003.jpg" border="0"/>
+<p></p>
+Here's the photo of the front room tree as <a href="http://www.russellbeattie.com/notebook/1005269.html">Russell requested</a>.
+<p></p>
+And what's that shiny box in the lower left of the photo? Is is <a href="http://www.champagne-roederer.com/style/us/flash/cristal1.html">Cristal</a> ... drink of choice for the true playa? Well, I'll leave it to you to ponder. I've got to go now, Puff Daddy is at the dizzo and we be up out this biznatch for the evening. Time to roll y'all!
+ ]]>
+        </content>
+    </entry>
+    </feed>
+

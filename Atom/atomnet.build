@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<project name="Atom.NET" default="compile">
+	<description>A .NET library to handle Atom feeds.</description>
+
+	<!--
+	<property name="cvsroot" value=":pserver:anonymous@cvs.sourceforge.net:/cvsroot/atomnet" readonly="true" />
+	<property name="cvsmodule" value="Atom.NET" readonly="true" />
+	<property name="cvsbasedir" value=".\atomnet_cvs" />
+	-->
+
+	<target name="clean">
+		<delete dir="${basedir}\${outputdir}" failonerror="false" />
+		<mkdir dir="${basedir}\${outputdir}" />
+		<copy file="${basedir}\Atom.NET.xml" todir="${basedir}\${outputdir}" />
+	</target>
+
+	<target name="backup" description="Backups Atom.NET project">
+		<tstamp property="build.date" pattern="yyyyMMdd" verbose="true" />
+		<zip zipfile="..\Atom.NET-${build.date}.zip">
+			<fileset basedir=".\">
+				<includes name="**" />
+				<excludes name="*.zip" />
+			</fileset>
+		</zip>
+		<zip zipfile="..\Atom.NET-doc-${build.date}.zip">
+			<fileset basedir="Atom.NET">
+				<includes name="../../doc/**" />
+			</fileset>
+		</zip>
+		<echo message="The files are in the parent directory" />
+	</target>
+
+	<target name="internaldoc" description="Creates the internal doc">
+		<ndoc failonerror="true" verbose="true">
+			<assemblies>
+				<includes name="bin\Debug\Atom.NET.dll" />
+			</assemblies>
+			<documenters>
+				<documenter name="MSDN">
+					<property name="OutputDirectory" value="..\internaldoc" />
+					<property name="OutputTarget" value="HtmlHelpAndWeb" />
+					<property name="HtmlHelpName" value="Atom.NET" />
+					<property name="IncludeFavorites" value="true" />
+					<property name="Title" value="Atom.NET documentation" />
+					<property name="SplitTOCs" value="false" />
+					<property name="DefaulTOC" value="" />
+					<property name="SortTOCByNamespace" value="true" />
+					<property name="ShowVisualBasic" value="false" />
+					<property name="ShowMissingSummaries" value="true" />
+					<property name="ShowMissingRemarks" value="true" />
+					<property name="ShowMissingParams" value="true" />
+					<property name="ShowMissingReturns" value="true" />
+					<property name="ShowMissingValues" value="true" />
+					<property name="DocumentAttributes" value="true" />
+					<property name="DocumentInternals" value="true" />
+					<property name="DocumentProtected" value="true" />
+					<property name="DocumentProtectedInternalAsProtected" value="true" />
+					<property name="DocumentPrivates" value="true" />
+					<property name="DocumentEmptyNamespaces" value="true" />
+					<property name="AutoDocumentConstructors" value="true" />
+					<property name="AutoPropertyBackerSummaries" value="true" />
+					<property name="IncludeAssemblyVersion" value="true" />
+					<property name="IncludeHierarchy" value="true" />
+					<property name="LinkToSdkDocVersion" value="MsdnOnline" />
+					<property name="RootPageContainNamespaces" value="false" />
+					<property name="RootPageTOCName" value="Atom.NET Overview" />
+					<property name="CopyrightText" value="Copyright 2003, 2004 Lawrence Oluyede" />
+					<property name="CopyrightHref" value="http://loluyede.blogspot.com" />
+				</documenter>
+			</documenters>
+		</ndoc>
+	</target>
+
+	<target name="publicdoc" description="Creates the public doc">
+		<ndoc failonerror="true" verbose="true">
+			<assemblies>
+				<includes name="bin\Release\Atom.NET.dll" />
+			</assemblies>
+			<documenters>
+				<documenter name="MSDN">
+					<property name="OutputDirectory" value="..\doc" />
+					<property name="OutputTarget" value="HtmlHelpAndWeb" />
+					<property name="HtmlHelpName" value="Atom.NET" />
+					<property name="IncludeFavorites" value="true" />
+					<property name="Title" value="Atom.NET documentation" />
+					<property name="SplitTOCs" value="false" />
+					<property name="DefaulTOC" value="" />
+					<property name="SortTOCByNamespace" value="true" />
+					<property name="ShowVisualBasic" value="true" />
+					<property name="ShowMissingSummaries" value="false" />
+					<property name="ShowMissingRemarks" value="false" />
+					<property name="ShowMissingParams" value="false" />
+					<property name="ShowMissingReturns" value="false" />
+					<property name="ShowMissingValues" value="false" />
+					<property name="DocumentAttributes" value="false" />
+					<property name="DocumentInternals" value="false" />
+					<property name="DocumentProtected" value="true" />
+					<property name="DocumentProtectedInternalAsProtected" value="false" />
+					<property name="DocumentPrivates" value="false" />
+					<property name="DocumentEmptyNamespaces" value="false" />
+					<property name="AutoDocumentConstructors" value="true" />
+					<property name="AutoPropertyBackerSummaries" value="false" />
+					<property name="IncludeAssemblyVersion" value="true" />
+					<property name="IncludeHierarchy" value="true" />
+					<property name="LinkToSdkDocVersion" value="MsdnOnline" />
+					<property name="RootPageContainNamespaces" value="true" />
+					<property name="RootPageTOCName" value="Atom.NET Overview" />
+					<property name="CopyrightText" value="Copyright 2003, 2004 Lawrence Oluyede" />
+					<property name="CopyrightHref" value="http://loluyede.blogspot.com" />
+				</documenter>
+			</documenters>
+		</ndoc>
+	</target>
+
+	<target name="docompile">
+		<if propertyexists="forceclean">
+			<call target="clean" />
+		</if>
+		<if propertytrue="debug">
+		    <mkdir dir="bin\Debug" failonerror="false" />
+		</if>
+        <ifnot propertytrue="debug">
+		    <mkdir dir="bin\Release" failonerror="false" />
+		</ifnot>
+		<csc target="library" output="${basedir}\${outputdir}\Atom.NET.dll" debug="${debug}"
+			doc="${basedir}\Atom.NET.xml">
+			<sources>
+				<includes name="${basedir}\*.cs" />
+				<includes name="${basedir}\Atom.AdditionalElements\*.cs" />
+				<includes name="${basedir}\Atom.AdditionalElements\DublinCore\*.cs" />
+				<includes name="${basedir}\Atom.Core\*.cs" />
+				<includes name="${basedir}\Atom.Core.Collections\*.cs" />
+				<includes name="${basedir}\Atom.Utils\*.cs" />
+				<includes name="${basedir}\mvpxml\*.cs" />
+			</sources>
+			<resources dynamicprefix="true" prefix="">
+		        <includes name="${basedir}\mediatypes.txt" />
+			</resources>
+		</csc>
+	</target>
+
+	<target name="compile" description="Compiles with debug flags activated">
+		<property name="debug" value="true" />
+		<property name="outputdir" value="bin\Debug" />
+		<ifnot propertyexists="basedir">
+			<property name="basedir" value="." />
+		</ifnot>
+		<call target="docompile" />
+		<if propertyexists="internaldoc">
+			<call target="internaldoc" />
+		</if>
+	</target>
+
+	<target name="release" description="Compiles without debug flags activated">
+		<property name="debug" value="false" />
+		<property name="outputdir" value="bin\Release" />
+		<ifnot propertyexists="basedir">
+			<property name="basedir" value="." />
+		</ifnot>
+		<call target="docompile" />
+		<if propertyexists="publicdoc">
+			<call target="publicdoc" />
+		</if>
+	</target>
+
+	<target name="sysprop" description="Displays system properties">
+		<sysinfo verbose="true" />
+	</target>
+</project>

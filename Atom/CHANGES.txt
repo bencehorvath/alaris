@@ -1,0 +1,149 @@
+15 Jul 2004 (0.4.3 release):
+	- removed xml:base from TODO list
+	- fixed some doc
+
+14 Jul 2004:
+	- fixed a bug in media types parsing
+	- enhanced writing capabilities
+	- removed some code duplication
+	- fixed a bug in AtomPersonConstruct parsing
+	- added xml:base support
+	- added a test feed for xml:base capabilities
+	- tests\Atom.Core\AtomContentTest.cs: renamed a test
+	- tests\Atom.Core\AtomContentTest.cs: added TestXmlBaseContentUri to test presence of xml:base attribute in certain contents
+	- tests\Atom.Core\AtomEntryTest.cs: added TestNameIsNotEmail to ensure that <name> tags are not emails
+	- tests\Atom.Core\AtomFeedTest.cs: added TestXmlBaseFeedUri to test the presence of xml:base attribute in certain feeds
+	- tests\Atom.Core\AtomFeedTest.cs: added TestNameIsNotEmail to ensure that <name> tags are not emails
+
+08 Jul 2004:
+	- Atom.Utils\Utils.cs: added a public GetVersion() method to obtain the version of the assembly
+	- Atom.Utils\DefaultValues: fixed GeneratorVersion internal string
+	- tests\Atom.Utils\UtilsTest.cs: added a test for GetVersion() method
+
+03 Jul 2004:
+	- added XPathNavigatorReader.cs (part of mvp-xml project [http://sourceforge.net/projects/mvp-xml]
+	    (many thanks to Daniel Cazzulino [http://weblogs.asp.net/cazzu]
+	- updated nant build file
+
+29 Jun 2004 (0.4.2 internal release):
+	- fixed new Uri properties
+	- changed some stuff according to FxCop rules
+	- Atom.Core\AtomFeed.cs: changed Save(HttpWebResponse) to Save(WebResponse)
+	- Atom.Core\AtomFeed.cs: changed Load(HttpWebRequest) to Load(WebRequest)
+	- Atom.Core\AtomFeed.cs: added Load(System.Uri) overload
+	- Atom.Core\AtomEntry.cs: changed Save(HttpWebResponse) to Save(WebResponse)
+	- Atom.Core\AtomEntry.cs: changed Load(HttpWebRequest) to Load(WebRequest)
+	- Atom.Core\AtomEntry.cs: added Load(System.Uri) overload
+	- I'm ready to integrate mvp-xml library
+	- added AtomFeedTest.TestUri and AtomFeedTest.TestUri
+
+24 Jun 2004:
+	- Atom.Utils\DefaultValues.cs: fixed generator version
+	- Atom.Core\AtomEntry.cs: added a Uri property for an easy identification of the uri of the entry
+	- Atom.Core\AtomEntry.cs: fixed documentation
+	- Atom.Core\AtomFeed.cs: removed etag internal private variable
+
+23 Jun 2004:
+	- AtomFeed.cs: added a Uri property for an easy identification of the uri of the feed
+	- AtomFeed.cs: fixed documentation
+	- removed filtering based on file extensions
+	- renamed AtomFeedTest.TestUri to TestSaveToFile
+
+21 Jun 2004:
+	- fixed AtomPersonConstruct.cs documentation
+
+13 May 2004 (0.4.1 release):
+	- bugfix relase
+
+29 Mar 2004:
+	- fixed a bug in the serialization of AtomCreated tag
+
+26 Feb 2004:
+	- added quite every media type out there in Enum.MediaType
+	- embedded mediatypes.txt as resource
+	- rewritten the media type parsing stuff to gain advantage of the embedded resource
+	- fixed nant build file and makefile
+
+25 Feb 2004:
+	- added Load(XmlReader) and Save(XmlWriter) to AtomEntry and AtomFeed
+	- added tests for XmlReader based Load methods (AtomEntry/AtomFeed)
+	- added tests for XmlWriter based Save methods (AtomEntry/AtomFeed)
+	
+24 Feb 2004 (0.4 Release):
+	- updated and tested Makefile
+	- updated the doc
+	- updated the webpage
+
+23 Feb 2004:
+   * pre release state
+	- major architecture rework:
+		- collapsed Atom.Core.BaseClasses into Atom.Core
+		- removed AtomAuthor, AtomLinkConstruct, AtomContributor,
+		  all content construct classes except for AtomContent,
+		  removed ExceptionCollection
+	- exposed the internal buffer to an internal property
+	- merged Load/Save test methods
+	- added test for invalid feeds/entries
+
+20 Feb 2004:
+	- fixed escape and unescape in utils
+
+19 Feb 2004:
+	- added localname, namespace uri, namespace prefix for every element
+	- implemented a base class for every additional element
+	- added DublinCore elements support
+	
+14 Feb 2004:
+	- added a skeleton for extendibility issues
+	- added tests for Utils classes
+
+13 Feb 2004
+	- fixed AtomReader to parse namespaced atom elements
+	- fixed a bug with html elements inside atom tags
+	- xml:lang attribute at feed level has become optional
+	- added xml:lang attribute for every element
+	- fixed a bug in base64 utils function
+
+12 Feb 2004
+	- added an Encoding property to AtomFeed to specifying content encoding.
+	- AtomFeed now saves themselves (against a path, a stream, a TextWriter or an HttpWebResponse)
+	- AtomFeed class now haves overloaded Load() static methods (to load from a uri, a stream, a TextReader or an HttpWebRequest)
+	- AtomWriter and AtomReader are no longer exposed and cannot be used.
+	- moved enum values from Atom.Utils to Atom.Core namespace
+
+11 Feb 2004
+	- added new tests for Save, Load and BinarySerialization capability of AtomFeed and AtomEntry
+
+08 Feb 2004
+	- fixed a bug in parsing of namespaced scoped elements
+	- fixed the feed id compliancy issue in writing
+	- marked all Atom.Core classes as Serializable (so the state of the class could be serialized)
+	- DefaultValues class is no longer istantiable or inheritable
+	- added a StringBuilder buffer for every Atom.Core class
+	- added the serialization capability for every class in the Atom.Core namespace
+	- every class in the Atom.Core namespace now can be converted to its string representation separately 
+
+07 Feb 2004
+	- added Makefile (thanks to John Luke of the Mono Project)
+    - replaced Atom.NET.Release.xml with Atom.NET.xml
+	- replaced Util with explicit namespace in AtomReader
+	- added a nant build file (see http://nant.sf.net for more infos)
+
+03 Feb 2004
+	* 0.3 release
+	* CHANGELOG:
+		- fixed AtomGenerator constructors
+		- written AtomReader to parse atom feeds
+		- fixed a bug in a private method that invalidated parsing if the
+			first <link> hasn't "alternate" attribute
+		- added IsIso8601Date(), IsIso8601DateLocal(), IsIso8601DateTZ() to validate iso 8601 date times.
+		- fixed some bugs with date/time representation in <modified>, <created>, <issued> elements
+		- fixed a bug in the serialization of xml:lang attribute
+		- added application/x.atom+xml in media types
+		- Utils class is no longer istantiable or inheritable
+		- added some AtomReader testing stuff
+		- removed TestAlternateLinkMissing test
+
+06 Jan 2004
+    - 0.2 release
+    - first public release

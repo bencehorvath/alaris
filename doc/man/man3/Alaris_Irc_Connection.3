@@ -1,0 +1,257 @@
+.TH "Alaris::Irc::Connection" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Irc::Connection \- 
+.PP
+This class manages the connection to the IRC server and provides access to all the objects needed to send and receive messages.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConnection\fP (\fBConnectionArgs\fP args, bool enableCtcp, bool enableDcc)"
+.br
+.RI "\fIPrepare a connection to an IRC server but do not open it. This sets the text Encoding to Default. \fP"
+.ti -1c
+.RI "\fBConnection\fP (Encoding textEncoding, \fBConnectionArgs\fP args, bool enableCtcp, bool enableDcc)"
+.br
+.RI "\fIPrepare a connection to an IRC server but do not open it. \fP"
+.ti -1c
+.RI "void \fBConnect\fP ()"
+.br
+.RI "\fIConnect to the IRC server and start listening for messages on a new thread. \fP"
+.ti -1c
+.RI "void \fBDisconnect\fP (string reason)"
+.br
+.RI "\fISends a 'Quit' message to the server, closes the connection, and stops the listening thread. \fP"
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.RI "\fIA friendly name for this connection. \fP"
+.ti -1c
+.RI "void \fBAddParser\fP (\fBIParser\fP parser)"
+.br
+.RI "\fIAdds a parser class to a list of custom parsers. Any number can be added. The custom parsers will be tested using \fCCanParse()\fP before the default parsers. The last parser to be added will be the first to process a message. \fP"
+.ti -1c
+.RI "void \fBRemoveParser\fP (\fBIParser\fP parser)"
+.br
+.RI "\fIRemove a custom parser class. \fP"
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "Encoding \fBTextEncoding\fP\fC [get, set]\fP"
+.br
+.RI "\fISets the text encoding used by the read and write streams. Must be set before \fBConnect()\fP is called and should not be changed while the connection is processing messages. \fP"
+.ti -1c
+.RI "bool \fBRegistered\fP\fC [get]\fP"
+.br
+.RI "\fIA read-only property indicating whether the connection has been opened with the IRC server and the client has been successfully registered. \fP"
+.ti -1c
+.RI "bool \fBConnected\fP\fC [get]\fP"
+.br
+.RI "\fIA read-only property indicating whether a connection has been opened with the IRC server (but not whether registration has succeeded). \fP"
+.ti -1c
+.RI "bool \fBHandleNickTaken\fP\fC [get, set]\fP"
+.br
+.RI "\fIBy default the connection itself will handle the case where, while attempting to register the client's nick is already in use. It does this by simply appending 2 random numbers to the end of the nick. \fP"
+.ti -1c
+.RI "string \fBName\fP\fC [get]\fP"
+.br
+.RI "\fIA user friendly name of this \fBConnection\fP in the form 'nick'. \fP"
+.ti -1c
+.RI "bool \fBEnableCtcp\fP\fC [get, set]\fP"
+.br
+.RI "\fIWhether Ctcp commands should be processed and if Ctcp events will be raised. \fP"
+.ti -1c
+.RI "bool \fBEnableDcc\fP\fC [get, set]\fP"
+.br
+.RI "\fIWhether DCC requests should be processed or ignored by this \fBConnection\fP. Since the \fBDccListener\fP is a singleton and shared by all Connections, listeners to \fBDccListener\fP events should be manually removed when no longer needed. \fP"
+.ti -1c
+.RI "\fBCtcpResponder\fP \fBCtcpResponder\fP\fC [get, set]\fP"
+.br
+.RI "\fISets an automatic responder to Ctcp queries. \fP"
+.ti -1c
+.RI "TimeSpan \fBIdleTime\fP\fC [get]\fP"
+.br
+.RI "\fIThe amount of time that has passed since the client sent a command to the IRC server. \fP"
+.ti -1c
+.RI "\fBSender\fP \fBSender\fP\fC [get]\fP"
+.br
+.RI "\fIThe object used to send commands to the IRC server. \fP"
+.ti -1c
+.RI "\fBListener\fP \fBListener\fP\fC [get]\fP"
+.br
+.RI "\fIThe object that parses messages and notifies the appropriate delegate. \fP"
+.ti -1c
+.RI "\fBCtcpSender\fP \fBCtcpSender\fP\fC [get]\fP"
+.br
+.RI "\fIThe object used to send CTCP commands to the IRC server. \fP"
+.ti -1c
+.RI "\fBCtcpListener\fP \fBCtcpListener\fP\fC [get]\fP"
+.br
+.RI "\fIThe object that parses CTCP messages and notifies the appropriate delegate. \fP"
+.ti -1c
+.RI "\fBConnectionArgs\fP \fBConnectionData\fP\fC [get]\fP"
+.br
+.RI "\fIThe collection of data used to establish this connection. \fP"
+.ti -1c
+.RI "\fBServerProperties\fP \fBServerProperties\fP\fC [get]\fP"
+.br
+.RI "\fIA read-only collection of string key/value pairs representing IRC server proprties. \fP"
+.in -1c
+.SS "Events"
+
+.in +1c
+.ti -1c
+.RI "RawMessageReceivedEventHandler \fBOnRawMessageReceived\fP"
+.br
+.RI "\fIReceive all the messages, unparsed, sent by the IRC server. This is not normally needed but provided for those who are interested. \fP"
+.ti -1c
+.RI "RawMessageSentEventHandler \fBOnRawMessageSent\fP"
+.br
+.RI "\fIReceive all the raw messages sent to the IRC from this connection. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class manages the connection to the IRC server and provides access to all the objects needed to send and receive messages. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Alaris.Irc.Connection.Connection (\fBConnectionArgs\fP args, bool enableCtcp, bool enableDcc)"
+.PP
+Prepare a connection to an IRC server but do not open it. This sets the text Encoding to Default. \fBParameters:\fP
+.RS 4
+\fIargs\fP The set of information need to connect to an IRC server
+.br
+\fIenableCtcp\fP True if this \fBConnection\fP should support CTCP.
+.br
+\fIenableDcc\fP True if this \fBConnection\fP should support DCC.
+.RE
+.PP
+
+.SS "Alaris.Irc.Connection.Connection (Encoding textEncoding, \fBConnectionArgs\fP args, bool enableCtcp, bool enableDcc)"
+.PP
+Prepare a connection to an IRC server but do not open it. \fBParameters:\fP
+.RS 4
+\fIargs\fP The set of information need to connect to an IRC server
+.br
+\fIenableCtcp\fP True if this \fBConnection\fP should support CTCP.
+.br
+\fIenableDcc\fP True if this \fBConnection\fP should support DCC.
+.br
+\fItextEncoding\fP The text encoding for the incoming stream.
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Alaris.Irc.Connection.AddParser (\fBIParser\fP parser)"
+.PP
+Adds a parser class to a list of custom parsers. Any number can be added. The custom parsers will be tested using \fCCanParse()\fP before the default parsers. The last parser to be added will be the first to process a message. \fBParameters:\fP
+.RS 4
+\fIparser\fP Any class that implements \fBIParser\fP.
+.RE
+.PP
+
+.SS "void Alaris.Irc.Connection.Connect ()"
+.PP
+Connect to the IRC server and start listening for messages on a new thread. \fBExceptions:\fP
+.RS 4
+\fISocketException\fP If a connection cannot be established with the IRC server
+.RE
+.PP
+
+.SS "void Alaris.Irc.Connection.Disconnect (string reason)"
+.PP
+Sends a 'Quit' message to the server, closes the connection, and stops the listening thread. The state of the connection will remain the same even after a disconnect, so the connection can be reopened. All the event handlers will remain registered. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreason\fP A message displayed to IRC users upon disconnect.
+.RE
+.PP
+
+.SS "void Alaris.Irc.Connection.RemoveParser (\fBIParser\fP parser)"
+.PP
+Remove a custom parser class. \fBParameters:\fP
+.RS 4
+\fIparser\fP Any class that implements \fBIParser\fP.
+.RE
+.PP
+
+.SS "override string Alaris.Irc.Connection.ToString ()"
+.PP
+A friendly name for this connection. \fBReturns:\fP
+.RS 4
+The Name property
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "bool Alaris.Irc.Connection.Connected\fC [get]\fP"
+.PP
+A read-only property indicating whether a connection has been opened with the IRC server (but not whether registration has succeeded). True if the client is connected.
+.SS "\fBConnectionArgs\fP Alaris.Irc.Connection.ConnectionData\fC [get]\fP"
+.PP
+The collection of data used to establish this connection. Read only \fBConnectionArgs\fP.
+.SS "\fBCtcpListener\fP Alaris.Irc.Connection.CtcpListener\fC [get]\fP"
+.PP
+The object that parses CTCP messages and notifies the appropriate delegate. Read only \fBCtcpListener\fP. Null if CtcpEnabled is false.
+.SS "\fBCtcpResponder\fP Alaris.Irc.Connection.CtcpResponder\fC [get, set]\fP"
+.PP
+Sets an automatic responder to Ctcp queries. Once this is set it can be removed by setting it to null.
+.SS "\fBCtcpSender\fP Alaris.Irc.Connection.CtcpSender\fC [get]\fP"
+.PP
+The object used to send CTCP commands to the IRC server. Read only \fBCtcpSender\fP. Null if CtcpEnabled is false.
+.SS "bool Alaris.Irc.Connection.EnableCtcp\fC [get, set]\fP"
+.PP
+Whether Ctcp commands should be processed and if Ctcp events will be raised. True will enable the CTCP sender and listener and false will cause their property calls to return null.
+.SS "bool Alaris.Irc.Connection.EnableDcc\fC [get, set]\fP"
+.PP
+Whether DCC requests should be processed or ignored by this \fBConnection\fP. Since the \fBDccListener\fP is a singleton and shared by all Connections, listeners to \fBDccListener\fP events should be manually removed when no longer needed. True to process DCC requests.
+.SS "bool Alaris.Irc.Connection.HandleNickTaken\fC [get, set]\fP"
+.PP
+By default the connection itself will handle the case where, while attempting to register the client's nick is already in use. It does this by simply appending 2 random numbers to the end of the nick. The NickError event is shows that the nick collision has happened and it is fixed by calling Sender's Register() method passing in the replacement nickname.
+.PP
+True if the connection should handle this case and false if the client will handle it itself.
+.SS "TimeSpan Alaris.Irc.Connection.IdleTime\fC [get]\fP"
+.PP
+The amount of time that has passed since the client sent a command to the IRC server. Read only TimeSpan
+.SS "\fBListener\fP Alaris.Irc.Connection.Listener\fC [get]\fP"
+.PP
+The object that parses messages and notifies the appropriate delegate. Read only \fBListener\fP.
+.SS "string Alaris.Irc.Connection.Name\fC [get]\fP"
+.PP
+A user friendly name of this \fBConnection\fP in the form 'nick'. Read only string
+.SS "bool Alaris.Irc.Connection.Registered\fC [get]\fP"
+.PP
+A read-only property indicating whether the connection has been opened with the IRC server and the client has been successfully registered. True if the client is connected and registered.
+.SS "\fBSender\fP Alaris.Irc.Connection.Sender\fC [get]\fP"
+.PP
+The object used to send commands to the IRC server. Read-only \fBSender\fP.
+.SS "\fBServerProperties\fP Alaris.Irc.Connection.ServerProperties\fC [get]\fP"
+.PP
+A read-only collection of string key/value pairs representing IRC server proprties. This connection's \fBServerProperties\fP obejct or null if it has not been created.
+.SS "Encoding Alaris.Irc.Connection.TextEncoding\fC [get, set]\fP"
+.PP
+Sets the text encoding used by the read and write streams. Must be set before \fBConnect()\fP is called and should not be changed while the connection is processing messages. An Encoding constant.
+.SH "Event Documentation"
+.PP 
+.SS "RawMessageReceivedEventHandler Alaris.Irc.Connection.OnRawMessageReceived"
+.PP
+Receive all the messages, unparsed, sent by the IRC server. This is not normally needed but provided for those who are interested. 
+.SS "RawMessageSentEventHandler Alaris.Irc.Connection.OnRawMessageSent"
+.PP
+Receive all the raw messages sent to the IRC from this connection. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

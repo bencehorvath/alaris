@@ -1,0 +1,98 @@
+.TH "Alaris::Irc::ServerProperties" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Irc::ServerProperties \- 
+.PP
+Encapsulates the collection of properties sent by the IRC server after registration.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "IDictionaryEnumerator \fBGetEnumerator\fP ()"
+.br
+.RI "\fIGet a read-only enumeration of all the elements in this object. \fP"
+.ti -1c
+.RI "bool \fBContainsKey\fP (string key)"
+.br
+.RI "\fITest if this instance contains a given key. \fP"
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "string \fBthis\fP [string key]\fC [get]\fP"
+.br
+.RI "\fIRead-only indexer for the various server property strings. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Encapsulates the collection of properties sent by the IRC server after registration. 
+
+See the server_properties.pdf file for a list of comon properties. 
+.PP
+.nf
+This will only be non null if the connection has already received
+a '005' reply and that such a reply is actually sent by the server.
+This will happen right after registration.
+Instances are only retrieved from a Connection and not instantiated directly.
+            ServerProperties properties = connection.ServerProperties;
+It should always be tested for null
+            if( properties != null ) {
+            Console.Writeline('NICKLEN is' + properties['NICKLEN'] );
+            }
+Only a handful of properties will ever be available.
+
+.fi
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Alaris.Irc.ServerProperties.ContainsKey (string key)"
+.PP
+Test if this instance contains a given key. \fBParameters:\fP
+.RS 4
+\fIkey\fP The server properties key to test.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True if it is present.
+.RE
+.PP
+
+.SS "IDictionaryEnumerator Alaris.Irc.ServerProperties.GetEnumerator ()"
+.PP
+Get a read-only enumeration of all the elements in this object. \fBReturns:\fP
+.RS 4
+An IDictionaryEnumerator type enumeration.
+.RE
+.PP
+.PP
+.nf
+To loop over all the values  
+                    foreach( DictionaryEntry entry in connection.ServerProperties ) 
+                    {
+                    Console.WriteLine('Key:' + entry.Key + ' Value:' + entry.Value );
+                    }
+.fi
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "string Alaris.Irc.ServerProperties.this[string key]\fC [get]\fP"
+.PP
+Read-only indexer for the various server property strings. \fBReturns:\fP
+.RS 4
+The string sent by the server or String.Empty if not present..
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

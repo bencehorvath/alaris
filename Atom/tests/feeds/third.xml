@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<feed version="0.3" xmlns="http://purl.org/atom/ns#">
+<link href="http://www.blogger.com/atom/5281182" rel="service.post" title="Lawrence Oluyede's blog" type="application/x.atom+xml"/>
+<link href="http://www.blogger.com/atom/5281182" rel="service.feed" title="Lawrence Oluyede's blog" type="application/x.atom+xml"/>
+<title mode="escaped" type="text/html">Lawrence Oluyede's blog</title>
+<tagline mode="escaped" type="text/html">It's only a blog...</tagline>
+<link href="http://loluyede.blogspot.com" rel="alternate" title="Lawrence Oluyede's blog" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182</id>
+<modified>2004-01-24T15:59:15Z</modified>
+<generator url="http://www.blogger.com/" version="5.15">Blogger</generator>
+<info mode="xml" type="text/html">
+<div xmlns="http://www.w3.org/1999/xhtml">This is an Atom formatted XML site feed. It is intended to be viewed in a Newsreader or syndicated to another site. Please visit the <a href="http://help.blogger.com/bin/answer.py?answer=697">Blogger Knowledge Base</a> for more info.</div>
+</info>
+
+<entry>
+<link href="http://www.blogger.com/atom/5281182/107495989081383558" rel="service.edit" title="Hacker's Guide To Gaining Root On A Girl: Mysteries Revealed" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-24T16:58:10+01:00</issued>
+<modified>2004-01-24T16:00:13Z</modified>
+<created>2004-01-24T16:00:13Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#107495989081383558" rel="alternate" title="Hacker's Guide To Gaining Root On A Girl: Mysteries Revealed" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-107495989081383558</id>
+<title mode="escaped" type="text/html">Hacker's Guide To Gaining Root On A Girl: Mysteries Revealed</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Very funny ;-) - <a href="http://kristi.erdves.lt/lcx/guy.txt">http://kristi.erdves.lt/lcx/guy.txt</a>
+</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/5281182/107495855903597677" rel="service.edit" title="C# compiler testing framework" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-24T16:35:59+01:00</issued>
+<modified>2004-01-24T16:01:18Z</modified>
+<created>2004-01-24T15:38:02Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#107495855903597677" rel="alternate" title="C# compiler testing framework" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-107495855903597677</id>
+<title mode="escaped" type="text/html">C# compiler testing framework</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Gus Perez (a C# compiler QA team member) blogged about  the testing framework of the team. They currently have (and surely is an alway growing number) 18.697 tests. What I liked most is this paragraph:
+<br/>
+<br/>
+<em>
+<br/>We run all these tests several times a day on different OS' and platforms, etc. The results end up getting stored in a SQL Server database. We have an ASPX page that serves as the the front-end for us all to analyze test results through. It's part of a system we've developed within our team called Marathon that handles pretty much all of our test run automation tasks. It detects when a new build of the compiler is available, communicates with our lab machine software and tells it what kind of configuration we want, runs our tests, stores the results in the database, frees up the machines, and then it all starts again soon. I might talk about this a bit more in a future post if people are interested.
+<br/>
+</em>
+<br/>
+<br/>That's what it's called "automated testing". Great!
+<br/>
+<br/>
+<a href="http://www.jixal.com/blog/archives/000085.html">http://www.jixal.com/blog/archives/000085.html</a>
+</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/5281182/107495742358328390" rel="service.edit" title="Atom feed" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-24T16:17:03+01:00</issued>
+<modified>2004-01-24T15:19:06Z</modified>
+<created>2004-01-24T15:19:06Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#107495742358328390" rel="alternate" title="Atom feed" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-107495742358328390</id>
+<title mode="escaped" type="text/html">Atom feed</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">My blog by now also has an atom feed (produced by blogger.com): http://loluyede.blogspot.com/atom.xml</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/5281182/107471745721316353" rel="service.edit" title="Indy on .NET" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-21T21:37:37+01:00</issued>
+<modified>2004-01-21T20:39:36Z</modified>
+<created>2004-01-21T20:39:36Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#107471745721316353" rel="alternate" title="Indy on .NET" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-107471745721316353</id>
+<title mode="escaped" type="text/html">Indy on .NET</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">
+<a href="http://www.nevrona.com/Indy/">Indy</a>, the well known networking library (handle quite all the protocols) developed in and for Delphi has been ported to the .NET framework. Check it out: <a href="http://www.nevrona.com/Indy/download/DotNet.html">http://www.nevrona.com/Indy/download/DotNet.html</a>.
+<br/>
+<br/>ps. <a href="http://www.atozed.com/indy/Texts/VSIntro.iwp">here</a> you can find an introductive article.</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/5281182/10746171504680761" rel="service.edit" title="This is a test. I'm trying to post through the gai..." type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-20T17:45:50+01:00</issued>
+<modified>2004-01-20T16:48:28Z</modified>
+<created>2004-01-20T16:47:48Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#10746171504680761" rel="alternate" title="This is a test. I'm trying to post through the gai..." type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-10746171504680761</id>
+<title mode="escaped" type="text/html">This is a test. I'm trying to post through the gai...</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">This is a test. I'm trying to post through the <a href="http://gaim-blogger.sf.net">gaim blogger</a> plugin of the <a href="http://gaim.sf.net">Gaim</a> instant messaging client, a multiplatform client that supports multiple protocols at once (mine supports ICQ, MSN, Jabber, Aim, Yahoo, IRC, Gadu-gadu and more). Bye</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/5281182/107435119130068897" rel="service.edit" title="Avalon Imaging sample number two" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-17T15:53:11+01:00</issued>
+<modified>2004-01-17T14:55:04Z</modified>
+<created>2004-01-17T14:55:04Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#107435119130068897" rel="alternate" title="Avalon Imaging sample number two" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-107435119130068897</id>
+<title mode="escaped" type="text/html">Avalon Imaging sample number two</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">It's about <em>ImageEffectGlow</em>: <a href="http://www.longhornblogs.com/rwlodarc/archive/2004/01/16/2167.aspx">http://www.longhornblogs.com/rwlodarc/archive/2004/01/16/2167.aspx</a>
+</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/5281182/107427038776082761" rel="service.edit" title="Hello World" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-16T17:26:27+01:00</issued>
+<modified>2004-01-16T16:28:20Z</modified>
+<created>2004-01-16T16:28:20Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#107427038776082761" rel="alternate" title="Hello World" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-107427038776082761</id>
+<title mode="escaped" type="text/html">Hello World</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<a href="http://www2.latech.edu/~acm/HelloWorld.shtml">http://www2.latech.edu/~acm/HelloWorld.shtml</a>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/5281182/107426809711612282" rel="service.edit" title="Avalon Imaging Samples series" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-16T16:48:17+01:00</issued>
+<modified>2004-01-16T15:50:09Z</modified>
+<created>2004-01-16T15:50:09Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#107426809711612282" rel="alternate" title="Avalon Imaging Samples series" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-107426809711612282</id>
+<title mode="escaped" type="text/html">Avalon Imaging Samples series</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Robert Wlodarczyk has posted his first sample of the capabilities of the new imaging framework in Avalon. I don't have Longhorn to try it myself (It works on the PDC version) but it looks great. Good job Robert!
+<br/>
+<a href="http://www.longhornblogs.com/rwlodarc/archive/2004/01/15/2142.aspx">See the first sample</a>
+</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/5281182/107399009211753349" rel="service.edit" title="Books I'm reading" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-13T11:34:52+01:00</issued>
+<modified>2004-01-13T10:42:33Z</modified>
+<created>2004-01-13T10:36:40Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#107399009211753349" rel="alternate" title="Books I'm reading" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-107399009211753349</id>
+<title mode="escaped" type="text/html">Books I'm reading</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">I think that a few of you care about what kinda <acronym title="Computer Science">CS</acronym> or <acronym title="Information Technology">IT</acronym> books (I'm used to read more than one book at once) I'm reading... so nobody cares about the other kind of books. But here I am to tell you that ;-) I'm currently reading three books at the same time.  <a href="http://www.amazon.com/exec/obidos/tg/detail/-/0345325818?v=glance">The Silmarillion</a>, it's a series of tales written by J. R. R. Tolkien and published by his son. Those tales talk about the genesis of the Middle Earth, everything before the Third Era and the creation of the Rings of Power. The second book is <a href="http://www.amazon.com/exec/obidos/tg/detail/-/0380007010?v=glance">De Profundis</a> the famous letter  written by Oscar Wilde in charge of Lord Alfred Douglas; strange and hard book but if you, as me,like one of the fathers of aestheticism, it's definitely a must read. Last, but surely not least, I'm reading a book written about 2500 years ago (around the 5th century before Christ). I think that's a well-known book and it's title is <a href="http://www.amazon.com/exec/obidos/tg/detail/-/0195014766?v=glance">The Art Of War</a> by Sun Tzu, a marvellous text that's a handbook of strategy but most important it's a handbook of zen philosophy and a handbook...of life.</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/5281182/107384373285773390" rel="service.edit" title="Project thoughts" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-11T18:55:32+01:00</issued>
+<modified>2004-01-11T17:57:52Z</modified>
+<created>2004-01-11T17:57:18Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#107384373285773390" rel="alternate" title="Project thoughts" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-107384373285773390</id>
+<title mode="escaped" type="text/html">Project thoughts</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Today I was looking for the best way to write the feed reader and these are my thoughts:
+<br/>
+<br/>* XmlTextReader seems to be the fastest xml reader and looks nice but I don't like the pull model very much and since the library isn't mission critical I'll consider to use it only if I don't get anything else working (maybe I could try to implement more than one reader... I don't know)
+<br/>* XmlDocument is handier than XmlTextReader cause uses the <acronym title="Document Object Model">DOM</acronym> but it's slow (not very much to being honest, I can't imagine a 5+ MBytes Atom feed) and I don't need editing or inserting any data at all.
+<br/>* XPathDocument + XPathNavigator is quite  reasonably the right direction to go. Fast, readonly and exposes to me all the power of  <acronym title="Xml Path Language">XPath</acronym>.
+<br/>
+<br/>So, after re-seeing <acronym title="MicroSoft Developer Network">MSDN</acronym>-TV's Don Box <a href="http://msdn.microsoft.com/msdntv/episode.aspx?xml=episodes/en/20030603XMLDB/manifest.xml">episode</a> called "Passing XML Data Inside the CLR" I decided to give XPath a try.
+<br/>
+<br/>Stay tuned.</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/5281182/107381634451469359" rel="service.edit" title="Robert Wlodarczyk joined Atom.NET project" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-11T11:19:04+01:00</issued>
+<modified>2004-01-11T10:49:40Z</modified>
+<created>2004-01-11T10:20:50Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#107381634451469359" rel="alternate" title="Robert Wlodarczyk joined Atom.NET project" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-107381634451469359</id>
+<title mode="escaped" type="text/html">Robert Wlodarczyk joined Atom.NET project</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">Now, I'm not alone... <a href="http://weblogs.asp.net/rwlodarc/">Robert</a> joined the thing yesterday night (GMT +1)... He was a <a href="http://rss-net.sourceforge.net">RSS.NET</a> developer before starting to work at <a href="http://www.microsoft.com">Microsoft</a> in the Longhorn team. Hooray!</div>
+</content>
+</entry>
+<entry>
+<link href="http://www.blogger.com/atom/5281182/107381534788785285" rel="service.edit" title="RSSBandit" type="application/x.atom+xml"/>
+<author>
+<name>Lawrence Oluyede</name>
+</author>
+<issued>2004-01-11T11:02:27+01:00</issued>
+<modified>2004-01-11T10:06:43Z</modified>
+<created>2004-01-11T10:04:14Z</created>
+<link href="http://loluyede.blogspot.com/2004_01_01_loluyede_archive.html#107381534788785285" rel="alternate" title="RSSBandit" type="text/html"/>
+<id>tag:blogger.com,1999:blog-5281182.post-107381534788785285</id>
+<title mode="escaped" type="text/html">RSSBandit</title>
+<content type="application/xhtml+xml" xml:base="http://loluyede.blogspot.com" xml:lang="en-US" xml:space="preserve">
+<div xmlns="http://www.w3.org/1999/xhtml">In these days, before my known Win problem, I was looking for another aggregator (I used many aggregators in Win and also on Linux but none of them suited my needs perfectly). My favourite aggregator, before yesterday, was <a href="http://www.sharpreader.net" title="Luke Hutterman's .NET feed aggregator">SharpReader</a> but having 250+ feeds is not a cool and handy thing within it; so a friend (<a href="http://www.dotmark.net/default.aspx">Marco Trova</a>) suggested me to use <a href="http://www.rssbandit.org">RSSBandit</a>, the aggregator started by <a href="http://www.25hoursaday.com/weblog">Dare Obasanjo</a>. It definitely rocks! It features tabbed browsing, supports the Comment API, groups the exceptions in a separate feed, supports XSLT to style the feed pane, RSS autodiscovery and handles without problems 250+ feeds. Very cool :)</div>
+</content>
+</entry>
+</feed>
+

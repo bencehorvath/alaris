@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{827FC720-BEE2-4357-B29F-0C2BDF51472D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>alaris</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Description>Alaris IRC Bot</Description>
+    <RootNamespace>Alaris</RootNamespace>
+    <StartupObject>Alaris.Core.Entry</StartupObject>
+    <CodePage>65001</CodePage>
+    <ReleaseVersion>2.3</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>169,414</NoWarn>
+    <GenerateDocumentation>true</GenerateDocumentation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib" />
+    <Reference Include="Mono.Data" />
+    <Reference Include="Mono.Http" />
+    <Reference Include="Mono.Posix" />
+    <Reference Include="Mono.Security" />
+    <Reference Include="monodoc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+    <Reference Include="Mono.CSharp" />
+    <Reference Include="Mono.Management" />
+    <Reference Include="System.Management" />
+    <Reference Include="Mono.Debugger, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alaris.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ScriptManager.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="PublicMessageHandler.cs" />
+    <Compile Include="API.cs" />
+    <Compile Include="CrashHandler.cs" />
+    <Compile Include="WebHelper.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="HaskellEvaluator.cs" />
+    <Compile Include="Threading\ThreadPool.cs" />
+    <Compile Include="Threading\IThreadContext.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="SingletonException.cs" />
+    <Compile Include="Network\AlarisPacket.cs" />
+    <Compile Include="Network\Opcodes.cs" />
+    <Compile Include="Network\ClientListener.cs" />
+    <Compile Include="Network\ClientPacketHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\irc\irc.csproj">
+      <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
+      <Name>irc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlarisAPI\AlarisAPI.csproj">
+      <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
+      <Name>AlarisAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\alaris.conf" />
+    <None Include="..\Doxyfile" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <VersionControlPolicy inheritsSet="Mono" />
+          <ChangeLogPolicy UpdateMode="ProjectRoot" inheritsSet="Mono">
+            <MessageStyle LineAlign="0" />
+          </ChangeLogPolicy>
+        </Policies>
+        <MonoDevelop.Autotools.MakefileInfo RelativeMakefileName="Makefile.am" ParallelProcesses="3" SyncReferences="true" IsAutotoolsProject="true" RelativeConfigureInPath="..">
+          <BuildFilesVar Sync="true" Name="FILES" />
+          <DeployFilesVar />
+          <ResourcesVar Sync="true" Name="RESOURCES" />
+          <OthersVar />
+          <GacRefVar Sync="true" Name="REFERENCES" />
+          <AsmRefVar Sync="true" Name="REFERENCES" />
+          <ProjectRefVar Sync="true" Name="REFERENCES" />
+        </MonoDevelop.Autotools.MakefileInfo>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="Threading\" />
+    <Folder Include="Network\" />
+  </ItemGroup>
+</Project>

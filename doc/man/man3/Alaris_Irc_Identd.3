@@ -1,0 +1,62 @@
+.TH "Alaris::Irc::Identd" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Irc::Identd \- 
+.PP
+An Ident daemon is still used by some IRC networks for authentication. It is a simple service which when queried by a remote system returns a username. The server is controlled via static methods all of which are Thread safe.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBStart\fP (string userName)"
+.br
+.RI "\fIThe \fBIdentd\fP server will start listening for queries in its own thread. It can be stopped by calling \fBIdentd.Stop\fP. \fP"
+.ti -1c
+.RI "static bool \fBIsRunning\fP ()"
+.br
+.RI "\fICheck if the \fBIdentd\fP server is running. \fP"
+.ti -1c
+.RI "static void \fBStop\fP ()"
+.br
+.RI "\fIStop the \fBIdentd\fP server and close the thread. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+An Ident daemon is still used by some IRC networks for authentication. It is a simple service which when queried by a remote system returns a username. The server is controlled via static methods all of which are Thread safe. 
+
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static bool Alaris.Irc.Identd.IsRunning ()\fC [static]\fP"
+.PP
+Check if the \fBIdentd\fP server is running. \fBReturns:\fP
+.RS 4
+True if it is running
+.RE
+.PP
+
+.SS "static void Alaris.Irc.Identd.Start (string userName)\fC [static]\fP"
+.PP
+The \fBIdentd\fP server will start listening for queries in its own thread. It can be stopped by calling \fBIdentd.Stop\fP. \fBParameters:\fP
+.RS 4
+\fIuserName\fP Should be the same username as the one used in the \fBConnectionArgs\fP object when establishing a connection.
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIException\fP If the server has already been started.
+.RE
+.PP
+
+.SS "static void Alaris.Irc.Identd.Stop ()\fC [static]\fP"
+.PP
+Stop the \fBIdentd\fP server and close the thread. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

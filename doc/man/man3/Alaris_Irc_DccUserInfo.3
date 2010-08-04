@@ -1,0 +1,94 @@
+.TH "Alaris::Irc::DccUserInfo" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Irc::DccUserInfo \- 
+.PP
+This class encapsulates all the information known about a remote user in the context of a DCC session.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAlaris::Irc::UserInfo\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDccUserInfo\fP (\fBConnection\fP connection, string nick)"
+.br
+.RI "\fICreate an instance that represents a user. \fP"
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.RI "\fIA friendly representation of this object. \fP"
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "IPAddress \fBRemoteAddress\fP\fC [get]\fP"
+.br
+.RI "\fIRead only property that returns the IP address of the remote user. \fP"
+.ti -1c
+.RI "int \fBPort\fP\fC [get]\fP"
+.br
+.RI "\fIRead only property that returns the port of the connection to the remote user. \fP"
+.ti -1c
+.RI "IPEndPoint \fBRemoteEndPoint\fP\fC [get]\fP"
+.br
+.RI "\fIThe remote users TCP/IP information. \fP"
+.ti -1c
+.RI "\fBConnection\fP \fBConnection\fP\fC [get]\fP"
+.br
+.RI "\fIThe connection representing on which IRC server the remote user can be found. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class encapsulates all the information known about a remote user in the context of a DCC session. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Alaris.Irc.DccUserInfo.DccUserInfo (\fBConnection\fP connection, string nick)"
+.PP
+Create an instance that represents a user. \fBParameters:\fP
+.RS 4
+\fIconnection\fP The IRC server connection which the remote user is on.
+.br
+\fInick\fP The remote user's nick.
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "override string Alaris.Irc.DccUserInfo.ToString ()"
+.PP
+A friendly representation of this object. \fBReturns:\fP
+.RS 4
+The remote's user nick and his IP address, e.g. Nick@192.168.0.23
+.RE
+.PP
+
+.PP
+Reimplemented from \fBAlaris.Irc.UserInfo\fP.
+.SH "Property Documentation"
+.PP 
+.SS "\fBConnection\fP Alaris.Irc.DccUserInfo.Connection\fC [get]\fP"
+.PP
+The connection representing on which IRC server the remote user can be found. A read-only instance of \fBConnection\fP
+.SS "int Alaris.Irc.DccUserInfo.Port\fC [get]\fP"
+.PP
+Read only property that returns the port of the connection to the remote user. This will be a listen port if the remote user was the initiator of the session or else it is simply a client port.
+.PP
+The port as an integer. Will return -1 if the session has not yet been opened.
+.SS "IPAddress Alaris.Irc.DccUserInfo.RemoteAddress\fC [get]\fP"
+.PP
+Read only property that returns the IP address of the remote user. An instance of IPAddress or null if the session has not been opened.
+.SS "IPEndPoint Alaris.Irc.DccUserInfo.RemoteEndPoint\fC [get]\fP"
+.PP
+The remote users TCP/IP information. A read-only instance of IPEndPoint
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

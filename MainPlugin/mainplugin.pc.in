@@ -1,0 +1,6 @@
+Name: MainPlugin
+Description: MainPlugin
+Version: 1.6
+
+Requires: 
+Libs: -r:@expanded_libdir@/@PACKAGE@/MainPlugin.dll

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<feed version="0.3" xmlns="http://purl.org/atom/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en">
+  <title>CLRSQL</title>
+  <link rel="alternate" type="text/html" href="http://www.clrsql.com/weblog/" />
+  <modified>2004-02-01T01:46:28Z</modified>
+  <tagline>Articles, Code, and other Resources for Yukon Developers</tagline>
+  <id>tag:www.clrsql.com,2004:/weblog//3</id>
+  <generator url="http://www.movabletype.org/" version="2.661">Movable Type</generator>
+  <copyright>Copyright (c) 2004, Randy Holloway</copyright>
+  <entry>
+    <title>Yukon Community on Orkut</title>
+    <link rel="alternate" type="text/html" href="http://www.clrsql.com/weblog/archives/000003.html" />
+    <modified>2004-02-01T01:46:28Z</modified>
+    <issued>2004-01-31T19:46:28-06:00</issued>
+    <id>tag:www.clrsql.com,2004:/weblog//3.3</id>
+    <created>2004-02-01T01:46:28Z</created>
+    <summary type="text/plain">We&apos;re starting a Yukon community on Orkut. If you&apos;re already a member, search for the keyword &quot;Yukon&quot; under communities and join up. If you&apos;re not an Orkut member but want to participate in this group, leave a comment or send...</summary>
+    <author>
+      <name>Randy Holloway</name>
+      <url>http://clrsql.com</url>
+      <email>randy@clrsql.com</email>
+    </author>
+    <dc:subject>Announcements</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.clrsql.com/weblog/">
+      <![CDATA[<p>We're starting a Yukon community on <a href="http://www.orkut.com">Orkut</a>.  If you're already a member, search for the keyword "Yukon" under communities and join up.  If you're not an Orkut member but want to participate in this group, leave a comment or send me an e-mail.</p>]]>
+      
+    </content>
+  </entry>
+  <entry>
+    <title>The Mission of CLRSQL</title>
+    <link rel="alternate" type="text/html" href="http://www.clrsql.com/weblog/archives/000002.html" />
+    <modified>2004-02-01T01:33:22Z</modified>
+    <issued>2004-01-31T19:33:22-06:00</issued>
+    <id>tag:www.clrsql.com,2004:/weblog//3.2</id>
+    <created>2004-02-01T01:33:22Z</created>
+    <summary type="text/plain">The mission of CLRSQL is to fill the need for unbiased technical and non-technical information about the next version of Microsoft&apos;s SQL Server platform, code-named Yukon. While there are other SQL Server community sites, this site will offer the opportunity...</summary>
+    <author>
+      <name>Randy Holloway</name>
+      <url>http://clrsql.com</url>
+      <email>randy@clrsql.com</email>
+    </author>
+    <dc:subject>General</dc:subject>
+    <content type="text/html" mode="escaped" xml:lang="en" xml:base="http://www.clrsql.com/weblog/">
+      <![CDATA[<p>The mission of <a href="http://www.clrsql.com">CLRSQL</a> is to fill the need for unbiased technical and non-technical information about the next version of Microsoft's SQL Server platform, code-named <a href="http://www.microsoft.com/sql/yukon/productinfo/">Yukon</a>.  While there are other SQL Server community sites, this site will offer the opportunity for members of the SQL Server community to contribute through the posting of weblog entries and articles.  In addition, this site will focus more on the needs of developers and will attempt to provide information to help them evaluate, implement, and develop applications targeted for Yukon.</p>
+
+<p>If you're interested in participating, please post a comment or contact me directly.  Thanks.<br />
+</p>]]>
+      
+    </content>
+  </entry>
+
+</feed>

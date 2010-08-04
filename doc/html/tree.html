@@ -1,0 +1,264 @@
+<!-- This comment will put IE 6, 7 and 8 in quirks mode -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Language" content="en" />
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javaScript" src="search/search.js"></script>
+    <link rel="stylesheet" href="doxygen.css"/>
+    <title>TreeView</title>
+    <script type="text/javascript">
+    <!-- // Hide script from old browsers
+    
+    function toggleFolder(id, imageNode) 
+    {
+      var folder = document.getElementById(id);
+      var l = imageNode.src.length;
+      if (imageNode.src.substring(l-20,l)=="ftv2folderclosed.png" || 
+          imageNode.src.substring(l-18,l)=="ftv2folderopen.png")
+      {
+        imageNode = imageNode.previousSibling;
+        l = imageNode.src.length;
+      }
+      if (folder == null) 
+      {
+      } 
+      else if (folder.style.display == "block") 
+      {
+        if (imageNode != null) 
+        {
+          imageNode.nextSibling.src = "ftv2folderclosed.png";
+          if (imageNode.src.substring(l-13,l) == "ftv2mnode.png")
+          {
+            imageNode.src = "ftv2pnode.png";
+          }
+          else if (imageNode.src.substring(l-17,l) == "ftv2mlastnode.png")
+          {
+            imageNode.src = "ftv2plastnode.png";
+          }
+        }
+        folder.style.display = "none";
+      } 
+      else 
+      {
+        if (imageNode != null) 
+        {
+          imageNode.nextSibling.src = "ftv2folderopen.png";
+          if (imageNode.src.substring(l-13,l) == "ftv2pnode.png")
+          {
+            imageNode.src = "ftv2mnode.png";
+          }
+          else if (imageNode.src.substring(l-17,l) == "ftv2plastnode.png")
+          {
+            imageNode.src = "ftv2mlastnode.png";
+          }
+        }
+        folder.style.display = "block";
+      }
+    }
+
+    // End script hiding -->        
+    </script>
+  </head>
+
+  <body class="ftvtree" onload='searchBox.OnSelectItem(0);'>
+      <script type="text/javascript"><!--
+      var searchBox = new SearchBox("searchBox", "search", true, 'Search');
+      --></script>
+      <div id="MSearchBox" class="MSearchBoxInactive">
+      <div class="MSearchBoxRow"><span class="MSearchBoxLeft">
+      <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+      <input type="text" id="MSearchField" value="Search" accesskey="S"
+           onfocus="searchBox.OnSearchFieldFocus(true)" 
+           onblur="searchBox.OnSearchFieldFocus(false)" 
+           onkeyup="searchBox.OnSearchFieldChange(event)"/>
+      </span><span class="MSearchBoxRight">
+      <img id="MSearchSelect" src="search/search.png"
+           onmouseover="return searchBox.OnSearchSelectShow()"
+           onmouseout="return searchBox.OnSearchSelectHide()"
+           alt=""/>
+      </span></div><div class="MSearchBoxSpacer">&nbsp;</div>
+      </div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>Events</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+    <div class="directory">
+      <h3 class="swap"><span>Alaris IRC Bot</span></h3>
+      <div style="display: block;">
+        <p><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder1', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder1', this)"/><a class="el" href="annotated.html" target="basefrm">Class List</a></p>
+        <div id="folder1">
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_core_1_1_alaris_bot.html" target="basefrm">Alaris.Core.AlarisBot</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_lua_plugin_1_1_alaris_plugin.html" target="basefrm">Alaris.LuaPlugin.AlarisPlugin</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_main_plugin_1_1_alaris_plugin.html" target="basefrm">Alaris.MainPlugin.AlarisPlugin</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_mangos_rss_plugin_1_1_alaris_plugin.html" target="basefrm">Alaris.MangosRssPlugin.AlarisPlugin</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_channel_mode_info.html" target="basefrm">Alaris.Irc.ChannelModeInfo</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_command_builder.html" target="basefrm">Alaris.Irc.CommandBuilder</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_config_file_invalid_exception.html" target="basefrm">Alaris.Extras.ConfigFileInvalidException</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_connection.html" target="basefrm">Alaris.Irc.Connection</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="struct_alaris_1_1_irc_1_1_connection_args.html" target="basefrm">Alaris.Irc.ConnectionArgs</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_crash_handler.html" target="basefrm">Alaris.Extras.CrashHandler</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_ctcp_listener.html" target="basefrm">Alaris.Irc.CtcpListener</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_ctcp_responder.html" target="basefrm">Alaris.Irc.CtcpResponder</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_ctcp_sender.html" target="basefrm">Alaris.Irc.CtcpSender</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_ctcp_util.html" target="basefrm">Alaris.Irc.CtcpUtil</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_chat_session.html" target="basefrm">Alaris.Irc.DccChatSession</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_file_info.html" target="basefrm">Alaris.Irc.DccFileInfo</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_file_session.html" target="basefrm">Alaris.Irc.DccFileSession</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_file_session_manager.html" target="basefrm">Alaris.Irc.DccFileSessionManager</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_listener.html" target="basefrm">Alaris.Irc.DccListener</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_user_info.html" target="basefrm">Alaris.Irc.DccUserInfo</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_util.html" target="basefrm">Alaris.Irc.DccUtil</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_core_1_1_entry.html" target="basefrm">Alaris.Core.Entry</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_haskell_evaluator.html" target="basefrm">Alaris.Extras.HaskellEvaluator</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="interface_alaris_1_1_core_1_1_i_alaris_basic.html" target="basefrm">Alaris.Core.IAlarisBasic</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_identd.html" target="basefrm">Alaris.Irc.Identd</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="interface_alaris_1_1_irc_1_1_i_parser.html" target="basefrm">Alaris.Irc.IParser</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_irc_constants.html" target="basefrm">Alaris.Extras.IrcConstants</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_listener.html" target="basefrm">Alaris.Irc.Listener</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_core_1_1_log.html" target="basefrm">Alaris.Core.Log</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_mangos_rss.html" target="basefrm">Alaris.Extras.MangosRss</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_name_generator.html" target="basefrm">Alaris.Irc.NameGenerator</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_rfc2812_util.html" target="basefrm">Alaris.Irc.Rfc2812Util</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_script_manager.html" target="basefrm">Alaris.Extras.ScriptManager</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_sender.html" target="basefrm">Alaris.Irc.Sender</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_server_properties.html" target="basefrm">Alaris.Irc.ServerProperties</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_text_color.html" target="basefrm">Alaris.Irc.TextColor</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_user_info.html" target="basefrm">Alaris.Irc.UserInfo</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_utilities.html" target="basefrm">Alaris.Extras.Utilities</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_web_helper.html" target="basefrm">Alaris.Extras.WebHelper</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_whois_info.html" target="basefrm">Alaris.Irc.WhoisInfo</a></p>
+        </div>
+        <p><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder2', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder2', this)"/><a class="el" href="hierarchy.html" target="basefrm">Class Hierarchy</a></p>
+        <div id="folder2">
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_core_1_1_alaris_bot.html" target="basefrm">Alaris.Core.AlarisBot</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_channel_mode_info.html" target="basefrm">Alaris.Irc.ChannelModeInfo</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder3', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder3', this)"/><a class="el" href="class_alaris_1_1_irc_1_1_command_builder.html" target="basefrm">Alaris.Irc.CommandBuilder</a></p>
+          <div id="folder3">
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_ctcp_sender.html" target="basefrm">Alaris.Irc.CtcpSender</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_sender.html" target="basefrm">Alaris.Irc.Sender</a></p>
+          </div>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_config_file_invalid_exception.html" target="basefrm">Alaris.Extras.ConfigFileInvalidException</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_connection.html" target="basefrm">Alaris.Irc.Connection</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="struct_alaris_1_1_irc_1_1_connection_args.html" target="basefrm">Alaris.Irc.ConnectionArgs</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_crash_handler.html" target="basefrm">Alaris.Extras.CrashHandler</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_ctcp_listener.html" target="basefrm">Alaris.Irc.CtcpListener</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_ctcp_responder.html" target="basefrm">Alaris.Irc.CtcpResponder</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_ctcp_util.html" target="basefrm">Alaris.Irc.CtcpUtil</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_chat_session.html" target="basefrm">Alaris.Irc.DccChatSession</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_file_info.html" target="basefrm">Alaris.Irc.DccFileInfo</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_file_session.html" target="basefrm">Alaris.Irc.DccFileSession</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_file_session_manager.html" target="basefrm">Alaris.Irc.DccFileSessionManager</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_listener.html" target="basefrm">Alaris.Irc.DccListener</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_util.html" target="basefrm">Alaris.Irc.DccUtil</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_core_1_1_entry.html" target="basefrm">Alaris.Core.Entry</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_haskell_evaluator.html" target="basefrm">Alaris.Extras.HaskellEvaluator</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder4', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder4', this)"/><a class="el" href="interface_alaris_1_1_core_1_1_i_alaris_basic.html" target="basefrm">Alaris.Core.IAlarisBasic</a></p>
+          <div id="folder4">
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_lua_plugin_1_1_alaris_plugin.html" target="basefrm">Alaris.LuaPlugin.AlarisPlugin</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_main_plugin_1_1_alaris_plugin.html" target="basefrm">Alaris.MainPlugin.AlarisPlugin</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_mangos_rss_plugin_1_1_alaris_plugin.html" target="basefrm">Alaris.MangosRssPlugin.AlarisPlugin</a></p>
+          </div>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_identd.html" target="basefrm">Alaris.Irc.Identd</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="interface_alaris_1_1_irc_1_1_i_parser.html" target="basefrm">Alaris.Irc.IParser</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_irc_constants.html" target="basefrm">Alaris.Extras.IrcConstants</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_listener.html" target="basefrm">Alaris.Irc.Listener</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_core_1_1_log.html" target="basefrm">Alaris.Core.Log</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_mangos_rss.html" target="basefrm">Alaris.Extras.MangosRss</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_name_generator.html" target="basefrm">Alaris.Irc.NameGenerator</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_rfc2812_util.html" target="basefrm">Alaris.Irc.Rfc2812Util</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_script_manager.html" target="basefrm">Alaris.Extras.ScriptManager</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_server_properties.html" target="basefrm">Alaris.Irc.ServerProperties</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_text_color.html" target="basefrm">Alaris.Irc.TextColor</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder5', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder5', this)"/><a class="el" href="class_alaris_1_1_irc_1_1_user_info.html" target="basefrm">Alaris.Irc.UserInfo</a></p>
+          <div id="folder5">
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_dcc_user_info.html" target="basefrm">Alaris.Irc.DccUserInfo</a></p>
+          </div>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_utilities.html" target="basefrm">Alaris.Extras.Utilities</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_extras_1_1_web_helper.html" target="basefrm">Alaris.Extras.WebHelper</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_alaris_1_1_irc_1_1_whois_info.html" target="basefrm">Alaris.Irc.WhoisInfo</a></p>
+        </div>
+        <p><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="functions.html" target="basefrm">Class Members</a></p>
+        <p><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="inherits.html" target="basefrm">Graphical Class Hierarchy</a></p>
+        <p><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder6', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder6', this)"/><a class="el" href="namespaces.html" target="basefrm">Package List</a></p>
+        <div id="folder6">
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="namespace_alaris.html" target="basefrm">Alaris</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="namespace_alaris_1_1_core.html" target="basefrm">Alaris.Core</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="namespace_alaris_1_1_extras.html" target="basefrm">Alaris.Extras</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="namespace_alaris_1_1_irc.html" target="basefrm">Alaris.Irc</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="namespace_alaris_1_1_lua_plugin.html" target="basefrm">Alaris.LuaPlugin</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="namespace_alaris_1_1_main_plugin.html" target="basefrm">Alaris.MainPlugin</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="namespace_alaris_1_1_mangos_rss_plugin.html" target="basefrm">Alaris.MangosRssPlugin</a></p>
+        </div>
+        <p><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="namespacemembers.html" target="basefrm">Namespace Members</a></p>
+        <p><img src="ftv2plastnode.png" alt="\" width="16" height="22" onclick="toggleFolder('folder7', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder7', this)"/><a class="el" href="files.html" target="basefrm">File List</a></p>
+        <div id="folder7">
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_alaris_8cs.html" target="basefrm">alaris/Alaris.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_a_p_i_8cs.html" target="basefrm">alaris/API.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="alaris_2_assembly_info_8cs.html" target="basefrm">alaris/AssemblyInfo.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_constants_8cs.html" target="basefrm">alaris/Constants.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_crash_handler_8cs.html" target="basefrm">alaris/CrashHandler.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_exceptions_8cs.html" target="basefrm">alaris/Exceptions.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_haskell_evaluator_8cs.html" target="basefrm">alaris/HaskellEvaluator.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_log_8cs.html" target="basefrm">alaris/Log.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_main_8cs.html" target="basefrm">alaris/Main.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_public_message_handler_8cs.html" target="basefrm">alaris/PublicMessageHandler.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_rss_handlers_8cs.html" target="basefrm">alaris/RssHandlers.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_script_manager_8cs.html" target="basefrm">alaris/ScriptManager.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_utilities_8cs.html" target="basefrm">alaris/Utilities.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_web_helper_8cs.html" target="basefrm">alaris/WebHelper.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_alaris_a_p_i_2_assembly_info_8cs.html" target="basefrm">AlarisAPI/AssemblyInfo.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_i_alaris_8cs.html" target="basefrm">AlarisAPI/IAlaris.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="irc_2_assembly_info_8cs.html" target="basefrm">irc/AssemblyInfo.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_channel_mode_info_8cs.html" target="basefrm">irc/ChannelModeInfo.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_command_builder_8cs.html" target="basefrm">irc/CommandBuilder.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_connection_8cs.html" target="basefrm">irc/Connection.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_connection_args_8cs.html" target="basefrm">irc/ConnectionArgs.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_delegates_8cs.html" target="basefrm">irc/Delegates.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_enums_8cs.html" target="basefrm">irc/Enums.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_identd_8cs.html" target="basefrm">irc/Identd.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_i_parser_8cs.html" target="basefrm">irc/IParser.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_listener_8cs.html" target="basefrm">irc/Listener.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_name_generator_8cs.html" target="basefrm">irc/NameGenerator.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_reply_code_8cs.html" target="basefrm">irc/ReplyCode.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_rfc2812_util_8cs.html" target="basefrm">irc/Rfc2812Util.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_sender_8cs.html" target="basefrm">irc/Sender.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_server_properties_8cs.html" target="basefrm">irc/ServerProperties.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_text_color_8cs.html" target="basefrm">irc/TextColor.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_user_info_8cs.html" target="basefrm">irc/UserInfo.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_whois_info_8cs.html" target="basefrm">irc/WhoisInfo.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_ctcp_listener_8cs.html" target="basefrm">irc/Ctcp/CtcpListener.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_ctcp_responder_8cs.html" target="basefrm">irc/Ctcp/CtcpResponder.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_ctcp_sender_8cs.html" target="basefrm">irc/Ctcp/CtcpSender.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_ctcp_util_8cs.html" target="basefrm">irc/Ctcp/CtcpUtil.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_dcc_chat_session_8cs.html" target="basefrm">irc/Dcc/DccChatSession.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_dcc_file_info_8cs.html" target="basefrm">irc/Dcc/DccFileInfo.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_dcc_file_session_8cs.html" target="basefrm">irc/Dcc/DccFileSession.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_dcc_file_session_manager_8cs.html" target="basefrm">irc/Dcc/DccFileSessionManager.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_dcc_listener_8cs.html" target="basefrm">irc/Dcc/DccListener.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_dcc_user_info_8cs.html" target="basefrm">irc/Dcc/DccUserInfo.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_dcc_util_8cs.html" target="basefrm">irc/Dcc/DccUtil.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_lua_plugin_2_assembly_info_8cs.html" target="basefrm">LuaPlugin/AssemblyInfo.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_lua_plugin_2_plugin_8cs.html" target="basefrm">LuaPlugin/Plugin.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_main_plugin_2_assembly_info_8cs.html" target="basefrm">MainPlugin/AssemblyInfo.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_main_plugin_2_plugin_8cs.html" target="basefrm">MainPlugin/Plugin.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_mangos_rss_plugin_2_assembly_info_8cs.html" target="basefrm">MangosRssPlugin/AssemblyInfo.cs</a></p>
+          <p><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_mangos_rss_plugin_2_plugin_8cs.html" target="basefrm">MangosRssPlugin/Plugin.cs</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

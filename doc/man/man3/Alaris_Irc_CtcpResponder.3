@@ -1,0 +1,86 @@
+.TH "Alaris::Irc::CtcpResponder" 3 "25 May 2010" "Version 1.6" "Alaris IRC Bot" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Alaris::Irc::CtcpResponder \- 
+.PP
+A class which automatically responds to CTCP queries. The replies it sends are configurable by the client.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCtcpResponder\fP (\fBConnection\fP connection)"
+.br
+.RI "\fICreate an instance and register handlers for CTCP events. The Connection's CtcpEnable property must be set to true or the connection will not send CTCP events to this responder. \fP"
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "double \fBResponseDelay\fP\fC [get, set]\fP"
+.br
+.RI "\fIHow long the responder should wait before replying to a query. Queries coming before this time has passed will be droppped. \fP"
+.ti -1c
+.RI "string \fBFingerResponse\fP\fC [get, set]\fP"
+.br
+.RI "\fIFinger responses normally consist of a message and the idle time. \fP"
+.ti -1c
+.RI "string \fBUserInfoResponse\fP\fC [get, set]\fP"
+.br
+.RI "\fIA message about the user. \fP"
+.ti -1c
+.RI "string \fBVersionResponse\fP\fC [get, set]\fP"
+.br
+.RI "\fIThe version of the client software. \fP"
+.ti -1c
+.RI "string \fBClientInfoResponse\fP\fC [get, set]\fP"
+.br
+.RI "\fITell others what CTCP commands this client supports. \fP"
+.ti -1c
+.RI "string \fBSourceResponse\fP\fC [get, set]\fP"
+.br
+.RI "\fIWhere to get this client. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+A class which automatically responds to CTCP queries. The replies it sends are configurable by the client. 
+
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Alaris.Irc.CtcpResponder.CtcpResponder (\fBConnection\fP connection)"
+.PP
+Create an instance and register handlers for CTCP events. The Connection's CtcpEnable property must be set to true or the connection will not send CTCP events to this responder. \fBParameters:\fP
+.RS 4
+\fIconnection\fP The containing connection.
+.RE
+.PP
+
+.SH "Property Documentation"
+.PP 
+.SS "string Alaris.Irc.CtcpResponder.ClientInfoResponse\fC [get, set]\fP"
+.PP
+Tell others what CTCP commands this client supports. By default it sends a list of all the CTCP commands.
+.SS "string Alaris.Irc.CtcpResponder.FingerResponse\fC [get, set]\fP"
+.PP
+Finger responses normally consist of a message and the idle time. The Idle time will be automatically appended to the finger response. This default to the \fBUserInfo\fP message.
+.SS "double Alaris.Irc.CtcpResponder.ResponseDelay\fC [get, set]\fP"
+.PP
+How long the responder should wait before replying to a query. Queries coming before this time has passed will be droppped. The delay in milliseconds. The default is 2000 (2 seconds).
+.SS "string Alaris.Irc.CtcpResponder.SourceResponse\fC [get, set]\fP"
+.PP
+Where to get this client. This can be a complex set of FTP instructions or just a URL to the client's homepage.
+.SS "string Alaris.Irc.CtcpResponder.UserInfoResponse\fC [get, set]\fP"
+.PP
+A message about the user. Any string which does not exceed the IRC max length. This defaults to 'Thresher Auto-Responder'.
+.SS "string Alaris.Irc.CtcpResponder.VersionResponse\fC [get, set]\fP"
+.PP
+The version of the client software. This defaults to 'Thresher IRC library 1.0'.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alaris IRC Bot from the source code.

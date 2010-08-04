@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_alaris_1_1_irc_1_1_dcc_chat_session.html#a87471ebb3033ef2bd2a94f95c5fb6a93" title="When another a remote user has sent a chat request, this method is called to accept..." alt="" coords="297,5,529,35"/>
+<area shape="rect" id="node5" href="$class_alaris_1_1_irc_1_1_dcc_chat_session.html#a4f69cb4a3659bd8b3d45a99ac0d92fef" title="Send a DCC Chat request to a remote user and wait for a connection using timeout..." alt="" coords="295,59,532,88"/>
+</map>
