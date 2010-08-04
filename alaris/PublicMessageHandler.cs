@@ -146,7 +146,14 @@ namespace Alaris.Core
 				
 			}
 			
-			
+			if(msg.StartsWith("@sayid ") && MysqlEnabled)
+			{
+				var id = Convert.ToInt32(msg.Remove(0,7));
+				
+				var row = sClusterManager.GetDatabaseManager().QueryFirstRow("SELECT message FROM messages WHERE id = '"+id+"'");
+				
+				_connection.Sender.PublicMessage(chan, row["message"].ToString());
+			}
 			
 			_manager.RunPublicHandlers(user, chan, msg);
 						

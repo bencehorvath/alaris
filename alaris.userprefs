@@ -3,29 +3,19 @@
   <MonoDevelop.Ide.DebuggingService>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService>
-  <MonoDevelop.Ide.Workbench ActiveDocument="AlarisAPI/IAlaris.cs" ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="alaris-mysqld/Main.cs" ctype="Workbench">
     <Files>
-      <File FileName="FeedHandlerPlugin/FeedRunner.cs" Line="24" Column="2" />
-      <File FileName="FeedHandlerPlugin/Plugin.cs" Line="127" Column="31" />
-      <File FileName="FeedHandlerPlugin/FeedFactory.cs" Line="34" Column="27" />
-      <File FileName="alaris_server/Main.cs" Line="1" Column="1" />
-      <File FileName="alaris_server/ServerListener.cs" Line="42" Column="3" />
-      <File FileName="alaris/Main.cs" Line="23" Column="15" />
-      <File FileName="alaris/PublicMessageHandler.cs" Line="71" Column="5" />
-      <File FileName="alaris/Utilities.cs" Line="247" Column="110" />
-      <File FileName="alaris/Alaris.cs" Line="38" Column="43" />
-      <File FileName="MainPlugin/Plugin.cs" Line="42" Column="30" />
-      <File FileName="AlarisAPI/IAlaris.cs" Line="1" Column="1" />
+      <File FileName="alaris/Main.cs" Line="69" Column="28" />
+      <File FileName="alaris/Alaris.cs" Line="311" Column="4" />
+      <File FileName="alaris/PublicMessageHandler.cs" Line="149" Column="4" />
+      <File FileName="alaris/ClusterManager.cs" Line="3" Column="31" />
+      <File FileName="alaris-mysqld/AssemblyInfo.cs" Line="20" Column="32" />
+      <File FileName="alaris-mysqld/Main.cs" Line="5" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="alaris" expanded="True" />
-          <Node name="AlarisAPI" expanded="True">
-            <Node name="IAlaris.cs" selected="True" />
-          </Node>
-          <Node name="FeedHandlerPlugin" expanded="True" />
-          <Node name="MainPlugin" expanded="True" />
+          <Node name="alaris-mysqld" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">

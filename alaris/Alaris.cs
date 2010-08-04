@@ -33,11 +33,21 @@ namespace Alaris.Core
 		private List<string> _channels = new List<string>();
 		private string _anick, _auser, _ahost;
 		private CrashHandler sCrashHandler = Singleton<CrashHandler>.Instance;
+		private ClusterManager sClusterManager;
 		private readonly Guid _guid = Guid.NewGuid();
 		private readonly string _configfile;
 		private const int listener_port = 35221;
 		private const string ACS_HOST = "127.0.0.1";
 		private const int ACS_PORT= 35220;
+		/// <summary>
+		/// MySQL support enabled or not.
+		/// </summary>
+		public bool MysqlEnabled = false;
+		/// <summary>
+		/// MySQL data (host, user etc.).
+		/// Size: 4 (DB is last)
+		/// </summary>
+		public string[] MysqlData = null;
 		
 		/// <summary>
 		/// Determines whether the communication to and dependance of alaris_server is set.
@@ -127,6 +137,23 @@ namespace Alaris.Core
 			var ls = new List<Exception>();
 			sCrashHandler.HandleReadConfig(ReadConfig, _configfile, ref ls);
 			ls.Clear();
+			
+			// start database server.
+			if(MysqlEnabled)
+			{
+				var opts = new ProcessStartInfo();
+				opts.CreateNoWindow = false;
+				opts.WindowStyle = ProcessWindowStyle.Normal;
+				opts.FileName = "/usr/bin/mono";
+				opts.Arguments = "alaris-mysqld.exe";
+				Process.Start(opts);
+				
+				Thread.Sleep(1000);
+				
+				sClusterManager = Singleton<ClusterManager>.Instance;
+				
+			}
+			
 			Connect();
 		}
 		
@@ -146,6 +173,8 @@ namespace Alaris.Core
 			_connection.CtcpListener.OnCtcpRequest += OnCtcpRequest;
 			Log.Success("ScriptManager", "Event handlers are properly setup.");
 		}
+		
+		
 		
 		/// <summary>
 		/// Reads and parses the specified config file.
@@ -213,6 +242,26 @@ namespace Alaris.Core
 			Utilities.AdminUser = _auser;
 			Utilities.AdminNick = _anick;
 			Utilities.AdminHost = _ahost;
+			
+			var mysqlRegex = new Regex(@"mysql_enabled\s=\s(?<enabled>0|1)\s*\n*\r*mysql_data\s=\s(?<host>\S+),(?<user>\S+),(?<pass>\S+),(?<db>\S+)");
+			
+			if(!mysqlRegex.IsMatch(config))
+				throw new ConfigFileInvalidException("The specified configuration file is invalid.");
+			
+			var msmatch = mysqlRegex.Match(config);
+			MysqlEnabled = (msmatch.Groups["enabled"].ToString() == "1");
+			
+			if(MysqlEnabled)
+			{
+				Log.Debug("Alaris", "MySQL support is ON.");
+				MysqlData[0] = msmatch.Groups["host"].ToString();
+				MysqlData[1] = msmatch.Groups["user"].ToString();
+				MysqlData[2] = msmatch.Groups["pass"].ToString();
+				MysqlData[3] = msmatch.Groups["db"].ToString();
+			}
+			else
+				Log.Debug("Alaris", "MySQL support is OFF.");
+			
 			
 			Log.Success("Config", "File read and validated successfully.");
 

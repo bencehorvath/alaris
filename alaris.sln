@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedHandlerPlugin", "FeedHa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atom.NET", "Atom\Atom.NET.csproj", "{9DB254A5-AF25-4122-877C-3C6D9A86BC02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alaris-mysqld", "alaris-mysqld\alaris-mysqld.csproj", "{70CE9E95-D47E-4A01-A85D-BC76BC1E95AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{5C69DE32-25CD-4326-8ABC-91973C6485F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C69DE32-25CD-4326-8ABC-91973C6485F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C69DE32-25CD-4326-8ABC-91973C6485F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70CE9E95-D47E-4A01-A85D-BC76BC1E95AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70CE9E95-D47E-4A01-A85D-BC76BC1E95AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70CE9E95-D47E-4A01-A85D-BC76BC1E95AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70CE9E95-D47E-4A01-A85D-BC76BC1E95AC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7747D500-A95C-4B98-8FA6-0F7066ABAABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7747D500-A95C-4B98-8FA6-0F7066ABAABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7747D500-A95C-4B98-8FA6-0F7066ABAABE}.Release|Any CPU.ActiveCfg = Release|Any CPU

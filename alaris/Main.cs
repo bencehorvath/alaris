@@ -43,7 +43,7 @@ namespace Alaris.Core
 				var writer = new StreamWriter(conf);
 				writer.WriteLine("# The bot configuration file.\n# the server to connect to\nserver = irc.rizon.net\n# the nickname of the bot\nnick = alaris"
 				                 + "\n# password to nickserv\n# use 'nothing' for no identification\nnickserv = nothing\n# channels to join to"
-				                 + "\n# separate with commas\nchannels = #skullbot,#ascnhalf\n# User,Nick,Hostname\nadmin_data = Twl,Twl,evil.from.behind");
+				                 + "\n# separate with commas\nchannels = #skullbot,#ascnhalf\n# User,Nick,Hostname\nadmin_data = Twl,Twl,evil.from.behind\n\n# mysql support enabled or not.\nmysql_enabled = 0\nmysql_data=localhost,root,pw,alaris");
 				writer.Close();
 			}
 			
