@@ -105,7 +105,27 @@ namespace Alaris.FeedHandlerPlugin
 		
 		public void OnPublicMessage(UserInfo user, string chan, string msg)
 		{
-
+			if (msg == "@feeds")
+			{
+				string s = "";
+				
+				foreach(var runner in FeedFactory.FeedRunners)
+				{
+					s += runner.Name + " | ";
+				}
+				
+				_connection.Sender.PublicMessage(chan, s);
+			}
+			
+			if (msg.StartsWith("@feeds start"))
+			{
+				FeedFactory.StartRunners();
+			}
+			
+			if(msg.StartsWith("@feeds stop"))
+			{
+				FeedFactory.StopRunners();
+			}
 		}
 		
 
