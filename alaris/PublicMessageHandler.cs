@@ -136,7 +136,7 @@ namespace Alaris.Core
 				return;
 			}
 			
-			if(msg == "@request acs random")
+			if(msg == "@request acs random" && AlarisServer)
 			{
 				acs_rand_request_channel = chan;
 				var packet = new AlarisPacket();

@@ -68,22 +68,20 @@ namespace Alaris.Core
 			
 			sBot.Pool.Enqueue(sBot);
 			
-#if DEBUG
-
-			Log.Debug("AlarisServer", "Initiating connection.");
-			
-			var packet = new AlarisPacket();
-			
-			packet.Write<int>((int)Opcode.CMSG_REQUEST_AUTH);
-			packet.Write<string>(sBot.GetGuid().ToString());
-			packet.Write<string>(Utilities.MD5String("twlbot"));
-			packet.Write<int>(sBot.GetListenerPort());
-			
-			sBot.SendPacketToACS(packet);
+			if(AlarisBot.AlarisServer)
+			{
+				Log.Debug("AlarisServer", "Initiating connection.");
 				
+				var packet = new AlarisPacket();
 				
-		
-#endif
+				packet.Write<int>((int)Opcode.CMSG_REQUEST_AUTH);
+				packet.Write<string>(sBot.GetGuid().ToString());
+				packet.Write<string>(Utilities.MD5String("twlbot"));
+				packet.Write<int>(sBot.GetListenerPort());
+				
+				sBot.SendPacketToACS(packet);
+			}
+				
 		}
 	}
 }

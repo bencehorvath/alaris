@@ -40,6 +40,11 @@ namespace Alaris.Core
 		private const int ACS_PORT= 35220;
 		
 		/// <summary>
+		/// Determines whether the communication to and dependance of alaris_server is set.
+		/// </summary>
+		public readonly static bool AlarisServer = false;
+		
+		/// <summary>
 		/// The acs_rand_request_channel.
 		/// </summary>
 		public string acs_rand_request_channel;
@@ -222,6 +227,9 @@ namespace Alaris.Core
 		/// </param>
 		public void SendPacketToACS(AlarisPacket packet)
 		{
+			if(!AlarisServer)
+				return;
+			
 			var client = new TcpClient();
 			try
 			{
