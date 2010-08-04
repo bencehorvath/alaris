@@ -1,0 +1,4 @@
+*.obj
+*.pidb
+*.mdb
+*/bin/*
