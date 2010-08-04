@@ -20,22 +20,11 @@ namespace Alaris.FeedHandlerPlugin
 	public class AlarisPlugin : IAlarisBasic
 	{
 		private Timer _timer = new Timer();
-		private string _latest;
 		private Connection _connection;
 		private List<string> _channels;
-		private bool _firstrun = true;
 		private bool _running = false;
-		private string _lasttit;
 		
-		
-		/// <summary>
-		/// The latest hash.
-		/// </summary>
-		public string Latest { get { return _latest; } }
-		/// <summary>
-		/// Latest title.
-		/// </summary>
-		public string LatestTitle { get { return _lasttit; } }
+
 		
 		/// <summary>
 		/// Creates a new instance of MangosRss.
@@ -70,7 +59,7 @@ namespace Alaris.FeedHandlerPlugin
 		
 		public void Stop()
 		{
-			
+			FeedFactory.StopRunners();
 		}
 	
 		public void OnUnload()
@@ -84,7 +73,14 @@ namespace Alaris.FeedHandlerPlugin
 		
 		public void Start()
 		{
-			var mangos = FeedFactory.CreateFeedRunner(new Uri("http://github.com/Twl/alaris/commits/master.atom"), ref _connection, _channels, "mangos", 10000, "@mangos");
+			FeedFactory.CreateFeedRunner(new Uri("http://github.com/mangos/mangos/commits/master.atom"), ref _connection, _channels, "mangos", 10000, "@mangos");
+			
+			FeedFactory.CreateFeedRunner(new Uri("http://github.com/Twl/alaris/commits/master.atom"), ref _connection, _channels, "alaris", 11000, "@alaris");
+			
+			
+			FeedFactory.StartRunners();
+	
+				
 		}
 		
 		public void OnLoad()
@@ -94,6 +90,8 @@ namespace Alaris.FeedHandlerPlugin
 				Start();
 			}
 		}
+		
+		
 
 		
 		public void OnRegistered()
