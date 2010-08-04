@@ -57,7 +57,7 @@ namespace Alaris.FeedHandlerPlugin
 		/// </summary>
 		~AlarisPlugin()
 		{
-			Log.Debug("MangosRss", "~AlarisPlugin()");
+			Log.Debug("FeedHandler", "~AlarisPlugin()");
 		}
 		
 		public void Initialize(ref Connection con) {}
@@ -67,6 +67,11 @@ namespace Alaris.FeedHandlerPlugin
 			_connection = con;
 			_channels = chans;
 		}
+		
+		public void Stop()
+		{
+			
+		}
 	
 		public void OnUnload()
 		{
@@ -75,6 +80,11 @@ namespace Alaris.FeedHandlerPlugin
 			_channels = null;
 			_timer.Dispose();
 			
+		}
+		
+		public void Start()
+		{
+			var mangos = FeedFactory.CreateFeedRunner(new Uri("http://github.com/Twl/alaris/commits/master.atom"), ref _connection, _channels, "mangos", 10000, "@mangos");
 		}
 		
 		public void OnLoad()
@@ -88,11 +98,11 @@ namespace Alaris.FeedHandlerPlugin
 		
 		public void OnRegistered()
 		{
-			Log.Notice("FeedRunner", "Initizalizing...");
+			Log.Notice("FeedHandler", "Initizalizing...");
 			
-			Start();
+			//Start();
 			
-			Log.Success("FeedRunner", "RSS setup correctly.");
+			Log.Success("FeedHandler", "RSS setup correctly.");
 		}
 		
 		public void OnPublicMessage(UserInfo user, string chan, string msg)
@@ -100,17 +110,10 @@ namespace Alaris.FeedHandlerPlugin
 
 		}
 		
-		/// <summary>
-		/// Runs the periodic MaNGOS RSS update.
-		/// </summary>
-		public void MangosUpdate()
-		{
-			
-		}
-		
+
 		public string GetName()
 		{
-			return "MangosRssPlugin";
+			return "FeedHandlerPlugin";
 		}
 		
 	}

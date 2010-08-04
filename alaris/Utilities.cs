@@ -261,10 +261,21 @@ namespace Alaris.Extras
 			reader.Close();
 			reader.Dispose();
 			
-			var getBrandRegex = new Regex(@"model\sname\s:(?<first>.+\sCPU)\s*(?<second>.+)", RegexOptions.IgnoreCase);
+			var getBrandRegex = new Regex(@"model\sname\s:\s*(?<first>.+\sCPU)\s*(?<second>.+)", RegexOptions.IgnoreCase);
 			
 			if(!getBrandRegex.IsMatch(content))
-				return "Not found.";
+			{
+				// not intel
+				var amdRegex = new Regex(@"model\sname\s:\s*(?<cpu>.+)");
+				
+				if(!amdRegex.IsMatch(content))
+					return "Not found";
+				
+				var amatch = amdRegex.Match(content);
+				string amd = amatch.Groups["cpu"].ToString();
+				
+				return amd;
+			}
 			
 			var match = getBrandRegex.Match(content);
 			string cpu = (match.Groups["first"].ToString() + " " + match.Groups["second"].ToString());
