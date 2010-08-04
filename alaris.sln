@@ -19,20 +19,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedHandlerPlugin", "FeedHa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atom.NET", "Atom\Atom.NET.csproj", "{9DB254A5-AF25-4122-877C-3C6D9A86BC02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaInterface", "LuaInterface\LuaInterface.csproj", "{86CA4CAE-5EBC-4748-96AE-324D53AAE145}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEnginePlugin", "LuaEnginePlugin\LuaEnginePlugin.csproj", "{103AE0CA-FF97-4300-BD59-DBDE0A8FC3D7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{103AE0CA-FF97-4300-BD59-DBDE0A8FC3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{103AE0CA-FF97-4300-BD59-DBDE0A8FC3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{103AE0CA-FF97-4300-BD59-DBDE0A8FC3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{103AE0CA-FF97-4300-BD59-DBDE0A8FC3D7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{43262E31-25C8-4A2B-B071-3897E8DB457A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{43262E31-25C8-4A2B-B071-3897E8DB457A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -55,10 +47,6 @@ Global
 		{827FC720-BEE2-4357-B29F-0C2BDF51472D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{827FC720-BEE2-4357-B29F-0C2BDF51472D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{827FC720-BEE2-4357-B29F-0C2BDF51472D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86CA4CAE-5EBC-4748-96AE-324D53AAE145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86CA4CAE-5EBC-4748-96AE-324D53AAE145}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86CA4CAE-5EBC-4748-96AE-324D53AAE145}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86CA4CAE-5EBC-4748-96AE-324D53AAE145}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9CA1756F-35C2-44E9-AD15-F28C3E6BF41B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9CA1756F-35C2-44E9-AD15-F28C3E6BF41B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CA1756F-35C2-44E9-AD15-F28C3E6BF41B}.Release|Any CPU.ActiveCfg = Release|Any CPU

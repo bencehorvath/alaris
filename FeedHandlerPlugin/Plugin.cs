@@ -67,37 +67,7 @@ namespace Alaris.FeedHandlerPlugin
 			_connection = con;
 			_channels = chans;
 		}
-
-		/// <summary>
-		/// Starts the timer and all of the process.
-		/// </summary>
-		public void Start()
-		{
-			if(_running)
-				return;
-			
-			_timer.Interval = 12000;
-			_timer.Elapsed += Handle_timerElapsed;
-			_timer.Enabled = true;
-			_timer.Start();
-			_running = true;
-			
-		}
-		
-		/// <summary>
-		/// Stops everything.
-		/// </summary>
-		public void Stop()
-		{
-			if(!_running)
-				return;
-			
-			_timer.Enabled = false;
-			_timer.Elapsed -= Handle_timerElapsed;;
-			_timer.Stop();
-			_running = false;
-		}
-		
+	
 		public void OnUnload()
 		{
 			Stop();
@@ -115,62 +85,19 @@ namespace Alaris.FeedHandlerPlugin
 			}
 		}
 
-		private void Handle_timerElapsed (object sender, ElapsedEventArgs e)
-		{
-			MangosUpdate();
-		}
 		
 		public void OnRegistered()
 		{
-			Log.Notice("MangosRSS", "Initizalizing...");
+			Log.Notice("FeedRunner", "Initizalizing...");
 			
 			Start();
 			
-			Log.Success("MangosRSS", "RSS setup correctly.");
+			Log.Success("FeedRunner", "RSS setup correctly.");
 		}
 		
 		public void OnPublicMessage(UserInfo user, string chan, string msg)
 		{
-			if(msg == "@mangos stop" && Utilities.IsAdmin(user))
-			{
-				Stop();
-				Log.Notice("MangosRSS", "Stopped listening.");
-				_connection.Sender.PublicMessage(chan, "Mangos monitor: " + IrcConstants.Red + "stopped.");
-				return;
-			}
-			
-			if(msg == "@mangos start" && Utilities.IsAdmin(user))
-			{
-				Start();
-				Log.Notice("MangosRSS", "Started listening.");
-				_connection.Sender.PublicMessage(chan, "Mangos monitor: " + IrcConstants.Green + "started.");
-				return;
-			}
-			
-			if(msg == "@mangos")
-			{
-				_connection.Sender.PublicMessage(chan, "Available sub-commands: start | stop | current");
-				return;
-			}
-			
-			if(msg == "@mangos current")
-			{
-				string hash = Latest;
-				string href = "http://github.com/mangos/mangos/commit/" + hash;
-				string title = LatestTitle;
-				_connection.Sender.PublicMessage(chan, IrcConstants.Bold + 
-							                                 "MaNGOS: " + 
-							                                 IrcConstants.Normal + 
-							                                 IrcConstants.DarkGreen + 
-							                                 "new commit " + 
-							                                 IrcConstants.Normal +
-							                                 IrcConstants.Bold + hash);
-				
-				_connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Info: " + IrcConstants.Normal + title);
-				_connection.Sender.PublicMessage(chan, IrcConstants.Bold + "More Info: " + IrcConstants.Normal + href);
-				return;
-			}
-			
+
 		}
 		
 		/// <summary>
@@ -178,50 +105,7 @@ namespace Alaris.FeedHandlerPlugin
 		/// </summary>
 		public void MangosUpdate()
 		{
-			Log.Notice("MangosRSS", "Running periodic check...");
-			var rssUrl = new Uri("http://github.com/mangos/mangos/commits/master.atom");
-			var client = new WebClient();
-			client.Encoding = Encoding.UTF8;
-			var rss = client.DownloadString(rssUrl);
-			client.Dispose();
 			
-			var getDataRegex = new Regex(@"<link\stype=.text/html.\srel=.\S*.\shref=.(?<url>\S+)./>\s*<title>(?<ttl>.+)</title>", RegexOptions.IgnoreCase);
-			
-			if(getDataRegex.IsMatch(rss))
-			{
-				var match = getDataRegex.Matches(rss)[0];
-				
-				var href = match.Groups["url"].ToString();
-				//Log.Notice("MangosRSS", "Href is: " + href);
-				var title = match.Groups["ttl"].ToString();
-				
-				//var getHashRegex = new Regex(@"http://github.com/mangos/mangos/commit/(?<hash>\S+)", RegexOptions.IgnoreCase);
-				
-				var hash = href.Replace("http://github.com/mangos/mangos/commit/", string.Empty);
-				
-				Log.Success("MangosRSS", "Got hash: " + hash);
-				
-				if(hash != _latest && !_firstrun)
-				{
-					foreach(string chan in _channels)
-					{
-						_connection.Sender.PublicMessage(chan, IrcConstants.Bold + 
-						                                 "MaNGOS: " + 
-						                                 IrcConstants.Normal + 
-						                                 IrcConstants.DarkGreen + 
-						                                 "new commit " + 
-						                                 IrcConstants.Normal +
-						                                 IrcConstants.Bold + hash);
-						
-						_connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Info: " + IrcConstants.Normal + title);
-						Thread.Sleep(20);
-					}
-				}
-				
-				_latest = hash;
-				_lasttit = title;
-				_firstrun = false;
-			}
 		}
 		
 		public string GetName()
