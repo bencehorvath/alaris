@@ -5,7 +5,7 @@ using MySql.Data.MySqlClient;
 using Alaris.Core;
 namespace Alaris.Extras
 {
-	public class DatabaseManager : MarshalByRefObject
+	public class DatabaseManager
 	{
 		private MySqlConnection _connection;
 		
