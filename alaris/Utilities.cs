@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -258,45 +259,9 @@ namespace Alaris.Extras
 		/// </returns>
 		public static string GetCpuId()
         {
-		    StreamReader reader = null;
-		    string content;
+		    var mos = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_Processor");
 
-            try
-            {
-                reader = new StreamReader("/proc/cpuinfo");
-
-                content = reader.ReadToEnd();
-            }
-            finally
-            {
-                if (reader != null)
-                {
-                    reader.Close();
-                }
-            }
-
-		    var getBrandRegex = new Regex(@"model\sname\s:\s*(?<first>.+\sCPU)\s*(?<second>.+)", RegexOptions.IgnoreCase);
-			
-			if(!getBrandRegex.IsMatch(content))
-			{
-				// not intel
-				var amdRegex = new Regex(@"model\sname\s:\s*(?<cpu>.+)");
-				
-				if(!amdRegex.IsMatch(content))
-					return "Not found";
-				
-				var amatch = amdRegex.Match(content);
-				string amd = amatch.Groups["cpu"].ToString();
-				
-				return amd;
-			}
-			
-			var match = getBrandRegex.Match(content);
-			string cpu = (match.Groups["first"].ToString() + " " + match.Groups["second"].ToString());
-			
-			//return cpu.Substring(1);
-			return cpu;
-			
+		    return (from ManagementObject mo in mos.Get() select (Regex.Replace(Convert.ToString(mo["Name"]), @"\s*", " "))).FirstOrDefault();
         }
 	}
 	

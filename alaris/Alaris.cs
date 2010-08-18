@@ -194,13 +194,16 @@ namespace Alaris
 
 		    MysqlEnabled = Convert.ToBoolean(config.GetSetting("config/mysql/enabled", "false"));
 
-            if(MysqlEnabled)
+            if (MysqlEnabled)
             {
+                Log.Notice("MySQL", "Enabled.");
                 MysqlData[0] = config.GetSetting("config/mysql/hostname", "localhost");
                 MysqlData[1] = config.GetSetting("config/mysql/username", "root");
                 MysqlData[2] = config.GetSetting("config/mysql/password", "pw");
                 MysqlData[3] = config.GetSetting("config/mysql/database", "alaris");
             }
+            else
+                Log.Notice("MySQL", "Disabled.");
 
 		    Log.Success("Config", "File read and validated successfully.");
 		    _confdone = true;
