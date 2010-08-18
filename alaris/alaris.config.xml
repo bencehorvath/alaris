@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<alaris>
+  <config>
+    <irc>
+      <server>irc.rizon.net</server>
+      <nickname>alaris</nickname>
+      <nickserv>nothing</nickserv>
+      <channels>#skullbot,#hun_bot</channels>
+      <admin>
+        <nick>Twl</nick>
+        <user>Twl</user>
+        <host>evil.from.behind</host>
+      </admin>
+    </irc>
+    <mysql>
+      <enabled>false</enabled>
+      <hostname>localhost</hostname>
+      <username>root</username>
+      <password>pw</password>
+      <database>alaris</database>
+  </mysql>
+  </config>
+</alaris>

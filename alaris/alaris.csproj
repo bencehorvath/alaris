@@ -11,7 +11,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <Description>Alaris IRC Bot</Description>
     <RootNamespace>Alaris</RootNamespace>
-    <StartupObject>Alaris.Core.Entry</StartupObject>
+    <StartupObject>Alaris.Entry</StartupObject>
     <CodePage>65001</CodePage>
     <ReleaseVersion>2.3</ReleaseVersion>
     <TargetFrameworkProfile>
@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alaris.cs" />
+    <Compile Include="Config\XmlConfig.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -169,5 +170,10 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="alaris.config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>

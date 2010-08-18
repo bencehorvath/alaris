@@ -1,9 +1,10 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Text;
-using System.Text.RegularExpressions;
+using Alaris.Config;
 using Alaris.Core;
 using System.Threading;
 using Alaris.Irc;
@@ -30,9 +31,9 @@ namespace Alaris
 		private DatabaseManager sDatabaseManager = Singleton<DatabaseManager>.Instance;
 		private readonly Guid _guid = Guid.NewGuid();
 		private readonly string _configfile;
-		private const int listener_port = 35221;
-		private const string ACS_HOST = "127.0.0.1";
-		private const int ACS_PORT= 35220;
+		private const int ListenerPort = 35221;
+		private const string ACSHost = "127.0.0.1";
+		private const int ACSPort= 35220;
 		/// <summary>
 		/// MySQL support enabled or not.
 		/// </summary>
@@ -59,9 +60,9 @@ namespace Alaris
 		/// <value>
 		/// The thread pool.
 		/// </value>
-		public CThreadPool Pool { get; internal set; }
+		public CThreadPool Pool { get; private set; }
 		
-		private AlarisBot() : this("alaris.conf") {}
+		private AlarisBot() : this("alaris.config.xml") {}
 		
 		/// <summary>
 		/// Creates a new instacne of Alaris bot.
@@ -107,7 +108,7 @@ namespace Alaris
 		/// <returns>
 		/// The listener port.
 		/// </returns>
-		public int GetListenerPort() { return listener_port; }
+		public int GetListenerPort() { return ListenerPort; }
 		
 		/// <summary>
 		/// Releases unmanaged resources and performs other cleanup operations before the <see cref="AlarisBot"/>
@@ -165,88 +166,46 @@ namespace Alaris
 		/// <param name="configfile">
 		/// The config file name.
 		/// </param>
-		public void ReadConfig(string configfile)
+		private void ReadConfig(string configfile)
 		{
 			if(!File.Exists("./" + configfile))
-				throw new FileNotFoundException("The config file specified could not be found. It is essential to have a configuration file in the directory of the bot.");
+				throw new FileNotFoundException("The config file specified could not be found. It is essential to have a configuration file in the directory of the bot. " + configfile + " could not be found.");
 			
 			// read conf file.
 			Log.Notice("Config", "Reading configuration file: " + configfile);
-			var reader = new StreamReader("./"+configfile);
-			string config = reader.ReadToEnd();
-			reader.Close();
-			
-			
-			var serverRegex = new Regex(@"server\s=\s(?<server>\S+)");
-			if(!serverRegex.IsMatch(config))
-				throw new ConfigFileInvalidException("The specified configuration file is invalid.");
-			
-			_server = serverRegex.Match(config).Groups["server"].ToString();
-			
-			var nickRegex = new Regex(@"nick\s=\s(?<nick>\S+)");
-			if(!nickRegex.IsMatch(config))
-				throw new ConfigFileInvalidException("The specified configuration file is invalid.");
-			
-			_nick = nickRegex.Match(config).Groups["nick"].ToString();
-			
-			
-			var nickservRegex = new Regex(@"nickserv\s=\s(?<nickserv>\S+)");
-			
-			if(!nickservRegex.IsMatch(config))
-				throw new ConfigFileInvalidException("The specified configuration file is invalid.");
-			
-			_nspw = nickservRegex.Match(config).Groups["nickserv"].ToString();
-			_nickserv = (_nspw == "nothing") ? false : true;
-			
-			var chanRegex = new Regex(@"channels\s=\s(?<channels>\S+)");
-			
-			if(!chanRegex.IsMatch(config))
-				throw new ConfigFileInvalidException("The specified configuration file is invalid.");
-			
-			string chn = chanRegex.Match(config).Groups["channels"].ToString();
-			string[] chns = chn.Split(',');
-			
-			foreach(string cs in chns)
-				if(!string.IsNullOrEmpty(cs))
-					_channels.Add(cs);
-			
-			
-			var admRegex = new Regex(@"admin_data\s=\s(?<adm>\S+)");
-			if(!admRegex.IsMatch(config))
-				throw new ConfigFileInvalidException("The specified configuration file is invalid.");
-			
-			string[] adms = admRegex.Match(config).Groups["adm"].ToString().Split(',');
-			_auser = adms[0];
-			_anick = adms[1];
-			_ahost = adms[2];
-			
-			_confdone = true;
-			Utilities.AdminUser = _auser;
-			Utilities.AdminNick = _anick;
-			Utilities.AdminHost = _ahost;
-			
-			var mysqlRegex = new Regex(@"mysql_enabled\s=\s(?<enabled>\d)\s*\n*\r*mysql_data=(?<host>\S+),(?<user>\S+),(?<pass>\S+),(?<db>\S+)");
-			
-			if(!mysqlRegex.IsMatch(config))
-				throw new ConfigFileInvalidException("The specified configuration file is invalid.");
-			
-			var msmatch = mysqlRegex.Match(config);
-			MysqlEnabled = (msmatch.Groups["enabled"].ToString() == "1");
-			
-			if(MysqlEnabled)
-			{
-				Log.Debug("Alaris", "MySQL support is ON.");
-				MysqlData[0] = msmatch.Groups["host"].ToString();
-				MysqlData[1] = msmatch.Groups["user"].ToString();
-				MysqlData[2] = msmatch.Groups["pass"].ToString();
-				MysqlData[3] = msmatch.Groups["db"].ToString();
-			}
-			else
-				Log.Debug("Alaris", "MySQL support is OFF.");
-			
-			
-			Log.Success("Config", "File read and validated successfully.");
 
+		    var config = new XmlSettings(configfile, "alaris");
+
+		    _server = config.GetSetting("config/irc/server", "irc.rizon.net");
+		    _nick = config.GetSetting("config/irc/nickname", "alaris");
+		    _nspw = config.GetSetting("config/irc/nickserv", "nothing");
+
+		    _nickserv = (_nspw != "nothing");
+
+		    var chans = config.GetSetting("config/irc/channels", "#skullbot,#hun_bot");
+		    var clist = chans.Split(',');
+
+		    foreach (var chan in clist.Where(Rfc2812Util.IsValidChannelName))
+		        _channels.Add(chan);
+
+		    Utilities.AdminNick = config.GetSetting("config/irc/admin/nick", "Twl");
+            Utilities.AdminUser = config.GetSetting("config/irc/admin/user", "Twl");
+		    Utilities.AdminHost = config.GetSetting("config/irc/admin/host", "evil.from.behind");
+
+		    MysqlEnabled = Convert.ToBoolean(config.GetSetting("config/mysql/enabled", "false"));
+
+            if(MysqlEnabled)
+            {
+                MysqlData[0] = config.GetSetting("config/mysql/hostname", "localhost");
+                MysqlData[1] = config.GetSetting("config/mysql/username", "root");
+                MysqlData[2] = config.GetSetting("config/mysql/password", "pw");
+                MysqlData[3] = config.GetSetting("config/mysql/database", "alaris");
+            }
+
+		    Log.Success("Config", "File read and validated successfully.");
+		    _confdone = true;
+
+		    Log.Notice("Config", string.Format("Connect to: {0} with nick {1}", _server, _nick));
 			
 		}
 		
@@ -266,7 +225,7 @@ namespace Alaris
 			try
 			{
 				
-				var endp = new IPEndPoint(IPAddress.Parse(ACS_HOST), ACS_PORT);
+				var endp = new IPEndPoint(IPAddress.Parse(ACSHost), ACSPort);
 				client.Connect(endp);
 				
 				Thread.Sleep(300);
