@@ -1,23 +1,18 @@
 using System;
 using System.IO;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Management;
-using ICSharpCode.SharpZipLib;
 using System.Reflection;
-using System.Threading;
-using System.Timers;
+using Alaris.Extras;
 using Alaris.Irc;
 using Alaris.Core;
-using Timer=System.Timers.Timer;
 using System.Security.Cryptography;
 
-namespace Alaris.Extras
+namespace Alaris
 {
 	/// <summary>
 	/// Class providing useful methods for handling different things.
@@ -55,17 +50,17 @@ namespace Alaris.Extras
 			string os = Environment.OSVersion.ToString();
 			long mem = Process.GetCurrentProcess().WorkingSet64/1024/1024;
 			
-			connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Bot version: " + IrcConstants.Normal + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString());
+			connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Bot version: " + IrcConstants.Normal + BotVersion);
 			connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Hosted by " + IrcConstants.Normal + username + " on machine " + hostname);
 			connection.Sender.PublicMessage(chan, IrcConstants.Bold + "OS version: " + IrcConstants.Normal + os);
 			connection.Sender.PublicMessage(chan, IrcConstants.Bold + "CPU: " + IrcConstants.Normal + GetCpuId() + " | " + Environment.ProcessorCount + " cores.");
 			
 			if(mem < 40)
-				connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Memory eaten: " + IrcConstants.Normal + IrcConstants.Green + mem.ToString() + " MB");
+				connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Memory eaten: " + IrcConstants.Normal + IrcConstants.Green + mem + " MB");
 			else if(mem > 40 && mem < 70)
-				connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Memory eaten: " + IrcConstants.Normal + IrcConstants.Olive + mem.ToString() + " MB");
+				connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Memory eaten: " + IrcConstants.Normal + IrcConstants.Olive + mem + " MB");
 			else
-				connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Memory eaten: " + IrcConstants.Normal + IrcConstants.Red + mem.ToString() + " MB");
+				connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Memory eaten: " + IrcConstants.Normal + IrcConstants.Red + mem + " MB");
 		}
 		
 		/// <summary>
@@ -193,12 +188,9 @@ namespace Alaris.Extras
 				
 				if(urlFind.IsMatch(text))
 				{
-					MatchCollection matches = urlFind.Matches(text);
-					
-					foreach(Match match in matches)
-					{
-						urls.Add(match.Groups["page"].ToString());
-					}
+				    var matches = urlFind.Matches(text);
+
+				    urls.AddRange(from Match match in matches select match.Groups["page"].ToString());
 				}
 			}
 			catch(Exception x)
@@ -257,11 +249,11 @@ namespace Alaris.Extras
 		/// <returns>
 		/// The CPU brand string.
 		/// </returns>
-		public static string GetCpuId()
+		private static string GetCpuId()
         {
 		    var mos = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_Processor");
 
-		    return (from ManagementObject mo in mos.Get() select (Regex.Replace(Convert.ToString(mo["Name"]), @"\s*", " "))).FirstOrDefault();
+		    return (from ManagementObject mo in mos.Get() select (Regex.Replace(Convert.ToString(mo["Name"]), @"\s+", " "))).FirstOrDefault();
         }
 	}
 	
