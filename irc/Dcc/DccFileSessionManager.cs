@@ -3,8 +3,7 @@ using System.Diagnostics;
 using System.Collections;
 using System.Threading;
 
-
-namespace Alaris.Irc
+namespace Alaris.Irc.Dcc
 {
 	/// <summary>
 	/// This class checks each file session to see if it has not 

@@ -3,8 +3,7 @@ using System.Net;
 using System.Diagnostics;
 using System.Globalization;
 
-
-namespace Alaris.Irc
+namespace Alaris.Irc.Dcc
 {
 	/// <summary>
 	/// Utility methods needed to handle DCC requests.

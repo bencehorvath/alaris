@@ -5,8 +5,9 @@ using System.IO;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
+using Alaris.Irc.Delegates.Dcc;
 
-namespace Alaris.Irc
+namespace Alaris.Irc.Dcc
 {
 	/// <summary>
 	/// Establish a DCC Chat connection with a remote user. 

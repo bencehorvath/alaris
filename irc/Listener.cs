@@ -6,6 +6,15 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Collections;
 using System.Threading;
+using Alaris.Irc.Delegates.Channel;
+using Alaris.Irc.Delegates.Disconnect;
+using Alaris.Irc.Delegates.Invite;
+using Alaris.Irc.Delegates.Messages;
+using Alaris.Irc.Delegates.Requests;
+using Alaris.Irc.Delegates.Server;
+using Alaris.Irc.Delegates.Special;
+using Alaris.Irc.Delegates.User;
+using Alaris.Irc.Delegates.Whois;
 
 
 namespace Alaris.Irc

@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using System.Reflection;
 using Alaris.Irc;
 using Alaris.Core;
+using Alaris.Irc.Delegates.Channel;
+using Alaris.Irc.Delegates.Disconnect;
+using Alaris.Irc.Delegates.Messages;
+using Alaris.Irc.Delegates.Server;
 
 namespace Alaris.Extras
 {

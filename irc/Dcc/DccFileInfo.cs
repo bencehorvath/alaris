@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Alaris.Irc
+namespace Alaris.Irc.Dcc
 {
 	/// <summary>
 	/// Manages the information about the file being

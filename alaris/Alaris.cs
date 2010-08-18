@@ -10,6 +10,7 @@ using System.Threading;
 using Alaris.Irc;
 using Alaris.Extras;
 using System.Net.Sockets;
+using Alaris.Irc.Ctcp;
 using Alaris.Threading;
 
 namespace Alaris

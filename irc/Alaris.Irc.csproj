@@ -40,24 +40,82 @@ Thanks to Thresher</Description>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Delegates\Server\AdminEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\DccGetRequestEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\ChatMessageReceivedEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\ChatRequestTimeoutEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\ChatSessionClosedEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\ChatSessionOpenedEventHandler.cs" />
+    <Compile Include="Delegates\Ctcp\CtcpPingReplyEventHandler.cs" />
+    <Compile Include="Delegates\Ctcp\CtcpPingRequestEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\DccChatRequestEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\DccSendRequestEventHandler.cs" />
+    <Compile Include="Delegates\Channel\ChannelListEventHandler.cs" />
+    <Compile Include="Delegates\Channel\ChannelModeChangeEventHandler.cs" />
+    <Compile Include="Delegates\Channel\ChannelModeRequestEventHandler.cs" />
+    <Compile Include="Delegates\Ctcp\CtcpReplyEventHandler.cs" />
+    <Compile Include="Delegates\Ctcp\CtcpRequestEventHandler.cs" />
+    <Compile Include="Delegates\Channel\ActionEventHandler.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="ChannelModeInfo.cs" />
+    <Compile Include="Delegates\Server\AwayEventHandler.cs" />
+    <Compile Include="Delegates\Channel\ChannelModeInfo.cs" />
     <Compile Include="CommandBuilder.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="ConnectionArgs.cs" />
-    <Compile Include="Delegates.cs" />
+    <Compile Include="Delegates\Special\KillEventHandler.cs" />
+    <Compile Include="Delegates\Disconnect\DisconnectedEventHandler.cs" />
+    <Compile Include="Delegates\Disconnect\DisconnectingEventHandler.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="Delegates\Server\ErrorMessageEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\Files\FileTransferInterruptedEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\Files\FileTransferStartedEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\Files\FileTransferTimeoutEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\Files\FileTransferCompletedEventHandler.cs" />
+    <Compile Include="Delegates\Dcc\Files\FileTransferProgressEventHandler.cs" />
     <Compile Include="Identd.cs" />
+    <Compile Include="Delegates\Invite\InviteSentEventHandler.cs" />
+    <Compile Include="Delegates\Invite\InviteEventHandler.cs" />
+    <Compile Include="Delegates\Server\InfoEventHandler.cs" />
     <Compile Include="IParser.cs" />
+    <Compile Include="Delegates\Channel\JoinEventHandler.cs" />
+    <Compile Include="Delegates\Requests\IsonEventHandler.cs" />
+    <Compile Include="Delegates\Requests\KickEventHandler.cs" />
+    <Compile Include="Delegates\Special\LinksEventHandler.cs" />
     <Compile Include="Listener.cs" />
+    <Compile Include="Delegates\Requests\ListEventHandler.cs" />
+    <Compile Include="Delegates\Special\LusersEventHandler.cs" />
+    <Compile Include="Delegates\Server\MotdEventHandler.cs" />
     <Compile Include="NameGenerator.cs" />
+    <Compile Include="Delegates\Server\NickErrorEventHandler.cs" />
+    <Compile Include="Delegates\Server\NickEventHandler.cs" />
+    <Compile Include="Delegates\Channel\PartEventHandler.cs" />
+    <Compile Include="Delegates\Server\PingEventHandler.cs" />
+    <Compile Include="Delegates\Messages\PrivateActionEventHandler.cs" />
+    <Compile Include="Delegates\Messages\PrivateMessageEventHandler.cs" />
+    <Compile Include="Delegates\Messages\PrivateNoticeEventHandler.cs" />
+    <Compile Include="Delegates\Messages\PublicMessageEventHandler.cs" />
+    <Compile Include="Delegates\Messages\PublicNoticeEventHandler.cs" />
+    <Compile Include="Delegates\Server\RegisteredEventHandler.cs" />
+    <Compile Include="Delegates\Requests\NamesEventHandler.cs" />
+    <Compile Include="Delegates\Server\QuitEventHandler.cs" />
+    <Compile Include="Delegates\Server\RawMessageReceivedEventHandler.cs" />
+    <Compile Include="Delegates\Server\RawMessageSentEventHandler.cs" />
     <Compile Include="ReplyCode.cs" />
-    <Compile Include="ReplyEventHandler.cs" />
+    <Compile Include="Delegates\Server\ReplyEventHandler.cs" />
     <Compile Include="Rfc2812Util.cs" />
     <Compile Include="Sender.cs" />
     <Compile Include="ServerProperties.cs" />
+    <Compile Include="Delegates\Special\StatsEventHandler.cs" />
     <Compile Include="TextColor.cs" />
+    <Compile Include="Delegates\Channel\TopicEventHandler.cs" />
+    <Compile Include="Delegates\Channel\TopicRequestEventHandler.cs" />
+    <Compile Include="Delegates\Special\TimeEventHandler.cs" />
     <Compile Include="UserInfo.cs" />
+    <Compile Include="Delegates\User\UserModeChangeEventHandler.cs" />
+    <Compile Include="Delegates\User\UserModeRequestEventHandler.cs" />
+    <Compile Include="Delegates\Whois\WhoEventHandler.cs" />
+    <Compile Include="Delegates\Whois\WhoisEventHandler.cs" />
+    <Compile Include="Delegates\Special\VersionEventHandler.cs" />
     <Compile Include="WhoisInfo.cs" />
     <Compile Include="Ctcp\CtcpListener.cs" />
     <Compile Include="Ctcp\CtcpResponder.cs" />
@@ -70,6 +128,7 @@ Thanks to Thresher</Description>
     <Compile Include="Dcc\DccListener.cs" />
     <Compile Include="Dcc\DccUserInfo.cs" />
     <Compile Include="Dcc\DccUtil.cs" />
+    <Compile Include="Delegates\Whois\WhowasEventHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="irc.csproj" />
@@ -85,8 +144,6 @@ Thanks to Thresher</Description>
     <Reference Include="System.Xml.Linq">
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Delegates\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

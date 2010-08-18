@@ -2,8 +2,9 @@ using System;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Globalization;
+using Alaris.Irc.Delegates.Ctcp;
 
-namespace Alaris.Irc
+namespace Alaris.Irc.Ctcp
 {
 	/// <summary>
 	/// This class is used to send CTCP specific events. Once registered with this object 

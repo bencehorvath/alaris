@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Globalization;
 
-namespace Alaris.Irc
+namespace Alaris.Irc.Ctcp
 {
 	/// <summary>
 	/// Constants and utility methods to support CTCP.

@@ -1,7 +1,6 @@
-using System;
 using System.Net;
 
-namespace Alaris.Irc
+namespace Alaris.Irc.Dcc
 {
 	/// <summary>
 	/// This class encapsulates all the information known

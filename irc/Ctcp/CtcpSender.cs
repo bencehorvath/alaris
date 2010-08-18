@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Globalization;
 
-namespace Alaris.Irc
+namespace Alaris.Irc.Ctcp
 {
 	/// <summary>
 	/// This class allows the client to send CTCP commands. There is no limit

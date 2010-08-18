@@ -4,8 +4,9 @@ using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Globalization;
 using System.Threading;
+using Alaris.Irc.Delegates.Dcc;
 
-namespace Alaris.Irc
+namespace Alaris.Irc.Dcc
 {
 	/// <summary>
 	/// DccListener listens for incoming DCC requests on any Connection in which

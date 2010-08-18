@@ -1,8 +1,7 @@
 using System;
 using System.Collections;
 
-
-namespace Alaris.Irc
+namespace Alaris.Irc.Delegates.Channel
 {
 	/// <summary>
 	/// A simple struct designed to hold al the attributes that 

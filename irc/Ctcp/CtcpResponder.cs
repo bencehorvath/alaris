@@ -1,8 +1,8 @@
 using System;
 using System.Text;
+using Alaris.Irc.Delegates.Ctcp;
 
-
-namespace Alaris.Irc
+namespace Alaris.Irc.Ctcp
 {
 	/// <summary>
 	/// A class which automatically responds to CTCP queries. The

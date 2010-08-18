@@ -8,6 +8,9 @@ using System.IO;
 using System.Globalization;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using Alaris.Irc.Ctcp;
+using Alaris.Irc.Dcc;
+using Alaris.Irc.Delegates.Server;
 
 #if SSL
 using Org.Mentalis.Security.Ssl;

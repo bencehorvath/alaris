@@ -1,13 +1,12 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
-using System.Collections;
 using System.Text;
-using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using Alaris.Irc.Delegates.Dcc.Files;
 
-namespace Alaris.Irc
+namespace Alaris.Irc.Dcc
 {
 	/// <summary>
 	/// Allows the user to send and receive files
