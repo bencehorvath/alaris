@@ -52,6 +52,7 @@ Thanks to Thresher</Description>
     <Compile Include="Listener.cs" />
     <Compile Include="NameGenerator.cs" />
     <Compile Include="ReplyCode.cs" />
+    <Compile Include="ReplyEventHandler.cs" />
     <Compile Include="Rfc2812Util.cs" />
     <Compile Include="Sender.cs" />
     <Compile Include="ServerProperties.cs" />
@@ -83,6 +84,9 @@ Thanks to Thresher</Description>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Delegates\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

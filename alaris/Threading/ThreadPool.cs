@@ -1,21 +1,12 @@
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using System.Net;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Diagnostics;
-using ICSharpCode.SharpZipLib;
-using System.Reflection;
 using System.Threading;
 using System.ComponentModel;
 using System.Timers;
-using Alaris.Irc;
-using Alaris.Extras;
+using Alaris.Core;
 using Timer = System.Timers.Timer;
 
-namespace Alaris.Core
+namespace Alaris.Threading
 {
 	/// <summary>
 	/// A simple Thread pool implementation.
@@ -26,18 +17,18 @@ namespace Alaris.Core
 		private readonly List<BackgroundWorker> _busyWorkers;
 		private readonly List<object> _activeJobs = new List<object>();
 		private readonly List<object> _pendingJobs = new List<object>();
-		private volatile bool stop = false;
+		private volatile bool _stop = false;
 		private readonly Thread _watcher;
 		private readonly Timer _integrityTimer;
 		private double _lastcheck;
 		
 		/// <summary>
-		/// Initializes a new instance of the <see cref="Alaris.Core.CThreadPool"/> class with the default (5) thread amount.
+		/// Initializes a new instance of the <see cref="CThreadPool"/> class with the default (5) thread amount.
 		/// </summary>
 		public CThreadPool() : this(5) {}
 		
 		/// <summary>
-		/// Initializes a new instance of the <see cref="Alaris.Core.CThreadPool"/> class.
+		/// Initializes a new instance of the <see cref="CThreadPool"/> class.
 		/// </summary>
 		/// <param name='maxThreads'>
 		/// Max threads.
@@ -76,7 +67,7 @@ namespace Alaris.Core
 		public void Enqueue(IThreadContext job)
 		{
 		    if (job == null) throw new ArgumentNullException("job");
-		    Log.Debug("ThreadPool", "Got new job: " + job.GetGuid().ToString());
+		    Log.Debug("ThreadPool", "Got new job: " + job.GetGuid());
 			_pendingJobs.Add(job);
 		}
 		/// <summary>
@@ -98,7 +89,7 @@ namespace Alaris.Core
 		public void Free()
 		{
 			Log.Notice("ThreadPool", "Killing remaining thread(s).");
-			stop = true;
+			_stop = true;
 			_integrityTimer.Stop();
 			
 			for(int i = 0; i < _availableWorkers.Count; ++i)
@@ -155,13 +146,13 @@ namespace Alaris.Core
 		/// </summary>
 		public void StopWatcher()
 		{
-			stop = true;
+			_stop = true;
 		}
 		
 		private void WatcherProc()
 		{
 			Log.Notice("ThreadPool", "Job watcher is running.");
-			while(!stop)
+			while(!_stop)
 			{
 				if(_availableWorkers.Count  == 0 || _pendingJobs.Count == 0) // no available thread, or no jobs at all.
 				{
@@ -178,13 +169,13 @@ namespace Alaris.Core
 				var job = _pendingJobs[0];
 				DoWorkEventHandler dljob = null;
 				if(job is IThreadContext)
-					dljob = (object sender, DoWorkEventArgs e) => { (job as IThreadContext).Run(); };
+					dljob = (object sender, DoWorkEventArgs e) => { ((IThreadContext) job).Run(); };
 				else if(job is IThreadRunnable)
-					dljob = (object sender, DoWorkEventArgs e) => { (job as IThreadRunnable)(); };
+					dljob = (object sender, DoWorkEventArgs e) => { ((IThreadRunnable) job)(); };
 				
 				worker.DoWork += dljob;
 				
-				worker.RunWorkerCompleted += (object s, RunWorkerCompletedEventArgs e) => { 
+				worker.RunWorkerCompleted += (s, e) => { 
 					
 					worker.DoWork -= dljob;
 					_busyWorkers.Remove(worker);
@@ -199,7 +190,7 @@ namespace Alaris.Core
 				_activeJobs.Add(job);
 				
 				if(job is IThreadContext)
-					Log.Debug("ThreadPool", "Thread 0x" + (Math.Abs(worker.GetHashCode())).ToString("x") + " is now executing task with guid: " + (job as IThreadContext).GetGuid().ToString());
+					Log.Debug("ThreadPool", "Thread 0x" + (Math.Abs(worker.GetHashCode())).ToString("x") + " is now executing task with guid: " + (job as IThreadContext).GetGuid());
 				else if(job is IThreadRunnable)
 					Log.Debug("ThreadPool", "Thread 0x" + (Math.Abs(worker.GetHashCode())).ToString("x") + " is now executing task: 0x" + Math.Abs(job.GetHashCode()).ToString("x"));
 
@@ -239,7 +230,7 @@ namespace Alaris.Core
         /// </summary>
         public void Dispose()
         {
-            stop = true;
+            _stop = true;
             _watcher.Join(600);
             _integrityTimer.Stop();
             _integrityTimer.Close();

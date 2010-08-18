@@ -5,6 +5,7 @@ using MySql.Data.MySqlClient;
 using System.Runtime.Remoting.Channels.Tcp;
 using System.Runtime.Remoting.Channels;
 using Alaris.Core;
+
 namespace Alaris.Extras
 {
 	/// <summary>

@@ -104,10 +104,10 @@ namespace Alaris
 					_connection.Sender.PublicMessage(chan, IrcConstants.Bold + "[Load]: " + IrcConstants.Normal + IrcConstants.Olive + plname + IrcConstants.Normal + " done.");
 					return;
 				}
-				else
-					_connection.Sender.PublicMessage(chan, IrcConstants.Bold + "[Load]: " + IrcConstants.Normal + IrcConstants.Olive + plname + IrcConstants.Normal + " failed.");
-				
-				return;
+
+			    _connection.Sender.PublicMessage(chan, IrcConstants.Bold + "[Load]: " + IrcConstants.Normal + IrcConstants.Olive + plname + IrcConstants.Normal + " failed.");
+
+			    return;
 
 			}
 			
@@ -120,10 +120,10 @@ namespace Alaris
 					_connection.Sender.PublicMessage(chan, IrcConstants.Bold + "[Unload]: " + IrcConstants.Normal + IrcConstants.Olive + plname + IrcConstants.Normal + " done.");
 					return;
 				}
-				else
-					_connection.Sender.PublicMessage(chan, IrcConstants.Bold + "[Unload]: " + IrcConstants.Normal + IrcConstants.Olive + plname + IrcConstants.Normal + " failed.");
-				
-				return;
+
+			    _connection.Sender.PublicMessage(chan, IrcConstants.Bold + "[Unload]: " + IrcConstants.Normal + IrcConstants.Olive + plname + IrcConstants.Normal + " failed.");
+
+			    return;
 			}
 			
 			if(msg == "@request acs random" && AlarisServer)

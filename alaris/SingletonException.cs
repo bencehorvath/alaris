@@ -22,7 +22,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Alaris.Core
+namespace Alaris
 {
    /// <summary>
    /// Represents errors that occur while creating a singleton.
@@ -34,14 +34,7 @@ namespace Alaris.Core
    public class SingletonException
       : Exception
    {
-      /// <summary>
-      /// Initializes a new instance.
-      /// </summary>
-      public SingletonException()
-      {
-      }
-
-      /// <summary>
+       /// <summary>
       /// Initializes a new instance with a specified error message.
       /// </summary>
       /// <param name="message">The message that describes the error.</param>

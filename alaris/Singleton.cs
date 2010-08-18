@@ -21,8 +21,9 @@
 
 using System;
 using System.Reflection;
+using Alaris.Core;
 
-namespace Alaris.Core
+namespace Alaris
 {
 	/// <summary>
 	/// Manages the single instance of a class.
@@ -52,7 +53,7 @@ namespace Alaris.Core
 		/// <summary>
 		/// The dummy object used for locking.
 		/// </summary>
-		static readonly object _lock = new object();
+		static readonly object Lock = new object();
 
 		#endregion Fields
 
@@ -66,11 +67,11 @@ namespace Alaris.Core
 			get
 			{
 				if (_instance == null)
-					lock (_lock)
+					lock (Lock)
 					{
 						if (_instance == null)
 						{
-							ConstructorInfo constructor = null;
+							ConstructorInfo constructor;
 
 							try
 							{

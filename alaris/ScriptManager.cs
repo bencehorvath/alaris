@@ -1,16 +1,7 @@
 using System;
 using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using System.Net;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Diagnostics;
-using ICSharpCode.SharpZipLib;
-
 using System.Reflection;
-using System.Threading;
-using System.Timers;
 using Alaris.Irc;
 using Alaris.Core;
 
@@ -22,7 +13,7 @@ namespace Alaris.Extras
 	/// </summary>
 	public class ScriptManager : IThreadContext
 	{
-		private List<IAlarisBasic> _plugins = new List<IAlarisBasic>();
+		private readonly List<IAlarisBasic> _plugins = new List<IAlarisBasic>();
 		private List<string> _channels = new List<string>();
 		private readonly Guid _guid;
 		/// <summary>
@@ -175,11 +166,13 @@ namespace Alaris.Extras
 					
 					if(_plugins.Contains(usable))
 						continue;
-					
-					usable.Initialize(ref _connection);
-					usable.Initialize(ref _connection, ref _channels);
-					_plugins.Add(usable);
-				
+
+				    if (usable != null)
+				    {
+				        usable.Initialize(ref _connection);
+				        usable.Initialize(ref _connection, ref _channels);
+				        _plugins.Add(usable);
+				    }
 				}
 				catch(Exception x)
 				{
@@ -217,15 +210,14 @@ namespace Alaris.Extras
 				
 				if(_plugins.Contains(usable))
 					return false;
-				
-				usable.Initialize(ref _connection);
-				usable.Initialize(ref _connection, ref _channels);
-				usable.OnLoad();
-				_plugins.Add(usable);
-				
-				
-				
-				
+
+			    if (usable != null)
+			    {
+			        usable.Initialize(ref _connection);
+			        usable.Initialize(ref _connection, ref _channels);
+			        usable.OnLoad();
+			        _plugins.Add(usable);
+			    }
 			}
 			catch(Exception)
 			{
@@ -319,7 +311,7 @@ namespace Alaris.Extras
 		/// <returns>
 		/// A list of plugins.
 		/// </returns>
-		public List<IAlarisBasic> GetPlugins() { return _plugins; }
+		public IEnumerable<IAlarisBasic> GetPlugins() { return _plugins; }
 		
 	}
 }

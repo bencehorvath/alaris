@@ -1,9 +1,10 @@
 using System;
+using Alaris.Threading;
 
 namespace Alaris
 {
 	/// <summary>
-	/// The interface used to define classes that can be run in the <see cref="Alaris.Core.CThreadPool"/>
+	/// The interface used to define classes that can be run in the <see cref="CThreadPool"/>
 	/// </summary>
 	public interface IThreadContext
 	{
