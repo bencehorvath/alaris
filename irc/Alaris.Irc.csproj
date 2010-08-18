@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,10 +9,12 @@
     <OutputType>Library</OutputType>
     <Description>Alaris' IRC library.
 Thanks to Thresher</Description>
-    <AssemblyName>irc</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <RootNamespace>irc</RootNamespace>
+    <AssemblyName>Alaris.Irc</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>Alaris.Irc</RootNamespace>
     <ReleaseVersion>2.3</ReleaseVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,6 +26,11 @@ Thanks to Thresher</Description>
     <WarningLevel>4</WarningLevel>
     <GenerateDocumentation>true</GenerateDocumentation>
     <NoWarn>168,219,414,419,618,1574,1591</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Documentation\Alaris.Irc.XML</DocumentationFile>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -68,11 +75,6 @@ Thanks to Thresher</Description>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib" />
-    <Reference Include="Mono.Data" />
-    <Reference Include="Mono.Http" />
-    <Reference Include="Mono.Posix" />
-    <Reference Include="Mono.Security" />
-    <Reference Include="monodoc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="System" />
     <Reference Include="System.Core">
     </Reference>

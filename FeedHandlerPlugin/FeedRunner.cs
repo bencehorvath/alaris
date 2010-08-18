@@ -6,7 +6,6 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
-using Mono.Math;
 using System.Reflection;
 using System.Threading;
 using System.Timers;
@@ -15,9 +14,8 @@ using Alaris.Core;
 using Alaris.Extras;
 using Timer=System.Timers.Timer;
 using Atom.Core;
-using Atom.Utils;
-using Atom.AdditionalElements;
-using Atom.Core.Collections;
+
+
 
 namespace Alaris.FeedHandlerPlugin
 {

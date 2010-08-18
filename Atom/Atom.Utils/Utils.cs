@@ -31,6 +31,7 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
     POSSIBILITY OF SUCH DAMAGE.
 */
+using System.Net;
 using Atom.Core;
 using System;
 using System.Collections;
@@ -91,6 +92,8 @@ namespace Atom.Utils
 		public static string Escape(string buffer)
 		{
 			return HttpUtility.HtmlEncode(buffer);
+            
+            
 		}
 
 		/// <summary>
