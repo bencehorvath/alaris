@@ -31,11 +31,11 @@ namespace Alaris.Extras
 		/// </returns>
 		public static string GetWebTitle(Uri url)
 		{
-			var request = (HttpWebRequest)HttpWebRequest.Create(url);
+			var request = (HttpWebRequest)WebRequest.Create(url);
 			
 			request.Timeout = 3500;
 			
-			request.UserAgent = "Alaris Bot " + Utilities.GetBotVersion() + " / Mono " + Environment.Version;
+			request.UserAgent = "Alaris Bot " + Utilities.BotVersion + " / .NET " + Environment.Version;
 			request.Referer = "http://www.wowemuf.org";
 			
 			var response = request.GetResponse();
@@ -46,7 +46,6 @@ namespace Alaris.Extras
 			var data = rdr.ReadToEnd();
 			
 			rdr.Close();
-			stream.Close();
 			response.Close();
 			
 			var getTitleRegex = new Regex(@"<title>(?<ttl>.*\s*.+\s*.*)\s*</title>", RegexOptions.IgnoreCase);

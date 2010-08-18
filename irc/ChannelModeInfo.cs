@@ -92,7 +92,7 @@ namespace Alaris.Irc
 					}
 					if (j == 0)
 					{
-						throw new Exception();
+					    throw new InvalidOperationException("Error in Parsing.");
 					}
 					else if (j < tokens[i].Length)
 					{

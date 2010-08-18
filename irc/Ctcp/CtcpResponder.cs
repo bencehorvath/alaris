@@ -159,10 +159,10 @@ namespace Alaris.Irc
 		/// by Time replies.
 		/// </summary>
 		/// <returns>A beautified DateTime</returns>
-		private string FormatDateTime() 
+		private static string FormatDateTime() 
 		{
-			DateTime time = DateTime.Now;
-			StringBuilder builder = new StringBuilder();
+			var time = DateTime.Now;
+			var builder = new StringBuilder();
 			builder.Append( time.ToLongDateString() + " ");
 			builder.Append( time.ToLongTimeString() + " " );
 			builder.Append( "(" + TimeZone.CurrentTimeZone.StandardName + ")" );

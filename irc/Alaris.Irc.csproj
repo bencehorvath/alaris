@@ -30,7 +30,7 @@ Thanks to Thresher</Description>
     <DocumentationFile>bin\Debug\Documentation\Alaris.Irc.XML</DocumentationFile>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RunCodeAnalysis>true</RunCodeAnalysis>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>

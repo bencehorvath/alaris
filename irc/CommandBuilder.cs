@@ -72,8 +72,8 @@ namespace Alaris.Irc
 		/// <returns>A string array holding the correctly sized messages.</returns>
 		internal string[] BreakUpMessage(string message, int maxSize) 
 		{
-			int pieces = (int) Math.Ceiling( (float)message.Length / (float)maxSize );
-			string[] parts = new string[ pieces ];
+			var pieces = (int) Math.Ceiling( (float)message.Length / (float)maxSize );
+			var parts = new string[ pieces ];
 			for( int i = 0; i < pieces; i++ ) 
 			{
 				int start = i * maxSize;

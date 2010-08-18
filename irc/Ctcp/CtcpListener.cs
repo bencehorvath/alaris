@@ -45,18 +45,12 @@ namespace Alaris.Irc
 		/// </summary>
 		public event CtcpPingRequestEventHandler OnCtcpPingRequest;
 
-		private static readonly Regex ctcpRegex;
-		private static readonly string ctcpTypes;
-		private Connection connection;
+        private const string CtcpTypes = "(FINGER|USERINFO|VERSION|SOURCE|CLIENTINFO|ERRMSG|PING|TIME)";
+		private static readonly Regex CtcpRegex = new Regex(string.Format(":([^ ]+) [A-Z]+ [^:]+:\u0001{0}([^\u0001]*)\u0001", CtcpTypes), RegexOptions.Compiled | RegexOptions.Singleline );	
+		private readonly Connection _connection;
 		private const int Name = 0;
 		private const int Command = 1;
 		private const int Text = 2;
-
-		static CtcpListener() 
-		{
-			ctcpTypes = "(FINGER|USERINFO|VERSION|SOURCE|CLIENTINFO|ERRMSG|PING|TIME)";
-			ctcpRegex = new Regex(":([^ ]+) [A-Z]+ [^:]+:\u0001" + ctcpTypes + "([^\u0001]*)\u0001", RegexOptions.Compiled | RegexOptions.Singleline );
-		}
 
 		/// <summary>
 		/// Create a new listener using a specific connection.
@@ -64,10 +58,10 @@ namespace Alaris.Irc
 		/// <param name="connection">The connection to the IRC server.</param>
 		internal CtcpListener( Connection connection )
 		{
-			this.connection = connection;
+			_connection = connection;
 		}
 
-		private bool IsReply( string[] tokens ) 
+		private static bool IsReply( string[] tokens ) 
 		{
 			if( tokens[ Text ].Length == 0 ) 
 			{
@@ -80,7 +74,7 @@ namespace Alaris.Irc
 		{
 			try 
 			{
-				Match match = ctcpRegex.Match( message );
+				Match match = CtcpRegex.Match( message );
 				return new string[] { match.Groups[1].ToString(), match.Groups[2].ToString(),match.Groups[3].ToString().Trim()  };
 			}
 			catch( Exception e ) 
@@ -96,9 +90,9 @@ namespace Alaris.Irc
 			{
 				if( ctcpTokens[ Command ].ToUpper( CultureInfo.CurrentCulture ) == CtcpUtil.Ping ) 
 				{
-					if( connection.CtcpSender.IsMyRequest( ctcpTokens[ Text] ) ) 
+					if( _connection.CtcpSender.IsMyRequest( ctcpTokens[ Text] ) ) 
 					{
-						connection.CtcpSender.ReplyReceived( ctcpTokens[ Text] );
+						_connection.CtcpSender.ReplyReceived( ctcpTokens[ Text] );
 						if( OnCtcpPingReply != null ) 
 						{
 							OnCtcpPingReply( Rfc2812Util.UserInfoFromString( ctcpTokens[ Name ] ), ctcpTokens[ Text] ) ;
@@ -136,7 +130,7 @@ namespace Alaris.Irc
 			}
 			else
 			{
-				connection.Listener.Error( ReplyCode.UnparseableMessage, line );
+				_connection.Listener.Error( ReplyCode.UnparseableMessage, line );
 				Debug.WriteLineIf( CtcpUtil.CtcpTrace.TraceWarning, "Unknown CTCP command '" + line + "' recieved by CtcpListener" );
 			}
 		}
@@ -148,7 +142,7 @@ namespace Alaris.Irc
 		/// <returns>True if this is a Ctcp request or reply.</returns>
 		public static bool IsCtcpMessage( string message ) 
 		{
-			return ctcpRegex.IsMatch( message );
+			return CtcpRegex.IsMatch( message );
 		}
 
 	}

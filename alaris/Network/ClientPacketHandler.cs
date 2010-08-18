@@ -120,7 +120,7 @@ namespace Alaris.Client
 			var sBot = Singleton<AlarisBot>.Instance;
 			
 			if(string.IsNullOrEmpty(chan) || chan == "0")
-				chan = sBot.acs_rand_request_channel;
+				chan = sBot.AcsRandRequestChannel;
 			
 			sBot.SendMsg(chan, "ACS sent random: " + rand.ToString());
 		}

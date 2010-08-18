@@ -57,9 +57,10 @@ namespace Alaris.Irc
 		/// <exception cref="ArgumentException">If the nick is invalid, the command 
 		/// is empty, or the reply is empty.</exception> 
 		/// <see cref="CtcpListener.OnCtcpReply"/>
-		public void CtcpReply( string command, string nick, string reply ) 
+		public void CtcpReply( string command, string nick, string reply )
 		{
-			lock( this )
+		    if (nick == null) throw new ArgumentNullException("nick");
+		    lock( this )
 			{
 				if (!Rfc2812Util.IsValidNick(nick) ) 
 				{
@@ -85,7 +86,8 @@ namespace Alaris.Irc
 				SendMessage("NOTICE", nick, CtcpQuote + command.ToUpper( CultureInfo.InvariantCulture ) + " " + reply + CtcpQuote );
 			}
 		}
-		/// <summary>
+
+	    /// <summary>
 		/// Send a CTCP query to another user.
 		/// </summary>
 		/// <remarks>The target may also respond with an error

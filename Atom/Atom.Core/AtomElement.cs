@@ -212,9 +212,9 @@ namespace Atom.Core
 		{
 			if(input != DefaultValues.Uri)
 			{
-				this.Buffer.AppendFormat("<{0}>", localName);
-				this.Buffer.Append(Convert.ToString(input));
-				this.Buffer.AppendFormat("</{0}>", localName);
+				Buffer.AppendFormat("<{0}>", localName);
+				Buffer.Append(Convert.ToString(input));
+				Buffer.AppendFormat("</{0}>", localName);
 				this.Buffer.Append(Environment.NewLine);
 			}
 			else if(required)
@@ -230,11 +230,11 @@ namespace Atom.Core
 		/// <param name="message">The error message if the element is missing.</param>
 		protected internal void WriteElement(string localName, object input, bool required, string message)
 		{
-			if(input != DefaultValues.Uri)
+			if(!ReferenceEquals(input, DefaultValues.Uri))
 			{
-				this.Buffer.AppendFormat("<{0}>", localName);
-				this.Buffer.Append(Convert.ToString(input));
-				this.Buffer.AppendFormat("</{0}>", localName);
+				Buffer.AppendFormat("<{0}>", localName);
+				Buffer.Append(Convert.ToString(input));
+				Buffer.AppendFormat("</{0}>", localName);
 				this.Buffer.Append(Environment.NewLine);
 			}
 			else if(required)

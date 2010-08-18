@@ -5,6 +5,7 @@ namespace Alaris.Extras
 	/// <summary>
 	/// Exception thrown when an invalid config file is detected.
 	/// </summary>
+	[Serializable]
 	public class ConfigFileInvalidException : Exception
 	{
 		/// <summary>

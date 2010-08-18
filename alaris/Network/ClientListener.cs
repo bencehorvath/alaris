@@ -107,6 +107,7 @@ namespace Alaris.Core
 					var packet = new AlarisPacket(msg);
 					
 					sClientPacketHandler.HandlePacket(packet, client);
+                    packet.Dispose();
 				}
 				
 				Thread.Sleep(50);

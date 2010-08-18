@@ -52,28 +52,11 @@ namespace Alaris.Core
 		/// <summary>
 		/// The dummy object used for locking.
 		/// </summary>
-		static object _lock = new object();
+		static readonly object _lock = new object();
 
 		#endregion Fields
 
-
-		#region Constructors
-
-		/// <summary>
-		/// Type-initializer to prevent type to be marked with beforefieldinit.
-		/// </summary>
-		/// <remarks>
-		/// This simply makes sure that static fields initialization occurs 
-		/// when Instance is called the first time and not before.
-		/// </remarks>
-		static Singleton()
-		{
-		}
-
-		#endregion Constructors
-
-
-		#region Properties
+	    #region Properties
 
 		/// <summary>
 		/// Gets the single instance of the class.

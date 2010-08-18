@@ -11,7 +11,7 @@ namespace Alaris.Irc
 	/// <summary>
 	/// Establish a DCC Chat connection with a remote user. 
 	/// </summary>
-	public sealed class DccChatSession
+	public sealed class DccChatSession : IDisposable
 	{		
 		
 		/// <summary>
@@ -93,15 +93,15 @@ namespace Alaris.Irc
 		/// <summary>
 		/// Create the correctly formatted DCC CHAT message and send it.
 		/// </summary>
-		private void SendChatRequest( string listenIPAddress, int listenPort ) 
+		private void SendChatRequest( string listenIpAddress, int port ) 
 		{
 			//512 is the max IRC message size
-			StringBuilder builder = new StringBuilder("PRIVMSG ", 512 );
+			var builder = new StringBuilder("PRIVMSG ", 512 );
 			builder.Append( dccUserInfo.Nick );
 			builder.Append( " :\x0001DCC CHAT CHAT " );
-			builder.Append( DccUtil.IPAddressToLong( IPAddress.Parse( listenIPAddress) ) );
+			builder.Append( DccUtil.IPAddressToLong( IPAddress.Parse( listenIpAddress) ) );
 			builder.Append( " " );
-			builder.Append( listenPort );
+			builder.Append( port );
 			builder.Append( "\x0001\n");
 			dccUserInfo.Connection.Sender.Raw( builder.ToString() );
 		}
@@ -231,9 +231,10 @@ namespace Alaris.Irc
 		/// </summary>
 		/// <param name="text">The text. It need not have a 
 		/// newline at the end since one will automatically appended..</param>
-		public void SendMessage( string text ) 
+		public void SendMessage( string text )
 		{
-			if( Connected ) 
+		    if (text == null) throw new ArgumentNullException("text");
+		    if( Connected ) 
 			{
 				try 
 				{
@@ -250,7 +251,8 @@ namespace Alaris.Irc
 				}
 			}
 		}
-		/// <summary>
+
+	    /// <summary>
 		/// Close the chat session.
 		/// </summary>
 		public void Close() 
@@ -362,8 +364,8 @@ namespace Alaris.Irc
 			//Start timeout thread if timeout > 0
 			if( timeout > 0 ) 
 			{
-				Timer timer = new Timer(
-					new TimerCallback( session.TimerExpired ),
+				var timer = new Timer(
+					session.TimerExpired,
 					session,
 					timeout,
 					0);
@@ -372,5 +374,11 @@ namespace Alaris.Irc
 			return session;
 		}
 
-	}
+
+        public void Dispose()
+        {
+            client.Close();
+            
+        }
+    }
 }

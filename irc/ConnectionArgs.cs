@@ -9,13 +9,13 @@ namespace Alaris.Irc
 	/// </summary>
 	public struct ConnectionArgs
 	{
-		private string realName;
-		private string nickName;
-		private string userName;
-		private string modeMask;
-		private string hostname;
-		private int port;
-		private string serverPassword;
+		private string _realName;
+		private string _nickName;
+		private string _userName;
+		private string _modeMask;
+		private string _hostname;
+		private int _port;
+		private string _serverPassword;
 
 		/// <summary>
 		/// Create a new instance initialized with the default values:
@@ -27,13 +27,13 @@ namespace Alaris.Irc
 		/// <param name="hostname">The hostname of the IRC server.</param>
 		public ConnectionArgs( string name, string hostname ) 
 		{
-			realName = name;
-			nickName = name;
-			userName = name;
-			modeMask = "4";
-			this.hostname = hostname;
-			port = 6667;
-			serverPassword = "*";
+			_realName = name;
+			_nickName = name;
+			_userName = name;
+			_modeMask = "4";
+			_hostname = hostname;
+			_port = 6667;
+			_serverPassword = "*";
 		}
 
 		/// <summary>
@@ -44,11 +44,11 @@ namespace Alaris.Irc
 		{
 			get
 			{
-				return hostname;
+				return _hostname;
 			}
 			set
 			{
-				hostname = value;
+				_hostname = value;
 			}
 		}
 		/// <summary>
@@ -60,11 +60,11 @@ namespace Alaris.Irc
 		{
 			get
 			{
-				return modeMask;
+				return _modeMask;
 			}
 			set
 			{
-				modeMask = value;
+				_modeMask = value;
 			}
 		}
 		/// <summary>
@@ -75,11 +75,11 @@ namespace Alaris.Irc
 		{
 			get
 			{
-				return nickName;
+				return _nickName;
 			}
 			set
 			{
-				nickName = value;
+				_nickName = value;
 			}
 		}
 		/// <summary>
@@ -90,11 +90,11 @@ namespace Alaris.Irc
 		{
 			get
 			{
-				return port;
+				return _port;
 			}
 			set
 			{
-				port = value;
+				_port = value;
 			}
 		}
 		/// <summary>
@@ -105,11 +105,11 @@ namespace Alaris.Irc
 		{
 			get
 			{
-				return realName;
+				return _realName;
 			}
 			set
 			{
-				realName = value;
+				_realName = value;
 			}
 		}
 		/// <summary>
@@ -120,11 +120,11 @@ namespace Alaris.Irc
 		{
 			get
 			{
-				return userName;
+				return _userName;
 			}
 			set
 			{
-				userName = value;
+				_userName = value;
 			}
 		}
 		/// <summary>
@@ -135,11 +135,11 @@ namespace Alaris.Irc
 		{
 			get
 			{
-				return serverPassword;
+				return _serverPassword;
 			}
 			set
 			{
-				serverPassword = value;
+				_serverPassword = value;
 			}
 		}
 	}

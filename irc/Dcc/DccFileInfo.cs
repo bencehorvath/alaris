@@ -43,7 +43,8 @@ namespace Alaris.Irc
 		/// <exception cref="ArgumentException">If the file does not already exist.</exception>
 		public DccFileInfo( FileInfo fileInfo) 
 		{
-			this.fileInfo = fileInfo;
+		    if (fileInfo == null) throw new ArgumentNullException("fileInfo");
+		    this.fileInfo = fileInfo;
 			if( !fileInfo.Exists ) 
 			{
 				throw new ArgumentException( fileInfo.Name + " does not exist.");

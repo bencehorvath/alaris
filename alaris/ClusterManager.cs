@@ -35,19 +35,18 @@ namespace Alaris.Extras
 			Log.Debug("ClusterManager", "DatabaseManager instance requested successfully.");
 		}
 		
-		/// <summary>
-		/// Gets the database manager.
-		/// </summary>
-		/// <returns>
-		/// The database manager.
-		/// </returns>
-		public DatabaseManager GetDatabaseManager() 
-		{ 
-			if(_manager.Equals(null))
-				throw new InvalidOperationException("The requested manager instance is null!");
-			else
-				return _manager;
-		}
+	
+        /// <summary>
+        /// The Database Manager
+        /// </summary>
+        public DatabaseManager DatabaseManager { get
+        {
+            if (_manager.Equals(null))
+                throw new InvalidOperationException("The requested manager instance is null!");
+
+            return _manager;
+        }
+        }
 	}
 }
 

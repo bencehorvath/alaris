@@ -26,7 +26,7 @@ namespace Alaris.Core
 			Console.ForegroundColor = ConsoleColor.Cyan;
 			
 			Console.WriteLine("Welcome to Alaris!");
-			Console.WriteLine("Version: {0}", Utilities.GetBotVersion());
+			Console.WriteLine("Version: {0}", Utilities.BotVersion);
 			Console.WriteLine("You can safely use <Ctrl+C> to terminate the process.\n");
 			Thread.Sleep(2000);
 			string conf = "alaris.conf";
@@ -48,15 +48,26 @@ namespace Alaris.Core
 			}
 			
 			var sBot = Singleton<AlarisBot>.Instance;
-			var listener = new ClientListener(sBot.GetListenerPort());
-			var lthread = new Thread(listener.Listen);
-			lthread.Start();
-			
-			Console.CancelKeyPress += (object sender, ConsoleCancelEventArgs eargs) => {
+		    ClientListener listener;
+		    Thread lthread = null;
+
+            if (AlarisBot.AlarisServer)
+            {
+                listener = new ClientListener(sBot.GetListenerPort());
+                lthread = new Thread(listener.Listen);
+                lthread.Start();
+            }
+
+		    Console.CancelKeyPress += (object sender, ConsoleCancelEventArgs eargs) => 
+            {
 				sBot.Disconnect("Daemon killed.");
-				lthread.Join(100);
-				lthread.Abort();
-			};
+
+                if (lthread != null)
+                {
+                    lthread.Join(100);
+                    lthread.Abort();
+                }
+            };
 			
 			/*var exc = new List<Exception>();
 			bot.GetCrashHandler().HandleReadConfig(bot.ReadConfig, conf, ref exc);
@@ -74,12 +85,13 @@ namespace Alaris.Core
 				
 				var packet = new AlarisPacket();
 				
-				packet.Write<int>((int)Opcode.CMSG_REQUEST_AUTH);
-				packet.Write<string>(sBot.GetGuid().ToString());
-				packet.Write<string>(Utilities.MD5String("twlbot"));
-				packet.Write<int>(sBot.GetListenerPort());
+				packet.Write((int)Opcode.CMSG_REQUEST_AUTH);
+				packet.Write(sBot.GetGuid().ToString());
+				packet.Write(Utilities.MD5String("twlbot"));
+				packet.Write(sBot.GetListenerPort());
 				
 				sBot.SendPacketToACS(packet);
+                packet.Dispose();
 			}
 				
 		}

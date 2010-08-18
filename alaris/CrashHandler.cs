@@ -51,39 +51,23 @@ namespace Alaris.Extras
 		/// <param name="param">
 		/// The parameter passed to the ReadConfig method.
 		/// </param>
-		/// <param name="caught">
-		/// A list filled which will be filled with the exceptions caught inside the method.
-		/// </param>
-	
-		public void HandleReadConfig(ReadConfigDelegate confread, string param, ref List<Exception> caught)
+		public static void HandleReadConfig(ReadConfigDelegate confread, string param)
 		{
-			bool dolist = false;
-			
-			if(caught != null)
-				dolist = true;
-			
 			try 
 			{
 				confread(param);
 			}
 			catch (FileNotFoundException ex)
 			{
-				Log.Error("CrashHandler", "FileNotFoundException: " + ex.ToString());
-				if(dolist)
-					caught.Add(ex);
+				Log.Error("CrashHandler", "FileNotFoundException: " + ex);
 			}
 			catch (ConfigFileInvalidException ex)
 			{
-				Log.Error("CrashHandler", "ConfigFileInvalidException: " + ex.ToString());
-				if(dolist)
-					caught.Add(ex);
+				Log.Error("CrashHandler", "ConfigFileInvalidException: " + ex);
 			}
 			catch (Exception x)
 			{
-				Log.Error("CrashHandler", "Exception: " + x.ToString());
-				
-				if(dolist)
-					caught.Add(x);
+				Log.Error("CrashHandler", "Exception: " + x);
 			}
 		}
 	}

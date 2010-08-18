@@ -79,7 +79,7 @@ namespace Alaris.Extras
 		public static void SendInfo(ref Connection connection, string chan)
 		{
 			Log.Notice("Alaris", "Info request.");
-			connection.Sender.PublicMessage(chan, IrcConstants.Cyan + "Alaris " + GetBotVersion());
+			connection.Sender.PublicMessage(chan, IrcConstants.Cyan + "Alaris " + BotVersion);
 			connection.Sender.PublicMessage(chan, IrcConstants.DarkGreen + "Developer: Twl");
 		}
 		
@@ -94,10 +94,11 @@ namespace Alaris.Extras
 		/// </returns>
 		public static bool IsAdmin(UserInfo user)
 		{
-			return (user.Hostname == AdminHost && user.Nick == AdminNick && user.User == AdminUser);
+		    if (user == null) throw new ArgumentNullException("user");
+		    return (user.Hostname == AdminHost && user.Nick == AdminNick && user.User == AdminUser);
 		}
-		
-		/// <summary>
+
+	    /// <summary>
 		/// Calculates the MD5 sum of a file.
 		/// </summary>
 		/// <param name="fileName">
@@ -108,38 +109,46 @@ namespace Alaris.Extras
 		/// </returns>
 		public static string MD5File(string fileName)
 		{
-			FileStream file = new FileStream(fileName, FileMode.Open);
-			MD5 md5 = new MD5CryptoServiceProvider();
-			byte[] retVal = md5.ComputeHash(file);
-			file.Close();
-			file.Dispose();
-			
-			var sb = new StringBuilder();
-			
-			for (int i = 0; i < retVal.Length; i++)
-			{
-				sb.Append(retVal[i].ToString("x2"));
-				
-			}
-			
-			return sb.ToString();
+		    if (fileName == null) throw new ArgumentNullException("fileName");
+	        byte[] retVal;
+		    var file = new FileStream(fileName, FileMode.Open);
+            try
+            {
+                MD5 md5 = new MD5CryptoServiceProvider();
+                retVal = md5.ComputeHash(file);
+                md5.Dispose();
+            }
+            finally
+            {
+                file.Close();
+            }
+
+	        var sb = new StringBuilder();
+
+	        if (retVal != null)
+	            for (var i = 0; i < retVal.Length; i++)
+	                sb.Append(retVal[i].ToString("x2"));
+
+	        return sb.ToString();
 		}
 		
 		/// <summary>
 		/// Calculates the MD5 hash of a string.
 		/// </summary>
-		/// <param name="Value">
+		/// <param name="value">
 		/// The string to calculate MD5 hash of.
 		/// </param>
 		/// <returns>
 		/// The MD5 hash.
 		/// </returns>
-		public static string MD5String(string Value)
+		public static string MD5String(string value)
 		{
-			 var x = new MD5CryptoServiceProvider();
+		    if (value == null) throw new ArgumentNullException("value");
+		    var x = new MD5CryptoServiceProvider();
 			
-			 byte[] data = Encoding.ASCII.GetBytes(Value);
+			 byte[] data = Encoding.ASCII.GetBytes(value);
 			 data = x.ComputeHash(data);
+             x.Dispose();
 			 string ret = "";
 			
 			 for (int i=0; i < data.Length; i++)
@@ -148,29 +157,20 @@ namespace Alaris.Extras
 			 return ret;
 		}
 		
-		/// <summary>
-		/// Gets the unix time.
-		/// </summary>
-		/// <returns>
-		/// The unix time.
-		/// </returns>
-		public static double GetUnixTime()
-		{
-			var elapsed = (DateTime.UtcNow - new DateTime(1970,1,1,0,0,0));
-			
-			return (elapsed.TotalSeconds);
-		}
+        /// <summary>
+        /// The current unix time.
+        /// </summary>
+        public static double UnixTime { get
+        {
+            var elapsed = (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0));
+
+            return (elapsed.TotalSeconds);
+        } }
 		
-		/// <summary>
-		/// Returns the bot's assembly version.
-		/// </summary>
-		/// <returns>
-		/// The version.
-		/// </returns>
-		public static string GetBotVersion()
-		{
-			return (System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString());
-		}
+        /// <summary>
+        /// The bot's assembly version.
+        /// </summary>
+        public static string BotVersion { get { return (Assembly.GetExecutingAssembly().GetName().Version.ToString()); } }
 		
 		/// <summary>
 		/// Gets the URLs in the specified text.
@@ -222,7 +222,11 @@ namespace Alaris.Extras
 		/// </param>
 		public static void HandleWebTitle(ref Connection connection, string chan, string msg)
 		{
-			string tt = msg.Replace("@title ", string.Empty);
+		    if (connection == null) throw new ArgumentNullException("connection");
+		    if (chan == null) throw new ArgumentNullException("chan");
+		    if (msg == null) throw new ArgumentNullException("msg");
+
+		    var tt = msg.Replace("@title ", string.Empty);
 			if(!tt.StartsWith("http://"))
 			{
 				tt = "http://" + tt;
@@ -254,13 +258,24 @@ namespace Alaris.Extras
 		/// </returns>
 		public static string GetCpuId()
         {
-            var reader = new StreamReader("/proc/cpuinfo");
-			
-			string content = reader.ReadToEnd();
-			reader.Close();
-			reader.Dispose();
-			
-			var getBrandRegex = new Regex(@"model\sname\s:\s*(?<first>.+\sCPU)\s*(?<second>.+)", RegexOptions.IgnoreCase);
+		    StreamReader reader = null;
+		    string content;
+
+            try
+            {
+                reader = new StreamReader("/proc/cpuinfo");
+
+                content = reader.ReadToEnd();
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+            }
+
+		    var getBrandRegex = new Regex(@"model\sname\s:\s*(?<first>.+\sCPU)\s*(?<second>.+)", RegexOptions.IgnoreCase);
 			
 			if(!getBrandRegex.IsMatch(content))
 			{

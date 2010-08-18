@@ -1,19 +1,4 @@
-using System;
-using System.IO;
-using System.Collections;
-using System.Collections.Generic;
-using System.Net;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Diagnostics;
-using ICSharpCode.SharpZipLib;
-using System.Reflection;
-using System.Threading;
-using System.Timers;
-using Alaris.Irc;
-using Alaris.Extras;
-
-namespace Alaris.Core
+namespace Alaris
 {
 	public partial class AlarisBot
 	{

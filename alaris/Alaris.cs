@@ -1,26 +1,21 @@
 using System;
 using System.IO;
-using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Diagnostics;
-using ICSharpCode.SharpZipLib;
-using System.Reflection;
+using Alaris.Core;
 using System.Threading;
-using System.Timers;
 using Alaris.Irc;
 using Alaris.Extras;
 using System.Net.Sockets;
 
-
-namespace Alaris.Core
+namespace Alaris
 {
 	/// <summary>
 	/// The main class for Alaris.
 	/// </summary>
-	public partial class AlarisBot : IThreadContext
+	public partial class AlarisBot : IThreadContext, IDisposable
 	{
 		private Connection _connection;
 		private readonly ScriptManager _manager;
@@ -56,7 +51,7 @@ namespace Alaris.Core
 		/// <summary>
 		/// The acs_rand_request_channel.
 		/// </summary>
-		public string acs_rand_request_channel;
+		public string AcsRandRequestChannel;
 		
 		/// <summary>
 		/// Gets or sets the thread pool.
@@ -64,7 +59,7 @@ namespace Alaris.Core
 		/// <value>
 		/// The thread pool.
 		/// </value>
-		public CThreadPool Pool { get; private set; }
+		public CThreadPool Pool { get; internal set; }
 		
 		private AlarisBot() : this("alaris.conf") {}
 		
@@ -84,7 +79,7 @@ namespace Alaris.Core
 			
 			_connection = new Connection(cargs, true, false);
 			var responder = new CtcpResponder(_connection);
-			responder.VersionResponse = "Alaris " + Utilities.GetBotVersion();
+			responder.VersionResponse = "Alaris " + Utilities.BotVersion;
 			responder.SourceResponse = "http://www.wowemuf.org";
 			responder.UserInfoResponse = "Alaris multi-functional bot.";
 			
@@ -115,7 +110,7 @@ namespace Alaris.Core
 		public int GetListenerPort() { return listener_port; }
 		
 		/// <summary>
-		/// Releases unmanaged resources and performs other cleanup operations before the <see cref="Alaris.Core.AlarisBot"/>
+		/// Releases unmanaged resources and performs other cleanup operations before the <see cref="AlarisBot"/>
 		/// is reclaimed by garbage collection.
 		/// </summary>
 		~AlarisBot()
@@ -133,9 +128,8 @@ namespace Alaris.Core
 		/// </summary>
 		public void Run()
 		{
-			var ls = new List<Exception>();
-			sCrashHandler.HandleReadConfig(ReadConfig, _configfile, ref ls);
-			ls.Clear();
+			
+			CrashHandler.HandleReadConfig(ReadConfig, _configfile);
 			
 			// start database server.
 			if(MysqlEnabled)
@@ -181,7 +175,6 @@ namespace Alaris.Core
 			var reader = new StreamReader("./"+configfile);
 			string config = reader.ReadToEnd();
 			reader.Close();
-			reader.Dispose();
 			
 			
 			var serverRegex = new Regex(@"server\s=\s(?<server>\S+)");
@@ -265,7 +258,8 @@ namespace Alaris.Core
 		/// </param>
 		public void SendPacketToACS(AlarisPacket packet)
 		{
-			if(!AlarisServer)
+		    if (packet == null) throw new ArgumentNullException("packet");
+		    if(!AlarisServer)
 				return;
 			
 			var client = new TcpClient();
@@ -276,6 +270,7 @@ namespace Alaris.Core
 				client.Connect(endp);
 				
 				Thread.Sleep(300);
+			    
 				
 				if(client.Connected)
 				{
@@ -293,9 +288,7 @@ namespace Alaris.Core
 					Log.Debug("AlarisServer", "Packet sent.");
 					
 					stream.Close();
-					
-					client.Close();
-					
+
 					Log.Debug("AlarisServer", "Connection closed.");
 				}
 			}
@@ -379,7 +372,15 @@ namespace Alaris.Core
 		{
 			Log.Notice("CTCP", "Received command " + command + " from " + user.Nick);
 		}
-	}
+
+        /// <summary>
+        /// Releases all used resources.
+        /// </summary>
+        public void Dispose()
+        {
+            _connection.Dispose();
+        }
+    }
 	
 
 }

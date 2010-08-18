@@ -584,7 +584,8 @@ namespace Alaris.Irc
 		/// <exception cref="ArgumentException">If the listen port is already in use.</exception>
 		public static DccFileSession Receive(DccUserInfo dccUserInfo, DccFileInfo dccFileInfo, bool turbo ) 
 		{
-			Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, "[" + Thread.CurrentThread.Name +"] DccFileSession::Receive()");
+		    if (dccUserInfo == null) throw new ArgumentNullException("dccUserInfo");
+		    Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, "[" + Thread.CurrentThread.Name +"] DccFileSession::Receive()");
 			//Test if we are already using this port
 			if( DccFileSessionManager.DefaultInstance.ContainsSession( "C" + dccUserInfo.remoteEndPoint.Port ) ) 
 			{

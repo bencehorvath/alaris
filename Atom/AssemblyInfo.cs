@@ -98,4 +98,4 @@ using System.Security.Permissions;
 [assembly: ComVisible(false)]
 
 [assembly: AllowPartiallyTrustedCallers()]
-[assembly: SecurityPermission(SecurityAction.RequestMinimum, Execution=true)]
+

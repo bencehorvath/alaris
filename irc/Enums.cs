@@ -65,6 +65,10 @@ namespace Alaris.Irc
 	/// </summary>
 	public enum ChannelMode: int
 	{
+        /// <summary>
+        /// Default
+        /// </summary>
+        None = 0,
 		/// <summary>
 		/// The mode 'O' is only used in conjunction with "safe channels" and
 		/// SHALL NOT be manipulated by users. Servers use it to give the user

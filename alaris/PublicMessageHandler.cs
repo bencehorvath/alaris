@@ -1,20 +1,10 @@
 using System;
-using System.IO;
-using System.Collections;
-using System.Collections.Generic;
-using System.Net;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Diagnostics;
-using ICSharpCode.SharpZipLib;
-
-using System.Reflection;
+using Alaris.Core;
 using System.Threading;
-using System.Timers;
 using Alaris.Irc;
 using Alaris.Extras;
 
-namespace Alaris.Core
+namespace Alaris
 {
 	public partial class AlarisBot
 	{
@@ -138,17 +128,17 @@ namespace Alaris.Core
 			
 			if(msg == "@request acs random" && AlarisServer)
 			{
-				acs_rand_request_channel = chan;
+				AcsRandRequestChannel = chan;
 				var packet = new AlarisPacket();
-				packet.Write<int>((int)Opcode.CMSG_REQUEST_ACS_RANDOM);
-				packet.Write<string>((string)chan);
+				packet.Write((int)Opcode.CMSG_REQUEST_ACS_RANDOM);
+				packet.Write(chan);
 				SendPacketToACS(packet);
-				
+				packet.Dispose();
 			}
 			
 			if(msg.StartsWith("@sayid ") && MysqlEnabled)
 			{
-				int id = 0;
+				int id;
 				try { id = Convert.ToInt32(msg.Remove(0,7)); }
 				catch { return; }
 				

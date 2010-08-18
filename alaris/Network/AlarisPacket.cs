@@ -1,4 +1,5 @@
 using System;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
@@ -127,7 +128,11 @@ namespace Alaris.Core
 			read_position = 0;
 			split_buffer.Clear();
 			_netmsg = string.Empty;
+            
+            GC.SuppressFinalize(this);
 		}
+
+    
 		
 		/// <summary>
 		/// Prepares the string.
@@ -135,12 +140,13 @@ namespace Alaris.Core
 		/// <returns>
 		/// The string.
 		/// </returns>
-		/// <param name='s'>
-		/// S.
+		/// <param name='packetString'>
+		/// Packet string to prepare.
 		/// </param>
-		public static string PrepareString(string s)
+		public static string PrepareString(string packetString)
 		{
-			return (s.Replace(Environment.NewLine, "{[n]}"));
+		    if (packetString == null) throw new ArgumentNullException("packetString");
+		    return (packetString.Replace(Environment.NewLine, "{[n]}"));
 		}
 	}
 }

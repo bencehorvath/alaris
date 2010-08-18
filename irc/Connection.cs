@@ -21,7 +21,7 @@ namespace Alaris.Irc
 	/// This class manages the connection to the IRC server and provides
 	/// access to all the objects needed to send and receive messages.
 	/// </summary>
-	public sealed class Connection 
+	public sealed class Connection : IDisposable
 	{
 		/// <summary>
 		/// Receive all the messages, unparsed, sent by the IRC server. This is not
@@ -433,7 +433,7 @@ namespace Alaris.Irc
 				ExtractProperties();
 			}
 		}
-		private void ExtractProperties() 
+		private static void ExtractProperties() 
 		{
 			//For the moment the only one we care about is NickLen
 			//In fact we don't cae about any but keep here as an example
@@ -637,7 +637,7 @@ namespace Alaris.Irc
 			{
 				if( connected ) 
 				{
-					throw new Exception("Connection with IRC server already opened.");
+					throw new InvalidOperationException("Connection with IRC server already opened.");
 				}
 				Debug.WriteLineIf( Rfc2812Util.IrcTrace.TraceInfo,"[" + Thread.CurrentThread.Name +"] Connection::Connect()");
 				client = new TcpClient();
@@ -667,7 +667,7 @@ namespace Alaris.Irc
 			{
 				if( !connected ) 
 				{
-					throw new Exception("Not connected to IRC server.");
+					throw new InvalidOperationException("Not connected to IRC server.");
 				}
 				Debug.WriteLineIf( Rfc2812Util.IrcTrace.TraceInfo,"[" + Thread.CurrentThread.Name +"] Connection::Disconnect()");
 				listener.Disconnecting();
@@ -708,5 +708,12 @@ namespace Alaris.Irc
 			parsers.Remove( parser );
 		}
 
-	}
+
+        public void Dispose()
+        {
+            client.Close();
+            writer.Dispose();
+            reader.Dispose();
+        }
+    }
 }

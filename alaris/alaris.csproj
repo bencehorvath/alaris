@@ -43,9 +43,9 @@
     <NoWarn>169,414</NoWarn>
     <GenerateDocumentation>true</GenerateDocumentation>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
     <DocumentationFile>bin\Debug\Documentation\Alaris.XML</DocumentationFile>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -97,7 +97,6 @@
     <Compile Include="WebHelper.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Utilities.cs" />
-    <Compile Include="HaskellEvaluator.cs" />
     <Compile Include="Threading\ThreadPool.cs" />
     <Compile Include="Threading\IThreadContext.cs" />
     <Compile Include="Singleton.cs" />

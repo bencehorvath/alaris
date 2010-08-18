@@ -20,7 +20,7 @@ namespace Alaris.Core
 	/// <summary>
 	/// A simple Thread pool implementation.
 	/// </summary>
-	public sealed class CThreadPool
+	public sealed class CThreadPool : IDisposable
 	{
 		private readonly List<BackgroundWorker> _availableWorkers;
 		private readonly List<BackgroundWorker> _busyWorkers;
@@ -75,7 +75,8 @@ namespace Alaris.Core
 		/// </param>
 		public void Enqueue(IThreadContext job)
 		{
-			Log.Debug("ThreadPool", "Got new job: " + job.GetGuid().ToString());
+		    if (job == null) throw new ArgumentNullException("job");
+		    Log.Debug("ThreadPool", "Got new job: " + job.GetGuid().ToString());
 			_pendingJobs.Add(job);
 		}
 		/// <summary>
@@ -86,7 +87,8 @@ namespace Alaris.Core
 		/// </param>
 		public void Enqueue(IThreadRunnable task)
 		{
-			Log.Debug("ThreadPool", "Got new job: 0x" + Math.Abs(task.GetHashCode()).ToString("x"));
+		    if (task == null) throw new ArgumentNullException("task");
+		    Log.Debug("ThreadPool", "Got new job: 0x" + Math.Abs(task.GetHashCode()).ToString("x"));
 			_pendingJobs.Add(task);
 		}
 		
@@ -229,8 +231,18 @@ namespace Alaris.Core
 			
 			//Log.Debug("IntegrityCheck", "Spawned thread count: " + _availableWorkers.Count + _busyWorkers.Count);
 		}
-		
-		
-		
-	}
+
+
+
+        /// <summary>
+        /// Disposes this object.
+        /// </summary>
+        public void Dispose()
+        {
+            stop = true;
+            _watcher.Join(600);
+            _integrityTimer.Stop();
+            _integrityTimer.Close();
+        }
+    }
 }
