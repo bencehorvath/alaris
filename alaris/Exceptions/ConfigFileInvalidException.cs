@@ -1,17 +1,17 @@
 using System;
 
-namespace Alaris.Extras
+namespace Alaris.Exceptions
 {
 	/// <summary>
 	/// Exception thrown when an invalid config file is detected.
 	/// </summary>
 	[Serializable]
-	public class ConfigFileInvalidException : Exception
+	public abstract class ConfigFileInvalidException : Exception
 	{
 		/// <summary>
 		/// Creates a new instance of <see cref="ConfigFileInvalidException"/>
 		/// </summary>
-		public ConfigFileInvalidException() : base()
+		protected ConfigFileInvalidException() : base()
 		{}
 		
 		/// <summary>
@@ -20,7 +20,7 @@ namespace Alaris.Extras
 		/// <param name="msg">
 		/// The message of the exception.
 		/// </param>
-		public ConfigFileInvalidException(string msg) : base(msg)
+		protected ConfigFileInvalidException(string msg) : base(msg)
 		{}
 	}
 }

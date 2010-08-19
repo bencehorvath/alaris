@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Management;
 using System.Reflection;
-using Alaris.Extras;
 using Alaris.Irc;
 using Alaris.Core;
 using System.Security.Cryptography;
@@ -44,11 +43,11 @@ namespace Alaris
 		public static void SendSysStats(ref Connection connection, string chan)
 		{
 			Log.Notice("Alaris", "System info request.");
-			string hostname = Environment.MachineName;
-			string username = Environment.UserName;
+			var hostname = Environment.MachineName;
+			var username = Environment.UserName;
 			
-			string os = Environment.OSVersion.ToString();
-			long mem = Process.GetCurrentProcess().WorkingSet64/1024/1024;
+			var os = Environment.OSVersion.ToString();
+			var mem = Process.GetCurrentProcess().WorkingSet64/1024/1024;
 			
 			connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Bot version: " + IrcConstants.Normal + BotVersion);
 			connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Hosted by " + IrcConstants.Normal + username + " on machine " + hostname);

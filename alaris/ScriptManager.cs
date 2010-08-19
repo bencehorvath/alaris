@@ -9,7 +9,7 @@ using Alaris.Irc.Delegates.Disconnect;
 using Alaris.Irc.Delegates.Messages;
 using Alaris.Irc.Delegates.Server;
 
-namespace Alaris.Extras
+namespace Alaris
 {
 	/// <summary>
 	/// A script manager for the IRC connections.
@@ -23,7 +23,8 @@ namespace Alaris.Extras
 		/// <summary>
 		/// The IRC connection instance.
 		/// </summary>
-		public Connection Connection { get { return _connection; } private set { _connection = value; } }
+		public Connection Connection { get { return _connection; }
+		}
 		
 		private Connection _connection;
 		
@@ -58,7 +59,7 @@ namespace Alaris.Extras
 		
 		/// <summary>
 		/// Releases unmanaged resources and performs other cleanup operations before the
-		/// <see cref="Alaris.Extras.ScriptManager"/> is reclaimed by garbage collection.
+		/// <see cref="ScriptManager"/> is reclaimed by garbage collection.
 		/// </summary>
 		~ScriptManager()
 		{

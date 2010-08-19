@@ -21,7 +21,7 @@
 
 using System;
 using System.Reflection;
-using Alaris.Core;
+using Alaris.Exceptions;
 
 namespace Alaris
 {

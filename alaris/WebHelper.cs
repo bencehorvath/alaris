@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Text.RegularExpressions;
 
-namespace Alaris.Extras
+namespace Alaris
 {
 	/// <summary>
 	/// A class which provides useful methods for working with the world-wide web.

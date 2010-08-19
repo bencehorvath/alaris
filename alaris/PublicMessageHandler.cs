@@ -2,14 +2,12 @@ using System;
 using Alaris.Core;
 using System.Threading;
 using Alaris.Irc;
-using Alaris.Extras;
 
 namespace Alaris
 {
 	public partial class AlarisBot
 	{
-		
-		
+
 		/// <summary>
 		/// The method called when a public message occurs in one of the channels the bot is on.
 		/// </summary>
@@ -22,7 +20,7 @@ namespace Alaris
 		/// <param name="msg">
 		/// The message that was sent.
 		/// </param>
-		public void OnPublicMessage(UserInfo user, string chan, string msg)
+		private void OnPublicMessage(UserInfo user, string chan, string msg)
 		{
 			
 			var urlsin = Utilities.GetUrls(msg);

@@ -22,7 +22,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Alaris
+namespace Alaris.Exceptions
 {
    /// <summary>
    /// Represents errors that occur while creating a singleton.

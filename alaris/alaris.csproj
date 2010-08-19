@@ -91,7 +91,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="ScriptManager.cs" />
-    <Compile Include="Exceptions.cs" />
+    <Compile Include="Exceptions\ConfigFileInvalidException.cs" />
     <Compile Include="PublicMessageHandler.cs" />
     <Compile Include="API.cs" />
     <Compile Include="CrashHandler.cs" />
@@ -101,7 +101,7 @@
     <Compile Include="Threading\ThreadPool.cs" />
     <Compile Include="Threading\IThreadContext.cs" />
     <Compile Include="Singleton.cs" />
-    <Compile Include="SingletonException.cs" />
+    <Compile Include="Exceptions\SingletonException.cs" />
     <Compile Include="Network\AlarisPacket.cs" />
     <Compile Include="Network\Opcodes.cs" />
     <Compile Include="Network\ClientListener.cs" />

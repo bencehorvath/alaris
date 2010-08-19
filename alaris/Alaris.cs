@@ -59,7 +59,7 @@ namespace Alaris
 		/// <summary>
 		/// Determines whether the communication to and dependance of alaris_server is set.
 		/// </summary>
-		public const bool AlarisServer = false;
+		public readonly static bool AlarisServer;
 		
 		/// <summary>
 		/// The acs_rand_request_channel.
@@ -238,8 +238,10 @@ namespace Alaris
 			var client = new TcpClient();
 			try
 			{
-				
-				var endp = new IPEndPoint(IPAddress.Parse(ACSHost), ACSPort);
+			    var ip = IPAddress.Parse(ACSHost);
+                if (ip == null) return;
+
+				var endp = new IPEndPoint(ip, ACSPort);
 				client.Connect(endp);
 				
 				Thread.Sleep(300);

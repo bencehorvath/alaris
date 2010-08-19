@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
+using Alaris.Exceptions;
 using ICSharpCode.SharpZipLib;
 using System.Reflection;
 using System.Threading;
