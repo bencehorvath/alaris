@@ -142,7 +142,7 @@ namespace Alaris
 				try { id = Convert.ToInt32(msg.Remove(0,7)); }
 				catch { return; }
 				
-				var row = sDatabaseManager.QueryFirstRow("SELECT msg FROM messages WHERE id = '"+id+"'");
+				var row = _sDatabaseManager.QueryFirstRow("SELECT msg FROM messages WHERE id = '"+id+"'");
 				
 				if(row == null)
 				{

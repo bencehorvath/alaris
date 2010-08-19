@@ -24,13 +24,13 @@ namespace Alaris
 		private readonly ScriptManager _manager;
 		private string _nick = "alaris";
 		private string _server = "irc.rizon.net";
-		private bool _confdone = false;
-		private bool _nickserv = false;
+		private bool _confdone;
+		private bool _nickserv;
 		private string _nspw = "";
-		private List<string> _channels = new List<string>();
+		private readonly List<string> _channels = new List<string>();
 		private string _anick, _auser, _ahost;
-		private CrashHandler sCrashHandler = Singleton<CrashHandler>.Instance;
-		private DatabaseManager sDatabaseManager = Singleton<DatabaseManager>.Instance;
+		private readonly CrashHandler _sCrashHandler = Singleton<CrashHandler>.Instance;
+		private readonly DatabaseManager _sDatabaseManager = Singleton<DatabaseManager>.Instance;
 		private readonly Guid _guid = Guid.NewGuid();
 		private readonly string _configfile;
 		private const int ListenerPort = 35221;
@@ -39,17 +39,17 @@ namespace Alaris
 		/// <summary>
 		/// MySQL support enabled or not.
 		/// </summary>
-		public bool MysqlEnabled = false;
+		public bool MysqlEnabled;
 		/// <summary>
 		/// MySQL data (host, user etc.).
 		/// Size: 4 (DB is last)
 		/// </summary>
-		public string[] MysqlData = new string[4];
+		public readonly string[] MysqlData = new string[4];
 
         /// <summary>
         /// The bot's crash handler instance.
         /// </summary>
-        public CrashHandler CrashHandler { get { return sCrashHandler; } }
+        public CrashHandler CrashHandler { get { return _sCrashHandler; } }
 
         /// <summary>
         /// The bot's script manager instance.
@@ -59,7 +59,7 @@ namespace Alaris
 		/// <summary>
 		/// Determines whether the communication to and dependance of alaris_server is set.
 		/// </summary>
-		public readonly static bool AlarisServer = false;
+		public const bool AlarisServer = false;
 		
 		/// <summary>
 		/// The acs_rand_request_channel.
@@ -74,7 +74,11 @@ namespace Alaris
 		/// </value>
 		public CThreadPool Pool { get; private set; }
 		
+        /// <summary>
+        /// This is not an unused constructor. Called through singleton!
+        /// </summary>
 		private AlarisBot() : this("alaris.config.xml") {}
+
 		
 		/// <summary>
 		/// Creates a new instacne of Alaris bot.
@@ -91,12 +95,14 @@ namespace Alaris
 			Pool = new CThreadPool(4);
 			
 			_connection = new Connection(cargs, true, false);
-			var responder = new CtcpResponder(_connection);
-			responder.VersionResponse = "Alaris " + Utilities.BotVersion;
-			responder.SourceResponse = "http://www.wowemuf.org";
-			responder.UserInfoResponse = "Alaris multi-functional bot.";
-			
-			_connection.CtcpResponder = responder;
+			var responder = new CtcpResponder(_connection)
+			                    {
+			                        VersionResponse = "Alaris " + Utilities.BotVersion,
+			                        SourceResponse = "http://www.wowemuf.org",
+			                        UserInfoResponse = "Alaris multi-functional bot."
+			                    };
+
+		    _connection.CtcpResponder = responder;
 			Log.Notice("Alaris", "Text encoding: UTF-8");
 			_connection.TextEncoding = Encoding.GetEncoding("Latin1");
 			
@@ -120,7 +126,7 @@ namespace Alaris
 		/// <returns>
 		/// The listener port.
 		/// </returns>
-		public int GetListenerPort() { return ListenerPort; }
+		public static int GetListenerPort() { return ListenerPort; }
 		
 		/// <summary>
 		/// Releases unmanaged resources and performs other cleanup operations before the <see cref="AlarisBot"/>
@@ -147,7 +153,7 @@ namespace Alaris
 			// start database server.
 			if(MysqlEnabled)
 			{	
-				sDatabaseManager.Initialize(MysqlData[0], MysqlData[1], MysqlData[2], MysqlData[3]);
+				_sDatabaseManager.Initialize(MysqlData[0], MysqlData[1], MysqlData[2], MysqlData[3]);
 			}
 			
 			Connect();
@@ -223,7 +229,7 @@ namespace Alaris
 		/// <param name='packet'>
 		/// Packet.
 		/// </param>
-		public void SendPacketToACS(AlarisPacket packet)
+		public static void SendPacketToACS(AlarisPacket packet)
 		{
 		    if (packet == null) throw new ArgumentNullException("packet");
 		    if(!AlarisServer)
@@ -272,7 +278,7 @@ namespace Alaris
 		/// <summary>
 		/// Establishes the connection to the previously specified server.
 		/// </summary>
-		public void Connect()
+		private void Connect()
 		{
 			if(!_confdone)
 				throw new Exception("The config file has not been read before connecting.");
@@ -305,7 +311,7 @@ namespace Alaris
 		/// <summary>
 		/// Method run when the bot is registered to the IRC server.
 		/// </summary>
-		protected void OnRegistered()
+		private void OnRegistered()
 		{
 			// Stop Identd, no need for it anymore.
 			Identd.Stop();
@@ -335,7 +341,7 @@ namespace Alaris
 		/// <param name="user">
 		/// Data about the user who sent it.
 		/// </param>
-		protected void OnCtcpRequest(string command, UserInfo user)
+		private static void OnCtcpRequest(string command, UserInfo user)
 		{
 			Log.Notice("CTCP", "Received command " + command + " from " + user.Nick);
 		}

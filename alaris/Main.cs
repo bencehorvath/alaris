@@ -36,7 +36,7 @@ namespace Alaris
 
             if (AlarisBot.AlarisServer)
             {
-                listener = new ClientListener(sBot.GetListenerPort());
+                listener = new ClientListener(AlarisBot.GetListenerPort());
                 lthread = new Thread(listener.Listen);
                 lthread.Start();
             }
@@ -71,9 +71,9 @@ namespace Alaris
 				packet.Write((int)Opcode.CMSG_REQUEST_AUTH);
 				packet.Write(sBot.GetGuid().ToString());
 				packet.Write(Utilities.MD5String("twlbot"));
-				packet.Write(sBot.GetListenerPort());
+				packet.Write(AlarisBot.GetListenerPort());
 				
-				sBot.SendPacketToACS(packet);
+				AlarisBot.SendPacketToACS(packet);
                 packet.Dispose();
 			}
 				
