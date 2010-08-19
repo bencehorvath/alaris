@@ -1,5 +1,4 @@
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Resources;
 
 // Information about this assembly is defined by the following attributes. 
@@ -25,4 +24,5 @@ using System.Resources;
 
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-[assembly: NeutralResourcesLanguageAttribute("en-GB")]
+
+[assembly: NeutralResourcesLanguage("en-GB")]

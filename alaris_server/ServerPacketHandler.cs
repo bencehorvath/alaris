@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Collections.Generic;
 using Alaris.Extras;
 using System.Text;
+using Alaris.Network;
 
 namespace Alaris.Server
 {
@@ -33,9 +34,9 @@ namespace Alaris.Server
 			var packetid = packet.Read<int>();
 			Log.Debug("PacketHandler", "Got packet with ID: " + packetid + " from: " + client.Client.RemoteEndPoint);
 			
-			if(packetid == (int)Opcode.CMSG_REQUEST_AUTH)
+			if(packetid == (int)Opcode.CmsgRequestAuth)
 				OnAuthRequest(packet,hst);
-			else if(packetid == (int)Opcode.CMSG_REQUEST_ACS_RANDOM)
+			else if(packetid == (int)Opcode.CmsgRequestACSRandom)
 				OnAcsRandomRequest(packet, hst);
 		}
 		
@@ -50,7 +51,7 @@ namespace Alaris.Server
 			Log.Notice("Random", "Sending random value: " + random + " to client. Will send it to: " + chan + ".");
 			
 			var packet = new AlarisPacket();
-			packet.Write<int>((int)Opcode.SMSG_SEND_ACS_RANDOM);
+			packet.Write<int>((int)Opcode.SmsgSendACSRandom);
 			packet.Write<int>(random);
 			packet.Write<string>((string)chan);
 			
@@ -76,7 +77,7 @@ namespace Alaris.Server
 				Log.Notice("AuthHandler", "Back port is: " + bck);
 				var packet = new AlarisPacket();
 				
-				packet.Write<int>((int)Opcode.SMSG_AUTH_DENIED);
+				packet.Write<int>((int)Opcode.SmsgAuthDenied);
 				packet.Write<int>((int)0);
 				
 				SendPacketBack(packet, hst, BackPort);
@@ -88,7 +89,7 @@ namespace Alaris.Server
 				Log.Debug("Security", "Hash was: " + hash);
 				Log.Notice("AuthHandler", "Back port is: " + bck);
 				var packet = new AlarisPacket();
-				packet.Write<int>((int)Opcode.SMSG_AUTH_APPROVED);
+				packet.Write<int>((int)Opcode.SmsgAuthApproved);
 				packet.Write<int>((int)1);
 				
 				SendPacketBack(packet, hst, BackPort);

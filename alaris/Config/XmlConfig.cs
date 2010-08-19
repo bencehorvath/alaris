@@ -4,7 +4,7 @@ using System.Xml;
 namespace Alaris.Config
 {
     /// <summary>
-    /// XML settings class, used for config files.
+    ///   XML settings class, used for config files.
     /// </summary>
     public class XmlSettings
     {
@@ -13,13 +13,13 @@ namespace Alaris.Config
         private readonly string _rootNode = "";
 
         ///<summary>
-        /// Create a new instance of XmlSettings.
+        ///  Create a new instance of XmlSettings.
         ///</summary>
-        ///<param name="document">XML document to load.</param>
-        ///<param name="root">The xml document's root node.</param>
+        ///<param name = "document">XML document to load.</param>
+        ///<param name = "root">The xml document's root node.</param>
         public XmlSettings(string document, string root)
         {
-            try 
+            try
             {
                 _xmlDocument.Load(document);
                 _documentPath = document;
@@ -27,15 +27,15 @@ namespace Alaris.Config
             }
             catch
             {
-                _xmlDocument.LoadXml("<settings></settings>"); 
+                _xmlDocument.LoadXml("<settings></settings>");
             }
         }
 
         /// <summary>
-        /// Gets a setting from the xml file.
+        ///   Gets a setting from the xml file.
         /// </summary>
-        /// <param name="xPath">The xpath code.</param>
-        /// <param name="defaultValue">default value to return.</param>
+        /// <param name = "xPath">The xpath code.</param>
+        /// <param name = "defaultValue">default value to return.</param>
         /// <returns></returns>
         public int GetSetting(string xPath, int defaultValue)
         {
@@ -44,20 +44,20 @@ namespace Alaris.Config
 
 
         /// <summary>
-        /// Creates or edits a setting.
+        ///   Creates or edits a setting.
         /// </summary>
-        /// <param name="xPath">Xpath formula.</param>
-        /// <param name="value">value to set</param>
+        /// <param name = "xPath">Xpath formula.</param>
+        /// <param name = "value">value to set</param>
         public void PutSetting(string xPath, int value)
         {
             PutSetting(xPath, Convert.ToString(value));
         }
 
         /// <summary>
-        /// Gets a setting from the xml file.
+        ///   Gets a setting from the xml file.
         /// </summary>
-        /// <param name="xPath">The xpath code.</param>
-        /// <param name="defaultValue">default value to return.</param>
+        /// <param name = "xPath">The xpath code.</param>
+        /// <param name = "defaultValue">default value to return.</param>
         /// <returns></returns>
         public string GetSetting(string xPath, string defaultValue)
         {
@@ -67,19 +67,18 @@ namespace Alaris.Config
         }
 
         /// <summary>
-        /// Creates or edits a setting.
+        ///   Creates or edits a setting.
         /// </summary>
-        /// <param name="xPath">Xpath formula.</param>
-        /// <param name="value">value to set</param>
+        /// <param name = "xPath">Xpath formula.</param>
+        /// <param name = "value">value to set</param>
         public void PutSetting(string xPath, string value)
         {
             var xmlNode = _xmlDocument.SelectSingleNode(_rootNode + "/" + xPath) ??
-                              CreateMissingNode(_rootNode + "/" + xPath);
+                          CreateMissingNode(_rootNode + "/" + xPath);
             xmlNode.InnerText = value;
             _xmlDocument.Save(_documentPath);
         }
 
-      
 
         private XmlNode CreateMissingNode(string xPath)
         {
@@ -93,8 +92,8 @@ namespace Alaris.Config
                 if (testNode == null)
                 {
                     currentNode.InnerXml += "<" +
-                                xPathSection + "></" +
-                                xPathSection + ">";
+                                            xPathSection + "></" +
+                                            xPathSection + ">";
                 }
                 currentNode = _xmlDocument.SelectSingleNode(currentXPath);
                 currentXPath += "/";
