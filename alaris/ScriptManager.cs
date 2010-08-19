@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using Alaris.Core;
 using Alaris.Irc;
@@ -160,15 +161,11 @@ namespace Alaris
         {
             Log.Notice("ScriptManager", "Loading plugins...");
             var info = new DirectoryInfo("./plugins");
-            FileInfo[] files = info.GetFiles();
+            var files = info.GetFiles();
             // List<AppDomain> domains = new List<AppDomain>();
 
-            foreach (var f in files)
+            foreach (var f in files.Where(f => f.Extension == ".dll" && f.Name.Contains("Plugin")))
             {
-                //Console.WriteLine(f.Name + " with ext: " + f.Extension);
-                if (f.Extension != ".dll" || !f.Name.Contains("Plugin"))
-                    continue;
-
                 //Log.Notice("ScriptManager", "Loading plugin: " + f.Name);
 
                 try
@@ -253,17 +250,14 @@ namespace Alaris
         /// </param>
         public bool UnloadPlugin(string name)
         {
-            bool removed = false;
-            foreach (var plugin in _plugins)
+            var removed = false;
+            foreach (var plugin in _plugins.Where(plugin => plugin.GetName().StartsWith(name)))
             {
-                if (plugin.GetName().StartsWith(name))
-                {
-                    plugin.OnUnload();
-                    _plugins.Remove(plugin);
-                    Log.Success("ScriptManager", "Successfully unloaded plugin: " + name);
-                    removed = true;
-                    break;
-                }
+                plugin.OnUnload();
+                _plugins.Remove(plugin);
+                Log.Success("ScriptManager", "Successfully unloaded plugin: " + name);
+                removed = true;
+                break;
             }
 
             if (removed == false)

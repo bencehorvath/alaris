@@ -22,8 +22,8 @@ namespace Alaris
     {
         private Connection _connection;
         private readonly ScriptManager _manager;
-        private string _nick = "alaris";
-        private string _server = "irc.rizon.net";
+        private string _nick;
+        private string _server;
         private bool _confdone;
         private bool _nickserv;
         private string _nspw = "";
