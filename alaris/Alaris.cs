@@ -45,7 +45,17 @@ namespace Alaris
 		/// Size: 4 (DB is last)
 		/// </summary>
 		public string[] MysqlData = new string[4];
-		
+
+        /// <summary>
+        /// The bot's crash handler instance.
+        /// </summary>
+        public CrashHandler CrashHandler { get { return sCrashHandler; } }
+
+        /// <summary>
+        /// The bot's script manager instance.
+        /// </summary>
+        public ScriptManager ScriptManager { get { return _manager;  } }
+
 		/// <summary>
 		/// Determines whether the communication to and dependance of alaris_server is set.
 		/// </summary>
@@ -143,13 +153,6 @@ namespace Alaris
 			Connect();
 		}
 		
-		/// <summary>
-		/// Gets the class' current crash handler.
-		/// </summary>
-		/// <returns>
-		/// The crash handler.
-		/// </returns>
-		public CrashHandler GetCrashHandler() { return sCrashHandler; }
 		
 		private void SetupHandlers()
 		{
