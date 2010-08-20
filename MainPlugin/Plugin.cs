@@ -6,10 +6,10 @@ using Alaris.Extras;
 
 namespace Alaris.MainPlugin
 {
-	public class AlarisPlugin : IAlarisBasic
+    public class AlarisPlugin : MarshalByRefObject, IAlarisBasic
 	{
 		private Connection _connection;
-		private Stack<int> _allocer = new Stack<int>();
+		private readonly Stack<int> _allocer = new Stack<int>();
 		
 		
 		public AlarisPlugin()
@@ -33,7 +33,7 @@ namespace Alaris.MainPlugin
 		{
 			if(msg == "plgreet")
 			{
-				_connection.Sender.PublicMessage(chan, "Hello, " + user.Nick);
+				_connection.Sender.PublicMessage(chan, "Udv, " + user.Nick);
 				return;
 			}
 			

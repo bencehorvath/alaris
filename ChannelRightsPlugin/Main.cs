@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Alaris.ChannelRightsPlugin
 {
-	public class AlarisPlugin : IAlarisBasic
+	public class AlarisPlugin : MarshalByRefObject, IAlarisBasic
 	{
 		private Connection _connection;
 		

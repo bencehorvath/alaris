@@ -97,6 +97,7 @@ namespace Alaris
         {
             Log.Notice("Alaris", "Initalizing...");
             _configfile = config;
+            CrashHandler.HandleReadConfig(ReadConfig, _configfile);
             var cargs = new ConnectionArgs(_nick, _server);
             Log.Debug("Identd", "Starting service...");
             Identd.Start(_nick);
@@ -162,7 +163,6 @@ namespace Alaris
         /// </summary>
         public void Run()
         {
-            CrashHandler.HandleReadConfig(ReadConfig, _configfile);
 
             // start database server.
             if (MysqlEnabled)
@@ -327,7 +327,10 @@ namespace Alaris
                 Log.Success("Identd", "Stopped service daemon");
             }
 
-            _connection.Disconnect(rsr);
+            try { _connection.Disconnect(rsr);}
+            catch(InvalidOperationException)
+            {
+            }
         }
 
         /// <summary>

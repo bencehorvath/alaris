@@ -40,9 +40,10 @@ namespace Alaris
                 lthread = new Thread(listener.Listen);
                 lthread.Start();
             }
-
+            
             Console.CancelKeyPress += (sender, e) =>
                                           {
+                                              
                                               sBot.Disconnect("Daemon killed.");
 
                                               if (lthread != null)
@@ -55,7 +56,7 @@ namespace Alaris
             /*var exc = new List<Exception>();
 			bot.GetCrashHandler().HandleReadConfig(bot.ReadConfig, conf, ref exc);
 			exc.Clear();*/
-
+            
 
             //bot.Connect();
 

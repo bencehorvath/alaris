@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using Alaris.Core;
 using Alaris.Irc;
@@ -75,59 +76,6 @@ namespace Alaris
                 string ch = msg.Replace("@join ", string.Empty);
                 if (Rfc2812Util.IsValidChannelName(ch))
                     _connection.Sender.Join(ch);
-
-                return;
-            }
-
-
-            if (msg == "@plugins")
-            {
-                foreach (var plugin in _manager.GetPlugins())
-                {
-                    _connection.Sender.PublicMessage(chan,
-                                                     plugin.GetName().Replace("Plugin", string.Empty) + ": " +
-                                                     IrcConstants.Green + "loaded.");
-                }
-
-                Log.Notice("Alaris", "Sent plugin list.");
-
-                return;
-            }
-
-            if (msg.StartsWith("@plugin load ") && Utilities.IsAdmin(user))
-            {
-                string plname = msg.Replace("@plugin load ", string.Empty);
-
-                if (_manager.LoadPlugin(plname))
-                {
-                    _connection.Sender.PublicMessage(chan,
-                                                     IrcConstants.Bold + "[Load]: " + IrcConstants.Normal +
-                                                     IrcConstants.Olive + plname + IrcConstants.Normal + " done.");
-                    return;
-                }
-
-                _connection.Sender.PublicMessage(chan,
-                                                 IrcConstants.Bold + "[Load]: " + IrcConstants.Normal +
-                                                 IrcConstants.Olive + plname + IrcConstants.Normal + " failed.");
-
-                return;
-            }
-
-            if (msg.StartsWith("@plugin unload ") && Utilities.IsAdmin(user))
-            {
-                string plname = msg.Replace("@plugin unload ", string.Empty);
-
-                if (_manager.UnloadPlugin(plname))
-                {
-                    _connection.Sender.PublicMessage(chan,
-                                                     IrcConstants.Bold + "[Unload]: " + IrcConstants.Normal +
-                                                     IrcConstants.Olive + plname + IrcConstants.Normal + " done.");
-                    return;
-                }
-
-                _connection.Sender.PublicMessage(chan,
-                                                 IrcConstants.Bold + "[Unload]: " + IrcConstants.Normal +
-                                                 IrcConstants.Olive + plname + IrcConstants.Normal + " failed.");
 
                 return;
             }

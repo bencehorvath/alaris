@@ -7,6 +7,7 @@ namespace Alaris.Irc
 	/// A collection of parameters necessary to establish
 	/// an IRC connection.
 	/// </summary>
+	
 	public struct ConnectionArgs
 	{
 		private string _realName;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Security.Policy;
 using Alaris.Core;
 using Alaris.Irc;
 using Alaris.Irc.Delegates.Channel;
@@ -18,7 +19,6 @@ namespace Alaris
     /// </summary>
     public class ScriptManager : IThreadContext
     {
-        private readonly List<IAlarisBasic> _plugins = new List<IAlarisBasic>();
         private List<string> _channels = new List<string>();
         private readonly Guid _guid;
 
@@ -31,6 +31,7 @@ namespace Alaris
         }
 
         private Connection _connection;
+
 
         /// <summary>
         ///   Creates a new instance of ScriptManager
@@ -154,117 +155,8 @@ namespace Alaris
             Connection.Listener.OnError += handler;
         }
 
-        /// <summary>
-        ///   Loads the plugins.
-        /// </summary>
-        public void LoadPlugins()
-        {
-            Log.Notice("ScriptManager", "Loading plugins...");
-            var info = new DirectoryInfo("./plugins");
-            var files = info.GetFiles();
-            // List<AppDomain> domains = new List<AppDomain>();
+        
 
-            foreach (var f in files.Where(f => f.Extension == ".dll" && f.Name.Contains("Plugin")))
-            {
-                //Log.Notice("ScriptManager", "Loading plugin: " + f.Name);
-
-                try
-                {
-                    var asm = Assembly.LoadFrom("./plugins/" + f.Name);
-
-                    var plugin = asm.CreateInstance("Alaris." + f.Name.Replace(".dll", string.Empty) + ".AlarisPlugin");
-                    var usable = plugin as IAlarisBasic;
-
-                    if (_plugins.Contains(usable))
-                        continue;
-
-                    if (usable != null)
-                    {
-                        usable.Initialize(ref _connection);
-                        usable.Initialize(ref _connection, ref _channels);
-                        _plugins.Add(usable);
-                    }
-                }
-                catch (Exception x)
-                {
-                    Log.Error("ScriptManager", "Failed to load: " + f.Name + " (" + x.Message + ")");
-                    return;
-                }
-
-                Log.Success("ScriptManager",
-                            "Loaded plugin: " + f.Name + " (hash: " + Utilities.MD5File("./plugins/" + f.Name) + ")");
-            }
-        }
-
-        /// <summary>
-        ///   Loads the specified plugin.
-        /// </summary>
-        /// <param name = "name">
-        ///   The name of the plugin to load.
-        /// </param>
-        public bool LoadPlugin(string name)
-        {
-            if (!name.EndsWith("Plugin"))
-                name += "Plugin";
-
-            if (!File.Exists("./plugins/" + name + ".dll"))
-                return false;
-
-            var fi = new FileInfo("./plugins/" + name + ".dll");
-
-            try
-            {
-                var asm = Assembly.LoadFrom(fi.FullName);
-
-                var plugin = asm.CreateInstance("Alaris." + fi.Name.Replace(".dll", string.Empty) + ".AlarisPlugin");
-                var usable = plugin as IAlarisBasic;
-
-                if (_plugins.Contains(usable))
-                    return false;
-
-                if (usable != null)
-                {
-                    usable.Initialize(ref _connection);
-                    usable.Initialize(ref _connection, ref _channels);
-                    usable.OnLoad();
-                    _plugins.Add(usable);
-                }
-            }
-            catch (Exception)
-            {
-                Log.Error("ScriptManager", "Failed to load: " + fi.Name);
-                return false;
-            }
-
-            Log.Success("ScriptManager",
-                        "Loaded plugin: " + fi.Name + " (hash: " + Utilities.MD5File("./plugins/" + fi.Name) + ")");
-
-            return true;
-        }
-
-        /// <summary>
-        ///   Unloads the specified plugin.
-        /// </summary>
-        /// <param name = "name">
-        ///   The name of the plugin to unload.
-        /// </param>
-        public bool UnloadPlugin(string name)
-        {
-            var removed = false;
-            foreach (var plugin in _plugins.Where(plugin => plugin.GetName().StartsWith(name)))
-            {
-                plugin.OnUnload();
-                _plugins.Remove(plugin);
-                Log.Success("ScriptManager", "Successfully unloaded plugin: " + name);
-                removed = true;
-                break;
-            }
-
-            if (removed == false)
-                Log.Error("ScriptManager", "Couldn't unload plugin: " + name);
-
-            return (removed);
-        }
 
         /// <summary>
         ///   Runs the public handlers found inside the loaded plugins.

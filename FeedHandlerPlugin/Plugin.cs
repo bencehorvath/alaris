@@ -16,7 +16,7 @@ using Timer=System.Timers.Timer;
 
 namespace Alaris.FeedHandlerPlugin
 {
-	public class AlarisPlugin : IAlarisBasic
+    public class AlarisPlugin : MarshalByRefObject, IAlarisBasic
 	{
 		private Timer _timer = new Timer();
 		private Connection _connection;
