@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Threading;
+using Alaris.API;
 using Alaris.Core;
 using Alaris.Network;
 

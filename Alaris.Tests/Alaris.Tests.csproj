@@ -49,9 +49,9 @@
     <Compile Include="BotTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AlarisAPI\AlarisAPI.csproj">
+    <ProjectReference Include="..\AlarisAPI\Alaris.API.csproj">
       <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
-      <Name>AlarisAPI</Name>
+      <Name>Alaris.API</Name>
     </ProjectReference>
     <ProjectReference Include="..\alaris\Alaris.csproj">
       <Project>{827FC720-BEE2-4357-B29F-0C2BDF51472D}</Project>

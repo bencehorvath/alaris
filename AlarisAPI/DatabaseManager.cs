@@ -1,8 +1,7 @@
-using System;
 using System.Data;
-using MySql.Data;
+using Alaris.API;
 using MySql.Data.MySqlClient;
-using Alaris.Core;
+
 namespace Alaris.Extras
 {
 	public class DatabaseManager

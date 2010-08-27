@@ -33,7 +33,7 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Plugin.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -48,10 +48,15 @@
       <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
       <Name>Alaris.Irc</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AlarisAPI\AlarisAPI.csproj">
+    <ProjectReference Include="..\AlarisAPI\Alaris.API.csproj">
       <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
-      <Name>AlarisAPI</Name>
+      <Name>Alaris.API</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo "Copying to scripts directory..."
+cd "$(OutDir)"
+copy "$(ProjectDir)\Main.cs" "..\scripts"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

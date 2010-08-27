@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <alaris>
   <config>
     <irc>
@@ -20,5 +19,9 @@
       <password>pw</password>
       <database>alaris</database>
     </mysql>
+    <scripts>
+      <directory>scripts</directory>
+      <AdditionalReferences></AdditionalReferences>
+    </scripts>
   </config>
 </alaris>

@@ -1,10 +1,11 @@
 using System;
+using Alaris.API;
 using Alaris.Core;
 using Alaris.Irc;
 using System.Collections.Generic;
 using Alaris.Extras;
 
-namespace Alaris.MainPlugin
+namespace Alaris.Main
 {
     public class AlarisPlugin : MarshalByRefObject, IAlarisBasic
 	{
@@ -22,18 +23,17 @@ namespace Alaris.MainPlugin
 			Log.Debug("Main", "~AlarisPlugin()");
 		}
 		
-		public void Initialize(ref Connection con)
+
+		public void Initialize(ref Connection con, List<string> a)
 		{
-			_connection = con;
+            _connection = con;
 		}
-		
-		public void Initialize(ref Connection con, ref List<string> a) {}
 		
 		public void OnPublicMessage(UserInfo user, string chan, string msg)
 		{
 			if(msg == "plgreet")
 			{
-				_connection.Sender.PublicMessage(chan, "Udv, " + user.Nick);
+				_connection.Sender.PublicMessage(chan, "Csao, " + user.Nick);
 				return;
 			}
 			
@@ -122,13 +122,19 @@ namespace Alaris.MainPlugin
 		}
 		
 		public void OnUnload() { _connection = null; }
-		
-		public void OnLoad() { }
-		
-		public string GetName()
-		{
-			return "MainPlugin";
-		}
+
+        public string Name
+        {
+            get { return "Main"; }
+        }
+
+        public string Author
+        {
+            get { return "Twl"; }
+        }
+
+        public void OnLoad() { }
+
 	}
 }
 

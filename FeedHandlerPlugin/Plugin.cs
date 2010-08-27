@@ -1,17 +1,8 @@
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using System.Net;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Diagnostics;
-using System.Reflection;
-using System.Threading;
-using System.Timers;
+using System.Linq;
+using Alaris.API;
 using Alaris.Irc;
-using Alaris.Core;
-using Alaris.Extras;
 using Timer=System.Timers.Timer;
 
 namespace Alaris.FeedHandlerPlugin
@@ -47,10 +38,8 @@ namespace Alaris.FeedHandlerPlugin
 		{
 			Log.Debug("FeedHandler", "~AlarisPlugin()");
 		}
-		
-		public void Initialize(ref Connection con) {}
-		
-		public void Initialize(ref Connection con, ref List<string> chans)
+
+        public void Initialize(ref Connection con, List<string> chans)
 		{
 			_connection = con;
 			_channels = chans;
@@ -69,8 +58,18 @@ namespace Alaris.FeedHandlerPlugin
 			_timer.Dispose();
 			
 		}
-		
-		public void Start()
+
+        public string Name
+        {
+            get { return "FeedHandler"; }
+        }
+
+        public string Author
+        {
+            get { return "Twl"; }
+        }
+
+        public void Start()
 		{
 			var mang = FeedFactory.CreateFeedRunner(new Uri("http://github.com/mangos/mangos/commits/master.atom"), ref _connection, _channels, "mangos", 10000, "@mangos");
 			
@@ -107,14 +106,9 @@ namespace Alaris.FeedHandlerPlugin
 		{
 			if (msg == "@feeds")
 			{
-				string s = "";
-				
-				foreach(var runner in FeedFactory.FeedRunners)
-				{
-					s += runner.Name + " | ";
-				}
-				
-				_connection.Sender.PublicMessage(chan, s);
+				var s = FeedFactory.FeedRunners.Aggregate("", (current, runner) => current + (runner.Name + " | "));
+
+			    _connection.Sender.PublicMessage(chan, s);
 			}
 			
 			if (msg.StartsWith("@feeds start"))
@@ -126,12 +120,6 @@ namespace Alaris.FeedHandlerPlugin
 			{
 				FeedFactory.StopRunners();
 			}
-		}
-		
-
-		public string GetName()
-		{
-			return "FeedHandlerPlugin";
 		}
 		
 	}

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using Alaris.API;
 using Alaris.Core;
 using Alaris.Irc;
 using Alaris.Network;
@@ -71,9 +72,24 @@ namespace Alaris
                 return;
             }
 
+            if(msg == "@plugins")
+            {
+                foreach(var plugin in _manager.Plugins)
+                    SendMsg(chan, string.Format("Script: {0}, {1}loaded", plugin.Name, IrcConstants.Green));
+            }
+
+            if(msg == "@plugin ")
+            {
+                var pluginName = msg.Remove(0, 8);
+                SendMsg(chan, _manager.PluginInfos[pluginName]);
+            }
+
+            if(msg == "@reload plugins")
+                _manager.ReloadScripts();
+
             if (msg.StartsWith("@join ") && Utilities.IsAdmin(user))
             {
-                string ch = msg.Replace("@join ", string.Empty);
+                var ch = msg.Replace("@join ", string.Empty);
                 if (Rfc2812Util.IsValidChannelName(ch))
                     _connection.Sender.Join(ch);
 

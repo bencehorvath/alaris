@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>AlarisAPI</RootNamespace>
-    <AssemblyName>AlarisAPI</AssemblyName>
+    <RootNamespace>Alaris.API</RootNamespace>
+    <AssemblyName>Alaris.API</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ReleaseVersion>2.3</ReleaseVersion>
     <TargetFrameworkProfile>

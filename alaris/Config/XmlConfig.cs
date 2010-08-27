@@ -6,7 +6,7 @@ namespace Alaris.Config
     /// <summary>
     ///   XML settings class, used for config files.
     /// </summary>
-    public class XmlSettings
+    public sealed class XmlSettings
     {
         private readonly XmlDocument _xmlDocument = new XmlDocument();
         private readonly string _documentPath = string.Empty;
@@ -62,7 +62,7 @@ namespace Alaris.Config
         public string GetSetting(string xPath, string defaultValue)
         {
             var xmlNode = _xmlDocument.SelectSingleNode(_rootNode + "/" + xPath);
-
+            
             return xmlNode != null ? xmlNode.InnerText : defaultValue;
         }
 

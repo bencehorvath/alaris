@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris", "alaris\Alaris.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.Irc", "irc\Alaris.Irc.csproj", "{EFCDD130-C3FA-4560-A936-69F683AE071F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlarisAPI", "AlarisAPI\AlarisAPI.csproj", "{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.API", "AlarisAPI\Alaris.API.csproj", "{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainPlugin", "MainPlugin\MainPlugin.csproj", "{5C69DE32-25CD-4326-8ABC-91973C6485F2}"
 EndProject

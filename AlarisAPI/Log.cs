@@ -1,9 +1,7 @@
 using System;
-using System.IO;
-using System.Text;
 using System.Collections.Generic;
 
-namespace Alaris.Core
+namespace Alaris.API
 {
 	/// <summary>
 	/// Logging class used all across Alaris.

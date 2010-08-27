@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Threading;
 using System.Timers;
+using Alaris.API;
 using Alaris.Irc;
 using Alaris.Extras;
 using Alaris.Core;

@@ -66,6 +66,10 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualC" />
     <Reference Include="System" />
     <Reference Include="System.Core">
     </Reference>
@@ -83,6 +87,9 @@
   <ItemGroup>
     <Compile Include="Alaris.cs" />
     <Compile Include="Config\XmlConfig.cs" />
+    <Compile Include="Exceptions\ScriptCollectionInvalidException.cs" />
+    <Compile Include="Exceptions\ScriptCompileException.cs" />
+    <Compile Include="Exceptions\ScriptTypeException.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -113,9 +120,9 @@
       <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
       <Name>Alaris.Irc</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AlarisAPI\AlarisAPI.csproj">
+    <ProjectReference Include="..\AlarisAPI\Alaris.API.csproj">
       <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
-      <Name>AlarisAPI</Name>
+      <Name>Alaris.API</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -176,4 +183,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>rmdir /s /q scripts
+echo "Creating scripts directory..."
+mkdir scripts</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
 </Project>

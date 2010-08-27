@@ -1,9 +1,10 @@
 using System;
+using Alaris.API;
 using Alaris.Core;
 using Alaris.Irc;
 using System.Collections.Generic;
 
-namespace Alaris.ChannelRightsPlugin
+namespace Alaris.ChannelRights
 {
 	public class AlarisPlugin : MarshalByRefObject, IAlarisBasic
 	{
@@ -18,13 +19,11 @@ namespace Alaris.ChannelRightsPlugin
 		{
 			Log.Debug("ChannelRights", "~AlarisPlugin()");
 		}
-		
-		public void Initialize(ref Connection con)
+			
+		public void Initialize(ref Connection con, List<string> a)
 		{
-			_connection = con;
+            _connection = con;
 		}
-		
-		public void Initialize(ref Connection con, ref List<string> a) {}
 		
 		public void OnPublicMessage(UserInfo user, string chan, string msg)
 		{
@@ -146,13 +145,19 @@ namespace Alaris.ChannelRightsPlugin
 		}
 		
 		public void OnUnload() { _connection = null; }
+
+	    public string Name
+	    {
+            get { return "ChannelRights"; }
+	    }
+
+	    public string Author
+	    {
+            get { return "Twl"; }
+	    }
+
+	    public void OnLoad() { }
 		
-		public void OnLoad() { }
-		
-		public string GetName()
-		{
-			return "ChannelRightsPlugin";
-		}
 	}
 }
 

@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using Alaris.API;
 using Alaris.Config;
 using Alaris.Core;
 using Alaris.Extras;
@@ -36,6 +37,7 @@ namespace Alaris
         private const int ListenerPort = 35221;
         private const string ACSHost = "127.0.0.1";
         private const int ACSPort = 35220;
+        private string _scriptsDir;
 
         /// <summary>
         ///   MySQL support enabled or not.
@@ -120,7 +122,7 @@ namespace Alaris
             Log.Success("CTCP", "Enabled.");
 
             Log.Notice("ScriptManager", "Initalizing...");
-            _manager = new ScriptManager(ref _connection, ref _channels);
+            _manager = new ScriptManager(ref _connection, _channels, _scriptsDir);
             //_manager.LoadPlugins();
             //Thread.Sleep(2000);
             //Log.Success("ScriptManager", "Setup complete");
@@ -231,9 +233,13 @@ namespace Alaris
             else
                 Log.Notice("MySQL", "Disabled.");
 
+
+            _scriptsDir = config.GetSetting("config/scripts/directory", "scripts");
+
             Log.Success("Config", "File read and validated successfully.");
             _confdone = true;
 
+            
             Log.Notice("Config", string.Format("Connect to: {0} with nick {1}", _server, _nick));
         }
 

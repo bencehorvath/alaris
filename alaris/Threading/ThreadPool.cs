@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading;
 using System.Timers;
+using Alaris.API;
 using Alaris.Core;
 using Timer = System.Timers.Timer;
 

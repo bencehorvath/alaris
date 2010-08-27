@@ -1,4 +1,5 @@
 using System;
+using Alaris.API;
 using Alaris.Core;
 using System.Net.Sockets;
 using System.Collections.Generic;
