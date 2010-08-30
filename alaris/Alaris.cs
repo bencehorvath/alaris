@@ -333,6 +333,8 @@ namespace Alaris
                 Log.Success("Identd", "Stopped service daemon");
             }
 
+            _manager.Lua.Free();
+
             try { _connection.Disconnect(rsr);}
             catch(InvalidOperationException)
             {

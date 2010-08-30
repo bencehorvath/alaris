@@ -1,4 +1,4 @@
-namespace Alaris
+namespace Alaris.API
 {
     /// <summary>
     ///   Class holding some constant values for IRC.

@@ -7,31 +7,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.Irc", "irc\Alaris.Ir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.API", "AlarisAPI\Alaris.API.csproj", "{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainPlugin", "MainPlugin\MainPlugin.csproj", "{5C69DE32-25CD-4326-8ABC-91973C6485F2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelRightsPlugin", "ChannelRightsPlugin\ChannelRightsPlugin.csproj", "{9CA1756F-35C2-44E9-AD15-F28C3E6BF41B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alaris_server", "alaris_server\alaris_server.csproj", "{80148ABB-94CD-427E-A892-9E51D87F76EC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedHandlerPlugin", "FeedHandlerPlugin\FeedHandlerPlugin.csproj", "{7747D500-A95C-4B98-8FA6-0F7066ABAABE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atom.NET", "Atom\Atom.NET.csproj", "{9DB254A5-AF25-4122-877C-3C6D9A86BC02}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.Tests", "Alaris.Tests\Alaris.Tests.csproj", "{CDC31A0A-1C55-44CB-9F84-9724D9A5982A}"
 	ProjectSection(ProjectDependencies) = postProject
-		{7747D500-A95C-4B98-8FA6-0F7066ABAABE} = {7747D500-A95C-4B98-8FA6-0F7066ABAABE}
-		{5C69DE32-25CD-4326-8ABC-91973C6485F2} = {5C69DE32-25CD-4326-8ABC-91973C6485F2}
-		{9CA1756F-35C2-44E9-AD15-F28C3E6BF41B} = {9CA1756F-35C2-44E9-AD15-F28C3E6BF41B}
 		{9DB254A5-AF25-4122-877C-3C6D9A86BC02} = {9DB254A5-AF25-4122-877C-3C6D9A86BC02}
 		{80148ABB-94CD-427E-A892-9E51D87F76EC} = {80148ABB-94CD-427E-A892-9E51D87F76EC}
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E06AA091-0749-4CBC-AE83-BA3866E024F5}"
 	ProjectSection(SolutionItems) = preProject
-		alaris.vsmdi = alaris.vsmdi
-		Local.testsettings = Local.testsettings
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+		basic.lua = basic.lua
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.LuaEngine", "Alaris.LuaEngine\Alaris.LuaEngine.csproj", "{D6E5F82D-5385-45AD-A0D1-1091EC6A5393}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -54,22 +45,10 @@ Global
 		{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C69DE32-25CD-4326-8ABC-91973C6485F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C69DE32-25CD-4326-8ABC-91973C6485F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C69DE32-25CD-4326-8ABC-91973C6485F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C69DE32-25CD-4326-8ABC-91973C6485F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CA1756F-35C2-44E9-AD15-F28C3E6BF41B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CA1756F-35C2-44E9-AD15-F28C3E6BF41B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CA1756F-35C2-44E9-AD15-F28C3E6BF41B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CA1756F-35C2-44E9-AD15-F28C3E6BF41B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{80148ABB-94CD-427E-A892-9E51D87F76EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80148ABB-94CD-427E-A892-9E51D87F76EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80148ABB-94CD-427E-A892-9E51D87F76EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80148ABB-94CD-427E-A892-9E51D87F76EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7747D500-A95C-4B98-8FA6-0F7066ABAABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7747D500-A95C-4B98-8FA6-0F7066ABAABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7747D500-A95C-4B98-8FA6-0F7066ABAABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7747D500-A95C-4B98-8FA6-0F7066ABAABE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9DB254A5-AF25-4122-877C-3C6D9A86BC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9DB254A5-AF25-4122-877C-3C6D9A86BC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DB254A5-AF25-4122-877C-3C6D9A86BC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -78,6 +57,10 @@ Global
 		{CDC31A0A-1C55-44CB-9F84-9724D9A5982A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDC31A0A-1C55-44CB-9F84-9724D9A5982A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDC31A0A-1C55-44CB-9F84-9724D9A5982A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E5F82D-5385-45AD-A0D1-1091EC6A5393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E5F82D-5385-45AD-A0D1-1091EC6A5393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E5F82D-5385-45AD-A0D1-1091EC6A5393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E5F82D-5385-45AD-A0D1-1091EC6A5393}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

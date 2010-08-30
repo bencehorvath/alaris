@@ -59,14 +59,10 @@ namespace Alaris.Extras
 		
 		public DataRow QueryFirstRow(string query)
 		{
-			var table = Query(query);
-			
-			if(!table.Equals(null) && table.Rows.Count > 0)
-				return table.Rows[0];
-			else 
-				return null;
+		    var table = Query(query);
+
+		    return !table.Equals(null) && table.Rows.Count > 0 ? table.Rows[0] : null;
 		}
-	
 	}
 }
 

@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using Alaris.API;
 using Alaris.Core;
@@ -94,6 +93,12 @@ namespace Alaris
                     _connection.Sender.Join(ch);
 
                 return;
+            }
+
+            if (msg == "@reload scripts")
+            {
+                _manager.Lua.LoadScripts(true);
+                SendMsg(chan, "Lua scripts reloaded.");
             }
 
             if (msg == "@request acs random" && AlarisServer)

@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using Alaris.API;
 using Alaris.Config;
-using Alaris.Core;
 using Alaris.Exceptions;
 using Alaris.Irc;
 using Alaris.Irc.Delegates.Channel;
@@ -13,6 +12,7 @@ using Alaris.Irc.Delegates.Disconnect;
 using Alaris.Irc.Delegates.Messages;
 using Alaris.Irc.Delegates.Server;
 using System.CodeDom.Compiler;
+
 
 namespace Alaris
 {
@@ -27,7 +27,12 @@ namespace Alaris
         private readonly string _scriptsPath;
         private readonly List<IAlarisBasic> _plugins = new List<IAlarisBasic>();
         private readonly Dictionary<string,string> _pluginInfo = new Dictionary<string, string>();
-      
+        private readonly LuaEngine.LuaEngine _luaEngine;
+
+        /// <summary>
+        /// Gets the Lua engine.
+        /// </summary>
+        public LuaEngine.LuaEngine Lua { get { return _luaEngine; } }
 
         /// <summary>
         ///   The IRC connection instance.
@@ -75,6 +80,7 @@ namespace Alaris
             _channels = chans;
             _guid = Guid.NewGuid();
             _scriptsPath = scriptPath;
+            _luaEngine = new LuaEngine.LuaEngine(ref _connection, Path.Combine(_scriptsPath, "lua"));
         }
 
         /// <summary>
@@ -94,8 +100,7 @@ namespace Alaris
         public void Run()
         {
             LoadScripts();
-
-
+            
         }
 
         /// <summary>

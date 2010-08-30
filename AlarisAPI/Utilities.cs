@@ -8,11 +8,9 @@ using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
-using Alaris.API;
-using Alaris.Core;
 using Alaris.Irc;
 
-namespace Alaris
+namespace Alaris.API
 {
     /// <summary>
     ///   Class providing useful methods for handling different things.

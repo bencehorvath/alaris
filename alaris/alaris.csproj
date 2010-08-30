@@ -46,6 +46,7 @@
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <DocumentationFile>bin\Debug\Documentation\Alaris.XML</DocumentationFile>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -86,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alaris.cs" />
+    <Compile Include="API.cs" />
     <Compile Include="Config\XmlConfig.cs" />
     <Compile Include="Exceptions\ScriptCollectionInvalidException.cs" />
     <Compile Include="Exceptions\ScriptCompileException.cs" />
@@ -100,11 +102,7 @@
     <Compile Include="ScriptManager.cs" />
     <Compile Include="Exceptions\ConfigFileInvalidException.cs" />
     <Compile Include="PublicMessageHandler.cs" />
-    <Compile Include="API.cs" />
     <Compile Include="CrashHandler.cs" />
-    <Compile Include="WebHelper.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="Utilities.cs" />
     <Compile Include="Threading\ThreadPool.cs" />
     <Compile Include="Threading\IThreadContext.cs" />
     <Compile Include="Singleton.cs" />
@@ -116,6 +114,10 @@
     <Compile Include="ClusterManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Alaris.LuaEngine\Alaris.LuaEngine.csproj">
+      <Project>{D6E5F82D-5385-45AD-A0D1-1091EC6A5393}</Project>
+      <Name>Alaris.LuaEngine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\irc\Alaris.Irc.csproj">
       <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
       <Name>Alaris.Irc</Name>
@@ -184,9 +186,8 @@
     </Content>
   </ItemGroup>
   <PropertyGroup>
-    <PostBuildEvent>rmdir /s /q scripts
-echo "Creating scripts directory..."
-mkdir scripts</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
