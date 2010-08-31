@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_81fb7e54199ec7518cab7b9055e085f9" kind="dir">
+    <compoundname>Atom/Atom.AdditionalElements/</compoundname>
+    <innerdir refid="dir_8a5fb15712d54afc469b8d4c26a7f74b">Atom/Atom.AdditionalElements/DublinCore/</innerdir>
+    <innerfile refid="_scoped_element_8cs">ScopedElement.cs</innerfile>
+    <innerfile refid="_scoped_element_collection_8cs">ScopedElementCollection.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.AdditionalElements/"/>
+  </compounddef>
+</doxygen>

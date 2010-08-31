@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_0ff51553ac299e35e359ab1ca324a0a5" kind="dir">
+    <compoundname>irc/</compoundname>
+    <innerdir refid="dir_f1b0a22a717ba10842b1357092592229">irc/Ctcp/</innerdir>
+    <innerdir refid="dir_768c1f303071328802084a6ad92202be">irc/Dcc/</innerdir>
+    <innerdir refid="dir_f6a56ff56b8db45b4d6f893c26abc91e">irc/Delegates/</innerdir>
+    <innerfile refid="irc_2_assembly_info_8cs">AssemblyInfo.cs</innerfile>
+    <innerfile refid="_command_builder_8cs">CommandBuilder.cs</innerfile>
+    <innerfile refid="_connection_8cs">Connection.cs</innerfile>
+    <innerfile refid="_connection_args_8cs">ConnectionArgs.cs</innerfile>
+    <innerfile refid="irc_2_enums_8cs">Enums.cs</innerfile>
+    <innerfile refid="_identd_8cs">Identd.cs</innerfile>
+    <innerfile refid="_i_parser_8cs">IParser.cs</innerfile>
+    <innerfile refid="_listener_8cs">Listener.cs</innerfile>
+    <innerfile refid="_name_generator_8cs">NameGenerator.cs</innerfile>
+    <innerfile refid="_reply_code_8cs">ReplyCode.cs</innerfile>
+    <innerfile refid="_rfc2812_util_8cs">Rfc2812Util.cs</innerfile>
+    <innerfile refid="_sender_8cs">Sender.cs</innerfile>
+    <innerfile refid="_server_properties_8cs">ServerProperties.cs</innerfile>
+    <innerfile refid="_text_color_8cs">TextColor.cs</innerfile>
+    <innerfile refid="_user_info_8cs">UserInfo.cs</innerfile>
+    <innerfile refid="_whois_info_8cs">WhoisInfo.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/"/>
+  </compounddef>
+</doxygen>

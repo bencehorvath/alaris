@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_irc_1_1_delegates_1_1_invite" kind="namespace">
+    <compoundname>Alaris::Irc::Delegates::Invite</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_invite_1a68fc9f036d5787cff74f85d0341461a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Invite.InviteEventHandler</definition>
+        <argsstring>(UserInfo user, string channel)</argsstring>
+        <name>InviteEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+<para>The user has been invited to a channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Who sent the invite.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The target channel.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_alaris_1_1_irc_1_1_listener_1a3354161ee11f5a156f6a2e5f060f8261" kindref="member">Listener.OnInvite</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Invite/InviteEventHandler.cs" line="9"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_invite_1ac42ff009601c392c44c34a30de379d77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Invite.InviteSentEventHandler</definition>
+        <argsstring>(string nick, string channel)</argsstring>
+        <name>InviteSentEventHandler</name>
+        <param>
+          <type>string</type>
+          <declname>nick</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+<para>An <ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_invite" kindref="compound">Invite</ref> message was successfully sent to another user. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nick</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The nick of the user who was invited</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the channel the user was invited to join</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_alaris_1_1_irc_1_1_listener_1a7c2ace36e13c3bfaa199badbc8a00acf" kindref="member">Listener.OnInviteSent</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Invite/InviteSentEventHandler.cs" line="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Invite/InviteEventHandler.cs" line="2"/>
+  </compounddef>
+</doxygen>

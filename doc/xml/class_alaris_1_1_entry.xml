@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_entry" kind="class" prot="public">
+    <compoundname>Alaris::Entry</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_entry_1a9be1700d91963810310883be1ec1d27b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Entry.Main</definition>
+        <argsstring>(string[] args)</argsstring>
+        <name>Main</name>
+        <param>
+          <type>string[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Main.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Main.cs" bodystart="12" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Main.cs" line="11" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Main.cs" bodystart="10" bodyend="82"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_entry_1a9be1700d91963810310883be1ec1d27b" prot="private" virt="non-virtual"><scope>Alaris::Entry</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_3a4ef1f4905e6aa38bc48412029c5e63" kind="dir">
+    <compoundname>irc/Delegates/Channel/</compoundname>
+    <innerfile refid="_action_event_handler_8cs">ActionEventHandler.cs</innerfile>
+    <innerfile refid="_channel_list_event_handler_8cs">ChannelListEventHandler.cs</innerfile>
+    <innerfile refid="_channel_mode_change_event_handler_8cs">ChannelModeChangeEventHandler.cs</innerfile>
+    <innerfile refid="_channel_mode_info_8cs">ChannelModeInfo.cs</innerfile>
+    <innerfile refid="_channel_mode_request_event_handler_8cs">ChannelModeRequestEventHandler.cs</innerfile>
+    <innerfile refid="_join_event_handler_8cs">JoinEventHandler.cs</innerfile>
+    <innerfile refid="_part_event_handler_8cs">PartEventHandler.cs</innerfile>
+    <innerfile refid="_topic_event_handler_8cs">TopicEventHandler.cs</innerfile>
+    <innerfile refid="_topic_request_event_handler_8cs">TopicRequestEventHandler.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Channel/"/>
+  </compounddef>
+</doxygen>

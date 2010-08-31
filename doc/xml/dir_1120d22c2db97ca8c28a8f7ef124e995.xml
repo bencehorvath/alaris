@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_1120d22c2db97ca8c28a8f7ef124e995" kind="dir">
+    <compoundname>irc/Delegates/Dcc/</compoundname>
+    <innerdir refid="dir_8b0d7ef9e9c8501db1c96992ade988ff">irc/Delegates/Dcc/Files/</innerdir>
+    <innerfile refid="_chat_message_received_event_handler_8cs">ChatMessageReceivedEventHandler.cs</innerfile>
+    <innerfile refid="_chat_request_timeout_event_handler_8cs">ChatRequestTimeoutEventHandler.cs</innerfile>
+    <innerfile refid="_chat_session_closed_event_handler_8cs">ChatSessionClosedEventHandler.cs</innerfile>
+    <innerfile refid="_chat_session_opened_event_handler_8cs">ChatSessionOpenedEventHandler.cs</innerfile>
+    <innerfile refid="_dcc_chat_request_event_handler_8cs">DccChatRequestEventHandler.cs</innerfile>
+    <innerfile refid="_dcc_get_request_event_handler_8cs">DccGetRequestEventHandler.cs</innerfile>
+    <innerfile refid="_dcc_send_request_event_handler_8cs">DccSendRequestEventHandler.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Dcc/"/>
+  </compounddef>
+</doxygen>

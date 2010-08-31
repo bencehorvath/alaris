@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_8b0d7ef9e9c8501db1c96992ade988ff" kind="dir">
+    <compoundname>irc/Delegates/Dcc/Files/</compoundname>
+    <innerfile refid="_file_transfer_completed_event_handler_8cs">FileTransferCompletedEventHandler.cs</innerfile>
+    <innerfile refid="_file_transfer_interrupted_event_handler_8cs">FileTransferInterruptedEventHandler.cs</innerfile>
+    <innerfile refid="_file_transfer_progress_event_handler_8cs">FileTransferProgressEventHandler.cs</innerfile>
+    <innerfile refid="_file_transfer_started_event_handler_8cs">FileTransferStartedEventHandler.cs</innerfile>
+    <innerfile refid="_file_transfer_timeout_event_handler_8cs">FileTransferTimeoutEventHandler.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Dcc/Files/"/>
+  </compounddef>
+</doxygen>

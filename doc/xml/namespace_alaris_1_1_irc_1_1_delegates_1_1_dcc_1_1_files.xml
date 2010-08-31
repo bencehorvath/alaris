@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1_1_files" kind="namespace">
+    <compoundname>Alaris::Irc::Delegates::Dcc::Files</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1_1_files_1a08c26d80b1cfe79055da15ac780a8789" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.Files.FileTransferCompletedEventHandler</definition>
+        <argsstring>(DccFileSession session)</argsstring>
+        <name>FileTransferCompletedEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session" kindref="compound">DccFileSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>A file was succefully transfered. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session in which the transfer was successfully completed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccFileSession.OnFileTransferCompleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Dcc/Files/FileTransferCompletedEventHandler.cs" line="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1_1_files_1a97db44b5fe2b43d9e7df8fba396db6be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.Files.FileTransferInterruptedEventHandler</definition>
+        <argsstring>(DccFileSession session)</argsstring>
+        <name>FileTransferInterruptedEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session" kindref="compound">DccFileSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>Something happened to stop the transfer before it was completed. Normally this will be due to one of the sides canceling the transfer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session in which the transfer was interrupted.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccFileSession.OnFileTransferInterrupted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Dcc/Files/FileTransferInterruptedEventHandler.cs" line="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1_1_files_1afcb240f4df830b37a971429d0865b543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.Files.FileTransferProgressEventHandler</definition>
+        <argsstring>(DccFileSession session, int bytesSent)</argsstring>
+        <name>FileTransferProgressEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session" kindref="compound">DccFileSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bytesSent</declname>
+        </param>
+        <briefdescription>
+<para>Called for each successful data block transfer. This allows the developer to show a transfer progress display of some kind. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session in which data was transfered.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bytesSent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes sent in this block. The DccFileSession contains the cumulative number of bytes sent/received and the total number the will be processed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccFileSession.OnFileTransferProgress </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Dcc/Files/FileTransferProgressEventHandler.cs" line="14"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1_1_files_1acb4e443533a86e25f1eb954b54021568" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.Files.FileTransferStartedEventHandler</definition>
+        <argsstring>(DccFileSession session)</argsstring>
+        <name>FileTransferStartedEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session" kindref="compound">DccFileSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>The file transfer connection has been successfully opened and the data transfer has begun. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session in which the transfer has started.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccFileSession.OnFileTransferStarted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Dcc/Files/FileTransferStartedEventHandler.cs" line="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1_1_files_1a5ec9bd4a4772201aecf6b92f605c724f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.Files.FileTransferTimeoutEventHandler</definition>
+        <argsstring>(DccFileSession session)</argsstring>
+        <name>FileTransferTimeoutEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session" kindref="compound">DccFileSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>There has been no activity in this session for the timeout period. The session is automatically closed and this event is raised. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session in which the timeout occurred.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccFileSession.OnFileTransferTimeout </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Dcc/Files/FileTransferTimeoutEventHandler.cs" line="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Dcc/Files/FileTransferCompletedEventHandler.cs" line="4"/>
+  </compounddef>
+</doxygen>

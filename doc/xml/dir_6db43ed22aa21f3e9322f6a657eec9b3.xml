@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_6db43ed22aa21f3e9322f6a657eec9b3" kind="dir">
+    <compoundname>Atom/</compoundname>
+    <innerdir refid="dir_81fb7e54199ec7518cab7b9055e085f9">Atom/Atom.AdditionalElements/</innerdir>
+    <innerdir refid="dir_da5d7c6d8d339f8007123d01a2f9c3ce">Atom/Atom.Core/</innerdir>
+    <innerdir refid="dir_e8ec207d8c755f78d868e67e3c545522">Atom/Atom.Core.Collections/</innerdir>
+    <innerdir refid="dir_92ea6d1107d55edb7d36169e515c9eb7">Atom/Atom.Utils/</innerdir>
+    <innerdir refid="dir_f047f3e02c2021a9481a60214d795d53">Atom/mvpxml/</innerdir>
+    <innerdir refid="dir_dc52f7cd126bfcf6cd45b55662254209">Atom/tests/</innerdir>
+    <innerfile refid="_atom_2_assembly_info_8cs">AssemblyInfo.cs</innerfile>
+    <innerfile refid="_atom_reader_8cs">AtomReader.cs</innerfile>
+    <innerfile refid="_atom_writer_8cs">AtomWriter.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/"/>
+  </compounddef>
+</doxygen>

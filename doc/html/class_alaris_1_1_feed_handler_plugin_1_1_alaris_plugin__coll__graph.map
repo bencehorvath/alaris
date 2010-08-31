@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$interface_alaris_1_1_a_p_i_1_1_i_alaris_basic.html" title="Alaris.API.IAlarisBasic" alt="" coords="319,5,471,35"/>
+<area shape="rect" id="node7" href="$class_alaris_1_1_irc_1_1_connection.html" title="This class manages the connection to the IRC server and provides access to all the objects needed to ..." alt="" coords="324,259,465,288"/>
+<area shape="rect" id="node9" href="$class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener.html" title="This class is used to send CTCP specific events. Once registered with this object the client can rece..." alt="" coords="639,268,820,297"/>
+<area shape="rect" id="node14" href="$class_alaris_1_1_irc_1_1_command_builder.html" title="CommandBuilder provides the support methods needed by its subclasses to build correctly formatted mes..." alt="" coords="641,212,817,241"/>
+<area shape="rect" id="node19" href="$class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder.html" title="A class which automatically responds to CTCP queries. The replies it sends are configurable by the cl..." alt="" coords="631,400,828,429"/>
+<area shape="rect" id="node12" href="$class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender.html" title="This class allows the client to send CTCP commands. There is no limit on what commands can actually b..." alt="" coords="901,173,1077,203"/>
+<area shape="rect" id="node26" href="$class_alaris_1_1_irc_1_1_sender.html" title="This class is used to send all the IRC commands except for CTCP and DCC messages. Instances of this c..." alt="" coords="931,264,1048,293"/>
+<area shape="rect" id="node17" href="$class_alaris_1_1_irc_1_1_listener.html" title="This class parses messages received from the IRC server and raises the appropriate event..." alt="" coords="31,205,153,235"/>
+<area shape="rect" id="node22" href="$class_alaris_1_1_irc_1_1_server_properties.html" title="Encapsulates the collection of properties sent by the IRC server after registration." alt="" coords="7,259,177,288"/>
+<area shape="rect" id="node24" href="$struct_alaris_1_1_irc_1_1_connection_args.html" title="A collection of parameters necessary to establish an IRC connection." alt="" coords="8,312,176,341"/>
+</map>

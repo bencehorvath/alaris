@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_network_1_1_client_packet_handler" kind="class" prot="public">
+    <compoundname>Alaris::Network::ClientPacketHandler</compoundname>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_alaris_1_1_network_1_1_client_packet_handler_1a8374c8fc756b64630e437e34f421c086" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>ClientPacketHandlerDelegate</type>
+        <definition>ClientPacketHandlerDelegate Alaris.Network.ClientPacketHandler.OnAuthDenied</definition>
+        <argsstring></argsstring>
+        <name>OnAuthDenied</name>
+        <briefdescription>
+<para>Occurs when auth is denied. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="21" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_alaris_1_1_network_1_1_client_packet_handler_1a47500b1793003c0942e6afc80736932e" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>ClientPacketHandlerDelegate</type>
+        <definition>ClientPacketHandlerDelegate Alaris.Network.ClientPacketHandler.OnAuthApproved</definition>
+        <argsstring></argsstring>
+        <name>OnAuthApproved</name>
+        <briefdescription>
+<para>Occurs when auth is approved. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="26" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_alaris_1_1_network_1_1_client_packet_handler_1ac110f617441422b736e1d43d38b6eb33" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>ClientPacketHandlerDelegate</type>
+        <definition>ClientPacketHandlerDelegate Alaris.Network.ClientPacketHandler.OnAcsRandom</definition>
+        <argsstring></argsstring>
+        <name>OnAcsRandom</name>
+        <briefdescription>
+<para>Occurs when ACS sends a random number packet back. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="31" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_network_1_1_client_packet_handler_1a96fee7fdae07db2cb5b872abc08505b2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Network.ClientPacketHandler.ClientPacketHandler</definition>
+        <argsstring>()</argsstring>
+        <name>ClientPacketHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="34" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" bodystart="33" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_network_1_1_client_packet_handler_1a0c1739e5f04085c345e552acd2d22168" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Network.ClientPacketHandler.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Init this instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="44" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_network_1_1_client_packet_handler_1ae3ce36fa1271dba94d6ac8327484a699" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Network.ClientPacketHandler.HandlePacket</definition>
+        <argsstring>(AlarisPacket packet, TcpClient client)</argsstring>
+        <name>HandlePacket</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_core_1_1_alaris_packet" kindref="compound">AlarisPacket</ref></type>
+          <declname>packet</declname>
+        </param>
+        <param>
+          <type>TcpClient</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+<para>Handles the packet. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>packet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Packet. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>client</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Client. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="57" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_network_1_1_client_packet_handler_1a8b04d865218dabc37de8916affc83002" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Network.ClientPacketHandler.AuthDeniedHandler</definition>
+        <argsstring>(AlarisPacket pck, string hst)</argsstring>
+        <name>AuthDeniedHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_core_1_1_alaris_packet" kindref="compound">AlarisPacket</ref></type>
+          <declname>pck</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hst</declname>
+        </param>
+        <briefdescription>
+<para>The auth denied packet handler. (SMSG_AUTH_DENIED). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Packet. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Host. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="80" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" bodystart="79" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_network_1_1_client_packet_handler_1a492013bca30a9fd7a019799f92fd89fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Network.ClientPacketHandler.AuthApprovedHandler</definition>
+        <argsstring>(AlarisPacket pck, string hst)</argsstring>
+        <name>AuthApprovedHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_core_1_1_alaris_packet" kindref="compound">AlarisPacket</ref></type>
+          <declname>pck</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hst</declname>
+        </param>
+        <briefdescription>
+<para>The auth approved packet handler. (SMSG_AUTH_APPROVED). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Packet. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Host. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="98" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_network_1_1_client_packet_handler_1a49e646f03d76194d41c095aa280055ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Network.ClientPacketHandler.AcsRandHandler</definition>
+        <argsstring>(AlarisPacket pck, string hst)</argsstring>
+        <name>AcsRandHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_core_1_1_alaris_packet" kindref="compound">AlarisPacket</ref></type>
+          <declname>pck</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hst</declname>
+        </param>
+        <briefdescription>
+<para>The ACS Random number handler. (SMSG_SEND_ACS_RANDOM). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Packet. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Host. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="112" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" bodystart="111" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Packet handler used by the client. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" bodystart="16" bodyend="125"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_network_1_1_client_packet_handler_1a49e646f03d76194d41c095aa280055ab" prot="public" virt="non-virtual"><scope>Alaris::Network::ClientPacketHandler</scope><name>AcsRandHandler</name></member>
+      <member refid="class_alaris_1_1_network_1_1_client_packet_handler_1a492013bca30a9fd7a019799f92fd89fa" prot="public" virt="non-virtual"><scope>Alaris::Network::ClientPacketHandler</scope><name>AuthApprovedHandler</name></member>
+      <member refid="class_alaris_1_1_network_1_1_client_packet_handler_1a8b04d865218dabc37de8916affc83002" prot="public" virt="non-virtual"><scope>Alaris::Network::ClientPacketHandler</scope><name>AuthDeniedHandler</name></member>
+      <member refid="class_alaris_1_1_network_1_1_client_packet_handler_1a96fee7fdae07db2cb5b872abc08505b2" prot="private" virt="non-virtual"><scope>Alaris::Network::ClientPacketHandler</scope><name>ClientPacketHandler</name></member>
+      <member refid="class_alaris_1_1_network_1_1_client_packet_handler_1ae3ce36fa1271dba94d6ac8327484a699" prot="public" virt="non-virtual"><scope>Alaris::Network::ClientPacketHandler</scope><name>HandlePacket</name></member>
+      <member refid="class_alaris_1_1_network_1_1_client_packet_handler_1a0c1739e5f04085c345e552acd2d22168" prot="public" virt="non-virtual"><scope>Alaris::Network::ClientPacketHandler</scope><name>Init</name></member>
+      <member refid="class_alaris_1_1_network_1_1_client_packet_handler_1ac110f617441422b736e1d43d38b6eb33" prot="public" virt="non-virtual"><scope>Alaris::Network::ClientPacketHandler</scope><name>OnAcsRandom</name></member>
+      <member refid="class_alaris_1_1_network_1_1_client_packet_handler_1a47500b1793003c0942e6afc80736932e" prot="public" virt="non-virtual"><scope>Alaris::Network::ClientPacketHandler</scope><name>OnAuthApproved</name></member>
+      <member refid="class_alaris_1_1_network_1_1_client_packet_handler_1a8374c8fc756b64630e437e34f421c086" prot="public" virt="non-virtual"><scope>Alaris::Network::ClientPacketHandler</scope><name>OnAuthDenied</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

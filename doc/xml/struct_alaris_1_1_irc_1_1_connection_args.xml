@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="struct_alaris_1_1_irc_1_1_connection_args" kind="struct" prot="public">
+    <compoundname>Alaris::Irc::ConnectionArgs</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="struct_alaris_1_1_irc_1_1_connection_args_1a009ce44fd0fa436d4a37864198a32176" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs._realName</definition>
+        <argsstring></argsstring>
+        <name>_realName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_alaris_1_1_irc_1_1_connection_args_1ad84dd5958dec31ed92dcaf21fa48975b" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs._nickName</definition>
+        <argsstring></argsstring>
+        <name>_nickName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_alaris_1_1_irc_1_1_connection_args_1a87e5f4d1c5d41f3c24077dfbbc9ec9d4" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs._userName</definition>
+        <argsstring></argsstring>
+        <name>_userName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_alaris_1_1_irc_1_1_connection_args_1a1b25f9a167ad2632b6422f559c3a1736" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs._modeMask</definition>
+        <argsstring></argsstring>
+        <name>_modeMask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="16" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_alaris_1_1_irc_1_1_connection_args_1a1db2e9d97ec7acc2d178cb5a30026d80" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs._hostname</definition>
+        <argsstring></argsstring>
+        <name>_hostname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_alaris_1_1_irc_1_1_connection_args_1a5e48c66beb1e8643443272fc00043e2a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Alaris.Irc.ConnectionArgs._port</definition>
+        <argsstring></argsstring>
+        <name>_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="18" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_alaris_1_1_irc_1_1_connection_args_1a3b9b3a56dccd0905c38fb83f7e05c983" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs._serverPassword</definition>
+        <argsstring></argsstring>
+        <name>_serverPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="19" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="struct_alaris_1_1_irc_1_1_connection_args_1a136e83394cf50b5df3ec0a05bfe010af" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs.Hostname</definition>
+        <argsstring></argsstring>
+        <name>Hostname</name>
+        <briefdescription>
+<para>The IRC server hostname. </para>        </briefdescription>
+        <detaileddescription>
+<para>The full hostname such as irc.gamesnet.net</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="54" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="struct_alaris_1_1_irc_1_1_connection_args_1a9ef1672ce9f5d9a0e4d6eddfdd1b2ff4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs.ModeMask</definition>
+        <argsstring></argsstring>
+        <name>ModeMask</name>
+        <briefdescription>
+<para>Set&apos;s the user&apos;s initial IRC mode mask. Set to 0 to recieve wallops and be invisible. Set to 4 to be invisible and not receive wallops. </para>        </briefdescription>
+        <detaileddescription>
+<para>A number mask such as 0 or 4.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="70" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="struct_alaris_1_1_irc_1_1_connection_args_1acedb87cd92e1455852d46c131b6310b8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs.Nick</definition>
+        <argsstring></argsstring>
+        <name>Nick</name>
+        <briefdescription>
+<para>The user&apos;s nick name. </para>        </briefdescription>
+        <detaileddescription>
+<para>A string which conforms to the IRC nick standard.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="85" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="struct_alaris_1_1_irc_1_1_connection_args_1aa34ed10705e825a065fc889fe3f62d7d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int Alaris.Irc.ConnectionArgs.Port</definition>
+        <argsstring></argsstring>
+        <name>Port</name>
+        <briefdescription>
+<para>The TCP/IP port the IRC listens server listens on. </para>        </briefdescription>
+        <detaileddescription>
+<para>Normally should be set to 6667. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="100" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="struct_alaris_1_1_irc_1_1_connection_args_1a0df6defb1f0963d0f6622b1922aaae96" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs.RealName</definition>
+        <argsstring></argsstring>
+        <name>RealName</name>
+        <briefdescription>
+<para>The user&apos;s &apos;real&apos; name. </para>        </briefdescription>
+        <detaileddescription>
+<para>A short string with any legal characters.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="115" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="struct_alaris_1_1_irc_1_1_connection_args_1a3f15e79e8947ae4d543fb695f2bc553e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs.UserName</definition>
+        <argsstring></argsstring>
+        <name>UserName</name>
+        <briefdescription>
+<para>The user&apos;s machine logon name. </para>        </briefdescription>
+        <detaileddescription>
+<para>A short string with any legal characters.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="130" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="struct_alaris_1_1_irc_1_1_connection_args_1a8bdbc8a38821066239881e3fbed3035e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Alaris.Irc.ConnectionArgs.ServerPassword</definition>
+        <argsstring></argsstring>
+        <name>ServerPassword</name>
+        <briefdescription>
+<para>The password for this server. These are seldomly used. Set to &apos;*&apos;. </para>        </briefdescription>
+        <detaileddescription>
+<para>A short string with any legal characters.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="145" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_alaris_1_1_irc_1_1_connection_args_1a8974f61687e58fd84a637f4ed233fb79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Irc.ConnectionArgs.ConnectionArgs</definition>
+        <argsstring>(string name, string hostname)</argsstring>
+        <name>ConnectionArgs</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+<para>Create a new instance initialized with the default values: TCP/IP port 6667, no server password, and user mode invisible. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The nick, user name, and real name are all set to this value.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hostname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hostname of the IRC server.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="30" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="29" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A collection of parameters necessary to establish an IRC connection. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" line="12" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/ConnectionArgs.cs" bodystart="11" bodyend="146"/>
+    <listofallmembers>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a1db2e9d97ec7acc2d178cb5a30026d80" prot="private" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>_hostname</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a1b25f9a167ad2632b6422f559c3a1736" prot="private" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>_modeMask</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1ad84dd5958dec31ed92dcaf21fa48975b" prot="private" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>_nickName</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a5e48c66beb1e8643443272fc00043e2a" prot="private" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>_port</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a009ce44fd0fa436d4a37864198a32176" prot="private" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>_realName</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a3b9b3a56dccd0905c38fb83f7e05c983" prot="private" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>_serverPassword</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a87e5f4d1c5d41f3c24077dfbbc9ec9d4" prot="private" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>_userName</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a8974f61687e58fd84a637f4ed233fb79" prot="public" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>ConnectionArgs</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a136e83394cf50b5df3ec0a05bfe010af" prot="public" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>Hostname</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a9ef1672ce9f5d9a0e4d6eddfdd1b2ff4" prot="public" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>ModeMask</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1acedb87cd92e1455852d46c131b6310b8" prot="public" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>Nick</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1aa34ed10705e825a065fc889fe3f62d7d" prot="public" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>Port</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a0df6defb1f0963d0f6622b1922aaae96" prot="public" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>RealName</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a8bdbc8a38821066239881e3fbed3035e" prot="public" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>ServerPassword</name></member>
+      <member refid="struct_alaris_1_1_irc_1_1_connection_args_1a3f15e79e8947ae4d543fb695f2bc553e" prot="public" virt="non-virtual"><scope>Alaris::Irc::ConnectionArgs</scope><name>UserName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

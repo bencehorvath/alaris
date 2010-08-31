@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_irc_1_1_delegates_1_1_requests" kind="namespace">
+    <compoundname>Alaris::Irc::Delegates::Requests</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_requests_1a2cda9d6e8f77fcceb802ed8e92f529d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Requests.IsonEventHandler</definition>
+        <argsstring>(string nicks)</argsstring>
+        <name>IsonEventHandler</name>
+        <param>
+          <type>string</type>
+          <declname>nicks</declname>
+        </param>
+        <briefdescription>
+<para>The response to a <ref refid="class_alaris_1_1_irc_1_1_sender_1a4846350dcbef45055452a70d801e10bf" kindref="member">Sender.Ison</ref> request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nicks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If someone with this nick is on the same IRC network their nick will be returned here. Otherwise nick will be an empty string.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_alaris_1_1_irc_1_1_listener_1a8cc017d23b18674a50e406132275920c" kindref="member">Listener.OnIson</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Requests/IsonEventHandler.cs" line="9"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_requests_1a27eb2bad24afaf71bb69bbc139970ec6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Requests.KickEventHandler</definition>
+        <argsstring>(UserInfo user, string channel, string kickee, string reason)</argsstring>
+        <name>KickEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>kickee</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>reason</declname>
+        </param>
+        <briefdescription>
+<para>Someone has been kicked from a channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Who did the kicking.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel that the person was kicked from.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kickee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Who was kicked.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reason</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Why the person was kicked.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_alaris_1_1_irc_1_1_listener_1a8f1b1ae768ccb28f8e855782d3204fe6" kindref="member">Listener.OnKick</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Requests/KickEventHandler.cs" line="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_requests_1ac0b724219fd151f0c9477f9748f610b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Requests.ListEventHandler</definition>
+        <argsstring>(string channel, int visibleNickCount, string topic, bool last)</argsstring>
+        <name>ListEventHandler</name>
+        <param>
+          <type>string</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>visibleNickCount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>The response to a <ref refid="class_alaris_1_1_irc_1_1_sender_1a27569ab2bf3ba092bae3b93819442414" kindref="member">Sender.List</ref> request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel name.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>visibleNickCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of visible users on that channel.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel&apos;s topic.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if this is the last reply.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_alaris_1_1_irc_1_1_listener_1acb66b26f7e1ab36fdc0e2d0dbf179b31" kindref="member">Listener.OnList</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Requests/ListEventHandler.cs" line="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_requests_1ad6bc7096b3ad12997bbd3b3340fd8d1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Requests.NamesEventHandler</definition>
+        <argsstring>(string channel, string[] nicks, bool last)</argsstring>
+        <name>NamesEventHandler</name>
+        <param>
+          <type>string</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>nicks</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>The response to a <ref refid="class_alaris_1_1_irc_1_1_sender_1abca5d383bc7ea100e48ca2a977d40519" kindref="member">Sender.Names</ref> request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel the user is on. &quot;@&quot; is used for secret channels, &quot;*&quot; for private channels, and &quot;=&quot; for public channels.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nicks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A list of nicks on the channel. If this is the last reply then it will be empty. Nicks prefixed with a &apos;@&apos; are channel operators. Nicks prefixed with a &apos;+&apos; have voice privileges on a moderated channel, i.e. they are allowed to send public messages.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if this is the last names reply.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_alaris_1_1_irc_1_1_listener_1a333332ff4c7303a0dc81c5a184956eb4" kindref="member">Listener.OnNames</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Requests/NamesEventHandler.cs" line="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Requests/IsonEventHandler.cs" line="2"/>
+  </compounddef>
+</doxygen>

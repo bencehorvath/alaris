@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_a_p_i" kind="namespace">
+    <compoundname>Alaris::API</compoundname>
+    <innerclass refid="class_alaris_1_1_a_p_i_1_1_irc_constants" prot="public">Alaris::API::IrcConstants</innerclass>
+    <innerclass refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic" prot="public">Alaris::API::IAlarisBasic</innerclass>
+    <innerclass refid="class_alaris_1_1_a_p_i_1_1_log" prot="public">Alaris::API::Log</innerclass>
+    <innerclass refid="class_alaris_1_1_a_p_i_1_1_utilities" prot="public">Alaris::API::Utilities</innerclass>
+    <innerclass refid="class_alaris_1_1_a_p_i_1_1_web_helper" prot="public">Alaris::API::WebHelper</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/Constants.cs" line="2"/>
+  </compounddef>
+</doxygen>

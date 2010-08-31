@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_atom_1_1_core_1_1_atom_entry.html#ae59a7245b9d2c185a12f222a9131220c" title="Converts the AtomEntry in a series of xml nodes." alt="" coords="253,60,456,89"/>
+<area shape="rect" id="node5" href="$class_atom_1_1_additional_elements_1_1_scoped_element.html#ad3b618cb4d983e57def89f626051e71c" title="Converts the ScopedElement in a series of xml nodes." alt="" coords="504,5,821,35"/>
+<area shape="rect" id="node9" href="$class_atom_1_1_core_1_1_atom_person_construct.html#a2f15aea735a9a893cecb60c6e607966d" title="Converts the AtomPersonConstruct in a series of xml nodes." alt="" coords="529,112,796,141"/>
+<area shape="rect" id="node11" href="$class_atom_1_1_core_1_1_atom_link.html#ac6ee154a4b7752023cfba0d0030b4137" title="Converts the AtomLink in a series of xml nodes." alt="" coords="565,165,760,195"/>
+<area shape="rect" id="node7" href="$class_atom_1_1_core_1_1_atom_content_construct.html#afdb33d6c0fb1a5a6a9de0f6ac31af231" title="Converts the AtomContentConstruct in a series of xml nodes." alt="" coords="527,59,799,88"/>
+</map>

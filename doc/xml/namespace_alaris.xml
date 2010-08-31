@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris" kind="namespace">
+    <compoundname>Alaris</compoundname>
+    <innerclass refid="class_alaris_1_1_alaris_bot" prot="public">Alaris::AlarisBot</innerclass>
+    <innerclass refid="class_alaris_1_1_entry" prot="public">Alaris::Entry</innerclass>
+    <innerclass refid="class_alaris_1_1_script_manager" prot="public">Alaris::ScriptManager</innerclass>
+    <innerclass refid="class_alaris_1_1_singleton-g" prot="public">Alaris::Singleton-g</innerclass>
+    <innerclass refid="interface_alaris_1_1_i_thread_context" prot="public">Alaris::IThreadContext</innerclass>
+    <innernamespace refid="namespace_alaris_1_1_a_p_i">Alaris::API</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_channel_rights">Alaris::ChannelRights</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_config">Alaris::Config</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_core">Alaris::Core</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_exceptions">Alaris::Exceptions</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_extras">Alaris::Extras</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_feed_handler_plugin">Alaris::FeedHandlerPlugin</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_irc">Alaris::Irc</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_lua_engine">Alaris::LuaEngine</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_main">Alaris::Main</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_network">Alaris::Network</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_properties">Alaris::Properties</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_server">Alaris::Server</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_tests">Alaris::Tests</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_threading">Alaris::Threading</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_alaris_1a735017b7daabf0d5f37ea93ef05bcaf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.IThreadRunnable</definition>
+        <argsstring>()</argsstring>
+        <name>IThreadRunnable</name>
+        <briefdescription>
+<para>Specifies a delegate which can be run by the ThreadPool directly. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Threading/IThreadContext.cs" line="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="18"/>
+  </compounddef>
+</doxygen>

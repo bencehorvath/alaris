@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_irc_1_1_delegates_1_1_whois" kind="namespace">
+    <compoundname>Alaris::Irc::Delegates::Whois</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_whois_1acb7a1d0edfae715fdd3578e12cf06b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Whois.WhoEventHandler</definition>
+        <argsstring>(UserInfo user, string channel, string ircServer, string mask, int hopCount, string realName, bool last)</argsstring>
+        <name>WhoEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>ircServer</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hopCount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>realName</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>The response to a <ref refid="class_alaris_1_1_irc_1_1_sender_1abb63c22961cb67dda3be4a7390da895d" kindref="member">Sender.Who</ref> request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subject of the query</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel the user is on</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ircServer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the user&apos;s IRC server</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s mode mask</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hopCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of network hops to the user</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>realName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s real name</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if this is the last response</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_alaris_1_1_irc_1_1_listener_1aed241622e0e656e5b23cef3c67149ab9" kindref="member">Listener.OnWho</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Whois/WhoEventHandler.cs" line="15"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_whois_1aa75b72fe49dc50ebdfc11c5ee18e9695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Whois.WhoisEventHandler</definition>
+        <argsstring>(WhoisInfo whoisInfo)</argsstring>
+        <name>WhoisEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_whois_info" kindref="compound">WhoisInfo</ref></type>
+          <declname>whoisInfo</declname>
+        </param>
+        <briefdescription>
+<para>The response to a <ref refid="class_alaris_1_1_irc_1_1_sender_1a1118f695bdbd74a6353e279803f2bbd6" kindref="member">Sender.Whois</ref> request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>whoisInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data associated with the nick queried.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_alaris_1_1_irc_1_1_listener_1aed241622e0e656e5b23cef3c67149ab9" kindref="member">Listener.OnWho</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Whois/WhoisEventHandler.cs" line="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_whois_1a57f6cecc5b5dab52a6e2ef4c3cc1d19a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Whois.WhowasEventHandler</definition>
+        <argsstring>(UserInfo user, string realName, bool last)</argsstring>
+        <name>WhowasEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>realName</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>The response to a <ref refid="class_alaris_1_1_irc_1_1_sender_1a83ce223f3a0ba0b22bab4ac72d61ce76" kindref="member">Sender.Whowas</ref> request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Information on the user.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>realName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s real name.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if this is the final reply.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_alaris_1_1_irc_1_1_listener_1a2f00a851a68cb4834c29338988282703" kindref="member">Listener.OnWhowas</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Whois/WhowasEventHandler.cs" line="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Whois/WhoEventHandler.cs" line="2"/>
+  </compounddef>
+</doxygen>

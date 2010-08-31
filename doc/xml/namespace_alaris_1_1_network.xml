@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_network" kind="namespace">
+    <compoundname>Alaris::Network</compoundname>
+    <innerclass refid="class_alaris_1_1_network_1_1_client_packet_handler" prot="public">Alaris::Network::ClientPacketHandler</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_alaris_1_1_network_1ade8b0736678e671340c36efb93322f60" prot="public" static="no">
+        <name>Opcode</name>
+        <enumvalue id="namespace_alaris_1_1_network_1ade8b0736678e671340c36efb93322f60" prot="public">
+          <name>ScmsgPacketNull</name>
+          <initializer> 0x0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_network_1ade8b0736678e671340c36efb93322f60" prot="public">
+          <name>CmsgRequestAuth</name>
+          <initializer> 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_network_1ade8b0736678e671340c36efb93322f60" prot="public">
+          <name>SmsgAuthApproved</name>
+          <initializer> 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_network_1ade8b0736678e671340c36efb93322f60" prot="public">
+          <name>SmsgAuthDenied</name>
+          <initializer> 0x03</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_network_1ade8b0736678e671340c36efb93322f60" prot="public">
+          <name>CmsgRequestConfig</name>
+          <initializer> 0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_network_1ade8b0736678e671340c36efb93322f60" prot="public">
+          <name>SmsgConfigResponse</name>
+          <initializer> 0x05</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_network_1ade8b0736678e671340c36efb93322f60" prot="public">
+          <name>CmsgCloseConnection</name>
+          <initializer> 0x06</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_network_1ade8b0736678e671340c36efb93322f60" prot="public">
+          <name>SmsgCloseConnection</name>
+          <initializer> 0x07</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_network_1ade8b0736678e671340c36efb93322f60" prot="public">
+          <name>CmsgRequestACSRandom</name>
+          <initializer> 0x08</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_network_1ade8b0736678e671340c36efb93322f60" prot="public">
+          <name>SmsgSendACSRandom</name>
+          <initializer> 0x09</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>List of possible Opcodes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/Opcodes.cs" line="10" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/Opcodes.cs" bodystart="9" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_alaris_1_1_network_1a42aa0283867916f341b12507e7ebc8aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Network.ClientPacketHandlerDelegate</definition>
+        <argsstring>(AlarisPacket packet, string hst)</argsstring>
+        <name>ClientPacketHandlerDelegate</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_core_1_1_alaris_packet" kindref="compound">AlarisPacket</ref></type>
+          <declname>packet</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hst</declname>
+        </param>
+        <briefdescription>
+<para>Delegate for handling client packets. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Network/ClientPacketHandler.cs" line="7"/>
+  </compounddef>
+</doxygen>

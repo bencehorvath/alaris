@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_core_1_1_log" kind="class" prot="public">
+    <compoundname>Alaris::Core::Log</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_core_1_1_log_1acac1b8255d353194bb2fdec7cd166c4a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Core.Log.Notice</definition>
+        <argsstring>(string module, string message)</argsstring>
+        <name>Notice</name>
+        <param>
+          <type>string</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Emit a console notice. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>module</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The module name where the thing described in the message happened. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to display. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" line="25" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" bodystart="24" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_core_1_1_log_1a5bc85bd01fdf2faaf8c8ff9d6a2f121e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Core.Log.Debug</definition>
+        <argsstring>(string module, string message)</argsstring>
+        <name>Debug</name>
+        <param>
+          <type>string</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Emit a console debug message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>module</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The module name where the thing described in the message happened. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to display. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" line="45" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" bodystart="44" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_core_1_1_log_1a77fd3c964a13adb3a87c85f707362c53" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Core.Log.Error</definition>
+        <argsstring>(string module, string message)</argsstring>
+        <name>Error</name>
+        <param>
+          <type>string</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Emit a console error. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>module</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The module name where the thing described in the message happened. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to display. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" line="66" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" bodystart="65" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_core_1_1_log_1aa768aef2f947cefb0320cdb021cf94e2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Core.Log.Success</definition>
+        <argsstring>(string module, string message)</argsstring>
+        <name>Success</name>
+        <param>
+          <type>string</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Emit a console success message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>module</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The module name where the thing described in the message happened. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to display. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" line="87" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" bodystart="86" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_core_1_1_log_1aa57fcd44087baa0a760b86dbc0447288" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Core.Log.LargeWarning</definition>
+        <argsstring>(string message)</argsstring>
+        <name>LargeWarning</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Emit a large warning message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to display. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" line="105" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" bodystart="104" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Logging class used all across <ref refid="namespace_alaris" kindref="compound">Alaris</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" line="12" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Log.cs" bodystart="11" bodyend="140"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_core_1_1_log_1a5bc85bd01fdf2faaf8c8ff9d6a2f121e" prot="public" virt="non-virtual"><scope>Alaris::Core::Log</scope><name>Debug</name></member>
+      <member refid="class_alaris_1_1_core_1_1_log_1a77fd3c964a13adb3a87c85f707362c53" prot="public" virt="non-virtual"><scope>Alaris::Core::Log</scope><name>Error</name></member>
+      <member refid="class_alaris_1_1_core_1_1_log_1aa57fcd44087baa0a760b86dbc0447288" prot="public" virt="non-virtual"><scope>Alaris::Core::Log</scope><name>LargeWarning</name></member>
+      <member refid="class_alaris_1_1_core_1_1_log_1acac1b8255d353194bb2fdec7cd166c4a" prot="public" virt="non-virtual"><scope>Alaris::Core::Log</scope><name>Notice</name></member>
+      <member refid="class_alaris_1_1_core_1_1_log_1aa768aef2f947cefb0320cdb021cf94e2" prot="public" virt="non-virtual"><scope>Alaris::Core::Log</scope><name>Success</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

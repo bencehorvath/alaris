@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_extras_1_1_database_manager" kind="class" prot="public">
+    <compoundname>Alaris::Extras::DatabaseManager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_extras_1_1_database_manager_1a872236c681a1e38cc609b8fb6ac1b15a" prot="private" static="no" mutable="no">
+        <type>MySqlConnection</type>
+        <definition>MySqlConnection Alaris.Extras.DatabaseManager._connection</definition>
+        <argsstring></argsstring>
+        <name>_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" line="9" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_extras_1_1_database_manager_1ac55d3b9ebf25a568b99b3420db02614a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Extras.DatabaseManager.DatabaseManager</definition>
+        <argsstring>()</argsstring>
+        <name>DatabaseManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" line="12" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" bodystart="11" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_extras_1_1_database_manager_1a9496505b12dd807fb353a3c5bd9f3283" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Extras.DatabaseManager.Initialize</definition>
+        <argsstring>(string host, string username, string password, string database)</argsstring>
+        <name>Initialize</name>
+        <param>
+          <type>string</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>database</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" line="19" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" bodystart="18" bodyend="30"/>
+        <referencedby refid="class_alaris_1_1_alaris_bot_1a138aa83522293adcefd713c602fc3c4a" compoundref="_alaris_8cs" startline="166" endline="176">Alaris.AlarisBot::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_extras_1_1_database_manager_1a6f347ffbfdbe00d1b7d9dd6718395a75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>DataTable Alaris.Extras.DatabaseManager.Query</definition>
+        <argsstring>(string query)</argsstring>
+        <name>Query</name>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" line="33" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" bodystart="32" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_extras_1_1_database_manager_1aa9213fcc93b37a6258fae112a90a7487" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataRow</type>
+        <definition>DataRow Alaris.Extras.DatabaseManager.QueryFirstRow</definition>
+        <argsstring>(string query)</argsstring>
+        <name>QueryFirstRow</name>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" bodystart="60" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" line="8" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/DatabaseManager.cs" bodystart="7" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_extras_1_1_database_manager_1a872236c681a1e38cc609b8fb6ac1b15a" prot="private" virt="non-virtual"><scope>Alaris::Extras::DatabaseManager</scope><name>_connection</name></member>
+      <member refid="class_alaris_1_1_extras_1_1_database_manager_1ac55d3b9ebf25a568b99b3420db02614a" prot="private" virt="non-virtual"><scope>Alaris::Extras::DatabaseManager</scope><name>DatabaseManager</name></member>
+      <member refid="class_alaris_1_1_extras_1_1_database_manager_1a9496505b12dd807fb353a3c5bd9f3283" prot="public" virt="non-virtual"><scope>Alaris::Extras::DatabaseManager</scope><name>Initialize</name></member>
+      <member refid="class_alaris_1_1_extras_1_1_database_manager_1a6f347ffbfdbe00d1b7d9dd6718395a75" prot="public" virt="non-virtual"><scope>Alaris::Extras::DatabaseManager</scope><name>Query</name></member>
+      <member refid="class_alaris_1_1_extras_1_1_database_manager_1aa9213fcc93b37a6258fae112a90a7487" prot="public" virt="non-virtual"><scope>Alaris::Extras::DatabaseManager</scope><name>QueryFirstRow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

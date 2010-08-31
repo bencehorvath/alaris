@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_204acd1a02ab52c44c49cedd94840ad4" kind="dir">
+    <compoundname>alaris/Config/</compoundname>
+    <innerfile refid="_xml_config_8cs">XmlConfig.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Config/"/>
+  </compounddef>
+</doxygen>

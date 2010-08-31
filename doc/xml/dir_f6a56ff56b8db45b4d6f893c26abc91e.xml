@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_f6a56ff56b8db45b4d6f893c26abc91e" kind="dir">
+    <compoundname>irc/Delegates/</compoundname>
+    <innerdir refid="dir_3a4ef1f4905e6aa38bc48412029c5e63">irc/Delegates/Channel/</innerdir>
+    <innerdir refid="dir_a4aa6b980c06a2afaf92f8421048cc40">irc/Delegates/Ctcp/</innerdir>
+    <innerdir refid="dir_1120d22c2db97ca8c28a8f7ef124e995">irc/Delegates/Dcc/</innerdir>
+    <innerdir refid="dir_2737f25171ea3f502de50de3db98b236">irc/Delegates/Disconnect/</innerdir>
+    <innerdir refid="dir_996dea88e738f31a82a38cae677de74c">irc/Delegates/Invite/</innerdir>
+    <innerdir refid="dir_92e9446a72ee3357d645702478edd4e1">irc/Delegates/Messages/</innerdir>
+    <innerdir refid="dir_63d88aee524e8b557e56922fd78715c4">irc/Delegates/Requests/</innerdir>
+    <innerdir refid="dir_a9acd3f429c64a6826ae5a9ddd5b3cd3">irc/Delegates/Server/</innerdir>
+    <innerdir refid="dir_5e383d14a4b745c0d9bf74381f9bb244">irc/Delegates/Special/</innerdir>
+    <innerdir refid="dir_d3badac310a6e04a79c9eb88afead3c6">irc/Delegates/User/</innerdir>
+    <innerdir refid="dir_25507a2a0b9171f9c2abaf751664cd15">irc/Delegates/Whois/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/"/>
+  </compounddef>
+</doxygen>

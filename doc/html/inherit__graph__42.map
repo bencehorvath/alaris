@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$interface_alaris_1_1_i_thread_context.html" title="The interface used to define classes that can be run in the CThreadPool" alt="" coords="5,32,152,61"/>
+<area shape="rect" id="node3" href="$class_alaris_1_1_alaris_bot.html" title="The main class for Alaris." alt="" coords="216,5,328,35"/>
+<area shape="rect" id="node5" href="$class_alaris_1_1_script_manager.html" title="A script manager for the IRC connections. Loads plugins, manages events etc." alt="" coords="201,59,343,88"/>
+</map>

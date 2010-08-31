@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="_invite_event_handler_8cs" kind="file">
+    <compoundname>InviteEventHandler.cs</compoundname>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_invite">Alaris::Irc::Delegates::Invite</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_invite" refkind="compound"><highlight class="normal">﻿namespace<sp/>Alaris.Irc.Delegates.Invite</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>delegate<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_invite_1a68fc9f036d5787cff74f85d0341461a4" kindref="member" tooltip="The user has been invited to a channel.">InviteEventHandler</ref>(<sp/><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound" tooltip="A convenient holder of user information. Instances of this class are created internally.">UserInfo</ref><sp/>user,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>channel<sp/>);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Invite/InviteEventHandler.cs"/>
+  </compounddef>
+</doxygen>

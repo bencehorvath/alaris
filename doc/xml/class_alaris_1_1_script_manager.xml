@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_script_manager" kind="class" prot="public">
+    <compoundname>Alaris::ScriptManager</compoundname>
+    <basecompoundref refid="interface_alaris_1_1_i_thread_context" prot="public" virt="non-virtual">Alaris.IThreadContext</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_script_manager_1a953ac0d8dbee8c50a60e3837d5077e31" prot="private" static="no" mutable="no">
+        <type>readonly List&lt; string &gt;</type>
+        <definition>readonly List&lt;string&gt; Alaris.ScriptManager._channels</definition>
+        <argsstring></argsstring>
+        <name>_channels</name>
+        <initializer> new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="20" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_script_manager_1a83def657b9fc81d3dc42e5dc56dd91c6" prot="private" static="no" mutable="no">
+        <type>readonly Guid</type>
+        <definition>readonly Guid Alaris.ScriptManager._guid</definition>
+        <argsstring></argsstring>
+        <name>_guid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="21" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_script_manager_1a22ee21a3eca586293c52c1f0f81001c3" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Alaris.ScriptManager._scriptsPath</definition>
+        <argsstring></argsstring>
+        <name>_scriptsPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="22" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_script_manager_1ac26aedd08b831b1d561e616561fd457f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alaris_1_1_lua_engine_1_1_lua_engine" kindref="compound">LuaEngine.LuaEngine</ref></type>
+        <definition>LuaEngine.LuaEngine Alaris.ScriptManager._luaEngine</definition>
+        <argsstring></argsstring>
+        <name>_luaEngine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="23" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_script_manager_1a21395cb77d9d846e3049e6436fdf87dd" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>Connection Alaris.ScriptManager._connection</definition>
+        <argsstring></argsstring>
+        <name>_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="46" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_script_manager_1a9118e822a233b9586629c7fabcb4f647" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_lua_engine_1_1_lua_engine" kindref="compound">LuaEngine.LuaEngine</ref></type>
+        <definition>LuaEngine.LuaEngine Alaris.ScriptManager.Lua</definition>
+        <argsstring></argsstring>
+        <name>Lua</name>
+        <briefdescription>
+<para>Gets the Lua engine. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="28" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_alaris_bot_1aa5ab25020602989449e4a27184a478a0" compoundref="_alaris_8cs" startline="325" endline="342">Alaris.AlarisBot::Disconnect</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_script_manager_1a1fda94d0855eb12404d60c5431cc7dec" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>Connection Alaris.ScriptManager.Connection</definition>
+        <argsstring></argsstring>
+        <name>Connection</name>
+        <briefdescription>
+<para>The IRC connection instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="36" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_script_manager_1a769b50bf02c4b86bd81de0774d5c23e0" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Alaris.ScriptManager.ScriptDirectory</definition>
+        <argsstring></argsstring>
+        <name>ScriptDirectory</name>
+        <briefdescription>
+<para>Gets or sets the directory where the scripts reside. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="44" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_script_manager_1a85cd87daa1998ffa0d19c91babb3d711" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.ScriptManager.ScriptManager</definition>
+        <argsstring>(ref Connection con, List&lt; string &gt; chans, string scriptPath)</argsstring>
+        <name>ScriptManager</name>
+        <param>
+          <type>ref <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+          <declname>con</declname>
+        </param>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>chans</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>scriptPath</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new instance of <ref refid="class_alaris_1_1_script_manager" kindref="compound">ScriptManager</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>con</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IRC connection. See <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Alaris.Irc.Connection</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+/ <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chans</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channels the bot is on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scriptPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to scripts.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_script_manager_1a93f4bb1b6bca94936811335dea506c17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Guid</type>
+        <definition>Guid Alaris.ScriptManager.GetGuid</definition>
+        <argsstring>()</argsstring>
+        <name>GetGuid</name>
+        <reimplements refid="interface_alaris_1_1_i_thread_context_1a62a61f0c840891d402060ae755584bed">GetGuid</reimplements>
+        <briefdescription>
+<para>Gets the GUID. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The GUID. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="75" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_script_manager_1a0605939cc9122f68c8e662e63eee14c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.ScriptManager.Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <reimplements refid="interface_alaris_1_1_i_thread_context_1a6896809516d1c8e4a7162d8e9019c7e9">Run</reimplements>
+        <briefdescription>
+<para>Run this instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="83" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_script_manager_1a9d315a8ae32465c70dabea34880fa6fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.ScriptManager.RegisterOnPublicHook</definition>
+        <argsstring>(PublicMessageEventHandler handler)</argsstring>
+        <name>RegisterOnPublicHook</name>
+        <param>
+          <type>PublicMessageEventHandler</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Registers the given function to be run when a public message occurs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to register. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="103" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_script_manager_1a69e91fa92a4c0a552dbb4f74e925d474" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.ScriptManager.RegisterOnPartHook</definition>
+        <argsstring>(PartEventHandler handler)</argsstring>
+        <name>RegisterOnPartHook</name>
+        <param>
+          <type>PartEventHandler</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Registers the given function to be run when somebody leaves a channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to register. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="114" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_script_manager_1a2a63ba93c0c1ca5cd498ab5fdcb71a38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.ScriptManager.RegisterOnQuitHook</definition>
+        <argsstring>(QuitEventHandler handler)</argsstring>
+        <name>RegisterOnQuitHook</name>
+        <param>
+          <type>QuitEventHandler</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Registers the given function to be run when somebody quits the IRC server. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to register. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="125" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_script_manager_1a83b6bb0e5884ba9c2624c55c9f9ebbc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.ScriptManager.RegisterOnPrivateHook</definition>
+        <argsstring>(PrivateMessageEventHandler handler)</argsstring>
+        <name>RegisterOnPrivateHook</name>
+        <param>
+          <type>PrivateMessageEventHandler</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Registers the given function to be run when the bot receives a private message from someone. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to register. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="136" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_script_manager_1a089367b6e0d141668497689134bcdb0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.ScriptManager.RegisterOnDisconnectedHook</definition>
+        <argsstring>(DisconnectedEventHandler handler)</argsstring>
+        <name>RegisterOnDisconnectedHook</name>
+        <param>
+          <type>DisconnectedEventHandler</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Registers the given function to be run when the bot gets disconnected from the server. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to register. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="147" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_script_manager_1a34a4aa794654353ba829d0ab510835ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.ScriptManager.RegisterOnRegisteredHook</definition>
+        <argsstring>(RegisteredEventHandler handler)</argsstring>
+        <name>RegisterOnRegisteredHook</name>
+        <param>
+          <type>RegisteredEventHandler</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Registers the given function to be run when the bots gets registered on the server (usually after MOTD). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to register. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="158" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_script_manager_1a01219d9f4db91273d63bf62aee6c359d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.ScriptManager.RegisterOnErrorHook</definition>
+        <argsstring>(ErrorMessageEventHandler handler)</argsstring>
+        <name>RegisterOnErrorHook</name>
+        <param>
+          <type>ErrorMessageEventHandler</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Registers the given function to be run when the bot receives an error message from the server. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to register. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="169" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="168" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_script_manager_1adb69c903e8a78046d4441738362faeaf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.ScriptManager.~ScriptManager</definition>
+        <argsstring>()</argsstring>
+        <name>~ScriptManager</name>
+        <briefdescription>
+<para>Releases unmanaged resources and performs other cleanup operations before the <ref refid="class_alaris_1_1_script_manager" kindref="compound">ScriptManager</ref> is reclaimed by garbage collection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="92" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="91" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A script manager for the IRC connections. Loads plugins, manages events etc. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="853">
+        <label>Alaris.ScriptManager</label>
+        <link refid="class_alaris_1_1_script_manager"/>
+        <childnode refid="854" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="854">
+        <label>Alaris.IThreadContext</label>
+        <link refid="interface_alaris_1_1_i_thread_context"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="865">
+        <label>Alaris.Irc.Sender</label>
+        <link refid="class_alaris_1_1_irc_1_1_sender"/>
+        <childnode refid="860" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="858">
+        <label>Alaris.Irc.Ctcp.CtcpListener</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener"/>
+        <childnode refid="857" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="855">
+        <label>Alaris.ScriptManager</label>
+        <link refid="class_alaris_1_1_script_manager"/>
+        <childnode refid="856" relation="public-inheritance">
+        </childnode>
+        <childnode refid="857" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="863">
+        <label>Alaris.Irc.ServerProperties</label>
+        <link refid="class_alaris_1_1_irc_1_1_server_properties"/>
+      </node>
+      <node id="859">
+        <label>Alaris.Irc.Ctcp.CtcpSender</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender"/>
+        <childnode refid="860" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="860">
+        <label>Alaris.Irc.CommandBuilder</label>
+        <link refid="class_alaris_1_1_irc_1_1_command_builder"/>
+        <childnode refid="857" relation="usage">
+          <edgelabel>connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="862">
+        <label>Alaris.Irc.Ctcp.CtcpResponder</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder"/>
+        <childnode refid="857" relation="usage">
+          <edgelabel>connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="856">
+        <label>Alaris.IThreadContext</label>
+        <link refid="interface_alaris_1_1_i_thread_context"/>
+      </node>
+      <node id="857">
+        <label>Alaris.Irc.Connection</label>
+        <link refid="class_alaris_1_1_irc_1_1_connection"/>
+        <childnode refid="858" relation="usage">
+          <edgelabel>ctcpListener</edgelabel>
+        </childnode>
+        <childnode refid="859" relation="usage">
+          <edgelabel>ctcpSender</edgelabel>
+        </childnode>
+        <childnode refid="861" relation="usage">
+          <edgelabel>listener</edgelabel>
+        </childnode>
+        <childnode refid="862" relation="usage">
+          <edgelabel>ctcpResponder</edgelabel>
+        </childnode>
+        <childnode refid="863" relation="usage">
+          <edgelabel>properties</edgelabel>
+        </childnode>
+        <childnode refid="864" relation="usage">
+          <edgelabel>connectionArgs</edgelabel>
+        </childnode>
+        <childnode refid="865" relation="usage">
+          <edgelabel>sender</edgelabel>
+        </childnode>
+      </node>
+      <node id="864">
+        <label>Alaris.Irc.ConnectionArgs</label>
+        <link refid="struct_alaris_1_1_irc_1_1_connection_args"/>
+      </node>
+      <node id="861">
+        <label>Alaris.Irc.Listener</label>
+        <link refid="class_alaris_1_1_irc_1_1_listener"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" line="19" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ScriptManager.cs" bodystart="18" bodyend="173"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_script_manager_1a953ac0d8dbee8c50a60e3837d5077e31" prot="private" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>_channels</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a21395cb77d9d846e3049e6436fdf87dd" prot="private" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>_connection</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a83def657b9fc81d3dc42e5dc56dd91c6" prot="private" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>_guid</name></member>
+      <member refid="class_alaris_1_1_script_manager_1ac26aedd08b831b1d561e616561fd457f" prot="private" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>_luaEngine</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a22ee21a3eca586293c52c1f0f81001c3" prot="private" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>_scriptsPath</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a1fda94d0855eb12404d60c5431cc7dec" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>Connection</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a93f4bb1b6bca94936811335dea506c17" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>GetGuid</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a9118e822a233b9586629c7fabcb4f647" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>Lua</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a089367b6e0d141668497689134bcdb0e" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>RegisterOnDisconnectedHook</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a01219d9f4db91273d63bf62aee6c359d" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>RegisterOnErrorHook</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a69e91fa92a4c0a552dbb4f74e925d474" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>RegisterOnPartHook</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a83b6bb0e5884ba9c2624c55c9f9ebbc9" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>RegisterOnPrivateHook</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a9d315a8ae32465c70dabea34880fa6fe" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>RegisterOnPublicHook</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a2a63ba93c0c1ca5cd498ab5fdcb71a38" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>RegisterOnQuitHook</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a34a4aa794654353ba829d0ab510835ee" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>RegisterOnRegisteredHook</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a0605939cc9122f68c8e662e63eee14c2" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>Run</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a769b50bf02c4b86bd81de0774d5c23e0" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>ScriptDirectory</name></member>
+      <member refid="class_alaris_1_1_script_manager_1a85cd87daa1998ffa0d19c91babb3d711" prot="public" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>ScriptManager</name></member>
+      <member refid="class_alaris_1_1_script_manager_1adb69c903e8a78046d4441738362faeaf" prot="private" virt="non-virtual"><scope>Alaris::ScriptManager</scope><name>~ScriptManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

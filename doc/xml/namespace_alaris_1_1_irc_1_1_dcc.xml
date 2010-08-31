@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_irc_1_1_dcc" kind="namespace">
+    <compoundname>Alaris::Irc::Dcc</compoundname>
+    <innerclass refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_chat_session" prot="public">Alaris::Irc::Dcc::DccChatSession</innerclass>
+    <innerclass refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_info" prot="public">Alaris::Irc::Dcc::DccFileInfo</innerclass>
+    <innerclass refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session" prot="public">Alaris::Irc::Dcc::DccFileSession</innerclass>
+    <innerclass refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager" prot="public">Alaris::Irc::Dcc::DccFileSessionManager</innerclass>
+    <innerclass refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener" prot="public">Alaris::Irc::Dcc::DccListener</innerclass>
+    <innerclass refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info" prot="public">Alaris::Irc::Dcc::DccUserInfo</innerclass>
+    <innerclass refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_util" prot="public">Alaris::Irc::Dcc::DccUtil</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Dcc/DccChatSession.cs" line="11"/>
+  </compounddef>
+</doxygen>

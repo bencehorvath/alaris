@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_768c1f303071328802084a6ad92202be" kind="dir">
+    <compoundname>irc/Dcc/</compoundname>
+    <innerfile refid="_dcc_chat_session_8cs">DccChatSession.cs</innerfile>
+    <innerfile refid="_dcc_file_info_8cs">DccFileInfo.cs</innerfile>
+    <innerfile refid="_dcc_file_session_8cs">DccFileSession.cs</innerfile>
+    <innerfile refid="_dcc_file_session_manager_8cs">DccFileSessionManager.cs</innerfile>
+    <innerfile refid="_dcc_listener_8cs">DccListener.cs</innerfile>
+    <innerfile refid="_dcc_user_info_8cs">DccUserInfo.cs</innerfile>
+    <innerfile refid="_dcc_util_8cs">DccUtil.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Dcc/"/>
+  </compounddef>
+</doxygen>

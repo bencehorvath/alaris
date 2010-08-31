@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_irc_1_1_delegates_1_1_user" kind="namespace">
+    <compoundname>Alaris::Irc::Delegates::User</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_user_1ac995e42a625a5366f70a10a7510b36ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.User.UserModeChangeEventHandler</definition>
+        <argsstring>(ModeAction action, UserMode mode)</argsstring>
+        <name>UserModeChangeEventHandler</name>
+        <param>
+          <type><ref refid="namespace_alaris_1_1_irc_1acf7a11ffe5574ce3944b8526a3cebb6e" kindref="member">ModeAction</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_alaris_1_1_irc_1a02207681338c889db552570ac74a0575" kindref="member">UserMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>This user&apos;s mode has changed. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether a mode was added or removed.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode that was changed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_alaris_1_1_irc_1_1_listener_1aa4e013e4003cf3c2e16587b21e160839" kindref="member">Listener.OnUserModeChange</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/User/UserModeChangeEventHandler.cs" line="9"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_user_1a0898af5b26ed9905edcc66d95de0f4e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.User.UserModeRequestEventHandler</definition>
+        <argsstring>(UserMode[] modes)</argsstring>
+        <name>UserModeRequestEventHandler</name>
+        <param>
+          <type><ref refid="namespace_alaris_1_1_irc_1a02207681338c889db552570ac74a0575" kindref="member">UserMode</ref>[]</type>
+          <declname>modes</declname>
+        </param>
+        <briefdescription>
+<para>The response to a <ref refid="class_alaris_1_1_irc_1_1_sender_1aa02228d0bcad8d431ba5205b9dfb52e9" kindref="member">Sender.RequestUserModes</ref> command for this user. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>modes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The complete list of user modes as an array.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_alaris_1_1_irc_1_1_listener_1a60db0e5bd6cdca229202c2818602cf08" kindref="member">Listener.OnUserModeRequest</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/User/UserModeRequestEventHandler.cs" line="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/User/UserModeChangeEventHandler.cs" line="2"/>
+  </compounddef>
+</doxygen>

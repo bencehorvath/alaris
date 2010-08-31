@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_a4aa6b980c06a2afaf92f8421048cc40" kind="dir">
+    <compoundname>irc/Delegates/Ctcp/</compoundname>
+    <innerfile refid="_ctcp_ping_reply_event_handler_8cs">CtcpPingReplyEventHandler.cs</innerfile>
+    <innerfile refid="_ctcp_ping_request_event_handler_8cs">CtcpPingRequestEventHandler.cs</innerfile>
+    <innerfile refid="_ctcp_reply_event_handler_8cs">CtcpReplyEventHandler.cs</innerfile>
+    <innerfile refid="_ctcp_request_event_handler_8cs">CtcpRequestEventHandler.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Ctcp/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_atom_1_1_core_1_1_atom_link" kind="class" prot="public">
+    <compoundname>Atom::Core::AtomLink</compoundname>
+    <basecompoundref refid="class_atom_1_1_core_1_1_atom_element" prot="public" virt="non-virtual">Atom.Core.AtomElement</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_link_1a08ccc1baaf267c126dec42d27a8b80a8" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_atom_1_1_core_1a4e3e90e81498f13e055d45e63ff0a769" kindref="member">Relationship</ref></type>
+        <definition>Relationship Atom.Core.AtomLink._rel</definition>
+        <argsstring></argsstring>
+        <name>_rel</name>
+        <initializer> DefaultValues.Rel</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="48" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_link_1ab44a36420710ed2a08220e12293219f8" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref></type>
+        <definition>MediaType Atom.Core.AtomLink._type</definition>
+        <argsstring></argsstring>
+        <name>_type</name>
+        <initializer> DefaultValues.MediaType</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="49" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_link_1a7b8b660447ca847264071bfc6a8ba059" prot="private" static="no" mutable="no">
+        <type>Uri</type>
+        <definition>Uri Atom.Core.AtomLink._href</definition>
+        <argsstring></argsstring>
+        <name>_href</name>
+        <initializer> DefaultValues.Uri</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="50" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_link_1afe76d12ccc5694ad168c3345f8519c92" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Atom.Core.AtomLink._title</definition>
+        <argsstring></argsstring>
+        <name>_title</name>
+        <initializer> String.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="51" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_link_1a4662762abdb790b7e6c6b4fc277399b9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override string</type>
+        <definition>override string Atom.Core.AtomLink.LocalName</definition>
+        <argsstring></argsstring>
+        <name>LocalName</name>
+        <reimplements refid="class_atom_1_1_core_1_1_atom_element_1a19636773c6507ba65fad59f12ae073ad">LocalName</reimplements>
+        <briefdescription>
+<para>Gets the local name of the link element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="100" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="98" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aa5fc89c2af072d4e5eefe041ae39f5b9" compoundref="_atom_entry_test_8cs" startline="80" endline="94">Atom.Core.Test.AtomEntryTest::TestLink</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a32f88e02e49f7497c3ea408ddc1e7f6e" compoundref="_atom_feed_test_8cs" startline="94" endline="108">Atom.Core.Test.AtomFeedTest::TestLinks</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_link_1a6db2fc8b81bd20c2674818f2695572c6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="namespace_atom_1_1_core_1a4e3e90e81498f13e055d45e63ff0a769" kindref="member">Relationship</ref></type>
+        <definition>Relationship Atom.Core.AtomLink.Rel</definition>
+        <argsstring></argsstring>
+        <name>Rel</name>
+        <briefdescription>
+<para>The relationship of the link. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="111" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="108" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aa5fc89c2af072d4e5eefe041ae39f5b9" compoundref="_atom_entry_test_8cs" startline="80" endline="94">Atom.Core.Test.AtomEntryTest::TestLink</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a32f88e02e49f7497c3ea408ddc1e7f6e" compoundref="_atom_feed_test_8cs" startline="94" endline="108">Atom.Core.Test.AtomFeedTest::TestLinks</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_link_1a4f463da8229b0426d9f1a238efa4a9e0" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref></type>
+        <definition>MediaType Atom.Core.AtomLink.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+<para>The media type of the link. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="126" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="117" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aa5fc89c2af072d4e5eefe041ae39f5b9" compoundref="_atom_entry_test_8cs" startline="80" endline="94">Atom.Core.Test.AtomEntryTest::TestLink</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a32f88e02e49f7497c3ea408ddc1e7f6e" compoundref="_atom_feed_test_8cs" startline="94" endline="108">Atom.Core.Test.AtomFeedTest::TestLinks</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_link_1afe52dc686f49264d2d178784fc09541e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Uri</type>
+        <definition>Uri Atom.Core.AtomLink.HRef</definition>
+        <argsstring></argsstring>
+        <name>HRef</name>
+        <briefdescription>
+<para>The url of the link. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="135" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="132" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aa5fc89c2af072d4e5eefe041ae39f5b9" compoundref="_atom_entry_test_8cs" startline="80" endline="94">Atom.Core.Test.AtomEntryTest::TestLink</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a32f88e02e49f7497c3ea408ddc1e7f6e" compoundref="_atom_feed_test_8cs" startline="94" endline="108">Atom.Core.Test.AtomFeedTest::TestLinks</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_link_1a44b1a397ad37b2679e7317c9091d9a04" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Atom.Core.AtomLink.Title</definition>
+        <argsstring></argsstring>
+        <name>Title</name>
+        <briefdescription>
+<para>The title of the link. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="144" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="141" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aa5fc89c2af072d4e5eefe041ae39f5b9" compoundref="_atom_entry_test_8cs" startline="80" endline="94">Atom.Core.Test.AtomEntryTest::TestLink</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a32f88e02e49f7497c3ea408ddc1e7f6e" compoundref="_atom_feed_test_8cs" startline="94" endline="108">Atom.Core.Test.AtomFeedTest::TestLinks</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_link_1ad503174af3fcf81411f4a0fb4f088224" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomLink.AtomLink</definition>
+        <argsstring>()</argsstring>
+        <name>AtomLink</name>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> instance. Initialize the <ref refid="class_atom_1_1_core_1_1_atom_link_1afe52dc686f49264d2d178784fc09541e" kindref="member">HRef</ref> to DefaultValues.Uri, <ref refid="class_atom_1_1_core_1_1_atom_link_1a44b1a397ad37b2679e7317c9091d9a04" kindref="member">Title</ref> to String.Empty, <ref refid="class_atom_1_1_core_1_1_atom_link_1a6db2fc8b81bd20c2674818f2695572c6" kindref="member">Rel</ref> to DefaultValues.Rel and <ref refid="class_atom_1_1_core_1_1_atom_link_1a4f463da8229b0426d9f1a238efa4a9e0" kindref="member">Type</ref> to DefaultValues.MediaType. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="63" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_link_1aae792998f75bde58db535c43d5a7d679" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomLink.AtomLink</definition>
+        <argsstring>(Uri href, Relationship rel, MediaType type)</argsstring>
+        <name>AtomLink</name>
+        <param>
+          <type>Uri</type>
+          <declname>href</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_atom_1_1_core_1a4e3e90e81498f13e055d45e63ff0a769" kindref="member">Relationship</ref></type>
+          <declname>rel</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> instance initialized with the given Uri and title. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>href</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Uri of the link.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="namespace_atom_1_1_core_1a4e3e90e81498f13e055d45e63ff0a769" kindref="member">Relationship</ref> of the link.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_link_1a4f463da8229b0426d9f1a238efa4a9e0" kindref="member">Type</ref> of the link.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="73" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_link_1a0dc00609313bc9b9cf232d2f50604760" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomLink.AtomLink</definition>
+        <argsstring>(Uri href, Relationship rel, MediaType type, string title)</argsstring>
+        <name>AtomLink</name>
+        <param>
+          <type>Uri</type>
+          <declname>href</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_atom_1_1_core_1a4e3e90e81498f13e055d45e63ff0a769" kindref="member">Relationship</ref></type>
+          <declname>rel</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> instance initialized with the given Uri, title, <ref refid="namespace_atom_1_1_core_1a4e3e90e81498f13e055d45e63ff0a769" kindref="member">Relationship</ref> and <ref refid="class_atom_1_1_core_1_1_atom_link_1a4f463da8229b0426d9f1a238efa4a9e0" kindref="member">Type</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>href</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Uri of the link.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="namespace_atom_1_1_core_1a4e3e90e81498f13e055d45e63ff0a769" kindref="member">Relationship</ref> of the link.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_link_1a4f463da8229b0426d9f1a238efa4a9e0" kindref="member">Type</ref> of the link.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_link_1a44b1a397ad37b2679e7317c9091d9a04" kindref="member">Title</ref> of the link.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="85" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="84" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_link_1ac6ee154a4b7752023cfba0d0030b4137" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string Atom.Core.AtomLink.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+<para>Converts the <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> in a series of xml nodes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The string representation of <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> class.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="155" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="154" bodyend="175"/>
+        <referencedby refid="class_atom_1_1_core_1_1_atom_feed_1a41b15e6e4b1296c66b584d941c0b014b" compoundref="_atom_feed_8cs" startline="217" endline="332">Atom.Core.AtomFeed::ToString</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_atom_entry_1ae59a7245b9d2c185a12f222a9131220c" compoundref="_atom_entry_8cs" startline="214" endline="319">Atom.Core.AtomEntry::ToString</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_link_1aeb972ea4050cd8fdf69371ffc4cf720b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Atom.Core.AtomLink.WriteStartElement</definition>
+        <argsstring>()</argsstring>
+        <name>WriteStartElement</name>
+        <reimplements refid="class_atom_1_1_core_1_1_atom_element_1ab364e0365102f675baa48e525b8654dc">WriteStartElement</reimplements>
+        <briefdescription>
+<para>Writes the start tag of the element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="185" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_link_1a092cc01c62b2f697349a3838ec555d3f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Atom.Core.AtomLink.WriteEndElement</definition>
+        <argsstring>()</argsstring>
+        <name>WriteEndElement</name>
+        <reimplements refid="class_atom_1_1_core_1_1_atom_element_1a17f1639d3517693cc7aca64af746ddb2">WriteEndElement</reimplements>
+        <briefdescription>
+<para>Writes the end tag of the element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="193" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="192" bodyend="196"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_link_1a5a383e0e858b682df0fb81fe99ad5b33" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref></type>
+        <definition>static internal AtomLink Atom.Core.AtomLink.Parse</definition>
+        <argsstring>(XPathNavigator navigator)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>XPathNavigator</type>
+          <declname>navigator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="203" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="202" bodyend="248"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The link of an <ref refid="namespace_atom" kindref="compound">Atom</ref> feed or an entry. <simplesect kind="see"><para><ref refid="class_atom_1_1_core_1_1_atom_feed" kindref="compound">AtomFeed</ref>, <ref refid="class_atom_1_1_core_1_1_atom_entry" kindref="compound">AtomEntry</ref></para></simplesect>
+</para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="605">
+        <label>Atom.Core.AtomElement</label>
+        <link refid="class_atom_1_1_core_1_1_atom_element"/>
+      </node>
+      <node id="604">
+        <label>Atom.Core.AtomLink</label>
+        <link refid="class_atom_1_1_core_1_1_atom_link"/>
+        <childnode refid="605" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="607">
+        <label>Atom.Core.AtomElement</label>
+        <link refid="class_atom_1_1_core_1_1_atom_element"/>
+      </node>
+      <node id="606">
+        <label>Atom.Core.AtomLink</label>
+        <link refid="class_atom_1_1_core_1_1_atom_link"/>
+        <childnode refid="607" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" line="47" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomLink.cs" bodystart="46" bodyend="250"/>
+    <listofallmembers>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1a7b8b660447ca847264071bfc6a8ba059" prot="private" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>_href</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1a08ccc1baaf267c126dec42d27a8b80a8" prot="private" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>_rel</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1afe76d12ccc5694ad168c3345f8519c92" prot="private" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>_title</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1ab44a36420710ed2a08220e12293219f8" prot="private" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>_type</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a547e4559485388763ba431da732935e7" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>AtomElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1ad503174af3fcf81411f4a0fb4f088224" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>AtomLink</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1aae792998f75bde58db535c43d5a7d679" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>AtomLink</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1a0dc00609313bc9b9cf232d2f50604760" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>AtomLink</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a56bc2bca3af9c83c0ece2085037a6089" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>Buffer</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a7131b36333529956e2545d9b3ca0419e" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>FullName</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1afe52dc686f49264d2d178784fc09541e" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>HRef</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1a4662762abdb790b7e6c6b4fc277399b9" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>LocalName</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a1966fec9661154e0d19062bdd10494c5" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>NamespacePrefix</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a8927904f85b02facec6812519a78b7d6" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>NamespaceUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1a5a383e0e858b682df0fb81fe99ad5b33" prot="private" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>Parse</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1a6db2fc8b81bd20c2674818f2695572c6" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>Rel</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aa921d1ffb5d6779bf995271e53ca99fb" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>resolveUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1a44b1a397ad37b2679e7317c9091d9a04" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>Title</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1ac6ee154a4b7752023cfba0d0030b4137" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>ToString</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1a4f463da8229b0426d9f1a238efa4a9e0" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>Type</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1afdaab0651b7873a4be312fd08a8c1ecb" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a53646e0f891a1fa2138d6625f1acd08b" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a8f284184548f4c8aa55baaad22d7c485" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a2dad0344b81fdc61a823f505f0eec661" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1afd132faa096cacf794f3acc9eacc8ff3" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a6f3416dbe2ce5ac633704356d4dfb463" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aeebaedfcb7adef339b7cfffb17925313" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a18aec64281318c092f09bda8b5f751f6" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aaf8c29b409683cebd08dea83031ef73e" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aa1adaacdb1560bae9873b9fbbb3bb66d" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1a092cc01c62b2f697349a3838ec555d3f" prot="protected" virt="virtual"><scope>Atom::Core::AtomLink</scope><name>WriteEndElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_link_1aeb972ea4050cd8fdf69371ffc4cf720b" prot="protected" virt="virtual"><scope>Atom::Core::AtomLink</scope><name>WriteStartElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a90f50e88355162e92aac377d64bf70dd" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>XmlBase</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aaecf4c4b1422ffb2b02d2f824b837c33" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>xmlBaseRootUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a66f7f08d521bd673acda2eb1c97251e4" prot="public" virt="non-virtual"><scope>Atom::Core::AtomLink</scope><name>XmlLang</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

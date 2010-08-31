@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_extras_1_1_crash_handler" kind="class" prot="public">
+    <compoundname>Alaris::Extras::CrashHandler</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_extras_1_1_crash_handler_1a607da1612c51c75cc0d8a78263c43361" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Extras.CrashHandler.CrashHandler</definition>
+        <argsstring>()</argsstring>
+        <name>CrashHandler</name>
+        <briefdescription>
+<para>Creates a new instance of <ref refid="class_alaris_1_1_extras_1_1_crash_handler" kindref="compound">CrashHandler</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/CrashHandler.cs" line="23" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/CrashHandler.cs" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_extras_1_1_crash_handler_1ab4b7ddf3301913ed05f4d7b673558fd1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Extras.CrashHandler.~CrashHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~CrashHandler</name>
+        <briefdescription>
+<para>Releases unmanaged resources and performs other cleanup operations before the <ref refid="class_alaris_1_1_extras_1_1_crash_handler" kindref="compound">Alaris.Extras.CrashHandler</ref> is reclaimed by garbage collection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/CrashHandler.cs" line="31" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/CrashHandler.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_extras_1_1_crash_handler_1a78e8028e52bba1920580483ea6123f97" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Extras.CrashHandler.HandleReadConfig</definition>
+        <argsstring>(ReadConfigDelegate confread, string param)</argsstring>
+        <name>HandleReadConfig</name>
+        <param>
+          <type>ReadConfigDelegate</type>
+          <declname>confread</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>Executes the specified <ref refid="" kindref="compound">ReadConfig</ref> method in an exception-safe environment. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>confread</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ReadConfig method. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameter passed to the ReadConfig method. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/CrashHandler.cs" line="45" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/CrashHandler.cs" bodystart="44" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class providing functions to run specific method in an exception-handled environment. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/CrashHandler.cs" line="18" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/CrashHandler.cs" bodystart="17" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_extras_1_1_crash_handler_1a607da1612c51c75cc0d8a78263c43361" prot="private" virt="non-virtual"><scope>Alaris::Extras::CrashHandler</scope><name>CrashHandler</name></member>
+      <member refid="class_alaris_1_1_extras_1_1_crash_handler_1a78e8028e52bba1920580483ea6123f97" prot="public" virt="non-virtual"><scope>Alaris::Extras::CrashHandler</scope><name>HandleReadConfig</name></member>
+      <member refid="class_alaris_1_1_extras_1_1_crash_handler_1ab4b7ddf3301913ed05f4d7b673558fd1" prot="private" virt="non-virtual"><scope>Alaris::Extras::CrashHandler</scope><name>~CrashHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

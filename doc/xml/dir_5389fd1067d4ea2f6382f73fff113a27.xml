@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_5389fd1067d4ea2f6382f73fff113a27" kind="dir">
+    <compoundname>alaris/Exceptions/</compoundname>
+    <innerfile refid="_config_file_invalid_exception_8cs">ConfigFileInvalidException.cs</innerfile>
+    <innerfile refid="_script_collection_invalid_exception_8cs">ScriptCollectionInvalidException.cs</innerfile>
+    <innerfile refid="_script_compile_exception_8cs">ScriptCompileException.cs</innerfile>
+    <innerfile refid="_script_type_exception_8cs">ScriptTypeException.cs</innerfile>
+    <innerfile refid="_singleton_exception_8cs">SingletonException.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Exceptions/"/>
+  </compounddef>
+</doxygen>

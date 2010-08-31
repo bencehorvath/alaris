@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_atom_1_1_atom_reader" kind="class" prot="public">
+    <compoundname>Atom::AtomReader</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_atom_1_1_atom_reader_1ab8d6aa847c9ba14532e97ee52e717610" prot="private" static="no" mutable="no">
+        <type>XPathDocument</type>
+        <definition>XPathDocument Atom.AtomReader._document</definition>
+        <argsstring></argsstring>
+        <name>_document</name>
+        <initializer> null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" line="50" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atom_1_1_atom_reader_1a64fbfb3d982b1d378b67b8d5ac9efe24" prot="private" static="no" mutable="no">
+        <type>XPathNavigator</type>
+        <definition>XPathNavigator Atom.AtomReader._navigator</definition>
+        <argsstring></argsstring>
+        <name>_navigator</name>
+        <initializer> null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" line="51" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_atom_1_1_atom_reader_1ae6ee885afdb73e93d9f575280d05665a" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>internal XPathNavigator</type>
+        <definition>internal XPathNavigator Atom.AtomReader.Navigator</definition>
+        <argsstring></argsstring>
+        <name>Navigator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" line="57" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_atom_1_1_atom_reader_1a07fa1e1b006aec8e95e3149ae1320508" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Atom.AtomReader.AtomReader</definition>
+        <argsstring>(Stream stream)</argsstring>
+        <name>AtomReader</name>
+        <param>
+          <type>Stream</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" line="62" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_atom_reader_1a2a0b125606b4cd0f73fc74ddce4d5a9f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Atom.AtomReader.AtomReader</definition>
+        <argsstring>(string uri)</argsstring>
+        <name>AtomReader</name>
+        <param>
+          <type>string</type>
+          <declname>uri</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" line="68" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_atom_reader_1a90214cb595a85b9cb4dba613a98b0f46" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Atom.AtomReader.AtomReader</definition>
+        <argsstring>(TextReader textReader)</argsstring>
+        <name>AtomReader</name>
+        <param>
+          <type>TextReader</type>
+          <declname>textReader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" line="74" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" bodystart="73" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_atom_reader_1a6403f5490ea7f355169253bdc6d6897f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Atom.AtomReader.AtomReader</definition>
+        <argsstring>(XmlReader xmlReader)</argsstring>
+        <name>AtomReader</name>
+        <param>
+          <type>XmlReader</type>
+          <declname>xmlReader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" line="80" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_atom_reader_1a23105122f38a003e376ba597ed657d2a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.AtomReader.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" line="88" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" bodystart="87" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" line="49" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/AtomReader.cs" bodystart="48" bodyend="102"/>
+    <listofallmembers>
+      <member refid="class_atom_1_1_atom_reader_1ab8d6aa847c9ba14532e97ee52e717610" prot="private" virt="non-virtual"><scope>Atom::AtomReader</scope><name>_document</name></member>
+      <member refid="class_atom_1_1_atom_reader_1a64fbfb3d982b1d378b67b8d5ac9efe24" prot="private" virt="non-virtual"><scope>Atom::AtomReader</scope><name>_navigator</name></member>
+      <member refid="class_atom_1_1_atom_reader_1a07fa1e1b006aec8e95e3149ae1320508" prot="private" virt="non-virtual"><scope>Atom::AtomReader</scope><name>AtomReader</name></member>
+      <member refid="class_atom_1_1_atom_reader_1a2a0b125606b4cd0f73fc74ddce4d5a9f" prot="private" virt="non-virtual"><scope>Atom::AtomReader</scope><name>AtomReader</name></member>
+      <member refid="class_atom_1_1_atom_reader_1a90214cb595a85b9cb4dba613a98b0f46" prot="private" virt="non-virtual"><scope>Atom::AtomReader</scope><name>AtomReader</name></member>
+      <member refid="class_atom_1_1_atom_reader_1a6403f5490ea7f355169253bdc6d6897f" prot="private" virt="non-virtual"><scope>Atom::AtomReader</scope><name>AtomReader</name></member>
+      <member refid="class_atom_1_1_atom_reader_1a23105122f38a003e376ba597ed657d2a" prot="private" virt="non-virtual"><scope>Atom::AtomReader</scope><name>Init</name></member>
+      <member refid="class_atom_1_1_atom_reader_1ae6ee885afdb73e93d9f575280d05665a" prot="private" virt="non-virtual"><scope>Atom::AtomReader</scope><name>Navigator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

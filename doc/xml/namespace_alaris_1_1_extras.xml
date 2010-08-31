@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_extras" kind="namespace">
+    <compoundname>Alaris::Extras</compoundname>
+    <innerclass refid="class_alaris_1_1_extras_1_1_cluster_manager" prot="public">Alaris::Extras::ClusterManager</innerclass>
+    <innerclass refid="class_alaris_1_1_extras_1_1_crash_handler" prot="public">Alaris::Extras::CrashHandler</innerclass>
+    <innerclass refid="class_alaris_1_1_extras_1_1_database_manager" prot="public">Alaris::Extras::DatabaseManager</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_alaris_1_1_extras_1aa0c2b93c8c83e33b05b3619c8a3cd7a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Extras.ReadConfigDelegate</definition>
+        <argsstring>(string configfile)</argsstring>
+        <name>ReadConfigDelegate</name>
+        <param>
+          <type>string</type>
+          <declname>configfile</declname>
+        </param>
+        <briefdescription>
+<para>The delegate used for AlarisBot.ReadConfig </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/CrashHandler.cs" line="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/ClusterManager.cs" line="8"/>
+  </compounddef>
+</doxygen>

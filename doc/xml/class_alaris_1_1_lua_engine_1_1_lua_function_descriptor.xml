@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor" kind="class" prot="public">
+    <compoundname>Alaris::LuaEngine::LuaFunctionDescriptor</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1ae244f5761740bce2e296c1762d1ce88e" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Alaris.LuaEngine.LuaFunctionDescriptor._functionName</definition>
+        <argsstring></argsstring>
+        <name>_functionName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a2796231bc5b9ccbdfaae1671fa284748" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Alaris.LuaEngine.LuaFunctionDescriptor._functionDoc</definition>
+        <argsstring></argsstring>
+        <name>_functionDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1aa543c2e809e451d224a62d60737263e9" prot="private" static="no" mutable="no">
+        <type>readonly List&lt; string &gt;</type>
+        <definition>readonly List&lt;string&gt; Alaris.LuaEngine.LuaFunctionDescriptor._functionParameters</definition>
+        <argsstring></argsstring>
+        <name>_functionParameters</name>
+        <initializer> new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a2ed2c42db0b5cc5c414ab60053f80603" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Alaris.LuaEngine.LuaFunctionDescriptor._functionDocString</definition>
+        <argsstring></argsstring>
+        <name>_functionDocString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" line="16" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1ae0068ef90083c10e423ab935969c8443" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.LuaEngine.LuaFunctionDescriptor.FunctionName</definition>
+        <argsstring></argsstring>
+        <name>FunctionName</name>
+        <briefdescription>
+<para>Gets the function name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" line="31" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a3f38ab7b41c667af07c1b87070a297a2" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.LuaEngine.LuaFunctionDescriptor.FunctionDocumentation</definition>
+        <argsstring></argsstring>
+        <name>FunctionDocumentation</name>
+        <briefdescription>
+<para>Gets the function documentation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" line="42" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1ab67bde7e05d7396eaa958a5b5b83d0cf" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Alaris.LuaEngine.LuaFunctionDescriptor.FunctionParameters</definition>
+        <argsstring></argsstring>
+        <name>FunctionParameters</name>
+        <briefdescription>
+<para>Gets the function&apos;s parameters. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" line="53" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a46da4fb9cc3713fcb663c89c6bf85046" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.LuaEngine.LuaFunctionDescriptor.FunctionHeader</definition>
+        <argsstring></argsstring>
+        <name>FunctionHeader</name>
+        <briefdescription>
+<para>Gets the function header. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" line="67" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a06cdc768d5884eb722a120b96299e349" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.LuaEngine.LuaFunctionDescriptor.FullFunctionDocumentation</definition>
+        <argsstring></argsstring>
+        <name>FullFunctionDocumentation</name>
+        <briefdescription>
+<para>Gets the function&apos;s full documentation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" line="78" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a5dc1cf385b2d6677515090e189c851e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.LuaEngine.LuaFunctionDescriptor.LuaFunctionDescriptor</definition>
+        <argsstring>(string functionName, string functionDoc, List&lt; string &gt; functionParams)</argsstring>
+        <name>LuaFunctionDescriptor</name>
+        <param>
+          <type>string</type>
+          <declname>functionName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>functionDoc</declname>
+        </param>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>functionParams</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new instance of <computeroutput><ref refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor" kindref="compound">LuaFunctionDescriptor</ref></computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>functionName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Lua functio name.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>functionDoc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function documentation.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>functionParams</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function&apos;s parameters.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" line="91" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" bodystart="90" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class used to describe and register Lua functions. Mainly related to attribute-based registering. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" line="10" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctionDescriptor.cs" bodystart="9" bodyend="120"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a2796231bc5b9ccbdfaae1671fa284748" prot="private" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctionDescriptor</scope><name>_functionDoc</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a2ed2c42db0b5cc5c414ab60053f80603" prot="private" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctionDescriptor</scope><name>_functionDocString</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1ae244f5761740bce2e296c1762d1ce88e" prot="private" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctionDescriptor</scope><name>_functionName</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1aa543c2e809e451d224a62d60737263e9" prot="private" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctionDescriptor</scope><name>_functionParameters</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a06cdc768d5884eb722a120b96299e349" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctionDescriptor</scope><name>FullFunctionDocumentation</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a3f38ab7b41c667af07c1b87070a297a2" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctionDescriptor</scope><name>FunctionDocumentation</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a46da4fb9cc3713fcb663c89c6bf85046" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctionDescriptor</scope><name>FunctionHeader</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1ae0068ef90083c10e423ab935969c8443" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctionDescriptor</scope><name>FunctionName</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1ab67bde7e05d7396eaa958a5b5b83d0cf" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctionDescriptor</scope><name>FunctionParameters</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor_1a5dc1cf385b2d6677515090e189c851e9" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctionDescriptor</scope><name>LuaFunctionDescriptor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

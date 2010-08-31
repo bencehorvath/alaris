@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_atom_1_1_core_1_1_collections_1_1_atom_link_collection.html" title="A strongly typed collection of AtomLink objects. AtomLink" alt="" coords="5,85,272,115"/>
+<area shape="rect" id="node4" href="$class_atom_1_1_core_1_1_atom_link.html" title="The link of an Atom feed or an entry. AtomFeed, AtomEntry" alt="" coords="296,85,437,115"/>
+<area shape="rect" id="node6" href="$class_atom_1_1_core_1_1_atom_element.html" title="The base class for all elements." alt="" coords="284,5,449,35"/>
+</map>

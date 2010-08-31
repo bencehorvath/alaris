@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_lua_engine_1_1_lua_helper" kind="class" prot="public">
+    <compoundname>Alaris::LuaEngine::LuaHelper</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_lua_engine_1_1_lua_helper_1a836d5b3614265a923a33137326b1a9a4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.LuaEngine.LuaHelper.RegisterLuaFunctions</definition>
+        <argsstring>(Lua vm, ref Dictionary&lt; string, LuaFunctionDescriptor &gt; luaFunctions, object target)</argsstring>
+        <name>RegisterLuaFunctions</name>
+        <param>
+          <type>Lua</type>
+          <declname>vm</declname>
+        </param>
+        <param>
+          <type>ref Dictionary&lt; string, <ref refid="class_alaris_1_1_lua_engine_1_1_lua_function_descriptor" kindref="compound">LuaFunctionDescriptor</ref> &gt;</type>
+          <declname>luaFunctions</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Registers Lua functions found in the specified target. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>luaFunctions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Global lua function table.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object (class,struct) to search in.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Lua virtual machine.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaHelper.cs" line="23" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaHelper.cs" bodystart="22" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_lua_engine_1_1_lua_helper_1a77992af7bc747535fefb16ec0885d6c8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.LuaEngine.LuaHelper.HandleLuaCommands</definition>
+        <argsstring>(Lua vm, string chan, string msg)</argsstring>
+        <name>HandleLuaCommands</name>
+        <param>
+          <type>Lua</type>
+          <declname>vm</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>chan</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Handles Lua irc commands, especially interpreting. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lua virtual machine</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel name.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message sent.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaHelper.cs" line="74" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaHelper.cs" bodystart="73" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper functions for the <ref refid="class_alaris_1_1_lua_engine_1_1_lua_engine" kindref="compound">LuaEngine</ref> implementation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaHelper.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaHelper.cs" bodystart="14" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_helper_1a77992af7bc747535fefb16ec0885d6c8" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaHelper</scope><name>HandleLuaCommands</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_helper_1a836d5b3614265a923a33137326b1a9a4" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaHelper</scope><name>RegisterLuaFunctions</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

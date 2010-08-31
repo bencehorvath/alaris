@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp" kind="namespace">
+    <compoundname>Alaris::Irc::Delegates::Ctcp</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp_1acc7cf327f0740897d830f2ec29b402a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Ctcp.CtcpPingReplyEventHandler</definition>
+        <argsstring>(UserInfo who, string timestamp)</argsstring>
+        <name>CtcpPingReplyEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>who</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>timestamp</declname>
+        </param>
+        <briefdescription>
+<para>Someone has replied to a <ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp" kindref="compound">Ctcp</ref> ping request sent by this client. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>who</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Who sent the reply.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timestamp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timestamp originally sent in the request.&quot;&lt;/param&gt;
+        &lt;see cref=&quot;CtcpListener.OnCtcpPingReply"/&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Ctcp/CtcpPingReplyEventHandler.cs" line="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp_1ada5283565ba324928ffbf4ff3a0b756a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Ctcp.CtcpPingRequestEventHandler</definition>
+        <argsstring>(UserInfo who, string timestamp)</argsstring>
+        <name>CtcpPingRequestEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>who</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>timestamp</declname>
+        </param>
+        <briefdescription>
+<para>Someone has sent a <ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp" kindref="compound">Ctcp</ref> Ping request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>who</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Who sent the request.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timestamp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timestamp which should be sent back.&quot;&lt;/param&gt;
+        &lt;see cref=&quot;CtcpListener.OnCtcpPingRequest"/&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Ctcp/CtcpPingRequestEventHandler.cs" line="12"/>
+        <referencedby refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder_1a0f67f119707d261612dd9177d77286f0" compoundref="_ctcp_responder_8cs" startline="29" endline="46">Alaris.Irc.Ctcp.CtcpResponder::CtcpResponder</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp_1ac543900640b8bc8528c907641d90b8c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Ctcp.CtcpReplyEventHandler</definition>
+        <argsstring>(string command, UserInfo who, string reply)</argsstring>
+        <name>CtcpReplyEventHandler</name>
+        <param>
+          <type>string</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>who</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>reply</declname>
+        </param>
+        <briefdescription>
+<para>Someone has replied to a <ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp" kindref="compound">Ctcp</ref> request sent by this client. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>who</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Who sent the reply.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp" kindref="compound">Ctcp</ref> command this replies to.&quot;&lt;/param&gt;
+        &lt;param name=&quot;reply&quot;&gt;The text of the reply.&lt;/param&gt;
+        &lt;see cref=&quot;CtcpListener.OnCtcpReply"/&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Ctcp/CtcpReplyEventHandler.cs" line="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp_1af42625734dbde4fc5ffc19a46a24fe6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Ctcp.CtcpRequestEventHandler</definition>
+        <argsstring>(string command, UserInfo who)</argsstring>
+        <name>CtcpRequestEventHandler</name>
+        <param>
+          <type>string</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>who</declname>
+        </param>
+        <briefdescription>
+<para>Someone has sent a <ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp" kindref="compound">Ctcp</ref> request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>who</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Who sent the request.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp" kindref="compound">Ctcp</ref> command to send to IRC.&quot;&lt;/param&gt;
+        &lt;see cref=&quot;CtcpListener.OnCtcpRequest"/&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Ctcp/CtcpRequestEventHandler.cs" line="11"/>
+        <referencedby refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder_1a0f67f119707d261612dd9177d77286f0" compoundref="_ctcp_responder_8cs" startline="29" endline="46">Alaris.Irc.Ctcp.CtcpResponder::CtcpResponder</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Ctcp/CtcpPingReplyEventHandler.cs" line="4"/>
+  </compounddef>
+</doxygen>

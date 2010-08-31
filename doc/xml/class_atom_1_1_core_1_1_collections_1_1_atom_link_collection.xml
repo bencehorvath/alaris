@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kind="class" prot="public">
+    <compoundname>Atom::Core::Collections::AtomLinkCollection</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1aefd128ca530ad7e3e80b1fab89f96845" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref></type>
+        <definition>AtomLink Atom.Core.Collections.AtomLinkCollection.this[int index]</definition>
+        <argsstring>[int index]</argsstring>
+        <name>this</name>
+        <briefdescription>
+<para>Gets or sets the element at the specified index. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based index of the element to get or set.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1a3b40ca1b25c17079c7e864b7c077700a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Atom.Core.Collections.AtomLinkCollection.Add</definition>
+        <argsstring>(AtomLink link)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref></type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Adds an object to the end of the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> to be added to the end of the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref> index at which the value has been added.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" line="69" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1abcb062ca82609f5df80717269e3366ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Atom.Core.Collections.AtomLinkCollection.Contains</definition>
+        <argsstring>(AtomLink link)</argsstring>
+        <name>Contains</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref></type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Determines whether the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref> contains a specific element. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> to locate in the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref> contains the specified item, otherwise false.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" line="80" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1a5273a623799a9a07a181f94e977aec18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.Core.Collections.AtomLinkCollection.CopyTo</definition>
+        <argsstring>(AtomLinkCollection[] array, int index)</argsstring>
+        <name>CopyTo</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref>[]</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Copies the entire <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref> to a compatible one-dimensional Array, starting at the specified index of the target array. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The one-dimensional Array that is the destination of the elements copied from <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref>. The Array must have zero-based indexing. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based index in <emphasis>array</emphasis> at which copying begins.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" line="92" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1a83edfe5a0516886fb648023415b0eaec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Atom.Core.Collections.AtomLinkCollection.IndexOf</definition>
+        <argsstring>(AtomLink link)</argsstring>
+        <name>IndexOf</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref></type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Searches for the specified <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> and returns the zero-based index of the first occurrence within the entire <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> to locate in the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The zero-based index of the first occurrence of <emphasis>link</emphasis> within the entire <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref>, if found; otherwise, -1.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" line="104" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1ac6c27b78e478943a4c9867633e936ef0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.Core.Collections.AtomLinkCollection.Insert</definition>
+        <argsstring>(int index, AtomLink link)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref></type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> into this collection at the specified index. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based index of the collection at which <emphasis>link</emphasis> should be inserted.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> to insert into this collection.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" line="112" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" bodystart="111" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1a9fa127020c06310137a50c9685c52ea7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.Core.Collections.AtomLinkCollection.Remove</definition>
+        <argsstring>(AtomLink link)</argsstring>
+        <name>Remove</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref></type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Removes the first occurrence of a specific <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> from the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> to remove from the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" line="120" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" bodystart="119" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1aaf5c819ae058b489bbaf50b4511bff97" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.Core.Collections.AtomLinkCollection.CheckInsertion</definition>
+        <argsstring>(AtomLink link)</argsstring>
+        <name>CheckInsertion</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref></type>
+          <declname>link</declname>
+        </param>
+        <briefdescription>
+<para>Performs some checks inside the collection. Used for compliancy to the standard. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> to check.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" line="133" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" bodystart="132" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A strongly typed collection of <ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref> objects. <simplesect kind="see"><para><ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref></para></simplesect>
+</para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" line="46" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomLinkCollection.cs" bodystart="45" bodyend="144"/>
+    <listofallmembers>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1a3b40ca1b25c17079c7e864b7c077700a" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomLinkCollection</scope><name>Add</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1aaf5c819ae058b489bbaf50b4511bff97" prot="private" virt="non-virtual"><scope>Atom::Core::Collections::AtomLinkCollection</scope><name>CheckInsertion</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1abcb062ca82609f5df80717269e3366ff" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomLinkCollection</scope><name>Contains</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1a5273a623799a9a07a181f94e977aec18" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomLinkCollection</scope><name>CopyTo</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1a83edfe5a0516886fb648023415b0eaec" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomLinkCollection</scope><name>IndexOf</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1ac6c27b78e478943a4c9867633e936ef0" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomLinkCollection</scope><name>Insert</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1a9fa127020c06310137a50c9685c52ea7" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomLinkCollection</scope><name>Remove</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection_1aefd128ca530ad7e3e80b1fab89f96845" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomLinkCollection</scope><name>this</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_server_1_1_server_packet_handler" kind="class" prot="public">
+    <compoundname>Alaris::Server::ServerPacketHandler</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_server_1_1_server_packet_handler_1afc7f2834938c241b212967d185804ba2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Alaris.Server.ServerPacketHandler.BackPort</definition>
+        <argsstring></argsstring>
+        <name>BackPort</name>
+        <initializer> 35221</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_alaris_1_1_server_1_1_server_packet_handler_1ae4109f3ab6e305ddf4b8fe47a6af764a" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>ServerPacketHandlerDelegate</type>
+        <definition>ServerPacketHandlerDelegate Alaris.Server.ServerPacketHandler.OnAuthRequest</definition>
+        <argsstring></argsstring>
+        <name>OnAuthRequest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" line="19" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_alaris_1_1_server_1_1_server_packet_handler_1abde153b7f7c5fb6d23ab601dcb668fb0" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>ServerPacketHandlerDelegate</type>
+        <definition>ServerPacketHandlerDelegate Alaris.Server.ServerPacketHandler.OnAcsRandomRequest</definition>
+        <argsstring></argsstring>
+        <name>OnAcsRandomRequest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" line="20" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_server_1_1_server_packet_handler_1a8744b6f38e6f7f09d77e0b6a5fcf919a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Server.ServerPacketHandler.ServerPacketHandler</definition>
+        <argsstring>()</argsstring>
+        <name>ServerPacketHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" line="22" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_server_1_1_server_packet_handler_1aeab73d0d83ce0360d156f6b61e9b80f1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Server.ServerPacketHandler.AcsRandomHandler</definition>
+        <argsstring>(AlarisPacket pck, string hst)</argsstring>
+        <name>AcsRandomHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_core_1_1_alaris_packet" kindref="compound">AlarisPacket</ref></type>
+          <declname>pck</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" line="45" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" bodystart="44" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_server_1_1_server_packet_handler_1a237663f69f3c2c47faf56b99262cde71" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Server.ServerPacketHandler.AuthRequestPacketHandler</definition>
+        <argsstring>(AlarisPacket pck, string hst)</argsstring>
+        <name>AuthRequestPacketHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_core_1_1_alaris_packet" kindref="compound">AlarisPacket</ref></type>
+          <declname>pck</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" line="63" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" bodystart="62" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_server_1_1_server_packet_handler_1a1120bfa826cc44cd3105250d737f5b78" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Server.ServerPacketHandler.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" line="28" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_server_1_1_server_packet_handler_1aff231ee259b4a90c76ec778212ac3f2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Server.ServerPacketHandler.HandlePacket</definition>
+        <argsstring>(AlarisPacket packet, TcpClient client)</argsstring>
+        <name>HandlePacket</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_core_1_1_alaris_packet" kindref="compound">AlarisPacket</ref></type>
+          <declname>packet</declname>
+        </param>
+        <param>
+          <type>TcpClient</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" line="33" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" bodystart="32" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_server_1_1_server_packet_handler_1a071d1a3a2eaadac3dffe585a0183ab97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Server.ServerPacketHandler.SendPacketBack</definition>
+        <argsstring>(AlarisPacket packet, string hst, int backport)</argsstring>
+        <name>SendPacketBack</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_core_1_1_alaris_packet" kindref="compound">AlarisPacket</ref></type>
+          <declname>packet</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hst</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>backport</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" line="101" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" bodystart="100" bodyend="124"/>
+        <references refid="class_alaris_1_1_core_1_1_alaris_packet_1a743cfc6ef47bc03b0f37e539e39c1902" compoundref="_alaris_packet_8cs" startline="97" endline="100">Alaris.Core.AlarisPacket::GetNetMessage</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" line="16" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris_server/ServerPacketHandler.cs" bodystart="15" bodyend="125"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_server_1_1_server_packet_handler_1aeab73d0d83ce0360d156f6b61e9b80f1" prot="private" virt="non-virtual"><scope>Alaris::Server::ServerPacketHandler</scope><name>AcsRandomHandler</name></member>
+      <member refid="class_alaris_1_1_server_1_1_server_packet_handler_1a237663f69f3c2c47faf56b99262cde71" prot="private" virt="non-virtual"><scope>Alaris::Server::ServerPacketHandler</scope><name>AuthRequestPacketHandler</name></member>
+      <member refid="class_alaris_1_1_server_1_1_server_packet_handler_1afc7f2834938c241b212967d185804ba2" prot="public" virt="non-virtual"><scope>Alaris::Server::ServerPacketHandler</scope><name>BackPort</name></member>
+      <member refid="class_alaris_1_1_server_1_1_server_packet_handler_1aff231ee259b4a90c76ec778212ac3f2b" prot="public" virt="non-virtual"><scope>Alaris::Server::ServerPacketHandler</scope><name>HandlePacket</name></member>
+      <member refid="class_alaris_1_1_server_1_1_server_packet_handler_1a1120bfa826cc44cd3105250d737f5b78" prot="public" virt="non-virtual"><scope>Alaris::Server::ServerPacketHandler</scope><name>Init</name></member>
+      <member refid="class_alaris_1_1_server_1_1_server_packet_handler_1abde153b7f7c5fb6d23ab601dcb668fb0" prot="public" virt="non-virtual"><scope>Alaris::Server::ServerPacketHandler</scope><name>OnAcsRandomRequest</name></member>
+      <member refid="class_alaris_1_1_server_1_1_server_packet_handler_1ae4109f3ab6e305ddf4b8fe47a6af764a" prot="public" virt="non-virtual"><scope>Alaris::Server::ServerPacketHandler</scope><name>OnAuthRequest</name></member>
+      <member refid="class_alaris_1_1_server_1_1_server_packet_handler_1a071d1a3a2eaadac3dffe585a0183ab97" prot="public" virt="non-virtual"><scope>Alaris::Server::ServerPacketHandler</scope><name>SendPacketBack</name></member>
+      <member refid="class_alaris_1_1_server_1_1_server_packet_handler_1a8744b6f38e6f7f09d77e0b6a5fcf919a" prot="private" virt="non-virtual"><scope>Alaris::Server::ServerPacketHandler</scope><name>ServerPacketHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

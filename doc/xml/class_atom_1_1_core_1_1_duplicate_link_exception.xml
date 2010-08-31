@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_atom_1_1_core_1_1_duplicate_link_exception" kind="class" prot="public">
+    <compoundname>Atom::Core::DuplicateLinkException</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_duplicate_link_exception_1adea6e90af00b465102a5fa614a68dca9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.DuplicateLinkException.DuplicateLinkException</definition>
+        <argsstring>()</argsstring>
+        <name>DuplicateLinkException</name>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_atom_1_1_core_1_1_duplicate_link_exception" kindref="compound">DuplicateLinkException</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="198" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="197" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_duplicate_link_exception_1a11ef28a841fe39da95fe1b02471fb470" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.DuplicateLinkException.DuplicateLinkException</definition>
+        <argsstring>(string msg)</argsstring>
+        <name>DuplicateLinkException</name>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_atom_1_1_core_1_1_duplicate_link_exception" kindref="compound">DuplicateLinkException</ref> class with a specified error message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A message that describes the error.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="206" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="205" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_duplicate_link_exception_1a7b1a7fcb8a7df14e3cf08488eaf5ccc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.DuplicateLinkException.DuplicateLinkException</definition>
+        <argsstring>(string msg, Exception inner)</argsstring>
+        <name>DuplicateLinkException</name>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>Exception</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_atom_1_1_core_1_1_duplicate_link_exception" kindref="compound">DuplicateLinkException</ref> class with a specified error message and a reference to the inner exception that is the cause of this exception. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A message that describes the error.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exception that is the cause of the current exception. If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="219" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="217" bodyend="220"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The exception that is thrown when two duplicate links are found. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="193" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="192" bodyend="221"/>
+    <listofallmembers>
+      <member refid="class_atom_1_1_core_1_1_duplicate_link_exception_1adea6e90af00b465102a5fa614a68dca9" prot="public" virt="non-virtual"><scope>Atom::Core::DuplicateLinkException</scope><name>DuplicateLinkException</name></member>
+      <member refid="class_atom_1_1_core_1_1_duplicate_link_exception_1a11ef28a841fe39da95fe1b02471fb470" prot="public" virt="non-virtual"><scope>Atom::Core::DuplicateLinkException</scope><name>DuplicateLinkException</name></member>
+      <member refid="class_atom_1_1_core_1_1_duplicate_link_exception_1a7b1a7fcb8a7df14e3cf08488eaf5ccc5" prot="public" virt="non-virtual"><scope>Atom::Core::DuplicateLinkException</scope><name>DuplicateLinkException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

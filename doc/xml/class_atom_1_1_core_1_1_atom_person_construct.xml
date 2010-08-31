@@ -1,0 +1,412 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_atom_1_1_core_1_1_atom_person_construct" kind="class" prot="public">
+    <compoundname>Atom::Core::AtomPersonConstruct</compoundname>
+    <basecompoundref refid="class_atom_1_1_core_1_1_atom_element" prot="public" virt="non-virtual">Atom.Core.AtomElement</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_person_construct_1a11453294f0415eb7a42f7b99f948d7c9" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Atom.Core.AtomPersonConstruct._name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <reimplements refid="class_atom_1_1_core_1_1_atom_element_1a42b1ac6c4db56e1d7d4b50856c3d9fc5">_name</reimplements>
+        <initializer> String.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="46" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_person_construct_1ac0c31b03976c9c14fdc0ba85039c99ee" prot="private" static="no" mutable="no">
+        <type>Uri</type>
+        <definition>Uri Atom.Core.AtomPersonConstruct._url</definition>
+        <argsstring></argsstring>
+        <name>_url</name>
+        <initializer> DefaultValues.Uri</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="47" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_person_construct_1a24dd1cf30507af105794b999a97d6538" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Atom.Core.AtomPersonConstruct._email</definition>
+        <argsstring></argsstring>
+        <name>_email</name>
+        <initializer> String.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="48" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_person_construct_1abd02620ad1f1c39105c131c4ad708f61" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Atom.Core.AtomPersonConstruct.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+<para>The name of the person. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="112" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="109" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a916359a640f23ab1f56bc7e973e510f9" compoundref="_atom_feed_test_8cs" startline="111" endline="123">Atom.Core.Test.AtomFeedTest::TestAuthor</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aafe4e564bfcc81130909140f01355e8c" compoundref="_atom_entry_test_8cs" startline="97" endline="111">Atom.Core.Test.AtomEntryTest::TestAuthor</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a1c963a41a333e3915ad8756566dc5a22" compoundref="_atom_feed_test_8cs" startline="126" endline="139">Atom.Core.Test.AtomFeedTest::TestContributors</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aa93bf23576c22d773cab7663b8be6c4d" compoundref="_atom_entry_test_8cs" startline="114" endline="128">Atom.Core.Test.AtomEntryTest::TestContributors</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a506bbfde09aebd63eefccfb81bb2d76a" compoundref="_atom_feed_test_8cs" startline="331" endline="348">Atom.Core.Test.AtomFeedTest::TestNameIsNotEmail</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1a8429973587c0aa4bc6f544ec7fd77d7d" compoundref="_atom_entry_test_8cs" startline="334" endline="344">Atom.Core.Test.AtomEntryTest::TestNameIsNotEmail</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_person_construct_1a1e23d0ff3a5a20ff24873ce0d32806c6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Uri</type>
+        <definition>Uri Atom.Core.AtomPersonConstruct.Url</definition>
+        <argsstring></argsstring>
+        <name>Url</name>
+        <briefdescription>
+<para>The url associated with the person. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="121" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="118" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a916359a640f23ab1f56bc7e973e510f9" compoundref="_atom_feed_test_8cs" startline="111" endline="123">Atom.Core.Test.AtomFeedTest::TestAuthor</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aafe4e564bfcc81130909140f01355e8c" compoundref="_atom_entry_test_8cs" startline="97" endline="111">Atom.Core.Test.AtomEntryTest::TestAuthor</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a1c963a41a333e3915ad8756566dc5a22" compoundref="_atom_feed_test_8cs" startline="126" endline="139">Atom.Core.Test.AtomFeedTest::TestContributors</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aa93bf23576c22d773cab7663b8be6c4d" compoundref="_atom_entry_test_8cs" startline="114" endline="128">Atom.Core.Test.AtomEntryTest::TestContributors</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_person_construct_1a9891bf8eb11e9ce9dc9fcf640a627329" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Atom.Core.AtomPersonConstruct.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <briefdescription>
+<para>The email of the person. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="134" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="127" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a916359a640f23ab1f56bc7e973e510f9" compoundref="_atom_feed_test_8cs" startline="111" endline="123">Atom.Core.Test.AtomFeedTest::TestAuthor</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aafe4e564bfcc81130909140f01355e8c" compoundref="_atom_entry_test_8cs" startline="97" endline="111">Atom.Core.Test.AtomEntryTest::TestAuthor</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a1c963a41a333e3915ad8756566dc5a22" compoundref="_atom_feed_test_8cs" startline="126" endline="139">Atom.Core.Test.AtomFeedTest::TestContributors</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aa93bf23576c22d773cab7663b8be6c4d" compoundref="_atom_entry_test_8cs" startline="114" endline="128">Atom.Core.Test.AtomEntryTest::TestContributors</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_person_construct_1a8f88e2a22ba7f7f2092db7819d8820a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomPersonConstruct.AtomPersonConstruct</definition>
+        <argsstring>()</argsstring>
+        <name>AtomPersonConstruct</name>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref> instance. Initializes the <ref refid="class_atom_1_1_core_1_1_atom_element_1a19636773c6507ba65fad59f12ae073ad" kindref="member">AtomElement.LocalName</ref> to &quot;author&quot;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="57" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_person_construct_1a25b4566727505a9fd79260f47d4c40af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomPersonConstruct.AtomPersonConstruct</definition>
+        <argsstring>(string localName)</argsstring>
+        <name>AtomPersonConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref> with the given local name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="64" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_person_construct_1a74c9a8a6d5bfd96ae2e435f9e23f3f34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomPersonConstruct.AtomPersonConstruct</definition>
+        <argsstring>(string localName, string name)</argsstring>
+        <name>AtomPersonConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref> instance initialized with the given local name and the name of the person. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>localName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The not qualified name of the element.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_person_construct_1abd02620ad1f1c39105c131c4ad708f61" kindref="member">Name</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="73" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_person_construct_1a9a21457421c27015b488831d0b8f495a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomPersonConstruct.AtomPersonConstruct</definition>
+        <argsstring>(string localName, string name, Uri url)</argsstring>
+        <name>AtomPersonConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>Uri</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref> instance initialized with the given name and Uri. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>localName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The not qualified name of the element.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_person_construct_1abd02620ad1f1c39105c131c4ad708f61" kindref="member">Name</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_person_construct_1a1e23d0ff3a5a20ff24873ce0d32806c6" kindref="member">Url</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="83" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_person_construct_1ac83180cffcd89d082700c8318de20636" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomPersonConstruct.AtomPersonConstruct</definition>
+        <argsstring>(string localName, string name, Uri url, string email)</argsstring>
+        <name>AtomPersonConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>Uri</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>email</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref> instance initialized with the given name, Uri and email. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>localName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The not qualified name of the element.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_person_construct_1abd02620ad1f1c39105c131c4ad708f61" kindref="member">Name</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_person_construct_1a1e23d0ff3a5a20ff24873ce0d32806c6" kindref="member">Url</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_person_construct_1a9891bf8eb11e9ce9dc9fcf640a627329" kindref="member">Email</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="94" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="93" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_person_construct_1a2f15aea735a9a893cecb60c6e607966d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string Atom.Core.AtomPersonConstruct.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+<para>Converts the <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref> in a series of xml nodes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The string representation of <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref> class.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="145" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="144" bodyend="159"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aafe4e564bfcc81130909140f01355e8c" compoundref="_atom_entry_test_8cs" startline="97" endline="111">Atom.Core.Test.AtomEntryTest::TestAuthor</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_atom_feed_1a41b15e6e4b1296c66b584d941c0b014b" compoundref="_atom_feed_8cs" startline="217" endline="332">Atom.Core.AtomFeed::ToString</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_atom_entry_1ae59a7245b9d2c185a12f222a9131220c" compoundref="_atom_entry_8cs" startline="214" endline="319">Atom.Core.AtomEntry::ToString</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_person_construct_1ac1b13a65ef2890311528d881b7bd97fe" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Atom.Core.AtomPersonConstruct.WriteStartElement</definition>
+        <argsstring>()</argsstring>
+        <name>WriteStartElement</name>
+        <reimplements refid="class_atom_1_1_core_1_1_atom_element_1ab364e0365102f675baa48e525b8654dc">WriteStartElement</reimplements>
+        <briefdescription>
+<para>Writes the start tag of the person construct element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="169" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_person_construct_1a12f5637d3203bb1dd336aaee888b72ed" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Atom.Core.AtomPersonConstruct.WriteEndElement</definition>
+        <argsstring>()</argsstring>
+        <name>WriteEndElement</name>
+        <reimplements refid="class_atom_1_1_core_1_1_atom_element_1a17f1639d3517693cc7aca64af746ddb2">WriteEndElement</reimplements>
+        <briefdescription>
+<para>Writes the end tag of the person construct element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="177" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="176" bodyend="180"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_person_construct_1a1bd9b81901b0d7b8ed8ff4b588fd9c34" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal <ref refid="class_atom_1_1_core_1_1_atom_person_construct" kindref="compound">AtomPersonConstruct</ref></type>
+        <definition>static internal AtomPersonConstruct Atom.Core.AtomPersonConstruct.Parse</definition>
+        <argsstring>(XPathNavigator navigator)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>XPathNavigator</type>
+          <declname>navigator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="186" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="185" bodyend="226"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The class representing all person constructs. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="616">
+        <label>Atom.Core.AtomElement</label>
+        <link refid="class_atom_1_1_core_1_1_atom_element"/>
+      </node>
+      <node id="615">
+        <label>Atom.Core.AtomPersonConstruct</label>
+        <link refid="class_atom_1_1_core_1_1_atom_person_construct"/>
+        <childnode refid="616" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="618">
+        <label>Atom.Core.AtomElement</label>
+        <link refid="class_atom_1_1_core_1_1_atom_element"/>
+      </node>
+      <node id="617">
+        <label>Atom.Core.AtomPersonConstruct</label>
+        <link refid="class_atom_1_1_core_1_1_atom_person_construct"/>
+        <childnode refid="618" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" line="45" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomPersonConstruct.cs" bodystart="44" bodyend="229"/>
+    <listofallmembers>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1a24dd1cf30507af105794b999a97d6538" prot="private" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>_email</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1a11453294f0415eb7a42f7b99f948d7c9" prot="private" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>_name</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1ac0c31b03976c9c14fdc0ba85039c99ee" prot="private" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>_url</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a547e4559485388763ba431da732935e7" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>AtomElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1a8f88e2a22ba7f7f2092db7819d8820a6" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>AtomPersonConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1a25b4566727505a9fd79260f47d4c40af" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>AtomPersonConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1a74c9a8a6d5bfd96ae2e435f9e23f3f34" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>AtomPersonConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1a9a21457421c27015b488831d0b8f495a" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>AtomPersonConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1ac83180cffcd89d082700c8318de20636" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>AtomPersonConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a56bc2bca3af9c83c0ece2085037a6089" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>Buffer</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1a9891bf8eb11e9ce9dc9fcf640a627329" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>Email</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a7131b36333529956e2545d9b3ca0419e" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>FullName</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a19636773c6507ba65fad59f12ae073ad" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>LocalName</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1abd02620ad1f1c39105c131c4ad708f61" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>Name</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a1966fec9661154e0d19062bdd10494c5" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>NamespacePrefix</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a8927904f85b02facec6812519a78b7d6" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>NamespaceUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1a1bd9b81901b0d7b8ed8ff4b588fd9c34" prot="private" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>Parse</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aa921d1ffb5d6779bf995271e53ca99fb" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>resolveUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1a2f15aea735a9a893cecb60c6e607966d" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>ToString</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1a1e23d0ff3a5a20ff24873ce0d32806c6" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>Url</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1afdaab0651b7873a4be312fd08a8c1ecb" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a53646e0f891a1fa2138d6625f1acd08b" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a8f284184548f4c8aa55baaad22d7c485" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a2dad0344b81fdc61a823f505f0eec661" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1afd132faa096cacf794f3acc9eacc8ff3" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a6f3416dbe2ce5ac633704356d4dfb463" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aeebaedfcb7adef339b7cfffb17925313" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a18aec64281318c092f09bda8b5f751f6" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aaf8c29b409683cebd08dea83031ef73e" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aa1adaacdb1560bae9873b9fbbb3bb66d" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1a12f5637d3203bb1dd336aaee888b72ed" prot="protected" virt="virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteEndElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_person_construct_1ac1b13a65ef2890311528d881b7bd97fe" prot="protected" virt="virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>WriteStartElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a90f50e88355162e92aac377d64bf70dd" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>XmlBase</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aaecf4c4b1422ffb2b02d2f824b837c33" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>xmlBaseRootUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a66f7f08d521bd673acda2eb1c97251e4" prot="public" virt="non-virtual"><scope>Atom::Core::AtomPersonConstruct</scope><name>XmlLang</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

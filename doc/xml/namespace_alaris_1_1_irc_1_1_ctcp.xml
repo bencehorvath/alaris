@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_irc_1_1_ctcp" kind="namespace">
+    <compoundname>Alaris::Irc::Ctcp</compoundname>
+    <innerclass refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener" prot="public">Alaris::Irc::Ctcp::CtcpListener</innerclass>
+    <innerclass refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder" prot="public">Alaris::Irc::Ctcp::CtcpResponder</innerclass>
+    <innerclass refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender" prot="public">Alaris::Irc::Ctcp::CtcpSender</innerclass>
+    <innerclass refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util" prot="public">Alaris::Irc::Ctcp::CtcpUtil</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Ctcp/CtcpListener.cs" line="8"/>
+  </compounddef>
+</doxygen>

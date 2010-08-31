@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_atom_1_1_core_1_1_atom_entry.html" title="The Atom entry. AtomFeed" alt="" coords="732,283,881,312"/>
+<area shape="rect" id="node4" href="$class_atom_1_1_core_1_1_atom_element.html" title="The base class for all elements." alt="" coords="7,121,172,151"/>
+<area shape="rect" id="node8" href="$class_atom_1_1_core_1_1_atom_date_construct.html" title="The class representing all date contructs." alt="" coords="293,92,496,121"/>
+<area shape="rect" id="node19" href="$class_atom_1_1_core_1_1_atom_person_construct.html" title="The class representing all person constructs." alt="" coords="287,145,503,175"/>
+<area shape="rect" id="node22" href="$class_atom_1_1_core_1_1_atom_content_construct.html" title="The class representing all content constructs." alt="" coords="285,199,504,228"/>
+<area shape="rect" id="node6" href="$class_atom_1_1_atom_writer.html" title="Atom.AtomWriter" alt="" coords="333,252,456,281"/>
+<area shape="rect" id="node11" href="$class_atom_1_1_core_1_1_collections_1_1_atom_link_collection.html" title="A strongly typed collection of AtomLink objects. AtomLink" alt="" coords="261,305,528,335"/>
+<area shape="rect" id="node13" href="$class_atom_1_1_core_1_1_collections_1_1_atom_person_construct_collection.html" title="A strongly typed collection of AtomPersonConstruct objects. AtomPersonConstruct" alt="" coords="224,359,565,388"/>
+<area shape="rect" id="node15" href="$class_atom_1_1_atom_reader.html" title="Atom.AtomReader" alt="" coords="331,412,459,441"/>
+<area shape="rect" id="node17" href="$class_atom_1_1_additional_elements_1_1_scoped_element_collection.html" title="A strongly typed collection of ScopedElement objects. ScopedElement" alt="" coords="233,465,556,495"/>
+<area shape="rect" id="node25" href="$class_atom_1_1_core_1_1_collections_1_1_atom_content_collection.html" title="A strongly typed collection of AtomContent objects. AtomContent" alt="" coords="251,519,539,548"/>
+</map>

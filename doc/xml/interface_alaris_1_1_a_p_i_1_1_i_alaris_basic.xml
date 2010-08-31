@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic" kind="interface" prot="public">
+    <compoundname>Alaris::API::IAlarisBasic</compoundname>
+    <derivedcompoundref refid="class_alaris_1_1_channel_rights_1_1_alaris_plugin" prot="public" virt="non-virtual">Alaris.ChannelRights.AlarisPlugin</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin" prot="public" virt="non-virtual">Alaris.FeedHandlerPlugin.AlarisPlugin</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin" prot="public" virt="non-virtual">Alaris.FeedHandlerPlugin.AlarisPlugin</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_main_1_1_alaris_plugin" prot="public" virt="non-virtual">Alaris.Main.AlarisPlugin</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1a7e342e91dcdde28ac231d3e0a77b43f5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.API.IAlarisBasic.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <reimplementedby refid="class_alaris_1_1_main_1_1_alaris_plugin_1a9c4af185612288c3de05cb7e20c3be72">Name</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_channel_rights_1_1_alaris_plugin_1a77f6425463c6ef524751c38e41f03153">Name</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1a30fd5567d2b641813b3ae15b498983cf">Name</reimplementedby>
+        <briefdescription>
+<para>Name of the plugin. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/IAlaris.cs" line="31" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/IAlaris.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1a6a1947c927ffb062fa4f1dbcc3706131" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.API.IAlarisBasic.Author</definition>
+        <argsstring></argsstring>
+        <name>Author</name>
+        <reimplementedby refid="class_alaris_1_1_main_1_1_alaris_plugin_1ab9e304a7a0f045314aa5d8a4cd2cb5fe">Author</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_channel_rights_1_1_alaris_plugin_1ac6aa4c3d8a187f54fbf9500070ad2820">Author</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1a231b0b56739df0024acf06f20b656de2">Author</reimplementedby>
+        <briefdescription>
+<para>Author of the plugin. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/IAlaris.cs" line="35" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/IAlaris.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1aaec549a3846ee10a46aa2a8c1e4a7671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.API.IAlarisBasic.Initialize</definition>
+        <argsstring>(ref Connection con, List&lt; string &gt; channels)</argsstring>
+        <name>Initialize</name>
+        <reimplementedby refid="class_alaris_1_1_main_1_1_alaris_plugin_1a8a279eb35d46180029ca4c68dd5737f1">Initialize</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1a5b59dc8cc9cf7416b8e52e1d78a18c10">Initialize</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_channel_rights_1_1_alaris_plugin_1a96d9806a767e60c1106ef8839a458e60">Initialize</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1a5b59dc8cc9cf7416b8e52e1d78a18c10">Initialize</reimplementedby>
+        <param>
+          <type>ref <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+          <declname>con</declname>
+        </param>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>channels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/IAlaris.cs" line="8"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1a1bfe953a3f7e71891ccfa53177a56d70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.API.IAlarisBasic.OnPublicMessage</definition>
+        <argsstring>(UserInfo user, string channel, string msg)</argsstring>
+        <name>OnPublicMessage</name>
+        <reimplementedby refid="class_alaris_1_1_main_1_1_alaris_plugin_1a8db10fa2ba9ce737b49a05e0db286d13">OnPublicMessage</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1a2d2109f1d7f5388206f871256ceba956">OnPublicMessage</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_channel_rights_1_1_alaris_plugin_1a170eafb0231c34cf485c0ae316358c66">OnPublicMessage</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1a2d2109f1d7f5388206f871256ceba956">OnPublicMessage</reimplementedby>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>On public message hook. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Userinfo of sender.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel where happened.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message sent</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/IAlaris.cs" line="15"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1a62a21063154f92f0da6762869e405e44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.API.IAlarisBasic.OnRegistered</definition>
+        <argsstring>()</argsstring>
+        <name>OnRegistered</name>
+        <reimplementedby refid="class_alaris_1_1_main_1_1_alaris_plugin_1a7247bc89ce9720aae7e26327835bc7ef">OnRegistered</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1ae357411fbeee369f54546c17d8d55fff">OnRegistered</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_channel_rights_1_1_alaris_plugin_1a878d83fb08678727dbfd94d51511850f">OnRegistered</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1ae357411fbeee369f54546c17d8d55fff">OnRegistered</reimplementedby>
+        <briefdescription>
+<para>On registered hook. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/IAlaris.cs" line="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1ab395273bc5e5a1904e3b342f42dbfb91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.API.IAlarisBasic.OnLoad</definition>
+        <argsstring>()</argsstring>
+        <name>OnLoad</name>
+        <reimplementedby refid="class_alaris_1_1_main_1_1_alaris_plugin_1aed2daa1ddd74805ffade09b5446b990f">OnLoad</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1a1319b1c372d2891bb1c18335173384b8">OnLoad</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_channel_rights_1_1_alaris_plugin_1aa6d7d2f4d4e80d624e26b36f8521c3b8">OnLoad</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1a1319b1c372d2891bb1c18335173384b8">OnLoad</reimplementedby>
+        <briefdescription>
+<para>Function called when the plugin is loaded. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/IAlaris.cs" line="23"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1a4f0cc50101319c76f0c116e008bcc4de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.API.IAlarisBasic.OnUnload</definition>
+        <argsstring>()</argsstring>
+        <name>OnUnload</name>
+        <reimplementedby refid="class_alaris_1_1_main_1_1_alaris_plugin_1aedc86979dee7b63c90ab9727658a134b">OnUnload</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1a2ab4d9c52879cb2acf400d9feb991f86">OnUnload</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_channel_rights_1_1_alaris_plugin_1a99b09c8c114fcec3b824a5acf075b651">OnUnload</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin_1a2ab4d9c52879cb2acf400d9feb991f86">OnUnload</reimplementedby>
+        <briefdescription>
+<para>Function called when the plugin is unloaded. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/IAlaris.cs" line="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="781">
+        <label>Alaris.ChannelRights.AlarisPlugin</label>
+        <link refid="class_alaris_1_1_channel_rights_1_1_alaris_plugin"/>
+        <childnode refid="780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="780">
+        <label>Alaris.API.IAlarisBasic</label>
+        <link refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic"/>
+      </node>
+      <node id="782">
+        <label>Alaris.FeedHandlerPlugin.AlarisPlugin</label>
+        <link refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin"/>
+        <childnode refid="780" relation="public-inheritance">
+        </childnode>
+        <childnode refid="780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="783">
+        <label>Alaris.Main.AlarisPlugin</label>
+        <link refid="class_alaris_1_1_main_1_1_alaris_plugin"/>
+        <childnode refid="780" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/IAlaris.cs" line="7" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/AlarisAPI/IAlaris.cs" bodystart="6" bodyend="36"/>
+    <listofallmembers>
+      <member refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1a6a1947c927ffb062fa4f1dbcc3706131" prot="public" virt="non-virtual"><scope>Alaris::API::IAlarisBasic</scope><name>Author</name></member>
+      <member refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1aaec549a3846ee10a46aa2a8c1e4a7671" prot="public" virt="non-virtual"><scope>Alaris::API::IAlarisBasic</scope><name>Initialize</name></member>
+      <member refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1a7e342e91dcdde28ac231d3e0a77b43f5" prot="public" virt="non-virtual"><scope>Alaris::API::IAlarisBasic</scope><name>Name</name></member>
+      <member refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1ab395273bc5e5a1904e3b342f42dbfb91" prot="public" virt="non-virtual"><scope>Alaris::API::IAlarisBasic</scope><name>OnLoad</name></member>
+      <member refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1a1bfe953a3f7e71891ccfa53177a56d70" prot="public" virt="non-virtual"><scope>Alaris::API::IAlarisBasic</scope><name>OnPublicMessage</name></member>
+      <member refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1a62a21063154f92f0da6762869e405e44" prot="public" virt="non-virtual"><scope>Alaris::API::IAlarisBasic</scope><name>OnRegistered</name></member>
+      <member refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic_1a4f0cc50101319c76f0c116e008bcc4de" prot="public" virt="non-virtual"><scope>Alaris::API::IAlarisBasic</scope><name>OnUnload</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

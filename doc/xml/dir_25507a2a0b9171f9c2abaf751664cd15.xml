@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_25507a2a0b9171f9c2abaf751664cd15" kind="dir">
+    <compoundname>irc/Delegates/Whois/</compoundname>
+    <innerfile refid="_who_event_handler_8cs">WhoEventHandler.cs</innerfile>
+    <innerfile refid="_whois_event_handler_8cs">WhoisEventHandler.cs</innerfile>
+    <innerfile refid="_whowas_event_handler_8cs">WhowasEventHandler.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/irc/Delegates/Whois/"/>
+  </compounddef>
+</doxygen>

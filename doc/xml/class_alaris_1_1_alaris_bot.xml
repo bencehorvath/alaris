@@ -1,0 +1,873 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_alaris_bot" kind="class" prot="public">
+    <compoundname>Alaris::AlarisBot</compoundname>
+    <basecompoundref refid="interface_alaris_1_1_i_thread_context" prot="public" virt="non-virtual">Alaris.IThreadContext</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a3c4aad5269ace354b17026b8cc3b30f4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>Connection Alaris.AlarisBot._connection</definition>
+        <argsstring></argsstring>
+        <name>_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="24" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a4e2269d9873c874354ea2ebdf72cede6" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_alaris_1_1_script_manager" kindref="compound">ScriptManager</ref></type>
+        <definition>readonly ScriptManager Alaris.AlarisBot._manager</definition>
+        <argsstring></argsstring>
+        <name>_manager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="25" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a505c8cfa007e33eca5ac7fbebc48308e" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.AlarisBot._nick</definition>
+        <argsstring></argsstring>
+        <name>_nick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="26" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1af23628bb2a7bb65dbe86723e1ce1bf5b" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.AlarisBot._server</definition>
+        <argsstring></argsstring>
+        <name>_server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="27" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a2238d87fa140cdf8c18989ba21cdd639" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Alaris.AlarisBot._confdone</definition>
+        <argsstring></argsstring>
+        <name>_confdone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="28" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1ad95e5460b71fbb5cfe16bd4bfd96b3b3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Alaris.AlarisBot._nickserv</definition>
+        <argsstring></argsstring>
+        <name>_nickserv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="29" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a733e6edd2c72a084f6c246117ffa5d15" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.AlarisBot._nspw</definition>
+        <argsstring></argsstring>
+        <name>_nspw</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="30" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a326ff0bbbb5b9c5609d8ce4ad47a8daa" prot="private" static="no" mutable="no">
+        <type>readonly List&lt; string &gt;</type>
+        <definition>readonly List&lt;string&gt; Alaris.AlarisBot._channels</definition>
+        <argsstring></argsstring>
+        <name>_channels</name>
+        <initializer> new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="31" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a234900193feb2f96f9c3a2af28d61192" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.AlarisBot._anick</definition>
+        <argsstring></argsstring>
+        <name>_anick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="32" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a4739c231da8ee024ad59ba7122c6b06b" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.AlarisBot._auser</definition>
+        <argsstring></argsstring>
+        <name>_auser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="32" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1acd851d2707d9fc0b088bd92ec82e9ab1" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.AlarisBot._ahost</definition>
+        <argsstring></argsstring>
+        <name>_ahost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="32" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a591ea1fd50cbc4b4e385f98f80c9c941" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_alaris_1_1_extras_1_1_crash_handler" kindref="compound">CrashHandler</ref></type>
+        <definition>readonly CrashHandler Alaris.AlarisBot._sCrashHandler</definition>
+        <argsstring></argsstring>
+        <name>_sCrashHandler</name>
+        <initializer> <ref refid="class_alaris_1_1_singleton-g" kindref="compound">Singleton</ref>&lt;<ref refid="class_alaris_1_1_extras_1_1_crash_handler" kindref="compound">CrashHandler</ref>&gt;.Instance</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="33" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a19ac9ce7a4d5445d8d4286a9797082cb" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_alaris_1_1_extras_1_1_database_manager" kindref="compound">DatabaseManager</ref></type>
+        <definition>readonly DatabaseManager Alaris.AlarisBot._sDatabaseManager</definition>
+        <argsstring></argsstring>
+        <name>_sDatabaseManager</name>
+        <initializer> <ref refid="class_alaris_1_1_singleton-g" kindref="compound">Singleton</ref>&lt;<ref refid="class_alaris_1_1_extras_1_1_database_manager" kindref="compound">DatabaseManager</ref>&gt;.Instance</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="34" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1aa321e7aaef9c58d6f20d9d2162b9e015" prot="private" static="no" mutable="no">
+        <type>readonly Guid</type>
+        <definition>readonly Guid Alaris.AlarisBot._guid</definition>
+        <argsstring></argsstring>
+        <name>_guid</name>
+        <initializer> Guid.NewGuid()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="35" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a13f738e98635c6ec7bf1c9a879656e8b" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Alaris.AlarisBot._configfile</definition>
+        <argsstring></argsstring>
+        <name>_configfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="36" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a26699c2ea89f61e3b5162e3a0243d3c7" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.AlarisBot.ListenerPort</definition>
+        <argsstring></argsstring>
+        <name>ListenerPort</name>
+        <initializer> 35221</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="37" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a550fb2db6783d463a86b6b18bb89a80b" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.AlarisBot.ACSHost</definition>
+        <argsstring></argsstring>
+        <name>ACSHost</name>
+        <initializer>&quot;127.0.0.1&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="38" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a26d6b3f4ae5c085944b1ade072af99a8" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.AlarisBot.ACSPort</definition>
+        <argsstring></argsstring>
+        <name>ACSPort</name>
+        <initializer> 35220</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="39" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1aada7c49e26884acf48c515be0a80a9b2" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.AlarisBot._scriptsDir</definition>
+        <argsstring></argsstring>
+        <name>_scriptsDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="40" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a5a29f11afc5c87d54cab5e044ece164d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Alaris.AlarisBot.MysqlEnabled</definition>
+        <argsstring></argsstring>
+        <name>MysqlEnabled</name>
+        <briefdescription>
+<para>MySQL support enabled or not. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="45" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_alaris_bot_1a138aa83522293adcefd713c602fc3c4a" compoundref="_alaris_8cs" startline="166" endline="176">Alaris.AlarisBot::Run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a7498a5d5dd6454be80e87eded04cc0bb" prot="public" static="no" mutable="no">
+        <type>readonly string[]</type>
+        <definition>readonly string [] Alaris.AlarisBot.MysqlData</definition>
+        <argsstring></argsstring>
+        <name>MysqlData</name>
+        <initializer> new string[4]</initializer>
+        <briefdescription>
+<para>MySQL data (host, user etc.). Size: 4 (DB is last). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="51" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_alaris_bot_1a138aa83522293adcefd713c602fc3c4a" compoundref="_alaris_8cs" startline="166" endline="176">Alaris.AlarisBot::Run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1a2c33b3e991ce859e07c899c7fced23fb" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.AlarisBot.AcsRandRequestChannel</definition>
+        <argsstring></argsstring>
+        <name>AcsRandRequestChannel</name>
+        <briefdescription>
+<para>The acs_rand_request_channel. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="77" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_alaris_bot_1ac68c24eaf37f92701d29994965abc031" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_extras_1_1_crash_handler" kindref="compound">CrashHandler</ref></type>
+        <definition>CrashHandler Alaris.AlarisBot.CrashHandler</definition>
+        <argsstring></argsstring>
+        <name>CrashHandler</name>
+        <briefdescription>
+<para>The bot&apos;s crash handler instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="59" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_alaris_bot_1a9f06e15474f282ff24eb5d91f160453b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_script_manager" kindref="compound">ScriptManager</ref></type>
+        <definition>ScriptManager Alaris.AlarisBot.ScriptManager</definition>
+        <argsstring></argsstring>
+        <name>ScriptManager</name>
+        <briefdescription>
+<para>The bot&apos;s script manager instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="67" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_alaris_bot_1af49581386e7f7e82be9febe535949a4f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_alaris_1_1_threading_1_1_c_thread_pool" kindref="compound">CThreadPool</ref></type>
+        <definition>CThreadPool Alaris.AlarisBot.Pool</definition>
+        <argsstring></argsstring>
+        <name>Pool</name>
+        <briefdescription>
+<para>Gets or sets the thread pool. </para>        </briefdescription>
+        <detaileddescription>
+<para>The thread pool. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="85" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="85" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_alaris_bot_1aa5ab25020602989449e4a27184a478a0" compoundref="_alaris_8cs" startline="325" endline="342">Alaris.AlarisBot::Disconnect</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_alaris_bot_1aac5ac3de81cc9ad270bafba596705249" prot="public" static="yes" mutable="no">
+        <type>readonly bool</type>
+        <definition>readonly bool Alaris.AlarisBot.AlarisServer</definition>
+        <argsstring></argsstring>
+        <name>AlarisServer</name>
+        <briefdescription>
+<para>Determines whether the communication to and dependance of alaris_server is set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="72" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="72" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_alaris_bot_1a2a09567fc4101448eeaf61493725b132" compoundref="_alaris_8cs" startline="252" endline="297">Alaris.AlarisBot::SendPacketToACS</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1a213f3ca8d3613d1cf6b7127d8ed20f66" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.AlarisBot.AlarisBot</definition>
+        <argsstring>()</argsstring>
+        <name>AlarisBot</name>
+        <briefdescription>
+<para>This is not an unused constructor. Called through singleton! </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="91" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1a39acf05a5216509af40e010bbd8cde92" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.AlarisBot.AlarisBot</definition>
+        <argsstring>(string config)</argsstring>
+        <name>AlarisBot</name>
+        <param>
+          <type>string</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new instacne of <ref refid="namespace_alaris" kindref="compound">Alaris</ref> bot. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="99" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="98" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1a7bd0f645fcf088e4ef6ec783fd1a8213" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.AlarisBot.~AlarisBot</definition>
+        <argsstring>()</argsstring>
+        <name>~AlarisBot</name>
+        <briefdescription>
+<para>Releases unmanaged resources and performs other cleanup operations before the <ref refid="class_alaris_1_1_alaris_bot" kindref="compound">AlarisBot</ref> is reclaimed by garbage collection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="151" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1a1fa9b29cbfff609f83979c53649002ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.AlarisBot.SetupHandlers</definition>
+        <argsstring>()</argsstring>
+        <name>SetupHandlers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="180" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="179" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1abc33b6c940734f348e3e5c14668ba296" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.AlarisBot.ReadConfig</definition>
+        <argsstring>(string configfile)</argsstring>
+        <name>ReadConfig</name>
+        <param>
+          <type>string</type>
+          <declname>configfile</declname>
+        </param>
+        <briefdescription>
+<para>Reads and parses the specified config file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>configfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The config file name. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="196" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="195" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1af800365c793da436acf9fa5f3f42f246" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.AlarisBot.Connect</definition>
+        <argsstring>()</argsstring>
+        <name>Connect</name>
+        <briefdescription>
+<para>Establishes the connection to the previously specified server. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="303" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="302" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1a214eef05fa567aa07f0fca97ae53baf0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.AlarisBot.OnRegistered</definition>
+        <argsstring>()</argsstring>
+        <name>OnRegistered</name>
+        <briefdescription>
+<para>Method run when the bot is registered to the IRC server. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="348" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="347" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1a72e5c6a45fc45890def64c19e513dde0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.AlarisBot.OnPublicMessage</definition>
+        <argsstring>(UserInfo user, string chan, string msg)</argsstring>
+        <name>OnPublicMessage</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>chan</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>The method called when a public message occurs in one of the channels the bot is on. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data about the user who sent the message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel where the message occured. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message that was sent. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/PublicMessageHandler.cs" line="25" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/PublicMessageHandler.cs" bodystart="24" bodyend="126"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1af56bcb74b55435132dc060fdd600a408" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Alaris.AlarisBot.GetListenerPort</definition>
+        <argsstring>()</argsstring>
+        <name>GetListenerPort</name>
+        <briefdescription>
+<para>Gets the listener port. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The listener port. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="142" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1a2a09567fc4101448eeaf61493725b132" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.AlarisBot.SendPacketToACS</definition>
+        <argsstring>(AlarisPacket packet)</argsstring>
+        <name>SendPacketToACS</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_core_1_1_alaris_packet" kindref="compound">AlarisPacket</ref></type>
+          <declname>packet</declname>
+        </param>
+        <briefdescription>
+<para>Sends the packet to ACS. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>packet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Packet. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="253" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="252" bodyend="297"/>
+        <references refid="class_alaris_1_1_alaris_bot_1aac5ac3de81cc9ad270bafba596705249" compoundref="_alaris_8cs" startline="72">Alaris.AlarisBot::AlarisServer</references>
+        <references refid="class_alaris_1_1_core_1_1_alaris_packet_1a743cfc6ef47bc03b0f37e539e39c1902" compoundref="_alaris_packet_8cs" startline="97" endline="100">Alaris.Core.AlarisPacket::GetNetMessage</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1a2c196410260b93eb7937559be68fed84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Guid</type>
+        <definition>Guid Alaris.AlarisBot.GetGuid</definition>
+        <argsstring>()</argsstring>
+        <name>GetGuid</name>
+        <reimplements refid="interface_alaris_1_1_i_thread_context_1a62a61f0c840891d402060ae755584bed">GetGuid</reimplements>
+        <briefdescription>
+<para>Gets the GUID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="159" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="158" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1a138aa83522293adcefd713c602fc3c4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.AlarisBot.Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <reimplements refid="interface_alaris_1_1_i_thread_context_1a6896809516d1c8e4a7162d8e9019c7e9">Run</reimplements>
+        <briefdescription>
+<para>Run this instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="167" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="166" bodyend="176"/>
+        <references refid="class_alaris_1_1_extras_1_1_database_manager_1a9496505b12dd807fb353a3c5bd9f3283" compoundref="_database_manager_8cs" startline="18" endline="30">Alaris.Extras.DatabaseManager::Initialize</references>
+        <references refid="class_alaris_1_1_alaris_bot_1a7498a5d5dd6454be80e87eded04cc0bb" compoundref="_alaris_8cs" startline="51">Alaris.AlarisBot::MysqlData</references>
+        <references refid="class_alaris_1_1_alaris_bot_1a5a29f11afc5c87d54cab5e044ece164d" compoundref="_alaris_8cs" startline="45">Alaris.AlarisBot::MysqlEnabled</references>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1aa5ab25020602989449e4a27184a478a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.AlarisBot.Disconnect</definition>
+        <argsstring>(string rsr)</argsstring>
+        <name>Disconnect</name>
+        <param>
+          <type>string</type>
+          <declname>rsr</declname>
+        </param>
+        <briefdescription>
+<para>Disconnects the bot from the IRC server. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rsr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reason for disconnect. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="326" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="325" bodyend="342"/>
+        <references refid="class_alaris_1_1_irc_1_1_connection_1a0fa01268785460c4d0bfd8b5fd874387" compoundref="_connection_8cs" startline="667" endline="683">Alaris.Irc.Connection::Disconnect</references>
+        <references refid="class_alaris_1_1_threading_1_1_c_thread_pool_1a88eeddc7f657567c05bd9f1c1b357e43" compoundref="_thread_pool_8cs" startline="91" endline="122">Alaris.Threading.CThreadPool::Free</references>
+        <references refid="class_alaris_1_1_script_manager_1a9118e822a233b9586629c7fabcb4f647" compoundref="_script_manager_8cs" startline="28">Alaris.ScriptManager::Lua</references>
+        <references refid="class_alaris_1_1_alaris_bot_1af49581386e7f7e82be9febe535949a4f" compoundref="_alaris_8cs" startline="85">Alaris.AlarisBot::Pool</references>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1aa5b066f0c8bcbd040f5b4d25517d9f77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.AlarisBot.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+<para>Releases all used resources. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="384" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="383" bodyend="386"/>
+        <references refid="class_alaris_1_1_irc_1_1_connection_1a94a499d8901b92e65cb7db29b6ea9451" compoundref="_connection_8cs" startline="715" endline="720">Alaris.Irc.Connection::Dispose</references>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1ade710f236a5cd5b8ae924ec6647438f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.AlarisBot.SendMsg</definition>
+        <argsstring>(string channel, string message)</argsstring>
+        <name>SendMsg</name>
+        <param>
+          <type>string</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Sends the given message to the specified channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A System.String </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A System.String </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/API.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/API.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_alaris_bot_1a569227473d67d9e909f54c496ed99854" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.AlarisBot.OnCtcpRequest</definition>
+        <argsstring>(string command, UserInfo user)</argsstring>
+        <name>OnCtcpRequest</name>
+        <param>
+          <type>string</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+<para>Method run when the bot receives a CTCP request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CTCP command. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data about the user who sent it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="376" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="375" bodyend="378"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The main class for <ref refid="namespace_alaris" kindref="compound">Alaris</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="457">
+        <label>Alaris.AlarisBot</label>
+        <link refid="class_alaris_1_1_alaris_bot"/>
+        <childnode refid="458" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="458">
+        <label>Alaris.IThreadContext</label>
+        <link refid="interface_alaris_1_1_i_thread_context"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="470">
+        <label>Alaris.Irc.Sender</label>
+        <link refid="class_alaris_1_1_irc_1_1_sender"/>
+        <childnode refid="465" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="463">
+        <label>Alaris.Irc.Ctcp.CtcpListener</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener"/>
+        <childnode refid="462" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="461">
+        <label>Alaris.ScriptManager</label>
+        <link refid="class_alaris_1_1_script_manager"/>
+        <childnode refid="460" relation="public-inheritance">
+        </childnode>
+        <childnode refid="462" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="468">
+        <label>Alaris.Irc.ServerProperties</label>
+        <link refid="class_alaris_1_1_irc_1_1_server_properties"/>
+      </node>
+      <node id="464">
+        <label>Alaris.Irc.Ctcp.CtcpSender</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender"/>
+        <childnode refid="465" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="459">
+        <label>Alaris.AlarisBot</label>
+        <link refid="class_alaris_1_1_alaris_bot"/>
+        <childnode refid="460" relation="public-inheritance">
+        </childnode>
+        <childnode refid="461" relation="usage">
+          <edgelabel>_manager</edgelabel>
+        </childnode>
+        <childnode refid="462" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="465">
+        <label>Alaris.Irc.CommandBuilder</label>
+        <link refid="class_alaris_1_1_irc_1_1_command_builder"/>
+        <childnode refid="462" relation="usage">
+          <edgelabel>connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="467">
+        <label>Alaris.Irc.Ctcp.CtcpResponder</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder"/>
+        <childnode refid="462" relation="usage">
+          <edgelabel>connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="460">
+        <label>Alaris.IThreadContext</label>
+        <link refid="interface_alaris_1_1_i_thread_context"/>
+      </node>
+      <node id="462">
+        <label>Alaris.Irc.Connection</label>
+        <link refid="class_alaris_1_1_irc_1_1_connection"/>
+        <childnode refid="463" relation="usage">
+          <edgelabel>ctcpListener</edgelabel>
+        </childnode>
+        <childnode refid="464" relation="usage">
+          <edgelabel>ctcpSender</edgelabel>
+        </childnode>
+        <childnode refid="466" relation="usage">
+          <edgelabel>listener</edgelabel>
+        </childnode>
+        <childnode refid="467" relation="usage">
+          <edgelabel>ctcpResponder</edgelabel>
+        </childnode>
+        <childnode refid="468" relation="usage">
+          <edgelabel>properties</edgelabel>
+        </childnode>
+        <childnode refid="469" relation="usage">
+          <edgelabel>connectionArgs</edgelabel>
+        </childnode>
+        <childnode refid="470" relation="usage">
+          <edgelabel>sender</edgelabel>
+        </childnode>
+      </node>
+      <node id="469">
+        <label>Alaris.Irc.ConnectionArgs</label>
+        <link refid="struct_alaris_1_1_irc_1_1_connection_args"/>
+      </node>
+      <node id="466">
+        <label>Alaris.Irc.Listener</label>
+        <link refid="class_alaris_1_1_irc_1_1_listener"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" line="23" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/alaris/Alaris.cs" bodystart="22" bodyend="387"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_alaris_bot_1acd851d2707d9fc0b088bd92ec82e9ab1" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_ahost</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a234900193feb2f96f9c3a2af28d61192" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_anick</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a4739c231da8ee024ad59ba7122c6b06b" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_auser</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a326ff0bbbb5b9c5609d8ce4ad47a8daa" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_channels</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a2238d87fa140cdf8c18989ba21cdd639" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_confdone</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a13f738e98635c6ec7bf1c9a879656e8b" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_configfile</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a3c4aad5269ace354b17026b8cc3b30f4" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_connection</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1aa321e7aaef9c58d6f20d9d2162b9e015" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_guid</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a4e2269d9873c874354ea2ebdf72cede6" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_manager</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a505c8cfa007e33eca5ac7fbebc48308e" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_nick</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1ad95e5460b71fbb5cfe16bd4bfd96b3b3" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_nickserv</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a733e6edd2c72a084f6c246117ffa5d15" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_nspw</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a591ea1fd50cbc4b4e385f98f80c9c941" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_sCrashHandler</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1aada7c49e26884acf48c515be0a80a9b2" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_scriptsDir</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a19ac9ce7a4d5445d8d4286a9797082cb" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_sDatabaseManager</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1af23628bb2a7bb65dbe86723e1ce1bf5b" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>_server</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a550fb2db6783d463a86b6b18bb89a80b" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>ACSHost</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a26d6b3f4ae5c085944b1ade072af99a8" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>ACSPort</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a2c33b3e991ce859e07c899c7fced23fb" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>AcsRandRequestChannel</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a213f3ca8d3613d1cf6b7127d8ed20f66" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>AlarisBot</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a39acf05a5216509af40e010bbd8cde92" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>AlarisBot</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1aac5ac3de81cc9ad270bafba596705249" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>AlarisServer</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1af800365c793da436acf9fa5f3f42f246" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>Connect</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1ac68c24eaf37f92701d29994965abc031" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>CrashHandler</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1aa5ab25020602989449e4a27184a478a0" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>Disconnect</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1aa5b066f0c8bcbd040f5b4d25517d9f77" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>Dispose</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a2c196410260b93eb7937559be68fed84" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>GetGuid</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1af56bcb74b55435132dc060fdd600a408" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>GetListenerPort</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a26699c2ea89f61e3b5162e3a0243d3c7" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>ListenerPort</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a7498a5d5dd6454be80e87eded04cc0bb" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>MysqlData</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a5a29f11afc5c87d54cab5e044ece164d" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>MysqlEnabled</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a569227473d67d9e909f54c496ed99854" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>OnCtcpRequest</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a72e5c6a45fc45890def64c19e513dde0" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>OnPublicMessage</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a214eef05fa567aa07f0fca97ae53baf0" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>OnRegistered</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1af49581386e7f7e82be9febe535949a4f" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>Pool</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1abc33b6c940734f348e3e5c14668ba296" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>ReadConfig</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a138aa83522293adcefd713c602fc3c4a" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>Run</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a9f06e15474f282ff24eb5d91f160453b" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>ScriptManager</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1ade710f236a5cd5b8ae924ec6647438f4" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>SendMsg</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a2a09567fc4101448eeaf61493725b132" prot="public" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>SendPacketToACS</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a1fa9b29cbfff609f83979c53649002ec" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>SetupHandlers</name></member>
+      <member refid="class_alaris_1_1_alaris_bot_1a7bd0f645fcf088e4ef6ec783fd1a8213" prot="private" virt="non-virtual"><scope>Alaris::AlarisBot</scope><name>~AlarisBot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
