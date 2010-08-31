@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.Irc", "irc\Alaris.Ir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.API", "AlarisAPI\Alaris.API.csproj", "{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alaris_server", "alaris_server\alaris_server.csproj", "{80148ABB-94CD-427E-A892-9E51D87F76EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.Server", "alaris_server\Alaris.Server.csproj", "{80148ABB-94CD-427E-A892-9E51D87F76EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atom.NET", "Atom\Atom.NET.csproj", "{9DB254A5-AF25-4122-877C-3C6D9A86BC02}"
 EndProject

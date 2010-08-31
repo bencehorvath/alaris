@@ -7,9 +7,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{80148ABB-94CD-427E-A892-9E51D87F76EC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>alaris_server</RootNamespace>
+    <RootNamespace>Alaris.Server</RootNamespace>
     <ReleaseVersion>2.3</ReleaseVersion>
-    <AssemblyName>alaris_server</AssemblyName>
+    <AssemblyName>Alaris.Server</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
