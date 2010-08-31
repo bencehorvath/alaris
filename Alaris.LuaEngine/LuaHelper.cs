@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Text.RegularExpressions;
+using Alaris.API;
 using LuaInterface;
 
 namespace Alaris.LuaEngine
@@ -59,6 +61,31 @@ namespace Alaris.LuaEngine
                         vm.RegisterFunction(attr.FunctionName, target, method);
                     }
                 }
+            }
+        }
+
+        /// <summary>
+        /// Handles Lua irc commands, especially interpreting.
+        /// </summary>
+        /// <param name="vm">Lua virtual machine</param>
+        /// <param name="chan">Channel name.</param>
+        /// <param name="msg">Message sent.</param>
+        public static void HandleLuaCommands(Lua vm, string chan, string msg)
+        {
+            var regex = new Regex(@"lua\s*\{\s*(?<lcode>.+)\s*\}");
+
+            if (!regex.IsMatch(msg))
+                return;
+
+            var code = regex.Match(msg).Groups["lcode"].ToString();
+
+            try
+            {
+                vm.DoString(code);
+            }
+            catch(Exception x)
+            {
+                Log.Error("LuaEngine", string.Format("Lua compile error. ({0})", x.Message));
             }
         }
     }

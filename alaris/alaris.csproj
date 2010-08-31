@@ -67,6 +67,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib" />
+    <Reference Include="LuaInterface, Version=2.0.0.42883, Culture=neutral, PublicKeyToken=1e1fb15b02227b8a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.JScript" />
     <Reference Include="Microsoft.VisualBasic" />

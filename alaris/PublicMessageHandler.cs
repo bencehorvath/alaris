@@ -45,6 +45,10 @@ namespace Alaris
                 }
             }
 
+            // Lua code runner.
+
+            LuaEngine.LuaHelper.HandleLuaCommands(_manager.Lua.LuaVM, chan, msg);
+
             if (msg == "@quit" && Utilities.IsAdmin(user))
             {
                 Disconnect("Quit command used by " + user.Nick);

@@ -57,14 +57,15 @@ namespace Alaris.LuaEngine
                            {
                                NotifyFilter =
                                    NotifyFilters.FileName | NotifyFilters.Attributes | NotifyFilters.LastAccess |
-                                   NotifyFilters.LastWrite | NotifyFilters.Security | NotifyFilters.Size
+                                   NotifyFilters.LastWrite | NotifyFilters.Security | NotifyFilters.Size,
+
+                               EnableRaisingEvents = true
                            };
 
             _watcher.Created += (s, e) => LoadScripts(true);
             _watcher.Changed += (s, e) => LoadScripts(true);
             _watcher.Deleted += (s, e) => LoadScripts(true);
             _watcher.Renamed += (s, e) => LoadScripts(true);
-            
         }
 
         /// <summary>
