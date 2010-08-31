@@ -361,7 +361,6 @@ namespace Alaris
                 Log.Notice("Alaris", "Joined channel: " + chan);
             }
 
-            _manager.RunRegisteredHandlers();
         }
 
         /// <summary>

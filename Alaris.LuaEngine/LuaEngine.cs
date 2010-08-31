@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Alaris.API;
 using Alaris.Irc;
@@ -87,7 +88,8 @@ namespace Alaris.LuaEngine
             foreach(var file in di.GetFiles("*.lua"))
             {
                 Log.Notice("LuaEngine", string.Format("Loading script: {0}", file.Name));
-                _lua.DoFile(file.FullName);
+                try {_lua.DoFile(file.FullName);}
+                catch(Exception x) { Log.Error("LuaEngine", string.Format("Couldn't load: {0} ({1})", file.Name, x.Message)); }
                 
             }
         }
