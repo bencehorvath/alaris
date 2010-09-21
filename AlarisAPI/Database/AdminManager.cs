@@ -1,4 +1,7 @@
-﻿using System.Web;
+﻿using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
 using Alaris.Irc;
 
 namespace Alaris.API.Database
@@ -24,6 +27,10 @@ namespace Alaris.API.Database
             DatabaseManager.Query(string.Format("INSERT INTO admins(user,nick,hostname) VALUES('{0}', '{1}', '{2}')", user, nick, hostname));
         }
 
+        /// <summary>
+        /// Deletes the given admin.
+        /// </summary>
+        /// <param name="nick">Nick of the admin to delete.</param>
         [DatabaseAccessor("Deletes the given administrator.", DatabaseAccessType.Delete, "admins")]
         public static void DeleteAdmin(string nick)
         {
@@ -38,12 +45,21 @@ namespace Alaris.API.Database
         /// </summary>
         /// <param name="user">The user to check.</param>
         [DatabaseAccessor("Determines whether the given user is admin or not.", DatabaseAccessType.Select, "admins")]
-        public static bool IsAdmin(UserInfo user)
+        internal static bool IsAdmin(UserInfo user)
         {
             return
                 (DatabaseManager.QueryFirstRow(
                     string.Format("SELECT * FROM admins WHERE user = '{0}' AND nick = '{1}' AND hostname = '{2}'",
                                   user.User, user.Nick, user.Hostname))) != null;
+        }
+
+        public static List<string> GetAdmins()
+        {
+            var table = DatabaseManager.Query("SELECT * FROM admins");
+
+            var admins = (from DataRow row in table.Rows where row["nick"] != null select row["nick"].ToString()).ToList();
+
+            return admins;
         }
 
         

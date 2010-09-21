@@ -139,19 +139,37 @@ namespace Alaris
                 packet.Dispose();
             }
 
-           if(msg.StartsWith("@admin add ", StringComparison.InvariantCultureIgnoreCase))
-           {
-               msg = msg.Replace("@admin add ", string.Empty);
+            if(msg.StartsWith("@admin add ", StringComparison.InvariantCultureIgnoreCase) && Utilities.IsAdmin(user))
+            {
+                msg = msg.Replace("@admin add ", string.Empty);
 
-               var parts = msg.Split(' ');
+                var parts = msg.Split(' ');
 
-               if (parts.Length != 3) { SendMsg(chan, "Syntax: ADMIN ADD <user> <nick> <hostname>");
-                   return;  }
+                if (parts.Length != 3) { SendMsg(chan, "Syntax: ADMIN ADD <user> <nick> <hostname>");
+                    return;  }
 
-               DatabaseManager.Query(string.Format("INSERT INTO admins(user,nick,hostname) VALUES('{0}', '{1}', '{2}')", parts[0], parts[1], parts[2]));
+                DatabaseManager.Query(string.Format("INSERT INTO admins(user,nick,hostname) VALUES('{0}', '{1}', '{2}')", parts[0], parts[1], parts[2]));
 
-               SendMsg(chan, string.Format("Admin {0} has been added.", parts[1]));
-           }
+                SendMsg(chan, string.Format("Admin {0} has been added.", parts[1]));
+            }
+
+            if(msg.Equals("@admin list", StringComparison.InvariantCultureIgnoreCase))
+            {
+                if(AdminManager.GetAdmins() == null)
+                    SendMsg(chan, "No admins."); // shouldn't happen.
+                else
+                {
+                    foreach(var adm in AdminManager.GetAdmins())
+                        SendMsg(chan, adm);
+                }
+            }
+
+            if(msg.StartsWith("@admin delete ", StringComparison.InvariantCultureIgnoreCase) && Utilities.IsAdmin(user))
+            {
+                msg = msg.Replace("@admin delete ", string.Empty);
+                AdminManager.DeleteAdmin(msg);
+                SendMsg(chan, string.Format("Admin {0} deleted.", msg));              
+            }
 
         }
     }
