@@ -81,6 +81,7 @@
       <HintPath>..\dep\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
@@ -90,6 +91,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Database\AdminManager.cs" />
+    <Compile Include="Database\DatabaseAccessorAttribute.cs" />
+    <Compile Include="Database\DatabaseAccessType.cs" />
     <Compile Include="IAlaris.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Database\IManager.cs" />

@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using Alaris.API.Database;
 using Alaris.Irc;
 
 namespace Alaris.API
@@ -101,7 +102,7 @@ namespace Alaris.API
         public static bool IsAdmin(UserInfo user)
         {
             if (user == null) throw new ArgumentNullException("user");
-            return (user.Hostname == AdminHost && user.Nick == AdminNick && user.User == AdminUser);
+            return ((user.Hostname == AdminHost && user.Nick == AdminNick && user.User == AdminUser) || AdminManager.IsAdmin(user));
         }
 
         /// <summary>
