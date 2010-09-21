@@ -50,7 +50,7 @@ namespace Alaris
                 }
             }
 
-            if(msg.StartsWith("@calc ") || msg.StartsWith("@c "))
+            if(msg.StartsWith("@calc ", StringComparison.InvariantCultureIgnoreCase) || msg.StartsWith("@c ", StringComparison.InvariantCultureIgnoreCase))
             {
                 if (msg.StartsWith("@calc ")) msg = msg.Replace("@calc ", string.Empty);
                 else if (msg.StartsWith("@c ")) msg = msg.Replace("@c ", string.Empty);
@@ -88,33 +88,33 @@ namespace Alaris
 
             //LuaEngine.LuaHelper.HandleLuaCommands(_manager.Lua.LuaVM, chan, msg);
 
-            if (msg == "@quit" && Utilities.IsAdmin(user))
+            if (msg.Equals("@quit", StringComparison.InvariantCultureIgnoreCase) && Utilities.IsAdmin(user))
             {
                 Disconnect("Quit command used by " + user.Nick);
 
                 return;
             }
 
-            if (msg == "@help")
+            if (msg.Equals("@help", StringComparison.InvariantCultureIgnoreCase))
             {
                 _connection.Sender.PublicMessage(chan, "Available commands: info | quit | sys | join | title | mangos");
                 return;
             }
 
-            if (msg == "@info")
+            if (msg.Equals("@info", StringComparison.InvariantCultureIgnoreCase))
             {
                 Utilities.SendInfo(ref _connection, chan);
                 return;
             }
 
-            if (msg == "@sys")
+            if (msg.Equals("@sys", StringComparison.InvariantCultureIgnoreCase))
             {
                 Utilities.SendSysStats(ref _connection, chan);
 
                 return;
             }
 
-            if (msg.StartsWith("@join ") && Utilities.IsAdmin(user))
+            if (msg.StartsWith("@join ", StringComparison.InvariantCultureIgnoreCase) && Utilities.IsAdmin(user))
             {
                 var ch = msg.Replace("@join ", string.Empty);
                 if (Rfc2812Util.IsValidChannelName(ch))
@@ -123,13 +123,13 @@ namespace Alaris
                 return;
             }
 
-            if (msg == "@reload scripts")
+            if (msg.Equals("@reload scripts", StringComparison.InvariantCultureIgnoreCase))
             {
                 _manager.Lua.LoadScripts(true);
                 SendMsg(chan, "Lua scripts reloaded.");
             }
 
-            if (msg == "@request acs random" && AlarisServer)
+            if (msg.Equals("@request acs random", StringComparison.InvariantCultureIgnoreCase) && AlarisServer)
             {
                 AcsRandRequestChannel = chan;
                 var packet = new AlarisPacket();
