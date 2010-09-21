@@ -4,9 +4,8 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using Alaris.API;
-using Alaris.Network;
 
-namespace Alaris.Core
+namespace Alaris.Network
 {
     /// <summary>
     ///   Listener used inside the Alaris bot to get and handle ACS responses.
@@ -14,11 +13,10 @@ namespace Alaris.Core
     public sealed class ClientListener : IDisposable
     {
         private readonly TcpListener _listener;
-        private readonly Thread _lThread;
         private readonly ClientPacketHandler sClientPacketHandler = Singleton<ClientPacketHandler>.Instance;
 
         /// <summary>
-        ///   Initializes a new instance of the <see cref = "Alaris.Core.ClientListener" /> class.
+        ///   Initializes a new instance of the <see cref = "ClientListener" /> class.
         /// </summary>
         /// <param name = 'port'>
         ///   Port to listen on.
@@ -105,13 +103,13 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        ///   Releases all resource used by the <see cref = "Alaris.Core.ClientListener" /> object.
+        ///   Releases all resource used by the <see cref = "ClientListener" /> object.
         /// </summary>
         /// <remarks>
-        ///   Call <see cref = "Dispose" /> when you are finished using the <see cref = "Alaris.Core.ClientListener" />. The
-        ///   <see cref = "Dispose" /> method leaves the <see cref = "Alaris.Core.ClientListener" /> in an unusable state. After
-        ///   calling <see cref = "Dispose" />, you must release all references to the <see cref = "Alaris.Core.ClientListener" /> so
-        ///   the garbage collector can reclaim the memory that the <see cref = "Alaris.Core.ClientListener" /> was occupying.
+        ///   Call <see cref = "Dispose" /> when you are finished using the <see cref = "ClientListener" />. The
+        ///   <see cref = "Dispose" /> method leaves the <see cref = "ClientListener" /> in an unusable state. After
+        ///   calling <see cref = "Dispose" />, you must release all references to the <see cref = "ClientListener" /> so
+        ///   the garbage collector can reclaim the memory that the <see cref = "ClientListener" /> was occupying.
         /// </remarks>
         public void Dispose()
         {

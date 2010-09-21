@@ -1,7 +1,6 @@
 using System;
-using Alaris.Threading;
 
-namespace Alaris
+namespace Alaris.Threading
 {
     /// <summary>
     ///   The interface used to define classes that can be run in the <see cref = "CThreadPool" />
@@ -21,9 +20,4 @@ namespace Alaris
         /// </returns>
         Guid GetGuid();
     }
-
-    /// <summary>
-    ///   Specifies a delegate which can be run by the ThreadPool directly.
-    /// </summary>
-    public delegate void IThreadRunnable();
 }

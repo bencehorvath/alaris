@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Alaris.LuaEngine")]
-[assembly: AssemblyDescription("Alaris bot's Lua interpreter engine.")]
+[assembly: AssemblyTitle("Alaris.ADF")]
+[assembly: AssemblyDescription("Alaris Data/Document Format.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Twl Productions")]
-[assembly: AssemblyProduct("Alaris")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Alaris.ADF")]
 [assembly: AssemblyCopyright("Copyright © Twl 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("246e3946-8aad-49cb-b3f5-244cc340a1fa")]
+[assembly: Guid("dec5aac9-ee00-4f49-90f6-2d9dd41b850c")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.0.*")]
-[assembly: AssemblyFileVersion("3")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

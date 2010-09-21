@@ -12,8 +12,8 @@ using System.Timers;
 using Alaris.API;
 using Alaris.Irc;
 using Alaris.Extras;
-using Alaris.Core;
 using System.Net.Sockets;
+using Alaris.Network;
 
 
 namespace Alaris.Server
@@ -51,7 +51,7 @@ namespace Alaris.Server
 				
 				Log.Notice("AlarisListener", "Client connection from: " + client.Client.RemoteEndPoint);
 				
-				var client_thread = new Thread(new ParameterizedThreadStart(ClientHandler));
+				var client_thread = new Thread(ClientHandler);
 				
 				client_thread.Start(client);
 				

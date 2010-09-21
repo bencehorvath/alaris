@@ -2,7 +2,6 @@ using System;
 using System.IO;
 using System.Threading;
 using Alaris.API;
-using Alaris.Core;
 using Alaris.Network;
 
 namespace Alaris
@@ -30,11 +29,11 @@ namespace Alaris
                 Log.Error("Alaris", "Terminating...");
                 return;
             }
-
+            
             var sBot = Singleton<AlarisBot>.Instance;
             ClientListener listener;
             Thread lthread = null;
-
+            
             if (AlarisBot.AlarisServer)
             {
                 listener = new ClientListener(AlarisBot.GetListenerPort());

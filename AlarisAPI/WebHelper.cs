@@ -22,7 +22,7 @@ namespace Alaris.API
         public static string GetWebTitle(Uri url)
         {
             var request = (HttpWebRequest) WebRequest.Create(url);
-
+          
             request.Timeout = 3500;
 
             request.UserAgent = "Alaris Bot " + Utilities.BotVersion + " / .NET " + Environment.Version;

@@ -7,6 +7,7 @@ using Alaris.Irc.Delegates.Channel;
 using Alaris.Irc.Delegates.Disconnect;
 using Alaris.Irc.Delegates.Messages;
 using Alaris.Irc.Delegates.Server;
+using Alaris.Threading;
 
 
 namespace Alaris
@@ -81,7 +82,9 @@ namespace Alaris
         /// </summary>
         public void Run()
         {
-            _luaEngine = new LuaEngine.LuaEngine(ref _connection, Path.Combine(_scriptsPath, "lua"));
+            if(Singleton<AlarisBot>.Instance.LuaEnabled)
+                _luaEngine = new LuaEngine.LuaEngine(ref _connection, Path.Combine(_scriptsPath, "lua"));
+            Log.Debug("ScriptManager", "Lua support is disabled.");
         }
 
         /// <summary>

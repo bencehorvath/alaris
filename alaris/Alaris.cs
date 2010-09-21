@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -7,11 +8,12 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using Alaris.API;
+using Alaris.API.Database;
 using Alaris.Config;
-using Alaris.Core;
 using Alaris.Extras;
 using Alaris.Irc;
 using Alaris.Irc.Ctcp;
+using Alaris.Network;
 using Alaris.Threading;
 
 namespace Alaris
@@ -29,15 +31,23 @@ namespace Alaris
         private bool _nickserv;
         private string _nspw = "";
         private readonly List<string> _channels = new List<string>();
-        private string _anick, _auser, _ahost;
         private readonly CrashHandler _sCrashHandler = Singleton<CrashHandler>.Instance;
-        private readonly DatabaseManager _sDatabaseManager = Singleton<DatabaseManager>.Instance;
         private readonly Guid _guid = Guid.NewGuid();
         private readonly string _configfile;
         private const int ListenerPort = 35221;
         private const string ACSHost = "127.0.0.1";
         private const int ACSPort = 35220;
         private string _scriptsDir;
+
+        /// <summary>
+        /// Database name.
+        /// </summary>
+        public string DBName { get; private set; }
+
+        /// <summary>
+        /// Gets whether the Lua engine is enabled or not.
+        /// </summary>
+        public bool LuaEnabled { get; private set; }
 
         /// <summary>
         ///   MySQL support enabled or not.
@@ -129,6 +139,8 @@ namespace Alaris
 
             Pool.Enqueue(_manager);
 
+            DatabaseManager.Initialize(DBName);
+
             SetupHandlers();
         }
 
@@ -165,12 +177,6 @@ namespace Alaris
         /// </summary>
         public void Run()
         {
-
-            // start database server.
-            if (MysqlEnabled)
-            {
-                _sDatabaseManager.Initialize(MysqlData[0], MysqlData[1], MysqlData[2], MysqlData[3]);
-            }
 
             Connect();
         }
@@ -235,6 +241,10 @@ namespace Alaris
 
 
             _scriptsDir = config.GetSetting("config/scripts/directory", "scripts");
+
+            DBName = config.GetSetting("config/database", "Alaris").ToUpper(CultureInfo.InvariantCulture);
+
+            LuaEnabled = config.GetSetting("config/scripts/LUA", "Disabled").Equals("Enabled");
 
             Log.Success("Config", "File read and validated successfully.");
             _confdone = true;
@@ -333,7 +343,7 @@ namespace Alaris
                 Log.Success("Identd", "Stopped service daemon");
             }
 
-            _manager.Lua.Free();
+            //_manager.Lua.Free();
 
             try { _connection.Disconnect(rsr);}
             catch(InvalidOperationException)

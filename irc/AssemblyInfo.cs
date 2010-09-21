@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyTitle("Alaris IRC Library")]
 [assembly: AssemblyDescription("An IRC client library used by Alaris (based) bots.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Twl Productions")]
 [assembly: AssemblyProduct("Alaris")]
 [assembly: AssemblyCopyright("Copyright (c) 2010 Twl")]
 [assembly: AssemblyTrademark("")]
@@ -28,7 +28,7 @@ using System.Resources;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("2.3.*")]
+[assembly: AssemblyVersion("3.0.*")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 

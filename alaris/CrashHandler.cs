@@ -1,10 +1,9 @@
 using System;
 using System.IO;
 using Alaris.API;
-using Alaris.Core;
 using Alaris.Exceptions;
 
-namespace Alaris.Extras
+namespace Alaris
 {
     /// <summary>
     ///   The delegate used for <see cref = "AlarisBot.ReadConfig" />
@@ -25,7 +24,7 @@ namespace Alaris.Extras
 
         /// <summary>
         ///   Releases unmanaged resources and performs other cleanup operations before the
-        ///   <see cref = "Alaris.Extras.CrashHandler" /> is reclaimed by garbage collection.
+        ///   <see cref = "CrashHandler" /> is reclaimed by garbage collection.
         /// </summary>
         ~CrashHandler()
         {

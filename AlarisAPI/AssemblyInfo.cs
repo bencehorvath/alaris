@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle("Alaris.API")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Twl Productions")]
 [assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]

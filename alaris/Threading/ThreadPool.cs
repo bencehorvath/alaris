@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Threading;
 using System.Timers;
 using Alaris.API;
-using Alaris.Core;
 using Timer = System.Timers.Timer;
 
 namespace Alaris.Threading
@@ -21,7 +20,6 @@ namespace Alaris.Threading
         private volatile bool _stop;
         private readonly Thread _watcher;
         private readonly Timer _integrityTimer;
-        private double _lastcheck;
 
         /// <summary>
         ///   Initializes a new instance of the <see cref = "CThreadPool" /> class with the default (5) thread amount.
@@ -49,8 +47,7 @@ namespace Alaris.Threading
             }
 
             Log.Success("ThreadPool", "Workers spawned.");
-            _watcher = new Thread(WatcherProc);
-            _watcher.Name = "Threadpool Job Watcher";
+            _watcher = new Thread(WatcherProc) {Name = "Threadpool Job Watcher"};
             _watcher.Start();
 
             _integrityTimer = new Timer(20000);
@@ -78,7 +75,7 @@ namespace Alaris.Threading
         /// <param name = 'task'>
         ///   Task.
         /// </param>
-        public void Enqueue(IThreadRunnable task)
+        public void Enqueue(ThreadRunnable task)
         {
             if (task == null) throw new ArgumentNullException("task");
             Log.Debug("ThreadPool", "Got new job: 0x" + Math.Abs(task.GetHashCode()).ToString("x"));
@@ -94,14 +91,14 @@ namespace Alaris.Threading
             _stop = true;
             _integrityTimer.Stop();
 
-            for (int i = 0; i < _availableWorkers.Count; ++i)
+            for (var i = 0; i < _availableWorkers.Count; ++i)
             {
                 var worker = _availableWorkers[i];
                 _availableWorkers.Remove(worker);
                 worker.Dispose();
             }
 
-            for (int i = 0; i < _busyWorkers.Count; ++i)
+            for (var i = 0; i < _busyWorkers.Count; ++i)
             {
                 var worker = _busyWorkers[i];
 
@@ -138,7 +135,7 @@ namespace Alaris.Threading
         /// <param name = 'task'>
         ///   Task.
         /// </param>
-        public void Dequeue(IThreadRunnable task)
+        public void Dequeue(ThreadRunnable task)
         {
             _pendingJobs.Remove(task);
         }
@@ -172,8 +169,8 @@ namespace Alaris.Threading
                 DoWorkEventHandler dljob = null;
                 if (job is IThreadContext)
                     dljob = (object sender, DoWorkEventArgs e) => { ((IThreadContext) job).Run(); };
-                else if (job is IThreadRunnable)
-                    dljob = (object sender, DoWorkEventArgs e) => { ((IThreadRunnable) job)(); };
+                else if (job is ThreadRunnable)
+                    dljob = (object sender, DoWorkEventArgs e) => { ((ThreadRunnable) job)(); };
 
                 worker.DoWork += dljob;
 
@@ -197,7 +194,7 @@ namespace Alaris.Threading
                     Log.Debug("ThreadPool",
                               "Thread 0x" + (Math.Abs(worker.GetHashCode())).ToString("x") +
                               " is now executing task with guid: " + (job as IThreadContext).GetGuid());
-                else if (job is IThreadRunnable)
+                else if (job is ThreadRunnable)
                     Log.Debug("ThreadPool",
                               "Thread 0x" + (Math.Abs(worker.GetHashCode())).ToString("x") +
                               " is now executing task: 0x" + Math.Abs(job.GetHashCode()).ToString("x"));

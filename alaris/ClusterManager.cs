@@ -2,7 +2,6 @@ using System;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
 using Alaris.API;
-using Alaris.Core;
 
 namespace Alaris.Extras
 {
@@ -11,7 +10,6 @@ namespace Alaris.Extras
     /// </summary>
     public class ClusterManager
     {
-        private DatabaseManager _manager;
 
         private ClusterManager()
         {
@@ -26,29 +24,8 @@ namespace Alaris.Extras
             var channel = new TcpChannel();
             ChannelServices.RegisterChannel(channel, false);
 
-            _manager =
-                (DatabaseManager) Activator.GetObject(typeof (DatabaseManager), "tcp://localhost:9091/DatabaseManager");
-
-            if (_manager.Equals(null))
-                throw new InvalidOperationException(
-                    "Couldn't request the DatabaseManager instance from the database server.");
-
-            Log.Debug("ClusterManager", "DatabaseManager instance requested successfully.");
+           
         }
 
-
-        /// <summary>
-        ///   The Database Manager
-        /// </summary>
-        public DatabaseManager DatabaseManager
-        {
-            get
-            {
-                if (_manager.Equals(null))
-                    throw new InvalidOperationException("The requested manager instance is null!");
-
-                return _manager;
-            }
-        }
     }
 }

@@ -1,7 +1,12 @@
 using System;
 using System.Threading;
 using Alaris.API;
-using Alaris.Core;
+using Alaris.API.Database;
+using Alaris.Calculator;
+using Alaris.Calculator.lexer;
+using System.IO;
+using Alaris.Calculator.node;
+using Alaris.Calculator.parser;
 using Alaris.Irc;
 using Alaris.Network;
 
@@ -45,9 +50,43 @@ namespace Alaris
                 }
             }
 
+            if(msg.StartsWith("@calc ") || msg.StartsWith("@c "))
+            {
+                if (msg.StartsWith("@calc ")) msg = msg.Replace("@calc ", string.Empty);
+                else if (msg.StartsWith("@c ")) msg = msg.Replace("@c ", string.Empty);
+
+                using (var reader = new StringReader(msg))
+                {
+                    var lexer = new Lexer(reader);
+
+                    var parser = new Parser(lexer);
+
+                    Start ast = null;
+
+                    try {
+                        ast = parser.Parse(); }
+                    catch(Exception x)
+                    {
+                        Log.Error("Math", x.ToString());
+                        return;
+                    }
+
+                    var printer = new AstPrinter();
+                    ast.Apply(printer);
+                    printer.Dispose();
+
+                    var calc = new AstCalculator();
+                    ast.Apply(calc);
+
+                    _connection.Sender.PublicMessage(chan, calc.CalculatedResult.ToString());
+                    return;
+                   
+                }
+            }
+
             // Lua code runner.
 
-            LuaEngine.LuaHelper.HandleLuaCommands(_manager.Lua.LuaVM, chan, msg);
+            //LuaEngine.LuaHelper.HandleLuaCommands(_manager.Lua.LuaVM, chan, msg);
 
             if (msg == "@quit" && Utilities.IsAdmin(user))
             {
@@ -100,28 +139,19 @@ namespace Alaris
                 packet.Dispose();
             }
 
-            if (msg.StartsWith("@sayid ") && MysqlEnabled)
-            {
-                int id;
-                try
-                {
-                    id = Convert.ToInt32(msg.Remove(0, 7));
-                }
-                catch
-                {
-                    return;
-                }
+           if(msg.StartsWith("@admin add ", StringComparison.InvariantCultureIgnoreCase))
+           {
+               msg = msg.Replace("@admin add ", string.Empty);
 
-                var row = _sDatabaseManager.QueryFirstRow("SELECT msg FROM messages WHERE id = '" + id + "'");
+               var parts = msg.Split(' ');
 
-                if (row == null)
-                {
-                    _connection.Sender.PublicMessage(chan, "Nincs ilyen sor.");
-                    return;
-                }
+               if (parts.Length != 3) { SendMsg(chan, "Syntax: ADMIN ADD <user> <nick> <hostname>");
+                   return;  }
 
-                _connection.Sender.PublicMessage(chan, row["msg"].ToString());
-            }
+               DatabaseManager.Query(string.Format("INSERT INTO admins(user,nick,hostname) VALUES('{0}', '{1}', '{2}')", parts[0], parts[1], parts[2]));
+
+               SendMsg(chan, string.Format("Admin {0} has been added.", parts[1]));
+           }
 
         }
     }

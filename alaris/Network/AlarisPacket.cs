@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Alaris.Core
+namespace Alaris.Network
 {
     /// <summary>
     ///   Class used to create packets which will be sent between Alaris server and client.
@@ -9,13 +9,12 @@ namespace Alaris.Core
     public class AlarisPacket : IDisposable
     {
         private string _netmsg;
-        private readonly bool _reading;
         private readonly List<string> split_buffer;
         private const string Separator = "|;|";
         private int read_position;
 
         /// <summary>
-        ///   Initializes a new instance of the <see cref = "Alaris.Core.AlarisPacket" /> class.
+        ///   Initializes a new instance of the <see cref = "AlarisPacket" /> class.
         /// </summary>
         /// <param name = 'net_message'>
         ///   Net message.
@@ -23,18 +22,16 @@ namespace Alaris.Core
         public AlarisPacket(string net_message)
         {
             _netmsg = net_message;
-            _reading = true;
 
             split_buffer = new List<string>(_netmsg.Split((new[] {Separator}), StringSplitOptions.RemoveEmptyEntries));
         }
 
         /// <summary>
-        ///   Initializes a new instance of the <see cref = "Alaris.Core.AlarisPacket" /> class.
+        ///   Initializes a new instance of the <see cref = "AlarisPacket" /> class.
         /// </summary>
         public AlarisPacket()
         {
             _netmsg = string.Empty;
-            _reading = false;
         }
 
         /// <summary>
@@ -112,13 +109,13 @@ namespace Alaris.Core
 
 
         /// <summary>
-        ///   Releases all resource used by the <see cref = "Alaris.Core.AlarisPacket" /> object.
+        ///   Releases all resource used by the <see cref = "AlarisPacket" /> object.
         /// </summary>
         /// <remarks>
-        ///   Call <see cref = "Dispose" /> when you are finished using the <see cref = "Alaris.Core.AlarisPacket" />. The
-        ///   <see cref = "Dispose" /> method leaves the <see cref = "Alaris.Core.AlarisPacket" /> in an unusable state. After calling
-        ///   <see cref = "Dispose" />, you must release all references to the <see cref = "Alaris.Core.AlarisPacket" /> so the
-        ///   garbage collector can reclaim the memory that the <see cref = "Alaris.Core.AlarisPacket" /> was occupying.
+        ///   Call <see cref = "Dispose" /> when you are finished using the <see cref = "AlarisPacket" />. The
+        ///   <see cref = "Dispose" /> method leaves the <see cref = "AlarisPacket" /> in an unusable state. After calling
+        ///   <see cref = "Dispose" />, you must release all references to the <see cref = "AlarisPacket" /> so the
+        ///   garbage collector can reclaim the memory that the <see cref = "AlarisPacket" /> was occupying.
         /// </remarks>
         public void Dispose()
         {

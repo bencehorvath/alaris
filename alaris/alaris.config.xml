@@ -6,12 +6,14 @@
       <nickname>alaris</nickname>
       <nickserv>nothing</nickserv>
       <channels>#skullbot,#hun_bot</channels>
+      <!-- Main admin. Optional ones can be added in runtime. -->
       <admin>
         <nick>Twl</nick>
         <user>Twl</user>
         <host>evil.from.behind</host>
       </admin>
     </irc>
+    <!-- MySQL support is currently removed. It was useless due to our new mobile system. -->
     <mysql>
       <enabled>false</enabled>
       <hostname>localhost</hostname>
@@ -19,7 +21,10 @@
       <password>pw</password>
       <database>alaris</database>
     </mysql>
+    <!-- Change only if you know what you're doing. -->
+    <database>Alaris</database>
     <scripts>
+      <LUA>Disabled</LUA>
       <directory>scripts</directory>
       <AdditionalReferences></AdditionalReferences>
     </scripts>
