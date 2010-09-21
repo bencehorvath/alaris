@@ -14,17 +14,6 @@ namespace Alaris.Tests
         }
 
         [TestMethod]
-        public void TestDefaultMysqlDetails()
-        {
-            var bot = Singleton<AlarisBot>.Instance;
-
-            Assert.IsNotNull(bot, "Bot instance retrieved from singleton is null.");
-            Assert.IsNotNull(bot.MysqlData, "MySQL data array is null.");
-            Assert.AreNotEqual(true, bot.MysqlEnabled, "MySQL should not be enabled on creation.");
-
-        }
-
-        [TestMethod]
         public void TestScriptManagerFuncionality()
         {
             var bot = Singleton<AlarisBot>.Instance;

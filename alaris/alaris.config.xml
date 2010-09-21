@@ -13,14 +13,6 @@
         <host>evil.from.behind</host>
       </admin>
     </irc>
-    <!-- MySQL support is currently removed. It was useless due to our new mobile system. -->
-    <mysql>
-      <enabled>false</enabled>
-      <hostname>localhost</hostname>
-      <username>root</username>
-      <password>pw</password>
-      <database>alaris</database>
-    </mysql>
     <!-- Change only if you know what you're doing. -->
     <database>Alaris</database>
     <scripts>

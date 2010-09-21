@@ -130,10 +130,6 @@
     <Reference Include="System.Xml.Linq">
     </Reference>
     <Reference Include="System.Management" />
-    <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\dep\MySql.Data.dll</HintPath>
-    </Reference>
     <Reference Include="System.Runtime.Remoting" />
   </ItemGroup>
   <ItemGroup>
