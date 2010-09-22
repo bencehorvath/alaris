@@ -58,6 +58,11 @@ namespace Alaris
         }
 
         /// <summary>
+        /// Gets the current locale.
+        /// </summary>
+        public string Locale { get; private set; }
+
+        /// <summary>
         ///   The bot's script manager instance.
         /// </summary>
         public ScriptManager ScriptManager
@@ -221,6 +226,10 @@ namespace Alaris
             DBName = config.GetSetting("config/database", "Alaris").ToUpper(CultureInfo.InvariantCulture);
 
             LuaEnabled = config.GetSetting("config/scripts/LUA", "Disabled").Equals("Enabled");
+
+            Locale = config.GetSetting("config/localization/locale", "enGB");
+
+            Log.Debug("LocalizationManager", string.Format("Current locale is: {0}", Locale));
 
             Log.Success("Config", "File read and validated successfully.");
             _confdone = true;

@@ -6,7 +6,7 @@
       <nickname>alaris</nickname>
       <nickserv>nothing</nickserv>
       <channels>#skullbot,#hun_bot</channels>
-      <!-- Main admin. Optional ones can be added in runtime. -->
+      <!-- Main admin. Optional ones can be added on-the-fly. -->
       <admin>
         <nick>Twl</nick>
         <user>Twl</user>
@@ -20,5 +20,8 @@
       <directory>scripts</directory>
       <AdditionalReferences></AdditionalReferences>
     </scripts>
+    <localization>
+      <locale>huHU</locale>
+    </localization>
   </config>
 </alaris>

@@ -139,6 +139,7 @@
     <Compile Include="Exceptions\ScriptCollectionInvalidException.cs" />
     <Compile Include="Exceptions\ScriptCompileException.cs" />
     <Compile Include="Exceptions\ScriptTypeException.cs" />
+    <Compile Include="Localization\LocalizationManager.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

@@ -8,6 +8,7 @@ using System.IO;
 using Alaris.Calculator.node;
 using Alaris.Calculator.parser;
 using Alaris.Irc;
+using Alaris.Localization;
 using Alaris.Network;
 
 namespace Alaris
@@ -52,8 +53,8 @@ namespace Alaris
 
             if(msg.StartsWith("@calc ", StringComparison.InvariantCultureIgnoreCase) || msg.StartsWith("@c ", StringComparison.InvariantCultureIgnoreCase))
             {
-                if (msg.StartsWith("@calc ")) msg = msg.Replace("@calc ", string.Empty);
-                else if (msg.StartsWith("@c ")) msg = msg.Replace("@c ", string.Empty);
+                if (msg.StartsWith("@calc ", StringComparison.InvariantCultureIgnoreCase)) msg = msg.Replace("@calc ", string.Empty);
+                else if (msg.StartsWith("@c ", StringComparison.InvariantCultureIgnoreCase)) msg = msg.Replace("@c ", string.Empty);
 
                 using (var reader = new StringReader(msg))
                 {
@@ -97,7 +98,7 @@ namespace Alaris
 
             if (msg.Equals("@help", StringComparison.InvariantCultureIgnoreCase))
             {
-                _connection.Sender.PublicMessage(chan, "Available commands: info | quit | sys | join | title | mangos");
+                _connection.Sender.PublicMessage(chan, string.Format("{0}: info | quit | sys | join | title | mangos", LocalizationManager.GetLocalizedText("Available commands", Locale)));
                 return;
             }
 
