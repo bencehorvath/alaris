@@ -237,14 +237,16 @@ namespace Alaris.API
             if (msg == null) throw new ArgumentNullException("msg");
 
             var tt = msg.Replace("@title ", string.Empty);
+
             if (!tt.StartsWith("http://"))
             {
                 tt = "http://" + tt;
             }
+
             var url = new Uri(tt);
-            string title = WebHelper.GetWebTitle(url);
-            title = title.Replace(Environment.NewLine, " ").Replace("  ", " ").Replace("    ", " ");
-            // the spaces are for youtube's shit
+
+            var title = Regex.Replace(WebHelper.GetWebTitle(url), @"\s+", " ");
+
 
             // check if it's youtube.
             var youtubeRegex = new Regex(@"\s*YouTube\s*\-(?<song>.+)", RegexOptions.IgnoreCase);
@@ -252,7 +254,7 @@ namespace Alaris.API
             if (youtubeRegex.IsMatch(title))
             {
                 var match = youtubeRegex.Match(title);
-                string song = match.Groups["song"].ToString();
+                var song = match.Groups["song"].ToString();
 
                 connection.Sender.PublicMessage(chan,
                                                 IrcConstants.Purple + "[YouTube]: " + IrcConstants.DarkGreen +
@@ -291,7 +293,7 @@ namespace Alaris.API
                 {
                     for (var j = 2; j <= n; j++)
                     {
-                        if (i != j && i % j == 0)
+                        if (i != j && i%j == 0)
                         {
                             prime = false;
                             break;
