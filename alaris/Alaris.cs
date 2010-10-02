@@ -10,7 +10,6 @@ using System.Threading;
 using Alaris.API;
 using Alaris.API.Database;
 using Alaris.Config;
-using Alaris.Extras;
 using Alaris.Irc;
 using Alaris.Irc.Ctcp;
 using Alaris.Network;

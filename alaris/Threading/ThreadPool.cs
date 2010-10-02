@@ -11,7 +11,7 @@ namespace Alaris.Threading
     /// <summary>
     ///   A simple Thread pool implementation.
     /// </summary>
-    public sealed class CThreadPool : IDisposable
+    public sealed class CThreadPool : IDisposable, IAlarisComponent
     {
         private readonly List<BackgroundWorker> _availableWorkers;
         private readonly List<BackgroundWorker> _busyWorkers;
@@ -20,6 +20,7 @@ namespace Alaris.Threading
         private volatile bool _stop;
         private readonly Thread _watcher;
         private readonly Timer _integrityTimer;
+        private readonly Guid _guid;
 
         /// <summary>
         ///   Initializes a new instance of the <see cref = "CThreadPool" /> class with the default (5) thread amount.
@@ -37,7 +38,10 @@ namespace Alaris.Threading
         public CThreadPool(int maxThreads)
         {
             Log.Notice("ThreadPool", "Initializing with " + maxThreads + " threads.");
-            Thread.Sleep(800);
+
+
+            _guid = Guid.NewGuid();
+
             _availableWorkers = new List<BackgroundWorker>(maxThreads + 1);
             _busyWorkers = new List<BackgroundWorker>(maxThreads + 1);
 
@@ -237,6 +241,11 @@ namespace Alaris.Threading
             _watcher.Join(600);
             _integrityTimer.Stop();
             _integrityTimer.Close();
+        }
+
+        public Guid GetGuid()
+        {
+            return _guid;
         }
     }
 }

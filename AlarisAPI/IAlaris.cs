@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Alaris.API
 {
-	public interface IAlarisBasic
+	public interface IAlarisBasic : IAlarisComponent
 	{
 	    void Initialize(ref Connection con, List<string> channels);
         /// <summary>

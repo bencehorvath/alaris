@@ -2,7 +2,6 @@ using System;
 using Alaris.API;
 using System.Net.Sockets;
 using System.Collections.Generic;
-using Alaris.Extras;
 using System.Text;
 using Alaris.Network;
 

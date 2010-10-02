@@ -13,13 +13,15 @@ namespace Alaris
     /// <summary>
     ///   A class providing functions to run specific method in an exception-handled environment.
     /// </summary>
-    public class CrashHandler
+    public class CrashHandler : IAlarisComponent
     {
+        private readonly Guid _guid;
         /// <summary>
         ///   Creates a new instance of <see cref = "CrashHandler" />
         /// </summary>
         private CrashHandler()
         {
+            _guid = Guid.NewGuid();
         }
 
         /// <summary>
@@ -29,6 +31,11 @@ namespace Alaris
         ~CrashHandler()
         {
             Log.Debug("CrashHandler", "~CrashHandler()");
+        }
+
+        public Guid GetGuid()
+        {
+            return _guid;
         }
 
         /// <summary>

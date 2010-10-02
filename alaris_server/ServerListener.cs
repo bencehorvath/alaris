@@ -11,7 +11,6 @@ using System.Threading;
 using System.Timers;
 using Alaris.API;
 using Alaris.Irc;
-using Alaris.Extras;
 using System.Net.Sockets;
 using Alaris.Network;
 

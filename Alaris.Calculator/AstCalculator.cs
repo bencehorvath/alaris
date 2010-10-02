@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using Alaris.API;
 using Alaris.Calculator.analysis;
 using Alaris.Calculator.node;
 using Emil.GMP;
 
 namespace Alaris.Calculator
 {
-    public sealed class AstCalculator : DepthFirstAdapter
+    public sealed class AstCalculator : DepthFirstAdapter, IAlarisComponent
     {
         private double? _result;
         private readonly Stack<double> _stack = new Stack<double>();
+        private readonly Guid _guid;
+
+        public AstCalculator() {
+            _guid = Guid.NewGuid(); }
 
         public double CalculatedResult
         {
@@ -97,6 +102,11 @@ namespace Alaris.Calculator
         public override void InANumberExp(ANumberExp node)
         {
             _stack.Push(Convert.ToDouble(node.GetNumber().Text.Trim(), new CultureInfo("en-us")));
+        }
+
+        public Guid GetGuid()
+        {
+            return _guid;
         }
     }
 }

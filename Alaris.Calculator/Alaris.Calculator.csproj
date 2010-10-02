@@ -51,6 +51,10 @@
     <Compile Include="tokens.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AlarisAPI\Alaris.API.csproj">
+      <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
+      <Name>Alaris.API</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Emil.GMP\Emil.GMP.csproj">
       <Project>{DC17E27A-47D4-436B-B885-A4D285CB9BA1}</Project>
       <Name>Emil.GMP</Name>

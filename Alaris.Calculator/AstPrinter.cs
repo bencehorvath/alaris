@@ -1,17 +1,20 @@
 ﻿using System;
 using System.IO;
+using Alaris.API;
 using Alaris.Calculator.analysis;
 using Alaris.Calculator.node;
 
 namespace Alaris.Calculator
 {
-    public sealed class AstPrinter : DepthFirstAdapter, IDisposable
+    public sealed class AstPrinter : DepthFirstAdapter, IDisposable, IAlarisComponent
     {
         private int _indent;
         private readonly StreamWriter _writer;
+        private readonly Guid _guid;
 
         public AstPrinter()
         {
+            _guid = Guid.NewGuid();
             _writer = new StreamWriter("ast.log", true);
         }
 
@@ -61,6 +64,11 @@ namespace Alaris.Calculator
         public void Dispose()
         {
             _writer.Dispose();
+        }
+
+        public Guid GetGuid()
+        {
+            return _guid;
         }
     }
 }

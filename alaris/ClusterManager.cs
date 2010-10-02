@@ -1,14 +1,12 @@
-using System;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
-using Alaris.API;
 
-namespace Alaris.Extras
+namespace Alaris
 {
     /// <summary>
     ///   Class for managing nodes in the cluster (like the database interface)
     /// </summary>
-    public class ClusterManager
+    public sealed class ClusterManager
     {
 
         private ClusterManager()

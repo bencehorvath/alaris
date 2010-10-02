@@ -1,16 +1,18 @@
 using System;
 using System.Xml;
+using Alaris.API;
 
 namespace Alaris.Config
 {
     /// <summary>
     ///   XML settings class, used for config files.
     /// </summary>
-    public sealed class XmlSettings
+    public sealed class XmlSettings : IAlarisComponent
     {
         private readonly XmlDocument _xmlDocument = new XmlDocument();
         private readonly string _documentPath = string.Empty;
         private readonly string _rootNode = "";
+        private readonly Guid _guid;
 
         ///<summary>
         ///  Create a new instance of XmlSettings.
@@ -19,6 +21,9 @@ namespace Alaris.Config
         ///<param name = "root">The xml document's root node.</param>
         public XmlSettings(string document, string root)
         {
+
+            _guid = Guid.NewGuid();
+
             try
             {
                 _xmlDocument.Load(document);
@@ -99,6 +104,11 @@ namespace Alaris.Config
                 currentXPath += "/";
             }
             return currentNode;
+        }
+
+        public Guid GetGuid()
+        {
+            return _guid;
         }
     }
 }
