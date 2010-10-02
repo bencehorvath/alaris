@@ -28,7 +28,7 @@ namespace Alaris.Localizer
             
 
             gridView.CellValueChanged += CellValueChanged;
-            
+           
         }
 
         private void RefreshGridValues()
@@ -56,6 +56,8 @@ namespace Alaris.Localizer
             {
                 gridView.Rows.Add(row["id"], row["originalText"], row["text"], row["locale"]);
             }
+
+            Closing += (s, e) => Application.Exit();
         }
 
         private void CellValueChanged(object sender, DataGridViewCellEventArgs e)

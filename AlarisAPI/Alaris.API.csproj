@@ -93,6 +93,7 @@
     <Compile Include="IAlaris.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Database\IManager.cs" />
+    <Compile Include="IAlarisPlugin.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Database\DatabaseManager.cs" />
     <Compile Include="Utilities.cs" />

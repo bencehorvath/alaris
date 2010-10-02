@@ -49,7 +49,7 @@ namespace Alaris.API
             var username = Environment.UserName;
 
             var os = Environment.OSVersion.ToString();
-            var mem = Process.GetCurrentProcess().WorkingSet64/1024/1024;
+            var mem = Process.GetCurrentProcess().WorkingSet64 / 1024 / 1024;
 
             connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Bot version: " + IrcConstants.Normal + BotVersion);
             connection.Sender.PublicMessage(chan,
@@ -244,11 +244,11 @@ namespace Alaris.API
             var url = new Uri(tt);
             string title = WebHelper.GetWebTitle(url);
             title = title.Replace(Environment.NewLine, " ").Replace("  ", " ").Replace("    ", " ");
-                // the spaces are for youtube's shit
+            // the spaces are for youtube's shit
 
             // check if it's youtube.
             var youtubeRegex = new Regex(@"\s*YouTube\s*\-(?<song>.+)", RegexOptions.IgnoreCase);
-           
+
             if (youtubeRegex.IsMatch(title))
             {
                 var match = youtubeRegex.Match(title);
@@ -278,6 +278,29 @@ namespace Alaris.API
             return
                 (from ManagementObject mo in mos.Get() select (Regex.Replace(Convert.ToString(mo["Name"]), @"\s+", " ")))
                     .FirstOrDefault();
+        }
+
+        public static class Math
+        {
+            public static bool IsPrime(double x)
+            {
+                var prime = true;
+                var n = System.Math.Floor(System.Math.Sqrt(x));
+
+                for (var i = 1; i <= x; i++)
+                {
+                    for (var j = 2; j <= n; j++)
+                    {
+                        if (i != j && i % j == 0)
+                        {
+                            prime = false;
+                            break;
+                        }
+                    }
+                }
+
+                return prime;
+            }
         }
     }
 }

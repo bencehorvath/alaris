@@ -172,6 +172,17 @@ namespace Alaris
                 SendMsg(chan, string.Format("Admin {0} deleted.", msg));              
             }
 
+            if(msg.StartsWith("@prime ", StringComparison.InvariantCultureIgnoreCase))
+            {
+                msg = msg.Remove(0, 7);
+                var num = 0d;
+                try {num = Convert.ToDouble(msg);}catch{}
+
+                Log.Debug("Math", string.Format("Checking prime for: {0}", num));
+
+                SendMsg(chan, Utilities.Math.IsPrime(num) ? "It's a prime." : "It's not a prime.");
+            }
+
         }
     }
 }
