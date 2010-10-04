@@ -36,19 +36,19 @@ namespace Alaris.Irc.Dcc
 
 		//Default timeout is 30 seconds
 		private const int DefaultTimeout = 30000;
-		private readonly DccUserInfo dccUserInfo;
-		private TcpClient client;
-		private TcpListener server;
-		private Thread thread;
-		private int listenPort;
-		private bool listening;
-		private bool receiving;
+		private readonly DccUserInfo _dccUserInfo;
+		private TcpClient _client;
+		private TcpListener _server;
+		private Thread _thread;
+		private int _listenPort;
+		private bool _listening;
+		private bool _receiving;
 	
 		internal DccChatSession( DccUserInfo dccUserInfo  )
 		{
-			this.dccUserInfo = dccUserInfo;
-			listening = false;
-			receiving = false;
+			_dccUserInfo = dccUserInfo;
+			_listening = false;
+			_receiving = false;
 		}
 
 		/// <summary>
@@ -60,7 +60,7 @@ namespace Alaris.Irc.Dcc
 		{
 			get
 			{
-				return client != null;
+				return _client != null;
 			}
 		}
 		/// <summary>
@@ -71,14 +71,14 @@ namespace Alaris.Irc.Dcc
 		{
 			get 
 			{
-				return dccUserInfo;
+				return _dccUserInfo;
 			}
 		}
 
 		private void CloseClientConnection() 
 		{
-			client.GetStream().Close();
-			client.Close();
+			_client.GetStream().Close();
+			_client.Close();
 		}
 		/// <summary>
 		/// Send the session closed event
@@ -98,13 +98,13 @@ namespace Alaris.Irc.Dcc
 		{
 			//512 is the max IRC message size
 			var builder = new StringBuilder("PRIVMSG ", 512 );
-			builder.Append( dccUserInfo.Nick );
+			builder.Append( _dccUserInfo.Nick );
 			builder.Append( " :\x0001DCC CHAT CHAT " );
 			builder.Append( DccUtil.IPAddressToLong( IPAddress.Parse( listenIpAddress) ) );
 			builder.Append( " " );
 			builder.Append( port );
 			builder.Append( "\x0001\n");
-			dccUserInfo.Connection.Sender.Raw( builder.ToString() );
+			_dccUserInfo.Connection.Sender.Raw( builder.ToString() );
 		}
 		/// <summary>
 		/// Called when timeout thread is done.
@@ -115,9 +115,9 @@ namespace Alaris.Irc.Dcc
 		/// <param name="state">An instance of DccChatSession</param>
 		private void TimerExpired( object state ) 
 		{
-			if( listening ) 
+			if( _listening ) 
 			{
-				Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, "[" + Thread.CurrentThread.Name +"] DccChatSession::TimerExpired() Chat session " + this.ToString() + " timed out.");
+				Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, string.Format("[{0}] DccChatSession::TimerExpired() Chat session {1} timed out.", Thread.CurrentThread.Name, ToString()));
 				if( OnChatRequestTimeout != null ) 
 				{
 					OnChatRequestTimeout( this );
@@ -131,15 +131,15 @@ namespace Alaris.Irc.Dcc
 			try 
 			{
 				//Wait for remote client to connect
-				IPEndPoint localEndPoint = new IPEndPoint( DccUtil.LocalHost(), listenPort );
-				server = new TcpListener( localEndPoint );
-				listening = true;
-				server.Start();
+				var localEndPoint = new IPEndPoint( DccUtil.LocalHost(), _listenPort );
+				_server = new TcpListener( localEndPoint );
+				_listening = true;
+				_server.Start();
 				//Got one!
-				client = server.AcceptTcpClient();
-				server.Stop();
-				listening = false;
-				Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, "[" + Thread.CurrentThread.Name +"] DccChatSession::Listen() Remote user connected.");
+				_client = _server.AcceptTcpClient();
+				_server.Stop();
+				_listening = false;
+				Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, string.Format("[{0}] DccChatSession::Listen() Remote user connected.", Thread.CurrentThread.Name));
 				if( OnChatSessionOpened != null ) 
 				{
 					OnChatSessionOpened( this );
@@ -162,8 +162,8 @@ namespace Alaris.Irc.Dcc
 			Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, "[" + Thread.CurrentThread.Name +"] DccChatSession::Connect()");
 			try 
 			{
-				client = new TcpClient();
-				client.Connect( dccUserInfo.RemoteEndPoint );
+				_client = new TcpClient();
+				_client.Connect( _dccUserInfo.RemoteEndPoint );
 				if( OnChatSessionOpened != null ) 
 				{
 					OnChatSessionOpened( this );
@@ -175,11 +175,11 @@ namespace Alaris.Irc.Dcc
 				Debug.WriteLineIf( Rfc2812Util.IrcTrace.TraceWarning, "[" + Thread.CurrentThread.Name +"] DccChatSession::Connect() exception=" + se );		
 				if( se.Message.IndexOf("refused" ) > 0 ) 
 				{
-					dccUserInfo.Connection.Listener.Error( ReplyCode.DccConnectionRefused, "Connection refused by remote user." );
+					_dccUserInfo.Connection.Listener.FireError( ReplyCode.DccConnectionRefused, "Connection refused by remote user." );
 				}
 				else 
 				{
-					dccUserInfo.Connection.Listener.Error( ReplyCode.ConnectionFailed, "Unknown socket error:" + se.Message );
+					_dccUserInfo.Connection.Listener.FireError( ReplyCode.ConnectionFailed, "Unknown socket error:" + se.Message );
 				}
 				CloseClientConnection();
 			}
@@ -193,32 +193,32 @@ namespace Alaris.Irc.Dcc
 			Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, "[" + Thread.CurrentThread.Name +"] DccChatSession::ReceiveMessages()");
 			try 
 			{
-				receiving = true;
-				string message = "";
-				StreamReader reader = new StreamReader( client.GetStream(), dccUserInfo.Connection.TextEncoding );
+				_receiving = true;
+				string message;
+				var reader = new StreamReader( _client.GetStream(), _dccUserInfo.Connection.TextEncoding );
 				while( ( message = reader.ReadLine() ) != null ) 
 				{
 					if( OnChatMessageReceived != null ) 
 					{
 						Debug.Indent();
-						Debug.WriteLineIf( DccUtil.DccTrace.TraceVerbose, "[" + Thread.CurrentThread.Name +"] DccChatSession::ReceiveMessages() Session: " + ToString() + " Received: " + message );
+						Debug.WriteLineIf( DccUtil.DccTrace.TraceVerbose, string.Format("[{0}] DccChatSession::ReceiveMessages() Session: {1} Received: {2}", Thread.CurrentThread.Name, ToString(), message) );
 						Debug.Unindent();
 						OnChatMessageReceived( this, message );
 					}
 				}
-				receiving = false;
+				_receiving = false;
 				//Read loop broken. Remote user must have closed the socket
-				dccUserInfo.Connection.Listener.Error( ReplyCode.ConnectionFailed, "Chat connection closed by remote user." );
+				_dccUserInfo.Connection.Listener.FireError( ReplyCode.ConnectionFailed, "Chat connection closed by remote user." );
 			}
 			catch( ThreadAbortException tae ) 
 			{
-				Debug.WriteLineIf( DccUtil.DccTrace.TraceWarning, "[" + Thread.CurrentThread.Name +"] DccChatSession::ReceiveMessages() Thread manually stopped. ");
+				Debug.WriteLineIf( DccUtil.DccTrace.TraceWarning, string.Format("[{0}] DccChatSession::ReceiveMessages() Thread manually stopped. ", Thread.CurrentThread.Name));
 				//Prevent the exception from being re-thrown in the Listen() method.
 				Thread.ResetAbort();
 			}
 			catch( Exception e ) 
 			{
-				Debug.WriteLineIf( DccUtil.DccTrace.TraceWarning, "[" + Thread.CurrentThread.Name +"] DccChatSession::ReceiveMessages() exception= "+ e);
+				Debug.WriteLineIf( DccUtil.DccTrace.TraceWarning, string.Format("[{0}] DccChatSession::ReceiveMessages() exception= {1}", Thread.CurrentThread.Name, e));
 			}
 			finally 
 			{
@@ -242,13 +242,13 @@ namespace Alaris.Irc.Dcc
 					//Some IRC client are looking for a newline (ie mIRC) so add one
 					//before sending. Also strip off any existing new lines so
 					//we don't accidentally send two.
-					byte[] messageBytes = dccUserInfo.Connection.TextEncoding.GetBytes( text.TrimEnd() + "\n" );
-					client.GetStream().Write( messageBytes, 0, messageBytes.Length );
-					Debug.WriteLineIf( DccUtil.DccTrace.TraceVerbose, "[" + Thread.CurrentThread.Name +"] DccChatSession::SendMessage() Sent : " + text + " Size: " + messageBytes.Length );
+					var messageBytes = _dccUserInfo.Connection.TextEncoding.GetBytes( text.TrimEnd() + "\n" );
+					_client.GetStream().Write( messageBytes, 0, messageBytes.Length );
+					Debug.WriteLineIf( DccUtil.DccTrace.TraceVerbose, string.Format("[{0}] DccChatSession::SendMessage() Sent : {1} Size: {2}", Thread.CurrentThread.Name, text, messageBytes.Length) );
 				}
 				catch( Exception e ) 
 				{
-					Debug.WriteLineIf( DccUtil.DccTrace.TraceWarning, "[" + Thread.CurrentThread.Name +"] DccChatSession::SendMessage() " + e );
+					Debug.WriteLineIf( DccUtil.DccTrace.TraceWarning, string.Format("[{0}] DccChatSession::SendMessage() {1}", Thread.CurrentThread.Name, e) );
 				}
 			}
 		}
@@ -261,14 +261,14 @@ namespace Alaris.Irc.Dcc
 			//Locked because it may be called by the Timer or client thread
 			lock( this ) 
 			{
-				Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, "[" + Thread.CurrentThread.Name +"] DccChatSession::Close()");
-				if( listening ) 
+				Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, string.Format("[{0}] DccChatSession::Close()", Thread.CurrentThread.Name));
+				if( _listening ) 
 				{
-					server.Stop();
+					_server.Stop();
 				}
-				else if( receiving ) 
+				else if( _receiving ) 
 				{
-					thread.Abort();
+					_thread.Abort();
 				}
 			}
 		}
@@ -278,7 +278,7 @@ namespace Alaris.Irc.Dcc
 		/// <returns>Simple information about this session in human readable format.</returns>
 		public override string ToString() 
 		{
-			return "DccChatSession::" + dccUserInfo.ToString();
+			return string.Format("DccChatSession::{0}", _dccUserInfo);
 		}
 
 		/// <summary>
@@ -296,11 +296,10 @@ namespace Alaris.Irc.Dcc
 		public static DccChatSession Accept( DccUserInfo dccUserInfo ) 
 		{
 			Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, "[" + Thread.CurrentThread.Name +"] DccChatSession::Accept()");
-			DccChatSession session = new DccChatSession( dccUserInfo );
+			var session = new DccChatSession( dccUserInfo );
 			//Start session Thread
-			session.thread = new Thread(new ThreadStart( session.Connect ) );
-			session.thread.Name = session.ToString();
-			session.thread.Start();	
+			session._thread = new Thread(session.Connect) {Name = session.ToString()};
+		    session._thread.Start();	
 			return session;
 		}
 		/// <summary>
@@ -354,12 +353,12 @@ namespace Alaris.Irc.Dcc
 		{
 			Debug.WriteLineIf( DccUtil.DccTrace.TraceInfo, "[" + Thread.CurrentThread.Name +"] DccChatSession::Request()");
 			//Create session object
-			DccChatSession session = new DccChatSession( dccUserInfo );		
-			session.listenPort = listenPort;
+			var session = new DccChatSession( dccUserInfo );		
+			session._listenPort = listenPort;
 			//Start session Thread
-			session.thread = new Thread(new ThreadStart( session.Listen ) );
-			session.thread.Name = session.ToString();
-			session.thread.Start();	
+			session._thread = new Thread(new ThreadStart( session.Listen ) );
+			session._thread.Name = session.ToString();
+			session._thread.Start();	
 			//Send Chat request to remote user
 			session.SendChatRequest( listenIPAddress, listenPort );
 			//Start timeout thread if timeout > 0
@@ -378,7 +377,7 @@ namespace Alaris.Irc.Dcc
 
         public void Dispose()
         {
-            client.Close();
+            _client.Close();
             
         }
     }

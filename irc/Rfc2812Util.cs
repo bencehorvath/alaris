@@ -1,8 +1,9 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System;
 using System.Diagnostics;
 using System.Globalization;
-using System.Collections;
 
 namespace Alaris.Irc
 {
@@ -10,22 +11,20 @@ namespace Alaris.Irc
 	/// <summary>
 	/// RFC 2812 Utility methods.
 	/// </summary>
-	public sealed class Rfc2812Util 
+	public static class Rfc2812Util 
 	{
 		// Regex that matches the standard IRC 'nick!user@host' 
-		private static readonly Regex userRegex;
-		// Regex that matches a legal IRC nick 
-		private static readonly Regex nickRegex;
-		private static readonly Regex emailRegex;
+	    // Regex that matches a legal IRC nick 
+		private static readonly Regex NickRegex;
+		private static readonly Regex EmailRegex;
 		//Regex to create a UserInfo from a string
-		private static readonly Regex nameSplitterRegex;
+		private static readonly Regex NameSplitterRegex;
 		private const string ChannelPrefix = "#!+&";
-		private const string ActionModes = "+-";
-		private const string UserModes = "awiorOs";
+	    private const string UserModes = "awiorOs";
 		private const string ChannelModes = "OohvaimnqpsrtklbeI";
 		private const string Space = " ";
 
-		internal static TraceSwitch IrcTrace = new TraceSwitch("IrcTraceSwitch", "Debug level for RFC2812 classes.");
+		internal static readonly TraceSwitch IrcTrace = new TraceSwitch("IrcTraceSwitch", "Debug level for RFC2812 classes.");
 		// Odd chars that IRC allows in nicknames 
 		internal const string Special = "\\[\\]\\`_\\^\\{\\|\\}";
 		internal const string Nick = "[" + Special + "a-zA-Z][\\w\\-" + Special + "]{0,8}";
@@ -36,34 +35,26 @@ namespace Alaris.Irc
 		/// </summary>
 		static Rfc2812Util() 
 		{
-			userRegex = new Regex( User );
-			nickRegex = new Regex( Nick ); 
-			emailRegex = new Regex(@"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|hu|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b");
-			nameSplitterRegex = new Regex("[!@]",RegexOptions.Compiled | RegexOptions.Singleline );
+		    NickRegex = new Regex( Nick ); 
+			EmailRegex = new Regex(@"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|hu|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b");
+			NameSplitterRegex = new Regex("[!@]",RegexOptions.Compiled | RegexOptions.Singleline );
 		}
 
 		//Should never be instantiated
-		private Rfc2812Util() {}
 
-		/// <summary>
+	    /// <summary>
 		/// Converts the user string sent by the IRC server
 		/// into a UserInfo object.
 		/// </summary>
 		/// <param name="fullUserName">The user in nick!user@host form.</param>
 		/// <returns>A UserInfo object.</returns>
-		public static UserInfo UserInfoFromString( string fullUserName ) 
-		{
-			string[] parts = ParseUserInfoLine( fullUserName );
-			if( parts == null ) 
-			{
-				return UserInfo.Empty;
-			}
-			else 
-			{
-				return new UserInfo( parts[0], parts[1], parts[2] );
-			}
-		}
-		/// <summary>
+		public static UserInfo UserInfoFromString( string fullUserName )
+	    {
+	        var parts = ParseUserInfoLine( fullUserName );
+	        return parts == null ? UserInfo.Empty : new UserInfo(parts[0], parts[1], parts[2]);
+	    }
+
+	    /// <summary>
 		/// Break up an IRC user string into its component
 		/// parts. 
 		/// </summary>
@@ -75,16 +66,14 @@ namespace Alaris.Irc
 			{
 				return null;
 			}
-			Match match = nameSplitterRegex.Match( fullUserName );
+			var match = NameSplitterRegex.Match( fullUserName );
 			if( match.Success ) 
 			{
-				string[] parts = nameSplitterRegex.Split( fullUserName );
+				var parts = NameSplitterRegex.Split( fullUserName );
 				return parts;
 			}
-			else 
-			{
-				return new string[] { fullUserName, "","" };
-			}
+
+	        return new[] { fullUserName, "","" };
 		}
 
 		/// <summary>
@@ -98,14 +87,8 @@ namespace Alaris.Irc
 			{
 				return false;
 			}
-			foreach( string channel in channels ) 
-			{
-				if( !IsValidChannelName( channel ) )
-				{
-					return false;
-				}
-			}
-			return true;
+
+		    return channels.All(IsValidChannelName);
 		}
 
 		/// <summary>
@@ -120,7 +103,7 @@ namespace Alaris.Irc
 				return false;
 			}
 
-			if( Rfc2812Util.ContainsSpace(channel) ) 
+			if( ContainsSpace(channel) ) 
 			{
 				return false;
 			}
@@ -145,11 +128,11 @@ namespace Alaris.Irc
 			{
 				return false;
 			}
-			if( Rfc2812Util.ContainsSpace( nick ) ) 
+			if( ContainsSpace( nick ) ) 
 			{
 				return false;
 			}
-			if ( nickRegex.IsMatch( nick ) ) 
+			if ( NickRegex.IsMatch( nick ) ) 
 			{
 				return true;
 			}
@@ -167,7 +150,7 @@ namespace Alaris.Irc
 		/// </returns>
 		public static bool IsValidEmailAddress(string email)
 		{
-			return (emailRegex.IsMatch(email));
+			return (EmailRegex.IsMatch(email));
 		}
 
 		/// <summary>
@@ -181,14 +164,8 @@ namespace Alaris.Irc
 			{
 				return false;
 			}
-			foreach( string nick in nicks ) 
-			{
-				if( !IsValidNick( nick ) )
-				{
-					return false;
-				}
-			}
-			return true;
+
+		    return nicks.All(IsValidNick);
 		}	
 
 		/// <summary>
@@ -229,17 +206,9 @@ namespace Alaris.Irc
 		/// </summary>
 		/// <param name="modes">A string of UserMode chars from the IRC server.</param>
 		/// <returns>An array of UserMode enums. Charactres that are not from RFC2812 will be droppped.</returns>
-		public static UserMode[] UserModesToArray( string modes ) 
+		public static UserMode[] UserModesToArray( IEnumerable<char> modes ) 
 		{
-			ArrayList list = new ArrayList();
-			for( int i = 0; i < modes.Length; i++ ) 
-			{
-				if( IsValidModeChar( modes[i], UserModes ) ) 
-				{
-					list.Add( CharToUserMode( modes[i] ));
-				}
-			}
-			return (UserMode[]) list.ToArray( typeof(UserMode) );
+		    return (from t in modes where IsValidModeChar(t, UserModes) select CharToUserMode(t)).ToArray();
 		}
 
 		/// <summary>
@@ -260,17 +229,9 @@ namespace Alaris.Irc
 		/// </summary>
 		/// <param name="modes">A string of ChannelMode chars from the IRC server.</param>
 		/// <returns>An array of ChannelMode enums. Charactres that are not from RFC2812 will be droppped.</returns>
-		public static ChannelMode[] ChannelModesToArray( string modes ) 
+		public static ChannelMode[] ChannelModesToArray( IEnumerable<char> modes ) 
 		{
-			ArrayList list = new ArrayList();
-			for( int i = 0; i < modes.Length; i++ ) 
-			{
-				if( IsValidModeChar( modes[i], ChannelModes ) ) 
-				{
-					list.Add( CharToChannelMode( modes[i] ));
-				}
-			}
-			return (ChannelMode[]) list.ToArray( typeof(ChannelMode) );
+		    return (from t in modes where IsValidModeChar(t, ChannelModes) select CharToChannelMode(t)).ToArray();
 		}
 
 		/// <summary>

@@ -76,7 +76,7 @@ namespace Alaris.Irc.Ctcp
 			try 
 			{
 				Match match = CtcpRegex.Match( message );
-				return new string[] { match.Groups[1].ToString(), match.Groups[2].ToString(),match.Groups[3].ToString().Trim()  };
+				return new[] { match.Groups[1].ToString(), match.Groups[2].ToString(),match.Groups[3].ToString().Trim()  };
 			}
 			catch( Exception e ) 
 			{
@@ -131,7 +131,7 @@ namespace Alaris.Irc.Ctcp
 			}
 			else
 			{
-				_connection.Listener.Error( ReplyCode.UnparseableMessage, line );
+				_connection.Listener.FireError( ReplyCode.UnparseableMessage, line );
 				Debug.WriteLineIf( CtcpUtil.CtcpTrace.TraceWarning, "Unknown CTCP command '" + line + "' recieved by CtcpListener" );
 			}
 		}

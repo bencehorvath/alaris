@@ -22,14 +22,14 @@ namespace Alaris.Irc
 	/// </code></example>
 	public sealed class ServerProperties
 	{
-		private Hashtable properties;
+		private readonly Hashtable _properties;
 
 		/// <summary>
 		/// Instances should only be created by the Connection class.
 		/// </summary>
 		internal ServerProperties()
 		{
-			properties = new Hashtable();
+			_properties = new Hashtable();
 		}
 
 		/// <summary>
@@ -39,17 +39,7 @@ namespace Alaris.Irc
 		/// <returns>The string sent by the server or <see cref="String.Empty"/> if not present..</returns>
 		public string this [ string key ] 
 		{
-			get
-			{
-				if( properties[ key ] != null ) 
-				{
-					return (string) properties[key];
-				}
-				else 
-				{
-					return String.Empty;
-				}
-			}
+			get { return _properties[key] != null ? (string) _properties[key] : String.Empty; }
 		}
 
 		/// <summary>
@@ -58,7 +48,7 @@ namespace Alaris.Irc
 		/// </summary>
 		internal void SetProperty( string key, string propertyValue )
 		{
-			properties.Add( key, propertyValue );
+			_properties.Add( key, propertyValue );
 		}
 
 		/// <summary>
@@ -75,7 +65,7 @@ namespace Alaris.Irc
 		/// </code></example>
 		public IDictionaryEnumerator GetEnumerator()
 		{
-			return properties.GetEnumerator();
+			return _properties.GetEnumerator();
 		}
 		/// <summary>
 		/// Test if this instance contains a given key.
@@ -84,7 +74,7 @@ namespace Alaris.Irc
 		/// <returns>True if it is present.</returns>
 		public bool ContainsKey( string key ) 
 		{
-			return properties[ key] != null;
+			return _properties[ key] != null;
 		}
 
 	}

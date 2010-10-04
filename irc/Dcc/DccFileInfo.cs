@@ -9,17 +9,17 @@ namespace Alaris.Irc.Dcc
 	/// </summary>
 	public sealed class DccFileInfo
 	{
-		private FileInfo fileInfo;
-		private FileStream fileStream;
+		private readonly FileInfo _fileInfo;
+		private FileStream _fileStream;
 		//Where in the file to start reading or writing
-		private long fileStartingPosition;
+		private long _fileStartingPosition;
 		//Number of bytes sent or received so far in this
 		//session
-		private long bytesTransfered;
+		private long _bytesTransfered;
 		//Total number of bytes to send or receive
-		private long completeFileSize;
+		private readonly long _completeFileSize;
 		//The last position ack value
-		private long lastAckValue;
+		private long _lastAckValue;
 
 		/// <summary>
 		/// Create a new instance using information sent from the remote user
@@ -30,10 +30,10 @@ namespace Alaris.Irc.Dcc
 		/// request.</param>
 		public DccFileInfo( FileInfo fileInfo, long completeFileSize)
 		{	
-			this.fileInfo = fileInfo;
-			this.completeFileSize = completeFileSize;
-			fileStartingPosition = 0;
-			bytesTransfered = 0;
+			_fileInfo = fileInfo;
+			_completeFileSize = completeFileSize;
+			_fileStartingPosition = 0;
+			_bytesTransfered = 0;
 		}
 		/// <summary>
 		/// Create a new instance using the file information from a local file
@@ -44,14 +44,14 @@ namespace Alaris.Irc.Dcc
 		public DccFileInfo( FileInfo fileInfo) 
 		{
 		    if (fileInfo == null) throw new ArgumentNullException("fileInfo");
-		    this.fileInfo = fileInfo;
+		    _fileInfo = fileInfo;
 			if( !fileInfo.Exists ) 
 			{
 				throw new ArgumentException( fileInfo.Name + " does not exist.");
 			}
-			this.completeFileSize = fileInfo.Length;
-			fileStartingPosition = 0;
-			bytesTransfered = 0;
+			_completeFileSize = fileInfo.Length;
+			_fileStartingPosition = 0;
+			_bytesTransfered = 0;
 		}
 		/// <summary>
 		/// Create a new instance using the file information from a local file
@@ -61,14 +61,14 @@ namespace Alaris.Irc.Dcc
 		/// <exception cref="ArgumentException">If the file does not already exist.</exception>
 		public DccFileInfo( string fileName ) 
 		{
-			this.fileInfo = new FileInfo(fileName);
-			if( !fileInfo.Exists ) 
+			_fileInfo = new FileInfo(fileName);
+			if( !_fileInfo.Exists ) 
 			{
 				throw new ArgumentException( fileName + " does not exist.");
 			}
-			this.completeFileSize = fileInfo.Length;
-			fileStartingPosition = 0;
-			bytesTransfered = 0;
+			_completeFileSize = _fileInfo.Length;
+			_fileStartingPosition = 0;
+			_bytesTransfered = 0;
 		}
 
 		/// <summary>
@@ -79,7 +79,7 @@ namespace Alaris.Irc.Dcc
 		{
 			get 
 			{
-				return fileStartingPosition;
+				return _fileStartingPosition;
 			}
 		}
 		/// <summary>
@@ -93,7 +93,7 @@ namespace Alaris.Irc.Dcc
 			{
 				lock (this ) 
 				{
-					return bytesTransfered;
+					return _bytesTransfered;
 				}
 			}
 		}
@@ -106,7 +106,7 @@ namespace Alaris.Irc.Dcc
 		{
 			get 
 			{
-				return completeFileSize;
+				return _completeFileSize;
 			}
 		}
 		/// <summary>
@@ -118,7 +118,7 @@ namespace Alaris.Irc.Dcc
 		{
 			get 
 			{
-				return DccUtil.SpacesToUnderscores(fileInfo.Name);
+				return DccUtil.SpacesToUnderscores(_fileInfo.Name);
 			}
 		}
 
@@ -126,7 +126,7 @@ namespace Alaris.Irc.Dcc
 		{
 			get 
 			{
-				return fileStream;
+				return _fileStream;
 			}
 		}
 
@@ -139,7 +139,7 @@ namespace Alaris.Irc.Dcc
 		{
 			lock( this ) 
 			{
-				bytesTransfered += additionalBytes;
+				_bytesTransfered += additionalBytes;
 			}
 		}
 		/// <summary>
@@ -148,7 +148,7 @@ namespace Alaris.Irc.Dcc
 		/// </summary>
 		internal bool AcceptPositionMatches( long position ) 
 		{
-			return position == fileStartingPosition;
+			return position == _fileStartingPosition;
 		}
 		/// <summary>
 		/// Our Resume request was accepted so start
@@ -156,7 +156,7 @@ namespace Alaris.Irc.Dcc
 		/// </summary>
 		internal void GotoWritePosition() 
 		{
-			fileStream.Seek( fileStartingPosition +1, SeekOrigin.Begin );
+			_fileStream.Seek( _fileStartingPosition +1, SeekOrigin.Begin );
 		}
 		/// <summary>
 		/// Advance to the correct reading start
@@ -164,7 +164,7 @@ namespace Alaris.Irc.Dcc
 		/// </summary>
 		internal void GotoReadPosition() 
 		{
-			fileStream.Seek( fileStartingPosition, SeekOrigin.Begin );
+			_fileStream.Seek( _fileStartingPosition, SeekOrigin.Begin );
 		}
 		/// <summary>
 		/// Is the position where the remote user would to to resume
@@ -172,7 +172,7 @@ namespace Alaris.Irc.Dcc
 		/// </summary>
 		internal bool ResumePositionValid( long position ) 
 		{
-			return position > 1 && position < fileInfo.Length;
+			return position > 1 && position < _fileInfo.Length;
 		}
 		/// <summary>
 		/// Can this file be resumed, i.e. does it
@@ -180,52 +180,46 @@ namespace Alaris.Irc.Dcc
 		/// </summary>
 		internal bool CanResume() 
 		{
-			return fileStream.CanSeek;
+			return _fileStream.CanSeek;
 		}
 		/// <summary>
 		/// Start a Resume where the file last left off.
 		/// </summary>
 		internal void SetResumeToFileSize() 
 		{
-			fileStartingPosition = fileInfo.Length;
+			_fileStartingPosition = _fileInfo.Length;
 		}
 		/// <summary>
 		/// Set the point at which the transfer will begin
 		/// </summary>
 		internal void SetResumePosition( long resumePosition ) 
 		{
-			fileStartingPosition = resumePosition;
-			bytesTransfered = fileStartingPosition;
+			_fileStartingPosition = resumePosition;
+			_bytesTransfered = _fileStartingPosition;
 		}
 		/// <summary>
 		/// Where in the file is the transfer currently at?
 		/// </summary>
 		internal long CurrentFilePosition() 
 		{
-			return BytesTransfered + fileStartingPosition;
+			return BytesTransfered + _fileStartingPosition;
 		}
 		/// <summary>
 		/// Have all the file's bytes been sent/received?
 		/// </summary>
 		internal Boolean AllBytesTransfered()
 		{
-			if( completeFileSize == 0 ) 
-			{
-				return false;
-			}
-			else 
-			{
-				return (fileStartingPosition + BytesTransfered ) == completeFileSize;
-			}
+		    return _completeFileSize != 0 && (_fileStartingPosition + BytesTransfered) == _completeFileSize;
 		}
-		/// <summary>
+
+	    /// <summary>
 		/// Close the file stream.
 		/// </summary>
 		internal void CloseFile() 
 		{
-			if( fileStream != null ) 
+			if( _fileStream != null ) 
 			{
-				fileStream.Close();
+				_fileStream.Close();
 			}
 		}
 		/// <summary>
@@ -233,21 +227,21 @@ namespace Alaris.Irc.Dcc
 		/// </summary>
 		internal void OpenForRead() 
 		{
-			fileStream = fileInfo.OpenRead();
+			_fileStream = _fileInfo.OpenRead();
 		}
 		/// <summary>
 		/// Set this file stream to a write only one.
 		/// </summary>
 		internal void OpenForWrite() 
 		{
-			fileStream = fileInfo.OpenWrite();
+			_fileStream = _fileInfo.OpenWrite();
 		}
 		/// <summary>
 		/// Should we try to resume this file download?
 		/// </summary>
 		internal bool ShouldResume() 
 		{
-			return fileInfo.Length > 0 && CanResume();
+			return _fileInfo.Length > 0 && CanResume();
 		}
 		/// <summary>
 		/// Determine whether the acks sent during an upload
@@ -262,8 +256,8 @@ namespace Alaris.Irc.Dcc
 		/// <returns>True if the acks are done</returns>
 		internal bool AcksFinished( long ack ) 
 		{
-			bool done = (ack == BytesTransfered || ack == lastAckValue);
-			lastAckValue = ack;
+			bool done = (ack == BytesTransfered || ack == _lastAckValue);
+			_lastAckValue = ack;
 			return done;
 		}
 	

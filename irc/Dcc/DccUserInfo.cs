@@ -9,9 +9,9 @@ namespace Alaris.Irc.Dcc
 	public sealed class DccUserInfo : UserInfo
 	{
 
-		private Connection connection;
+		private readonly Connection _connection;
 
-		internal IPEndPoint remoteEndPoint;
+		internal readonly IPEndPoint remoteEndPoint;
 
 		/// <summary>
 		/// Create a new instance.
@@ -22,14 +22,14 @@ namespace Alaris.Irc.Dcc
 		internal DccUserInfo( Connection connection, string[] userInfoParts , IPEndPoint remoteEndPoint ) :
 			base( userInfoParts[0],userInfoParts[1],userInfoParts[2])
 		{
-			this.connection = connection;
+			_connection = connection;
 			this.remoteEndPoint = remoteEndPoint;
 		}
 
 		internal DccUserInfo( Connection connection, string[] userInfoParts) :
 			base( userInfoParts[0],userInfoParts[1],userInfoParts[2])
 		{
-			this.connection = connection;
+			_connection = connection;
 		}
 		/// <summary>
 		/// Create an instance that represents a user.
@@ -40,7 +40,7 @@ namespace Alaris.Irc.Dcc
 		public DccUserInfo( Connection connection, string nick) :
 			base( nick,"","")
 		{
-			this.connection = connection;
+			_connection = connection;
 		}
 
 		/// <summary>
@@ -101,7 +101,7 @@ namespace Alaris.Irc.Dcc
 		{
 			get 
 			{
-				return connection;
+				return _connection;
 			}
 		}
 

@@ -1,5 +1,3 @@
-using System;
-
 namespace Alaris.Irc
 {
 	/// <summary>

@@ -14,7 +14,7 @@ namespace Alaris.Irc.Ctcp
 	/// </summary>
 	public sealed class CtcpSender : CommandBuilder
 	{
-		private ArrayList pingList;
+		private readonly ArrayList _pingList;
 
 		/// <summary>
 		/// Create an instance using a specific connection.
@@ -22,7 +22,7 @@ namespace Alaris.Irc.Ctcp
 		/// <param name="connection">The connection to an IRC server.</param>
 		internal CtcpSender( Connection connection ) : base( connection )
 		{
-			pingList = new ArrayList();
+			_pingList = new ArrayList();
 		}
 
 		/// <summary>
@@ -34,7 +34,7 @@ namespace Alaris.Irc.Ctcp
 		/// <returns>True if the timestamp was sent by this client.</returns>
 		internal bool IsMyRequest( string timestamp ) 
 		{
-			return pingList.Contains( timestamp );
+			return _pingList.Contains( timestamp );
 		}
 		/// <summary>
 		/// Remove a timstamp from the list
@@ -43,7 +43,7 @@ namespace Alaris.Irc.Ctcp
 		/// <param name="timestamp">The timestamp that was sent back.</param>
 		internal void ReplyReceived( string timestamp ) 
 		{
-			pingList.Remove( timestamp );
+			_pingList.Remove( timestamp );
 		}
 
 		/// <summary>
@@ -78,7 +78,7 @@ namespace Alaris.Irc.Ctcp
 					throw new ArgumentException("The Ctcp command cannot be null or empty.");
 				}
 				// 14 is NOTICE + 3 x Spaces + : + CR + LF + 2xCtcpQuote
-				int max = MAX_COMMAND_SIZE - 14 - nick.Length - command.Length;
+				int max = MaxCommandSize - 14 - nick.Length - command.Length;
 				if (reply.Length > max) 
 				{
 					reply = reply.Substring(0, max);
@@ -161,7 +161,7 @@ namespace Alaris.Irc.Ctcp
 					ClearBuffer();
 					throw new ArgumentException(nick + " is not a valid nick.");
 				}
-				pingList.Add( timestamp );
+				_pingList.Add( timestamp );
 				SendMessage("PRIVMSG", nick, CtcpQuote + CtcpUtil.Ping + " " + timestamp + CtcpQuote );
 			}
 		}

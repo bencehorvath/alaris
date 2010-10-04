@@ -1,11 +1,9 @@
-using System;
-
 namespace Alaris.Irc
 {
 	/// <summary>
 	/// Whether a mode has been added or removed.
 	/// </summary>
-	public enum ModeAction: int
+	public enum ModeAction
 	{
 		/// <summary>
 		/// Mode added
@@ -21,7 +19,7 @@ namespace Alaris.Irc
 	/// <summary>
 	/// The possible user modes.
 	/// </summary>
-	public enum UserMode: int
+	public enum UserMode
 	{
 		/// <summary>
 		/// User is away
@@ -63,7 +61,7 @@ namespace Alaris.Irc
 	/// <summary>
 	/// Possible channel modes.
 	/// </summary>
-	public enum ChannelMode: int
+	public enum ChannelMode
 	{
         /// <summary>
         /// Default

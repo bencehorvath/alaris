@@ -10,7 +10,7 @@ namespace Alaris.Irc.Ctcp
 	/// <remarks>The CTCP constants should be used to test incoming
 	/// CTCP queries for their type and as the CTCP command
 	/// for outgoing ones.</remarks>
-	public sealed class CtcpUtil
+	public static class CtcpUtil
 	{
 		/// <summary>CTCP Finger.</summary>
 		public const string Finger = "FINGER";
@@ -29,12 +29,11 @@ namespace Alaris.Irc.Ctcp
 		/// <summary>CTCP TIME.</summary>
 		public const string Time = "TIME";
 
-		internal static TraceSwitch CtcpTrace = new TraceSwitch("CtcpTraceSwitch", "Debug level for CTCP classes.");
+		internal static readonly TraceSwitch CtcpTrace = new TraceSwitch("CtcpTraceSwitch", "Debug level for CTCP classes.");
 
 		//Should never be called so make it private
-		private CtcpUtil(){}
 
-		/// <summary>
+	    /// <summary>
 		/// Generate a timestamp string suitable for the CTCP Ping command.
 		/// </summary>
 		/// <returns>The current time as a string.</returns>

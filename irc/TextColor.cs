@@ -1,4 +1,4 @@
-using System;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -9,7 +9,7 @@ namespace Alaris.Irc
 	/// This class conatins a set of methods for adding and removing mIRC color
 	/// and other control codes.
 	/// </summary>
-	public sealed class TextColor
+	public static class TextColor
 	{
 
 		private const char ColorControl = '\x0003';
@@ -21,44 +21,36 @@ namespace Alaris.Irc
 		private const string TextColorFormat = "\x0003{0}{1}\x0003" ;
 		private const string FullColorFormat = "\x0003{0},{1}{2}\x0003";
 
-		private static readonly Regex colorPattern;
-
+		private static readonly Regex ColorPattern;
+        
 		static TextColor() 
 		{
-			colorPattern = new Regex("\\u0003[\\d]{1,2}(,[\\d]{1,2})?([^\\u0003]+)\\u0003", RegexOptions.Compiled | RegexOptions.Singleline);
+			ColorPattern = new Regex("\\u0003[\\d]{1,2}(,[\\d]{1,2})?([^\\u0003]+)\\u0003", RegexOptions.Compiled | RegexOptions.Singleline);
 		}
 
-		private TextColor()
-		{
-		}
-
-		/// <summary>
+	    /// <summary>
 		/// Removes all mIRC control codes from the string.
 		/// </summary>
 		/// <param name="text">Dirty text.</param>
 		/// <returns>Cleaned text.</returns>
 		public static string StripControlChars( string text ) 
 		{
-			StringBuilder buffer = new StringBuilder();
+			var buffer = new StringBuilder();
 			text = StripColor(text);
 
-			foreach( char c in text ) 
-			{
-				if( !IsControlCode( c ) ) 
-				{
-					buffer.Append( c );
-				}
-			}
-			return buffer.ToString();
+	        foreach (var c in text.Where(c => !IsControlCode(c)))
+	            buffer.Append(c);
+
+	        return buffer.ToString();
 		}
 
 		private static string StripColor( string text ) 
 		{
-			Match match = colorPattern.Match( text );
+			var match = ColorPattern.Match( text );
 			if( match.Success ) 
 			{
 				return text.Substring(0, match.Index) +
-					match.Groups[2].ToString() +
+					match.Groups[2] +
 					text.Substring( (match.Index + match.Length)  );
 			}
 			return text;

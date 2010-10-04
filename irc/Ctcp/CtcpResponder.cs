@@ -10,14 +10,14 @@ namespace Alaris.Irc.Ctcp
 	/// </summary>
 	public sealed class CtcpResponder
 	{
-		private Connection connection;
-		private long nextTime;
-		private double floodDelay;
-		private string fingerMessage;
-		private string userInfoMessage;
-		private string versionMessage;
-		private string sourceMessage;
-		private string clientInfoMessage;
+		private readonly Connection _connection;
+		private long _nextTime;
+		private double _floodDelay;
+		private string _fingerMessage;
+		private string _userInfoMessage;
+		private string _versionMessage;
+		private string _sourceMessage;
+		private string _clientInfoMessage;
 
 		/// <summary>
 		/// Create an instance and register handlers for
@@ -28,20 +28,20 @@ namespace Alaris.Irc.Ctcp
 		/// <param name="connection">The containing connection.</param>
 		public CtcpResponder( Connection connection )
 		{
-			this.connection = connection;
-			nextTime = DateTime.Now.ToFileTime();
+			_connection = connection;
+			_nextTime = DateTime.Now.ToFileTime();
 			//Wait at least 2 second in between automatic CTCP responses
-			floodDelay = 2000;
+			_floodDelay = 2000;
 			//Send back user nick by default for finger requests.
-			userInfoMessage = "Thresher CTCP Responder";		
-			fingerMessage = userInfoMessage;
-			versionMessage = "Thresher IRC library 1.1";
-			sourceMessage = "http://thresher.sourceforge.net";
-			clientInfoMessage = "This client supports: UserInfo, Finger, Version, Source, Ping, Time and ClientInfo";
+			_userInfoMessage = "Alaris CTCP";		
+			_fingerMessage = _userInfoMessage;
+			_versionMessage = "Alaris IRC 2.5 (based on Thresher 1.1)";
+            _sourceMessage = "http://github.com/twl/alaris/";
+			_clientInfoMessage = "This client supports: UserInfo, Finger, Version, Source, Ping, Time and ClientInfo";
 			if( connection.EnableCtcp ) 
 			{
-				connection.CtcpListener.OnCtcpRequest += new CtcpRequestEventHandler( OnCtcpRequest );
-				connection.CtcpListener.OnCtcpPingRequest += new CtcpPingRequestEventHandler( OnCtcpPingRequest );
+				connection.CtcpListener.OnCtcpRequest += OnCtcpRequest;
+				connection.CtcpListener.OnCtcpPingRequest += OnCtcpPingRequest;
 			}
 		}
 
@@ -55,11 +55,11 @@ namespace Alaris.Irc.Ctcp
 		{
 			get 
 			{
-				return floodDelay;
+				return _floodDelay;
 			}
 			set
 			{
-				floodDelay = value;
+				_floodDelay = value;
 			}
 		}
 		/// <summary>
@@ -72,11 +72,11 @@ namespace Alaris.Irc.Ctcp
 		{
 			get
 			{
-				return fingerMessage + " Idle time " + FormatIdleTime() + ".";
+				return _fingerMessage + " Idle time " + FormatIdleTime() + ".";
 			}
 			set
 			{
-				fingerMessage = value;
+				_fingerMessage = value;
 			}
 		}
 		/// <summary>
@@ -88,11 +88,11 @@ namespace Alaris.Irc.Ctcp
 		{
 			get
 			{
-				return userInfoMessage;
+				return _userInfoMessage;
 			}
 			set
 			{
-				userInfoMessage = value;
+				_userInfoMessage = value;
 			}
 		}
 		/// <summary>
@@ -103,11 +103,11 @@ namespace Alaris.Irc.Ctcp
 		{
 			get
 			{
-				return versionMessage;
+				return _versionMessage;
 			}
 			set
 			{
-				versionMessage = value;
+				_versionMessage = value;
 			}
 		}
 		/// <summary>
@@ -118,11 +118,11 @@ namespace Alaris.Irc.Ctcp
 		{
 			get
 			{
-				return clientInfoMessage;
+				return _clientInfoMessage;
 			}
 			set
 			{
-				clientInfoMessage = value;
+				_clientInfoMessage = value;
 			}
 		}
 		/// <summary>
@@ -134,11 +134,11 @@ namespace Alaris.Irc.Ctcp
 		{
 			get
 			{
-				return sourceMessage;
+				return _sourceMessage;
 			}
 			set
 			{
-				sourceMessage = value;
+				_sourceMessage = value;
 			}
 		}
 
@@ -149,9 +149,9 @@ namespace Alaris.Irc.Ctcp
 		private string FormatIdleTime() 
 		{
 			StringBuilder builder = new StringBuilder();
-			builder.Append( connection.IdleTime.Hours + " Hours, " );
-			builder.Append( connection.IdleTime.Minutes + " Minutes, " );
-			builder.Append( connection.IdleTime.Seconds + " Seconds" );
+			builder.Append( _connection.IdleTime.Hours + " Hours, " );
+			builder.Append( _connection.IdleTime.Minutes + " Minutes, " );
+			builder.Append( _connection.IdleTime.Seconds + " Seconds" );
 			return builder.ToString();
 		}
 		/// <summary>
@@ -175,35 +175,35 @@ namespace Alaris.Irc.Ctcp
 		/// </summary>
 		private void UpdateTime() 
 		{
-			nextTime = DateTime.Now.ToFileTime() + (long)( floodDelay * TimeSpan.TicksPerMillisecond );
+			_nextTime = DateTime.Now.ToFileTime() + (long)( _floodDelay * TimeSpan.TicksPerMillisecond );
 		}
 		private void OnCtcpRequest( string command, UserInfo who ) 
 		{
-			if( DateTime.Now.ToFileTime() > nextTime ) 
+			if( DateTime.Now.ToFileTime() > _nextTime ) 
 			{
 				switch( command ) 
 				{
 					case CtcpUtil.Finger:
-						connection.CtcpSender.CtcpReply( command, who.Nick, fingerMessage + " Idle time: " + FormatIdleTime() );
+						_connection.CtcpSender.CtcpReply( command, who.Nick, _fingerMessage + " Idle time: " + FormatIdleTime() );
 						break;
 					case CtcpUtil.Time:
-						connection.CtcpSender.CtcpReply( command, who.Nick, FormatDateTime() );
+						_connection.CtcpSender.CtcpReply( command, who.Nick, FormatDateTime() );
 						break;
 					case CtcpUtil.UserInfo:
-						connection.CtcpSender.CtcpReply( command, who.Nick, userInfoMessage );
+						_connection.CtcpSender.CtcpReply( command, who.Nick, _userInfoMessage );
 						break;
 					case CtcpUtil.Version:
-						connection.CtcpSender.CtcpReply( command, who.Nick, versionMessage );
+						_connection.CtcpSender.CtcpReply( command, who.Nick, _versionMessage );
 						break;
 					case CtcpUtil.Source:
-						connection.CtcpSender.CtcpReply( command, who.Nick, sourceMessage );
+						_connection.CtcpSender.CtcpReply( command, who.Nick, _sourceMessage );
 						break;
 					case CtcpUtil.ClientInfo:
-						connection.CtcpSender.CtcpReply( command, who.Nick, clientInfoMessage );
+						_connection.CtcpSender.CtcpReply( command, who.Nick, _clientInfoMessage );
 						break;
 					default:
 						string error = command + " is not a supported Ctcp query.";
-						connection.CtcpSender.CtcpReply( command, who.Nick, error );
+						_connection.CtcpSender.CtcpReply( command, who.Nick, error );
 						break;
 				}
 				UpdateTime();
@@ -211,7 +211,7 @@ namespace Alaris.Irc.Ctcp
 		}
 		private void OnCtcpPingRequest( UserInfo who, string timestamp ) 
 		{
-			connection.CtcpSender.CtcpPingReply( who.Nick, timestamp );
+			_connection.CtcpSender.CtcpPingReply( who.Nick, timestamp );
 		}
 
 		/// <summary>
@@ -219,8 +219,8 @@ namespace Alaris.Irc.Ctcp
 		/// </summary>
 		internal void Disable() 
 		{
-			connection.CtcpListener.OnCtcpRequest -= new CtcpRequestEventHandler( OnCtcpRequest );
-			connection.CtcpListener.OnCtcpPingRequest -= new CtcpPingRequestEventHandler( OnCtcpPingRequest );
+			_connection.CtcpListener.OnCtcpRequest -= OnCtcpRequest;
+			_connection.CtcpListener.OnCtcpPingRequest -= OnCtcpPingRequest;
 		}
 
 	}

@@ -13,25 +13,24 @@ namespace Alaris.Irc
 	/// by a remote system returns a username. The server is controlled via static
 	/// methods all of which are Thread safe.
 	/// </summary>
-	public sealed class Identd
+	public static class Identd
 	{
-		private static TcpListener listener;
-		private static bool running; 
-		private static object lockObject;
-		private static string username;
+		private static TcpListener _listener;
+		private static bool _running; 
+		private static readonly object LockObject;
+		private static string _username;
 		private const string Reply = " : USERID : UNIX : ";
 		private const int IdentdPort = 113;
 
 		static Identd() 
 		{
-			running = false;
-			lockObject = new object();
+			_running = false;
+			LockObject = new object();
 		}
 
 		//Declare constructor private so it cannot be instatiated.
-		private Identd() {}
 
-		/// <summary>
+	    /// <summary>
 		/// The Identd server will start listening for queries
 		/// in its own thread. It can be stopped by calling
 		/// <see cref="Identd.Stop"/>.
@@ -41,17 +40,16 @@ namespace Alaris.Irc
 		/// <exception cref="Exception">If the server has already been started.</exception>
 		public static void Start( string userName ) 
 		{
-			lock( lockObject ) 
+			lock( LockObject ) 
 			{
-				if( running == true ) 
+				if( _running ) 
 				{
 					throw new Exception("Identd already started.");
 				}
-				running = true;
-				username = userName;
-				Thread socketThread = new Thread( new ThreadStart( Identd.Run ) );
-				socketThread.Name = "Identd";
-				socketThread.Start();	
+				_running = true;
+				_username = userName;
+				var socketThread = new Thread(Run) {Name = "Identd"};
+			    socketThread.Start();	
 			}
 		}
 		/// <summary>
@@ -60,9 +58,9 @@ namespace Alaris.Irc
 		/// <returns>True if it is running</returns>
 		public static bool IsRunning() 
 		{
-			lock( lockObject ) 
+			lock( LockObject ) 
 			{
-				return running;
+				return _running;
 			}
 		}
 		/// <summary>
@@ -70,14 +68,14 @@ namespace Alaris.Irc
 		/// </summary>
 		public static void Stop() 
 		{
-			lock( lockObject ) 
+			lock( LockObject ) 
 			{
-				if( running == true ) 
+				if( _running ) 
 				{
-					listener.Stop();
+					_listener.Stop();
 					Debug.WriteLineIf( Rfc2812Util.IrcTrace.TraceInfo,"[" + Thread.CurrentThread.Name +"] Identd::Stop()");
-					listener = null;
-					running = false;
+					_listener = null;
+					_running = false;
 				}
 			}
 		}
@@ -87,22 +85,22 @@ namespace Alaris.Irc
 			Debug.WriteLineIf( Rfc2812Util.IrcTrace.TraceInfo,"[" + Thread.CurrentThread.Name +"] Identd::Run()");
 			try 
 			{
-				listener = new TcpListener( IdentdPort );
-				listener.Start();
+				_listener = new TcpListener( IdentdPort );
+				_listener.Start();
 
 				loop:
 				{
 					try 
 					{
-						TcpClient client = listener.AcceptTcpClient();
+						TcpClient client = _listener.AcceptTcpClient();
 						//Read query
-						StreamReader reader =  new StreamReader(client.GetStream() );
+						var reader =  new StreamReader(client.GetStream() );
 						string line = reader.ReadLine();
 						Debug.WriteLineIf( Rfc2812Util.IrcTrace.TraceVerbose,"[" + Thread.CurrentThread.Name +"] Identd::Run() received=" + line);
 
 						//Send back reply
-						StreamWriter writer = new StreamWriter( client.GetStream() );
-						writer.WriteLine( line.Trim() + Reply + username );
+						var writer = new StreamWriter( client.GetStream() );
+						writer.WriteLine( line.Trim() + Reply + _username );
 						writer.Flush();
 
 						//Close connection with client
@@ -121,7 +119,7 @@ namespace Alaris.Irc
 			}
 			finally 
 			{
-				running = false;
+				_running = false;
 			}
 		}
 

@@ -10,7 +10,7 @@ namespace Alaris.Irc.Dcc
 	/// </summary>
 	public sealed class DccUtil
 	{
-		internal static TraceSwitch DccTrace = new TraceSwitch("DccTraceSwitch", "Debug level for DCC classes.");
+		internal static readonly TraceSwitch DccTrace = new TraceSwitch("DccTraceSwitch", "Debug level for DCC classes.");
 
 		//Should never be called so make it private
 		private DccUtil(){}

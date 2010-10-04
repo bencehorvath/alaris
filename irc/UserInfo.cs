@@ -7,11 +7,11 @@ namespace Alaris.Irc
 	public class UserInfo 
 	{
 		/// <summary>The user's handle.</summary>
-		private readonly string nickName;
+		private readonly string _nickName;
 		/// <summary>The user's username on the local machine</summary>
-		private readonly string userName;
+		private readonly string _userName;
 		/// <summary>The user's fully qualified host name</summary>
-		private readonly string hostName;
+		private readonly string _hostName;
 		private static readonly UserInfo EmptyInstance = new UserInfo();
 
 		/// <summary>
@@ -19,18 +19,18 @@ namespace Alaris.Irc
 		/// </summary>
 		private UserInfo() 
 		{
-			nickName = "";
-			userName = "";
-			hostName = "";
+			_nickName = "";
+			_userName = "";
+			_hostName = "";
 		}
 		/// <summary>
 		/// Create a new UserInfo and set all its values.
 		/// </summary>
 		public UserInfo(string nick, string name, string host) 
 		{
-			nickName = nick;
-			userName = name;
-			hostName = host;
+			_nickName = nick;
+			_userName = name;
+			_hostName = host;
 		}
 
 		/// <summary>
@@ -40,7 +40,7 @@ namespace Alaris.Irc
 		{
 			get 
 			{
-				return nickName;
+				return _nickName;
 			}
 		}
 		/// <summary>
@@ -50,7 +50,7 @@ namespace Alaris.Irc
 		{
 			get
 			{
-				return userName;
+				return _userName;
 			}
 		}
 		/// <summary>
@@ -60,7 +60,7 @@ namespace Alaris.Irc
 		{
 			get 
 			{
-				return hostName;
+				return _hostName;
 			}
 		}
 		/// <summary>

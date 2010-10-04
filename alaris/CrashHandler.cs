@@ -33,6 +33,11 @@ namespace Alaris
             Log.Debug("CrashHandler", "~CrashHandler()");
         }
 
+
+        /// <summary>
+        /// Gets the current instance's GUID.
+        /// </summary>
+        /// <returns>The GUID</returns>
         public Guid GetGuid()
         {
             return _guid;
