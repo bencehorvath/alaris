@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading;
 using Alaris.API;
 using Alaris.API.Database;
@@ -35,7 +36,7 @@ namespace Alaris
             {
                 try
                 {
-                    foreach (var url in urlsin)
+                    foreach (var url in urlsin.AsParallel())
                     {
                         Utilities.HandleWebTitle(ref _connection, chan, url);
                         Thread.Sleep(100);

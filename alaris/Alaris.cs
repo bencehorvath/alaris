@@ -212,7 +212,7 @@ namespace Alaris
             var chans = config.GetSetting("config/irc/channels", "#skullbot,#hun_bot");
             var clist = chans.Split(',');
 
-            foreach (var chan in clist.Where(Rfc2812Util.IsValidChannelName))
+            foreach (var chan in clist.Where(Rfc2812Util.IsValidChannelName).AsParallel())
                 _channels.Add(chan);
 
             Utilities.AdminNick = config.GetSetting("config/irc/admin/nick", "Twl");

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Alaris.API;
 using Alaris.Irc;
 using LuaInterface;
@@ -77,7 +78,7 @@ namespace Alaris.LuaEngine
         {
             if(reload)
             {
-                foreach(var handler in _functions.RegisteredOnPM)
+                foreach(var handler in _functions.RegisteredOnPM.AsParallel())
                 {
                     _connection.Listener.OnPublic -= handler;
                 }
@@ -85,7 +86,7 @@ namespace Alaris.LuaEngine
 
             var di = new DirectoryInfo(_scriptPath);
 
-            foreach(var file in di.GetFiles("*.lua"))
+            foreach(var file in di.GetFiles("*.lua").AsParallel())
             {
                 Log.Notice("LuaEngine", string.Format("Loading script: {0}", file.Name));
                 try {_lua.DoFile(file.FullName);}
