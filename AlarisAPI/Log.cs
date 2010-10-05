@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Alaris.API
 {
@@ -101,31 +102,27 @@ namespace Alaris.API
 		/// </param>
 		public static void LargeWarning(string message)
 		{
-			string[] sp = message.Split('\n');
-			List<string> lines = new List<string>(50);
-			
-			foreach(string s in sp)
-				if(!string.IsNullOrEmpty(s))
-					lines.Add(s);
-			
-			Console.ForegroundColor = ConsoleColor.Yellow;
+			var sp = message.Split('\n');
+			var lines = new List<string>(50);
+
+		    lines.AddRange(sp.Where(s => !string.IsNullOrEmpty(s)));
+
+		    Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine();
 			
 			Console.WriteLine("**************************************************"); // 51
 			
 			foreach(string item in lines)
 			{
-				uint len = (uint)item.Length;
-				uint diff = (48-len);
+				var len = (uint)item.Length;
+				var diff = (48-len);
 				Console.Write("* {0}", item);
 				if(diff>0)
 				{
-					for(uint u=1;u<diff;++u)
-					{
-						Console.Write(" ");
-					}
-					
-					Console.Write("*\n");
+				    for (uint u = 1; u < diff; ++u)
+				        Console.Write(" ");
+
+				    Console.Write("*\n");
 				}
 				
 			}

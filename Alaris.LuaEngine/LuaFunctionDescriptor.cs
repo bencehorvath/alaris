@@ -100,10 +100,8 @@ namespace Alaris.LuaEngine
 
             var first = true;
 
-            for (var index = 0; index < _functionParameters.Count; index++)
+            foreach (var param in _functionParameters)
             {
-                var param = _functionParameters[index];
-
                 if (!first)
                     funcParams += ", ";
 
