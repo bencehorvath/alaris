@@ -77,6 +77,12 @@ namespace Alaris
                 AlarisBot.SendPacketToACS(packet);
                 packet.Dispose();
             }
+
+            AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
+                                                              {
+                                                                  Log.LargeWarning("Unhandled Exception thrown.");
+                                                                  Log.Error("UnhandledException", eventArgs.ExceptionObject.ToString());
+                                                              };
         }
     }
 }
