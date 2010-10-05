@@ -33,6 +33,8 @@ namespace Alaris.API
         /// </summary>
         public static string AdminHost { get; set; }
 
+        private static readonly object SendLock = new object();
+
         /// <summary>
         ///   Sends system stats using the specified connection.
         /// </summary>
@@ -156,9 +158,9 @@ namespace Alaris.API
             byte[] data = Encoding.ASCII.GetBytes(value);
             data = x.ComputeHash(data);
             x.Dispose();
-            string ret = "";
+            var ret = "";
 
-            for (int i = 0; i < data.Length; i++)
+            for (var i = 0; i < data.Length; i++)
                 ret += data[i].ToString("x2").ToLower();
 
             return ret;
@@ -201,13 +203,27 @@ namespace Alaris.API
             try
             {
                 //var urlFind = new Regex(@"(?<page>http://(www\.)?\S+\.\S{2,6}(/\S*\s*)?)", RegexOptions.IgnoreCase);
-                var urlFind = new Regex(@"(?<page>http://(www\.)?\S+\.\S{2,6}(/*\S*))", RegexOptions.IgnoreCase);
+                //var urlFind = new Regex(@"(?<page>http://(www\.)?\S+\.\S{2,6}(/*\S*))", RegexOptions.IgnoreCase);
+
+                var urlFind = new Regex(@"(?<url>(http://)?(www\.)?\S+\.\S{2,6}([/]*\S+))",
+                                        RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
                 if (urlFind.IsMatch(text))
                 {
                     var matches = urlFind.Matches(text);
 
-                    urls.AddRange(from Match match in matches select match.Groups["page"].ToString());
+                    //urls.AddRange(from Match match in matches select match.Groups["page"].ToString());
+
+                    foreach(Match match in matches)
+                    {
+                        var url = match.Groups["url"].ToString();
+                        if (!url.StartsWith("http://") && !url.StartsWith("https://"))
+                            url = string.Format("http://{0}", url);
+
+                        Log.Debug("Utilities", string.Format("Checking: {0}", url));
+
+                        urls.Add(url);
+                    }
                 }
             }
             catch (Exception x)
@@ -232,16 +248,12 @@ namespace Alaris.API
         /// </param>
         public static void HandleWebTitle(ref Connection connection, string chan, string msg)
         {
+           
             if (connection == null) throw new ArgumentNullException("connection");
             if (chan == null) throw new ArgumentNullException("chan");
             if (msg == null) throw new ArgumentNullException("msg");
 
             var tt = msg.Replace("@title ", string.Empty);
-
-            if (!tt.StartsWith("http://"))
-            {
-                tt = "http://" + tt;
-            }
 
             var url = new Uri(tt);
 
@@ -256,15 +268,24 @@ namespace Alaris.API
                 var match = youtubeRegex.Match(title);
                 var song = match.Groups["song"].ToString();
 
-                connection.Sender.PublicMessage(chan,
-                                                IrcConstants.Purple + "[YouTube]: " + IrcConstants.DarkGreen +
-                                                song.Substring(1)); // about substr: remove the space before song name
+                lock (SendLock)
+                {
+                    connection.Sender.PublicMessage(chan,
+                                                    IrcConstants.Purple + "[YouTube]: " + IrcConstants.DarkGreen +
+                                                    song.Substring(1));
+                    // about substr: remove the space before song name
+                }
                 return;
             }
 
-            connection.Sender.PublicMessage(chan,
-                                            IrcConstants.Bold + "[Title]: " + IrcConstants.Normal +
-                                            IrcConstants.DarkGreen + title);
+            lock (SendLock)
+            {
+                Log.Debug("WebHelper", string.Format("Title: {0}", title));
+                connection.Sender.PublicMessage(chan,
+                                                IrcConstants.Bold + "[Title]: " + IrcConstants.Normal +
+                                                IrcConstants.DarkGreen + title);
+            }
+
         }
 
         /// <summary>

@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using Alaris.API;
 using Alaris.API.Database;
 using Alaris.Calculator;
@@ -36,10 +37,14 @@ namespace Alaris
             {
                 try
                 {
-                    foreach (var url in urlsin.AsParallel())
+                    foreach (var url in urlsin)
                     {
-                        Utilities.HandleWebTitle(ref _connection, chan, url);
-                        Thread.Sleep(100);
+                        var url1 = url;
+                        var task = new Task(() => Utilities.HandleWebTitle(ref _connection, chan, url1));
+
+                        task.Start();
+                        
+                        Thread.Sleep(400);
                     }
 
                     return;
@@ -63,7 +68,7 @@ namespace Alaris
 
                     var parser = new Parser(lexer);
 
-                    Start ast = null;
+                    Start ast;
 
                     try {
                         ast = parser.Parse(); }
