@@ -1,5 +1,8 @@
 using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Alaris.API;
@@ -11,6 +14,8 @@ using Alaris.Calculator.node;
 using Alaris.Calculator.parser;
 using Alaris.Irc;
 using Alaris.Localization;
+using Alaris.Mathematics;
+using Alaris.Mathematics.Types;
 using Alaris.Network;
 
 namespace Alaris
@@ -178,15 +183,38 @@ namespace Alaris
                 SendMsg(chan, string.Format("Admin {0} deleted.", msg));              
             }
 
-            if(msg.StartsWith("@prime ", StringComparison.InvariantCultureIgnoreCase))
+   
+            if(msg.StartsWith("@sort "))
             {
-                msg = msg.Remove(0, 7);
-                var num = 0d;
-                try {num = Convert.ToDouble(msg);}catch{}
+                var rest = msg.Remove(0, 6);
+                var rgx = new Regex(@"(?<num>(?<prefix>\S)?(\d+(\.\d+)?))");
 
-                Log.Debug("Math", string.Format("Checking prime for: {0}", num));
+                if (!rgx.IsMatch(rest))
+                    return;
 
-                SendMsg(chan, Utilities.Math.IsPrime(num) ? "It's a prime." : "It's not a prime.");
+                try
+                {
+
+                    var matches = rgx.Matches(rest);
+
+                    var nums = new AutoSortedArray<double>();
+
+                    foreach (Match match in matches)
+                    {
+                        nums.SimpleAdd(double.Parse(match.Groups["num"].ToString()));
+                    }
+
+                    nums.Sort();
+
+                    SendMsg(chan, nums.ToString());
+                }
+                catch(Exception x)
+                {
+                    Log.Error("Math", x.ToString());
+                    Log.Debug("Math", double.Parse("3.55", CultureInfo.InvariantCulture).ToString());
+                    SendMsg(chan, "Hiba!");
+
+                }
             }
 
         }

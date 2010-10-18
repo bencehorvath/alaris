@@ -3,6 +3,7 @@ using Alaris.API;
 using System.Net.Sockets;
 using System.Collections.Generic;
 using System.Text;
+using Alaris.Irc;
 using Alaris.Network;
 
 namespace Alaris.Server

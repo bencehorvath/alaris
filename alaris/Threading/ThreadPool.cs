@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Threading;
 using System.Timers;
 using Alaris.API;
+using Alaris.Irc;
 using Timer = System.Timers.Timer;
 
 namespace Alaris.Threading

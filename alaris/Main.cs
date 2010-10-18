@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Threading;
 using Alaris.API;
+using Alaris.Irc;
 using Alaris.Network;
 
 namespace Alaris
@@ -60,7 +61,6 @@ namespace Alaris
 
             //bot.Connect();
 
-
             sBot.Pool.Enqueue(sBot);
 
             if (AlarisBot.AlarisServer)
@@ -82,6 +82,7 @@ namespace Alaris
                                                               {
                                                                   Log.LargeWarning("Unhandled Exception thrown.");
                                                                   Log.Error("UnhandledException", eventArgs.ExceptionObject.ToString());
+                                                                  
                                                               };
         }
     }

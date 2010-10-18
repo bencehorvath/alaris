@@ -46,10 +46,14 @@ namespace Alaris.Irc
 				{
 					throw new Exception("Identd already started.");
 				}
+                Log.Notice("Alaris", "Setting up connection...");
 				_running = true;
 				_username = userName;
 				var socketThread = new Thread(Run) {Name = "Identd"};
-			    socketThread.Start();	
+			    socketThread.Start();
+
+                Log.Success("Identd", "Service daemon running.");
+                
 			}
 		}
 		/// <summary>

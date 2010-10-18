@@ -1,6 +1,7 @@
 ﻿using Alaris.API;
 using Alaris.API.Database;
 using System.Data;
+using Alaris.Irc;
 
 namespace Alaris.Localization
 {

@@ -1,5 +1,6 @@
 using System.Data;
 using System.Data.SQLite;
+using Alaris.Irc;
 
 namespace Alaris.API.Database
 {

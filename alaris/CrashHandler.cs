@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using Alaris.API;
 using Alaris.Exceptions;
+using Alaris.Irc;
 
 namespace Alaris
 {

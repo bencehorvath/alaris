@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Alaris.API.Database;
 using Alaris.Irc;
+using System.Runtime.InteropServices;
 
 namespace Alaris.API
 {
@@ -303,27 +304,5 @@ namespace Alaris.API
                     .FirstOrDefault();
         }
 
-        public static class Math
-        {
-            public static bool IsPrime(double x)
-            {
-                var prime = true;
-                var n = System.Math.Floor(System.Math.Sqrt(x));
-
-                for (var i = 1; i <= x; i++)
-                {
-                    for (var j = 2; j <= n; j++)
-                    {
-                        if (i != j && i%j == 0)
-                        {
-                            prime = false;
-                            break;
-                        }
-                    }
-                }
-
-                return prime;
-            }
-        }
     }
 }

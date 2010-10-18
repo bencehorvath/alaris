@@ -129,6 +129,7 @@ Thanks to Thresher</Description>
     <Compile Include="Delegates\Requests\ListEventHandler.cs" />
     <Compile Include="Delegates\Special\LusersEventHandler.cs" />
     <Compile Include="Delegates\Server\MotdEventHandler.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="NameGenerator.cs" />
     <Compile Include="Delegates\Server\NickErrorEventHandler.cs" />
     <Compile Include="Delegates\Server\NickEventHandler.cs" />

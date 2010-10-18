@@ -5,8 +5,10 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Reflection;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using Alaris.API;
 using Alaris.API.Database;
 using Alaris.Config;
@@ -23,7 +25,7 @@ namespace Alaris
     public partial class AlarisBot : IThreadContext, IDisposable
     {
         private Connection _connection;
-        private readonly ScriptManager _manager;
+        private ScriptManager _manager;
         private string _nick;
         private string _server;
         private bool _confdone;
@@ -105,24 +107,62 @@ namespace Alaris
             CrashHandler.HandleReadConfig(ReadConfig, _configfile);
             var cargs = new ConnectionArgs(_nick, _server);
             Log.Debug("Identd", "Starting service...");
-            Identd.Start(_nick);
-            Log.Success("Identd", "Service daemon running.");
-            Log.Notice("Alaris", "Setting up connection...");
+            /*Identd.Start(_nick);
+            
+            */
             Pool = new CThreadPool(4);
 
-            _connection = new Connection(cargs, true, false);
-            var responder = new CtcpResponder(_connection)
-                                {
-                                    VersionResponse = "Alaris " + Utilities.BotVersion,
-                                    SourceResponse = "http://www.wowemuf.org",
-                                    UserInfoResponse = "Alaris multi-functional bot."
-                                };
+            try
+            {
 
-            _connection.CtcpResponder = responder;
+                Parallel.Invoke(() => Identd.Start(_nick),
+                                () => { lock(Pool) {Pool = new CThreadPool(4);} },
+                                () =>
+                                    {
+
+
+                                        _connection = new Connection(cargs, true, false)
+                                                          {
+                                                              TextEncoding = Encoding.GetEncoding("Latin1")
+                                                          };
+
+                                        var responder = new CtcpResponder(_connection)
+                                                            {
+                                                                VersionResponse = "Alaris " + Utilities.BotVersion,
+                                                                SourceResponse = "http://www.wowemuf.org",
+                                                                UserInfoResponse = "Alaris multi-functional bot."
+                                                            };
+
+                                        _connection.CtcpResponder = responder;
+
+                                        Log.Success("CTCP", "Enabled.");
+
+                                    },
+                                () =>
+                                    {
+                                        _manager =
+                                            new ScriptManager(
+                                                ref _connection,
+                                                _channels,
+                                                _scriptsDir);
+                                        
+                                        lock(Pool){Pool.Enqueue(_manager);}
+                                    });
+            }
+            catch(TargetInvocationException x)
+            {
+                Log.Error("Parallel", x.ToString());
+                Log.LargeWarning("An exception has been thrown in a critical part of the program.");
+            }
+
+            //_connection = new Connection(cargs, true, false);
+            
+
+            //_connection.CtcpResponder = responder;
             Log.Notice("Alaris", "Text encoding: UTF-8");
-            _connection.TextEncoding = Encoding.GetEncoding("Latin1");
+            //_connection.TextEncoding = Encoding.GetEncoding("Latin1");
 
-            Log.Success("CTCP", "Enabled.");
+            //Log.Success("CTCP", "Enabled.");
 
             Log.Notice("ScriptManager", "Initalizing...");
             _manager = new ScriptManager(ref _connection, _channels, _scriptsDir);
