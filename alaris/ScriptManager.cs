@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Alaris.API;
 using Alaris.Irc;
 using Alaris.Irc.Delegates.Channel;
 using Alaris.Irc.Delegates.Disconnect;

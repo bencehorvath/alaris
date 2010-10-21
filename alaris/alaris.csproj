@@ -133,6 +133,7 @@
     <Reference Include="System.Runtime.Remoting" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\RemoteManager.cs" />
     <Compile Include="Alaris.cs" />
     <Compile Include="API.cs" />
     <Compile Include="Config\XmlConfig.cs" />
@@ -187,6 +188,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Alaris.snk.pfx" />
+    <Content Include="Alaris.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="app.config" />
     <None Include="bin\Debug\alaris.conf" />
     <None Include="..\Doxyfile" />

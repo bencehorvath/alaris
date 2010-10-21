@@ -9,9 +9,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 using Alaris.API;
 using Alaris.API.Database;
 using Alaris.Config;
+using Alaris.Exceptions;
 using Alaris.Irc;
 using Alaris.Irc.Ctcp;
 using Alaris.Network;
@@ -122,9 +124,9 @@ namespace Alaris
 
 
                                         _connection = new Connection(cargs, true, false)
-                                                          {
-                                                              TextEncoding = Encoding.GetEncoding("Latin1")
-                                                          };
+                                                            {
+                                                                TextEncoding = Encoding.GetEncoding("Latin1")
+                                                            };
 
                                         var responder = new CtcpResponder(_connection)
                                                             {
@@ -231,6 +233,7 @@ namespace Alaris
         /// <param name = "configfile">
         ///   The config file name.
         /// </param>
+        /// <exception cref="ConfigFileInvalidException"></exception>
         private void ReadConfig(string configfile)
         {
             if (!File.Exists("./" + configfile))
@@ -242,6 +245,28 @@ namespace Alaris
             Log.Notice("Config", "Reading configuration file: " + configfile);
 
             var config = new XmlSettings(configfile, "alaris");
+
+            config.Document.Schemas.Add("http://github.com/Twl/alaris", "Alaris.xsd");
+
+            try
+            {
+
+                config.Document.Validate((sender, args) =>
+                                             {
+                                                 Log.Debug("XML", args.Message);
+
+                                                 if (args.Exception != null)
+                                                 {
+                                                     Log.Error("Config", args.Exception.Message);
+                                                 }
+
+                                             });
+            }
+            catch(XmlSchemaValidationException x)
+            {
+                Log.Error("Config", "Config file is invalid!");
+                throw new ConfigFileInvalidException(x.Message);
+            }
 
             _server = config.GetSetting("config/irc/server", "irc.rizon.net");
             _nick = config.GetSetting("config/irc/nickname", "alaris");

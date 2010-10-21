@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Alaris"
+    targetNamespace="http://github.com/Twl/alaris"
+    elementFormDefault="qualified"
+    xmlns="http://github.com/Twl/alaris"
+    xmlns:mstns="http://github.com/Twl/alaris"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:complexType name="admin">
+    <xs:sequence>
+      <xs:element name="nick" type="xs:string" />
+      <xs:element name="user" type="xs:string" />
+      <xs:element name="host" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="irc">
+    <xs:sequence>
+      <xs:element name="server" type="xs:string" />
+      <xs:element name="nickname" type="xs:string" />
+      <xs:element name="nickserv" type="xs:string" />
+      <xs:element name="channels" type="xs:string" />
+      <xs:element name="admin" type="admin" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="scripts">
+    <xs:sequence>
+      <xs:element name="LUA" type="xs:string" />
+      <xs:element name="directory" type="xs:string" />
+      <xs:element name="AdditionalReferences" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="localization">
+    <xs:sequence>
+      <xs:element name="locale" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="config">
+    <xs:sequence>
+      <xs:element name="irc" type="irc" />
+      <xs:element name="database" type="xs:string" />
+      <xs:element name="scripts" type="scripts" />
+      <xs:element name="localization" type="localization" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="alaris">
+    <xs:sequence>
+      <xs:element name="config" type="config" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="alaris" type="alaris" />
+  
+</xs:schema>

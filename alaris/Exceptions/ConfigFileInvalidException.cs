@@ -6,12 +6,12 @@ namespace Alaris.Exceptions
     ///   Exception thrown when an invalid config file is detected.
     /// </summary>
     [Serializable]
-    public abstract class ConfigFileInvalidException : Exception
+    public sealed class ConfigFileInvalidException : Exception
     {
         /// <summary>
         ///   Creates a new instance of <see cref = "ConfigFileInvalidException" />
         /// </summary>
-        protected ConfigFileInvalidException()
+        public ConfigFileInvalidException()
         {
         }
 
@@ -21,7 +21,7 @@ namespace Alaris.Exceptions
         /// <param name = "msg">
         ///   The message of the exception.
         /// </param>
-        protected ConfigFileInvalidException(string msg) : base(msg)
+        public ConfigFileInvalidException(string msg) : base(msg)
         {
         }
     }

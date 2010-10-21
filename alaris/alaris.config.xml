@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<alaris>
+<alaris xmlns="http://github.com/Twl/alaris"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://github.com/Twl/alaris Alaris.xsd">
   <config>
     <irc>
       <server>irc.rizon.net</server>

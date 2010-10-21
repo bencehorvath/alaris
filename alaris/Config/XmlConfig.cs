@@ -14,6 +14,17 @@ namespace Alaris.Config
         private readonly string _rootNode = "";
         private readonly Guid _guid;
 
+        /// <summary>
+        /// Gets the XML document object.
+        /// </summary>
+        public XmlDocument Document
+        {
+            get
+            {
+                return _xmlDocument;
+            }
+        }
+
         ///<summary>
         ///  Create a new instance of XmlSettings.
         ///</summary>

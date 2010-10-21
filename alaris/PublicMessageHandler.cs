@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,7 +12,6 @@ using Alaris.Calculator.node;
 using Alaris.Calculator.parser;
 using Alaris.Irc;
 using Alaris.Localization;
-using Alaris.Mathematics;
 using Alaris.Mathematics.Types;
 using Alaris.Network;
 
