@@ -39,12 +39,20 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="remote">
+    <xs:sequence>
+      <xs:element name="port" type="xs:int" />
+      <xs:element name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="config">
     <xs:sequence>
       <xs:element name="irc" type="irc" />
       <xs:element name="database" type="xs:string" />
       <xs:element name="scripts" type="scripts" />
       <xs:element name="localization" type="localization" />
+      <xs:element name="remote" type="remote" />
     </xs:sequence>
   </xs:complexType>
 

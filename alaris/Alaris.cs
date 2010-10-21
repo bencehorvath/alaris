@@ -74,6 +74,22 @@ namespace Alaris
         }
 
         /// <summary>
+        /// Gets the list of channels the bot is on.
+        /// </summary>
+        public List<string> Channels
+        {
+            get { return _channels; }
+        }
+
+        /// <summary>
+        /// Gets the IRC connection.
+        /// </summary>
+        public Connection Connection
+        {
+            get { return _connection; }
+        }
+
+        /// <summary>
         ///   Determines whether the communication to and dependance of alaris_server is set.
         /// </summary>
         public static readonly bool AlarisServer;

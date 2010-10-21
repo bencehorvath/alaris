@@ -25,5 +25,9 @@ xsi:schemaLocation="http://github.com/Twl/alaris Alaris.xsd">
     <localization>
       <locale>huHU</locale>
     </localization>
+    <remote>
+      <port>5564</port>
+      <name>RemoteManager</name>
+    </remote>
   </config>
 </alaris>
