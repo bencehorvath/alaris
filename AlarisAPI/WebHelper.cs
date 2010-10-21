@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Net;
 using System.Text.RegularExpressions;
+using Alaris.Irc;
 
 namespace Alaris.API
 {
@@ -21,28 +22,36 @@ namespace Alaris.API
         /// </returns>
         public static string GetWebTitle(Uri url)
         {
-            var request = (HttpWebRequest) WebRequest.Create(url);
-          
-            request.Timeout = 3500;
+            try
+            {
+                var request = (HttpWebRequest) WebRequest.Create(url);
 
-            request.UserAgent = "Alaris Bot " + Utilities.BotVersion + " / .NET " + Environment.Version;
-            request.Referer = "http://www.wowemuf.org";
+                request.Timeout = 3500;
 
-            var response = request.GetResponse();
+                request.UserAgent = "Alaris Bot " + Utilities.BotVersion + " / .NET " + Environment.Version;
+                request.Referer = "http://www.wowemuf.org";
 
-            var stream = response.GetResponseStream();
+                var response = request.GetResponse();
 
-            var rdr = new StreamReader(stream);
-            var data = rdr.ReadToEnd();
+                var stream = response.GetResponseStream();
 
-            rdr.Close();
-            response.Close();
+                var rdr = new StreamReader(stream);
+                var data = rdr.ReadToEnd();
 
-            var getTitleRegex = new Regex(@"<title>(?<ttl>.*\s*.+\s*.*)\s*</title>", RegexOptions.IgnoreCase);
+                rdr.Close();
+                response.Close();
 
-            var match = getTitleRegex.Match(data);
+                var getTitleRegex = new Regex(@"<title>(?<ttl>.*\s*.+\s*.*)\s*</title>", RegexOptions.IgnoreCase);
 
-            return (match.Success) ? (match.Groups["ttl"].ToString()) : "No title found.";
+                var match = getTitleRegex.Match(data);
+
+                return (match.Success) ? (match.Groups["ttl"].ToString()) : "No title found.";
+            }
+            catch(Exception x)
+            {
+                Log.Error("Title", x.ToString()); // probably WebException
+                return string.Empty;
+            }
         }
     }
 }

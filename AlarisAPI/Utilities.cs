@@ -257,8 +257,12 @@ namespace Alaris.API
             var tt = msg.Replace("@title ", string.Empty);
 
             var url = new Uri(tt);
+            var webTitle = WebHelper.GetWebTitle(url);
 
-            var title = Regex.Replace(WebHelper.GetWebTitle(url), @"\s+", " ");
+            if(string.IsNullOrEmpty(webTitle))
+                return;
+
+            var title = Regex.Replace(webTitle, @"\s+", " ");
 
 
             // check if it's youtube.
