@@ -254,41 +254,50 @@ namespace Alaris.API
             if (chan == null) throw new ArgumentNullException("chan");
             if (msg == null) throw new ArgumentNullException("msg");
 
-            var tt = msg.Replace("@title ", string.Empty);
-
-            var url = new Uri(tt);
-            var webTitle = WebHelper.GetWebTitle(url);
-
-            if(string.IsNullOrEmpty(webTitle))
-                return;
-
-            var title = Regex.Replace(webTitle, @"\s+", " ");
-
-
-            // check if it's youtube.
-            var youtubeRegex = new Regex(@"\s*YouTube\s*\-(?<song>.+)", RegexOptions.IgnoreCase);
-
-            if (youtubeRegex.IsMatch(title))
+            try
             {
-                var match = youtubeRegex.Match(title);
-                var song = match.Groups["song"].ToString();
+
+                var tt = msg.Replace("@title ", string.Empty);
+
+                var url = new Uri(tt);
+                var webTitle = WebHelper.GetWebTitle(url);
+
+                if (string.IsNullOrEmpty(webTitle))
+                    return;
+
+                var title = Regex.Replace(webTitle, @"\s+", " ");
+
+
+                // check if it's youtube.
+                var youtubeRegex = new Regex(@"\s*YouTube\s*\-(?<song>.+)", RegexOptions.IgnoreCase);
+
+                if (youtubeRegex.IsMatch(title))
+                {
+                    var match = youtubeRegex.Match(title);
+                    var song = match.Groups["song"].ToString();
+
+                    lock (SendLock)
+                    {
+                        connection.Sender.PublicMessage(chan,
+                                                        IrcConstants.Purple + "[YouTube]: " + IrcConstants.DarkGreen +
+                                                        song.Substring(1));
+                        // about substr: remove the space before song name
+                    }
+                    return;
+                }
 
                 lock (SendLock)
                 {
+                    Log.Debug("WebHelper", string.Format("Title: {0}", title));
                     connection.Sender.PublicMessage(chan,
-                                                    IrcConstants.Purple + "[YouTube]: " + IrcConstants.DarkGreen +
-                                                    song.Substring(1));
-                    // about substr: remove the space before song name
+                                                    IrcConstants.Bold + "[Title]: " + IrcConstants.Normal +
+                                                    IrcConstants.DarkGreen + title);
                 }
-                return;
             }
-
-            lock (SendLock)
+            catch(Exception x)
             {
-                Log.Debug("WebHelper", string.Format("Title: {0}", title));
-                connection.Sender.PublicMessage(chan,
-                                                IrcConstants.Bold + "[Title]: " + IrcConstants.Normal +
-                                                IrcConstants.DarkGreen + title);
+                Log.Debug("Utilities", x.Message);
+                return;
             }
 
         }
