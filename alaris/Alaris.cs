@@ -4,12 +4,14 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Mime;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Schema;
+using Alaris.Administration;
 using Alaris.API;
 using Alaris.API.Database;
 using Alaris.Config;
@@ -41,6 +43,7 @@ namespace Alaris
         private const string ACSHost = "127.0.0.1";
         private const int ACSPort = 35220;
         private string _scriptsDir;
+        
 
         /// <summary>
         /// Database name.
@@ -51,6 +54,15 @@ namespace Alaris
         /// Gets whether the Lua engine is enabled or not.
         /// </summary>
         public bool LuaEnabled { get; private set; }
+
+        /// <summary>
+        /// Gets the remote's name.
+        /// </summary>
+        public string RemoteName { get; private set; }
+        /// <summary>
+        /// Gets the remote's port.
+        /// </summary>
+        public int RemotePort { get; private set; }
 
         /// <summary>
         ///   The bot's crash handler instance.
@@ -192,6 +204,9 @@ namespace Alaris
 
             DatabaseManager.Initialize(DBName);
 
+            Log.Notice("Remoting", string.Format("Starting remoting channel on port {0} with name: {1}", RemotePort, RemoteName));
+            RemoteManager.StartServives(RemotePort, RemoteName);
+
             SetupHandlers();
         }
 
@@ -230,6 +245,9 @@ namespace Alaris
         {
 
             Connect();
+
+            
+            
         }
 
 
@@ -310,6 +328,9 @@ namespace Alaris
             Locale = config.GetSetting("config/localization/locale", "enGB");
 
             Log.Debug("LocalizationManager", string.Format("Current locale is: {0}", Locale));
+
+            RemotePort = Convert.ToInt32(config.GetSetting("config/remote/port", "5564"));
+            RemoteName = config.GetSetting("config/remote/name", "RemoteManager");
 
             Log.Success("Config", "File read and validated successfully.");
             _confdone = true;
@@ -414,6 +435,8 @@ namespace Alaris
             catch(InvalidOperationException)
             {
             }
+
+            Environment.Exit(0);
         }
 
         /// <summary>

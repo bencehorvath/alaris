@@ -40,12 +40,11 @@ namespace Alaris.Administration
         ///<summary>
         /// Starts the Remoting services.
         ///</summary>
-        internal static void StartServives(int port)
+        internal static void StartServives(int port, string name)
         {
             _channel = new HttpChannel(port);
             ChannelServices.RegisterChannel(_channel, false);
-            RemotingConfiguration.RegisterWellKnownServiceType(
-                Type.GetType("Alaris.Administration.RemoteManager,object"), "RemoteManager",
+            RemotingConfiguration.RegisterWellKnownServiceType(typeof(RemoteManager), name,
                 WellKnownObjectMode.SingleCall);
         }
     }

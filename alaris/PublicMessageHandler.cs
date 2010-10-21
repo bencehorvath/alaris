@@ -101,6 +101,8 @@ namespace Alaris
             {
                 Disconnect("Quit command used by " + user.Nick);
 
+                
+
                 return;
             }
 
