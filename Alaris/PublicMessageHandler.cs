@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Alaris.API;
+using Alaris.API.Crypt;
 using Alaris.API.Database;
 using Alaris.Calculator;
 using Alaris.Calculator.lexer;
@@ -208,6 +209,20 @@ namespace Alaris
                     SendMsg(chan, "Hiba!");
 
                 }
+            }
+
+            if(msg.StartsWith("@aes encrypt "))
+            {
+                msg = msg.Replace("@aes encrypt ", string.Empty);
+
+                SendMsg(chan, Rijndael.EncryptString(msg));
+            }
+
+            if (msg.StartsWith("@aes decrypt "))
+            {
+                msg = msg.Replace("@aes decrypt ", string.Empty);
+
+                SendMsg(chan, Rijndael.DecryptString(msg));
             }
 
         }

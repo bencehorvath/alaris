@@ -87,6 +87,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Crypt\HashAlgorithm.cs" />
+    <Compile Include="Crypt\IEncrpytionAlgorithm.cs" />
+    <Compile Include="Crypt\Rijndael.cs" />
     <Compile Include="Database\AdminManager.cs" />
     <Compile Include="Database\DatabaseAccessorAttribute.cs" />
     <Compile Include="Database\DatabaseAccessType.cs" />
