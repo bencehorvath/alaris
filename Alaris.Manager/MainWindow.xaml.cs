@@ -130,8 +130,6 @@ namespace Alaris.Manager
                 return;
             }
 
-            _manager = (RemoteManager)Activator.GetObject(typeof(RemoteManager), _server);
-            _manager.Initialize(_password);
             _manager.PublicMessage(chan, msg);
 
             MessageBox.Show("Message sent!", "Success!", MessageBoxButton.OK,

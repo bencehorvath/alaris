@@ -28,3 +28,4 @@ using System.Runtime.InteropServices;
 
 [assembly: NeutralResourcesLanguage("en-GB")]
 [assembly: GuidAttribute("B215B017-73C4-4CDC-AE8C-C480C76840F9")]
+[assembly: AssemblyFileVersionAttribute("4.5.0.0")]
