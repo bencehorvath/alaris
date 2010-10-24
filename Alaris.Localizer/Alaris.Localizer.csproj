@@ -80,7 +80,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AlarisAPI\Alaris.API.csproj">
+    <ProjectReference Include="..\Alaris.API\Alaris.API.csproj">
       <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
       <Name>Alaris.API</Name>
     </ProjectReference>

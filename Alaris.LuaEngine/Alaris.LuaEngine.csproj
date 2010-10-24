@@ -100,10 +100,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AlarisAPI\Alaris.API.csproj">
-      <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
-      <Name>Alaris.API</Name>
-    </ProjectReference>
     <ProjectReference Include="..\irc\Alaris.Irc.csproj">
       <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
       <Name>Alaris.Irc</Name>

@@ -96,7 +96,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\alaris\Alaris.csproj">
+    <ProjectReference Include="..\Alaris\Alaris.csproj">
       <Project>{827FC720-BEE2-4357-B29F-0C2BDF51472D}</Project>
       <Name>Alaris</Name>
     </ProjectReference>
