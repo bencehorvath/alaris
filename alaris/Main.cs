@@ -3,7 +3,7 @@ using System.IO;
 using System.Threading;
 using Alaris.API;
 using Alaris.Irc;
-using Alaris.Network;
+
 
 namespace Alaris
 {
@@ -32,51 +32,12 @@ namespace Alaris
             }
             
             var sBot = Singleton<AlarisBot>.Instance;
-            ClientListener listener;
-            Thread lthread = null;
-            
-            if (AlarisBot.AlarisServer)
-            {
-                listener = new ClientListener(AlarisBot.GetListenerPort());
-                lthread = new Thread(listener.Listen);
-                lthread.Start();
-            }
-            
-            Console.CancelKeyPress += (sender, e) =>
-                                          {
-                                              
-                                              sBot.Disconnect("Daemon killed.");
 
-                                              if (lthread != null)
-                                              {
-                                                  lthread.Join(100);
-                                                  lthread.Abort();
-                                              }
-                                          };
+            Console.CancelKeyPress += (sender, e) => sBot.Disconnect("Daemon killed.");
 
-            /*var exc = new List<Exception>();
-			bot.GetCrashHandler().HandleReadConfig(bot.ReadConfig, conf, ref exc);
-			exc.Clear();*/
-            
-
-            //bot.Connect();
 
             sBot.Pool.Enqueue(sBot);
 
-            if (AlarisBot.AlarisServer)
-            {
-                Log.Debug("AlarisServer", "Initiating connection.");
-
-                var packet = new AlarisPacket();
-
-                packet.Write((int) Opcode.CmsgRequestAuth);
-                packet.Write(sBot.GetGuid().ToString());
-                packet.Write(Utilities.MD5String("twlbot"));
-                packet.Write(AlarisBot.GetListenerPort());
-
-                AlarisBot.SendPacketToACS(packet);
-                packet.Dispose();
-            }
 
             AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
                                                               {

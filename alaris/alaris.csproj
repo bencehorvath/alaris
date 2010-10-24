@@ -160,10 +160,6 @@
     <Compile Include="Threading\IThreadContext.cs" />
     <Compile Include="Singleton.cs" />
     <Compile Include="Exceptions\SingletonException.cs" />
-    <Compile Include="Network\AlarisPacket.cs" />
-    <Compile Include="Network\Opcodes.cs" />
-    <Compile Include="Network\ClientListener.cs" />
-    <Compile Include="Network\ClientPacketHandler.cs" />
     <Compile Include="ClusterManager.cs" />
     <Compile Include="Threading\ThreadRunnable.cs" />
   </ItemGroup>

@@ -7,9 +7,9 @@ using Alaris.Administration;
 
 namespace Alaris.Server
 {
-	public class Entry
+	public static class Entry
 	{
-		public static void Main (string[] args)
+		private static void Main (string[] args)
 		{
 		    var chan = new HttpChannel();
             ChannelServices.RegisterChannel(chan, false);

@@ -74,8 +74,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="ServerListener.cs" />
-    <Compile Include="ServerPacketHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

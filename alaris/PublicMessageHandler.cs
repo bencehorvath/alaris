@@ -13,7 +13,6 @@ using Alaris.Calculator.parser;
 using Alaris.Irc;
 using Alaris.Localization;
 using Alaris.Mathematics.Types;
-using Alaris.Network;
 
 namespace Alaris
 {
@@ -140,15 +139,6 @@ namespace Alaris
                 SendMsg(chan, "Lua scripts reloaded.");
             }
 
-            if (msg.Equals("@request acs random", StringComparison.InvariantCultureIgnoreCase) && AlarisServer)
-            {
-                AcsRandRequestChannel = chan;
-                var packet = new AlarisPacket();
-                packet.Write((int) Opcode.CmsgRequestACSRandom);
-                packet.Write(chan);
-                SendPacketToACS(packet);
-                packet.Dispose();
-            }
 
             if(msg.StartsWith("@admin add ", StringComparison.InvariantCultureIgnoreCase) && Utilities.IsAdmin(user))
             {

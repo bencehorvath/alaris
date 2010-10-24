@@ -18,7 +18,6 @@ using Alaris.Config;
 using Alaris.Exceptions;
 using Alaris.Irc;
 using Alaris.Irc.Ctcp;
-using Alaris.Network;
 using Alaris.Threading;
 
 namespace Alaris
@@ -105,16 +104,6 @@ namespace Alaris
         {
             get { return _connection; }
         }
-
-        /// <summary>
-        ///   Determines whether the communication to and dependance of alaris_server is set.
-        /// </summary>
-        public static readonly bool AlarisServer;
-
-        /// <summary>
-        ///   The acs_rand_request_channel.
-        /// </summary>
-        public string AcsRandRequestChannel;
 
         /// <summary>
         ///   Gets or sets the thread pool.
@@ -345,58 +334,6 @@ namespace Alaris
             Log.Notice("Config", string.Format("Connect to: {0} with nick {1}", _server, _nick));
         }
 
-        /// <summary>
-        ///   Sends the packet to ACS.
-        /// </summary>
-        /// <param name = 'packet'>
-        ///   Packet.
-        /// </param>
-        public static void SendPacketToACS(AlarisPacket packet)
-        {
-            if (packet == null) throw new ArgumentNullException("packet");
-            if (!AlarisServer)
-                return;
-
-            var client = new TcpClient();
-            try
-            {
-                var ip = IPAddress.Parse(ACSHost);
-                if (ip == null) return;
-
-                var endp = new IPEndPoint(ip, ACSPort);
-                client.Connect(endp);
-
-                Thread.Sleep(300);
-
-
-                if (client.Connected)
-                {
-                    var stream = client.GetStream();
-                    Log.Debug("AlarisServer", "Connected. Sending packet.");
-
-                    var encoder = new UTF8Encoding();
-
-                    byte[] buffer = encoder.GetBytes(packet.GetNetMessage());
-
-                    stream.Write(buffer, 0, buffer.Length);
-                    stream.Flush();
-
-                    Log.Debug("AlarisServer", "Packet sent.");
-
-                    stream.Close();
-
-                    Log.Debug("AlarisServer", "Connection closed.");
-                }
-            }
-            catch
-            {
-                Log.Error("Alaris", "Couldn't send ACS packet.");
-            }
-            finally
-            {
-                client.Close();
-            }
-        }
 
         /// <summary>
         ///   Establishes the connection to the previously specified server.
