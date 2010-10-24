@@ -91,7 +91,7 @@ namespace Alaris.Commands
                 var perm = CommandPermission.Normal;
                 AlarisMethod handler = null;
 
-                foreach (var entry in CommandMethodMap.Where(entry => entry.Key.Command == command))
+                foreach (var entry in CommandMethodMap.Where(entry => entry.Key.Command.Equals(command, StringComparison.InvariantCultureIgnoreCase)))
                 {
                     perm = entry.Key.Permission;
                     handler = entry.Value;
