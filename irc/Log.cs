@@ -51,6 +51,27 @@ namespace Alaris.Irc
 			Console.ForegroundColor = ConsoleColor.Cyan;
 			Console.Write(message + "\n");
 		}
+
+        /// <summary>
+        /// Emit a console warning message.
+        /// </summary>
+        /// <param name="module">
+        /// The module name where the thing described in the message happened.
+        /// </param>
+        /// <param name="message">
+        /// The message to display.
+        /// </param>
+        public static void Warning(string module, string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.Write("{0}:{1} ", DateTime.Now.Hour, DateTime.Now.Minute);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("D ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("{0}: ", module);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(message + "\n");
+        }
 		
 		/// <summary>
 		/// Emit a console error.

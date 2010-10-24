@@ -17,6 +17,7 @@ namespace Alaris.Administration
         private static HttpChannel _channel;
         private Connection _connection;
         private List<string> _channels;
+        private bool _inited;
         ///<summary>
         /// Run a remote notice method.
         ///</summary>
@@ -30,11 +31,31 @@ namespace Alaris.Administration
         ///<summary>
         /// Initialize the instance. Must be called before anything!
         ///</summary>
-        public void Initialize()
+        public bool Initialize(string pass)
         {
-            var sBot = Singleton<AlarisBot>.Instance;
-            _connection = sBot.Connection;
-            _channels = sBot.Channels;
+            
+            
+
+            if(!pass.Equals(AlarisBot.GetBot().RemotePassword, StringComparison.InvariantCultureIgnoreCase))
+            {
+                Log.Warning("Remote", "Connection attempt without valid password!");
+                _inited = false;
+                return false;
+            }
+
+
+            _inited = true;
+            return true;
+        }
+
+        ///<summary>
+        /// Sends a public message to the specified channel.
+        ///</summary>
+        ///<param name="chan">Channel to send to.</param>
+        ///<param name="msg">Message to send.</param>
+        public void PublicMessage(string chan, string msg)
+        {
+            AlarisBot.GetBot().SendMsg(chan, msg);
         }
 
         ///<summary>

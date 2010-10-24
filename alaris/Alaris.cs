@@ -65,6 +65,11 @@ namespace Alaris
         public int RemotePort { get; private set; }
 
         /// <summary>
+        /// Gets the remote's password.
+        /// </summary>
+        public string RemotePassword { get; private set; }
+
+        /// <summary>
         ///   The bot's crash handler instance.
         /// </summary>
         public CrashHandler CrashHandler
@@ -331,6 +336,7 @@ namespace Alaris
 
             RemotePort = Convert.ToInt32(config.GetSetting("config/remote/port", "5564"));
             RemoteName = config.GetSetting("config/remote/name", "RemoteManager");
+            RemotePassword = config.GetSetting("config/remote/password", "alaris00");
 
             Log.Success("Config", "File read and validated successfully.");
             _confdone = true;

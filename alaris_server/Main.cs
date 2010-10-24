@@ -22,7 +22,7 @@ namespace Alaris.Server
                 return;
             }
 
-            manager.Initialize();
+            manager.Initialize("alaris00");
             manager.RemoteNotice("SERVER", "[SERVER]: REMOTE MESSAGE: ALERT!");
             manager.RemoteNotice("SERVER", "[SERVER]: REMOTE MESSAGE: ALERT!");
             manager.RemoteNotice("SERVER", "[SERVER]: REMOTE MESSAGE: ALERT!");

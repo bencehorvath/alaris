@@ -11,7 +11,8 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <Description>Alaris IRC Bot</Description>
     <RootNamespace>Alaris</RootNamespace>
-    <StartupObject>Alaris.Entry</StartupObject>
+    <StartupObject>
+    </StartupObject>
     <CodePage>65001</CodePage>
     <ReleaseVersion>2.3</ReleaseVersion>
     <TargetFrameworkProfile>
@@ -62,9 +63,7 @@
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x64\Debug\</OutputPath>
@@ -106,6 +105,9 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>Alaris.snk.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib" />
@@ -133,6 +135,7 @@
     <Reference Include="System.Runtime.Remoting" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administration\AlarisExt.cs" />
     <Compile Include="Administration\RemoteManager.cs" />
     <Compile Include="Alaris.cs" />
     <Compile Include="API.cs" />
@@ -247,6 +250,7 @@
   <ItemGroup>
     <Content Include="alaris.config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <PropertyGroup>

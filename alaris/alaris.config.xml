@@ -28,6 +28,7 @@ xsi:schemaLocation="http://github.com/Twl/alaris Alaris.xsd">
     <remote>
       <port>5564</port>
       <name>RemoteManager</name>
+      <password>alaris00</password>
     </remote>
   </config>
 </alaris>

@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.Localizer", "Alaris.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.Mathematics", "Alaris.Mathematics\Alaris.Mathematics.csproj", "{E428DA77-9439-4E3B-9619-21DFDBA206DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.Manager", "Alaris.Manager\Alaris.Manager.csproj", "{0959F9F6-0D07-4482-9825-CEF2F1B03740}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = alaris.vsmdi
@@ -233,6 +235,20 @@ Global
 		{E428DA77-9439-4E3B-9619-21DFDBA206DC}.Release|Win32.ActiveCfg = Release|Any CPU
 		{E428DA77-9439-4E3B-9619-21DFDBA206DC}.Release|x64.ActiveCfg = Release|Any CPU
 		{E428DA77-9439-4E3B-9619-21DFDBA206DC}.Release|x86.ActiveCfg = Release|Any CPU
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Debug|Win32.ActiveCfg = Debug|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Debug|x64.ActiveCfg = Debug|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Debug|x86.ActiveCfg = Debug|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Debug|x86.Build.0 = Debug|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Release|Any CPU.ActiveCfg = Release|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Release|Mixed Platforms.Build.0 = Release|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Release|Win32.ActiveCfg = Release|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Release|x64.ActiveCfg = Release|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Release|x86.ActiveCfg = Release|x86
+		{0959F9F6-0D07-4482-9825-CEF2F1B03740}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
