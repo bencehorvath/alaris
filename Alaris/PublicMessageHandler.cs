@@ -1,5 +1,6 @@
 using System;
 using System.Globalization;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -38,11 +39,9 @@ namespace Alaris
             {
                 try
                 {
-                    foreach (var url in urlsin)
+                    foreach (var task in
+                        urlsin.Select(url1 => new Task(() => Utilities.HandleWebTitle(ref _connection, chan, url1))))
                     {
-                        var url1 = url;
-                        var task = new Task(() => Utilities.HandleWebTitle(ref _connection, chan, url1));
-
                         task.Start();
                         
                         Thread.Sleep(400);
@@ -107,7 +106,7 @@ namespace Alaris
 
             if (msg.Equals("@help", StringComparison.InvariantCultureIgnoreCase))
             {
-                _connection.Sender.PublicMessage(chan, string.Format("{0}: info | quit | sys | join | title | mangos", LocalizationManager.GetLocalizedText("Available commands", Locale)));
+                _connection.Sender.PublicMessage(chan, string.Format("{0}: info | quit | sys | join | title | calc | sort | admin", LocalizationManager.GetLocalizedText("Available commands", Locale)));
                 return;
             }
 
@@ -139,6 +138,9 @@ namespace Alaris
                 SendMsg(chan, "Lua scripts reloaded.");
             }
 
+            if (msg.Equals("@admin", StringComparison.InvariantCultureIgnoreCase))
+                SendMsg(chan, "Sub-commands: list | delete | add");
+
 
             if(msg.StartsWith("@admin add ", StringComparison.InvariantCultureIgnoreCase) && Utilities.IsAdmin(user))
             {
@@ -153,6 +155,8 @@ namespace Alaris
 
                 SendMsg(chan, string.Format("Admin {0} has been added.", parts[1]));
             }
+
+            
 
             if(msg.Equals("@admin list", StringComparison.InvariantCultureIgnoreCase))
             {
