@@ -12,6 +12,7 @@ using Alaris.Calculator.lexer;
 using System.IO;
 using Alaris.Calculator.node;
 using Alaris.Calculator.parser;
+using Alaris.Commands;
 using Alaris.Irc;
 using Alaris.Localization;
 using Alaris.Mathematics.Types;
@@ -57,6 +58,8 @@ namespace Alaris
                     return;
                 }
             }
+
+            CommandManager.HandleCommand(user, chan, msg);
 
             if(msg.StartsWith("@calc ", StringComparison.InvariantCultureIgnoreCase) || msg.StartsWith("@c ", StringComparison.InvariantCultureIgnoreCase))
             {

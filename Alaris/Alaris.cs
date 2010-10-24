@@ -10,6 +10,7 @@ using System.Xml.Schema;
 using Alaris.Administration;
 using Alaris.API;
 using Alaris.API.Database;
+using Alaris.Commands;
 using Alaris.Config;
 using Alaris.Exceptions;
 using Alaris.Irc;
@@ -176,7 +177,9 @@ namespace Alaris
             }
 
             //_connection = new Connection(cargs, true, false);
-            
+
+            CommandManager.CommandPrefix = "@";
+            CommandManager.CreateMappings();
 
             //_connection.CtcpResponder = responder;
             Log.Notice("Alaris", "Text encoding: UTF-8");
@@ -234,10 +237,7 @@ namespace Alaris
         public void Run()
         {
 
-            Connect();
-
-            
-            
+            Connect(); 
         }
 
 
