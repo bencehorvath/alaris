@@ -27,7 +27,8 @@ namespace Alaris.API
                 var request = (HttpWebRequest) WebRequest.Create(url);
 
                 request.Timeout = 3500;
-
+                request.AllowAutoRedirect = true;
+                
                 request.UserAgent = "Alaris Bot " + Utilities.BotVersion + " / .NET " + Environment.Version;
                 request.Referer = "http://www.wowemuf.org";
 

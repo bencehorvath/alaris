@@ -82,8 +82,6 @@ namespace Alaris.Manager
                     return;
                 }
 
-                _manager.PublicMessage("#hun_bot", "aaasd");
-
                 _connected = true;
                 
 
@@ -139,10 +137,7 @@ namespace Alaris.Manager
             MessageBox.Show("Message sent!", "Success!", MessageBoxButton.OK,
                                     MessageBoxImage.Asterisk);
 
-            channelBox.Text = string.Empty;
             messageBox.Text = string.Empty;
-
-            //_manager = null;
 
         }
     }
