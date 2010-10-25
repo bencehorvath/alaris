@@ -22,7 +22,7 @@ namespace Alaris.Commands
         /// </summary>
         /// <param name="command">The command corresponding to this method.</param>
         /// <param name="permission">Command's access permission</param>
-        public AlarisCommandAttribute(string command, CommandPermission permission)
+        public AlarisCommandAttribute(string command, CommandPermission permission = CommandPermission.Normal)
         {
             Command = command;
             Permission = permission;

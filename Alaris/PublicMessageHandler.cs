@@ -99,42 +99,6 @@ namespace Alaris
 
             //LuaEngine.LuaHelper.HandleLuaCommands(_manager.Lua.LuaVM, chan, msg);
 
-            if (msg.Equals("@quit", StringComparison.InvariantCultureIgnoreCase) && Utilities.IsAdmin(user))
-            {
-                Disconnect("Quit command used by " + user.Nick);
-
-                
-
-                return;
-            }
-
-            if (msg.Equals("@help", StringComparison.InvariantCultureIgnoreCase))
-            {
-                _connection.Sender.PublicMessage(chan, string.Format("{0}: info | quit | sys | join | title | calc | sort | admin", LocalizationManager.GetLocalizedText("Available commands", Locale)));
-                return;
-            }
-
-            if (msg.Equals("@info", StringComparison.InvariantCultureIgnoreCase))
-            {
-                Utilities.SendInfo(ref _connection, chan);
-                return;
-            }
-
-            if (msg.Equals("@sys", StringComparison.InvariantCultureIgnoreCase))
-            {
-                Utilities.SendSysStats(ref _connection, chan);
-
-                return;
-            }
-
-            if (msg.StartsWith("@join ", StringComparison.InvariantCultureIgnoreCase) && Utilities.IsAdmin(user))
-            {
-                var ch = msg.Replace("@join ", string.Empty);
-                if (Rfc2812Util.IsValidChannelName(ch))
-                    _connection.Sender.Join(ch);
-
-                return;
-            }
 
             if (msg.Equals("@reload scripts", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -142,6 +106,7 @@ namespace Alaris
                 SendMsg(chan, "Lua scripts reloaded.");
             }
 
+            /*
             if (msg.Equals("@admin", StringComparison.InvariantCultureIgnoreCase))
                 SendMsg(chan, "Sub-commands: list | delete | add");
 
@@ -178,7 +143,7 @@ namespace Alaris
                 msg = msg.Replace("@admin delete ", string.Empty);
                 AdminManager.DeleteAdmin(msg);
                 SendMsg(chan, string.Format("Admin {0} deleted.", msg));              
-            }
+            }*/
 
    
             if(msg.StartsWith("@sort "))
@@ -214,19 +179,19 @@ namespace Alaris
                 }
             }
 
-            if(msg.StartsWith("@aes encrypt "))
-            {
-                msg = msg.Replace("@aes encrypt ", string.Empty);
+            //if(msg.StartsWith("@aes encrypt "))
+            //{
+            //    msg = msg.Replace("@aes encrypt ", string.Empty);
 
-                SendMsg(chan, Rijndael.EncryptString(msg));
-            }
+            //    SendMsg(chan, Rijndael.EncryptString(msg));
+            //}
 
-            if (msg.StartsWith("@aes decrypt "))
-            {
-                msg = msg.Replace("@aes decrypt ", string.Empty);
+            //if (msg.StartsWith("@aes decrypt "))
+            //{
+            //    msg = msg.Replace("@aes decrypt ", string.Empty);
 
-                SendMsg(chan, Rijndael.DecryptString(msg));
-            }
+            //    SendMsg(chan, Rijndael.DecryptString(msg));
+            //}
 
         }
     }

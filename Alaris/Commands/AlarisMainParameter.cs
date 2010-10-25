@@ -9,6 +9,13 @@ namespace Alaris.Commands
     public sealed class AlarisMainParameter
     {
         /// <summary>
+        /// Gets the Alaris instance.
+        /// </summary>
+        public AlarisBot Bot { get
+        {
+            return AlarisBot.GetBot();
+        }}
+        /// <summary>
         ///  The IRC connection.
         /// </summary>
         public Connection IrcConnection { get; set; }
@@ -20,5 +27,10 @@ namespace Alaris.Commands
         /// Channels where the command was given.
         /// </summary>
         public string Channel { get; set; }
+
+        /// <summary>
+        /// User of the action.
+        /// </summary>
+        public UserInfo User { get; set; }
     }
 }

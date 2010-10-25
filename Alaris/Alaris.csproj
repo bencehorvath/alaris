@@ -139,9 +139,11 @@
     <Compile Include="Administration\RemoteManager.cs" />
     <Compile Include="Alaris.cs" />
     <Compile Include="API.cs" />
+    <Compile Include="Commands\AdvancedCommands.cs" />
     <Compile Include="Commands\AlarisCommand.cs" />
     <Compile Include="Commands\AlarisMainParameter.cs" />
     <Compile Include="Commands\AlarisMethod.cs" />
+    <Compile Include="Commands\BasicCommands.cs" />
     <Compile Include="Commands\CommandManager.cs" />
     <Compile Include="Commands\CommandPermission.cs" />
     <Compile Include="Commands\ParameterizedAlarisCommand.cs" />

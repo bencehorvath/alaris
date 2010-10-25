@@ -78,6 +78,7 @@ namespace Alaris.Commands
                     foreach (var entry in CommandMethodMap)
                         Log.Notice("CommandManager", "Mapping contains: " + entry.Key.Command);
 
+
                 var wr = commandText.Split(' ');
                 var command = wr[0];
 
@@ -114,7 +115,9 @@ namespace Alaris.Commands
                              {
                                  Channel = channel,
                                  Channels = AlarisBot.GetBot().Channels,
-                                 IrcConnection = AlarisBot.GetBot().Connection
+                                 IrcConnection = AlarisBot.GetBot().Connection,
+                                 User = user
+                                 
                              };
 
                 var parl = new List<object>();
@@ -124,6 +127,14 @@ namespace Alaris.Commands
                     parl.Add(mp);
 
                     parl.AddRange(parameters);
+
+                    var pdiff = handler.Method.GetParameters().Length - (parl.Count + 1);
+
+                    if(pdiff > 0)
+                    {
+                        for(var i = 0; i <= pdiff; ++i)
+                            parl.Add(null);
+                    }
 
                 }
                 else

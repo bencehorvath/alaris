@@ -19,7 +19,7 @@ namespace Alaris.Commands
         /// <param name="command">Alaris command.</param>
         /// <param name="permission">Access permission.</param>
         /// <param name="numParams">Number of parameters.</param>
-        public ParameterizedAlarisCommand(string command, CommandPermission permission, int numParams) : base(command, permission)
+        public ParameterizedAlarisCommand(string command, CommandPermission permission = CommandPermission.Normal, int numParams = 1) : base(command, permission)
         {
             Command = command;
             Permission = permission;
