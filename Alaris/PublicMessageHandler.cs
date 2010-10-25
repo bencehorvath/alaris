@@ -106,46 +106,7 @@ namespace Alaris
                 SendMsg(chan, "Lua scripts reloaded.");
             }
 
-            /*
-            if (msg.Equals("@admin", StringComparison.InvariantCultureIgnoreCase))
-                SendMsg(chan, "Sub-commands: list | delete | add");
 
-
-            if(msg.StartsWith("@admin add ", StringComparison.InvariantCultureIgnoreCase) && Utilities.IsAdmin(user))
-            {
-                msg = msg.Replace("@admin add ", string.Empty);
-
-                var parts = msg.Split(' ');
-
-                if (parts.Length != 3) { SendMsg(chan, "Syntax: ADMIN ADD <user> <nick> <hostname>");
-                    return;  }
-
-                DatabaseManager.Query(string.Format("INSERT INTO admins(user,nick,hostname) VALUES('{0}', '{1}', '{2}')", parts[0], parts[1], parts[2]));
-
-                SendMsg(chan, string.Format("Admin {0} has been added.", parts[1]));
-            }
-
-            
-
-            if(msg.Equals("@admin list", StringComparison.InvariantCultureIgnoreCase))
-            {
-                if(AdminManager.GetAdmins() == null)
-                    SendMsg(chan, "No admins."); // shouldn't happen.
-                else
-                {
-                    foreach(var adm in AdminManager.GetAdmins())
-                        SendMsg(chan, adm);
-                }
-            }
-
-            if(msg.StartsWith("@admin delete ", StringComparison.InvariantCultureIgnoreCase) && Utilities.IsAdmin(user))
-            {
-                msg = msg.Replace("@admin delete ", string.Empty);
-                AdminManager.DeleteAdmin(msg);
-                SendMsg(chan, string.Format("Admin {0} deleted.", msg));              
-            }*/
-
-   
             if(msg.StartsWith("@sort "))
             {
                 var rest = msg.Remove(0, 6);
@@ -178,20 +139,6 @@ namespace Alaris
 
                 }
             }
-
-            //if(msg.StartsWith("@aes encrypt "))
-            //{
-            //    msg = msg.Replace("@aes encrypt ", string.Empty);
-
-            //    SendMsg(chan, Rijndael.EncryptString(msg));
-            //}
-
-            //if (msg.StartsWith("@aes decrypt "))
-            //{
-            //    msg = msg.Replace("@aes decrypt ", string.Empty);
-
-            //    SendMsg(chan, Rijndael.DecryptString(msg));
-            //}
 
         }
     }
