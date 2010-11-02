@@ -140,6 +140,12 @@ namespace Alaris
                 }
             }
 
+            if(msg.StartsWith("@aes encrypt "))
+            {
+                var text = msg.Replace("@aes encrypt ", string.Empty);
+                SendMsg(chan, Rijndael.EncryptString(text));        
+            }
+
         }
     }
 }

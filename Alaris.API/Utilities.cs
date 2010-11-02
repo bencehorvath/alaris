@@ -10,7 +10,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Alaris.API.Database;
 using Alaris.Irc;
-using System.Runtime.InteropServices;
 
 namespace Alaris.API
 {
@@ -35,6 +34,18 @@ namespace Alaris.API
         public static string AdminHost { get; set; }
 
         private static readonly object SendLock = new object();
+
+        public static readonly List<Admin> Admins = new List<Admin>();
+
+        static Utilities()
+        {
+            Admins.Add(new Admin()
+                           {
+                               User = AdminUser,
+                               Nick = AdminNick,
+                               Host = AdminHost
+                           });
+        }
 
         /// <summary>
         ///   Sends system stats using the specified connection.

@@ -64,11 +64,8 @@ namespace Alaris.Commands
             if (string.IsNullOrEmpty(action) || string.IsNullOrEmpty(text))
                 return;
 
-            if(action.Equals("encrypt", StringComparison.InvariantCultureIgnoreCase))
-            {
-                mp.Bot.SendMsg(mp.Channel, Rijndael.EncryptString(text));
-            }
-            else if (action.Equals("decrypt", StringComparison.InvariantCultureIgnoreCase))
+
+            if (action.Equals("decrypt", StringComparison.InvariantCultureIgnoreCase))
             {
                 mp.Bot.SendMsg(mp.Channel, Rijndael.DecryptString(text));
             }

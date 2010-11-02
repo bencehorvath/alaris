@@ -81,11 +81,19 @@
       <HintPath>..\dep\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.ServiceModel.Routing" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Crypt\HashAlgorithm.cs" />
     <Compile Include="Crypt\IEncrpytionAlgorithm.cs" />
