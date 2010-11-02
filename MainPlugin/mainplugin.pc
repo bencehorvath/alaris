@@ -1,6 +1,0 @@
-Name: MainPlugin
-Description: MainPlugin
-Version: 1.6
-
-Requires: 
-Libs: -r:./build/lib/alaris/MainPlugin.dll
