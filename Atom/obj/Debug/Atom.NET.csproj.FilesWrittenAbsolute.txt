@@ -1,5 +1,0 @@
-/home/twl/Development/alaris/Atom/obj/Debug/Atom.NET.mediatypes.txt
-/home/twl/Development/alaris/Atom/bin/Debug/Atom.NET.dll.mdb
-/home/twl/Development/alaris/Atom/bin/Debug/Atom.NET.dll
-/home/twl/Development/alaris/Atom/obj/Debug/Atom.NET.dll
-/home/twl/Development/alaris/Atom/obj/Debug/Atom.NET.dll.mdb
