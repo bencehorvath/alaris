@@ -4,6 +4,9 @@ using Alaris.Mathematics.Algorithms;
 
 namespace Alaris.Mathematics
 {
+    /// <summary>
+    /// Provides simple mathematic methods.
+    /// </summary>
     public static class MathFunctions
     {
         /// <summary>

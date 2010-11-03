@@ -6,6 +6,9 @@ using Alaris.Irc;
 
 namespace Alaris.API.Database
 {
+    /// <summary>
+    /// Class providing static methods for admin management.
+    /// </summary>
     public static class AdminManager
     {
         /// <summary>
@@ -53,6 +56,10 @@ namespace Alaris.API.Database
                                   user.User, user.Nick, user.Hostname))) != null;
         }
 
+        /// <summary>
+        /// Gets the list of admins.
+        /// </summary>
+        /// <returns>List of admin nicks</returns>
         public static List<string> GetAdmins()
         {
             var table = DatabaseManager.Query("SELECT * FROM admins");
@@ -60,6 +67,14 @@ namespace Alaris.API.Database
             var admins = (from DataRow row in table.Rows where row["nick"] != null select row["nick"].ToString()).ToList();
 
             return admins;
+        }
+
+        /// <summary>
+        /// Gets the list of admins.
+        /// </summary>
+        public static List<string> Admins
+        {
+            get { return GetAdmins(); }
         }
 
         

@@ -35,6 +35,9 @@ namespace Alaris.API
 
         private static readonly object SendLock = new object();
 
+        /// <summary>
+        /// Adminsitrator list.
+        /// </summary>
         public static readonly List<Admin> Admins = new List<Admin>();
 
         static Utilities()

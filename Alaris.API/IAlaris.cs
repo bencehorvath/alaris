@@ -3,8 +3,16 @@ using System.Collections.Generic;
 
 namespace Alaris.API
 {
+    /// <summary>
+    /// Interface which should be implemented by all Alaris plugins.
+    /// </summary>
 	public interface IAlarisBasic : IAlarisComponent
 	{
+        /// <summary>
+        /// Initializes the plugin.
+        /// </summary>
+        /// <param name="con">IRC connection</param>
+        /// <param name="channels">Channel list.</param>
 	    void Initialize(ref Connection con, List<string> channels);
         /// <summary>
         /// On public message hook.

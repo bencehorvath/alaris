@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Http;
-using System.Runtime.Remoting.Channels.Tcp;
 using Alaris.Irc;
 
 namespace Alaris.Administration

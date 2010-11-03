@@ -5,6 +5,10 @@ using System.Text;
 
 namespace Alaris.Mathematics.Types
 {
+    /// <summary>
+    /// An array which automatically sorts itself.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public sealed class AutoSortedArray<T>
         where T: IComparable
     {
@@ -15,6 +19,10 @@ namespace Alaris.Mathematics.Types
         /// </summary>
         public List<T> Array { get; private set; }
 
+        /// <summary>
+        /// Creates a new instance of <see>AutoSortedArray</see>
+        /// </summary>
+        /// <param name="list">List of items it should contain.</param>
         public AutoSortedArray(IEnumerable<T> list)
         {
             _array = list as List<T>;
@@ -24,6 +32,9 @@ namespace Alaris.Mathematics.Types
            
         }
 
+        /// <summary>
+        /// Creates a new instance of <see>AutoSortedArray</see> with an empty list.
+        /// </summary>
         public AutoSortedArray()
         {
             _array = new List<T>();

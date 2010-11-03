@@ -4,6 +4,9 @@ using Alaris.Irc;
 
 namespace Alaris.API.Database
 {
+    /// <summary>
+    /// Class providing static methods for managing the SQL databse.
+    /// </summary>
 	public static class DatabaseManager
     {
 
@@ -25,6 +28,10 @@ namespace Alaris.API.Database
             }
 	    }
 		
+        /// <summary>
+        /// Initializes the <see>DatabaseManager</see>
+        /// </summary>
+        /// <param name="database"></param>
 		public static void Initialize(string database)
 		{
 		    Log.Notice("DatabaseManager", "Reading local database...");
@@ -36,6 +43,11 @@ namespace Alaris.API.Database
 
 		}
 
+        /// <summary>
+        /// Executes the given query on the database.
+        /// </summary>
+        /// <param name="sql">The query</param>
+        /// <returns>Result from the database.</returns>
         public static DataTable Query(string sql)
         {
             try
@@ -63,6 +75,11 @@ namespace Alaris.API.Database
             }
         }
 
+        /// <summary>
+        /// Executes the given query on the database and returns the result's first row.
+        /// </summary>
+        /// <param name="query">Query to execute</param>
+        /// <returns>The row</returns>
         public static DataRow QueryFirstRow(string query)
         {
             var table = Query(query);

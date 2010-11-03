@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Alaris.API.Crypt
 {
+    /// <summary>
+    /// Implementation of the secure Rijndael algorithm (also known as the AES encryption)
+    /// </summary>
     public class Rijndael : IEncrpytionAlgorithm
     {
         private const string Pasword = "alaris007";

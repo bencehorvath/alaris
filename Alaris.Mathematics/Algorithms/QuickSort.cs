@@ -11,6 +11,10 @@ namespace Alaris.Mathematics.Algorithms
     {
         private readonly T[] _input;
 
+        /// <summary>
+        /// Creates a new instance of <see>QuickSort</see>
+        /// </summary>
+        /// <param name="values">List of values the instance should process.</param>
         public QuickSort(IList<T> values)
         {
             _input = new T[values.Count];
@@ -22,6 +26,9 @@ namespace Alaris.Mathematics.Algorithms
 
         }
 
+        /// <summary>
+        /// The sorted output.
+        /// </summary>
         public T[] Output
         {
             get
@@ -30,6 +37,9 @@ namespace Alaris.Mathematics.Algorithms
             }
         }
 
+        /// <summary>
+        /// Sorts the list manually.
+        /// </summary>
         public void Sort()
         {
             Sorting(0, _input.Length - 1);

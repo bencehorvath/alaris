@@ -1,5 +1,9 @@
 ﻿namespace Alaris.API.Crypt
 {
+    /// <summary>
+    /// An interface which should be implemented by all encryption
+    /// algorithm implementations in Alaris.
+    /// </summary>
     public interface IEncrpytionAlgorithm
     {
         /// <summary>

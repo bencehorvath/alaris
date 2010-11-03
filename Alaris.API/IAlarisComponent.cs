@@ -2,6 +2,9 @@
 
 namespace Alaris.API
 {
+    /// <summary>
+    /// Interface which forces a component to have a GUID.
+    /// </summary>
     public interface IAlarisComponent
     {
         /// <summary>
