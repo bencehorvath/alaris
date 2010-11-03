@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1" href="$interface_alaris_1_1_a_p_i_1_1_i_alaris_basic.html" title="Alaris.API.IAlarisBasic" alt="" coords="7,59,159,88"/>
-<area shape="rect" id="node3" href="$class_alaris_1_1_channel_rights_1_1_alaris_plugin.html" title="Alaris.ChannelRights.AlarisPlugin" alt="" coords="221,5,437,35"/>
-<area shape="rect" id="node5" href="$class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin.html" title="Alaris.FeedHandlerPlugin.AlarisPlugin" alt="" coords="209,59,449,88"/>
-<area shape="rect" id="node7" href="$class_alaris_1_1_main_1_1_alaris_plugin.html" title="Alaris.Main.AlarisPlugin" alt="" coords="249,112,409,141"/>
-</map>
