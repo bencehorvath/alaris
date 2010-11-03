@@ -72,13 +72,13 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\dep\System.Data.SQLite.dll</HintPath>
+      <HintPath>..\Dependencies\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.SQLite.Linq, Version=2.0.38.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\dep\System.Data.SQLite.Linq.dll</HintPath>
+      <HintPath>..\Dependencies\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Remoting" />
@@ -111,14 +111,14 @@
     <Compile Include="WebHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\irc\Alaris.Irc.csproj">
+    <None Include="Alaris.API.pfx" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alaris.Irc\Alaris.Irc.csproj">
       <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
       <Name>Alaris.Irc</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Alaris.API.pfx" />
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

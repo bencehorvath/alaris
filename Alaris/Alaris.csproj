@@ -181,6 +181,10 @@
       <Project>{B11FC091-0F63-4663-82DB-23F592A6596D}</Project>
       <Name>Alaris.Calculator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Alaris.Irc\Alaris.Irc.csproj">
+      <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
+      <Name>Alaris.Irc</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Alaris.LuaEngine\Alaris.LuaEngine.csproj">
       <Project>{D6E5F82D-5385-45AD-A0D1-1091EC6A5393}</Project>
       <Name>Alaris.LuaEngine</Name>
@@ -188,10 +192,6 @@
     <ProjectReference Include="..\Alaris.Mathematics\Alaris.Mathematics.csproj">
       <Project>{E428DA77-9439-4E3B-9619-21DFDBA206DC}</Project>
       <Name>Alaris.Mathematics</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\irc\Alaris.Irc.csproj">
-      <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
-      <Name>Alaris.Irc</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -39,7 +39,7 @@ namespace Alaris.API
 
         static Utilities()
         {
-            Admins.Add(new Admin()
+            Admins.Add(new Admin
                            {
                                User = AdminUser,
                                Nick = AdminNick,

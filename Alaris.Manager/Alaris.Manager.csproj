@@ -96,13 +96,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Alaris.Irc\Alaris.Irc.csproj">
+      <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
+      <Name>Alaris.Irc</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Alaris\Alaris.csproj">
       <Project>{827FC720-BEE2-4357-B29F-0C2BDF51472D}</Project>
       <Name>Alaris</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\irc\Alaris.Irc.csproj">
-      <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
-      <Name>Alaris.Irc</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

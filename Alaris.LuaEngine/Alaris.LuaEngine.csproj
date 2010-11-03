@@ -77,11 +77,13 @@
     <AssemblyOriginatorKeyFile>Alaris.LuaEngine.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="lua51">
-      <HintPath>..\dep\lua51.dll</HintPath>
+    <Reference Include="lua51, Version=0.0.0.0, Culture=neutral, PublicKeyToken=1e1fb15b02227b8a, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\lua51.dll</HintPath>
     </Reference>
-    <Reference Include="LuaInterface">
-      <HintPath>..\dep\LuaInterface.dll</HintPath>
+    <Reference Include="LuaInterface, Version=2.0.0.42883, Culture=neutral, PublicKeyToken=1e1fb15b02227b8a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\LuaInterface.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -100,13 +102,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\irc\Alaris.Irc.csproj">
+    <None Include="Alaris.LuaEngine.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alaris.Irc\Alaris.Irc.csproj">
       <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
       <Name>Alaris.Irc</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Alaris.LuaEngine.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
