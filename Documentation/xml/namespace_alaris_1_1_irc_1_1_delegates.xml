@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_irc_1_1_delegates" kind="namespace">
+    <compoundname>Alaris::Irc::Delegates</compoundname>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_channel">Alaris::Irc::Delegates::Channel</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp">Alaris::Irc::Delegates::Ctcp</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc">Alaris::Irc::Delegates::Dcc</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_disconnect">Alaris::Irc::Delegates::Disconnect</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_invite">Alaris::Irc::Delegates::Invite</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_messages">Alaris::Irc::Delegates::Messages</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_requests">Alaris::Irc::Delegates::Requests</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_server">Alaris::Irc::Delegates::Server</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_special">Alaris::Irc::Delegates::Special</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_user">Alaris::Irc::Delegates::User</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_whois">Alaris::Irc::Delegates::Whois</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1"/>
+  </compounddef>
+</doxygen>

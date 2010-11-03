@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_calculator_1_1parser_1_1_parser_exception" kind="class" prot="public">
+    <compoundname>Alaris::Calculator::parser::ParserException</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_calculator_1_1parser_1_1_parser_exception_1a8df78c084cf61dc760ffd6f582e1f677" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_token" kindref="compound">Token</ref></type>
+        <definition>Token Alaris::Calculator::parser.ParserException::token</definition>
+        <argsstring></argsstring>
+        <name>token</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_calculator_1_1parser_1_1_parser_exception_1a06084c1786819663a245f0a899020897" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_token" kindref="compound">Token</ref></type>
+        <definition>Token Alaris::Calculator::parser.ParserException::Token</definition>
+        <argsstring></argsstring>
+        <name>Token</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" line="25" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1parser_1_1_parser_exception_1abaa63f3e1d8215e7678ad8680671b10e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.parser.ParserException.ParserException</definition>
+        <argsstring>(Token token, String message)</argsstring>
+        <name>ParserException</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_token" kindref="compound">Token</ref></type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" line="18" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1parser_1_1_parser_exception_1abaa63f3e1d8215e7678ad8680671b10e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.parser.ParserException.ParserException</definition>
+        <argsstring>(Token token, String message)</argsstring>
+        <name>ParserException</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_token" kindref="compound">Token</ref></type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/parser.cs" line="18" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/parser.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2021">
+        <label>Alaris.Calculator.node.Node</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_node"/>
+        <childnode refid="2020" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2020" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2021" relation="usage">
+          <edgelabel>parent_node</edgelabel>
+        </childnode>
+      </node>
+      <node id="2020">
+        <label>Alaris.Calculator.node.Switchable</label>
+        <link refid="interface_alaris_1_1_calculator_1_1node_1_1_switchable"/>
+      </node>
+      <node id="2018">
+        <label>Alaris.Calculator.node.Token</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_token"/>
+        <childnode refid="2019" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2019" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2019">
+        <label>Node</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_node"/>
+        <childnode refid="2020" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2020" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2021" relation="usage">
+          <edgelabel>parent_node</edgelabel>
+        </childnode>
+      </node>
+      <node id="2017">
+        <label>Alaris.Calculator.parser.ParserException</label>
+        <link refid="class_alaris_1_1_calculator_1_1parser_1_1_parser_exception"/>
+        <childnode refid="2018" relation="usage">
+          <edgelabel>token</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" bodystart="13" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_calculator_1_1parser_1_1_parser_exception_1abaa63f3e1d8215e7678ad8680671b10e" prot="public" virt="non-virtual"><scope>Alaris::Calculator::parser::ParserException</scope><name>ParserException</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1parser_1_1_parser_exception_1abaa63f3e1d8215e7678ad8680671b10e" prot="public" virt="non-virtual"><scope>Alaris::Calculator::parser::ParserException</scope><name>ParserException</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1parser_1_1_parser_exception_1a8df78c084cf61dc760ffd6f582e1f677" prot="private" virt="non-virtual"><scope>Alaris::Calculator::parser::ParserException</scope><name>token</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1parser_1_1_parser_exception_1a06084c1786819663a245f0a899020897" prot="public" virt="non-virtual"><scope>Alaris::Calculator::parser::ParserException</scope><name>Token</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

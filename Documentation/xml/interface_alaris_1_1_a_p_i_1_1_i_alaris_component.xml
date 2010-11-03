@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="interface_alaris_1_1_a_p_i_1_1_i_alaris_component" kind="interface" prot="public">
+    <compoundname>Alaris::API::IAlarisComponent</compoundname>
+    <derivedcompoundref refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic" prot="public" virt="non-virtual">Alaris.API.IAlarisBasic</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1_ast_calculator" prot="public" virt="non-virtual">Alaris.Calculator.AstCalculator</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1_ast_printer" prot="public" virt="non-virtual">Alaris.Calculator.AstPrinter</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_config_1_1_xml_settings" prot="public" virt="non-virtual">Alaris.Config.XmlSettings</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_crash_handler" prot="public" virt="non-virtual">Alaris.CrashHandler</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_threading_1_1_c_thread_pool" prot="public" virt="non-virtual">Alaris.Threading.CThreadPool</derivedcompoundref>
+    <derivedcompoundref refid="interface_alaris_1_1_threading_1_1_i_thread_context" prot="public" virt="non-virtual">Alaris.Threading.IThreadContext</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_alaris_1_1_a_p_i_1_1_i_alaris_component_1a98fb6d299aa5ff6f00921fc7822cafa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Guid</type>
+        <definition>Guid Alaris.API.IAlarisComponent.GetGuid</definition>
+        <argsstring>()</argsstring>
+        <name>GetGuid</name>
+        <reimplementedby refid="class_alaris_1_1_calculator_1_1_ast_printer_1aec915c688852b7596e777836a1a088a8">GetGuid</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_calculator_1_1_ast_calculator_1a5b30abb32b98b34317feadb45cd2897c">GetGuid</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_threading_1_1_c_thread_pool_1a9d6d6b4cc1f2dd41e48e411de8f83bdd">GetGuid</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_script_manager_1a93f4bb1b6bca94936811335dea506c17">GetGuid</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_crash_handler_1a721d7fd607ac81bdfa7e511ce5ef10d4">GetGuid</reimplementedby>
+        <reimplementedby refid="class_alaris_1_1_config_1_1_xml_settings_1aa8fc359c2d0047500ef3408ebd8226db">GetGuid</reimplementedby>
+        <briefdescription>
+<para>Gets the GUID of the instance(class). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The GUID. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/IAlarisComponent.cs" line="16"/>
+        <referencedby refid="class_alaris_1_1_threading_1_1_c_thread_pool_1a79df5dedc7dffc2bb8aef0c64764a2b0" compoundref="_thread_pool_8cs" startline="70" endline="75">Alaris.Threading.CThreadPool::Enqueue</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface which forces a component to have a GUID. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1861">
+        <label>Alaris.ScriptManager</label>
+        <link refid="class_alaris_1_1_script_manager"/>
+        <childnode refid="1860" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1858">
+        <label>Alaris.CrashHandler</label>
+        <link refid="class_alaris_1_1_crash_handler"/>
+        <childnode refid="1850" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1856">
+        <label>Alaris.Calculator.AstPrinter</label>
+        <link refid="class_alaris_1_1_calculator_1_1_ast_printer"/>
+        <childnode refid="1850" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1857">
+        <label>Alaris.Config.XmlSettings</label>
+        <link refid="class_alaris_1_1_config_1_1_xml_settings"/>
+        <childnode refid="1850" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1852">
+        <label>Alaris.ChannelRights.AlarisPlugin</label>
+        <link refid="class_alaris_1_1_channel_rights_1_1_alaris_plugin"/>
+        <childnode refid="1851" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1851">
+        <label>Alaris.API.IAlarisBasic</label>
+        <link refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_basic"/>
+        <childnode refid="1850" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1850">
+        <label>Alaris.API.IAlarisComponent</label>
+        <link refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_component"/>
+      </node>
+      <node id="1853">
+        <label>Alaris.FeedHandlerPlugin.AlarisPlugin</label>
+        <link refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin"/>
+        <childnode refid="1851" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1851" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1860">
+        <label>Alaris.Threading.IThreadContext</label>
+        <link refid="interface_alaris_1_1_threading_1_1_i_thread_context"/>
+        <childnode refid="1850" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1855">
+        <label>Alaris.Calculator.AstCalculator</label>
+        <link refid="class_alaris_1_1_calculator_1_1_ast_calculator"/>
+        <childnode refid="1850" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1859">
+        <label>Alaris.Threading.CThreadPool</label>
+        <link refid="class_alaris_1_1_threading_1_1_c_thread_pool"/>
+        <childnode refid="1850" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1854">
+        <label>Alaris.Main.AlarisPlugin</label>
+        <link refid="class_alaris_1_1_main_1_1_alaris_plugin"/>
+        <childnode refid="1851" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/IAlarisComponent.cs" line="9" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/IAlarisComponent.cs" bodystart="8" bodyend="17"/>
+    <listofallmembers>
+      <member refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_component_1a98fb6d299aa5ff6f00921fc7822cafa2" prot="public" virt="non-virtual"><scope>Alaris::API::IAlarisComponent</scope><name>GetGuid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

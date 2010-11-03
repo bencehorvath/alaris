@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp" kind="class" prot="public">
+    <compoundname>Alaris::Calculator::node::ATanhExp</compoundname>
+    <basecompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.PExp</basecompoundref>
+    <basecompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.PExp</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a2bc71798ce34d531f510dda3357f1dbc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp" kindref="compound">PExp</ref></type>
+        <definition>PExp Alaris::Calculator::node.ATanhExp::_exp_</definition>
+        <argsstring></argsstring>
+        <name>_exp_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="1422" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="1422" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a3ad40ac0034e0cace5abc2ab38077427" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.node.ATanhExp.ATanhExp</definition>
+        <argsstring>()</argsstring>
+        <name>ATanhExp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="1425" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="1424" bodyend="1426"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a88328e92408ebd904b46df9282d6ccc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.node.ATanhExp.ATanhExp</definition>
+        <argsstring>(PExp _exp_)</argsstring>
+        <name>ATanhExp</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp" kindref="compound">PExp</ref></type>
+          <declname>_exp_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="1431" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="1428" bodyend="1433"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a11a06ec52fd2a71cf9d9e6275432ba87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override Object</type>
+        <definition>override Object Alaris.Calculator.node.ATanhExp.Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aace624d8b86e41f8b2756f87e017273b">Clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="1436" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="1435" bodyend="1440"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1aa3a61a7dee3c63d5c986f42408bb1a59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Alaris.Calculator.node.ATanhExp.Apply</definition>
+        <argsstring>(Switch sw)</argsstring>
+        <name>Apply</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a5a9b8029425755ba21b2e5247b6e88e0">Apply</reimplements>
+        <param>
+          <type><ref refid="interface_alaris_1_1_calculator_1_1node_1_1_switch" kindref="compound">Switch</ref></type>
+          <declname>sw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="1443" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="1442" bodyend="1445"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a0c6e856c9150f67e1e61e47113cd7495" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp" kindref="compound">PExp</ref></type>
+        <definition>PExp Alaris.Calculator.node.ATanhExp.GetExp</definition>
+        <argsstring>()</argsstring>
+        <name>GetExp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="1448" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="1447" bodyend="1450"/>
+        <referencedby refid="class_alaris_1_1_calculator_1_1analysis_1_1_reversed_depth_first_adapter_1a4e582eb1850b65b205baca5ffd435f31" compoundref="analysis_8cs" startline="1085" endline="1093">Alaris.Calculator.analysis.ReversedDepthFirstAdapter::CaseATanhExp</referencedby>
+        <referencedby refid="class_alaris_1_1_calculator_1_1analysis_1_1_depth_first_adapter_1a2d937f6414740ce8272e3fc8289cdac0" compoundref="analysis_8cs" startline="650" endline="658">Alaris.Calculator.analysis.DepthFirstAdapter::CaseATanhExp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a855cd3d91bdc89b8b4ff38318bbb5dae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Calculator.node.ATanhExp.SetExp</definition>
+        <argsstring>(PExp node)</argsstring>
+        <name>SetExp</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp" kindref="compound">PExp</ref></type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="1453" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="1452" bodyend="1470"/>
+        <references refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a8b32282da8a19eb9bd7c0347eaad2c1a" compoundref="_grammar_2gen_2nodes_8cs" startline="16" endline="19">Alaris.Calculator.node.Node::Parent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a96313c3d1308b5f0c12a4ecae4832856" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string Alaris.Calculator.node.ATanhExp.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="1473" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="1472" bodyend="1477"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a3ad40ac0034e0cace5abc2ab38077427" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.node.ATanhExp.ATanhExp</definition>
+        <argsstring>()</argsstring>
+        <name>ATanhExp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" line="1425" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" bodystart="1424" bodyend="1426"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a88328e92408ebd904b46df9282d6ccc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.node.ATanhExp.ATanhExp</definition>
+        <argsstring>(PExp _exp_)</argsstring>
+        <name>ATanhExp</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp" kindref="compound">PExp</ref></type>
+          <declname>_exp_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" line="1431" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" bodystart="1428" bodyend="1433"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a11a06ec52fd2a71cf9d9e6275432ba87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override Object</type>
+        <definition>override Object Alaris.Calculator.node.ATanhExp.Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aace624d8b86e41f8b2756f87e017273b">Clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" line="1436" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" bodystart="1435" bodyend="1440"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1aa3a61a7dee3c63d5c986f42408bb1a59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Alaris.Calculator.node.ATanhExp.Apply</definition>
+        <argsstring>(Switch sw)</argsstring>
+        <name>Apply</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a5a9b8029425755ba21b2e5247b6e88e0">Apply</reimplements>
+        <param>
+          <type><ref refid="interface_alaris_1_1_calculator_1_1node_1_1_switch" kindref="compound">Switch</ref></type>
+          <declname>sw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" line="1443" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" bodystart="1442" bodyend="1445"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a0c6e856c9150f67e1e61e47113cd7495" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp" kindref="compound">PExp</ref></type>
+        <definition>PExp Alaris.Calculator.node.ATanhExp.GetExp</definition>
+        <argsstring>()</argsstring>
+        <name>GetExp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" line="1448" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" bodystart="1447" bodyend="1450"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a855cd3d91bdc89b8b4ff38318bbb5dae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Calculator.node.ATanhExp.SetExp</definition>
+        <argsstring>(PExp node)</argsstring>
+        <name>SetExp</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp" kindref="compound">PExp</ref></type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" line="1453" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" bodystart="1452" bodyend="1470"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a96313c3d1308b5f0c12a4ecae4832856" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string Alaris.Calculator.node.ATanhExp.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" line="1473" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" bodystart="1472" bodyend="1477"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a2981ae9477ea231e9718bf66e563719f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Alaris.Calculator.node.ATanhExp.RemoveChild</definition>
+        <argsstring>(Node child)</argsstring>
+        <name>RemoveChild</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a9948877e0251ce15a8db2a869b1f2842">RemoveChild</reimplements>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_node" kindref="compound">Node</ref></type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="1480" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="1479" bodyend="1486"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a990d801b3a531f3bcaab13ac8762b032" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Alaris.Calculator.node.ATanhExp.ReplaceChild</definition>
+        <argsstring>(Node oldChild, Node newChild)</argsstring>
+        <name>ReplaceChild</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aa160b603cac10602ac2643ea13925c4d">ReplaceChild</reimplements>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_node" kindref="compound">Node</ref></type>
+          <declname>oldChild</declname>
+        </param>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_node" kindref="compound">Node</ref></type>
+          <declname>newChild</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="1489" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="1488" bodyend="1495"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a2981ae9477ea231e9718bf66e563719f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Alaris.Calculator.node.ATanhExp.RemoveChild</definition>
+        <argsstring>(Node child)</argsstring>
+        <name>RemoveChild</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a9948877e0251ce15a8db2a869b1f2842">RemoveChild</reimplements>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_node" kindref="compound">Node</ref></type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" line="1480" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" bodystart="1479" bodyend="1486"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a990d801b3a531f3bcaab13ac8762b032" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Alaris.Calculator.node.ATanhExp.ReplaceChild</definition>
+        <argsstring>(Node oldChild, Node newChild)</argsstring>
+        <name>ReplaceChild</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aa160b603cac10602ac2643ea13925c4d">ReplaceChild</reimplements>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_node" kindref="compound">Node</ref></type>
+          <declname>oldChild</declname>
+        </param>
+        <param>
+          <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_node" kindref="compound">Node</ref></type>
+          <declname>newChild</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" line="1489" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/prods.cs" bodystart="1488" bodyend="1495"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1532">
+        <label>Alaris.Calculator.node.ATanhExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp"/>
+        <childnode refid="1533" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1533" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1534">
+        <label>Alaris.Calculator.node.Node</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_node"/>
+        <childnode refid="1535" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1535" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1533">
+        <label>PExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp"/>
+        <childnode refid="1534" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1534" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1535">
+        <label>Alaris.Calculator.node.Switchable</label>
+        <link refid="interface_alaris_1_1_calculator_1_1node_1_1_switchable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1536">
+        <label>Alaris.Calculator.node.ATanhExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp"/>
+        <childnode refid="1537" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1537" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1540" relation="usage">
+          <edgelabel>_exp_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1538">
+        <label>Alaris.Calculator.node.Node</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_node"/>
+        <childnode refid="1539" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1539" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1538" relation="usage">
+          <edgelabel>parent_node</edgelabel>
+        </childnode>
+      </node>
+      <node id="1537">
+        <label>PExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp"/>
+        <childnode refid="1538" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1538" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1539">
+        <label>Alaris.Calculator.node.Switchable</label>
+        <link refid="interface_alaris_1_1_calculator_1_1node_1_1_switchable"/>
+      </node>
+      <node id="1540">
+        <label>Alaris.Calculator.node.PExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp"/>
+        <childnode refid="1538" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1538" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="1421" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="1420" bodyend="1497"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a2bc71798ce34d531f510dda3357f1dbc" prot="private" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>_exp_</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1aa3a61a7dee3c63d5c986f42408bb1a59" prot="public" virt="virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>Apply</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1aa3a61a7dee3c63d5c986f42408bb1a59" prot="public" virt="virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>Apply</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a3ad40ac0034e0cace5abc2ab38077427" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>ATanhExp</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a88328e92408ebd904b46df9282d6ccc3" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>ATanhExp</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a3ad40ac0034e0cace5abc2ab38077427" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>ATanhExp</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a88328e92408ebd904b46df9282d6ccc3" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>ATanhExp</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a11a06ec52fd2a71cf9d9e6275432ba87" prot="public" virt="virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>Clone</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a11a06ec52fd2a71cf9d9e6275432ba87" prot="public" virt="virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>Clone</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a94cf34f56f9d304465a7ef8a2fff5939" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>CloneList</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a94cf34f56f9d304465a7ef8a2fff5939" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>CloneList</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1ab5fdf8413d1e6c67e368d8c4cf48e3cc" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>CloneNode</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1ab5fdf8413d1e6c67e368d8c4cf48e3cc" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>CloneNode</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a0c6e856c9150f67e1e61e47113cd7495" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>GetExp</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a0c6e856c9150f67e1e61e47113cd7495" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>GetExp</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a8b32282da8a19eb9bd7c0347eaad2c1a" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>Parent</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a8b32282da8a19eb9bd7c0347eaad2c1a" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>Parent</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a2981ae9477ea231e9718bf66e563719f" prot="private" virt="virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>RemoveChild</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a2981ae9477ea231e9718bf66e563719f" prot="private" virt="virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>RemoveChild</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aa8f85e26eb63aaaf60871401ce7d0908" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>ReplaceBy</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aa8f85e26eb63aaaf60871401ce7d0908" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>ReplaceBy</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a990d801b3a531f3bcaab13ac8762b032" prot="private" virt="virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>ReplaceChild</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a990d801b3a531f3bcaab13ac8762b032" prot="private" virt="virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>ReplaceChild</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a855cd3d91bdc89b8b4ff38318bbb5dae" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>SetExp</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a855cd3d91bdc89b8b4ff38318bbb5dae" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>SetExp</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a96313c3d1308b5f0c12a4ecae4832856" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>ToString</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp_1a96313c3d1308b5f0c12a4ecae4832856" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::ATanhExp</scope><name>ToString</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a35d31b74a0fdcac018abd8ca0ea4ac5c" prot="protected" virt="non-virtual" ambiguityscope="Alaris::Calculator::node::PExp."><scope>Alaris::Calculator::node::ATanhExp</scope><name>ToString</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a1eaeb93963aa9311d879269a684a1b08" prot="protected" virt="non-virtual" ambiguityscope="Alaris::Calculator::node::PExp."><scope>Alaris::Calculator::node::ATanhExp</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

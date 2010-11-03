@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kind="class" prot="public">
+    <compoundname>Atom::Core::Collections::AtomContentCollection</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1a72411cf80b611ff055e8ddd1296d89f9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref></type>
+        <definition>AtomContent Atom.Core.Collections.AtomContentCollection.this[int index]</definition>
+        <argsstring>[int index]</argsstring>
+        <name>this</name>
+        <briefdescription>
+<para>Gets or sets the element at the specified index. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based index of the element to get or set.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1a19afdcda16a9915d81df8cf59438e5f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Atom.Core.Collections.AtomContentCollection.Add</definition>
+        <argsstring>(AtomContent content)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref></type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+<para>Adds an object to the end of the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref> to be added to the end of the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref> index at which the value has been added.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" line="69" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" bodystart="68" bodyend="72"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_content_test_1a3c8640607a893eb985a8834336891033" compoundref="_atom_content_test_8cs" startline="47" endline="65">Atom.Core.Test.AtomContentTest::TestMultipleMultipartsContent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1ad3d5bdbe38566739e2555bfeb00eee18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Atom.Core.Collections.AtomContentCollection.Contains</definition>
+        <argsstring>(AtomContent content)</argsstring>
+        <name>Contains</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref></type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+<para>Determines whether the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref> contains a specific element. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref> to locate in the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref> contains the specified item, otherwise false.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" line="80" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1ae1868116724c9d0e19631d499efe5a14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.Core.Collections.AtomContentCollection.CopyTo</definition>
+        <argsstring>(AtomContentCollection[] array, int index)</argsstring>
+        <name>CopyTo</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref>[]</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Copies the entire <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref> to a compatible one-dimensional Array, starting at the specified index of the target array. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The one-dimensional Array that is the destination of the elements copied from <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref>. The Array must have zero-based indexing. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based index in <emphasis>array</emphasis> at which copying begins.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" line="92" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1a48afe83a7f6ff6d414e42edad23539a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Atom.Core.Collections.AtomContentCollection.IndexOf</definition>
+        <argsstring>(AtomContent content)</argsstring>
+        <name>IndexOf</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref></type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+<para>Searches for the specified <ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref> and returns the zero-based index of the first occurrence within the entire <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref> to locate in the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The zero-based index of the first occurrence of <emphasis>content</emphasis> within the entire <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref>, if found; otherwise, -1.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" line="104" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1a5739d5594a43d39d9c4d4b014513f38a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.Core.Collections.AtomContentCollection.Insert</definition>
+        <argsstring>(int index, AtomContent content)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref></type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a <ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref> into this collection at the specified index. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The zero-based index of the collection at which <emphasis>content</emphasis> should be inserted.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref> to insert into this collection.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" line="112" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" bodystart="111" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1ae19d42b2148d38a6f460932e390b999c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.Core.Collections.AtomContentCollection.Remove</definition>
+        <argsstring>(AtomContent content)</argsstring>
+        <name>Remove</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref></type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+<para>Removes the first occurrence of a specific <ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref> from the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref> to remove from the <ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection" kindref="compound">AtomContentCollection</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" line="120" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" bodystart="119" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1a9a1cb907ebf1b4409009f5b8b95b3d6a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.Core.Collections.AtomContentCollection.CheckInsertion</definition>
+        <argsstring>(AtomContent content)</argsstring>
+        <name>CheckInsertion</name>
+        <param>
+          <type><ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref></type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+<para>Performs some checks inside the collection. Used for compliancy to the standard. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref> to check.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" line="133" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" bodystart="132" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A strongly typed collection of <ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref> objects. <simplesect kind="see"><para><ref refid="class_atom_1_1_core_1_1_atom_content" kindref="compound">AtomContent</ref></para></simplesect>
+</para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" line="46" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/AtomContentCollection.cs" bodystart="45" bodyend="144"/>
+    <listofallmembers>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1a19afdcda16a9915d81df8cf59438e5f8" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomContentCollection</scope><name>Add</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1a9a1cb907ebf1b4409009f5b8b95b3d6a" prot="private" virt="non-virtual"><scope>Atom::Core::Collections::AtomContentCollection</scope><name>CheckInsertion</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1ad3d5bdbe38566739e2555bfeb00eee18" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomContentCollection</scope><name>Contains</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1ae1868116724c9d0e19631d499efe5a14" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomContentCollection</scope><name>CopyTo</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1a48afe83a7f6ff6d414e42edad23539a3" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomContentCollection</scope><name>IndexOf</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1a5739d5594a43d39d9c4d4b014513f38a" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomContentCollection</scope><name>Insert</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1ae19d42b2148d38a6f460932e390b999c" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomContentCollection</scope><name>Remove</name></member>
+      <member refid="class_atom_1_1_core_1_1_collections_1_1_atom_content_collection_1a72411cf80b611ff055e8ddd1296d89f9" prot="public" virt="non-virtual"><scope>Atom::Core::Collections::AtomContentCollection</scope><name>this</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_calculator_1_1node_1_1_p_exp" kind="class" prot="public">
+    <compoundname>Alaris::Calculator::node::PExp</compoundname>
+    <basecompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_node" prot="public" virt="non-virtual">Alaris.Calculator.node.Node</basecompoundref>
+    <basecompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_node" prot="public" virt="non-virtual">Alaris.Calculator.node.Node</basecompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_abs_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAbsExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_abs_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAbsExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_acos_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAcosExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_acos_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAcosExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_add_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAddExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_add_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAddExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_asin_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAsinExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_asin_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAsinExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_atan2_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAtan2Exp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_atan2_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAtan2Exp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_atan_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAtanExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_atan_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AAtanExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_cos_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ACosExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_cos_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ACosExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_cosh_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ACoshExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_cosh_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ACoshExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_div_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ADivExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_div_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ADivExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_mod_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AModExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_mod_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AModExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_mul_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AMulExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_mul_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AMulExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_number_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ANumberExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_number_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ANumberExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_paren_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AParenExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_paren_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.AParenExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_pow_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.APowExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_pow_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.APowExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_sin_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ASinExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_sin_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ASinExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_sinh_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ASinhExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_sinh_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ASinhExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_sqrt_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ASqrtExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_sqrt_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ASqrtExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_sub_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ASubExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_sub_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ASubExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_tan_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ATanExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_tan_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ATanExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ATanhExp</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp" prot="public" virt="non-virtual">Alaris.Calculator.node.ATanhExp</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2044">
+        <label>Alaris.Calculator.node.ATanhExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_tanh_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2041">
+        <label>Alaris.Calculator.node.ASqrtExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_sqrt_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2040">
+        <label>Alaris.Calculator.node.ASinhExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_sinh_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2039">
+        <label>Alaris.Calculator.node.ASinExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_sin_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2023">
+        <label>Alaris.Calculator.node.Node</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_node"/>
+        <childnode refid="2024" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2024" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2037">
+        <label>Alaris.Calculator.node.AParenExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_paren_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2024">
+        <label>Alaris.Calculator.node.Switchable</label>
+        <link refid="interface_alaris_1_1_calculator_1_1node_1_1_switchable"/>
+      </node>
+      <node id="2043">
+        <label>Alaris.Calculator.node.ATanExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_tan_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2026">
+        <label>Alaris.Calculator.node.AAcosExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_acos_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2042">
+        <label>Alaris.Calculator.node.ASubExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_sub_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2022">
+        <label>Alaris.Calculator.node.PExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp"/>
+        <childnode refid="2023" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2023" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2035">
+        <label>Alaris.Calculator.node.AMulExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_mul_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2036">
+        <label>Alaris.Calculator.node.ANumberExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_number_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2031">
+        <label>Alaris.Calculator.node.ACosExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_cos_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2029">
+        <label>Alaris.Calculator.node.AAtan2Exp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_atan2_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2025">
+        <label>Alaris.Calculator.node.AAbsExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_abs_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2027">
+        <label>Alaris.Calculator.node.AAddExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_add_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2034">
+        <label>Alaris.Calculator.node.AModExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_mod_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2032">
+        <label>Alaris.Calculator.node.ACoshExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_cosh_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2028">
+        <label>Alaris.Calculator.node.AAsinExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_asin_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2030">
+        <label>Alaris.Calculator.node.AAtanExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_atan_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2038">
+        <label>Alaris.Calculator.node.APowExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_pow_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2033">
+        <label>Alaris.Calculator.node.ADivExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_a_div_exp"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2046">
+        <label>Alaris.Calculator.node.Node</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_node"/>
+        <childnode refid="2047" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2047" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2046" relation="usage">
+          <edgelabel>parent_node</edgelabel>
+        </childnode>
+      </node>
+      <node id="2047">
+        <label>Alaris.Calculator.node.Switchable</label>
+        <link refid="interface_alaris_1_1_calculator_1_1node_1_1_switchable"/>
+      </node>
+      <node id="2045">
+        <label>Alaris.Calculator.node.PExp</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_p_exp"/>
+        <childnode refid="2046" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2046" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" line="12" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/prods.cs" bodystart="11" bodyend="13"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a5a9b8029425755ba21b2e5247b6e88e0" prot="public" virt="pure-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>Apply</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a5a9b8029425755ba21b2e5247b6e88e0" prot="public" virt="pure-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>Apply</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aace624d8b86e41f8b2756f87e017273b" prot="public" virt="pure-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>Clone</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aace624d8b86e41f8b2756f87e017273b" prot="public" virt="pure-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>Clone</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a94cf34f56f9d304465a7ef8a2fff5939" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>CloneList</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a94cf34f56f9d304465a7ef8a2fff5939" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>CloneList</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1ab5fdf8413d1e6c67e368d8c4cf48e3cc" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>CloneNode</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1ab5fdf8413d1e6c67e368d8c4cf48e3cc" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>CloneNode</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a8b32282da8a19eb9bd7c0347eaad2c1a" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>Parent</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a8b32282da8a19eb9bd7c0347eaad2c1a" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>Parent</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aa8f85e26eb63aaaf60871401ce7d0908" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>ReplaceBy</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aa8f85e26eb63aaaf60871401ce7d0908" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>ReplaceBy</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a35d31b74a0fdcac018abd8ca0ea4ac5c" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>ToString</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a1eaeb93963aa9311d879269a684a1b08" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>ToString</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a35d31b74a0fdcac018abd8ca0ea4ac5c" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>ToString</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a1eaeb93963aa9311d879269a684a1b08" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::PExp</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

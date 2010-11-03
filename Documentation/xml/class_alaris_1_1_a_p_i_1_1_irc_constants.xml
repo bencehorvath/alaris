@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_a_p_i_1_1_irc_constants" kind="class" prot="public">
+    <compoundname>Alaris::API::IrcConstants</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1af9e2266f28a2a957f4b3b2c8a4fea7cd" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Black</definition>
+        <argsstring></argsstring>
+        <name>Black</name>
+        <initializer>&quot;\u000301&quot;</initializer>
+        <briefdescription>
+<para>Black irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="11" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1aed43e38d90bfd7f74eb347dedeead42f" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Blue</definition>
+        <argsstring></argsstring>
+        <name>Blue</name>
+        <initializer>&quot;\u000312&quot;</initializer>
+        <briefdescription>
+<para>Blie irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="16" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1a36b8dd2790a468bdb19f51a8d69a9385" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Bold</definition>
+        <argsstring></argsstring>
+        <name>Bold</name>
+        <initializer>&quot;\u0002&quot;</initializer>
+        <briefdescription>
+<para>Bold irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="21" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1a27bbdf22d971dc786ff9e5c33ad57651" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Brown</definition>
+        <argsstring></argsstring>
+        <name>Brown</name>
+        <initializer>&quot;\u000305&quot;</initializer>
+        <briefdescription>
+<para>Brown irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="26" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1a6ba33a526689a834d978abf487066471" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Cyan</definition>
+        <argsstring></argsstring>
+        <name>Cyan</name>
+        <initializer>&quot;\u000311&quot;</initializer>
+        <briefdescription>
+<para>Cyan irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="31" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1adf7fdf8d9ab8120797d204358f214155" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.DarkBlue</definition>
+        <argsstring></argsstring>
+        <name>DarkBlue</name>
+        <initializer>&quot;\u000302&quot;</initializer>
+        <briefdescription>
+<para>Dark blue irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="36" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1a42935a6dd38ff75e36c979cd087fce52" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.DarkGray</definition>
+        <argsstring></argsstring>
+        <name>DarkGray</name>
+        <initializer>&quot;\u000314&quot;</initializer>
+        <briefdescription>
+<para>Dark gray irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="41" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1a0a8d1b0f328a00c544f14ef3f5c2f29c" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.DarkGreen</definition>
+        <argsstring></argsstring>
+        <name>DarkGreen</name>
+        <initializer>&quot;\u000303&quot;</initializer>
+        <briefdescription>
+<para>Dark green irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="46" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1ab90f4dd9c07fba9f959e148b0fe4df50" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Green</definition>
+        <argsstring></argsstring>
+        <name>Green</name>
+        <initializer>&quot;\u000309&quot;</initializer>
+        <briefdescription>
+<para>Green irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="51" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1ab058c0e8c9eaf0db621f930901f74ded" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.LightGray</definition>
+        <argsstring></argsstring>
+        <name>LightGray</name>
+        <initializer>&quot;\u000315&quot;</initializer>
+        <briefdescription>
+<para>Light gray irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="56" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1a016f37acdcaa603cf561d9872338bd6f" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Magenta</definition>
+        <argsstring></argsstring>
+        <name>Magenta</name>
+        <initializer>&quot;\u000313&quot;</initializer>
+        <briefdescription>
+<para>Magenta irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1ae674504added3a7ab66a7fe17027fb68" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Normal</definition>
+        <argsstring></argsstring>
+        <name>Normal</name>
+        <initializer>&quot;\u000f&quot;</initializer>
+        <briefdescription>
+<para>Normal irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="66" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1a1c112d462b7df32b30e92f86a6d0977a" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Olive</definition>
+        <argsstring></argsstring>
+        <name>Olive</name>
+        <initializer>&quot;\u000307&quot;</initializer>
+        <briefdescription>
+<para>Olive irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="71" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1ad22a771130ae953a86542b803c90505c" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Purple</definition>
+        <argsstring></argsstring>
+        <name>Purple</name>
+        <initializer>&quot;\u000306&quot;</initializer>
+        <briefdescription>
+<para>Purple irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="76" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1a955aedb16d2ed3de4e180db2aeadee31" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Red</definition>
+        <argsstring></argsstring>
+        <name>Red</name>
+        <initializer>&quot;\u000304&quot;</initializer>
+        <briefdescription>
+<para>Red irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="81" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1a657cf30da74dc9b3b171ee7cdb13a01a" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Reverse</definition>
+        <argsstring></argsstring>
+        <name>Reverse</name>
+        <initializer>&quot;\u0016&quot;</initializer>
+        <briefdescription>
+<para>Reversed irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="86" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1a7f8414689d349080b114e0fc0d66692d" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Teal</definition>
+        <argsstring></argsstring>
+        <name>Teal</name>
+        <initializer>&quot;\u000310&quot;</initializer>
+        <briefdescription>
+<para>Teal irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="91" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1aa881c5d1ef9fb0a4b32f558e4bc37188" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Underline</definition>
+        <argsstring></argsstring>
+        <name>Underline</name>
+        <initializer>&quot;\u001f&quot;</initializer>
+        <briefdescription>
+<para>Underlined irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="96" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1ae4359095a4ee2f1050a63b5d744a400a" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.White</definition>
+        <argsstring></argsstring>
+        <name>White</name>
+        <initializer>&quot;\u000300&quot;</initializer>
+        <briefdescription>
+<para>White irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="101" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_irc_constants_1a9b372f83d9b840870ae1c98f4010a9b7" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.IrcConstants.Yellow</definition>
+        <argsstring></argsstring>
+        <name>Yellow</name>
+        <initializer>&quot;\u000308&quot;</initializer>
+        <briefdescription>
+<para>Yellow irc color. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="106" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class holding some constant values for IRC. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" line="7" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Constants.cs" bodystart="6" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1af9e2266f28a2a957f4b3b2c8a4fea7cd" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Black</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1aed43e38d90bfd7f74eb347dedeead42f" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Blue</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1a36b8dd2790a468bdb19f51a8d69a9385" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Bold</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1a27bbdf22d971dc786ff9e5c33ad57651" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Brown</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1a6ba33a526689a834d978abf487066471" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Cyan</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1adf7fdf8d9ab8120797d204358f214155" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>DarkBlue</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1a42935a6dd38ff75e36c979cd087fce52" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>DarkGray</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1a0a8d1b0f328a00c544f14ef3f5c2f29c" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>DarkGreen</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1ab90f4dd9c07fba9f959e148b0fe4df50" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Green</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1ab058c0e8c9eaf0db621f930901f74ded" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>LightGray</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1a016f37acdcaa603cf561d9872338bd6f" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Magenta</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1ae674504added3a7ab66a7fe17027fb68" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Normal</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1a1c112d462b7df32b30e92f86a6d0977a" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Olive</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1ad22a771130ae953a86542b803c90505c" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Purple</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1a955aedb16d2ed3de4e180db2aeadee31" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Red</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1a657cf30da74dc9b3b171ee7cdb13a01a" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Reverse</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1a7f8414689d349080b114e0fc0d66692d" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Teal</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1aa881c5d1ef9fb0a4b32f558e4bc37188" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Underline</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1ae4359095a4ee2f1050a63b5d744a400a" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>White</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_irc_constants_1a9b372f83d9b840870ae1c98f4010a9b7" prot="public" virt="non-virtual"><scope>Alaris::API::IrcConstants</scope><name>Yellow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_a_p_i_1_1_web_helper" kind="class" prot="public">
+    <compoundname>Alaris::API::WebHelper</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_a_p_i_1_1_web_helper_1a0367386898afc649c004a2a31b6caeb3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Alaris.API.WebHelper.GetWebTitle</definition>
+        <argsstring>(Uri url)</argsstring>
+        <name>GetWebTitle</name>
+        <param>
+          <type>Uri</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+<para>Gets the title of the specified webpage. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The webpage&apos;s URL. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The webpage&apos;s title. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/WebHelper.cs" line="24" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/WebHelper.cs" bodystart="23" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class which provides useful methods for working with the world-wide web. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/WebHelper.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/WebHelper.cs" bodystart="12" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_a_p_i_1_1_web_helper_1a0367386898afc649c004a2a31b6caeb3" prot="public" virt="non-virtual"><scope>Alaris::API::WebHelper</scope><name>GetWebTitle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

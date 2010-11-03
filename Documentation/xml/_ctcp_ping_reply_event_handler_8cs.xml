@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="_ctcp_ping_reply_event_handler_8cs" kind="file">
+    <compoundname>CtcpPingReplyEventHandler.cs</compoundname>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp">Alaris::Irc::Delegates::Ctcp</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">﻿using<sp/>Alaris.Irc.Ctcp;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Alaris.Irc.Delegates.Ctcp</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>delegate<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp_1acc7cf327f0740897d830f2ec29b402a4" kindref="member" tooltip="Someone has replied to a Ctcp ping request sent by this client.">CtcpPingReplyEventHandler</ref>(<sp/><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound" tooltip="A convenient holder of user information. Instances of this class are created internally.">UserInfo</ref><sp/>who,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>timestamp<sp/>);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Ctcp/CtcpPingReplyEventHandler.cs"/>
+  </compounddef>
+</doxygen>

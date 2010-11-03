@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$class_alaris_1_1_channel_rights_1_1_alaris_plugin.html" title="Alaris.ChannelRights.AlarisPlugin" alt="" coords="456,5,672,35"/>
+<area shape="rect" id="node7" href="$class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin.html" title="Alaris.FeedHandlerPlugin.AlarisPlugin" alt="" coords="444,59,684,88"/>
+<area shape="rect" id="node10" href="$class_alaris_1_1_main_1_1_alaris_plugin.html" title="Alaris.Main.AlarisPlugin" alt="" coords="484,112,644,141"/>
+<area shape="rect" id="node2" href="$interface_alaris_1_1_a_p_i_1_1_i_alaris_component.html" title="Interface which forces a component to have a GUID." alt="" coords="5,59,192,88"/>
+</map>

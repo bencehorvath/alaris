@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_a_p_i_1_1_database" kind="namespace">
+    <compoundname>Alaris::API::Database</compoundname>
+    <innerclass refid="class_alaris_1_1_a_p_i_1_1_database_1_1_admin_manager" prot="public">Alaris::API::Database::AdminManager</innerclass>
+    <innerclass refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_accessor_attribute" prot="public">Alaris::API::Database::DatabaseAccessorAttribute</innerclass>
+    <innerclass refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager" prot="public">Alaris::API::Database::DatabaseManager</innerclass>
+    <innerclass refid="interface_alaris_1_1_a_p_i_1_1_database_1_1_i_manager" prot="public">Alaris::API::Database::IManager</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_alaris_1_1_a_p_i_1_1_database_1a874e750395438b3abbbea82c53cec689" prot="public" static="no">
+        <name>DatabaseAccessType</name>
+        <enumvalue id="namespace_alaris_1_1_a_p_i_1_1_database_1a874e750395438b3abbbea82c53cec689" prot="public">
+          <name>Insert</name>
+          <briefdescription>
+<para>It executes insert operations. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_a_p_i_1_1_database_1a874e750395438b3abbbea82c53cec689" prot="public">
+          <name>Delete</name>
+          <briefdescription>
+<para>It executes delete operations. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_a_p_i_1_1_database_1a874e750395438b3abbbea82c53cec689" prot="public">
+          <name>Update</name>
+          <briefdescription>
+<para>It executes update operations. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_a_p_i_1_1_database_1a874e750395438b3abbbea82c53cec689" prot="public">
+          <name>Select</name>
+          <briefdescription>
+<para>It executes select operations (weakest). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Used to specifiy how a method accesses the database. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessType.cs" line="10" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessType.cs" bodystart="9" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/AdminManager.cs" line="8"/>
+  </compounddef>
+</doxygen>

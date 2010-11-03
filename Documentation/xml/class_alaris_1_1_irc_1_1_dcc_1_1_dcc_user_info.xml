@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info" kind="class" prot="public">
+    <compoundname>Alaris::Irc::Dcc::DccUserInfo</compoundname>
+    <basecompoundref refid="class_alaris_1_1_irc_1_1_user_info" prot="public" virt="non-virtual">Alaris.Irc.UserInfo</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a3d8e7b2ebb3afd8375eed2ecdf3de524" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>readonly Connection Alaris.Irc.Dcc.DccUserInfo._connection</definition>
+        <argsstring></argsstring>
+        <name>_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" line="12" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a01c6183c3e3bc721797666d4a806ff47" prot="private" static="no" mutable="no">
+        <type>internal readonly IPEndPoint</type>
+        <definition>internal readonly IPEndPoint Alaris.Irc.Dcc.DccUserInfo.remoteEndPoint</definition>
+        <argsstring></argsstring>
+        <name>remoteEndPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1ad112c66ff22e24880284ad287b7395ce" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>IPAddress</type>
+        <definition>IPAddress Alaris.Irc.Dcc.DccUserInfo.RemoteAddress</definition>
+        <argsstring></argsstring>
+        <name>RemoteAddress</name>
+        <briefdescription>
+<para>Read only property that returns the IP address of the remote user. </para>        </briefdescription>
+        <detaileddescription>
+<para>An instance of IPAddress or null if the session has not been opened.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" line="62" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a66f125f4a6a828351d29ee1e98ed8cde" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int Alaris.Irc.Dcc.DccUserInfo.Port</definition>
+        <argsstring></argsstring>
+        <name>Port</name>
+        <briefdescription>
+<para>Read only property that returns the port of the connection to the remote user. </para>        </briefdescription>
+        <detaileddescription>
+<para>This will be a listen port if the remote user was the initiator of the session or else it is simply a client port.</para><para>The port as an integer. Will return -1 if the session has not yet been opened.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" line="83" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1acde84dc6de570301834b9c717b36cf8d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>IPEndPoint</type>
+        <definition>IPEndPoint Alaris.Irc.Dcc.DccUserInfo.RemoteEndPoint</definition>
+        <argsstring></argsstring>
+        <name>RemoteEndPoint</name>
+        <briefdescription>
+<para>The remote users TCP/IP information. </para>        </briefdescription>
+        <detaileddescription>
+<para>A read-only instance of IPEndPoint</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" line="94" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1af98c133ec58a12ab472d0237dd65d733" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>Connection Alaris.Irc.Dcc.DccUserInfo.Connection</definition>
+        <argsstring></argsstring>
+        <name>Connection</name>
+        <briefdescription>
+<para>The connection representing on which IRC server the remote user can be found. </para>        </briefdescription>
+        <detaileddescription>
+<para>A read-only instance of <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" line="106" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a5cdc154800eaab2157a977aff08f4088" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Alaris.Irc.Dcc.DccUserInfo.DccUserInfo</definition>
+        <argsstring>(Connection connection, string[] userInfoParts, IPEndPoint remoteEndPoint)</argsstring>
+        <name>DccUserInfo</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+          <declname>connection</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>userInfoParts</declname>
+        </param>
+        <param>
+          <type>IPEndPoint</type>
+          <declname>remoteEndPoint</declname>
+        </param>
+        <briefdescription>
+<para>Create a new instance. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>connection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The originating connection instance.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userInfoParts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parsed nick!user string</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>remoteEndPoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The TCP/IP settings from the other user.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" line="24" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" bodystart="22" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a9ed3eedabcf416ca7fe05f6b40876c60" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Alaris.Irc.Dcc.DccUserInfo.DccUserInfo</definition>
+        <argsstring>(Connection connection, string[] userInfoParts)</argsstring>
+        <name>DccUserInfo</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+          <declname>connection</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>userInfoParts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" line="31" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" bodystart="29" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a16d8bc65f29ae706798a5f32f19705f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Irc.Dcc.DccUserInfo.DccUserInfo</definition>
+        <argsstring>(Connection connection, string nick)</argsstring>
+        <name>DccUserInfo</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+          <declname>connection</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>nick</declname>
+        </param>
+        <briefdescription>
+<para>Create an instance that represents a user. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>connection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IRC server connection which the remote user is on.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nick</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The remote user&apos;s nick.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" line="42" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1ac718eb491fd201dd64353909ab2ee6c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string Alaris.Irc.Dcc.DccUserInfo.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <reimplements refid="class_alaris_1_1_irc_1_1_user_info_1a34e236ddf6d5acf16eb70c05bc53b7c7">ToString</reimplements>
+        <briefdescription>
+<para>A friendly representation of this object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The remote&apos;s user nick and his IP address, e.g. <ulink url="mailto:Nick@192.168.0.23">Nick@192.168.0.23</ulink></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" line="113" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" bodystart="112" bodyend="122"/>
+        <references refid="class_alaris_1_1_irc_1_1_connection_1a314f56d42d552cef579b4448b257c152" compoundref="_connection_8cs" startline="660" endline="663">Alaris.Irc.Connection::ToString</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class encapsulates all the information known about a remote user in the context of a DCC session. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1778">
+        <label>Alaris.Irc.Dcc.DccUserInfo</label>
+        <link refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info"/>
+        <childnode refid="1779" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1779">
+        <label>Alaris.Irc.UserInfo</label>
+        <link refid="class_alaris_1_1_irc_1_1_user_info"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1780">
+        <label>Alaris.Irc.Dcc.DccUserInfo</label>
+        <link refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info"/>
+        <childnode refid="1781" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1782" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1790">
+        <label>Alaris.Irc.Sender</label>
+        <link refid="class_alaris_1_1_irc_1_1_sender"/>
+        <childnode refid="1785" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1783">
+        <label>Alaris.Irc.Ctcp.CtcpListener</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener"/>
+        <childnode refid="1782" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1788">
+        <label>Alaris.Irc.ServerProperties</label>
+        <link refid="class_alaris_1_1_irc_1_1_server_properties"/>
+      </node>
+      <node id="1784">
+        <label>Alaris.Irc.Ctcp.CtcpSender</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender"/>
+        <childnode refid="1785" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1785">
+        <label>Alaris.Irc.CommandBuilder</label>
+        <link refid="class_alaris_1_1_irc_1_1_command_builder"/>
+        <childnode refid="1782" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1787">
+        <label>Alaris.Irc.Ctcp.CtcpResponder</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder"/>
+        <childnode refid="1782" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1782">
+        <label>Alaris.Irc.Connection</label>
+        <link refid="class_alaris_1_1_irc_1_1_connection"/>
+        <childnode refid="1783" relation="usage">
+          <edgelabel>_ctcpListener</edgelabel>
+        </childnode>
+        <childnode refid="1784" relation="usage">
+          <edgelabel>_ctcpSender</edgelabel>
+        </childnode>
+        <childnode refid="1786" relation="usage">
+          <edgelabel>_listener</edgelabel>
+        </childnode>
+        <childnode refid="1787" relation="usage">
+          <edgelabel>_ctcpResponder</edgelabel>
+        </childnode>
+        <childnode refid="1788" relation="usage">
+          <edgelabel>_properties</edgelabel>
+        </childnode>
+        <childnode refid="1789" relation="usage">
+          <edgelabel>ConnectionArgs</edgelabel>
+        </childnode>
+        <childnode refid="1790" relation="usage">
+          <edgelabel>_sender</edgelabel>
+        </childnode>
+      </node>
+      <node id="1789">
+        <label>Alaris.Irc.ConnectionArgs</label>
+        <link refid="struct_alaris_1_1_irc_1_1_connection_args"/>
+      </node>
+      <node id="1786">
+        <label>Alaris.Irc.Listener</label>
+        <link refid="class_alaris_1_1_irc_1_1_listener"/>
+      </node>
+      <node id="1781">
+        <label>Alaris.Irc.UserInfo</label>
+        <link refid="class_alaris_1_1_irc_1_1_user_info"/>
+        <childnode refid="1781" relation="usage">
+          <edgelabel>EmptyInstance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" line="10" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccUserInfo.cs" bodystart="9" bodyend="123"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a3d8e7b2ebb3afd8375eed2ecdf3de524" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>_connection</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1af98c133ec58a12ab472d0237dd65d733" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>Connection</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a5cdc154800eaab2157a977aff08f4088" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>DccUserInfo</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a9ed3eedabcf416ca7fe05f6b40876c60" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>DccUserInfo</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a16d8bc65f29ae706798a5f32f19705f3" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>DccUserInfo</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1a33030303bad92b6512a130a454337138" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>Empty</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1a605481679597a2ca564da671a879f9c0" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>Hostname</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1ae1cc0758cc4e5d6985ea46794987164a" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>Nick</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a66f125f4a6a828351d29ee1e98ed8cde" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>Port</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1ad112c66ff22e24880284ad287b7395ce" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>RemoteAddress</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1acde84dc6de570301834b9c717b36cf8d" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>RemoteEndPoint</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1a01c6183c3e3bc721797666d4a806ff47" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>remoteEndPoint</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1ac718eb491fd201dd64353909ab2ee6c3" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>ToString</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1aad2e02af1f0681c1e01d95293277ffa5" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>User</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1a6aa428c200fa2473b1e87e01961d8101" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccUserInfo</scope><name>UserInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_tests" kind="namespace">
+    <compoundname>Alaris::Tests</compoundname>
+    <innerclass refid="class_alaris_1_1_tests_1_1_bot_test" prot="public">Alaris::Tests::BotTest</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Tests/BotTest.cs" line="4"/>
+  </compounddef>
+</doxygen>

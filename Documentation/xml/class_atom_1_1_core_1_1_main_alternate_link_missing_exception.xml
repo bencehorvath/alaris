@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_atom_1_1_core_1_1_main_alternate_link_missing_exception" kind="class" prot="public">
+    <compoundname>Atom::Core::MainAlternateLinkMissingException</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_main_alternate_link_missing_exception_1a6fb70b46ba3551d4a8eaddac7a6fd065" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.MainAlternateLinkMissingException.MainAlternateLinkMissingException</definition>
+        <argsstring>()</argsstring>
+        <name>MainAlternateLinkMissingException</name>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_atom_1_1_core_1_1_main_alternate_link_missing_exception" kindref="compound">MainAlternateLinkMissingException</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="163" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="162" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_main_alternate_link_missing_exception_1a06e472b3a23babb1fd11a60f9ff625fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.MainAlternateLinkMissingException.MainAlternateLinkMissingException</definition>
+        <argsstring>(string msg)</argsstring>
+        <name>MainAlternateLinkMissingException</name>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_atom_1_1_core_1_1_main_alternate_link_missing_exception" kindref="compound">MainAlternateLinkMissingException</ref> class with a specified error message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A message that describes the error.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="171" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="170" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_main_alternate_link_missing_exception_1a4c6dc9ed72cbd338ac443f6821fb2e83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.MainAlternateLinkMissingException.MainAlternateLinkMissingException</definition>
+        <argsstring>(string msg, Exception inner)</argsstring>
+        <name>MainAlternateLinkMissingException</name>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>Exception</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_atom_1_1_core_1_1_main_alternate_link_missing_exception" kindref="compound">MainAlternateLinkMissingException</ref> class with a specified error message and a reference to the inner exception that is the cause of this exception. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A message that describes the error.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exception that is the cause of the current exception. If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="184" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="182" bodyend="185"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The exception that is thrown when the main link with alternate relationship is not inserted. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="158" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="157" bodyend="186"/>
+    <listofallmembers>
+      <member refid="class_atom_1_1_core_1_1_main_alternate_link_missing_exception_1a6fb70b46ba3551d4a8eaddac7a6fd065" prot="public" virt="non-virtual"><scope>Atom::Core::MainAlternateLinkMissingException</scope><name>MainAlternateLinkMissingException</name></member>
+      <member refid="class_atom_1_1_core_1_1_main_alternate_link_missing_exception_1a06e472b3a23babb1fd11a60f9ff625fa" prot="public" virt="non-virtual"><scope>Atom::Core::MainAlternateLinkMissingException</scope><name>MainAlternateLinkMissingException</name></member>
+      <member refid="class_atom_1_1_core_1_1_main_alternate_link_missing_exception_1a4c6dc9ed72cbd338ac443f6821fb2e83" prot="public" virt="non-virtual"><scope>Atom::Core::MainAlternateLinkMissingException</scope><name>MainAlternateLinkMissingException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

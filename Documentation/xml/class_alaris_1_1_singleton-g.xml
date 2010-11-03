@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_singleton-g" kind="class" prot="public">
+    <compoundname>Alaris::Singleton-g</compoundname>
+    <templateparamlist>
+      <param>
+        <type>T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_singleton-g_1ac6701d8730a2b22e8067b5e594b4f27b" prot="private" static="yes" mutable="no">
+        <type>T</type>
+        <definition>volatile T Alaris.Singleton-g&lt; T &gt;._instance</definition>
+        <argsstring></argsstring>
+        <name>_instance</name>
+        <briefdescription>
+<para>The single instance of the target class. </para>        </briefdescription>
+        <detaileddescription>
+<para>The volatile keyword makes sure to remove any compiler optimization that could make concurrent threads reach a race condition with the double-checked lock pattern used in the Instance property. See <ulink url="http://www.bluebytesoftware.com/blog/PermaLink,guid,543d89ad-8d57-4a51-b7c9-a821e3992bf6.aspx">http://www.bluebytesoftware.com/blog/PermaLink,guid,543d89ad-8d57-4a51-b7c9-a821e3992bf6.aspx</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Singleton.cs" line="51" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Singleton.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_singleton-g_1a757171890eca5f8ea2e9bb5c382a2319" prot="private" static="yes" mutable="no">
+        <type>readonly object</type>
+        <definition>readonly object Alaris.Singleton-g&lt; T &gt;.Lock</definition>
+        <argsstring></argsstring>
+        <name>Lock</name>
+        <initializer> new object()</initializer>
+        <briefdescription>
+<para>The dummy object used for locking. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Singleton.cs" line="56" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Singleton.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_singleton-g_1a0033d0d3c60e5e66ae4abd6989109773" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>T</type>
+        <definition>T Alaris.Singleton-g&lt; T &gt;.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <briefdescription>
+<para>Gets the single instance of the class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Singleton.cs" line="98" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Singleton.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manages the single instance of a class. </para>    </briefdescription>
+    <detaileddescription>
+<para>Generic variant of the strategy presented here : <ulink url="http://geekswithblogs.net/akraus1/articles/90803.aspx.">http://geekswithblogs.net/akraus1/articles/90803.aspx.</ulink> Prefered to <ulink url="http://www.yoda.arachsys.com/csharp/singleton.html,">http://www.yoda.arachsys.com/csharp/singleton.html,</ulink> where static initialization doesn&apos;t allow proper handling of exceptions, and doesn&apos;t allow retrying type initializers initialization later (once a type initializer fails to initialize in .NET, it can&apos;t be re-initialized again).</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the singleton class.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Singleton.cs" line="40" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Singleton.cs" bodystart="38" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_singleton-g_1ac6701d8730a2b22e8067b5e594b4f27b" prot="private" virt="non-virtual"><scope>Alaris::Singleton-g</scope><name>_instance</name></member>
+      <member refid="class_alaris_1_1_singleton-g_1a0033d0d3c60e5e66ae4abd6989109773" prot="public" virt="non-virtual"><scope>Alaris::Singleton-g</scope><name>Instance</name></member>
+      <member refid="class_alaris_1_1_singleton-g_1a757171890eca5f8ea2e9bb5c382a2319" prot="private" virt="non-virtual"><scope>Alaris::Singleton-g</scope><name>Lock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

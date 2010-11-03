@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_calculator_1_1analysis" kind="namespace">
+    <compoundname>Alaris::Calculator::analysis</compoundname>
+    <innerclass refid="interface_alaris_1_1_calculator_1_1analysis_1_1_analysis" prot="public">Alaris::Calculator::analysis::Analysis</innerclass>
+    <innerclass refid="class_alaris_1_1_calculator_1_1analysis_1_1_analysis_adapter" prot="public">Alaris::Calculator::analysis::AnalysisAdapter</innerclass>
+    <innerclass refid="class_alaris_1_1_calculator_1_1analysis_1_1_depth_first_adapter" prot="public">Alaris::Calculator::analysis::DepthFirstAdapter</innerclass>
+    <innerclass refid="class_alaris_1_1_calculator_1_1analysis_1_1_reversed_depth_first_adapter" prot="public">Alaris::Calculator::analysis::ReversedDepthFirstAdapter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/analysis.cs" line="7"/>
+  </compounddef>
+</doxygen>

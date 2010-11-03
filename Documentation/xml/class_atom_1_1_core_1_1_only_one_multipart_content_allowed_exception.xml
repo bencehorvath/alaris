@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_atom_1_1_core_1_1_only_one_multipart_content_allowed_exception" kind="class" prot="public">
+    <compoundname>Atom::Core::OnlyOneMultipartContentAllowedException</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_only_one_multipart_content_allowed_exception_1a1d2adac7e615fd12829144fd178419c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.OnlyOneMultipartContentAllowedException.OnlyOneMultipartContentAllowedException</definition>
+        <argsstring>()</argsstring>
+        <name>OnlyOneMultipartContentAllowedException</name>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_atom_1_1_core_1_1_only_one_multipart_content_allowed_exception" kindref="compound">OnlyOneMultipartContentAllowedException</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="124" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_only_one_multipart_content_allowed_exception_1afd1731868acf57ca92506ef1a33cb6c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.OnlyOneMultipartContentAllowedException.OnlyOneMultipartContentAllowedException</definition>
+        <argsstring>(string msg)</argsstring>
+        <name>OnlyOneMultipartContentAllowedException</name>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_atom_1_1_core_1_1_only_one_multipart_content_allowed_exception" kindref="compound">OnlyOneMultipartContentAllowedException</ref> class with a specified error message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A message that describes the error.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="132" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_only_one_multipart_content_allowed_exception_1a35fb318f3519c6f15a2a5c4e0afae551" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.OnlyOneMultipartContentAllowedException.OnlyOneMultipartContentAllowedException</definition>
+        <argsstring>(string msg, Exception inner)</argsstring>
+        <name>OnlyOneMultipartContentAllowedException</name>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>Exception</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_atom_1_1_core_1_1_only_one_multipart_content_allowed_exception" kindref="compound">OnlyOneMultipartContentAllowedException</ref> class with a specified error message and a reference to the inner exception that is the cause of this exception. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A message that describes the error.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exception that is the cause of the current exception. If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="145" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="143" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The exception that is thrown when a more than one multipart content is inserted in an entry. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" line="119" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/Exceptions.cs" bodystart="118" bodyend="147"/>
+    <listofallmembers>
+      <member refid="class_atom_1_1_core_1_1_only_one_multipart_content_allowed_exception_1a1d2adac7e615fd12829144fd178419c9" prot="public" virt="non-virtual"><scope>Atom::Core::OnlyOneMultipartContentAllowedException</scope><name>OnlyOneMultipartContentAllowedException</name></member>
+      <member refid="class_atom_1_1_core_1_1_only_one_multipart_content_allowed_exception_1afd1731868acf57ca92506ef1a33cb6c8" prot="public" virt="non-virtual"><scope>Atom::Core::OnlyOneMultipartContentAllowedException</scope><name>OnlyOneMultipartContentAllowedException</name></member>
+      <member refid="class_atom_1_1_core_1_1_only_one_multipart_content_allowed_exception_1a35fb318f3519c6f15a2a5c4e0afae551" prot="public" virt="non-virtual"><scope>Atom::Core::OnlyOneMultipartContentAllowedException</scope><name>OnlyOneMultipartContentAllowedException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

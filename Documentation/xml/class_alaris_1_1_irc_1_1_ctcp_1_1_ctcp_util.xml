@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util" kind="class" prot="public">
+    <compoundname>Alaris::Irc::Ctcp::CtcpUtil</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1ab1e84c47f636279da47d20046da2d7a9" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Ctcp.CtcpUtil.Finger</definition>
+        <argsstring></argsstring>
+        <name>Finger</name>
+        <initializer>&quot;FINGER&quot;</initializer>
+        <briefdescription>
+<para>CTCP Finger. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" line="16" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a6fbb5e111337e247fdcff6a90a028619" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Ctcp.CtcpUtil.UserInfo</definition>
+        <argsstring></argsstring>
+        <name>UserInfo</name>
+        <initializer>&quot;USERINFO&quot;</initializer>
+        <briefdescription>
+<para>CTCP USERINFO. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" line="18" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a409c532e9bae0e21c447f456665ccfb9" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Ctcp.CtcpUtil.Version</definition>
+        <argsstring></argsstring>
+        <name>Version</name>
+        <initializer>&quot;VERSION&quot;</initializer>
+        <briefdescription>
+<para>CTCP VERSION. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" line="20" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1abefc1e865077915b31986efc47adb983" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Ctcp.CtcpUtil.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <initializer>&quot;SOURCE&quot;</initializer>
+        <briefdescription>
+<para>CTCP SOURCE. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" line="22" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a1c55a6c92f2e74de9d7a70e60e6f4587" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Ctcp.CtcpUtil.ClientInfo</definition>
+        <argsstring></argsstring>
+        <name>ClientInfo</name>
+        <initializer>&quot;CLIENTINFO&quot;</initializer>
+        <briefdescription>
+<para>CTCP CLIENTINFO. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" line="24" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a43d66ebce415610eaa67753737a688cd" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Ctcp.CtcpUtil.ErrorMessage</definition>
+        <argsstring></argsstring>
+        <name>ErrorMessage</name>
+        <initializer>&quot;ERRMSG&quot;</initializer>
+        <briefdescription>
+<para>CTCP ERRMSG. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" line="26" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1aeeef8065a3f6f14c055123cc5d3c5ca2" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Ctcp.CtcpUtil.Ping</definition>
+        <argsstring></argsstring>
+        <name>Ping</name>
+        <initializer>&quot;PING&quot;</initializer>
+        <briefdescription>
+<para>CTCP PING. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" line="28" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a984e1d0cf29ba8337179b6bbfcbb6fb3" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Ctcp.CtcpUtil.Time</definition>
+        <argsstring></argsstring>
+        <name>Time</name>
+        <initializer>&quot;TIME&quot;</initializer>
+        <briefdescription>
+<para>CTCP TIME. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" line="30" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a9696e64076a46f15229eda304c947e98" prot="private" static="yes" mutable="no">
+        <type>internal readonly TraceSwitch</type>
+        <definition>internal readonly TraceSwitch Alaris.Irc.Ctcp.CtcpUtil.CtcpTrace</definition>
+        <argsstring></argsstring>
+        <name>CtcpTrace</name>
+        <initializer> new TraceSwitch(&quot;CtcpTraceSwitch&quot;, &quot;Debug level for CTCP classes.&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" line="32" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a63d5c1723223aa3f7ece9cc87b57fe30" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Alaris.Irc.Ctcp.CtcpUtil.CreateTimestamp</definition>
+        <argsstring>()</argsstring>
+        <name>CreateTimestamp</name>
+        <briefdescription>
+<para>Generate a timestamp string suitable for the CTCP Ping command. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current time as a string.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" line="41" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" bodystart="40" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Constants and utility methods to support CTCP. </para>    </briefdescription>
+    <detaileddescription>
+<para>The CTCP constants should be used to test incoming CTCP queries for their type and as the CTCP command for outgoing ones. </para>    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpUtil.cs" bodystart="13" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a1c55a6c92f2e74de9d7a70e60e6f4587" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpUtil</scope><name>ClientInfo</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a63d5c1723223aa3f7ece9cc87b57fe30" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpUtil</scope><name>CreateTimestamp</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a9696e64076a46f15229eda304c947e98" prot="private" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpUtil</scope><name>CtcpTrace</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a43d66ebce415610eaa67753737a688cd" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpUtil</scope><name>ErrorMessage</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1ab1e84c47f636279da47d20046da2d7a9" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpUtil</scope><name>Finger</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1aeeef8065a3f6f14c055123cc5d3c5ca2" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpUtil</scope><name>Ping</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1abefc1e865077915b31986efc47adb983" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpUtil</scope><name>Source</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a984e1d0cf29ba8337179b6bbfcbb6fb3" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpUtil</scope><name>Time</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a6fbb5e111337e247fdcff6a90a028619" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpUtil</scope><name>UserInfo</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_util_1a409c532e9bae0e21c447f456665ccfb9" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpUtil</scope><name>Version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

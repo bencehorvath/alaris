@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_lua_engine_1_1_lua_functions" kind="class" prot="public">
+    <compoundname>Alaris::LuaEngine::LuaFunctions</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_lua_engine_1_1_lua_functions_1a432801a0cbb240578e49e857939d1892" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>readonly Connection Alaris.LuaEngine.LuaFunctions._connection</definition>
+        <argsstring></argsstring>
+        <name>_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_lua_engine_1_1_lua_functions_1ada60716463a52cb534da9fd65c89b40e" prot="private" static="no" mutable="no">
+        <type>readonly Lua</type>
+        <definition>readonly Lua Alaris.LuaEngine.LuaFunctions._lua</definition>
+        <argsstring></argsstring>
+        <name>_lua</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_lua_engine_1_1_lua_functions_1a1cf07fc0d05390987d600ac2e6f18a0a" prot="private" static="no" mutable="no">
+        <type>readonly List&lt; PublicMessageEventHandler &gt;</type>
+        <definition>readonly List&lt;PublicMessageEventHandler&gt; Alaris.LuaEngine.LuaFunctions._registeredOnPM</definition>
+        <argsstring></argsstring>
+        <name>_registeredOnPM</name>
+        <initializer> new List&lt;PublicMessageEventHandler&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" line="16" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_lua_engine_1_1_lua_functions_1aa51a61f07c2d42e7589a5f39ab272fa3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>IEnumerable&lt; PublicMessageEventHandler &gt;</type>
+        <definition>IEnumerable&lt;PublicMessageEventHandler&gt; Alaris.LuaEngine.LuaFunctions.RegisteredOnPM</definition>
+        <argsstring></argsstring>
+        <name>RegisteredOnPM</name>
+        <briefdescription>
+<para>Events registered by Lua on Public Message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" line="29" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_lua_engine_1_1_lua_functions_1a9aa7f4315a80003c7d14f367fbd5f0d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.LuaEngine.LuaFunctions.LuaFunctions</definition>
+        <argsstring>(ref Lua vm, ref Connection conn)</argsstring>
+        <name>LuaFunctions</name>
+        <param>
+          <type>ref Lua</type>
+          <declname>vm</declname>
+        </param>
+        <param>
+          <type>ref <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+          <declname>conn</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new instance of <computeroutput><ref refid="class_alaris_1_1_lua_engine_1_1_lua_functions" kindref="compound">LuaFunctions</ref></computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lua VM</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>conn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IRC connection</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" line="39" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_lua_engine_1_1_lua_functions_1ab44ebd01f4049dcfec67b1db70bf6505" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.LuaEngine.LuaFunctions.RegisterFunctionHook</definition>
+        <argsstring>(string eventName, string luaName)</argsstring>
+        <name>RegisterFunctionHook</name>
+        <param>
+          <type>string</type>
+          <declname>eventName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>luaName</declname>
+        </param>
+        <briefdescription>
+<para>Registers a function hook. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event to listen to.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>luaName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lua function to call.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" line="51" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" bodystart="50" bodyend="65"/>
+        <references refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_messages_1a6291165f36fc3113d693cdd411069c0f">Alaris.Irc.Delegates.Messages::PublicMessageEventHandler</references>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_lua_engine_1_1_lua_functions_1a1d5aeb603b889edc71ad7d2367d9fff0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.LuaEngine.LuaFunctions.SendMessage</definition>
+        <argsstring>(string chan, string message)</argsstring>
+        <name>SendMessage</name>
+        <param>
+          <type>string</type>
+          <declname>chan</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Sends a message to the IRC server. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel to send to.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" line="74" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" bodystart="73" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class containing most of the exported Lua functions. It as also a wrapper to the <ref refid="namespace_alaris_1_1_main" kindref="compound">Main</ref> <ref refid="namespace_alaris_1_1_a_p_i" kindref="compound">API</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1925">
+        <label>Alaris.Irc.Sender</label>
+        <link refid="class_alaris_1_1_irc_1_1_sender"/>
+        <childnode refid="1920" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1918">
+        <label>Alaris.Irc.Ctcp.CtcpListener</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener"/>
+        <childnode refid="1917" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1923">
+        <label>Alaris.Irc.ServerProperties</label>
+        <link refid="class_alaris_1_1_irc_1_1_server_properties"/>
+      </node>
+      <node id="1919">
+        <label>Alaris.Irc.Ctcp.CtcpSender</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender"/>
+        <childnode refid="1920" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1920">
+        <label>Alaris.Irc.CommandBuilder</label>
+        <link refid="class_alaris_1_1_irc_1_1_command_builder"/>
+        <childnode refid="1917" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1922">
+        <label>Alaris.Irc.Ctcp.CtcpResponder</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder"/>
+        <childnode refid="1917" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1917">
+        <label>Alaris.Irc.Connection</label>
+        <link refid="class_alaris_1_1_irc_1_1_connection"/>
+        <childnode refid="1918" relation="usage">
+          <edgelabel>_ctcpListener</edgelabel>
+        </childnode>
+        <childnode refid="1919" relation="usage">
+          <edgelabel>_ctcpSender</edgelabel>
+        </childnode>
+        <childnode refid="1921" relation="usage">
+          <edgelabel>_listener</edgelabel>
+        </childnode>
+        <childnode refid="1922" relation="usage">
+          <edgelabel>_ctcpResponder</edgelabel>
+        </childnode>
+        <childnode refid="1923" relation="usage">
+          <edgelabel>_properties</edgelabel>
+        </childnode>
+        <childnode refid="1924" relation="usage">
+          <edgelabel>ConnectionArgs</edgelabel>
+        </childnode>
+        <childnode refid="1925" relation="usage">
+          <edgelabel>_sender</edgelabel>
+        </childnode>
+      </node>
+      <node id="1916">
+        <label>Alaris.LuaEngine.LuaFunctions</label>
+        <link refid="class_alaris_1_1_lua_engine_1_1_lua_functions"/>
+        <childnode refid="1917" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1924">
+        <label>Alaris.Irc.ConnectionArgs</label>
+        <link refid="struct_alaris_1_1_irc_1_1_connection_args"/>
+      </node>
+      <node id="1921">
+        <label>Alaris.Irc.Listener</label>
+        <link refid="class_alaris_1_1_irc_1_1_listener"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/LuaFunctions.cs" bodystart="12" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_functions_1a432801a0cbb240578e49e857939d1892" prot="private" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctions</scope><name>_connection</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_functions_1ada60716463a52cb534da9fd65c89b40e" prot="private" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctions</scope><name>_lua</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_functions_1a1cf07fc0d05390987d600ac2e6f18a0a" prot="private" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctions</scope><name>_registeredOnPM</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_functions_1a9aa7f4315a80003c7d14f367fbd5f0d1" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctions</scope><name>LuaFunctions</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_functions_1aa51a61f07c2d42e7589a5f39ab272fa3" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctions</scope><name>RegisteredOnPM</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_functions_1ab44ebd01f4049dcfec67b1db70bf6505" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctions</scope><name>RegisterFunctionHook</name></member>
+      <member refid="class_alaris_1_1_lua_engine_1_1_lua_functions_1a1d5aeb603b889edc71ad7d2367d9fff0" prot="public" virt="non-virtual"><scope>Alaris::LuaEngine::LuaFunctions</scope><name>SendMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

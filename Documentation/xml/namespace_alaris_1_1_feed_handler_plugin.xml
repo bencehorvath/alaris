@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_feed_handler_plugin" kind="namespace">
+    <compoundname>Alaris::FeedHandlerPlugin</compoundname>
+    <innerclass refid="class_alaris_1_1_feed_handler_plugin_1_1_feed_factory" prot="public">Alaris::FeedHandlerPlugin::FeedFactory</innerclass>
+    <innerclass refid="class_alaris_1_1_feed_handler_plugin_1_1_feed_runner" prot="public">Alaris::FeedHandlerPlugin::FeedRunner</innerclass>
+    <innerclass refid="class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin" prot="public">Alaris::FeedHandlerPlugin::AlarisPlugin</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/bin/Debug/plugins/FeedHandler/FeedFactory.cs" line="19"/>
+  </compounddef>
+</doxygen>

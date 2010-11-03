@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_irc_1_1_identd" kind="class" prot="public">
+    <compoundname>Alaris::Irc::Identd</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_identd_1a971a55ecce2fb1505f8820cdf5920a20" prot="private" static="yes" mutable="no">
+        <type>TcpListener</type>
+        <definition>TcpListener Alaris.Irc.Identd._listener</definition>
+        <argsstring></argsstring>
+        <name>_listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="18" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_identd_1a9de6e5b2691407bdb76d91b846f8ec9c" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Identd._running</definition>
+        <argsstring></argsstring>
+        <name>_running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="19" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_identd_1a553ef20da05d9d9d8bd89f943ffe4fec" prot="private" static="yes" mutable="no">
+        <type>readonly object</type>
+        <definition>readonly object Alaris.Irc.Identd.LockObject</definition>
+        <argsstring></argsstring>
+        <name>LockObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="20" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_identd_1a16c7ad76508f8402e69d29821773779f" prot="private" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.Identd._username</definition>
+        <argsstring></argsstring>
+        <name>_username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="21" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_identd_1a9a9946c6773b4148ccf83c3fa3451c43" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Identd.Reply</definition>
+        <argsstring></argsstring>
+        <name>Reply</name>
+        <initializer>&quot; : USERID : UNIX : &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="22" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_identd_1a33ff2751b9f05f969b1f7bd1d590f051" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.Irc.Identd.IdentdPort</definition>
+        <argsstring></argsstring>
+        <name>IdentdPort</name>
+        <initializer> 113</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="23" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_identd_1a620a40f68ac0e5a2cb84e24c16766894" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static</type>
+        <definition>static Alaris.Irc.Identd.Identd</definition>
+        <argsstring>()</argsstring>
+        <name>Identd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="26" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="25" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_identd_1a2d95ae0eb6a3cbaa88402a50df43201f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Irc.Identd.Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="88" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="87" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_identd_1af1a0aa0cca54502c9b052c33f2bb4c3a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Irc.Identd.Start</definition>
+        <argsstring>(string userName)</argsstring>
+        <name>Start</name>
+        <param>
+          <type>string</type>
+          <declname>userName</declname>
+        </param>
+        <briefdescription>
+<para>The <ref refid="class_alaris_1_1_irc_1_1_identd" kindref="compound">Identd</ref> server will start listening for queries in its own thread. It can be stopped by calling <ref refid="class_alaris_1_1_irc_1_1_identd_1ac017098f82b9d9f4a4143e254566350b" kindref="member">Identd.Stop</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>userName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should be the same username as the one used in the <ref refid="struct_alaris_1_1_irc_1_1_connection_args" kindref="compound">ConnectionArgs</ref> object when establishing a connection.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the server has already been started.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="42" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="41" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_identd_1aab9bc7f3b2daa2f954de636699d64820" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Alaris.Irc.Identd.IsRunning</definition>
+        <argsstring>()</argsstring>
+        <name>IsRunning</name>
+        <briefdescription>
+<para>Check if the <ref refid="class_alaris_1_1_irc_1_1_identd" kindref="compound">Identd</ref> server is running. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if it is running</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="64" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="63" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_identd_1ac017098f82b9d9f4a4143e254566350b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Irc.Identd.Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <briefdescription>
+<para>Stop the <ref refid="class_alaris_1_1_irc_1_1_identd" kindref="compound">Identd</ref> server and close the thread. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="74" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="73" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An Ident daemon is still used by some IRC networks for authentication. It is a simple service which when queried by a remote system returns a username. The server is controlled via static methods all of which are Thread safe. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Identd.cs" bodystart="16" bodyend="130"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_irc_1_1_identd_1a971a55ecce2fb1505f8820cdf5920a20" prot="private" virt="non-virtual"><scope>Alaris::Irc::Identd</scope><name>_listener</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_identd_1a9de6e5b2691407bdb76d91b846f8ec9c" prot="private" virt="non-virtual"><scope>Alaris::Irc::Identd</scope><name>_running</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_identd_1a16c7ad76508f8402e69d29821773779f" prot="private" virt="non-virtual"><scope>Alaris::Irc::Identd</scope><name>_username</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_identd_1a620a40f68ac0e5a2cb84e24c16766894" prot="private" virt="non-virtual"><scope>Alaris::Irc::Identd</scope><name>Identd</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_identd_1a33ff2751b9f05f969b1f7bd1d590f051" prot="private" virt="non-virtual"><scope>Alaris::Irc::Identd</scope><name>IdentdPort</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_identd_1aab9bc7f3b2daa2f954de636699d64820" prot="public" virt="non-virtual"><scope>Alaris::Irc::Identd</scope><name>IsRunning</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_identd_1a553ef20da05d9d9d8bd89f943ffe4fec" prot="private" virt="non-virtual"><scope>Alaris::Irc::Identd</scope><name>LockObject</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_identd_1a9a9946c6773b4148ccf83c3fa3451c43" prot="private" virt="non-virtual"><scope>Alaris::Irc::Identd</scope><name>Reply</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_identd_1a2d95ae0eb6a3cbaa88402a50df43201f" prot="private" virt="non-virtual"><scope>Alaris::Irc::Identd</scope><name>Run</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_identd_1af1a0aa0cca54502c9b052c33f2bb4c3a" prot="public" virt="non-virtual"><scope>Alaris::Irc::Identd</scope><name>Start</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_identd_1ac017098f82b9d9f4a4143e254566350b" prot="public" virt="non-virtual"><scope>Alaris::Irc::Identd</scope><name>Stop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

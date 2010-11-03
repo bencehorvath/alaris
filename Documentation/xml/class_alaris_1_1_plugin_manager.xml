@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_plugin_manager" kind="class" prot="public">
+    <compoundname>Alaris::PluginManager</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_plugin_manager_1af566178f5bda7462c3b240c3ee779a5d" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>Connection Alaris.PluginManager.Connection</definition>
+        <argsstring></argsstring>
+        <name>Connection</name>
+        <briefdescription>
+<para>The IRC connection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" line="19" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_plugin_manager_1a648b63596ca701863181d2227ba7a54f" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Alaris.PluginManager.Channels</definition>
+        <argsstring></argsstring>
+        <name>Channels</name>
+        <briefdescription>
+<para>IRC channel list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" line="23" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_plugin_manager_1a74549f9d07faa75134475801c8279cdd" compoundref="_plugin_manager_8cs" startline="32" endline="37">Alaris.PluginManager::Initialize</referencedby>
+        <referencedby refid="class_alaris_1_1_plugin_manager_1a867a62e924414a9c479fba2e9f689185" compoundref="_plugin_manager_8cs" startline="50" endline="74">Alaris.PluginManager::LoadPluginsFromDirectory</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_plugin_manager_1a2ef7c2fb65f78f5fadf06c8471de0789" prot="private" static="yes" mutable="no">
+        <type>readonly List&lt; <ref refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_plugin" kindref="compound">IAlarisPlugin</ref> &gt;</type>
+        <definition>readonly List&lt;IAlarisPlugin&gt; Alaris.PluginManager.Plugins</definition>
+        <argsstring></argsstring>
+        <name>Plugins</name>
+        <initializer> new List&lt;<ref refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_plugin" kindref="compound">IAlarisPlugin</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" line="25" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_plugin_manager_1a74549f9d07faa75134475801c8279cdd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.PluginManager.Initialize</definition>
+        <argsstring>(ref Connection con, List&lt; string &gt; channels)</argsstring>
+        <name>Initialize</name>
+        <param>
+          <type>ref <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+          <declname>con</declname>
+        </param>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>channels</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the Plugin manager. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>con</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IRC connection</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IRC channel list</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" line="33" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" bodystart="32" bodyend="37"/>
+        <references refid="class_alaris_1_1_plugin_manager_1a648b63596ca701863181d2227ba7a54f" compoundref="_plugin_manager_8cs" startline="23">Alaris.PluginManager::Channels</references>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_plugin_manager_1ac16753032ff466b81f11e6d11d9e1f88" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.PluginManager.LoadPluginsFromDirectory</definition>
+        <argsstring>(DirectoryInfo directory)</argsstring>
+        <name>LoadPluginsFromDirectory</name>
+        <param>
+          <type>DirectoryInfo</type>
+          <declname>directory</declname>
+        </param>
+        <briefdescription>
+<para>Loads plugins from the specified directory. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>directory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory to check in</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" line="43" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" bodystart="43" bodyend="43"/>
+        <references refid="class_alaris_1_1_plugin_manager_1ac16753032ff466b81f11e6d11d9e1f88" compoundref="_plugin_manager_8cs" startline="43" endline="43">Alaris.PluginManager::LoadPluginsFromDirectory</references>
+        <referencedby refid="class_alaris_1_1_plugin_manager_1ac16753032ff466b81f11e6d11d9e1f88" compoundref="_plugin_manager_8cs" startline="43" endline="43">Alaris.PluginManager::LoadPluginsFromDirectory</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_plugin_manager_1a867a62e924414a9c479fba2e9f689185" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.PluginManager.LoadPluginsFromDirectory</definition>
+        <argsstring>(string directory)</argsstring>
+        <name>LoadPluginsFromDirectory</name>
+        <param>
+          <type>string</type>
+          <declname>directory</declname>
+        </param>
+        <briefdescription>
+<para>Loads plugins from the specified directory. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>directory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory to check in</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" line="51" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" bodystart="50" bodyend="74"/>
+        <references refid="class_alaris_1_1_plugin_manager_1a648b63596ca701863181d2227ba7a54f" compoundref="_plugin_manager_8cs" startline="23">Alaris.PluginManager::Channels</references>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_plugin_manager_1afa7b158bb9b58610272101e8b29c02ec" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.PluginManager.UnloadPlugin</definition>
+        <argsstring>(string name)</argsstring>
+        <name>UnloadPlugin</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Unloads the specified plugin. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the plugin.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" line="81" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" bodystart="80" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_plugin_manager_1a25aea722624d9ccb8997de0fa259cf90" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.PluginManager.SetupAppDomainDebugHandlers</definition>
+        <argsstring>()</argsstring>
+        <name>SetupAppDomainDebugHandlers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" line="92" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" bodystart="91" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class used to manage (load, unload, reload) plugins dynamically. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/PluginManager.cs" bodystart="14" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_plugin_manager_1a648b63596ca701863181d2227ba7a54f" prot="public" virt="non-virtual"><scope>Alaris::PluginManager</scope><name>Channels</name></member>
+      <member refid="class_alaris_1_1_plugin_manager_1af566178f5bda7462c3b240c3ee779a5d" prot="public" virt="non-virtual"><scope>Alaris::PluginManager</scope><name>Connection</name></member>
+      <member refid="class_alaris_1_1_plugin_manager_1a74549f9d07faa75134475801c8279cdd" prot="public" virt="non-virtual"><scope>Alaris::PluginManager</scope><name>Initialize</name></member>
+      <member refid="class_alaris_1_1_plugin_manager_1ac16753032ff466b81f11e6d11d9e1f88" prot="public" virt="non-virtual"><scope>Alaris::PluginManager</scope><name>LoadPluginsFromDirectory</name></member>
+      <member refid="class_alaris_1_1_plugin_manager_1a867a62e924414a9c479fba2e9f689185" prot="public" virt="non-virtual"><scope>Alaris::PluginManager</scope><name>LoadPluginsFromDirectory</name></member>
+      <member refid="class_alaris_1_1_plugin_manager_1a2ef7c2fb65f78f5fadf06c8471de0789" prot="private" virt="non-virtual"><scope>Alaris::PluginManager</scope><name>Plugins</name></member>
+      <member refid="class_alaris_1_1_plugin_manager_1a25aea722624d9ccb8997de0fa259cf90" prot="private" virt="non-virtual"><scope>Alaris::PluginManager</scope><name>SetupAppDomainDebugHandlers</name></member>
+      <member refid="class_alaris_1_1_plugin_manager_1afa7b158bb9b58610272101e8b29c02ec" prot="public" virt="non-virtual"><scope>Alaris::PluginManager</scope><name>UnloadPlugin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

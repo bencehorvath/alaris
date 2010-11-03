@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_commands_1_1_alaris_command_attribute" kind="class" prot="public">
+    <compoundname>Alaris::Commands::AlarisCommandAttribute</compoundname>
+    <derivedcompoundref refid="class_alaris_1_1_commands_1_1_parameterized_alaris_command" prot="public" virt="non-virtual">Alaris.Commands.ParameterizedAlarisCommand</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_commands_1_1_alaris_command_attribute_1ab40e5b8978cbdffa2bc89da92595239e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Alaris.Commands.AlarisCommandAttribute.Command</definition>
+        <argsstring></argsstring>
+        <name>Command</name>
+        <briefdescription>
+<para>Gets the command. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisCommand.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisCommand.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_commands_1_1_alaris_command_attribute_1a25775e1faae0e964a9ca8a340ecc4fd6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="namespace_alaris_1_1_commands_1a234f7f2e79b368ac9569d2d130a3e624" kindref="member">CommandPermission</ref></type>
+        <definition>CommandPermission Alaris.Commands.AlarisCommandAttribute.Permission</definition>
+        <argsstring></argsstring>
+        <name>Permission</name>
+        <briefdescription>
+<para>Gets the command permission. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisCommand.cs" line="18" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisCommand.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_commands_1_1_alaris_command_attribute_1ac8113499665587f46f8d2620dcb283e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Commands.AlarisCommandAttribute.AlarisCommandAttribute</definition>
+        <argsstring>(string command, CommandPermission permission=CommandPermission.Normal)</argsstring>
+        <name>AlarisCommandAttribute</name>
+        <param>
+          <type>string</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_alaris_1_1_commands_1a234f7f2e79b368ac9569d2d130a3e624" kindref="member">CommandPermission</ref></type>
+          <declname>permission</declname>
+          <defval>CommandPermission.Normal</defval>
+        </param>
+        <briefdescription>
+<para>Marks a method as an <ref refid="namespace_alaris" kindref="compound">Alaris</ref> command. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command corresponding to this method.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>permission</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command&apos;s access permission</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisCommand.cs" line="26" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisCommand.cs" bodystart="25" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Marks a method as an <ref refid="namespace_alaris" kindref="compound">Alaris</ref> command. /summary&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1340">
+        <label>Alaris.Commands.AlarisCommandAttribute</label>
+        <link refid="class_alaris_1_1_commands_1_1_alaris_command_attribute"/>
+      </node>
+      <node id="1341">
+        <label>Alaris.Commands.ParameterizedAlarisCommand</label>
+        <link refid="class_alaris_1_1_commands_1_1_parameterized_alaris_command"/>
+        <childnode refid="1340" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisCommand.cs" line="10" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisCommand.cs" bodystart="9" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_command_attribute_1ac8113499665587f46f8d2620dcb283e8" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisCommandAttribute</scope><name>AlarisCommandAttribute</name></member>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_command_attribute_1ab40e5b8978cbdffa2bc89da92595239e" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisCommandAttribute</scope><name>Command</name></member>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_command_attribute_1a25775e1faae0e964a9ca8a340ecc4fd6" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisCommandAttribute</scope><name>Permission</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

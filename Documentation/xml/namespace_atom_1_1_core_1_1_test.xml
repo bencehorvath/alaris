@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_atom_1_1_core_1_1_test" kind="namespace">
+    <compoundname>Atom::Core::Test</compoundname>
+    <innerclass refid="class_atom_1_1_core_1_1_test_1_1_atom_content_test" prot="public">Atom::Core::Test::AtomContentTest</innerclass>
+    <innerclass refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test" prot="public">Atom::Core::Test::AtomEntryTest</innerclass>
+    <innerclass refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test" prot="public">Atom::Core::Test::AtomFeedTest</innerclass>
+    <innerclass refid="class_atom_1_1_core_1_1_test_1_1_atom_links_test" prot="public">Atom::Core::Test::AtomLinksTest</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomContentTest.cs" line="41"/>
+  </compounddef>
+</doxygen>

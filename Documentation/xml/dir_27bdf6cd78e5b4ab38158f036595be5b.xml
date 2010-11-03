@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_27bdf6cd78e5b4ab38158f036595be5b" kind="dir">
+    <compoundname>Alaris.Irc/Delegates/Requests/</compoundname>
+    <innerfile refid="_ison_event_handler_8cs">IsonEventHandler.cs</innerfile>
+    <innerfile refid="_kick_event_handler_8cs">KickEventHandler.cs</innerfile>
+    <innerfile refid="_list_event_handler_8cs">ListEventHandler.cs</innerfile>
+    <innerfile refid="_names_event_handler_8cs">NamesEventHandler.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Requests/"/>
+  </compounddef>
+</doxygen>

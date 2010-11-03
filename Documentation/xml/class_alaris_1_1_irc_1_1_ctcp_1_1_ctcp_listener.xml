@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener" kind="class" prot="public">
+    <compoundname>Alaris::Irc::Ctcp::CtcpListener</compoundname>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a7e330d34aca219e16fb96c0eafb11e0e" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>CtcpReplyEventHandler</type>
+        <definition>CtcpReplyEventHandler Alaris.Irc.Ctcp.CtcpListener.OnCtcpReply</definition>
+        <argsstring></argsstring>
+        <name>OnCtcpReply</name>
+        <briefdescription>
+<para>Listens for replies to CTCP queries sent by this client. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="35" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a90df4370f088339808256f8f8f15c6e9" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>CtcpRequestEventHandler</type>
+        <definition>CtcpRequestEventHandler Alaris.Irc.Ctcp.CtcpListener.OnCtcpRequest</definition>
+        <argsstring></argsstring>
+        <name>OnCtcpRequest</name>
+        <briefdescription>
+<para>Listens for CTCP requests. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="39" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder_1a0f67f119707d261612dd9177d77286f0" compoundref="_ctcp_responder_8cs" startline="29" endline="46">Alaris.Irc.Ctcp.CtcpResponder::CtcpResponder</referencedby>
+      </memberdef>
+      <memberdef kind="event" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a57a6f2a1f731807904e8f8e85cb1c887" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>CtcpPingReplyEventHandler</type>
+        <definition>CtcpPingReplyEventHandler Alaris.Irc.Ctcp.CtcpListener.OnCtcpPingReply</definition>
+        <argsstring></argsstring>
+        <name>OnCtcpPingReply</name>
+        <briefdescription>
+<para>Listens for a reply to CTCP Ping query sent by this client. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="43" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a792bd55a53bcc57a0ebf63545dee6b50" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>CtcpPingRequestEventHandler</type>
+        <definition>CtcpPingRequestEventHandler Alaris.Irc.Ctcp.CtcpListener.OnCtcpPingRequest</definition>
+        <argsstring></argsstring>
+        <name>OnCtcpPingRequest</name>
+        <briefdescription>
+<para>Listens for CTCP Ping requests. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="47" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder_1a0f67f119707d261612dd9177d77286f0" compoundref="_ctcp_responder_8cs" startline="29" endline="46">Alaris.Irc.Ctcp.CtcpResponder::CtcpResponder</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a2d5c3c5195b27eee2c034a56f570daef" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Ctcp.CtcpListener.CtcpTypes</definition>
+        <argsstring></argsstring>
+        <name>CtcpTypes</name>
+        <initializer>&quot;(FINGER|USERINFO|VERSION|SOURCE|CLIENTINFO|ERRMSG|PING|TIME)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="49" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1aeca5ea09ea18e4042ba2a74492f1174e" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>readonly Connection Alaris.Irc.Ctcp.CtcpListener._connection</definition>
+        <argsstring></argsstring>
+        <name>_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="51" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a8937543f8ae252d01e8a7107f7af7889" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.Irc.Ctcp.CtcpListener.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="52" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a52cf1d1f2452f7afeb7fc77c34fe38f4" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.Irc.Ctcp.CtcpListener.Command</definition>
+        <argsstring></argsstring>
+        <name>Command</name>
+        <initializer> 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="53" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a248f99be0fa47e8fe1b911635ff6fc60" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.Irc.Ctcp.CtcpListener.Text</definition>
+        <argsstring></argsstring>
+        <name>Text</name>
+        <initializer> 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="54" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1aff1cb5dc905c23414a5c2ba502b1791f" prot="private" static="yes" mutable="no">
+        <type>readonly Regex</type>
+        <definition>readonly Regex Alaris.Irc.Ctcp.CtcpListener.CtcpRegex</definition>
+        <argsstring></argsstring>
+        <name>CtcpRegex</name>
+        <initializer> new Regex(string.Format(&quot;:([^ ]+) [A-Z]+ [^:]+:\u0001{0}([^\u0001]*)\u0001&quot;, CtcpTypes), RegexOptions.Compiled | RegexOptions.Singleline )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="50" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1aa13f3dd0b6a6c0601afa20c50d9c0806" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Alaris.Irc.Ctcp.CtcpListener.CtcpListener</definition>
+        <argsstring>(Connection connection)</argsstring>
+        <name>CtcpListener</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+<para>Create a new listener using a specific connection. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>connection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The connection to the IRC server.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a46870cc92d7fe7e29120ee0316e805ae" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Irc.Ctcp.CtcpListener.Parse</definition>
+        <argsstring>(string line)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="88" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="87" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1aa88dfb459b23f1293a79598cf7f23278" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Alaris.Irc.Ctcp.CtcpListener.IsReply</definition>
+        <argsstring>(string[] tokens)</argsstring>
+        <name>IsReply</name>
+        <param>
+          <type>string[]</type>
+          <declname>tokens</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="66" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="65" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a2357736e491d211089b090153377fa5f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string[]</type>
+        <definition>static string [] Alaris.Irc.Ctcp.CtcpListener.TokenizeMessage</definition>
+        <argsstring>(string message)</argsstring>
+        <name>TokenizeMessage</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="75" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="74" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a1aa29485d442a430226e5e7104a7810f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Alaris.Irc.Ctcp.CtcpListener.IsCtcpMessage</definition>
+        <argsstring>(string message)</argsstring>
+        <name>IsCtcpMessage</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Test if the message contains CTCP commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The raw message from the IRC server</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if this is a <ref refid="namespace_alaris_1_1_irc_1_1_ctcp" kindref="compound">Ctcp</ref> request or reply.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="145" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="144" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is used to send CTCP specific events. Once registered with this object the client can receive notification of all CTCP requests, pings, and replies. Instances of this class are not created directly but are retrieved as a property from a <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref> object. </para>    </briefdescription>
+    <detaileddescription>
+<para>All CTCP messages come in Request/Reply pairs. Each event signals either the Request or the Response. All CTCP queries (with the exception of CTCP Ping) are very similiar so they are all handled by the same set of events. example&gt;<programlisting><codeline><highlight class="normal">Create<sp/>a<sp/>Connection<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>which<sp/>will<sp/>support<sp/>CTCP<sp/>(second<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>param).</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Connection<sp/>connection<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Connection(<sp/>args,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Register<sp/>a<sp/>delegate<sp/>on<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>CtcpListener.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connection.CtcpListener.OnCtcpRequest<sp/>+=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_ctcp_1af42625734dbde4fc5ffc19a46a24fe6d" kindref="member" tooltip="Someone has sent a Ctcp request.">CtcpRequestEventHandler</ref>(<sp/>MyOnCtcpRequest<sp/>);</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>the<sp/>Connection<sp/>was<sp/>created<sp/>without<sp/>CTCP<sp/>support<sp/>then<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">property</highlight><highlight class="normal"><sp/>will<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null.</highlight></codeline>
+<codeline><highlight class="normal">However,<sp/>CTCP<sp/>can<sp/>be<sp/>turned<sp/>on<sp/>and<sp/>off<sp/>dynamically.<sp/>To<sp/>enable<sp/>it<sp/>at<sp/>a<sp/>later<sp/>time<sp/>call:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connection.EnableCtcp<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">Now<sp/>you<sp/>can<sp/></highlight><highlight class="keyword">register</highlight><highlight class="normal"><sp/>listeners<sp/>as<sp/>above.</highlight></codeline>
+<codeline><highlight class="normal">Setting<sp/>EnableCtcp<sp/>to<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>will<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>the<sp/>instance<sp/>of<sp/>CtcpListener<sp/>and<sp/>no<sp/>more</highlight></codeline>
+<codeline><highlight class="normal">CTCP<sp/>events<sp/>will<sp/>be<sp/>raised.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/code&gt;&lt;/example&gt;<sp/><sp/></highlight></codeline>
+</programlisting></para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1711">
+        <label>Alaris.Irc.Sender</label>
+        <link refid="class_alaris_1_1_irc_1_1_sender"/>
+        <childnode refid="1706" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1703">
+        <label>Alaris.Irc.Ctcp.CtcpListener</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener"/>
+        <childnode refid="1704" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1709">
+        <label>Alaris.Irc.ServerProperties</label>
+        <link refid="class_alaris_1_1_irc_1_1_server_properties"/>
+      </node>
+      <node id="1705">
+        <label>Alaris.Irc.Ctcp.CtcpSender</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender"/>
+        <childnode refid="1706" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1706">
+        <label>Alaris.Irc.CommandBuilder</label>
+        <link refid="class_alaris_1_1_irc_1_1_command_builder"/>
+        <childnode refid="1704" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1708">
+        <label>Alaris.Irc.Ctcp.CtcpResponder</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder"/>
+        <childnode refid="1704" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1704">
+        <label>Alaris.Irc.Connection</label>
+        <link refid="class_alaris_1_1_irc_1_1_connection"/>
+        <childnode refid="1703" relation="usage">
+          <edgelabel>_ctcpListener</edgelabel>
+        </childnode>
+        <childnode refid="1705" relation="usage">
+          <edgelabel>_ctcpSender</edgelabel>
+        </childnode>
+        <childnode refid="1707" relation="usage">
+          <edgelabel>_listener</edgelabel>
+        </childnode>
+        <childnode refid="1708" relation="usage">
+          <edgelabel>_ctcpResponder</edgelabel>
+        </childnode>
+        <childnode refid="1709" relation="usage">
+          <edgelabel>_properties</edgelabel>
+        </childnode>
+        <childnode refid="1710" relation="usage">
+          <edgelabel>ConnectionArgs</edgelabel>
+        </childnode>
+        <childnode refid="1711" relation="usage">
+          <edgelabel>_sender</edgelabel>
+        </childnode>
+      </node>
+      <node id="1710">
+        <label>Alaris.Irc.ConnectionArgs</label>
+        <link refid="struct_alaris_1_1_irc_1_1_connection_args"/>
+      </node>
+      <node id="1707">
+        <label>Alaris.Irc.Listener</label>
+        <link refid="class_alaris_1_1_irc_1_1_listener"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" line="31" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Ctcp/CtcpListener.cs" bodystart="30" bodyend="149"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1aeca5ea09ea18e4042ba2a74492f1174e" prot="private" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>_connection</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a52cf1d1f2452f7afeb7fc77c34fe38f4" prot="private" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>Command</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1aa13f3dd0b6a6c0601afa20c50d9c0806" prot="private" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>CtcpListener</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1aff1cb5dc905c23414a5c2ba502b1791f" prot="private" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>CtcpRegex</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a2d5c3c5195b27eee2c034a56f570daef" prot="private" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>CtcpTypes</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a1aa29485d442a430226e5e7104a7810f" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>IsCtcpMessage</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1aa88dfb459b23f1293a79598cf7f23278" prot="private" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>IsReply</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a8937543f8ae252d01e8a7107f7af7889" prot="private" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>Name</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a57a6f2a1f731807904e8f8e85cb1c887" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>OnCtcpPingReply</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a792bd55a53bcc57a0ebf63545dee6b50" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>OnCtcpPingRequest</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a7e330d34aca219e16fb96c0eafb11e0e" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>OnCtcpReply</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a90df4370f088339808256f8f8f15c6e9" prot="public" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>OnCtcpRequest</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a46870cc92d7fe7e29120ee0316e805ae" prot="private" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>Parse</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a248f99be0fa47e8fe1b911635ff6fc60" prot="private" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>Text</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener_1a2357736e491d211089b090153377fa5f" prot="private" virt="non-virtual"><scope>Alaris::Irc::Ctcp::CtcpListener</scope><name>TokenizeMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

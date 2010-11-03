@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_a_p_i_1_1_database_1_1_database_accessor_attribute" kind="class" prot="public">
+    <compoundname>Alaris::API::Database::DatabaseAccessorAttribute</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_database_1_1_database_accessor_attribute_1ad4418c532ab99bba38e4beccef60f5e7" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Alaris.API.Database.DatabaseAccessorAttribute._doc</definition>
+        <argsstring></argsstring>
+        <name>_doc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessorAttribute.cs" line="11" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessorAttribute.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_database_1_1_database_accessor_attribute_1a9e3f136b138686f80a0847a63860b218" prot="private" static="no" mutable="no">
+        <type>readonly string[]</type>
+        <definition>readonly string [] Alaris.API.Database.DatabaseAccessorAttribute._tables</definition>
+        <argsstring></argsstring>
+        <name>_tables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessorAttribute.cs" line="12" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessorAttribute.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_database_1_1_database_accessor_attribute_1a618d6dfbe6db9bdc72d23692bba889d7" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="namespace_alaris_1_1_a_p_i_1_1_database_1a874e750395438b3abbbea82c53cec689" kindref="member">DatabaseAccessType</ref></type>
+        <definition>readonly DatabaseAccessType Alaris.API.Database.DatabaseAccessorAttribute._accessType</definition>
+        <argsstring></argsstring>
+        <name>_accessType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessorAttribute.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessorAttribute.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_a_p_i_1_1_database_1_1_database_accessor_attribute_1a3dbc04d732167843614ea5b7ef885a55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.API.Database.DatabaseAccessorAttribute.DatabaseAccessorAttribute</definition>
+        <argsstring>(string doc, DatabaseAccessType accessType, params string[] tables)</argsstring>
+        <name>DatabaseAccessorAttribute</name>
+        <param>
+          <type>string</type>
+          <declname>doc</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_alaris_1_1_a_p_i_1_1_database_1a874e750395438b3abbbea82c53cec689" kindref="member">DatabaseAccessType</ref></type>
+          <declname>accessType</declname>
+        </param>
+        <param>
+          <type>params string[]</type>
+          <declname>tables</declname>
+        </param>
+        <briefdescription>
+<para>Marks a method as a database accessor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>doc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The documentation of the method.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>accessType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of access.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tables</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tables which it accesses.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessorAttribute.cs" line="22" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessorAttribute.cs" bodystart="21" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Attribute used to mark methods which access the database. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessorAttribute.cs" line="10" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseAccessorAttribute.cs" bodystart="9" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_accessor_attribute_1a618d6dfbe6db9bdc72d23692bba889d7" prot="private" virt="non-virtual"><scope>Alaris::API::Database::DatabaseAccessorAttribute</scope><name>_accessType</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_accessor_attribute_1ad4418c532ab99bba38e4beccef60f5e7" prot="private" virt="non-virtual"><scope>Alaris::API::Database::DatabaseAccessorAttribute</scope><name>_doc</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_accessor_attribute_1a9e3f136b138686f80a0847a63860b218" prot="private" virt="non-virtual"><scope>Alaris::API::Database::DatabaseAccessorAttribute</scope><name>_tables</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_accessor_attribute_1a3dbc04d732167843614ea5b7ef885a55" prot="public" virt="non-virtual"><scope>Alaris::API::Database::DatabaseAccessorAttribute</scope><name>DatabaseAccessorAttribute</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

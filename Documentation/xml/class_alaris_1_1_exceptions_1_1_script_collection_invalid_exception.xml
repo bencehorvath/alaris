@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_exceptions_1_1_script_collection_invalid_exception" kind="class" prot="public">
+    <compoundname>Alaris::Exceptions::ScriptCollectionInvalidException</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_exceptions_1_1_script_collection_invalid_exception_1a3882afa4bc70867454b1ccc81c72c718" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Exceptions.ScriptCollectionInvalidException.ScriptCollectionInvalidException</definition>
+        <argsstring>(string reason)</argsstring>
+        <name>ScriptCollectionInvalidException</name>
+        <param>
+          <type>string</type>
+          <declname>reason</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new instance of <ref refid="class_alaris_1_1_exceptions_1_1_script_collection_invalid_exception" kindref="compound">ScriptCollectionInvalidException</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reason</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/ScriptCollectionInvalidException.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/ScriptCollectionInvalidException.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception thrown when a script collection is found invalid. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/ScriptCollectionInvalidException.cs" line="9" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/ScriptCollectionInvalidException.cs" bodystart="8" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_exceptions_1_1_script_collection_invalid_exception_1a3882afa4bc70867454b1ccc81c72c718" prot="public" virt="non-virtual"><scope>Alaris::Exceptions::ScriptCollectionInvalidException</scope><name>ScriptCollectionInvalidException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

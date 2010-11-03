@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_dc52f7cd126bfcf6cd45b55662254209" kind="dir">
+    <compoundname>Atom/tests/</compoundname>
+    <innerdir refid="dir_64b8c528590f76ba2e83227a2f245db8">Atom/tests/Atom.Core/</innerdir>
+    <innerdir refid="dir_89d31e9db87f5ce110ce89fdb8788927">Atom/tests/Atom.Utils/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/"/>
+  </compounddef>
+</doxygen>

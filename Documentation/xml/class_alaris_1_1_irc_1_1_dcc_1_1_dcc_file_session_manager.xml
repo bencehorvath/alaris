@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager" kind="class" prot="public">
+    <compoundname>Alaris::Irc::Dcc::DccFileSessionManager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1aadd210ce8b3f9c1bda04b170c88ec6de" prot="private" static="no" mutable="no">
+        <type>TimeSpan</type>
+        <definition>TimeSpan Alaris.Irc.Dcc.DccFileSessionManager._timeout</definition>
+        <argsstring></argsstring>
+        <name>_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="16" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a7617723397d3a1d05e73c359a98bc42e" prot="private" static="no" mutable="no">
+        <type>Hashtable</type>
+        <definition>Hashtable Alaris.Irc.Dcc.DccFileSessionManager._sessionClone</definition>
+        <argsstring></argsstring>
+        <name>_sessionClone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="18" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a04248808abad37becb60ab64a31e60b3" prot="private" static="no" mutable="no">
+        <type>readonly Hashtable</type>
+        <definition>readonly Hashtable Alaris.Irc.Dcc.DccFileSessionManager._sessions</definition>
+        <argsstring></argsstring>
+        <name>_sessions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="20" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a91b384a1b07c48b30664f59890b9aca3" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.Irc.Dcc.DccFileSessionManager.TimeoutCheckPeriod</definition>
+        <argsstring></argsstring>
+        <name>TimeoutCheckPeriod</name>
+        <initializer> 10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="22" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a29782d2163e2f1ecaef6a3d453558211" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.Irc.Dcc.DccFileSessionManager.DefaultTimeout</definition>
+        <argsstring></argsstring>
+        <name>DefaultTimeout</name>
+        <initializer> 30000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="24" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1ab8701fb3d17020ae5108b3c394fc5dbc" prot="private" static="no" mutable="no">
+        <type>readonly Timer</type>
+        <definition>readonly Timer Alaris.Irc.Dcc.DccFileSessionManager._timerThread</definition>
+        <argsstring></argsstring>
+        <name>_timerThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="27" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a5534f56fa5efa9ba43b30e3f97d741a5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Dcc.DccFileSessionManager._timerStopped</definition>
+        <argsstring></argsstring>
+        <name>_timerStopped</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="28" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1ad5c9aef324631b4de5c73f206071a933" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager" kindref="compound">DccFileSessionManager</ref></type>
+        <definition>DccFileSessionManager Alaris.Irc.Dcc.DccFileSessionManager._defaultInstance</definition>
+        <argsstring></argsstring>
+        <name>_defaultInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="25" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1aa6c8974e57c650bb354e6b8e57a6f752" prot="private" static="yes" mutable="no">
+        <type>readonly object</type>
+        <definition>readonly object Alaris.Irc.Dcc.DccFileSessionManager.LockObject</definition>
+        <argsstring></argsstring>
+        <name>LockObject</name>
+        <initializer> new object()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="26" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1ae1857d4d30301edf4ce7255ffc2d2406" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager" kindref="compound">DccFileSessionManager</ref></type>
+        <definition>DccFileSessionManager Alaris.Irc.Dcc.DccFileSessionManager.DefaultInstance</definition>
+        <argsstring></argsstring>
+        <name>DefaultInstance</name>
+        <briefdescription>
+<para>Returns the singleton instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="124" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1ae782384a00f850dc59ce3d22c67f0c98" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>long</type>
+        <definition>long Alaris.Irc.Dcc.DccFileSessionManager.TimeoutPeriod</definition>
+        <argsstring></argsstring>
+        <name>TimeoutPeriod</name>
+        <briefdescription>
+<para>Timeout period in milliseconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="145" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a89122966454b32c66845b306c6e3d310" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Irc.Dcc.DccFileSessionManager.DccFileSessionManager</definition>
+        <argsstring>()</argsstring>
+        <name>DccFileSessionManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="31" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="30" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a8c63b9df20dafa03c45f361fa6ffe548" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean Alaris.Irc.Dcc.DccFileSessionManager.TimedOut</definition>
+        <argsstring>(DccFileSession session)</argsstring>
+        <name>TimedOut</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session" kindref="compound">DccFileSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="40" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="39" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a00be5e7c28bf044f4f14ff14cd1abdbc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Irc.Dcc.DccFileSessionManager.AddSession</definition>
+        <argsstring>(DccFileSession session)</argsstring>
+        <name>AddSession</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session" kindref="compound">DccFileSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="49" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="48" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1af7865af81fae228e3e5721a867c4e988" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Irc.Dcc.DccFileSessionManager.RemoveSession</definition>
+        <argsstring>(DccFileSession session)</argsstring>
+        <name>RemoveSession</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session" kindref="compound">DccFileSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="60" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a7a81fc11ce595fd56291ccfb7fb57747" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Irc.Dcc.DccFileSessionManager.CheckSessions</definition>
+        <argsstring>(object state)</argsstring>
+        <name>CheckSessions</name>
+        <param>
+          <type>object</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="73" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="72" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a22c07971e7c4fc6370c6af9a287c6b47" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal bool</type>
+        <definition>internal bool Alaris.Irc.Dcc.DccFileSessionManager.ContainsSession</definition>
+        <argsstring>(string sessionID)</argsstring>
+        <name>ContainsSession</name>
+        <param>
+          <type>string</type>
+          <declname>sessionID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="91" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a8f05797fafa7338b9a4258fffa56cb6f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal <ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session" kindref="compound">DccFileSession</ref></type>
+        <definition>internal DccFileSession Alaris.Irc.Dcc.DccFileSessionManager.LookupSession</definition>
+        <argsstring>(string sessionID)</argsstring>
+        <name>LookupSession</name>
+        <param>
+          <type>string</type>
+          <declname>sessionID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="96" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="95" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class checks each file session to see if it has not had any activity within the timeout period so that inactive sessions can be closed. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1774">
+        <label>Alaris.Irc.Dcc.DccFileSessionManager</label>
+        <link refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager"/>
+        <childnode refid="1775" relation="usage">
+          <edgelabel>_timerThread</edgelabel>
+        </childnode>
+        <childnode refid="1774" relation="usage">
+          <edgelabel>_defaultInstance</edgelabel>
+        </childnode>
+      </node>
+      <node id="1775">
+        <label>Timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccFileSessionManager.cs" bodystart="13" bodyend="146"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1ad5c9aef324631b4de5c73f206071a933" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>_defaultInstance</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a7617723397d3a1d05e73c359a98bc42e" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>_sessionClone</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a04248808abad37becb60ab64a31e60b3" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>_sessions</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1aadd210ce8b3f9c1bda04b170c88ec6de" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>_timeout</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a5534f56fa5efa9ba43b30e3f97d741a5" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>_timerStopped</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1ab8701fb3d17020ae5108b3c394fc5dbc" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>_timerThread</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a00be5e7c28bf044f4f14ff14cd1abdbc" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>AddSession</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a7a81fc11ce595fd56291ccfb7fb57747" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>CheckSessions</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a22c07971e7c4fc6370c6af9a287c6b47" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>ContainsSession</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a89122966454b32c66845b306c6e3d310" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>DccFileSessionManager</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1ae1857d4d30301edf4ce7255ffc2d2406" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>DefaultInstance</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a29782d2163e2f1ecaef6a3d453558211" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>DefaultTimeout</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1aa6c8974e57c650bb354e6b8e57a6f752" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>LockObject</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a8f05797fafa7338b9a4258fffa56cb6f" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>LookupSession</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1af7865af81fae228e3e5721a867c4e988" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>RemoveSession</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a8c63b9df20dafa03c45f361fa6ffe548" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>TimedOut</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1a91b384a1b07c48b30664f59890b9aca3" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>TimeoutCheckPeriod</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_manager_1ae782384a00f850dc59ce3d22c67f0c98" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccFileSessionManager</scope><name>TimeoutPeriod</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

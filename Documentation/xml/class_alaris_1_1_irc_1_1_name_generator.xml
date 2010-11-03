@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_irc_1_1_name_generator" kind="class" prot="public">
+    <compoundname>Alaris::Irc::NameGenerator</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_name_generator_1a2ca085f4657585698469ce3e61f983d2" prot="private" static="no" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] Alaris.Irc.NameGenerator._numSyllables</definition>
+        <argsstring></argsstring>
+        <name>_numSyllables</name>
+        <initializer> new[] {1, 2, 3, 4, 5}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_name_generator_1a698207c6b6fe84668164423ae47c8ece" prot="private" static="no" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] Alaris.Irc.NameGenerator._numSyllablesChance</definition>
+        <argsstring></argsstring>
+        <name>_numSyllablesChance</name>
+        <initializer> new[] {150, 500, 80, 10, 1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_name_generator_1a5c78a9d6ff0a55e1d1aff7d830fa1c8e" prot="private" static="no" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] Alaris.Irc.NameGenerator._numConsonants</definition>
+        <argsstring></argsstring>
+        <name>_numConsonants</name>
+        <initializer> new[] {0, 1, 2, 3, 4}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="16" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_name_generator_1af6e169643ce2b920131dc6d48ab665af" prot="private" static="no" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] Alaris.Irc.NameGenerator._numConsonantsChance</definition>
+        <argsstring></argsstring>
+        <name>_numConsonantsChance</name>
+        <initializer> new[] {80, 350, 25, 5, 1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_name_generator_1a03654d8f4b1f33e3cfa9155ebddc19c1" prot="private" static="no" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] Alaris.Irc.NameGenerator._numVowels</definition>
+        <argsstring></argsstring>
+        <name>_numVowels</name>
+        <initializer> new[] {1, 2, 3}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="18" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_name_generator_1a8033bda41e224cbdf2c64131e296b862" prot="private" static="no" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] Alaris.Irc.NameGenerator._numVowelsChance</definition>
+        <argsstring></argsstring>
+        <name>_numVowelsChance</name>
+        <initializer> new[] {180, 25, 1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="19" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_name_generator_1ad6dbfa2a76c52f651d4179359f8fca05" prot="private" static="no" mutable="no">
+        <type>readonly char[]</type>
+        <definition>readonly char [] Alaris.Irc.NameGenerator._vowel</definition>
+        <argsstring></argsstring>
+        <name>_vowel</name>
+        <initializer> new[] {&apos;a&apos;, &apos;e&apos;, &apos;i&apos;, &apos;o&apos;, &apos;u&apos;, &apos;y&apos;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="20" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_name_generator_1a924b2b34ff288e49eeee1cfa135730ab" prot="private" static="no" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] Alaris.Irc.NameGenerator._vowelChance</definition>
+        <argsstring></argsstring>
+        <name>_vowelChance</name>
+        <initializer> new[] {10, 12, 10, 10, 8, 2}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="21" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_name_generator_1a7b5f365fe6256d8c2f9ddde240e8886d" prot="private" static="no" mutable="no">
+        <type>readonly char[]</type>
+        <definition>readonly char [] Alaris.Irc.NameGenerator._consonant</definition>
+        <argsstring></argsstring>
+        <name>_consonant</name>
+        <initializer> new[]
+                                                {
+                                                    &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;f&apos;, &apos;g&apos;, &apos;h&apos;, &apos;j&apos;, &apos;k&apos;, &apos;l&apos;, &apos;m&apos;, &apos;n&apos;, &apos;p&apos;, &apos;q&apos;, &apos;r&apos;,
+                                                    &apos;s&apos;, &apos;t&apos;, &apos;v&apos;, &apos;w&apos;, &apos;x&apos;, &apos;y&apos;, &apos;z&apos;
+                                                }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="27" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_name_generator_1a29b0ae9093afb5341aec0994bdd47bae" prot="private" static="no" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] Alaris.Irc.NameGenerator._consonantChance</definition>
+        <argsstring></argsstring>
+        <name>_consonantChance</name>
+        <initializer> new[]
+                                                     {
+                                                         10, 10, 10, 10, 10, 10, 10, 10, 12, 12, 12, 10, 5, 12, 12, 12, 8,
+                                                         8, 3, 4, 3
+                                                     }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="33" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_name_generator_1a0a8aa27eae06090a4004756077c095da" prot="private" static="no" mutable="no">
+        <type>readonly Random</type>
+        <definition>readonly Random Alaris.Irc.NameGenerator._random</definition>
+        <argsstring></argsstring>
+        <name>_random</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="35" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_name_generator_1aa2e07748a99383bb3cf0d2bd6bbe7629" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Irc.NameGenerator.NameGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>NameGenerator</name>
+        <briefdescription>
+<para>Create an instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="41" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_name_generator_1a2a6ca6643a3d6f7c4238771c81f9edec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Alaris.Irc.NameGenerator.MakeName</definition>
+        <argsstring>()</argsstring>
+        <name>MakeName</name>
+        <briefdescription>
+<para>Generates a name randomly using certain construction rules. The name will be different each time it is called. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A name string.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="94" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="93" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_name_generator_1a0b627a1262989f8698caa70c1a4f5da3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Alaris.Irc.NameGenerator.IndexSelect</definition>
+        <argsstring>(int[] intArray)</argsstring>
+        <name>IndexSelect</name>
+        <param>
+          <type>int[]</type>
+          <declname>intArray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="46" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="45" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_name_generator_1a00df5c391987bec144d48d536869d677" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Alaris.Irc.NameGenerator.MakeSyllable</definition>
+        <argsstring>()</argsstring>
+        <name>MakeSyllable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="62" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_name_generator_1aa67ee8e94458d2ae98eb5bacda10a010" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Alaris.Irc.NameGenerator.MakeConsonantBlock</definition>
+        <argsstring>()</argsstring>
+        <name>MakeConsonantBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="67" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="66" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_name_generator_1a03a9ac5ac07da1904a87fc55ecf72bb8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Alaris.Irc.NameGenerator.MakeVowelBlock</definition>
+        <argsstring>()</argsstring>
+        <name>MakeVowelBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="78" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="77" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generates random, made-up names. The names appear to be language neutral (sort of). </para>    </briefdescription>
+    <detaileddescription>
+<para>This is a port of the orginal Javascript written by John Ahlschwede, <ulink url="mailto:ahlschwede@hotmail.com">ahlschwede@hotmail.com</ulink> </para>    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/NameGenerator.cs" bodystart="12" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a7b5f365fe6256d8c2f9ddde240e8886d" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>_consonant</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a29b0ae9093afb5341aec0994bdd47bae" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>_consonantChance</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a5c78a9d6ff0a55e1d1aff7d830fa1c8e" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>_numConsonants</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1af6e169643ce2b920131dc6d48ab665af" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>_numConsonantsChance</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a2ca085f4657585698469ce3e61f983d2" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>_numSyllables</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a698207c6b6fe84668164423ae47c8ece" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>_numSyllablesChance</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a03654d8f4b1f33e3cfa9155ebddc19c1" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>_numVowels</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a8033bda41e224cbdf2c64131e296b862" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>_numVowelsChance</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a0a8aa27eae06090a4004756077c095da" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>_random</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1ad6dbfa2a76c52f651d4179359f8fca05" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>_vowel</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a924b2b34ff288e49eeee1cfa135730ab" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>_vowelChance</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a0b627a1262989f8698caa70c1a4f5da3" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>IndexSelect</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1aa67ee8e94458d2ae98eb5bacda10a010" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>MakeConsonantBlock</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a2a6ca6643a3d6f7c4238771c81f9edec" prot="public" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>MakeName</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a00df5c391987bec144d48d536869d677" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>MakeSyllable</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1a03a9ac5ac07da1904a87fc55ecf72bb8" prot="private" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>MakeVowelBlock</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_name_generator_1aa2e07748a99383bb3cf0d2bd6bbe7629" prot="public" virt="non-virtual"><scope>Alaris::Irc::NameGenerator</scope><name>NameGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader" kind="class" prot="public">
+    <compoundname>Alaris::Calculator::lexer::PushbackReader</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a278e12f8a2606ef87ef9f77faec96694" prot="private" static="no" mutable="no">
+        <type>TextReader</type>
+        <definition>TextReader Alaris::Calculator::lexer.PushbackReader::reader</definition>
+        <argsstring></argsstring>
+        <name>reader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="12" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1af5e0dea6fa618290b2897f245fc54692" prot="private" static="no" mutable="no">
+        <type>Stack</type>
+        <definition>Stack Alaris::Calculator::lexer.PushbackReader::stack</definition>
+        <argsstring></argsstring>
+        <name>stack</name>
+        <initializer> new Stack ()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a163bd4aa62ba8fd8b1e5ce4510d4489d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Alaris.Calculator.lexer.PushbackReader.PushbackReader</definition>
+        <argsstring>(TextReader reader)</argsstring>
+        <name>PushbackReader</name>
+        <param>
+          <type>TextReader</type>
+          <declname>reader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a033ed306b134e82bb10da33d8065ef36" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal int</type>
+        <definition>internal int Alaris.Calculator.lexer.PushbackReader.Peek</definition>
+        <argsstring>()</argsstring>
+        <name>Peek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="22" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a2f105342e61ab2f5448bbc34f0689d14" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal int</type>
+        <definition>internal int Alaris.Calculator.lexer.PushbackReader.Read</definition>
+        <argsstring>()</argsstring>
+        <name>Read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="28" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1ac5d447a5578421b458817883ba556bef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Calculator.lexer.PushbackReader.Unread</definition>
+        <argsstring>(int v)</argsstring>
+        <name>Unread</name>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="34" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a163bd4aa62ba8fd8b1e5ce4510d4489d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Alaris.Calculator.lexer.PushbackReader.PushbackReader</definition>
+        <argsstring>(TextReader reader)</argsstring>
+        <name>PushbackReader</name>
+        <param>
+          <type>TextReader</type>
+          <declname>reader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a033ed306b134e82bb10da33d8065ef36" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal int</type>
+        <definition>internal int Alaris.Calculator.lexer.PushbackReader.Peek</definition>
+        <argsstring>()</argsstring>
+        <name>Peek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" line="22" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a2f105342e61ab2f5448bbc34f0689d14" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal int</type>
+        <definition>internal int Alaris.Calculator.lexer.PushbackReader.Read</definition>
+        <argsstring>()</argsstring>
+        <name>Read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" line="28" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1ac5d447a5578421b458817883ba556bef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Calculator.lexer.PushbackReader.Unread</definition>
+        <argsstring>(int v)</argsstring>
+        <name>Unread</name>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" line="34" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="11" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="11" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a033ed306b134e82bb10da33d8065ef36" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::PushbackReader</scope><name>Peek</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a033ed306b134e82bb10da33d8065ef36" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::PushbackReader</scope><name>Peek</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a163bd4aa62ba8fd8b1e5ce4510d4489d" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::PushbackReader</scope><name>PushbackReader</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a163bd4aa62ba8fd8b1e5ce4510d4489d" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::PushbackReader</scope><name>PushbackReader</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a2f105342e61ab2f5448bbc34f0689d14" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::PushbackReader</scope><name>Read</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a2f105342e61ab2f5448bbc34f0689d14" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::PushbackReader</scope><name>Read</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1a278e12f8a2606ef87ef9f77faec96694" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::PushbackReader</scope><name>reader</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1af5e0dea6fa618290b2897f245fc54692" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::PushbackReader</scope><name>stack</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1ac5d447a5578421b458817883ba556bef" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::PushbackReader</scope><name>Unread</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader_1ac5d447a5578421b458817883ba556bef" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::PushbackReader</scope><name>Unread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

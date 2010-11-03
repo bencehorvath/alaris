@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_calculator_1_1node_1_1_t_cos" kind="class" prot="public">
+    <compoundname>Alaris::Calculator::node::TCos</compoundname>
+    <basecompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_token" prot="public" virt="non-virtual">Alaris.Calculator.node.Token</basecompoundref>
+    <basecompoundref refid="class_alaris_1_1_calculator_1_1node_1_1_token" prot="public" virt="non-virtual">Alaris.Calculator.node.Token</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a0800f9005245346fe00b4ccf8bee949a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.node.TCos.TCos</definition>
+        <argsstring>(string text)</argsstring>
+        <name>TCos</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/tokens.cs" line="215" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/tokens.cs" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1ac757b19ec2786ac51de4fba55398b509" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.node.TCos.TCos</definition>
+        <argsstring>(string text, int line, int pos)</argsstring>
+        <name>TCos</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/tokens.cs" line="220" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/tokens.cs" bodystart="219" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a47b5e9c6e491950d04c71294677be6de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override Object</type>
+        <definition>override Object Alaris.Calculator.node.TCos.Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aace624d8b86e41f8b2756f87e017273b">Clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/tokens.cs" line="227" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/tokens.cs" bodystart="226" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a61d907aa253f8b972285f57d08811b3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Alaris.Calculator.node.TCos.Apply</definition>
+        <argsstring>(Switch sw)</argsstring>
+        <name>Apply</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a5a9b8029425755ba21b2e5247b6e88e0">Apply</reimplements>
+        <param>
+          <type><ref refid="interface_alaris_1_1_calculator_1_1node_1_1_switch" kindref="compound">Switch</ref></type>
+          <declname>sw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/tokens.cs" line="232" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/tokens.cs" bodystart="231" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a0800f9005245346fe00b4ccf8bee949a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.node.TCos.TCos</definition>
+        <argsstring>(string text)</argsstring>
+        <name>TCos</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/tokens.cs" line="215" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/tokens.cs" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1ac757b19ec2786ac51de4fba55398b509" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.node.TCos.TCos</definition>
+        <argsstring>(string text, int line, int pos)</argsstring>
+        <name>TCos</name>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/tokens.cs" line="220" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/tokens.cs" bodystart="219" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a47b5e9c6e491950d04c71294677be6de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override Object</type>
+        <definition>override Object Alaris.Calculator.node.TCos.Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aace624d8b86e41f8b2756f87e017273b">Clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/tokens.cs" line="227" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/tokens.cs" bodystart="226" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a61d907aa253f8b972285f57d08811b3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Alaris.Calculator.node.TCos.Apply</definition>
+        <argsstring>(Switch sw)</argsstring>
+        <name>Apply</name>
+        <reimplements refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a5a9b8029425755ba21b2e5247b6e88e0">Apply</reimplements>
+        <param>
+          <type><ref refid="interface_alaris_1_1_calculator_1_1node_1_1_switch" kindref="compound">Switch</ref></type>
+          <declname>sw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/tokens.cs" line="232" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/tokens.cs" bodystart="231" bodyend="234"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2267">
+        <label>Alaris.Calculator.node.TCos</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_t_cos"/>
+        <childnode refid="2268" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2268" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2270">
+        <label>Alaris.Calculator.node.Switchable</label>
+        <link refid="interface_alaris_1_1_calculator_1_1node_1_1_switchable"/>
+      </node>
+      <node id="2268">
+        <label>Token</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_token"/>
+        <childnode refid="2269" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2269" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2269">
+        <label>Node</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_node"/>
+        <childnode refid="2270" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2270" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2271">
+        <label>Alaris.Calculator.node.TCos</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_t_cos"/>
+        <childnode refid="2272" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2272" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2275">
+        <label>Alaris.Calculator.node.Node</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_node"/>
+        <childnode refid="2274" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2274" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2275" relation="usage">
+          <edgelabel>parent_node</edgelabel>
+        </childnode>
+      </node>
+      <node id="2274">
+        <label>Alaris.Calculator.node.Switchable</label>
+        <link refid="interface_alaris_1_1_calculator_1_1node_1_1_switchable"/>
+      </node>
+      <node id="2272">
+        <label>Token</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_token"/>
+        <childnode refid="2273" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2273" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2273">
+        <label>Node</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_node"/>
+        <childnode refid="2274" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2274" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2275" relation="usage">
+          <edgelabel>parent_node</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/tokens.cs" line="213" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/tokens.cs" bodystart="212" bodyend="235"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a61d907aa253f8b972285f57d08811b3b" prot="public" virt="virtual"><scope>Alaris::Calculator::node::TCos</scope><name>Apply</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a61d907aa253f8b972285f57d08811b3b" prot="public" virt="virtual"><scope>Alaris::Calculator::node::TCos</scope><name>Apply</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a47b5e9c6e491950d04c71294677be6de" prot="public" virt="virtual"><scope>Alaris::Calculator::node::TCos</scope><name>Clone</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a47b5e9c6e491950d04c71294677be6de" prot="public" virt="virtual"><scope>Alaris::Calculator::node::TCos</scope><name>Clone</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a94cf34f56f9d304465a7ef8a2fff5939" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>CloneList</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a94cf34f56f9d304465a7ef8a2fff5939" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>CloneList</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1ab5fdf8413d1e6c67e368d8c4cf48e3cc" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>CloneNode</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1ab5fdf8413d1e6c67e368d8c4cf48e3cc" prot="protected" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>CloneNode</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_token_1a157d7fef55a1090b60293a54cc73325e" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>Line</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a8b32282da8a19eb9bd7c0347eaad2c1a" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>Parent</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a8b32282da8a19eb9bd7c0347eaad2c1a" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>Parent</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_token_1a955758e03562fd8045565b13581d0c13" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>Pos</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aa8f85e26eb63aaaf60871401ce7d0908" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>ReplaceBy</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1aa8f85e26eb63aaaf60871401ce7d0908" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>ReplaceBy</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a0800f9005245346fe00b4ccf8bee949a" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>TCos</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1ac757b19ec2786ac51de4fba55398b509" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>TCos</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1a0800f9005245346fe00b4ccf8bee949a" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>TCos</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_t_cos_1ac757b19ec2786ac51de4fba55398b509" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>TCos</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_token_1a4ea406d4cbbef717b6cf35d6efe5b361" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>Text</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_token_1a386e1917936f03ca3dc6cdb7c12708ac" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>ToString</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_token_1a386e1917936f03ca3dc6cdb7c12708ac" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::TCos</scope><name>ToString</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a35d31b74a0fdcac018abd8ca0ea4ac5c" prot="protected" virt="non-virtual" ambiguityscope="Alaris::Calculator::node::Node."><scope>Alaris::Calculator::node::TCos</scope><name>ToString</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_1a1eaeb93963aa9311d879269a684a1b08" prot="protected" virt="non-virtual" ambiguityscope="Alaris::Calculator::node::Node."><scope>Alaris::Calculator::node::TCos</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

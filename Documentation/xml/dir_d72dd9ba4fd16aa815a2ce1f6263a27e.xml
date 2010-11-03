@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_d72dd9ba4fd16aa815a2ce1f6263a27e" kind="dir">
+    <compoundname>Alaris.Irc/Delegates/Messages/</compoundname>
+    <innerfile refid="_private_action_event_handler_8cs">PrivateActionEventHandler.cs</innerfile>
+    <innerfile refid="_private_message_event_handler_8cs">PrivateMessageEventHandler.cs</innerfile>
+    <innerfile refid="_private_notice_event_handler_8cs">PrivateNoticeEventHandler.cs</innerfile>
+    <innerfile refid="_public_message_event_handler_8cs">PublicMessageEventHandler.cs</innerfile>
+    <innerfile refid="_public_notice_event_handler_8cs">PublicNoticeEventHandler.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Messages/"/>
+  </compounddef>
+</doxygen>

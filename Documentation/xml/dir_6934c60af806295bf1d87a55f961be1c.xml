@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_6934c60af806295bf1d87a55f961be1c" kind="dir">
+    <compoundname>Alaris.Irc/Delegates/Disconnect/</compoundname>
+    <innerfile refid="_disconnected_event_handler_8cs">DisconnectedEventHandler.cs</innerfile>
+    <innerfile refid="_disconnecting_event_handler_8cs">DisconnectingEventHandler.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Disconnect/"/>
+  </compounddef>
+</doxygen>

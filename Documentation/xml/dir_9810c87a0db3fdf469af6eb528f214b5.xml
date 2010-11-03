@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_9810c87a0db3fdf469af6eb528f214b5" kind="dir">
+    <compoundname>Alaris/bin/Debug/plugins/</compoundname>
+    <innerdir refid="dir_5e31794f5de5ea8d35088db4fe6c1022">Alaris/bin/Debug/plugins/FeedHandler/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/bin/Debug/plugins/"/>
+  </compounddef>
+</doxygen>

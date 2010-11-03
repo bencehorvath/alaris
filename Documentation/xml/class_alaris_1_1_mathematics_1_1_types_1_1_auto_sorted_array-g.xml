@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g" kind="class" prot="public">
+    <compoundname>Alaris::Mathematics::Types::AutoSortedArray-g</compoundname>
+    <templateparamlist>
+      <param>
+        <type>T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a47add2783bbc7a6c613e4553b022aba5" prot="private" static="no" mutable="no">
+        <type>List&lt; T &gt;</type>
+        <definition>List&lt;T&gt; Alaris.Mathematics.Types.AutoSortedArray-g&lt; T &gt;._array</definition>
+        <argsstring></argsstring>
+        <name>_array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a78c047da09a526e4378d26f3c107f02e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; T &gt;</type>
+        <definition>List&lt;T&gt; Alaris.Mathematics.Types.AutoSortedArray-g&lt; T &gt;.Array</definition>
+        <argsstring></argsstring>
+        <name>Array</name>
+        <briefdescription>
+<para>Gets the sorted array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" line="20" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a32fa0d85bb1f84ba8c4eae7846904cb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Mathematics.Types.AutoSortedArray-g&lt; T &gt;.AutoSortedArray</definition>
+        <argsstring>(IEnumerable&lt; T &gt; list)</argsstring>
+        <name>AutoSortedArray</name>
+        <param>
+          <type>IEnumerable&lt; T &gt;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new instance of <ref refid="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g" kindref="compound">AutoSortedArray</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of items it should contain.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" line="27" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" bodystart="26" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1ab13d2898088787ed0a24bad908a05750" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Mathematics.Types.AutoSortedArray-g&lt; T &gt;.AutoSortedArray</definition>
+        <argsstring>()</argsstring>
+        <name>AutoSortedArray</name>
+        <briefdescription>
+<para>Creates a new instance of <ref refid="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g" kindref="compound">AutoSortedArray</ref> with an empty list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" line="39" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a3bd00b7a8f5e87dc88b249edd189dd94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Mathematics.Types.AutoSortedArray-g&lt; T &gt;.Add</definition>
+        <argsstring>(T item)</argsstring>
+        <name>Add</name>
+        <param>
+          <type>T</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Add the specified item to the sorted array. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item to add.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" line="48" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" bodystart="47" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a59a02434dba64dfeafcd5c3252738f7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Mathematics.Types.AutoSortedArray-g&lt; T &gt;.Add</definition>
+        <argsstring>(params T[] items)</argsstring>
+        <name>Add</name>
+        <param>
+          <type>params T[]</type>
+          <declname>items</declname>
+        </param>
+        <briefdescription>
+<para>Adds the specified items to the sorted array. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Items to add.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" line="58" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" bodystart="57" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1abb457d372af27c48fdc3ca392814cd85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Mathematics.Types.AutoSortedArray-g&lt; T &gt;.SimpleAdd</definition>
+        <argsstring>(T item)</argsstring>
+        <name>SimpleAdd</name>
+        <param>
+          <type>T</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Adds the specified item to the array without running sort. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The item to add</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" line="70" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a7b34fed24ba9c0b38181c3481058a28a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Mathematics.Types.AutoSortedArray-g&lt; T &gt;.Sort</definition>
+        <argsstring>()</argsstring>
+        <name>Sort</name>
+        <briefdescription>
+<para>Runs the sort algorithm manually. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" line="78" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1aafc3760fef940d905a735ae89eafb368" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string Alaris.Mathematics.Types.AutoSortedArray-g&lt; T &gt;.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+<para>Converts the array to a readable string. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" line="87" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" bodystart="86" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An array which automatically sorts itself. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Mathematics/Types/AutoSortedArray.cs" bodystart="12" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a47add2783bbc7a6c613e4553b022aba5" prot="private" virt="non-virtual"><scope>Alaris::Mathematics::Types::AutoSortedArray-g</scope><name>_array</name></member>
+      <member refid="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a3bd00b7a8f5e87dc88b249edd189dd94" prot="public" virt="non-virtual"><scope>Alaris::Mathematics::Types::AutoSortedArray-g</scope><name>Add</name></member>
+      <member refid="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a59a02434dba64dfeafcd5c3252738f7d" prot="public" virt="non-virtual"><scope>Alaris::Mathematics::Types::AutoSortedArray-g</scope><name>Add</name></member>
+      <member refid="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a78c047da09a526e4378d26f3c107f02e" prot="public" virt="non-virtual"><scope>Alaris::Mathematics::Types::AutoSortedArray-g</scope><name>Array</name></member>
+      <member refid="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a32fa0d85bb1f84ba8c4eae7846904cb8" prot="public" virt="non-virtual"><scope>Alaris::Mathematics::Types::AutoSortedArray-g</scope><name>AutoSortedArray</name></member>
+      <member refid="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1ab13d2898088787ed0a24bad908a05750" prot="public" virt="non-virtual"><scope>Alaris::Mathematics::Types::AutoSortedArray-g</scope><name>AutoSortedArray</name></member>
+      <member refid="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1abb457d372af27c48fdc3ca392814cd85" prot="public" virt="non-virtual"><scope>Alaris::Mathematics::Types::AutoSortedArray-g</scope><name>SimpleAdd</name></member>
+      <member refid="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1a7b34fed24ba9c0b38181c3481058a28a" prot="public" virt="non-virtual"><scope>Alaris::Mathematics::Types::AutoSortedArray-g</scope><name>Sort</name></member>
+      <member refid="class_alaris_1_1_mathematics_1_1_types_1_1_auto_sorted_array-g_1aafc3760fef940d905a735ae89eafb368" prot="public" virt="non-virtual"><scope>Alaris::Mathematics::Types::AutoSortedArray-g</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

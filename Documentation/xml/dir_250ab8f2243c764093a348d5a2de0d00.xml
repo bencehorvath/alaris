@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_250ab8f2243c764093a348d5a2de0d00" kind="dir">
+    <compoundname>Alaris.API/Database/</compoundname>
+    <innerfile refid="_admin_manager_8cs">AdminManager.cs</innerfile>
+    <innerfile refid="_database_accessor_attribute_8cs">DatabaseAccessorAttribute.cs</innerfile>
+    <innerfile refid="_database_access_type_8cs">DatabaseAccessType.cs</innerfile>
+    <innerfile refid="_database_manager_8cs">DatabaseManager.cs</innerfile>
+    <innerfile refid="_i_manager_8cs">IManager.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/"/>
+  </compounddef>
+</doxygen>

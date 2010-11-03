@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_irc_1_1_user_info" kind="class" prot="public">
+    <compoundname>Alaris::Irc::UserInfo</compoundname>
+    <derivedcompoundref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info" prot="public" virt="non-virtual">Alaris.Irc.Dcc.DccUserInfo</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_user_info_1a5f61d858af20ea78f72affd68fdea1ec" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Alaris.Irc.UserInfo._nickName</definition>
+        <argsstring></argsstring>
+        <name>_nickName</name>
+        <briefdescription>
+<para>The user&apos;s handle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="10" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_user_info_1a92b1aca509d900e7886d3b2a991be11f" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Alaris.Irc.UserInfo._userName</definition>
+        <argsstring></argsstring>
+        <name>_userName</name>
+        <briefdescription>
+<para>The user&apos;s username on the local machine. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="12" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_user_info_1ab0e2baa7b5ccb3714f37c01032507cf7" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Alaris.Irc.UserInfo._hostName</definition>
+        <argsstring></argsstring>
+        <name>_hostName</name>
+        <briefdescription>
+<para>The user&apos;s fully qualified host name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_user_info_1ae1dcf9e0efa3a24dc7a4e44c505c174a" prot="private" static="yes" mutable="no">
+        <type>readonly <ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+        <definition>readonly UserInfo Alaris.Irc.UserInfo.EmptyInstance</definition>
+        <argsstring></argsstring>
+        <name>EmptyInstance</name>
+        <initializer> new <ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_user_info_1ae1cc0758cc4e5d6985ea46794987164a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.UserInfo.Nick</definition>
+        <argsstring></argsstring>
+        <name>Nick</name>
+        <briefdescription>
+<para>An IRC user&apos;s nick name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="45" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1a9fb4cb633ccb979bfd4ce8c3933acebd" compoundref="_basic_commands_8cs" startline="17" endline="21">Alaris.Commands.BasicCommands::HandleQuitCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_a_p_i_1_1_utilities_1a115b37c98b771b800145cf03df4ef4b7" compoundref="_utilities_8cs" startline="119" endline="123">Alaris.API.Utilities::IsAdmin</referencedby>
+        <referencedby refid="class_alaris_1_1_channel_rights_1_1_alaris_plugin_1a170eafb0231c34cf485c0ae316358c66" compoundref="_channel_rights_8cs" startline="28" endline="140">Alaris.ChannelRights.AlarisPlugin::OnPublicMessage</referencedby>
+        <referencedby refid="class_alaris_1_1_main_1_1_alaris_plugin_1a8db10fa2ba9ce737b49a05e0db286d13" compoundref="_main_plugin_2_main_8cs" startline="32" endline="117">Alaris.Main.AlarisPlugin::OnPublicMessage</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_user_info_1aad2e02af1f0681c1e01d95293277ffa5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.UserInfo.User</definition>
+        <argsstring></argsstring>
+        <name>User</name>
+        <briefdescription>
+<para>An IRC user&apos;s system username. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="55" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_a_p_i_1_1_utilities_1a115b37c98b771b800145cf03df4ef4b7" compoundref="_utilities_8cs" startline="119" endline="123">Alaris.API.Utilities::IsAdmin</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_user_info_1a605481679597a2ca564da671a879f9c0" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.UserInfo.Hostname</definition>
+        <argsstring></argsstring>
+        <name>Hostname</name>
+        <briefdescription>
+<para>The hostname of the IRC user&apos;s machine. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="65" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="60" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_a_p_i_1_1_utilities_1a115b37c98b771b800145cf03df4ef4b7" compoundref="_utilities_8cs" startline="119" endline="123">Alaris.API.Utilities::IsAdmin</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_user_info_1a33030303bad92b6512a130a454337138" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+        <definition>UserInfo Alaris.Irc.UserInfo.Empty</definition>
+        <argsstring></argsstring>
+        <name>Empty</name>
+        <briefdescription>
+<para>A singleton blank instance of <ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref> used when an instance is required by a method signature but no infomation is available, e.g. the last reply from a Who request. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="77" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_user_info_1a954da5018e38fd64f14b9952061e8db8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Irc.UserInfo.UserInfo</definition>
+        <argsstring>()</argsstring>
+        <name>UserInfo</name>
+        <briefdescription>
+<para>Creat an empty instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="21" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="20" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_user_info_1a6aa428c200fa2473b1e87e01961d8101" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Irc.UserInfo.UserInfo</definition>
+        <argsstring>(string nick, string name, string host)</argsstring>
+        <name>UserInfo</name>
+        <param>
+          <type>string</type>
+          <declname>nick</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>host</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref> and set all its values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="30" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_user_info_1a34e236ddf6d5acf16eb70c05bc53b7c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string Alaris.Irc.UserInfo.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <reimplementedby refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1ac718eb491fd201dd64353909ab2ee6c3">ToString</reimplementedby>
+        <briefdescription>
+<para>A string representation of this object which shows all its values. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="84" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="83" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A convenient holder of user information. Instances of this class are created internally. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2447">
+        <label>Alaris.Irc.Dcc.DccUserInfo</label>
+        <link refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info"/>
+        <childnode refid="2446" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2446">
+        <label>Alaris.Irc.UserInfo</label>
+        <link refid="class_alaris_1_1_irc_1_1_user_info"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2448">
+        <label>Alaris.Irc.UserInfo</label>
+        <link refid="class_alaris_1_1_irc_1_1_user_info"/>
+        <childnode refid="2448" relation="usage">
+          <edgelabel>EmptyInstance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" line="8" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/UserInfo.cs" bodystart="7" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1ab0e2baa7b5ccb3714f37c01032507cf7" prot="private" virt="non-virtual"><scope>Alaris::Irc::UserInfo</scope><name>_hostName</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1a5f61d858af20ea78f72affd68fdea1ec" prot="private" virt="non-virtual"><scope>Alaris::Irc::UserInfo</scope><name>_nickName</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1a92b1aca509d900e7886d3b2a991be11f" prot="private" virt="non-virtual"><scope>Alaris::Irc::UserInfo</scope><name>_userName</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1a33030303bad92b6512a130a454337138" prot="public" virt="non-virtual"><scope>Alaris::Irc::UserInfo</scope><name>Empty</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1ae1dcf9e0efa3a24dc7a4e44c505c174a" prot="private" virt="non-virtual"><scope>Alaris::Irc::UserInfo</scope><name>EmptyInstance</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1a605481679597a2ca564da671a879f9c0" prot="public" virt="non-virtual"><scope>Alaris::Irc::UserInfo</scope><name>Hostname</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1ae1cc0758cc4e5d6985ea46794987164a" prot="public" virt="non-virtual"><scope>Alaris::Irc::UserInfo</scope><name>Nick</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1a34e236ddf6d5acf16eb70c05bc53b7c7" prot="public" virt="non-virtual"><scope>Alaris::Irc::UserInfo</scope><name>ToString</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1aad2e02af1f0681c1e01d95293277ffa5" prot="public" virt="non-virtual"><scope>Alaris::Irc::UserInfo</scope><name>User</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1a954da5018e38fd64f14b9952061e8db8" prot="private" virt="non-virtual"><scope>Alaris::Irc::UserInfo</scope><name>UserInfo</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_user_info_1a6aa428c200fa2473b1e87e01961d8101" prot="public" virt="non-virtual"><scope>Alaris::Irc::UserInfo</scope><name>UserInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

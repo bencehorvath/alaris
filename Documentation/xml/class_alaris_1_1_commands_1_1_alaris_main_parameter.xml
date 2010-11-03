@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_commands_1_1_alaris_main_parameter" kind="class" prot="public">
+    <compoundname>Alaris::Commands::AlarisMainParameter</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_commands_1_1_alaris_main_parameter_1a2f6dfee2f2d99862bd69d16c505515fd" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_alaris_bot" kindref="compound">AlarisBot</ref></type>
+        <definition>AlarisBot Alaris.Commands.AlarisMainParameter.Bot</definition>
+        <argsstring></argsstring>
+        <name>Bot</name>
+        <briefdescription>
+<para>Gets the <ref refid="namespace_alaris" kindref="compound">Alaris</ref> instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_commands_1_1_advanced_commands_1aeea420391c5706b36a07cb78c5c38aee" compoundref="_advanced_commands_8cs" startline="21" endline="53">Alaris.Commands.AdvancedCommands::HandleAdminCommands</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_advanced_commands_1a20ab79b5a7a21e7affd9b2f8d37cfb87" compoundref="_advanced_commands_8cs" startline="62" endline="72">Alaris.Commands.AdvancedCommands::HandleAesCommands</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1a8562c80c523645642eac1923dea66a8e" compoundref="_basic_commands_8cs" startline="28" endline="32">Alaris.Commands.BasicCommands::HandleHelpCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1a9fb4cb633ccb979bfd4ce8c3933acebd" compoundref="_basic_commands_8cs" startline="17" endline="21">Alaris.Commands.BasicCommands::HandleQuitCommand</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_commands_1_1_alaris_main_parameter_1a8279348042c6e2e1ce3990fbd5a39538" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>Connection Alaris.Commands.AlarisMainParameter.IrcConnection</definition>
+        <argsstring></argsstring>
+        <name>IrcConnection</name>
+        <briefdescription>
+<para>The IRC connection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" line="21" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1a8562c80c523645642eac1923dea66a8e" compoundref="_basic_commands_8cs" startline="28" endline="32">Alaris.Commands.BasicCommands::HandleHelpCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1ac39a4317eac737b2abecf5be7ded75f3" compoundref="_basic_commands_8cs" startline="39" endline="44">Alaris.Commands.BasicCommands::HandleInfoCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1a3dad0396969914e8c74ad07243d55046" compoundref="_basic_commands_8cs" startline="65" endline="71">Alaris.Commands.BasicCommands::HandleJoinCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1a2f2f8fae28e3f5c6fcf060b422280cdf" compoundref="_basic_commands_8cs" startline="51" endline="57">Alaris.Commands.BasicCommands::HandleSysCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_test_commands_1a85d9d4d20107fe873f87cadd018c7797" compoundref="_test_commands_8cs" startline="15" endline="18">Alaris.Commands.TestCommands::HandleTestCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_test_commands_1a387f528753aa24c6f4889ab47a964ba6" compoundref="_test_commands_8cs" startline="27" endline="33">Alaris.Commands.TestCommands::TestAddHandler</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_commands_1_1_alaris_main_parameter_1a210639e77dd25938710d165dc9aabfb0" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Alaris.Commands.AlarisMainParameter.Channels</definition>
+        <argsstring></argsstring>
+        <name>Channels</name>
+        <briefdescription>
+<para>Channels the bot is on. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" line="25" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_commands_1_1_alaris_main_parameter_1a6aa409942a76290d28c6451eba612cd2" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Alaris.Commands.AlarisMainParameter.Channel</definition>
+        <argsstring></argsstring>
+        <name>Channel</name>
+        <briefdescription>
+<para>Channels where the command was given. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" line="29" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_commands_1_1_advanced_commands_1aeea420391c5706b36a07cb78c5c38aee" compoundref="_advanced_commands_8cs" startline="21" endline="53">Alaris.Commands.AdvancedCommands::HandleAdminCommands</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_advanced_commands_1a20ab79b5a7a21e7affd9b2f8d37cfb87" compoundref="_advanced_commands_8cs" startline="62" endline="72">Alaris.Commands.AdvancedCommands::HandleAesCommands</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1a8562c80c523645642eac1923dea66a8e" compoundref="_basic_commands_8cs" startline="28" endline="32">Alaris.Commands.BasicCommands::HandleHelpCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1ac39a4317eac737b2abecf5be7ded75f3" compoundref="_basic_commands_8cs" startline="39" endline="44">Alaris.Commands.BasicCommands::HandleInfoCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1a2f2f8fae28e3f5c6fcf060b422280cdf" compoundref="_basic_commands_8cs" startline="51" endline="57">Alaris.Commands.BasicCommands::HandleSysCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_test_commands_1a85d9d4d20107fe873f87cadd018c7797" compoundref="_test_commands_8cs" startline="15" endline="18">Alaris.Commands.TestCommands::HandleTestCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_test_commands_1a387f528753aa24c6f4889ab47a964ba6" compoundref="_test_commands_8cs" startline="27" endline="33">Alaris.Commands.TestCommands::TestAddHandler</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_commands_1_1_alaris_main_parameter_1a7b332f5a29a54f1cf915af011a9bfb5f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+        <definition>UserInfo Alaris.Commands.AlarisMainParameter.User</definition>
+        <argsstring></argsstring>
+        <name>User</name>
+        <briefdescription>
+<para>User of the action. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" line="34" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1a9fb4cb633ccb979bfd4ce8c3933acebd" compoundref="_basic_commands_8cs" startline="17" endline="21">Alaris.Commands.BasicCommands::HandleQuitCommand</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="namespace_alaris_1_1_main" kindref="compound">Main</ref> param passed to command methods. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" line="10" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMainParameter.cs" bodystart="9" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_main_parameter_1a2f6dfee2f2d99862bd69d16c505515fd" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisMainParameter</scope><name>Bot</name></member>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_main_parameter_1a6aa409942a76290d28c6451eba612cd2" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisMainParameter</scope><name>Channel</name></member>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_main_parameter_1a210639e77dd25938710d165dc9aabfb0" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisMainParameter</scope><name>Channels</name></member>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_main_parameter_1a8279348042c6e2e1ce3990fbd5a39538" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisMainParameter</scope><name>IrcConnection</name></member>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_main_parameter_1a7b332f5a29a54f1cf915af011a9bfb5f" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisMainParameter</scope><name>User</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

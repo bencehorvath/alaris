@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_irc_1_1_whois_info" kind="class" prot="public">
+    <compoundname>Alaris::Irc::WhoisInfo</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_whois_info_1a3ddcf9e2a4c8ec4d37e8d10b69c9f23b" prot="private" static="no" mutable="no">
+        <type>internal <ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+        <definition>internal UserInfo Alaris.Irc.WhoisInfo.UserInfo</definition>
+        <argsstring></argsstring>
+        <name>UserInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="10" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_whois_info_1aab5bcae51029c8f232004bc888792e06" prot="private" static="no" mutable="no">
+        <type>internal string</type>
+        <definition>internal string Alaris.Irc.WhoisInfo.realName</definition>
+        <argsstring></argsstring>
+        <name>realName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="11" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_whois_info_1a172c3e5202f13809ab2569480e5b4a3d" prot="private" static="no" mutable="no">
+        <type>internal string[]</type>
+        <definition>internal string [] Alaris.Irc.WhoisInfo.Channels</definition>
+        <argsstring></argsstring>
+        <name>Channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="12" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_whois_info_1a80ae98a50446bf268192f5071b27fd24" prot="private" static="no" mutable="no">
+        <type>internal string</type>
+        <definition>internal string Alaris.Irc.WhoisInfo.IRCServer</definition>
+        <argsstring></argsstring>
+        <name>IRCServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_whois_info_1a5d44a2f71d50f8e908d836c6f31882d9" prot="private" static="no" mutable="no">
+        <type>internal string</type>
+        <definition>internal string Alaris.Irc.WhoisInfo.serverDescription</definition>
+        <argsstring></argsstring>
+        <name>serverDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_whois_info_1a479a1918dda9cc5daaafb22e51e11310" prot="private" static="no" mutable="no">
+        <type>internal long</type>
+        <definition>internal long Alaris.Irc.WhoisInfo.idleTime</definition>
+        <argsstring></argsstring>
+        <name>idleTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_whois_info_1abb8f7b8c4b9b73f96a6210adbf707b32" prot="private" static="no" mutable="no">
+        <type>internal bool</type>
+        <definition>internal bool Alaris.Irc.WhoisInfo.IsOperator</definition>
+        <argsstring></argsstring>
+        <name>IsOperator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="16" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_whois_info_1a20e04c8479be8014d4c225e6fcf98561" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+        <definition>UserInfo Alaris.Irc.WhoisInfo.User</definition>
+        <argsstring></argsstring>
+        <name>User</name>
+        <briefdescription>
+<para>A user&apos;s nick, logon, and hostname. </para>        </briefdescription>
+        <detaileddescription>
+<para>A <ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref> instance.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="34" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_whois_info_1a426ada6965db8ba76d66cf0dae94e758" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.WhoisInfo.RealName</definition>
+        <argsstring></argsstring>
+        <name>RealName</name>
+        <briefdescription>
+<para>A user&apos;s real name. </para>        </briefdescription>
+        <detaileddescription>
+<para>A string</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="43" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_whois_info_1aa1412cb9173ec7ea4087fc716ca82e72" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.WhoisInfo.Server</definition>
+        <argsstring></argsstring>
+        <name>Server</name>
+        <briefdescription>
+<para>The name of IRC server. </para>        </briefdescription>
+        <detaileddescription>
+<para>The IRC server FQDN hostname string.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="52" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_whois_info_1ac3fa3b63da114c37217d5328e94c8ae7" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.WhoisInfo.ServerDescription</definition>
+        <argsstring></argsstring>
+        <name>ServerDescription</name>
+        <briefdescription>
+<para>Text describing the IRC server. </para>        </briefdescription>
+        <detaileddescription>
+<para>A string describing the IRC network this server is a member of.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_whois_info_1a773d2a704796f134da5c4b04c298ee4c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>long</type>
+        <definition>long Alaris.Irc.WhoisInfo.IdleTime</definition>
+        <argsstring></argsstring>
+        <name>IdleTime</name>
+        <briefdescription>
+<para>User&apos;s idle time in seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>Seconds as a long.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="70" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_whois_info_1acb42b7acdde071e578f32cca3f90f623" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.WhoisInfo.Operator</definition>
+        <argsstring></argsstring>
+        <name>Operator</name>
+        <briefdescription>
+<para>Whether the user is an operator or not. </para>        </briefdescription>
+        <detaileddescription>
+<para>True if the user is an IRC operator.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="79" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_whois_info_1a3b6ab253a9a7e95f45f7a321325d62df" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Alaris.Irc.WhoisInfo.WhoisInfo</definition>
+        <argsstring>()</argsstring>
+        <name>WhoisInfo</name>
+        <briefdescription>
+<para>Create an empty instance where the operator property defaults to false. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="23" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_whois_info_1a4902b8a3033e09abdced3569e86fa996" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Irc.WhoisInfo.SetChannels</definition>
+        <argsstring>(string[] channels)</argsstring>
+        <name>SetChannels</name>
+        <param>
+          <type>string[]</type>
+          <declname>channels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="82" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="81" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_whois_info_1ade6d826cda87881319a911cfb03f1c6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string[]</type>
+        <definition>string [] Alaris.Irc.WhoisInfo.GetChannels</definition>
+        <argsstring>()</argsstring>
+        <name>GetChannels</name>
+        <briefdescription>
+<para>An array of channel names. Names may have =,@, or + prefixed to them. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A string array.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="91" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="90" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The collection of information about a user returned by a Whois query. Instances of this class are created internally. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2458">
+        <label>Alaris.Irc.WhoisInfo</label>
+        <link refid="class_alaris_1_1_irc_1_1_whois_info"/>
+        <childnode refid="2459" relation="usage">
+          <edgelabel>UserInfo</edgelabel>
+        </childnode>
+      </node>
+      <node id="2459">
+        <label>Alaris.Irc.UserInfo</label>
+        <link refid="class_alaris_1_1_irc_1_1_user_info"/>
+        <childnode refid="2459" relation="usage">
+          <edgelabel>EmptyInstance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" line="9" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/WhoisInfo.cs" bodystart="8" bodyend="94"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1a172c3e5202f13809ab2569480e5b4a3d" prot="private" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>Channels</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1ade6d826cda87881319a911cfb03f1c6c" prot="public" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>GetChannels</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1a479a1918dda9cc5daaafb22e51e11310" prot="private" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>idleTime</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1a773d2a704796f134da5c4b04c298ee4c" prot="public" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>IdleTime</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1a80ae98a50446bf268192f5071b27fd24" prot="private" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>IRCServer</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1abb8f7b8c4b9b73f96a6210adbf707b32" prot="private" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>IsOperator</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1acb42b7acdde071e578f32cca3f90f623" prot="public" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>Operator</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1a426ada6965db8ba76d66cf0dae94e758" prot="public" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>RealName</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1aab5bcae51029c8f232004bc888792e06" prot="private" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>realName</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1aa1412cb9173ec7ea4087fc716ca82e72" prot="public" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>Server</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1a5d44a2f71d50f8e908d836c6f31882d9" prot="private" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>serverDescription</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1ac3fa3b63da114c37217d5328e94c8ae7" prot="public" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>ServerDescription</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1a4902b8a3033e09abdced3569e86fa996" prot="private" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>SetChannels</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1a20e04c8479be8014d4c225e6fcf98561" prot="public" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>User</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1a3ddcf9e2a4c8ec4d37e8d10b69c9f23b" prot="private" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>UserInfo</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_whois_info_1a3b6ab253a9a7e95f45f7a321325d62df" prot="private" virt="non-virtual"><scope>Alaris::Irc::WhoisInfo</scope><name>WhoisInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

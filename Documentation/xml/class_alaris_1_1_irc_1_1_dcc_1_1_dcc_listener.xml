@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener" kind="class" prot="public">
+    <compoundname>Alaris::Irc::Dcc::DccListener</compoundname>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a1827f2448ba9412535743ce791a3f38f" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>DccChatRequestEventHandler</type>
+        <definition>DccChatRequestEventHandler Alaris.Irc.Dcc.DccListener.OnDccChatRequest</definition>
+        <argsstring></argsstring>
+        <name>OnDccChatRequest</name>
+        <briefdescription>
+<para>A user from any <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref> has sent a request to open a DCC chat session. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="22" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a4df9ffde65a541cd486d0a635da40a50" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>DccSendRequestEventHandler</type>
+        <definition>DccSendRequestEventHandler Alaris.Irc.Dcc.DccListener.OnDccSendRequest</definition>
+        <argsstring></argsstring>
+        <name>OnDccSendRequest</name>
+        <briefdescription>
+<para>A remote user has sent a request to send a file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="27" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1ae5c890a7b33bb5759b3998a86883e26a" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>DccGetRequestEventHandler</type>
+        <definition>DccGetRequestEventHandler Alaris.Irc.Dcc.DccListener.OnDccGetRequest</definition>
+        <argsstring></argsstring>
+        <name>OnDccGetRequest</name>
+        <briefdescription>
+<para>A remote user requests that he be sent a file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="32" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1ac8821aa58f846a4e0d8559d0ad50e261" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener" kindref="compound">DccListener</ref></type>
+        <definition>DccListener Alaris.Irc.Dcc.DccListener._listener</definition>
+        <argsstring></argsstring>
+        <name>_listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="34" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a7cade0cb450b6b8ca3f536c0384b30d3" prot="private" static="yes" mutable="no">
+        <type>readonly object</type>
+        <definition>readonly object Alaris.Irc.Dcc.DccListener.LockObject</definition>
+        <argsstring></argsstring>
+        <name>LockObject</name>
+        <initializer> new object()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="35" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a29bb3707f31217ffa0b61e3f285df092" prot="private" static="yes" mutable="no">
+        <type>readonly Regex</type>
+        <definition>readonly Regex Alaris.Irc.Dcc.DccListener.DccMatchRegex</definition>
+        <argsstring></argsstring>
+        <name>DccMatchRegex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="37" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1ab98c6df510cc7c58b445890ba22c9475" prot="private" static="no" mutable="no">
+        <type>readonly Regex</type>
+        <definition>readonly Regex Alaris.Irc.Dcc.DccListener._tokenizer</definition>
+        <argsstring></argsstring>
+        <name>_tokenizer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="39" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a164b0c6431b3c09cf85003dee9d72249" prot="private" static="no" mutable="no">
+        <type>readonly Regex</type>
+        <definition>readonly Regex Alaris.Irc.Dcc.DccListener._parser</definition>
+        <argsstring></argsstring>
+        <name>_parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="41" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a4019fd0fa576af92bded2e0814fc6f5b" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.Irc.Dcc.DccListener.Action</definition>
+        <argsstring></argsstring>
+        <name>Action</name>
+        <initializer> 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="43" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1abd68878add6c2030a86501a926be1f92" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.Irc.Dcc.DccListener.FileName</definition>
+        <argsstring></argsstring>
+        <name>FileName</name>
+        <initializer> 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="44" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a5089666a0c8e02a21ad33ddf336db7f6" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.Irc.Dcc.DccListener.Address</definition>
+        <argsstring></argsstring>
+        <name>Address</name>
+        <initializer> 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="45" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1adcf328ad9c3799299989628cb5cfa158" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.Irc.Dcc.DccListener.Port</definition>
+        <argsstring></argsstring>
+        <name>Port</name>
+        <initializer> 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="46" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a8845becd1bf9ae6eabed9580e2c36b1b" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Alaris.Irc.Dcc.DccListener.FileSize</definition>
+        <argsstring></argsstring>
+        <name>FileSize</name>
+        <initializer> 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="47" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a740c5c7bda64bf58992b1e7066032337" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Dcc.DccListener.Chat</definition>
+        <argsstring></argsstring>
+        <name>Chat</name>
+        <initializer>&quot;CHAT&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="49" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a02172d2a8c38f4683f16e91740a04e16" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Dcc.DccListener.Send</definition>
+        <argsstring></argsstring>
+        <name>Send</name>
+        <initializer>&quot;SEND&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="50" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a29360f6e82f48cdf23145c7f8958e10e" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Dcc.DccListener.Get</definition>
+        <argsstring></argsstring>
+        <name>Get</name>
+        <initializer>&quot;GET&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="51" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a0c7b8e4203285d544638fe3228ce7dbe" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Dcc.DccListener.Resume</definition>
+        <argsstring></argsstring>
+        <name>Resume</name>
+        <initializer>&quot;RESUME&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="52" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a7997e791364b3e52183aa11f4966499b" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.Irc.Dcc.DccListener.Accept</definition>
+        <argsstring></argsstring>
+        <name>Accept</name>
+        <initializer>&quot;ACCEPT&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="53" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1ab65d89a7740c0e0553a5665648e4e421" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener" kindref="compound">DccListener</ref></type>
+        <definition>DccListener Alaris.Irc.Dcc.DccListener.DefaultInstance</definition>
+        <argsstring></argsstring>
+        <name>DefaultInstance</name>
+        <briefdescription>
+<para>Gets the singleton instance. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The instance of <ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener" kindref="compound">DccListener</ref></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="258" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a6bcafb00bb4de573171d72e8578d9146" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static</type>
+        <definition>static Alaris.Irc.Dcc.DccListener.DccListener</definition>
+        <argsstring>()</argsstring>
+        <name>DccListener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="56" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a5c7e4d28ea80289545947c14f0a6c810" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Alaris.Irc.Dcc.DccListener.IsTurbo</definition>
+        <argsstring>(int minimumTokens, string[] tokens)</argsstring>
+        <name>IsTurbo</name>
+        <param>
+          <type>int</type>
+          <declname>minimumTokens</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>tokens</declname>
+        </param>
+        <briefdescription>
+<para>Determine if the SEND or GET message included Turbo mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minimumTokens</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tokens</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if it did.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="77" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="76" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1ad7ddd885f37ea1001d7a42eaf12320d1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Irc.Dcc.DccListener.DccListener</definition>
+        <argsstring>()</argsstring>
+        <name>DccListener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="62" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="61" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1aa44b947b8b4f1630824afb9eb85a42c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Irc.Dcc.DccListener.Parse</definition>
+        <argsstring>(Connection connection, string message)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+          <declname>connection</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="86" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="85" bodyend="234"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a72552866bc0fc3a9321ad5fecf94c558" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Alaris.Irc.Dcc.DccListener.IsDccRequest</definition>
+        <argsstring>(string message)</argsstring>
+        <name>IsDccRequest</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Test if the message contains a DCC request. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The raw message from the IRC server</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if this is a DCC request.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="266" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="265" bodyend="268"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener" kindref="compound">DccListener</ref> listens for incoming DCC requests on any <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref> in which DCC is enabled. This class follows the singleton pattern and there so there is only a single instance which listens to all connections. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1777">
+        <label>Alaris.Irc.Dcc.DccListener</label>
+        <link refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener"/>
+        <childnode refid="1777" relation="usage">
+          <edgelabel>_listener</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Dcc/DccListener.cs" bodystart="16" bodyend="269"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1ac8821aa58f846a4e0d8559d0ad50e261" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>_listener</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a164b0c6431b3c09cf85003dee9d72249" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>_parser</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1ab98c6df510cc7c58b445890ba22c9475" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>_tokenizer</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a7997e791364b3e52183aa11f4966499b" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>Accept</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a4019fd0fa576af92bded2e0814fc6f5b" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>Action</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a5089666a0c8e02a21ad33ddf336db7f6" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>Address</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a740c5c7bda64bf58992b1e7066032337" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>Chat</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a6bcafb00bb4de573171d72e8578d9146" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>DccListener</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1ad7ddd885f37ea1001d7a42eaf12320d1" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>DccListener</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a29bb3707f31217ffa0b61e3f285df092" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>DccMatchRegex</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1ab65d89a7740c0e0553a5665648e4e421" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>DefaultInstance</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1abd68878add6c2030a86501a926be1f92" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>FileName</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a8845becd1bf9ae6eabed9580e2c36b1b" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>FileSize</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a29360f6e82f48cdf23145c7f8958e10e" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>Get</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a72552866bc0fc3a9321ad5fecf94c558" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>IsDccRequest</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a5c7e4d28ea80289545947c14f0a6c810" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>IsTurbo</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a7cade0cb450b6b8ca3f536c0384b30d3" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>LockObject</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a1827f2448ba9412535743ce791a3f38f" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>OnDccChatRequest</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1ae5c890a7b33bb5759b3998a86883e26a" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>OnDccGetRequest</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a4df9ffde65a541cd486d0a635da40a50" prot="public" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>OnDccSendRequest</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1aa44b947b8b4f1630824afb9eb85a42c6" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>Parse</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1adcf328ad9c3799299989628cb5cfa158" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>Port</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a0c7b8e4203285d544638fe3228ce7dbe" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>Resume</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_listener_1a02172d2a8c38f4683f16e91740a04e16" prot="private" virt="non-virtual"><scope>Alaris::Irc::Dcc::DccListener</scope><name>Send</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

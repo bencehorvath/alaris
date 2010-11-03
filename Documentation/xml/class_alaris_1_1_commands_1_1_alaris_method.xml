@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_commands_1_1_alaris_method" kind="class" prot="public">
+    <compoundname>Alaris::Commands::AlarisMethod</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_commands_1_1_alaris_method_1aedfdd2a8f22204aa1dea1effa4c1bb48" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>MethodInfo</type>
+        <definition>MethodInfo Alaris.Commands.AlarisMethod.Method</definition>
+        <argsstring></argsstring>
+        <name>Method</name>
+        <briefdescription>
+<para>The method contained in this instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMethod.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMethod.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_commands_1_1_alaris_method_1a8f69e96da59bd05babb919a6c9f54b54" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_alaris_1_1_commands_1_1_alaris_command_attribute" kindref="compound">AlarisCommandAttribute</ref></type>
+        <definition>AlarisCommandAttribute Alaris.Commands.AlarisMethod.CommandAttribute</definition>
+        <argsstring></argsstring>
+        <name>CommandAttribute</name>
+        <briefdescription>
+<para>The command&apos;s attribute. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMethod.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMethod.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_commands_1_1_alaris_method_1a0d8dee92989794ec832e310ffe8161db" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool Alaris.Commands.AlarisMethod.IsParameterized</definition>
+        <argsstring></argsstring>
+        <name>IsParameterized</name>
+        <briefdescription>
+<para>Gets whether the method and command has params or not. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMethod.cs" line="22" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMethod.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_commands_1_1_alaris_method_1adfbe8b0827dfe861ee17be5a0268ae02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Commands.AlarisMethod.AlarisMethod</definition>
+        <argsstring>(MethodInfo method, AlarisCommandAttribute attr, bool isParameterized)</argsstring>
+        <name>AlarisMethod</name>
+        <param>
+          <type>MethodInfo</type>
+          <declname>method</declname>
+        </param>
+        <param>
+          <type><ref refid="class_alaris_1_1_commands_1_1_alaris_command_attribute" kindref="compound">AlarisCommandAttribute</ref></type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isParameterized</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new instance of <ref refid="class_alaris_1_1_commands_1_1_alaris_method" kindref="compound">AlarisMethod</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>method</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isParameterized</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMethod.cs" line="31" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMethod.cs" bodystart="30" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A method inside <ref refid="namespace_alaris" kindref="compound">Alaris</ref>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMethod.cs" line="9" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Commands/AlarisMethod.cs" bodystart="8" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_method_1adfbe8b0827dfe861ee17be5a0268ae02" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisMethod</scope><name>AlarisMethod</name></member>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_method_1a8f69e96da59bd05babb919a6c9f54b54" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisMethod</scope><name>CommandAttribute</name></member>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_method_1a0d8dee92989794ec832e310ffe8161db" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisMethod</scope><name>IsParameterized</name></member>
+      <member refid="class_alaris_1_1_commands_1_1_alaris_method_1aedfdd2a8f22204aa1dea1effa4c1bb48" prot="public" virt="non-virtual"><scope>Alaris::Commands::AlarisMethod</scope><name>Method</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

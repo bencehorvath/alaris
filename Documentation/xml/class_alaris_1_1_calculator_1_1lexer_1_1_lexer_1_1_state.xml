@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state" kind="class" prot="public">
+    <compoundname>Alaris::Calculator::lexer::Lexer::State</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1a4e83bcf9b279ffbc9b31b13f8e563c44" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state" kindref="compound">State</ref></type>
+        <definition>static State Alaris::Calculator::lexer.Lexer.State::INITIAL</definition>
+        <argsstring></argsstring>
+        <name>INITIAL</name>
+        <initializer> new <ref refid="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state" kindref="compound">State</ref>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="659" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="659" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1a14718a32201644b3c1d7de4402e4200f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Alaris::Calculator::lexer.Lexer.State::_id</definition>
+        <argsstring></argsstring>
+        <name>_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="661" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="661" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1acdced61c3b6b49f64d5a5b96530349e6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.lexer.Lexer.State.State</definition>
+        <argsstring>(int _id)</argsstring>
+        <name>State</name>
+        <param>
+          <type>int</type>
+          <declname>_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="664" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="663" bodyend="666"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1acdced61c3b6b49f64d5a5b96530349e6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.lexer.Lexer.State.State</definition>
+        <argsstring>(int _id)</argsstring>
+        <name>State</name>
+        <param>
+          <type>int</type>
+          <declname>_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" line="664" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" bodystart="663" bodyend="666"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1a7f8553dbc51841249658003b1cb859c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Alaris.Calculator.lexer.Lexer.State.id</definition>
+        <argsstring>()</argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="669" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="668" bodyend="671"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1a7f8553dbc51841249658003b1cb859c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Alaris.Calculator.lexer.Lexer.State.id</definition>
+        <argsstring>()</argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" line="669" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" bodystart="668" bodyend="671"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2155">
+        <label>Alaris.Calculator.lexer.Lexer.State</label>
+        <link refid="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state"/>
+        <childnode refid="2155" relation="usage">
+          <edgelabel>INITIAL</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="658" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="657" bodyend="672"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1a14718a32201644b3c1d7de4402e4200f" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::Lexer::State</scope><name>_id</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1a7f8553dbc51841249658003b1cb859c4" prot="public" virt="non-virtual"><scope>Alaris::Calculator::lexer::Lexer::State</scope><name>id</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1a7f8553dbc51841249658003b1cb859c4" prot="public" virt="non-virtual"><scope>Alaris::Calculator::lexer::Lexer::State</scope><name>id</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1a4e83bcf9b279ffbc9b31b13f8e563c44" prot="public" virt="non-virtual"><scope>Alaris::Calculator::lexer::Lexer::State</scope><name>INITIAL</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1acdced61c3b6b49f64d5a5b96530349e6" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::Lexer::State</scope><name>State</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state_1acdced61c3b6b49f64d5a5b96530349e6" prot="private" virt="non-virtual"><scope>Alaris::Calculator::lexer::Lexer::State</scope><name>State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

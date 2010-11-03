@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager" kind="class" prot="public">
+    <compoundname>Alaris::API::Database::DatabaseManager</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager_1a84237c318428d57916d4afac8bf3a8cd" prot="private" static="yes" mutable="no">
+        <type>SQLiteConnection</type>
+        <definition>SQLiteConnection Alaris.API.Database.DatabaseManager._connection</definition>
+        <argsstring></argsstring>
+        <name>_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager_1a8ac7050b5a0e56df8d437e5dc17c6b0f" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>SQLiteConnection</type>
+        <definition>SQLiteConnection Alaris.API.Database.DatabaseManager.Connection</definition>
+        <argsstring></argsstring>
+        <name>Connection</name>
+        <briefdescription>
+<para>Gets the database connection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" line="29" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager_1a8b0d4f90080a8e31e1b23a25aa3db4d7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.API.Database.DatabaseManager.Initialize</definition>
+        <argsstring>(string database)</argsstring>
+        <name>Initialize</name>
+        <param>
+          <type>string</type>
+          <declname>database</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the <ref refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager" kindref="compound">DatabaseManager</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>database</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" line="36" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" bodystart="35" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager_1a49d306759bdcd4ff4c9d8834f8d4038e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>static DataTable Alaris.API.Database.DatabaseManager.Query</definition>
+        <argsstring>(string sql)</argsstring>
+        <name>Query</name>
+        <param>
+          <type>string</type>
+          <declname>sql</declname>
+        </param>
+        <briefdescription>
+<para>Executes the given query on the database. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sql</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The query</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result from the database.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" line="52" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" bodystart="51" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager_1ab7dfda6b28a4fd6af804c86c43928139" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataRow</type>
+        <definition>static DataRow Alaris.API.Database.DatabaseManager.QueryFirstRow</definition>
+        <argsstring>(string query)</argsstring>
+        <name>QueryFirstRow</name>
+        <param>
+          <type>string</type>
+          <declname>query</declname>
+        </param>
+        <briefdescription>
+<para>Executes the given query on the database and returns the result&apos;s first row. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Query to execute</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The row</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" line="84" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" bodystart="83" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class providing static methods for managing the SQL databse. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" line="11" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Database/DatabaseManager.cs" bodystart="10" bodyend="89"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager_1a84237c318428d57916d4afac8bf3a8cd" prot="private" virt="non-virtual"><scope>Alaris::API::Database::DatabaseManager</scope><name>_connection</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager_1a8ac7050b5a0e56df8d437e5dc17c6b0f" prot="public" virt="non-virtual"><scope>Alaris::API::Database::DatabaseManager</scope><name>Connection</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager_1a8b0d4f90080a8e31e1b23a25aa3db4d7" prot="public" virt="non-virtual"><scope>Alaris::API::Database::DatabaseManager</scope><name>Initialize</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager_1a49d306759bdcd4ff4c9d8834f8d4038e" prot="public" virt="non-virtual"><scope>Alaris::API::Database::DatabaseManager</scope><name>Query</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_database_1_1_database_manager_1ab7dfda6b28a4fd6af804c86c43928139" prot="public" virt="non-virtual"><scope>Alaris::API::Database::DatabaseManager</scope><name>QueryFirstRow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

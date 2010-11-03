@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_mvp_xml_1_1_xml_namespaces" kind="class" prot="public">
+    <compoundname>MvpXml::XmlNamespaces</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_mvp_xml_1_1_xml_namespaces_1afd75a94593acf815971c9fb0ead0c3a5" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string MvpXml.XmlNamespaces.Xml</definition>
+        <argsstring></argsstring>
+        <name>Xml</name>
+        <initializer>&quot;http://www.w3.org/XML/1998/namespace&quot;</initializer>
+        <briefdescription>
+<para>The public XML 1.0 namespace. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ulink url="http://www.w3.org/TR/2004/REC-xml-20040204/">http://www.w3.org/TR/2004/REC-xml-20040204/</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" line="60" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mvp_xml_1_1_xml_namespaces_1a39a16e11c75cdd51b78be563f6199ce3" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string MvpXml.XmlNamespaces.XmlNs</definition>
+        <argsstring></argsstring>
+        <name>XmlNs</name>
+        <initializer>&quot;http://www.w3.org/2000/xmlns/&quot;</initializer>
+        <briefdescription>
+<para>Public Xml Namespaces specification namespace. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ulink url="http://www.w3.org/TR/REC-xml-names/">http://www.w3.org/TR/REC-xml-names/</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" line="66" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mvp_xml_1_1_xml_namespaces_1a3a56a888baf0c16b88ef7e2d1a9741f3" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string MvpXml.XmlNamespaces.XmlNsPrefix</definition>
+        <argsstring></argsstring>
+        <name>XmlNsPrefix</name>
+        <initializer>&quot;xmlns&quot;</initializer>
+        <briefdescription>
+<para>Public Xml Namespaces prefix. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ulink url="http://www.w3.org/TR/REC-xml-names/">http://www.w3.org/TR/REC-xml-names/</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" line="72" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mvp_xml_1_1_xml_namespaces_1a6a1c3bcceb2091bd1a51434dfde8741c" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string MvpXml.XmlNamespaces.Xsi</definition>
+        <argsstring></argsstring>
+        <name>Xsi</name>
+        <initializer>&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</initializer>
+        <briefdescription>
+<para>XML Schema instance namespace. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ulink url="http://www.w3.org/TR/xmlschema-1/">http://www.w3.org/TR/xmlschema-1/</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" line="78" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mvp_xml_1_1_xml_namespaces_1a6251d75cdc7d843d16407e6144b642d1" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string MvpXml.XmlNamespaces.Xsd</definition>
+        <argsstring></argsstring>
+        <name>Xsd</name>
+        <initializer>&quot;http://www.w3.org/2001/XMLSchema&quot;</initializer>
+        <briefdescription>
+<para>XML 1.0 Schema namespace. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ulink url="http://www.w3.org/TR/xmlschema-1/">http://www.w3.org/TR/xmlschema-1/</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" line="84" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_mvp_xml_1_1_xml_namespaces_1abdb2d215523546d9f7ca860c12c1b799" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MvpXml.XmlNamespaces.XmlNamespaces</definition>
+        <argsstring>()</argsstring>
+        <name>XmlNamespaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" line="50" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" bodystart="50" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides public constants for wellknown XML namespaces. </para>    </briefdescription>
+    <detaileddescription>
+<para>Author: Daniel Cazzulino, <ulink url="mailto:kzu@aspnet2.com">kzu@aspnet2.com</ulink> </para>    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" line="47" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/mvpxml/XmlNamespaces.cs" bodystart="46" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_mvp_xml_1_1_xml_namespaces_1afd75a94593acf815971c9fb0ead0c3a5" prot="public" virt="non-virtual"><scope>MvpXml::XmlNamespaces</scope><name>Xml</name></member>
+      <member refid="class_mvp_xml_1_1_xml_namespaces_1abdb2d215523546d9f7ca860c12c1b799" prot="private" virt="non-virtual"><scope>MvpXml::XmlNamespaces</scope><name>XmlNamespaces</name></member>
+      <member refid="class_mvp_xml_1_1_xml_namespaces_1a39a16e11c75cdd51b78be563f6199ce3" prot="public" virt="non-virtual"><scope>MvpXml::XmlNamespaces</scope><name>XmlNs</name></member>
+      <member refid="class_mvp_xml_1_1_xml_namespaces_1a3a56a888baf0c16b88ef7e2d1a9741f3" prot="public" virt="non-virtual"><scope>MvpXml::XmlNamespaces</scope><name>XmlNsPrefix</name></member>
+      <member refid="class_mvp_xml_1_1_xml_namespaces_1a6251d75cdc7d843d16407e6144b642d1" prot="public" virt="non-virtual"><scope>MvpXml::XmlNamespaces</scope><name>Xsd</name></member>
+      <member refid="class_mvp_xml_1_1_xml_namespaces_1a6a1c3bcceb2091bd1a51434dfde8741c" prot="public" virt="non-virtual"><scope>MvpXml::XmlNamespaces</scope><name>Xsi</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_cluster_manager" kind="class" prot="public">
+    <compoundname>Alaris::ClusterManager</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_cluster_manager_1acd22b119ecf005a5022ad31f1ddd07f1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.ClusterManager.ClusterManager</definition>
+        <argsstring>()</argsstring>
+        <name>ClusterManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/ClusterManager.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/ClusterManager.cs" bodystart="12" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_cluster_manager_1a474eebe0f424da2a81b47ec5a55fd8bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.ClusterManager.RefreshDatabaseManager</definition>
+        <argsstring>()</argsstring>
+        <name>RefreshDatabaseManager</name>
+        <briefdescription>
+<para>Requests the database manager instance from the database server. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/ClusterManager.cs" line="21" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/ClusterManager.cs" bodystart="20" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for managing nodes in the cluster (like the database interface). </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/ClusterManager.cs" line="10" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/ClusterManager.cs" bodystart="9" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_cluster_manager_1acd22b119ecf005a5022ad31f1ddd07f1" prot="private" virt="non-virtual"><scope>Alaris::ClusterManager</scope><name>ClusterManager</name></member>
+      <member refid="class_alaris_1_1_cluster_manager_1a474eebe0f424da2a81b47ec5a55fd8bd" prot="public" virt="non-virtual"><scope>Alaris::ClusterManager</scope><name>RefreshDatabaseManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

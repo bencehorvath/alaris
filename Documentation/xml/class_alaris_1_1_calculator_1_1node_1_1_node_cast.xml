@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_calculator_1_1node_1_1_node_cast" kind="class" prot="public">
+    <compoundname>Alaris::Calculator::node::NodeCast</compoundname>
+    <basecompoundref refid="interface_alaris_1_1_calculator_1_1node_1_1_cast" prot="public" virt="non-virtual">Alaris.Calculator.node.Cast</basecompoundref>
+    <basecompoundref refid="interface_alaris_1_1_calculator_1_1node_1_1_cast" prot="public" virt="non-virtual">Alaris.Calculator.node.Cast</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a56d1b13e34c68004df290587fa539953" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast" kindref="compound">NodeCast</ref></type>
+        <definition>static NodeCast Alaris::Calculator::node.NodeCast::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <initializer> new <ref refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast" kindref="compound">NodeCast</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" line="91" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a85d9d7b048981dc081c52add0bf132c5" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast" kindref="compound">NodeCast</ref></type>
+        <definition>static NodeCast Alaris::Calculator::node.NodeCast::Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" line="96" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a8a95938ee482706084ba6379df46a850" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.node.NodeCast.NodeCast</definition>
+        <argsstring>()</argsstring>
+        <name>NodeCast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" line="99" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a8a95938ee482706084ba6379df46a850" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.node.NodeCast.NodeCast</definition>
+        <argsstring>()</argsstring>
+        <name>NodeCast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/nodes.cs" line="99" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/nodes.cs" bodystart="98" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a52406574a5f322c59ef8328f1f745539" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object Alaris.Calculator.node.NodeCast.Cast</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>Cast</name>
+        <reimplements refid="interface_alaris_1_1_calculator_1_1node_1_1_cast_1a0e4823e7e3923f7d03d979d7e19fe1c2">Cast</reimplements>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" line="103" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a2c1a899eb3f4564c86af4bf436712529" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object Alaris.Calculator.node.NodeCast.UnCast</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>UnCast</name>
+        <reimplements refid="interface_alaris_1_1_calculator_1_1node_1_1_cast_1a0da8bdea9d391748547fa9b7ecf7fae9">UnCast</reimplements>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" line="108" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a52406574a5f322c59ef8328f1f745539" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object Alaris.Calculator.node.NodeCast.Cast</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>Cast</name>
+        <reimplements refid="interface_alaris_1_1_calculator_1_1node_1_1_cast_1a0e4823e7e3923f7d03d979d7e19fe1c2">Cast</reimplements>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/nodes.cs" line="103" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/nodes.cs" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a2c1a899eb3f4564c86af4bf436712529" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object Alaris.Calculator.node.NodeCast.UnCast</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>UnCast</name>
+        <reimplements refid="interface_alaris_1_1_calculator_1_1node_1_1_cast_1a0da8bdea9d391748547fa9b7ecf7fae9">UnCast</reimplements>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/nodes.cs" line="108" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/nodes.cs" bodystart="107" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1992">
+        <label>Alaris.Calculator.node.NodeCast</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast"/>
+        <childnode refid="1993" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1993" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1993">
+        <label>Cast</label>
+        <link refid="interface_alaris_1_1_calculator_1_1node_1_1_cast"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1994">
+        <label>Alaris.Calculator.node.NodeCast</label>
+        <link refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast"/>
+        <childnode refid="1995" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1995" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1994" relation="usage">
+          <edgelabel>instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="1995">
+        <label>Cast</label>
+        <link refid="interface_alaris_1_1_calculator_1_1node_1_1_cast"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" line="90" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/nodes.cs" bodystart="89" bodyend="111"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a52406574a5f322c59ef8328f1f745539" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::NodeCast</scope><name>Cast</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a52406574a5f322c59ef8328f1f745539" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::NodeCast</scope><name>Cast</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a56d1b13e34c68004df290587fa539953" prot="private" virt="non-virtual"><scope>Alaris::Calculator::node::NodeCast</scope><name>instance</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a85d9d7b048981dc081c52add0bf132c5" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::NodeCast</scope><name>Instance</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a8a95938ee482706084ba6379df46a850" prot="private" virt="non-virtual"><scope>Alaris::Calculator::node::NodeCast</scope><name>NodeCast</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a8a95938ee482706084ba6379df46a850" prot="private" virt="non-virtual"><scope>Alaris::Calculator::node::NodeCast</scope><name>NodeCast</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a2c1a899eb3f4564c86af4bf436712529" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::NodeCast</scope><name>UnCast</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1node_1_1_node_cast_1a2c1a899eb3f4564c86af4bf436712529" prot="public" virt="non-virtual"><scope>Alaris::Calculator::node::NodeCast</scope><name>UnCast</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

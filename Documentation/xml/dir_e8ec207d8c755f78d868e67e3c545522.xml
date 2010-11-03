@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_e8ec207d8c755f78d868e67e3c545522" kind="dir">
+    <compoundname>Atom/Atom.Core.Collections/</compoundname>
+    <innerfile refid="_atom_content_collection_8cs">AtomContentCollection.cs</innerfile>
+    <innerfile refid="_atom_entry_collection_8cs">AtomEntryCollection.cs</innerfile>
+    <innerfile refid="_atom_link_collection_8cs">AtomLinkCollection.cs</innerfile>
+    <innerfile refid="_atom_person_construct_collection_8cs">AtomPersonConstructCollection.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core.Collections/"/>
+  </compounddef>
+</doxygen>

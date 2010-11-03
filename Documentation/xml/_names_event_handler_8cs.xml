@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="_names_event_handler_8cs" kind="file">
+    <compoundname>NamesEventHandler.cs</compoundname>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_requests">Alaris::Irc::Delegates::Requests</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">﻿namespace<sp/>Alaris.Irc.Delegates.Requests</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>delegate<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_requests_1ad6bc7096b3ad12997bbd3b3340fd8d1b" kindref="member" tooltip="The response to a Sender.Names request.">NamesEventHandler</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>channel,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">[]<sp/>nicks,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>last<sp/>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Requests/NamesEventHandler.cs"/>
+  </compounddef>
+</doxygen>

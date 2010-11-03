@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_atom_1_1_core_1_1_test_1_1_atom_links_test" kind="class" prot="public">
+    <compoundname>Atom::Core::Test::AtomLinksTest</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1ae1c4be8eb2fa3095caffd14eb8420063" prot="private" static="no" mutable="no">
+        <type><ref refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection" kindref="compound">AtomLinkCollection</ref></type>
+        <definition>AtomLinkCollection Atom.Core.Test.AtomLinksTest.links</definition>
+        <argsstring></argsstring>
+        <name>links</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" line="45" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1a9cd38d9e787ffa55fc02c9346beb6a4a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref></type>
+        <definition>AtomLink Atom.Core.Test.AtomLinksTest.fistLink</definition>
+        <argsstring></argsstring>
+        <name>fistLink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" line="46" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1aa03733146cd8f988efd3f68645f2ddd8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_atom_1_1_core_1_1_atom_link" kindref="compound">AtomLink</ref></type>
+        <definition>AtomLink Atom.Core.Test.AtomLinksTest.secondLink</definition>
+        <argsstring></argsstring>
+        <name>secondLink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" line="47" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1ab818f8b27d7ff47480b947112541623a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.Core.Test.AtomLinksTest.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" line="51" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1a7b8a491ae6960bf8514d7ead983f83f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.Core.Test.AtomLinksTest.TestDuplicateLinks</definition>
+        <argsstring>()</argsstring>
+        <name>TestDuplicateLinks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" line="74" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" bodystart="73" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1a8f4607ad0d54dbfd8edfd2d0506c72b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Atom.Core.Test.AtomLinksTest.TestLinksSameRelDifferentTypes</definition>
+        <argsstring>()</argsstring>
+        <name>TestLinksSameRelDifferentTypes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" line="92" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" bodystart="91" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1642">
+        <label>Atom.Core.AtomElement</label>
+        <link refid="class_atom_1_1_core_1_1_atom_element"/>
+      </node>
+      <node id="1640">
+        <label>Atom.Core.Collections.AtomLinkCollection</label>
+        <link refid="class_atom_1_1_core_1_1_collections_1_1_atom_link_collection"/>
+      </node>
+      <node id="1641">
+        <label>Atom.Core.AtomLink</label>
+        <link refid="class_atom_1_1_core_1_1_atom_link"/>
+        <childnode refid="1642" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1639">
+        <label>Atom.Core.Test.AtomLinksTest</label>
+        <link refid="class_atom_1_1_core_1_1_test_1_1_atom_links_test"/>
+        <childnode refid="1640" relation="usage">
+          <edgelabel>links</edgelabel>
+        </childnode>
+        <childnode refid="1641" relation="usage">
+          <edgelabel>secondLink</edgelabel>
+          <edgelabel>fistLink</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" line="44" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/tests/Atom.Core/AtomLinksTest.cs" bodystart="43" bodyend="108"/>
+    <listofallmembers>
+      <member refid="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1a9cd38d9e787ffa55fc02c9346beb6a4a" prot="private" virt="non-virtual"><scope>Atom::Core::Test::AtomLinksTest</scope><name>fistLink</name></member>
+      <member refid="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1ab818f8b27d7ff47480b947112541623a" prot="public" virt="non-virtual"><scope>Atom::Core::Test::AtomLinksTest</scope><name>Init</name></member>
+      <member refid="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1ae1c4be8eb2fa3095caffd14eb8420063" prot="private" virt="non-virtual"><scope>Atom::Core::Test::AtomLinksTest</scope><name>links</name></member>
+      <member refid="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1aa03733146cd8f988efd3f68645f2ddd8" prot="private" virt="non-virtual"><scope>Atom::Core::Test::AtomLinksTest</scope><name>secondLink</name></member>
+      <member refid="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1a7b8a491ae6960bf8514d7ead983f83f2" prot="public" virt="non-virtual"><scope>Atom::Core::Test::AtomLinksTest</scope><name>TestDuplicateLinks</name></member>
+      <member refid="class_atom_1_1_core_1_1_test_1_1_atom_links_test_1a8f4607ad0d54dbfd8edfd2d0506c72b4" prot="public" virt="non-virtual"><scope>Atom::Core::Test::AtomLinksTest</scope><name>TestLinksSameRelDifferentTypes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_localizer" kind="namespace">
+    <compoundname>Alaris::Localizer</compoundname>
+    <innerclass refid="class_alaris_1_1_localizer_1_1_form1" prot="public">Alaris::Localizer::Form1</innerclass>
+    <innerclass refid="class_alaris_1_1_localizer_1_1_program" prot="public">Alaris::Localizer::Program</innerclass>
+    <innernamespace refid="namespace_alaris_1_1_localizer_1_1_properties">Alaris::Localizer::Properties</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Localizer/Form1.cs" line="8"/>
+  </compounddef>
+</doxygen>

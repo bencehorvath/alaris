@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_administration_1_1_remote_manager" kind="class" prot="public">
+    <compoundname>Alaris::Administration::RemoteManager</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_administration_1_1_remote_manager_1a4687246df86bf28f36e94cbf26b53000" prot="private" static="yes" mutable="no">
+        <type>HttpChannel</type>
+        <definition>HttpChannel Alaris.Administration.RemoteManager._channel</definition>
+        <argsstring></argsstring>
+        <name>_channel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" line="16" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_administration_1_1_remote_manager_1a71beb8b9f318c4a5118234fb5441a7f5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>Connection Alaris.Administration.RemoteManager._connection</definition>
+        <argsstring></argsstring>
+        <name>_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_administration_1_1_remote_manager_1a3d730a9cae93b9c54d6050017b9229a6" prot="private" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Alaris.Administration.RemoteManager._channels</definition>
+        <argsstring></argsstring>
+        <name>_channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" line="18" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_administration_1_1_remote_manager_1a88b77b9a45b295cc5f4738c7df6eb464" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Alaris.Administration.RemoteManager._inited</definition>
+        <argsstring></argsstring>
+        <name>_inited</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>summary&gt; Run a remote notice method. /summary&gt; param name=&quot;module&quot;&gt;</para><para>param name=&quot;message&quot;&gt;</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" line="24" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_administration_1_1_remote_manager_1a8b8764b6f86ec87117a301cc021e6b07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Administration.RemoteManager.RemoteNotice</definition>
+        <argsstring>(string module, string message)</argsstring>
+        <name>RemoteNotice</name>
+        <param>
+          <type>string</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>summary&gt; Initialize the instance. Must be called before anything! /summary&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" line="26" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_administration_1_1_remote_manager_1a9ea6b5005872975df0056c191f24f343" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Alaris.Administration.RemoteManager.Initialize</definition>
+        <argsstring>(string pass)</argsstring>
+        <name>Initialize</name>
+        <param>
+          <type>string</type>
+          <declname>pass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>summary&gt; Sends a public message to the specified channel. /summary&gt; param name=&quot;chan&quot;&gt;Channel to send to.</para><para>param name=&quot;msg&quot;&gt;Message to send.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" line="34" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" bodystart="33" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_administration_1_1_remote_manager_1a6c3c2c61c2aeb1da17ae2a512795ee21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Administration.RemoteManager.PublicMessage</definition>
+        <argsstring>(string chan, string msg)</argsstring>
+        <name>PublicMessage</name>
+        <param>
+          <type>string</type>
+          <declname>chan</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>summary&gt; Starts the Remoting services. /summary&gt; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" line="56" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" bodystart="55" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_administration_1_1_remote_manager_1a9c99ac9608fbf42a3af093522ef2d6fa" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>static internal void Alaris.Administration.RemoteManager.StartServives</definition>
+        <argsstring>(int port, string name)</argsstring>
+        <name>StartServives</name>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" line="64" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" bodystart="63" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class used to remotely manage <ref refid="namespace_alaris" kindref="compound">Alaris</ref>. /summary&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2066">
+        <label>Alaris.Irc.Sender</label>
+        <link refid="class_alaris_1_1_irc_1_1_sender"/>
+        <childnode refid="2061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2057">
+        <label>Alaris.Administration.RemoteManager</label>
+        <link refid="class_alaris_1_1_administration_1_1_remote_manager"/>
+        <childnode refid="2058" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="2059">
+        <label>Alaris.Irc.Ctcp.CtcpListener</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener"/>
+        <childnode refid="2058" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="2064">
+        <label>Alaris.Irc.ServerProperties</label>
+        <link refid="class_alaris_1_1_irc_1_1_server_properties"/>
+      </node>
+      <node id="2060">
+        <label>Alaris.Irc.Ctcp.CtcpSender</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender"/>
+        <childnode refid="2061" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2061">
+        <label>Alaris.Irc.CommandBuilder</label>
+        <link refid="class_alaris_1_1_irc_1_1_command_builder"/>
+        <childnode refid="2058" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="2063">
+        <label>Alaris.Irc.Ctcp.CtcpResponder</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder"/>
+        <childnode refid="2058" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="2058">
+        <label>Alaris.Irc.Connection</label>
+        <link refid="class_alaris_1_1_irc_1_1_connection"/>
+        <childnode refid="2059" relation="usage">
+          <edgelabel>_ctcpListener</edgelabel>
+        </childnode>
+        <childnode refid="2060" relation="usage">
+          <edgelabel>_ctcpSender</edgelabel>
+        </childnode>
+        <childnode refid="2062" relation="usage">
+          <edgelabel>_listener</edgelabel>
+        </childnode>
+        <childnode refid="2063" relation="usage">
+          <edgelabel>_ctcpResponder</edgelabel>
+        </childnode>
+        <childnode refid="2064" relation="usage">
+          <edgelabel>_properties</edgelabel>
+        </childnode>
+        <childnode refid="2065" relation="usage">
+          <edgelabel>ConnectionArgs</edgelabel>
+        </childnode>
+        <childnode refid="2066" relation="usage">
+          <edgelabel>_sender</edgelabel>
+        </childnode>
+      </node>
+      <node id="2065">
+        <label>Alaris.Irc.ConnectionArgs</label>
+        <link refid="struct_alaris_1_1_irc_1_1_connection_args"/>
+      </node>
+      <node id="2062">
+        <label>Alaris.Irc.Listener</label>
+        <link refid="class_alaris_1_1_irc_1_1_listener"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Administration/RemoteManager.cs" bodystart="14" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_administration_1_1_remote_manager_1a4687246df86bf28f36e94cbf26b53000" prot="private" virt="non-virtual"><scope>Alaris::Administration::RemoteManager</scope><name>_channel</name></member>
+      <member refid="class_alaris_1_1_administration_1_1_remote_manager_1a3d730a9cae93b9c54d6050017b9229a6" prot="private" virt="non-virtual"><scope>Alaris::Administration::RemoteManager</scope><name>_channels</name></member>
+      <member refid="class_alaris_1_1_administration_1_1_remote_manager_1a71beb8b9f318c4a5118234fb5441a7f5" prot="private" virt="non-virtual"><scope>Alaris::Administration::RemoteManager</scope><name>_connection</name></member>
+      <member refid="class_alaris_1_1_administration_1_1_remote_manager_1a88b77b9a45b295cc5f4738c7df6eb464" prot="private" virt="non-virtual"><scope>Alaris::Administration::RemoteManager</scope><name>_inited</name></member>
+      <member refid="class_alaris_1_1_administration_1_1_remote_manager_1a9ea6b5005872975df0056c191f24f343" prot="public" virt="non-virtual"><scope>Alaris::Administration::RemoteManager</scope><name>Initialize</name></member>
+      <member refid="class_alaris_1_1_administration_1_1_remote_manager_1a6c3c2c61c2aeb1da17ae2a512795ee21" prot="public" virt="non-virtual"><scope>Alaris::Administration::RemoteManager</scope><name>PublicMessage</name></member>
+      <member refid="class_alaris_1_1_administration_1_1_remote_manager_1a8b8764b6f86ec87117a301cc021e6b07" prot="public" virt="non-virtual"><scope>Alaris::Administration::RemoteManager</scope><name>RemoteNotice</name></member>
+      <member refid="class_alaris_1_1_administration_1_1_remote_manager_1a9c99ac9608fbf42a3af093522ef2d6fa" prot="private" virt="non-virtual"><scope>Alaris::Administration::RemoteManager</scope><name>StartServives</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

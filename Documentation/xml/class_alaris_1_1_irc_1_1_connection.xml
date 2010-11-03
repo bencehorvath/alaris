@@ -1,0 +1,1110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_irc_1_1_connection" kind="class" prot="public">
+    <compoundname>Alaris::Irc::Connection</compoundname>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_alaris_1_1_irc_1_1_connection_1af81aba0fd6683fdd9adb03ae7a086c5a" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>RawMessageReceivedEventHandler</type>
+        <definition>RawMessageReceivedEventHandler Alaris.Irc.Connection.OnRawMessageReceived</definition>
+        <argsstring></argsstring>
+        <name>OnRawMessageReceived</name>
+        <briefdescription>
+<para>Receive all the messages, unparsed, sent by the IRC server. This is not normally needed but provided for those who are interested. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="33" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_alaris_1_1_irc_1_1_connection_1a42e6b6ecb5b38c97bb11cc2e2e30fb76" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>RawMessageSentEventHandler</type>
+        <definition>RawMessageSentEventHandler Alaris.Irc.Connection.OnRawMessageSent</definition>
+        <argsstring></argsstring>
+        <name>OnRawMessageSent</name>
+        <briefdescription>
+<para>Receive all the raw messages sent to the IRC from this connection. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="38" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a91ac985b974acb51d79d66fbb3d79948" prot="private" static="no" mutable="no">
+        <type>TcpClient</type>
+        <definition>TcpClient Alaris.Irc.Connection._client</definition>
+        <argsstring></argsstring>
+        <name>_client</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="44" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1afff61bbfb9f6a55650edfd6883eea227" prot="private" static="no" mutable="no">
+        <type>readonly Regex</type>
+        <definition>readonly Regex Alaris.Irc.Connection._propertiesRegex</definition>
+        <argsstring></argsstring>
+        <name>_propertiesRegex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="47" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a4cf11c8b11e40b63d5d96d30160f613f" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_alaris_1_1_irc_1_1_listener" kindref="compound">Listener</ref></type>
+        <definition>readonly Listener Alaris.Irc.Connection._listener</definition>
+        <argsstring></argsstring>
+        <name>_listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="48" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1aa983656e9778e7c8d311bc8ce3980977" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_alaris_1_1_irc_1_1_sender" kindref="compound">Sender</ref></type>
+        <definition>readonly Sender Alaris.Irc.Connection._sender</definition>
+        <argsstring></argsstring>
+        <name>_sender</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="49" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a218bf3b5dc705ccab24d0d221f645f07" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener" kindref="compound">CtcpListener</ref></type>
+        <definition>CtcpListener Alaris.Irc.Connection._ctcpListener</definition>
+        <argsstring></argsstring>
+        <name>_ctcpListener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="50" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a2b61b6fcc7b2da65a054e206b35f0184" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender" kindref="compound">CtcpSender</ref></type>
+        <definition>CtcpSender Alaris.Irc.Connection._ctcpSender</definition>
+        <argsstring></argsstring>
+        <name>_ctcpSender</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="51" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a77154fa560d8a9852d593404fe39c0e0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder" kindref="compound">CtcpResponder</ref></type>
+        <definition>CtcpResponder Alaris.Irc.Connection._ctcpResponder</definition>
+        <argsstring></argsstring>
+        <name>_ctcpResponder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="52" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1ae3d07ab9078f74f1e978192ec2fd9818" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Connection._ctcpEnabled</definition>
+        <argsstring></argsstring>
+        <name>_ctcpEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="53" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a70ef830a744924f7db0d7af4da089e13" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Connection._dccEnabled</definition>
+        <argsstring></argsstring>
+        <name>_dccEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="54" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a1a7031ecb80c4b4601ce4be4b34bf63e" prot="private" static="no" mutable="no">
+        <type>Thread</type>
+        <definition>Thread Alaris.Irc.Connection._socketListenThread</definition>
+        <argsstring></argsstring>
+        <name>_socketListenThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="55" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1af7693757c856da70fbc3d98a6d6b82fc" prot="private" static="no" mutable="no">
+        <type>StreamReader</type>
+        <definition>StreamReader Alaris.Irc.Connection._reader</definition>
+        <argsstring></argsstring>
+        <name>_reader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="56" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a1aa3c8bdde4b7543c139a93cb3cc9535" prot="private" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime Alaris.Irc.Connection._timeLastSent</definition>
+        <argsstring></argsstring>
+        <name>_timeLastSent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="57" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1aa7c22aa1d626379f4fa1fe8e22d52160" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Connection._registered</definition>
+        <argsstring></argsstring>
+        <name>_registered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="59" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a094a76df0af0b05f5672376c2d7a9664" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Connection._connected</definition>
+        <argsstring></argsstring>
+        <name>_connected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a335ae78bf7b910a2c9aea73de3f2ee67" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Connection._handleNickFailure</definition>
+        <argsstring></argsstring>
+        <name>_handleNickFailure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="62" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a828ebc2bc71f428a9c4aafcab1e3e1a1" prot="private" static="no" mutable="no">
+        <type>readonly ArrayList</type>
+        <definition>readonly ArrayList Alaris.Irc.Connection._parsers</definition>
+        <argsstring></argsstring>
+        <name>_parsers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="63" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1a39b97b6b4a9ff32213816480f338bd56" prot="private" static="no" mutable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_server_properties" kindref="compound">ServerProperties</ref></type>
+        <definition>ServerProperties Alaris.Irc.Connection._properties</definition>
+        <argsstring></argsstring>
+        <name>_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="64" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1aa6acf33ed11d06f75c260b4174944b50" prot="private" static="no" mutable="no">
+        <type>StreamWriter</type>
+        <definition>StreamWriter Alaris.Irc.Connection._writer</definition>
+        <argsstring></argsstring>
+        <name>_writer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="66" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_connection_1afb6526e24c065a0da242e7a014f81d7f" prot="private" static="no" mutable="no">
+        <type>internal <ref refid="struct_alaris_1_1_irc_1_1_connection_args" kindref="compound">ConnectionArgs</ref></type>
+        <definition>internal ConnectionArgs Alaris.Irc.Connection.ConnectionArgs</definition>
+        <argsstring></argsstring>
+        <name>ConnectionArgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="67" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1a5e63c40ec027c413a0ef6406e5d02d0f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Encoding</type>
+        <definition>Encoding Alaris.Irc.Connection.TextEncoding</definition>
+        <argsstring></argsstring>
+        <name>TextEncoding</name>
+        <briefdescription>
+<para>Sets the text encoding used by the read and write streams. Must be set before <ref refid="class_alaris_1_1_irc_1_1_connection_1ab8f84af0d8106203068567a50d206977" kindref="member">Connect()</ref> is called and should not be changed while the connection is processing messages. </para>        </briefdescription>
+        <detaileddescription>
+<para>An Encoding constant.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="128" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1a78a18ed4e5a83e67f8bb192c71f7a6a8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Connection.Registered</definition>
+        <argsstring></argsstring>
+        <name>Registered</name>
+        <briefdescription>
+<para>A read-only property indicating whether the connection has been opened with the IRC server and the client has been successfully registered. </para>        </briefdescription>
+        <detaileddescription>
+<para>True if the client is connected and registered.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="139" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1acd0be4785682d24cabf30c5d58d7ac5a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Connection.Connected</definition>
+        <argsstring></argsstring>
+        <name>Connected</name>
+        <briefdescription>
+<para>A read-only property indicating whether a connection has been opened with the IRC server (but not whether registration has succeeded). </para>        </briefdescription>
+        <detaileddescription>
+<para>True if the client is connected.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="150" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1a8d8a856f0d4ccbe1db7ac0f86f5f3cdd" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Connection.HandleNickTaken</definition>
+        <argsstring></argsstring>
+        <name>HandleNickTaken</name>
+        <briefdescription>
+<para>By default the connection itself will handle the case where, while attempting to register the client&apos;s nick is already in use. It does this by simply appending 2 random numbers to the end of the nick. </para>        </briefdescription>
+        <detaileddescription>
+<para>The NickError event is shows that the nick collision has happened and it is fixed by calling Sender&apos;s Register() method passing in the replacement nickname.</para><para>True if the connection should handle this case and false if the client will handle it itself.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="169" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1a56d6b5f7ad4e7c217a7d00cdb23d4caa" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string Alaris.Irc.Connection.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+<para>A user friendly name of this <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref> in the form &apos;nick&apos;. </para>        </briefdescription>
+        <detaileddescription>
+<para>Read only string</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="178" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1a160f41880833a09595329c95de2a4dc1" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Connection.EnableCtcp</definition>
+        <argsstring></argsstring>
+        <name>EnableCtcp</name>
+        <briefdescription>
+<para>Whether <ref refid="namespace_alaris_1_1_irc_1_1_ctcp" kindref="compound">Ctcp</ref> commands should be processed and if <ref refid="namespace_alaris_1_1_irc_1_1_ctcp" kindref="compound">Ctcp</ref> events will be raised. </para>        </briefdescription>
+        <detaileddescription>
+<para>True will enable the CTCP sender and listener and false will cause their property calls to return null.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="203" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="187" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder_1a0f67f119707d261612dd9177d77286f0" compoundref="_ctcp_responder_8cs" startline="29" endline="46">Alaris.Irc.Ctcp.CtcpResponder::CtcpResponder</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1af9be0b432644d2e0570c9da0cc8b76b1" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Connection.EnableDcc</definition>
+        <argsstring></argsstring>
+        <name>EnableDcc</name>
+        <briefdescription>
+<para>Whether DCC requests should be processed or ignored by this <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref>. Since the DccListener is a singleton and shared by all Connections, listeners to DccListener events should be manually removed when no longer needed. </para>        </briefdescription>
+        <detaileddescription>
+<para>True to process DCC requests.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="216" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1a13d17034838c1b33434d97d847cf90ca" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder" kindref="compound">CtcpResponder</ref></type>
+        <definition>CtcpResponder Alaris.Irc.Connection.CtcpResponder</definition>
+        <argsstring></argsstring>
+        <name>CtcpResponder</name>
+        <briefdescription>
+<para>Sets an automatic responder to <ref refid="namespace_alaris_1_1_irc_1_1_ctcp" kindref="compound">Ctcp</ref> queries. </para>        </briefdescription>
+        <detaileddescription>
+<para>Once this is set it can be removed by setting it to null.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="233" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1a84e6192710d8512c1890d7d5d9daf8a9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>TimeSpan</type>
+        <definition>TimeSpan Alaris.Irc.Connection.IdleTime</definition>
+        <argsstring></argsstring>
+        <name>IdleTime</name>
+        <briefdescription>
+<para>The amount of time that has passed since the client sent a command to the IRC server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Read only TimeSpan</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="243" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1a9ed7fa4239d79310e618e104832c97f2" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_sender" kindref="compound">Sender</ref></type>
+        <definition>Sender Alaris.Irc.Connection.Sender</definition>
+        <argsstring></argsstring>
+        <name>Sender</name>
+        <briefdescription>
+<para>The object used to send commands to the IRC server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Read-only <ref refid="class_alaris_1_1_irc_1_1_sender" kindref="compound">Sender</ref>.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="252" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="250" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session_1aa80c325c4bc0e8a54f485da0ca5b0722" compoundref="_dcc_file_session_8cs" startline="515" endline="525">Alaris.Irc.Dcc.DccFileSession::Get</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1a8562c80c523645642eac1923dea66a8e" compoundref="_basic_commands_8cs" startline="28" endline="32">Alaris.Commands.BasicCommands::HandleHelpCommand</referencedby>
+        <referencedby refid="class_alaris_1_1_commands_1_1_basic_commands_1a3dad0396969914e8c74ad07243d55046" compoundref="_basic_commands_8cs" startline="65" endline="71">Alaris.Commands.BasicCommands::HandleJoinCommand</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1a470bf643478b094c46e536d705946f6d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_listener" kindref="compound">Listener</ref></type>
+        <definition>Listener Alaris.Irc.Connection.Listener</definition>
+        <argsstring></argsstring>
+        <name>Listener</name>
+        <briefdescription>
+<para>The object that parses messages and notifies the appropriate delegate. </para>        </briefdescription>
+        <detaileddescription>
+<para>Read only <ref refid="class_alaris_1_1_irc_1_1_listener" kindref="compound">Listener</ref>.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="261" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1a52273e219e77affc8e610be3f882e2c2" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender" kindref="compound">CtcpSender</ref></type>
+        <definition>CtcpSender Alaris.Irc.Connection.CtcpSender</definition>
+        <argsstring></argsstring>
+        <name>CtcpSender</name>
+        <briefdescription>
+<para>The object used to send CTCP commands to the IRC server. </para>        </briefdescription>
+        <detaileddescription>
+<para>Read only CtcpSender. Null if CtcpEnabled is false.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="270" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1abd9788bca95317d475ff6be2789c04fd" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener" kindref="compound">CtcpListener</ref></type>
+        <definition>CtcpListener Alaris.Irc.Connection.CtcpListener</definition>
+        <argsstring></argsstring>
+        <name>CtcpListener</name>
+        <briefdescription>
+<para>The object that parses CTCP messages and notifies the appropriate delegate. </para>        </briefdescription>
+        <detaileddescription>
+<para>Read only CtcpListener. Null if CtcpEnabled is false.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="279" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="277" bodyend="-1"/>
+        <referencedby refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder_1a0f67f119707d261612dd9177d77286f0" compoundref="_ctcp_responder_8cs" startline="29" endline="46">Alaris.Irc.Ctcp.CtcpResponder::CtcpResponder</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1ad4a79ca7bd6407e3155baa06b9cbbca5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="struct_alaris_1_1_irc_1_1_connection_args" kindref="compound">ConnectionArgs</ref></type>
+        <definition>ConnectionArgs Alaris.Irc.Connection.ConnectionData</definition>
+        <argsstring></argsstring>
+        <name>ConnectionData</name>
+        <briefdescription>
+<para>The collection of data used to establish this connection. </para>        </briefdescription>
+        <detaileddescription>
+<para>Read only <ref refid="struct_alaris_1_1_irc_1_1_connection_args" kindref="compound">ConnectionArgs</ref>.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="288" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_connection_1a303ca584b2881347c2d834b3343c5961" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_alaris_1_1_irc_1_1_server_properties" kindref="compound">ServerProperties</ref></type>
+        <definition>ServerProperties Alaris.Irc.Connection.ServerProperties</definition>
+        <argsstring></argsstring>
+        <name>ServerProperties</name>
+        <briefdescription>
+<para>A read-only collection of string key/value pairs representing IRC server proprties. </para>        </briefdescription>
+        <detaileddescription>
+<para>This connection&apos;s <ref refid="class_alaris_1_1_irc_1_1_server_properties" kindref="compound">ServerProperties</ref> obejct or null if it has not been created.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="299" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1acbc88ed888c96a8953d8fd2d5de6886d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Alaris.Irc.Connection.Connection</definition>
+        <argsstring>(ConnectionArgs args)</argsstring>
+        <name>Connection</name>
+        <param>
+          <type><ref refid="struct_alaris_1_1_irc_1_1_connection_args" kindref="compound">ConnectionArgs</ref></type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Used for internal test purposes only. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="73" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="72" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1aae01da3722278c3353c4ecabcf0dc4d0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Alaris.Irc.Connection.CustomParse</definition>
+        <argsstring>(string line)</argsstring>
+        <name>CustomParse</name>
+        <param>
+          <type>string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="302" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="301" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a7ad2b9d0b5ab7945d1f7d789db359cd0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Irc.Connection.KeepAlive</definition>
+        <argsstring>(string message)</argsstring>
+        <name>KeepAlive</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Respond to IRC keep-alives. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message that should be echoed back</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="319" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="318" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a47e3a660fd40f2926aae02af14783a16" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Irc.Connection.MyNickChanged</definition>
+        <argsstring>(UserInfo user, string newNick)</argsstring>
+        <name>MyNickChanged</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_user_info" kindref="compound">UserInfo</ref></type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>newNick</declname>
+        </param>
+        <briefdescription>
+<para>Update the <ref refid="struct_alaris_1_1_irc_1_1_connection_args" kindref="compound">ConnectionArgs</ref> object when the user changes his nick. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Who changed their nick</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newNick</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new nick name</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="330" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="329" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1af23e56a9cb5a3dcccfc82d06c171f828" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Irc.Connection.OnRegistered</definition>
+        <argsstring>()</argsstring>
+        <name>OnRegistered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="338" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="337" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1acf32793098f05a666e4c23f56e971372" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Irc.Connection.OnNickError</definition>
+        <argsstring>(string badNick, string reason)</argsstring>
+        <name>OnNickError</name>
+        <param>
+          <type>string</type>
+          <declname>badNick</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>reason</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>badNick</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reason</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="348" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="347" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a9ce95c31fdd67d7342aab4364acca565" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Irc.Connection.OnReply</definition>
+        <argsstring>(ReplyCode code, string info)</argsstring>
+        <name>OnReply</name>
+        <param>
+          <type><ref refid="namespace_alaris_1_1_irc_1ad1f518153523cd3dd273f4fe36ae7b96" kindref="member">ReplyCode</ref></type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Listen for the 005 info messages sent during registration so that the maximum lengths of certain items (Nick, Away, Topic) can be determined dynamically. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reply code enum</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An info line</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="370" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="369" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a457c88310c63d13eabb22fd8b3483c8f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Irc.Connection.RegisterDelegates</definition>
+        <argsstring>()</argsstring>
+        <name>RegisterDelegates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="411" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="410" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a646304024a54b47406b4bc8eab871ad0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Irc.Connection.ReceiveIRCMessages</definition>
+        <argsstring>()</argsstring>
+        <name>ReceiveIRCMessages</name>
+        <briefdescription>
+<para>Read in message lines from the IRC server and send them to a parser for processing. Discard CTCP and DCC messages if these protocols are not enabled. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="458" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="457" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1afc2e2536fbdb3e1570f5d0dd9ea9667d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Irc.Connection.SendCommand</definition>
+        <argsstring>(StringBuilder command)</argsstring>
+        <name>SendCommand</name>
+        <param>
+          <type>StringBuilder</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Send a message to the IRC server and clear the command buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="531" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="530" bodyend="549"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a3d7a21d56ef1a7e265c3d4058f92ca3a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Irc.Connection.SendAutomaticReply</definition>
+        <argsstring>(StringBuilder command)</argsstring>
+        <name>SendAutomaticReply</name>
+        <param>
+          <type>StringBuilder</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Send a message to the IRC server which does not affect the client&apos;s idle time. Used for automatic replies such as PONG or <ref refid="namespace_alaris_1_1_irc_1_1_ctcp" kindref="compound">Ctcp</ref> repsones. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="557" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="556" bodyend="571"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1acca53c1eede848797ac5ae828ea25a83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Irc.Connection.Connection</definition>
+        <argsstring>(ConnectionArgs args, bool enableCtcp, bool enableDcc)</argsstring>
+        <name>Connection</name>
+        <param>
+          <type><ref refid="struct_alaris_1_1_irc_1_1_connection_args" kindref="compound">ConnectionArgs</ref></type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableCtcp</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableDcc</declname>
+        </param>
+        <briefdescription>
+<para>Prepare a connection to an IRC server but do not open it. This sets the text Encoding to Default. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set of information need to connect to an IRC server</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enableCtcp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if this <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref> should support CTCP.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enableDcc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if this <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref> should support DCC.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="90" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="89" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a6d79ba35de1ee399d420192e576c62e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Irc.Connection.Connection</definition>
+        <argsstring>(Encoding textEncoding, ConnectionArgs args, bool enableCtcp, bool enableDcc)</argsstring>
+        <name>Connection</name>
+        <param>
+          <type>Encoding</type>
+          <declname>textEncoding</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_alaris_1_1_irc_1_1_connection_args" kindref="compound">ConnectionArgs</ref></type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableCtcp</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableDcc</declname>
+        </param>
+        <briefdescription>
+<para>Prepare a connection to an IRC server but do not open it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set of information need to connect to an IRC server</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enableCtcp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if this <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref> should support CTCP.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enableDcc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if this <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref> should support DCC.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>textEncoding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text encoding for the incoming stream.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="117" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="115" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1ab8f84af0d8106203068567a50d206977" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Irc.Connection.Connect</definition>
+        <argsstring>()</argsstring>
+        <name>Connect</name>
+        <briefdescription>
+<para>Connect to the IRC server and start listening for messages on a new thread. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>SocketException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If a connection cannot be established with the IRC server</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="604" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="603" bodyend="625"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a0fa01268785460c4d0bfd8b5fd874387" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Irc.Connection.Disconnect</definition>
+        <argsstring>(string reason)</argsstring>
+        <name>Disconnect</name>
+        <param>
+          <type>string</type>
+          <declname>reason</declname>
+        </param>
+        <briefdescription>
+<para>Sends a &apos;Quit&apos; message to the server, closes the connection, and stops the listening thread. </para>        </briefdescription>
+        <detaileddescription>
+<para>The state of the connection will remain the same even after a disconnect, so the connection can be reopened. All the event handlers will remain registered.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reason</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A message displayed to IRC users upon disconnect.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="638" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="637" bodyend="654"/>
+        <referencedby refid="class_alaris_1_1_alaris_bot_1aa5ab25020602989449e4a27184a478a0" compoundref="_alaris_8cs" startline="360" endline="379">Alaris.AlarisBot::Disconnect</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a314f56d42d552cef579b4448b257c152" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string Alaris.Irc.Connection.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+<para>A friendly name for this connection. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The Name property</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="661" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="660" bodyend="663"/>
+        <referencedby refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info_1ac718eb491fd201dd64353909ab2ee6c3" compoundref="_dcc_user_info_8cs" startline="112" endline="122">Alaris.Irc.Dcc.DccUserInfo::ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a7afc7da3b88a52aa6f4200b3fb61a7a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Irc.Connection.AddParser</definition>
+        <argsstring>(IParser parser)</argsstring>
+        <name>AddParser</name>
+        <param>
+          <type><ref refid="interface_alaris_1_1_irc_1_1_i_parser" kindref="compound">IParser</ref></type>
+          <declname>parser</declname>
+        </param>
+        <briefdescription>
+<para>Adds a parser class to a list of custom parsers. Any number can be added. The custom parsers will be tested using <computeroutput>CanParse()</computeroutput> before the default parsers. The last parser to be added will be the first to process a message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Any class that implements <ref refid="interface_alaris_1_1_irc_1_1_i_parser" kindref="compound">IParser</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="674" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="673" bodyend="676"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a118ea635158650a6251c90245ff25100" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Irc.Connection.RemoveParser</definition>
+        <argsstring>(IParser parser)</argsstring>
+        <name>RemoveParser</name>
+        <param>
+          <type><ref refid="interface_alaris_1_1_irc_1_1_i_parser" kindref="compound">IParser</ref></type>
+          <declname>parser</declname>
+        </param>
+        <briefdescription>
+<para>Remove a custom parser class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Any class that implements <ref refid="interface_alaris_1_1_irc_1_1_i_parser" kindref="compound">IParser</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="683" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="682" bodyend="685"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a94a499d8901b92e65cb7db29b6ea9451" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Irc.Connection.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="689" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="688" bodyend="693"/>
+        <referencedby refid="class_alaris_1_1_alaris_bot_1aa5b066f0c8bcbd040f5b4d25517d9f77" compoundref="_alaris_8cs" startline="420" endline="423">Alaris.AlarisBot::Dispose</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_connection_1a461176580e1f6bd1be1f3839c3b0c330" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Irc.Connection.ExtractProperties</definition>
+        <argsstring>()</argsstring>
+        <name>ExtractProperties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="393" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="392" bodyend="408"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class manages the connection to the IRC server and provides access to all the objects needed to send and receive messages. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1695">
+        <label>Alaris.Irc.Sender</label>
+        <link refid="class_alaris_1_1_irc_1_1_sender"/>
+        <childnode refid="1690" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1688">
+        <label>Alaris.Irc.Ctcp.CtcpListener</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener"/>
+        <childnode refid="1687" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1693">
+        <label>Alaris.Irc.ServerProperties</label>
+        <link refid="class_alaris_1_1_irc_1_1_server_properties"/>
+      </node>
+      <node id="1689">
+        <label>Alaris.Irc.Ctcp.CtcpSender</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender"/>
+        <childnode refid="1690" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1690">
+        <label>Alaris.Irc.CommandBuilder</label>
+        <link refid="class_alaris_1_1_irc_1_1_command_builder"/>
+        <childnode refid="1687" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1692">
+        <label>Alaris.Irc.Ctcp.CtcpResponder</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder"/>
+        <childnode refid="1687" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1687">
+        <label>Alaris.Irc.Connection</label>
+        <link refid="class_alaris_1_1_irc_1_1_connection"/>
+        <childnode refid="1688" relation="usage">
+          <edgelabel>_ctcpListener</edgelabel>
+        </childnode>
+        <childnode refid="1689" relation="usage">
+          <edgelabel>_ctcpSender</edgelabel>
+        </childnode>
+        <childnode refid="1691" relation="usage">
+          <edgelabel>_listener</edgelabel>
+        </childnode>
+        <childnode refid="1692" relation="usage">
+          <edgelabel>_ctcpResponder</edgelabel>
+        </childnode>
+        <childnode refid="1693" relation="usage">
+          <edgelabel>_properties</edgelabel>
+        </childnode>
+        <childnode refid="1694" relation="usage">
+          <edgelabel>ConnectionArgs</edgelabel>
+        </childnode>
+        <childnode refid="1695" relation="usage">
+          <edgelabel>_sender</edgelabel>
+        </childnode>
+      </node>
+      <node id="1694">
+        <label>Alaris.Irc.ConnectionArgs</label>
+        <link refid="struct_alaris_1_1_irc_1_1_connection_args"/>
+      </node>
+      <node id="1691">
+        <label>Alaris.Irc.Listener</label>
+        <link refid="class_alaris_1_1_irc_1_1_listener"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" line="28" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Connection.cs" bodystart="27" bodyend="694"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a91ac985b974acb51d79d66fbb3d79948" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_client</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a094a76df0af0b05f5672376c2d7a9664" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_connected</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1ae3d07ab9078f74f1e978192ec2fd9818" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_ctcpEnabled</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a218bf3b5dc705ccab24d0d221f645f07" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_ctcpListener</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a77154fa560d8a9852d593404fe39c0e0" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_ctcpResponder</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a2b61b6fcc7b2da65a054e206b35f0184" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_ctcpSender</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a70ef830a744924f7db0d7af4da089e13" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_dccEnabled</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a335ae78bf7b910a2c9aea73de3f2ee67" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_handleNickFailure</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a4cf11c8b11e40b63d5d96d30160f613f" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_listener</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a828ebc2bc71f428a9c4aafcab1e3e1a1" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_parsers</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a39b97b6b4a9ff32213816480f338bd56" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_properties</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1afff61bbfb9f6a55650edfd6883eea227" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_propertiesRegex</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1af7693757c856da70fbc3d98a6d6b82fc" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_reader</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1aa7c22aa1d626379f4fa1fe8e22d52160" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_registered</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1aa983656e9778e7c8d311bc8ce3980977" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_sender</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a1a7031ecb80c4b4601ce4be4b34bf63e" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_socketListenThread</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a1aa3c8bdde4b7543c139a93cb3cc9535" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_timeLastSent</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1aa6acf33ed11d06f75c260b4174944b50" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>_writer</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a7afc7da3b88a52aa6f4200b3fb61a7a1" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>AddParser</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1ab8f84af0d8106203068567a50d206977" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>Connect</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1acd0be4785682d24cabf30c5d58d7ac5a" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>Connected</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1acbc88ed888c96a8953d8fd2d5de6886d" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>Connection</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1acca53c1eede848797ac5ae828ea25a83" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>Connection</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a6d79ba35de1ee399d420192e576c62e9" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>Connection</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1afb6526e24c065a0da242e7a014f81d7f" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>ConnectionArgs</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1ad4a79ca7bd6407e3155baa06b9cbbca5" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>ConnectionData</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1abd9788bca95317d475ff6be2789c04fd" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>CtcpListener</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a13d17034838c1b33434d97d847cf90ca" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>CtcpResponder</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a52273e219e77affc8e610be3f882e2c2" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>CtcpSender</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1aae01da3722278c3353c4ecabcf0dc4d0" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>CustomParse</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a0fa01268785460c4d0bfd8b5fd874387" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>Disconnect</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a94a499d8901b92e65cb7db29b6ea9451" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>Dispose</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a160f41880833a09595329c95de2a4dc1" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>EnableCtcp</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1af9be0b432644d2e0570c9da0cc8b76b1" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>EnableDcc</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a461176580e1f6bd1be1f3839c3b0c330" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>ExtractProperties</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a8d8a856f0d4ccbe1db7ac0f86f5f3cdd" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>HandleNickTaken</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a84e6192710d8512c1890d7d5d9daf8a9" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>IdleTime</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a7ad2b9d0b5ab7945d1f7d789db359cd0" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>KeepAlive</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a470bf643478b094c46e536d705946f6d" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>Listener</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a47e3a660fd40f2926aae02af14783a16" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>MyNickChanged</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a56d6b5f7ad4e7c217a7d00cdb23d4caa" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>Name</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1acf32793098f05a666e4c23f56e971372" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>OnNickError</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1af81aba0fd6683fdd9adb03ae7a086c5a" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>OnRawMessageReceived</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a42e6b6ecb5b38c97bb11cc2e2e30fb76" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>OnRawMessageSent</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1af23e56a9cb5a3dcccfc82d06c171f828" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>OnRegistered</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a9ce95c31fdd67d7342aab4364acca565" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>OnReply</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a646304024a54b47406b4bc8eab871ad0" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>ReceiveIRCMessages</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a457c88310c63d13eabb22fd8b3483c8f" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>RegisterDelegates</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a78a18ed4e5a83e67f8bb192c71f7a6a8" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>Registered</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a118ea635158650a6251c90245ff25100" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>RemoveParser</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a3d7a21d56ef1a7e265c3d4058f92ca3a" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>SendAutomaticReply</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1afc2e2536fbdb3e1570f5d0dd9ea9667d" prot="private" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>SendCommand</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a9ed7fa4239d79310e618e104832c97f2" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>Sender</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a303ca584b2881347c2d834b3343c5961" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>ServerProperties</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a5e63c40ec027c413a0ef6406e5d02d0f" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>TextEncoding</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_connection_1a314f56d42d552cef579b4448b257c152" prot="public" virt="non-virtual"><scope>Alaris::Irc::Connection</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

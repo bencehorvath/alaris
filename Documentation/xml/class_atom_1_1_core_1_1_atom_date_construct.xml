@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_atom_1_1_core_1_1_atom_date_construct" kind="class" prot="public">
+    <compoundname>Atom::Core::AtomDateConstruct</compoundname>
+    <basecompoundref refid="class_atom_1_1_core_1_1_atom_element" prot="public" virt="non-virtual">Atom.Core.AtomElement</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_date_construct_1aec81c9d7b4090ddc92d80a01f07fb460" prot="private" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime Atom.Core.AtomDateConstruct._dateTime</definition>
+        <argsstring></argsstring>
+        <name>_dateTime</name>
+        <initializer> DefaultValues.DateTime</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="91" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_date_construct_1a2ed30acfe6e8f5dd34be93310cfc8bd7" prot="private" static="no" mutable="no">
+        <type>TimeSpan</type>
+        <definition>TimeSpan Atom.Core.AtomDateConstruct._utcOffset</definition>
+        <argsstring></argsstring>
+        <name>_utcOffset</name>
+        <initializer> DefaultValues.UtcOffset</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="92" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_date_construct_1a3ecebf952e8d8b704255d653e68f4639" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DateTime</type>
+        <definition>DateTime Atom.Core.AtomDateConstruct.DateTime</definition>
+        <argsstring></argsstring>
+        <name>DateTime</name>
+        <briefdescription>
+<para>The date time of the date construct. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="103" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1ae3ff73a99c6fc948d928657f2141d285" compoundref="_atom_entry_test_8cs" startline="179" endline="196">Atom.Core.Test.AtomEntryTest::TestCreated</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1a7a92afac1b64f892d0fb0f0bf59a6168" compoundref="_atom_entry_test_8cs" startline="160" endline="176">Atom.Core.Test.AtomEntryTest::TestIssued</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1aee172e0904ca6ad6d45ba2191f53e7ae" compoundref="_atom_feed_test_8cs" startline="194" endline="204">Atom.Core.Test.AtomFeedTest::TestModified</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aeb37f064dce8fff995a94805f9d1ce8f" compoundref="_atom_entry_test_8cs" startline="140" endline="157">Atom.Core.Test.AtomEntryTest::TestModified</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_date_construct_1aa315a6dd2bdabe1de0362a807ab03849" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>TimeSpan</type>
+        <definition>TimeSpan Atom.Core.AtomDateConstruct.UtcOffset</definition>
+        <argsstring></argsstring>
+        <name>UtcOffset</name>
+        <briefdescription>
+<para>The UTC offset of the date. </para>        </briefdescription>
+        <detaileddescription>
+<para>Example: <programlisting><codeline><highlight class="normal">TimeSpan<sp/>utcOffset<sp/>=<sp/>TimeZone.CurrentTimeZone.GetUtcOffset(<ref refid="class_atom_1_1_core_1_1_atom_date_construct_1a3ecebf952e8d8b704255d653e68f4639" kindref="member" tooltip="The date time of the date construct.">DateTime</ref>.Today)</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="115" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="112" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1ae3ff73a99c6fc948d928657f2141d285" compoundref="_atom_entry_test_8cs" startline="179" endline="196">Atom.Core.Test.AtomEntryTest::TestCreated</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1aee172e0904ca6ad6d45ba2191f53e7ae" compoundref="_atom_feed_test_8cs" startline="194" endline="204">Atom.Core.Test.AtomFeedTest::TestModified</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1aeb37f064dce8fff995a94805f9d1ce8f" compoundref="_atom_entry_test_8cs" startline="140" endline="157">Atom.Core.Test.AtomEntryTest::TestModified</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1ae8bd97f14dc2125f457c815252e2a70e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomDateConstruct.AtomDateConstruct</definition>
+        <argsstring>()</argsstring>
+        <name>AtomDateConstruct</name>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref> instance. Initialize the <ref refid="class_atom_1_1_core_1_1_atom_element_1a19636773c6507ba65fad59f12ae073ad" kindref="member">AtomElement.LocalName</ref> to modified, the <ref refid="class_atom_1_1_core_1_1_atom_date_construct_1a3ecebf952e8d8b704255d653e68f4639" kindref="member">DateTime</ref> to System.DateTime.Now and <ref refid="class_atom_1_1_core_1_1_atom_date_construct_1aa315a6dd2bdabe1de0362a807ab03849" kindref="member">UtcOffset</ref> to DefaultValues.UtcOffset. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="54" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1af71d7f9c60eed510a90379ca223f5b1e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomDateConstruct.AtomDateConstruct</definition>
+        <argsstring>(string localName)</argsstring>
+        <name>AtomDateConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref> instance. Initialize the <ref refid="class_atom_1_1_core_1_1_atom_date_construct_1a3ecebf952e8d8b704255d653e68f4639" kindref="member">DateTime</ref> to System.DateTime.Now and <ref refid="class_atom_1_1_core_1_1_atom_date_construct_1aa315a6dd2bdabe1de0362a807ab03849" kindref="member">UtcOffset</ref> to DefaultValues.UtcOffset. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="63" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1a6fc0f8cc924dbcd78c486b9495264fd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomDateConstruct.AtomDateConstruct</definition>
+        <argsstring>(string localName, DateTime dateTime)</argsstring>
+        <name>AtomDateConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>dateTime</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref> instance initialized with the given <ref refid="class_atom_1_1_core_1_1_atom_date_construct_1a3ecebf952e8d8b704255d653e68f4639" kindref="member">DateTime</ref>. The <ref refid="class_atom_1_1_core_1_1_atom_date_construct_1aa315a6dd2bdabe1de0362a807ab03849" kindref="member">AtomDateConstruct.UtcOffset</ref> defaults to DefaultValues.UtcOffset. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>localName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The not qualified name of the element.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dateTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_date_construct_1a3ecebf952e8d8b704255d653e68f4639" kindref="member">DateTime</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref> instance.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="73" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1a6bdf93cca5aeaf762754a484b15acb16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomDateConstruct.AtomDateConstruct</definition>
+        <argsstring>(string localName, DateTime dateTime, TimeSpan utcOffset)</argsstring>
+        <name>AtomDateConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>dateTime</declname>
+        </param>
+        <param>
+          <type>TimeSpan</type>
+          <declname>utcOffset</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref> instance initialized with the given <ref refid="class_atom_1_1_core_1_1_atom_date_construct_1a3ecebf952e8d8b704255d653e68f4639" kindref="member">DateTime</ref> and offset. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>localName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The not qualified name of the element.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dateTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_date_construct_1a3ecebf952e8d8b704255d653e68f4639" kindref="member">DateTime</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref> instance.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>utcOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_date_construct_1aa315a6dd2bdabe1de0362a807ab03849" kindref="member">UtcOffset</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref> instance.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="83" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="82" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1a757f48303c191a5bed7a158ddbc0491c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string Atom.Core.AtomDateConstruct.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+<para>Converts the <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref> in a series of xml nodes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The string representation of <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref> class.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="126" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="125" bodyend="167"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1ae911d47fc91cc94ddb633cab29f1d17c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Atom.Core.AtomDateConstruct.WriteStartElement</definition>
+        <argsstring>()</argsstring>
+        <name>WriteStartElement</name>
+        <reimplements refid="class_atom_1_1_core_1_1_atom_element_1ab364e0365102f675baa48e525b8654dc">WriteStartElement</reimplements>
+        <briefdescription>
+<para>Writes the start tag of the element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="177" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="176" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1ac7b1d16d965b263040d7a70f04e899c1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Atom.Core.AtomDateConstruct.WriteEndElement</definition>
+        <argsstring>()</argsstring>
+        <name>WriteEndElement</name>
+        <reimplements refid="class_atom_1_1_core_1_1_atom_element_1a17f1639d3517693cc7aca64af746ddb2">WriteEndElement</reimplements>
+        <briefdescription>
+<para>Writes the end tag of the element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="185" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="184" bodyend="188"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1ae844769d6adcdb5e2e30a28461545015" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref></type>
+        <definition>static internal AtomDateConstruct Atom.Core.AtomDateConstruct.Parse</definition>
+        <argsstring>(XPathNavigator navigator)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>XPathNavigator</type>
+          <declname>navigator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="194" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="193" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1a9f747987489984c32fe8ee5bac82a2fb" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Atom.Core.AtomDateConstruct.computeModifiedCreatedDate</definition>
+        <argsstring>(ref AtomDateConstruct element, string temp)</argsstring>
+        <name>computeModifiedCreatedDate</name>
+        <param>
+          <type>ref <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref></type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="242" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="241" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1aa175f3bafb5be0262b4f50be8ca7f43b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Atom.Core.AtomDateConstruct.computeIssuedDate</definition>
+        <argsstring>(ref AtomDateConstruct element, string temp)</argsstring>
+        <name>computeIssuedDate</name>
+        <param>
+          <type>ref <ref refid="class_atom_1_1_core_1_1_atom_date_construct" kindref="compound">AtomDateConstruct</ref></type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="287" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="286" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1ae92008b089855f3e0a855ca61e29c6e5" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Atom.Core.AtomDateConstruct.hasSeconds</definition>
+        <argsstring>(string datetime)</argsstring>
+        <name>hasSeconds</name>
+        <param>
+          <type>string</type>
+          <declname>datetime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="336" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="335" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_date_construct_1ac6b3aae7edc47ee44a06d0f623c13548" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Atom.Core.AtomDateConstruct.addSeconds</definition>
+        <argsstring>(string datetime)</argsstring>
+        <name>addSeconds</name>
+        <param>
+          <type>string</type>
+          <declname>datetime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="344" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="343" bodyend="347"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The class representing all date contructs. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1557">
+        <label>Atom.Core.AtomElement</label>
+        <link refid="class_atom_1_1_core_1_1_atom_element"/>
+      </node>
+      <node id="1556">
+        <label>Atom.Core.AtomDateConstruct</label>
+        <link refid="class_atom_1_1_core_1_1_atom_date_construct"/>
+        <childnode refid="1557" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1559">
+        <label>Atom.Core.AtomElement</label>
+        <link refid="class_atom_1_1_core_1_1_atom_element"/>
+      </node>
+      <node id="1558">
+        <label>Atom.Core.AtomDateConstruct</label>
+        <link refid="class_atom_1_1_core_1_1_atom_date_construct"/>
+        <childnode refid="1559" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" line="45" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomDateConstruct.cs" bodystart="44" bodyend="349"/>
+    <listofallmembers>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1aec81c9d7b4090ddc92d80a01f07fb460" prot="private" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>_dateTime</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1a2ed30acfe6e8f5dd34be93310cfc8bd7" prot="private" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>_utcOffset</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1ac6b3aae7edc47ee44a06d0f623c13548" prot="private" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>addSeconds</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1ae8bd97f14dc2125f457c815252e2a70e" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>AtomDateConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1af71d7f9c60eed510a90379ca223f5b1e" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>AtomDateConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1a6fc0f8cc924dbcd78c486b9495264fd5" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>AtomDateConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1a6bdf93cca5aeaf762754a484b15acb16" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>AtomDateConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a547e4559485388763ba431da732935e7" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>AtomElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a56bc2bca3af9c83c0ece2085037a6089" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>Buffer</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1aa175f3bafb5be0262b4f50be8ca7f43b" prot="private" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>computeIssuedDate</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1a9f747987489984c32fe8ee5bac82a2fb" prot="private" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>computeModifiedCreatedDate</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1a3ecebf952e8d8b704255d653e68f4639" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>DateTime</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a7131b36333529956e2545d9b3ca0419e" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>FullName</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1ae92008b089855f3e0a855ca61e29c6e5" prot="private" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>hasSeconds</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a19636773c6507ba65fad59f12ae073ad" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>LocalName</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a1966fec9661154e0d19062bdd10494c5" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>NamespacePrefix</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a8927904f85b02facec6812519a78b7d6" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>NamespaceUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1ae844769d6adcdb5e2e30a28461545015" prot="private" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>Parse</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aa921d1ffb5d6779bf995271e53ca99fb" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>resolveUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1a757f48303c191a5bed7a158ddbc0491c" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>ToString</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1aa315a6dd2bdabe1de0362a807ab03849" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>UtcOffset</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1afdaab0651b7873a4be312fd08a8c1ecb" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a53646e0f891a1fa2138d6625f1acd08b" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a8f284184548f4c8aa55baaad22d7c485" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a2dad0344b81fdc61a823f505f0eec661" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1afd132faa096cacf794f3acc9eacc8ff3" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a6f3416dbe2ce5ac633704356d4dfb463" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aeebaedfcb7adef339b7cfffb17925313" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a18aec64281318c092f09bda8b5f751f6" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aaf8c29b409683cebd08dea83031ef73e" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aa1adaacdb1560bae9873b9fbbb3bb66d" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1ac7b1d16d965b263040d7a70f04e899c1" prot="protected" virt="virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteEndElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_date_construct_1ae911d47fc91cc94ddb633cab29f1d17c" prot="protected" virt="virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>WriteStartElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a90f50e88355162e92aac377d64bf70dd" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>XmlBase</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aaecf4c4b1422ffb2b02d2f824b837c33" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>xmlBaseRootUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a66f7f08d521bd673acda2eb1c97251e4" prot="public" virt="non-virtual"><scope>Atom::Core::AtomDateConstruct</scope><name>XmlLang</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

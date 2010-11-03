@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_630fc2a141b284638b2a0338676ee441" kind="dir">
+    <compoundname>FeedHandlerPlugin/</compoundname>
+    <innerfile refid="_feed_handler_plugin_2_assembly_info_8cs">AssemblyInfo.cs</innerfile>
+    <innerfile refid="_feed_handler_plugin_2_feed_factory_8cs">FeedFactory.cs</innerfile>
+    <innerfile refid="_feed_handler_plugin_2_feed_runner_8cs">FeedRunner.cs</innerfile>
+    <innerfile refid="_feed_handler_plugin_2_plugin_8cs">Plugin.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/FeedHandlerPlugin/"/>
+  </compounddef>
+</doxygen>

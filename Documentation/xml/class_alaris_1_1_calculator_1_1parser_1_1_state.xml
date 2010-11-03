@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_calculator_1_1parser_1_1_state" kind="class" prot="public">
+    <compoundname>Alaris::Calculator::parser::State</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_calculator_1_1parser_1_1_state_1a2d9db8225981bac7480795644ff3ca2c" prot="private" static="no" mutable="no">
+        <type>internal int</type>
+        <definition>internal int Alaris::Calculator::parser.State::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" line="30" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_calculator_1_1parser_1_1_state_1af4392bf5a983abc2f5821c627a4ef392" prot="private" static="no" mutable="no">
+        <type>internal ArrayList</type>
+        <definition>internal ArrayList Alaris::Calculator::parser.State::nodes</definition>
+        <argsstring></argsstring>
+        <name>nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" line="31" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1parser_1_1_state_1a28f39bf0ab4f83c04b07706026331f67" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Alaris.Calculator.parser.State.State</definition>
+        <argsstring>(int state, ArrayList nodes)</argsstring>
+        <name>State</name>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>nodes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" line="34" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1parser_1_1_state_1a28f39bf0ab4f83c04b07706026331f67" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Alaris.Calculator.parser.State.State</definition>
+        <argsstring>(int state, ArrayList nodes)</argsstring>
+        <name>State</name>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>nodes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/parser.cs" line="34" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/parser.cs" bodystart="33" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" line="29" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/parser.cs" bodystart="28" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_calculator_1_1parser_1_1_state_1af4392bf5a983abc2f5821c627a4ef392" prot="private" virt="non-virtual"><scope>Alaris::Calculator::parser::State</scope><name>nodes</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1parser_1_1_state_1a28f39bf0ab4f83c04b07706026331f67" prot="private" virt="non-virtual"><scope>Alaris::Calculator::parser::State</scope><name>State</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1parser_1_1_state_1a28f39bf0ab4f83c04b07706026331f67" prot="private" virt="non-virtual"><scope>Alaris::Calculator::parser::State</scope><name>State</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1parser_1_1_state_1a2d9db8225981bac7480795644ff3ca2c" prot="private" virt="non-virtual"><scope>Alaris::Calculator::parser::State</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

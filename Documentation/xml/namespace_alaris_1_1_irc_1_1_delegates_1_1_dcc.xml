@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc" kind="namespace">
+    <compoundname>Alaris::Irc::Delegates::Dcc</compoundname>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1_1_files">Alaris::Irc::Delegates::Dcc::Files</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1aa77538e4ad7375789bfa2a6f58cd30e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.ChatMessageReceivedEventHandler</definition>
+        <argsstring>(DccChatSession session, string message)</argsstring>
+        <name>ChatMessageReceivedEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_chat_session" kindref="compound">DccChatSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>A DCC chat message was received from the remote user. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which session is the source of the event.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string message.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccChatSession.OnChatMessageReceived </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Dcc/ChatMessageReceivedEventHandler.cs" line="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1a08525a6238a885cfbbe44d7c9e0f0d3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.ChatRequestTimeoutEventHandler</definition>
+        <argsstring>(DccChatSession session)</argsstring>
+        <name>ChatRequestTimeoutEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_chat_session" kindref="compound">DccChatSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>When trying to initiate a DCC chat request the remote user did not respond within the alotted time. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which session is the source of the event.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccChatSession.OnChatRequestTimeout </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Dcc/ChatRequestTimeoutEventHandler.cs" line="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1ad439a6d8452d589ca11fc8b443583a59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.ChatSessionClosedEventHandler</definition>
+        <argsstring>(DccChatSession session)</argsstring>
+        <name>ChatSessionClosedEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_chat_session" kindref="compound">DccChatSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>A DCC chat session has been closed. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which session is the source of the event.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccChatSession.OnChatSessionClosed </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Dcc/ChatSessionClosedEventHandler.cs" line="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1a4d36daa08f5487ef26c6d0fa0b1c2b4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.ChatSessionOpenedEventHandler</definition>
+        <argsstring>(DccChatSession session)</argsstring>
+        <name>ChatSessionOpenedEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_chat_session" kindref="compound">DccChatSession</ref></type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>A DCC chat session has been opened with a remote user. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which session is the source of the event.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccChatSession.OnChatSessionOpened </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Dcc/ChatSessionOpenedEventHandler.cs" line="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1ae49d8ed92bee5e3ad71bb5e872d6c8cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.DccChatRequestEventHandler</definition>
+        <argsstring>(DccUserInfo dccUserInfo)</argsstring>
+        <name>DccChatRequestEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info" kindref="compound">DccUserInfo</ref></type>
+          <declname>dccUserInfo</declname>
+        </param>
+        <briefdescription>
+<para>Someone has requested a DCC chat session. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dccUserInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The collection of information about the remote user.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccListener.OnDccChatRequest </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Dcc/DccChatRequestEventHandler.cs" line="10"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1afcebdc670e47cacc56f7fb3d0ffed6a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.DccGetRequestEventHandler</definition>
+        <argsstring>(DccUserInfo dccUserInfo, string fileName, bool turbo)</argsstring>
+        <name>DccGetRequestEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info" kindref="compound">DccUserInfo</ref></type>
+          <declname>dccUserInfo</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>turbo</declname>
+        </param>
+        <briefdescription>
+<para>A remote user has requested a file. To respond use DccFileSession.Send with the relevant information. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dccUserInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The requestor&apos;s information.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the requested file.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>turbo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to use send-ahead mode for transfers.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccListener.OnDccGetRequest </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Dcc/DccGetRequestEventHandler.cs" line="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1aa8fd3680fea26a047cfc12f565101f04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Alaris.Irc.Delegates.Dcc.DccSendRequestEventHandler</definition>
+        <argsstring>(DccUserInfo dccUserInfo, string fileName, int size, bool turbo)</argsstring>
+        <name>DccSendRequestEventHandler</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info" kindref="compound">DccUserInfo</ref></type>
+          <declname>dccUserInfo</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>turbo</declname>
+        </param>
+        <briefdescription>
+<para>Another user has offered to send a file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dccUserInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The collection of information about the remote user.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to be sent.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of the offered file.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>turbo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the sender will use send-ahead mode.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+DccListener.OnDccSendRequest </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Dcc/DccSendRequestEventHandler.cs" line="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Dcc/ChatMessageReceivedEventHandler.cs" line="4"/>
+  </compounddef>
+</doxygen>

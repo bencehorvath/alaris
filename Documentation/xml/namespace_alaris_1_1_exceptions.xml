@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_exceptions" kind="namespace">
+    <compoundname>Alaris::Exceptions</compoundname>
+    <innerclass refid="class_alaris_1_1_exceptions_1_1_config_file_invalid_exception" prot="public">Alaris::Exceptions::ConfigFileInvalidException</innerclass>
+    <innerclass refid="class_alaris_1_1_exceptions_1_1_script_collection_invalid_exception" prot="public">Alaris::Exceptions::ScriptCollectionInvalidException</innerclass>
+    <innerclass refid="class_alaris_1_1_exceptions_1_1_script_compile_exception" prot="public">Alaris::Exceptions::ScriptCompileException</innerclass>
+    <innerclass refid="class_alaris_1_1_exceptions_1_1_script_type_exception" prot="public">Alaris::Exceptions::ScriptTypeException</innerclass>
+    <innerclass refid="class_alaris_1_1_exceptions_1_1_singleton_exception" prot="public">Alaris::Exceptions::SingletonException</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/ConfigFileInvalidException.cs" line="4"/>
+  </compounddef>
+</doxygen>

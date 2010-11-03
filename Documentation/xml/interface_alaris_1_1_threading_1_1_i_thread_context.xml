@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="interface_alaris_1_1_threading_1_1_i_thread_context" kind="interface" prot="public">
+    <compoundname>Alaris::Threading::IThreadContext</compoundname>
+    <basecompoundref refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_component" prot="public" virt="non-virtual">Alaris.API.IAlarisComponent</basecompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_script_manager" prot="public" virt="non-virtual">Alaris.ScriptManager</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_alaris_1_1_threading_1_1_i_thread_context_1a1489ecdb0c22ab72ca78178adee27339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Threading.IThreadContext.Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <reimplementedby refid="class_alaris_1_1_script_manager_1a0605939cc9122f68c8e662e63eee14c2">Run</reimplementedby>
+        <briefdescription>
+<para>Run this instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Threading/IThreadContext.cs" line="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The interface used to define classes that can be run in the <ref refid="class_alaris_1_1_threading_1_1_c_thread_pool" kindref="compound">CThreadPool</ref> </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1878">
+        <label>Alaris.ScriptManager</label>
+        <link refid="class_alaris_1_1_script_manager"/>
+        <childnode refid="1876" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1877">
+        <label>Alaris.API.IAlarisComponent</label>
+        <link refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_component"/>
+      </node>
+      <node id="1876">
+        <label>Alaris.Threading.IThreadContext</label>
+        <link refid="interface_alaris_1_1_threading_1_1_i_thread_context"/>
+        <childnode refid="1877" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1880">
+        <label>Alaris.API.IAlarisComponent</label>
+        <link refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_component"/>
+      </node>
+      <node id="1879">
+        <label>Alaris.Threading.IThreadContext</label>
+        <link refid="interface_alaris_1_1_threading_1_1_i_thread_context"/>
+        <childnode refid="1880" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Threading/IThreadContext.cs" line="10" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Threading/IThreadContext.cs" bodystart="9" bodyend="17"/>
+    <listofallmembers>
+      <member refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_component_1a98fb6d299aa5ff6f00921fc7822cafa2" prot="public" virt="non-virtual"><scope>Alaris::Threading::IThreadContext</scope><name>GetGuid</name></member>
+      <member refid="interface_alaris_1_1_threading_1_1_i_thread_context_1a1489ecdb0c22ab72ca78178adee27339" prot="public" virt="non-virtual"><scope>Alaris::Threading::IThreadContext</scope><name>Run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

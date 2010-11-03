@@ -1,0 +1,484 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_atom_1_1_core_1_1_atom_content_construct" kind="class" prot="public">
+    <compoundname>Atom::Core::AtomContentConstruct</compoundname>
+    <basecompoundref refid="class_atom_1_1_core_1_1_atom_element" prot="public" virt="non-virtual">Atom.Core.AtomElement</basecompoundref>
+    <derivedcompoundref refid="class_atom_1_1_core_1_1_atom_content" prot="public" virt="non-virtual">Atom.Core.AtomContent</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_content_construct_1ae3d51851fc8d761490c65ce61cc61d77" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref></type>
+        <definition>MediaType Atom.Core.AtomContentConstruct._type</definition>
+        <argsstring></argsstring>
+        <name>_type</name>
+        <initializer> DefaultValues.MediaType</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="48" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_content_construct_1abb0182a9c59923c890c309b8e86df233" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_atom_1_1_core_1ad6b0e572028e06968bc2586b61980f13" kindref="member">Mode</ref></type>
+        <definition>Mode Atom.Core.AtomContentConstruct._mode</definition>
+        <argsstring></argsstring>
+        <name>_mode</name>
+        <initializer> DefaultValues.Mode</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="49" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_atom_1_1_core_1_1_atom_content_construct_1a692a3d2648c80ca8ec8ffa14c0234b55" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Atom.Core.AtomContentConstruct._content</definition>
+        <argsstring></argsstring>
+        <name>_content</name>
+        <initializer> String.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="50" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_content_construct_1afe3b164ceb634a2d3f74a8962c049809" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref></type>
+        <definition>MediaType Atom.Core.AtomContentConstruct.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+<para>The media type of the content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="134" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="125" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1ae1f8664fac183fb23abdcf9e210390e8" compoundref="_atom_entry_test_8cs" startline="214" endline="227">Atom.Core.Test.AtomEntryTest::TestContents</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1af701bc9af516ab6c1e6689bd3eea3c00" compoundref="_atom_feed_test_8cs" startline="165" endline="176">Atom.Core.Test.AtomFeedTest::TestCopyright</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a2fe5de0c2cf2663eb7003ff076d8ad53" compoundref="_atom_feed_test_8cs" startline="179" endline="191">Atom.Core.Test.AtomFeedTest::TestInfo</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_content_test_1a3c8640607a893eb985a8834336891033" compoundref="_atom_content_test_8cs" startline="47" endline="65">Atom.Core.Test.AtomContentTest::TestMultipleMultipartsContent</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1a35e3914c5f53016cf208c0905390bb5c" compoundref="_atom_entry_test_8cs" startline="199" endline="211">Atom.Core.Test.AtomEntryTest::TestSummary</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1ab7e6d30c772ef0cfec6a3b1b41a5afe0" compoundref="_atom_feed_test_8cs" startline="142" endline="154">Atom.Core.Test.AtomFeedTest::TestTagline</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a877dc87e9c9834d07db83a1ad7cc9172" compoundref="_atom_feed_test_8cs" startline="79" endline="91">Atom.Core.Test.AtomFeedTest::TestTitle</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1a21d722872e4c558698310310c8c60e47" compoundref="_atom_entry_test_8cs" startline="65" endline="77">Atom.Core.Test.AtomEntryTest::TestTitle</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_content_construct_1aecbbe68d4c3a1ab284c4c3ea7f457c7e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="namespace_atom_1_1_core_1ad6b0e572028e06968bc2586b61980f13" kindref="member">Mode</ref></type>
+        <definition>Mode Atom.Core.AtomContentConstruct.Mode</definition>
+        <argsstring></argsstring>
+        <name>Mode</name>
+        <briefdescription>
+<para>The encoding mode of the content. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="143" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="140" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1ae1f8664fac183fb23abdcf9e210390e8" compoundref="_atom_entry_test_8cs" startline="214" endline="227">Atom.Core.Test.AtomEntryTest::TestContents</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1af701bc9af516ab6c1e6689bd3eea3c00" compoundref="_atom_feed_test_8cs" startline="165" endline="176">Atom.Core.Test.AtomFeedTest::TestCopyright</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a2fe5de0c2cf2663eb7003ff076d8ad53" compoundref="_atom_feed_test_8cs" startline="179" endline="191">Atom.Core.Test.AtomFeedTest::TestInfo</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_content_test_1a3c8640607a893eb985a8834336891033" compoundref="_atom_content_test_8cs" startline="47" endline="65">Atom.Core.Test.AtomContentTest::TestMultipleMultipartsContent</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1a35e3914c5f53016cf208c0905390bb5c" compoundref="_atom_entry_test_8cs" startline="199" endline="211">Atom.Core.Test.AtomEntryTest::TestSummary</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1ab7e6d30c772ef0cfec6a3b1b41a5afe0" compoundref="_atom_feed_test_8cs" startline="142" endline="154">Atom.Core.Test.AtomFeedTest::TestTagline</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a877dc87e9c9834d07db83a1ad7cc9172" compoundref="_atom_feed_test_8cs" startline="79" endline="91">Atom.Core.Test.AtomFeedTest::TestTitle</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1a21d722872e4c558698310310c8c60e47" compoundref="_atom_entry_test_8cs" startline="65" endline="77">Atom.Core.Test.AtomEntryTest::TestTitle</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_atom_1_1_core_1_1_atom_content_construct_1ae2748934a9f2f389f776a932befa8d32" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string Atom.Core.AtomContentConstruct.Content</definition>
+        <argsstring></argsstring>
+        <name>Content</name>
+        <briefdescription>
+<para>The content itself. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="152" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="149" bodyend="-1"/>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1ae1f8664fac183fb23abdcf9e210390e8" compoundref="_atom_entry_test_8cs" startline="214" endline="227">Atom.Core.Test.AtomEntryTest::TestContents</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1af701bc9af516ab6c1e6689bd3eea3c00" compoundref="_atom_feed_test_8cs" startline="165" endline="176">Atom.Core.Test.AtomFeedTest::TestCopyright</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a2fe5de0c2cf2663eb7003ff076d8ad53" compoundref="_atom_feed_test_8cs" startline="179" endline="191">Atom.Core.Test.AtomFeedTest::TestInfo</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_content_test_1a3c8640607a893eb985a8834336891033" compoundref="_atom_content_test_8cs" startline="47" endline="65">Atom.Core.Test.AtomContentTest::TestMultipleMultipartsContent</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1a35e3914c5f53016cf208c0905390bb5c" compoundref="_atom_entry_test_8cs" startline="199" endline="211">Atom.Core.Test.AtomEntryTest::TestSummary</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1ab7e6d30c772ef0cfec6a3b1b41a5afe0" compoundref="_atom_feed_test_8cs" startline="142" endline="154">Atom.Core.Test.AtomFeedTest::TestTagline</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_feed_test_1a877dc87e9c9834d07db83a1ad7cc9172" compoundref="_atom_feed_test_8cs" startline="79" endline="91">Atom.Core.Test.AtomFeedTest::TestTitle</referencedby>
+        <referencedby refid="class_atom_1_1_core_1_1_test_1_1_atom_entry_test_1a21d722872e4c558698310310c8c60e47" compoundref="_atom_entry_test_8cs" startline="65" endline="77">Atom.Core.Test.AtomEntryTest::TestTitle</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_content_construct_1ab6b426017269473ef7d4e64c75c75eac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomContentConstruct.AtomContentConstruct</definition>
+        <argsstring>()</argsstring>
+        <name>AtomContentConstruct</name>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref> instance. Initialize the <ref refid="class_atom_1_1_core_1_1_atom_element_1a19636773c6507ba65fad59f12ae073ad" kindref="member">AtomElement.LocalName</ref> to &quot;title&quot; the <ref refid="class_atom_1_1_core_1_1_atom_content_construct_1ae2748934a9f2f389f776a932befa8d32" kindref="member">Content</ref> to String.Empty, <ref refid="class_atom_1_1_core_1_1_atom_content_construct_1afe3b164ceb634a2d3f74a8962c049809" kindref="member">Type</ref> to DefaultValues.MediaType and <ref refid="class_atom_1_1_core_1_1_atom_content_construct_1aecbbe68d4c3a1ab284c4c3ea7f457c7e" kindref="member">Mode</ref> to DefaultValues.Mode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_content_construct_1a15962aa2a972ae628af406edeb400034" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomContentConstruct.AtomContentConstruct</definition>
+        <argsstring>(string localName)</argsstring>
+        <name>AtomContentConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref> instance initialized with the given content. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>localName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The not qualified name of the element.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="69" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_content_construct_1af43837a954159e89fe53ce9d7405e981" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomContentConstruct.AtomContentConstruct</definition>
+        <argsstring>(string localName, string content)</argsstring>
+        <name>AtomContentConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref> instance initialized with the given content. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>localName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The not qualified name of the element.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content_construct_1ae2748934a9f2f389f776a932befa8d32" kindref="member">Content</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="78" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_content_construct_1ae7d72aa649f72c5506a5155f637560bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomContentConstruct.AtomContentConstruct</definition>
+        <argsstring>(string localName, string content, MediaType type)</argsstring>
+        <name>AtomContentConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>content</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref> instance initialized with the given content and <ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>localName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The not qualified name of the element.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content_construct_1ae2748934a9f2f389f776a932befa8d32" kindref="member">Content</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="88" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_content_construct_1af2bb30f059ef4715988605ef194526e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomContentConstruct.AtomContentConstruct</definition>
+        <argsstring>(string localName, string content, Mode mode)</argsstring>
+        <name>AtomContentConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>content</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_atom_1_1_core_1ad6b0e572028e06968bc2586b61980f13" kindref="member">Mode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref> instance initialized with the given content and <ref refid="class_atom_1_1_core_1_1_atom_content_construct_1aecbbe68d4c3a1ab284c4c3ea7f457c7e" kindref="member">Mode</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>localName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The not qualified name of the element.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content_construct_1ae2748934a9f2f389f776a932befa8d32" kindref="member">Content</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content_construct_1aecbbe68d4c3a1ab284c4c3ea7f457c7e" kindref="member">Mode</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="98" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_content_construct_1a3a767760dc4fed9f6a52944339c8f057" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Atom.Core.AtomContentConstruct.AtomContentConstruct</definition>
+        <argsstring>(string localName, string content, MediaType type, Mode mode)</argsstring>
+        <name>AtomContentConstruct</name>
+        <param>
+          <type>string</type>
+          <declname>localName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>content</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_atom_1_1_core_1ad6b0e572028e06968bc2586b61980f13" kindref="member">Mode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Represents an <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref> instance initialized with the given content, <ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref> and <ref refid="class_atom_1_1_core_1_1_atom_content_construct_1aecbbe68d4c3a1ab284c4c3ea7f457c7e" kindref="member">Mode</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>localName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The not qualified name of the element.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content_construct_1ae2748934a9f2f389f776a932befa8d32" kindref="member">Content</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="namespace_atom_1_1_core_1acf816fb819321e095e47ef3cbaa8598c" kindref="member">MediaType</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_atom_1_1_core_1_1_atom_content_construct_1aecbbe68d4c3a1ab284c4c3ea7f457c7e" kindref="member">Mode</ref> of the <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="110" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="109" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_content_construct_1afdb33d6c0fb1a5a6a9de0f6ac31af231" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string Atom.Core.AtomContentConstruct.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+<para>Converts the <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref> in a series of xml nodes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The string representation of <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref> class.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="163" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="162" bodyend="181"/>
+        <referencedby refid="class_atom_1_1_core_1_1_atom_entry_1ae59a7245b9d2c185a12f222a9131220c" compoundref="_atom_entry_8cs" startline="214" endline="319">Atom.Core.AtomEntry::ToString</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_content_construct_1aa21e54cadf2fae41de4f1dbc60a10f0b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Atom.Core.AtomContentConstruct.WriteStartElement</definition>
+        <argsstring>()</argsstring>
+        <name>WriteStartElement</name>
+        <reimplements refid="class_atom_1_1_core_1_1_atom_element_1ab364e0365102f675baa48e525b8654dc">WriteStartElement</reimplements>
+        <reimplementedby refid="class_atom_1_1_core_1_1_atom_content_1a67c3b47ee234073536391fc93bd5de14">WriteStartElement</reimplementedby>
+        <briefdescription>
+<para>Writes the start tag of the element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="191" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="190" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_content_construct_1a20062c6baabf3156cbb18e245291e449" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>internal override void</type>
+        <definition>internal override void Atom.Core.AtomContentConstruct.WriteEndElement</definition>
+        <argsstring>()</argsstring>
+        <name>WriteEndElement</name>
+        <reimplements refid="class_atom_1_1_core_1_1_atom_element_1a17f1639d3517693cc7aca64af746ddb2">WriteEndElement</reimplements>
+        <briefdescription>
+<para>Writes the end tag of the element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="213" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="212" bodyend="216"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_atom_1_1_core_1_1_atom_content_construct_1ad64ef075ae030d06206e7933ca58c8b7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal <ref refid="class_atom_1_1_core_1_1_atom_content_construct" kindref="compound">AtomContentConstruct</ref></type>
+        <definition>static internal AtomContentConstruct Atom.Core.AtomContentConstruct.Parse</definition>
+        <argsstring>(XPathNavigator navigator)</argsstring>
+        <name>Parse</name>
+        <reimplementedby refid="class_atom_1_1_core_1_1_atom_content_1afe8f4b405669efa2681a8f724c326962">Parse</reimplementedby>
+        <param>
+          <type>XPathNavigator</type>
+          <declname>navigator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="222" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="221" bodyend="300"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The class representing all content constructs. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1550">
+        <label>Atom.Core.AtomElement</label>
+        <link refid="class_atom_1_1_core_1_1_atom_element"/>
+      </node>
+      <node id="1549">
+        <label>Atom.Core.AtomContentConstruct</label>
+        <link refid="class_atom_1_1_core_1_1_atom_content_construct"/>
+        <childnode refid="1550" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1551">
+        <label>Atom.Core.AtomContent</label>
+        <link refid="class_atom_1_1_core_1_1_atom_content"/>
+        <childnode refid="1549" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1553">
+        <label>Atom.Core.AtomElement</label>
+        <link refid="class_atom_1_1_core_1_1_atom_element"/>
+      </node>
+      <node id="1552">
+        <label>Atom.Core.AtomContentConstruct</label>
+        <link refid="class_atom_1_1_core_1_1_atom_content_construct"/>
+        <childnode refid="1553" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" line="47" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Atom/Atom.Core/AtomContentConstruct.cs" bodystart="46" bodyend="302"/>
+    <listofallmembers>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1a692a3d2648c80ca8ec8ffa14c0234b55" prot="private" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>_content</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1abb0182a9c59923c890c309b8e86df233" prot="private" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>_mode</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1ae3d51851fc8d761490c65ce61cc61d77" prot="private" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>_type</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1ab6b426017269473ef7d4e64c75c75eac" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>AtomContentConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1a15962aa2a972ae628af406edeb400034" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>AtomContentConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1af43837a954159e89fe53ce9d7405e981" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>AtomContentConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1ae7d72aa649f72c5506a5155f637560bc" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>AtomContentConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1af2bb30f059ef4715988605ef194526e0" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>AtomContentConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1a3a767760dc4fed9f6a52944339c8f057" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>AtomContentConstruct</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a547e4559485388763ba431da732935e7" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>AtomElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a56bc2bca3af9c83c0ece2085037a6089" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>Buffer</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1ae2748934a9f2f389f776a932befa8d32" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>Content</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a7131b36333529956e2545d9b3ca0419e" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>FullName</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a19636773c6507ba65fad59f12ae073ad" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>LocalName</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1aecbbe68d4c3a1ab284c4c3ea7f457c7e" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>Mode</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a1966fec9661154e0d19062bdd10494c5" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>NamespacePrefix</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a8927904f85b02facec6812519a78b7d6" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>NamespaceUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1ad64ef075ae030d06206e7933ca58c8b7" prot="private" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>Parse</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aa921d1ffb5d6779bf995271e53ca99fb" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>resolveUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1afdb33d6c0fb1a5a6a9de0f6ac31af231" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>ToString</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1afe3b164ceb634a2d3f74a8962c049809" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>Type</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1afdaab0651b7873a4be312fd08a8c1ecb" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a53646e0f891a1fa2138d6625f1acd08b" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a8f284184548f4c8aa55baaad22d7c485" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a2dad0344b81fdc61a823f505f0eec661" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1afd132faa096cacf794f3acc9eacc8ff3" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteAttribute</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a6f3416dbe2ce5ac633704356d4dfb463" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aeebaedfcb7adef339b7cfffb17925313" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a18aec64281318c092f09bda8b5f751f6" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aaf8c29b409683cebd08dea83031ef73e" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aa1adaacdb1560bae9873b9fbbb3bb66d" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1a20062c6baabf3156cbb18e245291e449" prot="protected" virt="virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteEndElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_content_construct_1aa21e54cadf2fae41de4f1dbc60a10f0b" prot="protected" virt="virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>WriteStartElement</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a90f50e88355162e92aac377d64bf70dd" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>XmlBase</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1aaecf4c4b1422ffb2b02d2f824b837c33" prot="protected" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>xmlBaseRootUri</name></member>
+      <member refid="class_atom_1_1_core_1_1_atom_element_1a66f7f08d521bd673acda2eb1c97251e4" prot="public" virt="non-virtual"><scope>Atom::Core::AtomContentConstruct</scope><name>XmlLang</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

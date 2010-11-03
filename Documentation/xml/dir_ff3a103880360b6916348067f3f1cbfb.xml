@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_ff3a103880360b6916348067f3f1cbfb" kind="dir">
+    <compoundname>Alaris.Irc/Delegates/</compoundname>
+    <innerdir refid="dir_6ab781ec738076b8bbfe1e148f5a9295">Alaris.Irc/Delegates/Channel/</innerdir>
+    <innerdir refid="dir_3ccf38679e33c688c7ed0e55eea32a87">Alaris.Irc/Delegates/Ctcp/</innerdir>
+    <innerdir refid="dir_9c6f09a31b1598ee6d2e2298fe3b1a74">Alaris.Irc/Delegates/Dcc/</innerdir>
+    <innerdir refid="dir_6934c60af806295bf1d87a55f961be1c">Alaris.Irc/Delegates/Disconnect/</innerdir>
+    <innerdir refid="dir_a486637feb77befc935c6e367186de00">Alaris.Irc/Delegates/Invite/</innerdir>
+    <innerdir refid="dir_d72dd9ba4fd16aa815a2ce1f6263a27e">Alaris.Irc/Delegates/Messages/</innerdir>
+    <innerdir refid="dir_27bdf6cd78e5b4ab38158f036595be5b">Alaris.Irc/Delegates/Requests/</innerdir>
+    <innerdir refid="dir_3a9ed18d93a5cb2388681701a2f49cbb">Alaris.Irc/Delegates/Server/</innerdir>
+    <innerdir refid="dir_208647769846778941e459250486c711">Alaris.Irc/Delegates/Special/</innerdir>
+    <innerdir refid="dir_f1073f577fff29f287982fa502e94405">Alaris.Irc/Delegates/User/</innerdir>
+    <innerdir refid="dir_de9ad889e6fcecf002602a5d66f1344d">Alaris.Irc/Delegates/Whois/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/"/>
+  </compounddef>
+</doxygen>

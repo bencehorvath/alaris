@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_manager_1_1_app" kind="class" prot="public">
+    <compoundname>Alaris::Manager::App</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_manager_1_1_app_1a0e3366372f6f86f5b27e14daa41b7e86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Manager.App.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Manager/obj/x86/Debug/App.g.cs" line="47" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Manager/obj/x86/Debug/App.g.cs" bodystart="47" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_manager_1_1_app_1a0e3366372f6f86f5b27e14daa41b7e86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Manager.App.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Manager/obj/x86/Debug/App.g.i.cs" line="47" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Manager/obj/x86/Debug/App.g.i.cs" bodystart="47" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_manager_1_1_app_1a45013f0c5485df97d2e71ee91eab15c1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Manager.App.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>Application <ref refid="class_alaris_1_1_entry" kindref="compound">Entry</ref> Point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Manager/obj/x86/Debug/App.g.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Manager/obj/x86/Debug/App.g.cs" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_manager_1_1_app_1a45013f0c5485df97d2e71ee91eab15c1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Alaris.Manager.App.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>Application <ref refid="class_alaris_1_1_entry" kindref="compound">Entry</ref> Point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Manager/obj/x86/Debug/App.g.i.cs" line="61" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Manager/obj/x86/Debug/App.g.i.cs" bodystart="61" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interaction logic for App.xaml. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_alaris_1_1_manager_1_1_app" kindref="compound">App</ref>.</para>    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Manager/App.xaml.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Manager/App.xaml.cs" bodystart="13" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_manager_1_1_app_1a0e3366372f6f86f5b27e14daa41b7e86" prot="public" virt="non-virtual"><scope>Alaris::Manager::App</scope><name>InitializeComponent</name></member>
+      <member refid="class_alaris_1_1_manager_1_1_app_1a0e3366372f6f86f5b27e14daa41b7e86" prot="public" virt="non-virtual"><scope>Alaris::Manager::App</scope><name>InitializeComponent</name></member>
+      <member refid="class_alaris_1_1_manager_1_1_app_1a45013f0c5485df97d2e71ee91eab15c1" prot="public" virt="non-virtual"><scope>Alaris::Manager::App</scope><name>Main</name></member>
+      <member refid="class_alaris_1_1_manager_1_1_app_1a45013f0c5485df97d2e71ee91eab15c1" prot="public" virt="non-virtual"><scope>Alaris::Manager::App</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

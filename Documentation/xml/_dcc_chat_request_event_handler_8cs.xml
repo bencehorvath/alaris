@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="_dcc_chat_request_event_handler_8cs" kind="file">
+    <compoundname>DccChatRequestEventHandler.cs</compoundname>
+    <innernamespace refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc">Alaris::Irc::Delegates::Dcc</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">﻿using<sp/>Alaris.Irc.Dcc;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Alaris.Irc.Delegates.Dcc</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>delegate<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_alaris_1_1_irc_1_1_delegates_1_1_dcc_1ae49d8ed92bee5e3ad71bb5e872d6c8cd" kindref="member" tooltip="Someone has requested a DCC chat session.">DccChatRequestEventHandler</ref>(<sp/><ref refid="class_alaris_1_1_irc_1_1_dcc_1_1_dcc_user_info" kindref="compound" tooltip="This class encapsulates all the information known about a remote user in the context of a DCC session...">DccUserInfo</ref><sp/>dccUserInfo<sp/>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/Delegates/Dcc/DccChatRequestEventHandler.cs"/>
+  </compounddef>
+</doxygen>

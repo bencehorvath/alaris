@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="_thread_runnable_8cs" kind="file">
+    <compoundname>ThreadRunnable.cs</compoundname>
+    <innernamespace refid="namespace_alaris_1_1_threading">Alaris::Threading</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">﻿namespace<sp/>Alaris.Threading</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>delegate<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_alaris_1_1_threading_1ac83428e21e0558aa5d16d32ae7c9462a" kindref="member" tooltip="Specifies a delegate which can be run by the ThreadPool directly.">ThreadRunnable</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Threading/ThreadRunnable.cs"/>
+  </compounddef>
+</doxygen>

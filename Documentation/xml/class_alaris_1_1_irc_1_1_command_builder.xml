@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_irc_1_1_command_builder" kind="class" prot="public">
+    <compoundname>Alaris::Irc::CommandBuilder</compoundname>
+    <derivedcompoundref refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender" prot="public" virt="non-virtual">Alaris.Irc.Ctcp.CtcpSender</derivedcompoundref>
+    <derivedcompoundref refid="class_alaris_1_1_irc_1_1_sender" prot="public" virt="non-virtual">Alaris.Irc.Sender</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_command_builder_1a61ae37b9286b0f582ea3642888c707bd" prot="private" static="no" mutable="no">
+        <type>readonly StringBuilder</type>
+        <definition>readonly StringBuilder Alaris.Irc.CommandBuilder._commandBuffer</definition>
+        <argsstring></argsstring>
+        <name>_commandBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_command_builder_1a81109483f446c903dd273638a31737be" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>readonly Connection Alaris.Irc.CommandBuilder._connection</definition>
+        <argsstring></argsstring>
+        <name>_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="17" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_command_builder_1a33c5a8a21060bcb129c00a6e08068aed" prot="private" static="no" mutable="no">
+        <type>internal const char</type>
+        <definition>internal const char Alaris.Irc.CommandBuilder.Space</definition>
+        <argsstring></argsstring>
+        <name>Space</name>
+        <initializer> &apos; &apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="19" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_command_builder_1a57d4d4735c3c1edd85f1ab76014a6acf" prot="private" static="no" mutable="no">
+        <type>internal const string</type>
+        <definition>internal const string Alaris.Irc.CommandBuilder.SpaceColon</definition>
+        <argsstring></argsstring>
+        <name>SpaceColon</name>
+        <initializer>&quot; :&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="20" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_command_builder_1a7539c72bfe7ca04fc9c647b68b4a04b5" prot="private" static="no" mutable="no">
+        <type>internal const int</type>
+        <definition>internal const int Alaris.Irc.CommandBuilder.MaxCommandSize</definition>
+        <argsstring></argsstring>
+        <name>MaxCommandSize</name>
+        <initializer> 512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="21" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_irc_1_1_command_builder_1ab3c4544db9180c4f44403fe854ce9b9a" prot="private" static="no" mutable="no">
+        <type>internal const char</type>
+        <definition>internal const char Alaris.Irc.CommandBuilder.CtcpQuote</definition>
+        <argsstring></argsstring>
+        <name>CtcpQuote</name>
+        <initializer> &apos;\u0001&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="22" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_command_builder_1a7130599b0194a7732945ca76fcffb642" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>internal <ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+        <definition>internal Connection Alaris.Irc.CommandBuilder.Connection</definition>
+        <argsstring></argsstring>
+        <name>Connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="33" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_alaris_1_1_irc_1_1_command_builder_1a11576ef0ff0eb7e5e312ba22f9487cec" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>internal StringBuilder</type>
+        <definition>internal StringBuilder Alaris.Irc.CommandBuilder.Buffer</definition>
+        <argsstring></argsstring>
+        <name>Buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="38" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_command_builder_1a9c3b462a4857fd9209772982000853d2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal Alaris.Irc.CommandBuilder.CommandBuilder</definition>
+        <argsstring>(Connection connection)</argsstring>
+        <name>CommandBuilder</name>
+        <param>
+          <type><ref refid="class_alaris_1_1_irc_1_1_connection" kindref="compound">Connection</ref></type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="25" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="24" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_command_builder_1a32d5faf0834142c1dd583f47588eab8a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Irc.CommandBuilder.SendMessage</definition>
+        <argsstring>(string type, string target, string message)</argsstring>
+        <name>SendMessage</name>
+        <param>
+          <type>string</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>This methods actually sends the notice and privmsg commands. It assumes that the message has already been broken up and has a valid target. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="46" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="45" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_command_builder_1a8f6fcfd9d3ea5375c7e3924284880866" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal void</type>
+        <definition>internal void Alaris.Irc.CommandBuilder.ClearBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>ClearBuffer</name>
+        <briefdescription>
+<para>Clear the contents of the string buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="59" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="58" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_irc_1_1_command_builder_1a3c328d42bdc435c2baca4b503c9c70f8" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal IEnumerable&lt; string &gt;</type>
+        <definition>static internal IEnumerable&lt;string&gt; Alaris.Irc.CommandBuilder.BreakUpMessage</definition>
+        <argsstring>(string message, int maxSize)</argsstring>
+        <name>BreakUpMessage</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>maxSize</declname>
+        </param>
+        <briefdescription>
+<para>Break up a large message into smaller peices that will fit within the IRC max message size. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to be broken up</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The largest size a piece can be</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string array holding the correctly sized messages.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="71" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="70" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_alaris_1_1_irc_1_1_command_builder" kindref="compound">CommandBuilder</ref> provides the support methods needed by its subclasses to build correctly formatted messages for the IRC server. It is never itself instantiated. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1672">
+        <label>Alaris.Irc.Sender</label>
+        <link refid="class_alaris_1_1_irc_1_1_sender"/>
+        <childnode refid="1670" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1671">
+        <label>Alaris.Irc.Ctcp.CtcpSender</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender"/>
+        <childnode refid="1670" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1670">
+        <label>Alaris.Irc.CommandBuilder</label>
+        <link refid="class_alaris_1_1_irc_1_1_command_builder"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1681">
+        <label>Alaris.Irc.Sender</label>
+        <link refid="class_alaris_1_1_irc_1_1_sender"/>
+        <childnode refid="1673" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1675">
+        <label>Alaris.Irc.Ctcp.CtcpListener</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_listener"/>
+        <childnode refid="1674" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1679">
+        <label>Alaris.Irc.ServerProperties</label>
+        <link refid="class_alaris_1_1_irc_1_1_server_properties"/>
+      </node>
+      <node id="1676">
+        <label>Alaris.Irc.Ctcp.CtcpSender</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender"/>
+        <childnode refid="1673" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1673">
+        <label>Alaris.Irc.CommandBuilder</label>
+        <link refid="class_alaris_1_1_irc_1_1_command_builder"/>
+        <childnode refid="1674" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1678">
+        <label>Alaris.Irc.Ctcp.CtcpResponder</label>
+        <link refid="class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_responder"/>
+        <childnode refid="1674" relation="usage">
+          <edgelabel>_connection</edgelabel>
+        </childnode>
+      </node>
+      <node id="1674">
+        <label>Alaris.Irc.Connection</label>
+        <link refid="class_alaris_1_1_irc_1_1_connection"/>
+        <childnode refid="1675" relation="usage">
+          <edgelabel>_ctcpListener</edgelabel>
+        </childnode>
+        <childnode refid="1676" relation="usage">
+          <edgelabel>_ctcpSender</edgelabel>
+        </childnode>
+        <childnode refid="1677" relation="usage">
+          <edgelabel>_listener</edgelabel>
+        </childnode>
+        <childnode refid="1678" relation="usage">
+          <edgelabel>_ctcpResponder</edgelabel>
+        </childnode>
+        <childnode refid="1679" relation="usage">
+          <edgelabel>_properties</edgelabel>
+        </childnode>
+        <childnode refid="1680" relation="usage">
+          <edgelabel>ConnectionArgs</edgelabel>
+        </childnode>
+        <childnode refid="1681" relation="usage">
+          <edgelabel>_sender</edgelabel>
+        </childnode>
+      </node>
+      <node id="1680">
+        <label>Alaris.Irc.ConnectionArgs</label>
+        <link refid="struct_alaris_1_1_irc_1_1_connection_args"/>
+      </node>
+      <node id="1677">
+        <label>Alaris.Irc.Listener</label>
+        <link refid="class_alaris_1_1_irc_1_1_listener"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Irc/CommandBuilder.cs" bodystart="12" bodyend="88"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1a61ae37b9286b0f582ea3642888c707bd" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>_commandBuffer</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1a81109483f446c903dd273638a31737be" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>_connection</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1a3c328d42bdc435c2baca4b503c9c70f8" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>BreakUpMessage</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1a11576ef0ff0eb7e5e312ba22f9487cec" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>Buffer</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1a8f6fcfd9d3ea5375c7e3924284880866" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>ClearBuffer</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1a9c3b462a4857fd9209772982000853d2" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>CommandBuilder</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1a7130599b0194a7732945ca76fcffb642" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>Connection</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1ab3c4544db9180c4f44403fe854ce9b9a" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>CtcpQuote</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1a7539c72bfe7ca04fc9c647b68b4a04b5" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>MaxCommandSize</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1a32d5faf0834142c1dd583f47588eab8a" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>SendMessage</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1a33c5a8a21060bcb129c00a6e08068aed" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>Space</name></member>
+      <member refid="class_alaris_1_1_irc_1_1_command_builder_1a57d4d4735c3c1edd85f1ab76014a6acf" prot="private" virt="non-virtual"><scope>Alaris::Irc::CommandBuilder</scope><name>SpaceColon</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

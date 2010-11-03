@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$class_alaris_1_1_irc_1_1_command_builder.html" title="CommandBuilder provides the support methods needed by its subclasses to build correctly formatted mes..." alt="" coords="5,32,181,61"/>
+<area shape="rect" id="node3" href="$class_alaris_1_1_irc_1_1_ctcp_1_1_ctcp_sender.html" title="This class allows the client to send CTCP commands. There is no limit on what commands can actually b..." alt="" coords="229,5,405,35"/>
+<area shape="rect" id="node5" href="$class_alaris_1_1_irc_1_1_sender.html" title="This class is used to send all the IRC commands except for CTCP and DCC messages. Instances of this c..." alt="" coords="259,59,376,88"/>
+</map>

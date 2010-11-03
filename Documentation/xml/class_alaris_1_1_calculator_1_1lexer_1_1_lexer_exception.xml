@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_exception" kind="class" prot="public">
+    <compoundname>Alaris::Calculator::lexer::LexerException</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_exception_1a0a3ded1465a69fcfe512a9bc3a818db0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.lexer.LexerException.LexerException</definition>
+        <argsstring>(String message)</argsstring>
+        <name>LexerException</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="42" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_exception_1a0a3ded1465a69fcfe512a9bc3a818db0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Calculator.lexer.LexerException.LexerException</definition>
+        <argsstring>(String message)</argsstring>
+        <name>LexerException</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" line="42" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/lexer.cs" bodystart="41" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" line="40" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.Calculator/Grammar/gen/lexer.cs" bodystart="39" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_exception_1a0a3ded1465a69fcfe512a9bc3a818db0" prot="public" virt="non-virtual"><scope>Alaris::Calculator::lexer::LexerException</scope><name>LexerException</name></member>
+      <member refid="class_alaris_1_1_calculator_1_1lexer_1_1_lexer_exception_1a0a3ded1465a69fcfe512a9bc3a818db0" prot="public" virt="non-virtual"><scope>Alaris::Calculator::lexer::LexerException</scope><name>LexerException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

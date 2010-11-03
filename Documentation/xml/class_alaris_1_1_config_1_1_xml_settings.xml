@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_config_1_1_xml_settings" kind="class" prot="public">
+    <compoundname>Alaris::Config::XmlSettings</compoundname>
+    <basecompoundref refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_component" prot="public" virt="non-virtual">Alaris.API.IAlarisComponent</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_config_1_1_xml_settings_1a5a9503b90b272cf3027db36bb361b963" prot="private" static="no" mutable="no">
+        <type>readonly XmlDocument</type>
+        <definition>readonly XmlDocument Alaris.Config.XmlSettings._xmlDocument</definition>
+        <argsstring></argsstring>
+        <name>_xmlDocument</name>
+        <initializer> new XmlDocument()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="12" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_config_1_1_xml_settings_1abb8b39f61b8f5c2cdc7d61e88c1dad43" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Alaris.Config.XmlSettings._documentPath</definition>
+        <argsstring></argsstring>
+        <name>_documentPath</name>
+        <initializer> string.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_config_1_1_xml_settings_1a1b1a2d9316693631143d18cfc2f9611b" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Alaris.Config.XmlSettings._rootNode</definition>
+        <argsstring></argsstring>
+        <name>_rootNode</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_config_1_1_xml_settings_1a492f36b1e695576adcc98fdeebf05d09" prot="private" static="no" mutable="no">
+        <type>readonly Guid</type>
+        <definition>readonly Guid Alaris.Config.XmlSettings._guid</definition>
+        <argsstring></argsstring>
+        <name>_guid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_alaris_1_1_config_1_1_xml_settings_1ac433d5ec623a608c6002e0b803279f12" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>XmlDocument</type>
+        <definition>XmlDocument Alaris.Config.XmlSettings.Document</definition>
+        <argsstring></argsstring>
+        <name>Document</name>
+        <briefdescription>
+<para>Gets the XML document object. </para>        </briefdescription>
+        <detaileddescription>
+<para>summary&gt; Create a new instance of <ref refid="class_alaris_1_1_config_1_1_xml_settings" kindref="compound">XmlSettings</ref>. /summary&gt; param name = &quot;document&quot;&gt;XML document to load.</para><para>param name = &quot;root&quot;&gt;The xml document&apos;s root node.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="32" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_config_1_1_xml_settings_1a5f5303731e80f8e07b044680fb8798f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Config.XmlSettings.XmlSettings</definition>
+        <argsstring>(string document, string root)</argsstring>
+        <name>XmlSettings</name>
+        <param>
+          <type>string</type>
+          <declname>document</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>root</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="34" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="33" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_config_1_1_xml_settings_1a48e258a2f07473e360b57e3478c06b1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Alaris.Config.XmlSettings.GetSetting</definition>
+        <argsstring>(string xPath, int defaultValue)</argsstring>
+        <name>GetSetting</name>
+        <param>
+          <type>string</type>
+          <declname>xPath</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>defaultValue</declname>
+        </param>
+        <briefdescription>
+<para>Gets a setting from the xml file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The xpath code.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>default value to return.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="57" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_config_1_1_xml_settings_1a29abebebe4ffc2700f7f33d8ee5745b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Config.XmlSettings.PutSetting</definition>
+        <argsstring>(string xPath, int value)</argsstring>
+        <name>PutSetting</name>
+        <param>
+          <type>string</type>
+          <declname>xPath</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Creates or edits a setting. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Xpath formula.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to set</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="68" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_config_1_1_xml_settings_1a1056fc227f869a2294ee3d76f2dfc72f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Alaris.Config.XmlSettings.GetSetting</definition>
+        <argsstring>(string xPath, string defaultValue)</argsstring>
+        <name>GetSetting</name>
+        <param>
+          <type>string</type>
+          <declname>xPath</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>defaultValue</declname>
+        </param>
+        <briefdescription>
+<para>Gets a setting from the xml file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The xpath code.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>default value to return.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="79" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="78" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_config_1_1_xml_settings_1a1562d0e67f445988553e1f95882e0656" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Alaris.Config.XmlSettings.PutSetting</definition>
+        <argsstring>(string xPath, string value)</argsstring>
+        <name>PutSetting</name>
+        <param>
+          <type>string</type>
+          <declname>xPath</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Creates or edits a setting. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Xpath formula.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to set</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="91" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="90" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_config_1_1_xml_settings_1aa8fc359c2d0047500ef3408ebd8226db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Guid</type>
+        <definition>Guid Alaris.Config.XmlSettings.GetGuid</definition>
+        <argsstring>()</argsstring>
+        <name>GetGuid</name>
+        <reimplements refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_component_1a98fb6d299aa5ff6f00921fc7822cafa2">GetGuid</reimplements>
+        <briefdescription>
+<para>Gets the current instance&apos;s GUID. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The GUID</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="125" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="124" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_config_1_1_xml_settings_1afb133d5b91abbf45c50279ea46b3d65c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>XmlNode</type>
+        <definition>XmlNode Alaris.Config.XmlSettings.CreateMissingNode</definition>
+        <argsstring>(string xPath)</argsstring>
+        <name>CreateMissingNode</name>
+        <param>
+          <type>string</type>
+          <declname>xPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="100" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="99" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>XML settings class, used for config files. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2462">
+        <label>Alaris.Config.XmlSettings</label>
+        <link refid="class_alaris_1_1_config_1_1_xml_settings"/>
+        <childnode refid="2463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2463">
+        <label>Alaris.API.IAlarisComponent</label>
+        <link refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2464">
+        <label>Alaris.Config.XmlSettings</label>
+        <link refid="class_alaris_1_1_config_1_1_xml_settings"/>
+        <childnode refid="2465" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2465">
+        <label>Alaris.API.IAlarisComponent</label>
+        <link refid="interface_alaris_1_1_a_p_i_1_1_i_alaris_component"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" line="11" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Config/XmlConfig.cs" bodystart="10" bodyend="128"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1abb8b39f61b8f5c2cdc7d61e88c1dad43" prot="private" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>_documentPath</name></member>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1a492f36b1e695576adcc98fdeebf05d09" prot="private" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>_guid</name></member>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1a1b1a2d9316693631143d18cfc2f9611b" prot="private" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>_rootNode</name></member>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1a5a9503b90b272cf3027db36bb361b963" prot="private" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>_xmlDocument</name></member>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1afb133d5b91abbf45c50279ea46b3d65c" prot="private" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>CreateMissingNode</name></member>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1ac433d5ec623a608c6002e0b803279f12" prot="public" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>Document</name></member>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1aa8fc359c2d0047500ef3408ebd8226db" prot="public" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>GetGuid</name></member>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1a48e258a2f07473e360b57e3478c06b1d" prot="public" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>GetSetting</name></member>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1a1056fc227f869a2294ee3d76f2dfc72f" prot="public" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>GetSetting</name></member>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1a29abebebe4ffc2700f7f33d8ee5745b1" prot="public" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>PutSetting</name></member>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1a1562d0e67f445988553e1f95882e0656" prot="public" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>PutSetting</name></member>
+      <member refid="class_alaris_1_1_config_1_1_xml_settings_1a5f5303731e80f8e07b044680fb8798f5" prot="public" virt="non-virtual"><scope>Alaris::Config::XmlSettings</scope><name>XmlSettings</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

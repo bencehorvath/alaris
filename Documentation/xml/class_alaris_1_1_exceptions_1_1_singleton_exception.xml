@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_exceptions_1_1_singleton_exception" kind="class" prot="public">
+    <compoundname>Alaris::Exceptions::SingletonException</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_exceptions_1_1_singleton_exception_1af8df93fa401972cc1c19f6bd611da06c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Exceptions.SingletonException.SingletonException</definition>
+        <argsstring>(string message)</argsstring>
+        <name>SingletonException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance with a specified error message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message that describes the error.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/SingletonException.cs" line="43" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/SingletonException.cs" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_exceptions_1_1_singleton_exception_1aef78f6003e5004f70c566239310b9a0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Exceptions.SingletonException.SingletonException</definition>
+        <argsstring>(Exception innerException)</argsstring>
+        <name>SingletonException</name>
+        <param>
+          <type>Exception</type>
+          <declname>innerException</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance with a reference to the inner exception that is the cause of this exception. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>innerException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exception that is the cause of the current exception, or a null reference if no inner exception is specified. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/SingletonException.cs" line="56" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/SingletonException.cs" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_exceptions_1_1_singleton_exception_1a24c228cbf21345366c2f921d81a20daa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Exceptions.SingletonException.SingletonException</definition>
+        <argsstring>(string message, Exception innerException)</argsstring>
+        <name>SingletonException</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>Exception</type>
+          <declname>innerException</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance with a specified error message and a reference to the inner exception that is the cause of this exception. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message that describes the error.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>innerException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exception that is the cause of the current exception, or a null reference if no inner exception is specified. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/SingletonException.cs" line="70" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/SingletonException.cs" bodystart="68" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_alaris_1_1_exceptions_1_1_singleton_exception_1a7a7b320b969adb7dba091c19b57535d5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Alaris.Exceptions.SingletonException.SingletonException</definition>
+        <argsstring>(SerializationInfo info, StreamingContext context)</argsstring>
+        <name>SingletonException</name>
+        <param>
+          <type>SerializationInfo</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>StreamingContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance with serialized data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The System.Runtime.Serialization.SerializationInfo that holds the serialized object data about the exception being thrown. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The System.Runtime.Serialization.StreamingContext that contains contextual information about the source or destination. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>System.ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The info parameter is null.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>System.Runtime.Serialization.SerializationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The class name is null or System.Exception.HResult is zero (0).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/SingletonException.cs" line="89" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/SingletonException.cs" bodystart="87" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents errors that occur while creating a singleton. </para>    </briefdescription>
+    <detaileddescription>
+<para><ulink url="http://msdn.microsoft.com/en-us/library/ms229064(VS.80).aspx">http://msdn.microsoft.com/en-us/library/ms229064(VS.80).aspx</ulink> </para>    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/SingletonException.cs" line="36" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Exceptions/SingletonException.cs" bodystart="34" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_exceptions_1_1_singleton_exception_1af8df93fa401972cc1c19f6bd611da06c" prot="public" virt="non-virtual"><scope>Alaris::Exceptions::SingletonException</scope><name>SingletonException</name></member>
+      <member refid="class_alaris_1_1_exceptions_1_1_singleton_exception_1aef78f6003e5004f70c566239310b9a0c" prot="public" virt="non-virtual"><scope>Alaris::Exceptions::SingletonException</scope><name>SingletonException</name></member>
+      <member refid="class_alaris_1_1_exceptions_1_1_singleton_exception_1a24c228cbf21345366c2f921d81a20daa" prot="public" virt="non-virtual"><scope>Alaris::Exceptions::SingletonException</scope><name>SingletonException</name></member>
+      <member refid="class_alaris_1_1_exceptions_1_1_singleton_exception_1a7a7b320b969adb7dba091c19b57535d5" prot="protected" virt="non-virtual"><scope>Alaris::Exceptions::SingletonException</scope><name>SingletonException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

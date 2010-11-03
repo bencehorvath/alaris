@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_2c931418b50cd19036281b005a531a7c" kind="dir">
+    <compoundname>Alaris.LuaEngine/Properties/</compoundname>
+    <innerfile refid="_alaris_8_lua_engine_2_properties_2_assembly_info_8cs">AssemblyInfo.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.LuaEngine/Properties/"/>
+  </compounddef>
+</doxygen>

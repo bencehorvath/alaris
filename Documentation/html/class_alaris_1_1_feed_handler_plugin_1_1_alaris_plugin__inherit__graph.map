@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$interface_alaris_1_1_a_p_i_1_1_i_alaris_basic.html" title="Interface which should be implemented by all Alaris plugins." alt="" coords="49,83,201,112"/>
+<area shape="rect" id="node4" href="$interface_alaris_1_1_a_p_i_1_1_i_alaris_component.html" title="Interface which forces a component to have a GUID." alt="" coords="32,5,219,35"/>
+</map>

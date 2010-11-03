@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_alaris_1_1_irc_1_1_connection.html#a0fa01268785460c4d0bfd8b5fd874387" title="Sends a &#39;Quit&#39; message to the server, closes the connection, and stops the listening thread..." alt="" coords="241,5,452,35"/>
+<area shape="rect" id="node5" href="$class_alaris_1_1_threading_1_1_c_thread_pool.html#a88eeddc7f657567c05bd9f1c1b357e43" title="Free this pool." alt="" coords="236,59,457,88"/>
+</map>

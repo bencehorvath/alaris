@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_a_p_i_1_1_crypt" kind="namespace">
+    <compoundname>Alaris::API::Crypt</compoundname>
+    <innerclass refid="interface_alaris_1_1_a_p_i_1_1_crypt_1_1_i_encrpytion_algorithm" prot="public">Alaris::API::Crypt::IEncrpytionAlgorithm</innerclass>
+    <innerclass refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael" prot="public">Alaris::API::Crypt::Rijndael</innerclass>
+    <innerclass refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_a_e_s_encryption" prot="public">Alaris::API::Crypt::AESEncryption</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_alaris_1_1_a_p_i_1_1_crypt_1a6801dedc813f45f93c83cecefa4a157b" prot="public" static="no">
+        <name>HashAlgorithm</name>
+        <enumvalue id="namespace_alaris_1_1_a_p_i_1_1_crypt_1a6801dedc813f45f93c83cecefa4a157b" prot="public">
+          <name>SHA1</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>SHA1 algorithm (more secure than MD5). </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_alaris_1_1_a_p_i_1_1_crypt_1a6801dedc813f45f93c83cecefa4a157b" prot="public">
+          <name>MD5</name>
+          <briefdescription>
+<para>MD5 algorithm. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum used to list available hash algorithms. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/HashAlgorithm.cs" line="7" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/HashAlgorithm.cs" bodystart="6" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/HashAlgorithm.cs" line="2"/>
+  </compounddef>
+</doxygen>

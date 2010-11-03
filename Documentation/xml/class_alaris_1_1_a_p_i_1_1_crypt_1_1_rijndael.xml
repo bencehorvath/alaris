@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael" kind="class" prot="public">
+    <compoundname>Alaris::API::Crypt::Rijndael</compoundname>
+    <basecompoundref refid="interface_alaris_1_1_a_p_i_1_1_crypt_1_1_i_encrpytion_algorithm" prot="public" virt="non-virtual">Alaris.API.Crypt.IEncrpytionAlgorithm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1ab0c4e71e5652a33f7022a737ef9a96f0" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.Crypt.Rijndael.Pasword</definition>
+        <argsstring></argsstring>
+        <name>Pasword</name>
+        <initializer>&quot;alaris007&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" line="13" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1aed86a8b9667c33db49e3585d93bf3acc" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.Crypt.Rijndael.Salt</definition>
+        <argsstring></argsstring>
+        <name>Salt</name>
+        <initializer>&quot;@l@R1sAlT&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" line="14" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1aeab10aea4f33e7057688903a8f24b6fd" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string Alaris.API.Crypt.Rijndael.InitVector</definition>
+        <argsstring></argsstring>
+        <name>InitVector</name>
+        <initializer>&quot;@1A2c5D4r5F4g7H3&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" line="15" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1a84ae93bb50baf2fef5a9dcbbceab73f9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Alaris.API.Crypt.Rijndael.EncryptString</definition>
+        <argsstring>(string plain, string pass=Pasword, int keySize=256)</argsstring>
+        <name>EncryptString</name>
+        <param>
+          <type>string</type>
+          <declname>plain</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>pass</declname>
+          <defval>Pasword</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keySize</declname>
+          <defval>256</defval>
+        </param>
+        <briefdescription>
+<para>Encrpyts the specified string using this algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to encrypt.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Password used to encrpyt.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keySize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the key (e.g 128, 256)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The encrpyted string.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" line="25" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1abb5873b35d06368c02fb17f93c2c9c6b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Alaris.API.Crypt.Rijndael.DecryptString</definition>
+        <argsstring>(string cipherText, string pass=Pasword, int keySize=256)</argsstring>
+        <name>DecryptString</name>
+        <reimplements refid="interface_alaris_1_1_a_p_i_1_1_crypt_1_1_i_encrpytion_algorithm_1a0f52db03eb6acaa7baee760ce3e57db4">DecryptString</reimplements>
+        <param>
+          <type>string</type>
+          <declname>cipherText</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>pass</declname>
+          <defval>Pasword</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keySize</declname>
+          <defval>256</defval>
+        </param>
+        <briefdescription>
+<para>Encrpyts the specified string using this algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cipherText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to decrypt. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Password used to decrypt.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keySize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key size of the cipher.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The encrpyted string.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" line="64" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" bodystart="63" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1aa21621fdf85c02c516d13a6fb1fe3944" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Alaris.API.Crypt.Rijndael.EncrpytString</definition>
+        <argsstring>(string plain, string pass, int keySize)</argsstring>
+        <name>EncrpytString</name>
+        <reimplements refid="interface_alaris_1_1_a_p_i_1_1_crypt_1_1_i_encrpytion_algorithm_1a1182a8b60c3cfcebcdfb6a86bcd55556">EncrpytString</reimplements>
+        <param>
+          <type>string</type>
+          <declname>plain</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>pass</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keySize</declname>
+        </param>
+        <briefdescription>
+<para>Encrpyts the specified string using this algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to encrypt.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Password to encrypt.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keySize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key size.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The encrpyted string.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" line="37" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" bodystart="36" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1a0498bd891e6a5a739cdef6d378ea1c5e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string IEncrpytionAlgorithm.</type>
+        <definition>string IEncrpytionAlgorithm. Alaris.API.Crypt.Rijndael.DecryptString</definition>
+        <argsstring>(string encrypted, string pass, int keySize)</argsstring>
+        <name>DecryptString</name>
+        <reimplements refid="interface_alaris_1_1_a_p_i_1_1_crypt_1_1_i_encrpytion_algorithm_1a0f52db03eb6acaa7baee760ce3e57db4">DecryptString</reimplements>
+        <param>
+          <type>string</type>
+          <declname>encrypted</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>pass</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keySize</declname>
+        </param>
+        <briefdescription>
+<para>Decrypts an encrypted string using this algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>encrypted</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encrypted string</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Password to decrypt.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keySize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key Size. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The decrypted, original (plain) string.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" line="50" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" bodystart="49" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of the secure <ref refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael" kindref="compound">Rijndael</ref> algorithm (also known as the AES encryption). </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2088">
+        <label>Alaris.API.Crypt.IEncrpytionAlgorithm</label>
+        <link refid="interface_alaris_1_1_a_p_i_1_1_crypt_1_1_i_encrpytion_algorithm"/>
+      </node>
+      <node id="2087">
+        <label>Alaris.API.Crypt.Rijndael</label>
+        <link refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael"/>
+        <childnode refid="2088" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2090">
+        <label>Alaris.API.Crypt.IEncrpytionAlgorithm</label>
+        <link refid="interface_alaris_1_1_a_p_i_1_1_crypt_1_1_i_encrpytion_algorithm"/>
+      </node>
+      <node id="2089">
+        <label>Alaris.API.Crypt.Rijndael</label>
+        <link refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael"/>
+        <childnode refid="2090" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" line="12" bodyfile="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris.API/Crypt/Rijndael.cs" bodystart="11" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1a0498bd891e6a5a739cdef6d378ea1c5e" prot="private" virt="non-virtual"><scope>Alaris::API::Crypt::Rijndael</scope><name>DecryptString</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1abb5873b35d06368c02fb17f93c2c9c6b" prot="public" virt="non-virtual"><scope>Alaris::API::Crypt::Rijndael</scope><name>DecryptString</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1aa21621fdf85c02c516d13a6fb1fe3944" prot="public" virt="non-virtual"><scope>Alaris::API::Crypt::Rijndael</scope><name>EncrpytString</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1a84ae93bb50baf2fef5a9dcbbceab73f9" prot="public" virt="non-virtual"><scope>Alaris::API::Crypt::Rijndael</scope><name>EncryptString</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1aeab10aea4f33e7057688903a8f24b6fd" prot="private" virt="non-virtual"><scope>Alaris::API::Crypt::Rijndael</scope><name>InitVector</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1ab0c4e71e5652a33f7022a737ef9a96f0" prot="private" virt="non-virtual"><scope>Alaris::API::Crypt::Rijndael</scope><name>Pasword</name></member>
+      <member refid="class_alaris_1_1_a_p_i_1_1_crypt_1_1_rijndael_1aed86a8b9667c33db49e3585d93bf3acc" prot="private" virt="non-virtual"><scope>Alaris::API::Crypt::Rijndael</scope><name>Salt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

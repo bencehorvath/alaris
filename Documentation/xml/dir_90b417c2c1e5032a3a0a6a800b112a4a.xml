@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_90b417c2c1e5032a3a0a6a800b112a4a" kind="dir">
+    <compoundname>Alaris/Localization/</compoundname>
+    <innerfile refid="_localization_manager_8cs">LocalizationManager.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Twl/Documents/Visual Studio 2010/Projects/Alaris/Alaris/Localization/"/>
+  </compounddef>
+</doxygen>

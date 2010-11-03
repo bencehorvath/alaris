@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="namespace_alaris_1_1_mathematics" kind="namespace">
+    <compoundname>Alaris::Mathematics</compoundname>
+    <innerclass refid="class_alaris_1_1_mathematics_1_1_math_functions" prot="public">Alaris::Mathematics::MathFunctions</innerclass>
+    <innernamespace refid="namespace_alaris_1_1_mathematics_1_1_algorithms">Alaris::Mathematics::Algorithms</innernamespace>
+    <innernamespace refid="namespace_alaris_1_1_mathematics_1_1_types">Alaris::Mathematics::Types</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1"/>
+  </compounddef>
+</doxygen>

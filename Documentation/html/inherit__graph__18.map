@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$interface_alaris_1_1_a_p_i_1_1_i_alaris_component.html" title="Interface which forces a component to have a GUID." alt="" coords="907,139,1093,168"/>
+<area shape="rect" id="node3" href="$interface_alaris_1_1_a_p_i_1_1_i_alaris_basic.html" title="Interface which should be implemented by all Alaris plugins." alt="" coords="1241,352,1393,381"/>
+<area shape="rect" id="node11" href="$class_alaris_1_1_calculator_1_1_ast_calculator.html" title="Alaris.Calculator.AstCalculator" alt="" coords="1219,5,1416,35"/>
+<area shape="rect" id="node13" href="$class_alaris_1_1_calculator_1_1_ast_printer.html" title="Alaris.Calculator.AstPrinter" alt="" coords="1228,59,1407,88"/>
+<area shape="rect" id="node15" href="$class_alaris_1_1_config_1_1_xml_settings.html" title="XML settings class, used for config files." alt="" coords="1233,112,1401,141"/>
+<area shape="rect" id="node17" href="$class_alaris_1_1_crash_handler.html" title="A class providing functions to run specific method in an exception&#45;handled environment." alt="" coords="1249,165,1385,195"/>
+<area shape="rect" id="node19" href="$class_alaris_1_1_threading_1_1_c_thread_pool.html" title="A simple Thread pool implementation." alt="" coords="1221,219,1413,248"/>
+<area shape="rect" id="node21" href="$interface_alaris_1_1_threading_1_1_i_thread_context.html" title="The interface used to define classes that can be run in the CThreadPool" alt="" coords="1215,272,1420,301"/>
+<area shape="rect" id="node5" href="$class_alaris_1_1_channel_rights_1_1_alaris_plugin.html" title="Alaris.ChannelRights.AlarisPlugin" alt="" coords="1483,419,1699,448"/>
+<area shape="rect" id="node7" href="$class_alaris_1_1_feed_handler_plugin_1_1_alaris_plugin.html" title="Alaris.FeedHandlerPlugin.AlarisPlugin" alt="" coords="1471,312,1711,341"/>
+<area shape="rect" id="node9" href="$class_alaris_1_1_main_1_1_alaris_plugin.html" title="Alaris.Main.AlarisPlugin" alt="" coords="1511,365,1671,395"/>
+<area shape="rect" id="node23" href="$class_alaris_1_1_script_manager.html" title="A script manager for the IRC connections. Loads plugins, manages events etc." alt="" coords="1520,259,1661,288"/>
+<area shape="rect" id="node24" href="$interface_alaris_1_1_calculator_1_1node_1_1_switch.html" title="Alaris.Calculator.node.Switch" alt="" coords="5,192,197,221"/>
+<area shape="rect" id="node26" href="$interface_alaris_1_1_calculator_1_1analysis_1_1_analysis.html" title="Alaris.Calculator.analysis.Analysis" alt="" coords="247,192,468,221"/>
+<area shape="rect" id="node28" href="$class_alaris_1_1_calculator_1_1analysis_1_1_analysis_adapter.html" title="Alaris.Calculator.analysis.AnalysisAdapter" alt="" coords="519,192,785,221"/>
+<area shape="rect" id="node30" href="$class_alaris_1_1_calculator_1_1analysis_1_1_depth_first_adapter.html" title="Alaris.Calculator.analysis.DepthFirstAdapter" alt="" coords="861,59,1139,88"/>
+<area shape="rect" id="node34" href="$class_alaris_1_1_calculator_1_1analysis_1_1_reversed_depth_first_adapter.html" title="Alaris.Calculator.analysis.ReversedDepthFirstAdapter" alt="" coords="835,192,1165,221"/>
+<area shape="rect" id="node36" href="$class_alaris_1_1_calculator_1_1parser_1_1_token_index.html" title="Alaris.Calculator.parser.TokenIndex" alt="" coords="887,245,1113,275"/>
+</map>
