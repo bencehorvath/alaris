@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DB254A5-AF25-4122-877C-3C6D9A86BC02}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Atom</RootNamespace>
+    <AssemblyName>Atom.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ReleaseVersion>2.3</ReleaseVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\atomnet.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Run\Libraries\Debug\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunWithWarnings>false</RunWithWarnings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunWithWarnings>false</RunWithWarnings>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Atom.NET.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Atom.NET.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="AtomReader.cs" />
+    <Compile Include="AtomWriter.cs" />
+    <Compile Include="Atom.AdditionalElements\ScopedElement.cs" />
+    <Compile Include="Atom.AdditionalElements\ScopedElementCollection.cs" />
+    <Compile Include="Atom.AdditionalElements\DublinCore\DcElement.cs" />
+    <Compile Include="Atom.Core\AtomContent.cs" />
+    <Compile Include="Atom.Core\AtomContentConstruct.cs" />
+    <Compile Include="Atom.Core\AtomDateConstruct.cs" />
+    <Compile Include="Atom.Core\AtomElement.cs" />
+    <Compile Include="Atom.Core\AtomEntry.cs" />
+    <Compile Include="Atom.Core\AtomFeed.cs" />
+    <Compile Include="Atom.Core\AtomGenerator.cs" />
+    <Compile Include="Atom.Core\AtomLink.cs" />
+    <Compile Include="Atom.Core\AtomPersonConstruct.cs" />
+    <Compile Include="Atom.Core\Enums.cs" />
+    <Compile Include="Atom.Core\Exceptions.cs" />
+    <Compile Include="Atom.Core.Collections\AtomContentCollection.cs" />
+    <Compile Include="Atom.Core.Collections\AtomEntryCollection.cs" />
+    <Compile Include="Atom.Core.Collections\AtomLinkCollection.cs" />
+    <Compile Include="Atom.Core.Collections\AtomPersonConstructCollection.cs" />
+    <Compile Include="Atom.Utils\DefaultValues.cs" />
+    <Compile Include="Atom.Utils\Utils.cs" />
+    <Compile Include="mvpxml\XmlNamespaces.cs" />
+    <Compile Include="mvpxml\XPathNavigatorReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="atomnet.build" />
+    <None Include="Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AUTHORS.txt" />
+    <Content Include="CHANGES.txt" />
+    <Content Include="COPYING.txt" />
+    <Content Include="README.txt" />
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="mediatypes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="nunit-console-runner">
+      <HintPath>..\..\Dependencies\nunit-console-runner.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit-gui-runner">
+      <HintPath>..\..\Dependencies\nunit-gui-runner.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\..\Dependencies\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\..\Dependencies\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.fixtures">
+      <HintPath>..\..\Dependencies\nunit.fixtures.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\Dependencies\nunit.framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.uiexception">
+      <HintPath>..\..\Dependencies\nunit.uiexception.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.uikit">
+      <HintPath>..\..\Dependencies\nunit.uikit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>..\..\Dependencies\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
