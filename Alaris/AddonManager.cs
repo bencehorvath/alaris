@@ -24,7 +24,12 @@ namespace Alaris
         /// </summary>
         public static List<string> Channels { get; private set; }
 
-        private static readonly List<IAlarisAddon> Plugins = new List<IAlarisAddon>();
+        private static readonly List<IAlarisAddon> Addons = new List<IAlarisAddon>();
+
+        /// <summary>
+        /// List of found assemblies.
+        /// </summary>
+        public static readonly List<Assembly> Assemblies = new List<Assembly>();
 
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
@@ -54,6 +59,7 @@ namespace Alaris
         public static void LoadPluginsFromDirectory(string directory)
         {
             var dir = new DirectoryInfo(Path.Combine(Environment.CurrentDirectory, directory));
+            Log.Info("Loading addons from: {0}", dir.FullName);
 
             foreach(var dll in dir.GetFiles("*.dll").AsParallel())
             {
@@ -63,33 +69,45 @@ namespace Alaris
                 if(asm == null)
                     continue;
 
-                var pl = Enumerable.OfType<IAlarisAddon>(asm.GetTypes().AsParallel()).FirstOrDefault();
+                //var pl = Enumerable.OfType<IAlarisAddon>(asm.GetTypes().AsParallel()).FirstOrDefault();
+                IAlarisAddon pl = null;
+
+                foreach(var type in asm.GetTypes())
+                {
+                    if(type.GetInterfaces().Contains(typeof(IAlarisAddon)))
+                    {
+                        pl = (IAlarisAddon)Activator.CreateInstance(type);
+                    }
+                }
+
 
                 if (pl == null)
                     break; // not a plugin
-
 
                 var connection = Connection;
 
                 pl.Setup(ref connection, Channels);
 
-                Plugins.Add(pl);
+                Addons.Add(pl);
+                Assemblies.Add(asm);
+
+                Log.Info("Loaded plugin {0} {1} by {2} ({3})", pl.Name, asm.GetName().Version.ToString(), pl.Author, pl.Website);
             }
         }
 
         /// <summary>
-        /// Unloads the specified plugin.
+        /// Unloads all addons.
         /// </summary>
-        /// <param name="name">Name of the plugin.</param>
-        public static void UnloadPlugin(string name)
+        [Obsolete("Do not use this method as it can screw up the command system.", true)]
+        public static void UnloadPlugins()
         {
-            foreach (var pl in Plugins.Where(pl => pl.Name == name))
+            foreach (var pl in Addons.AsParallel())
             {
                 pl.Destroy();
-                Plugins.Remove(pl);
+                Addons.Remove(pl);
             }
 
-            
+            Assemblies.Clear();  
         }
 
         private static void SetupAppDomainDebugHandlers()

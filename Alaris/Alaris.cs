@@ -90,6 +90,16 @@ namespace Alaris
         }
 
         /// <summary>
+        /// Gets whether the Addons are enabled or not.
+        /// </summary>
+        public bool AddonsEnabled { get; private set; }
+
+        /// <summary>
+        /// Directory where the Addons are located
+        /// </summary>
+        public string AddonDirectory { get; private set; }
+
+        /// <summary>
         /// Gets the list of channels the bot is on.
         /// </summary>
         public List<string> Channels
@@ -119,7 +129,7 @@ namespace Alaris
 
 
         /// <summary>
-        ///   Creates a new instacne of Alaris bot.
+        ///   Creates a new instance of Alaris bot.
         /// </summary>
         private AlarisBot(string config)
         {
@@ -162,6 +172,32 @@ namespace Alaris
                                                      _manager = new ScriptManager(ref _connection, _channels, _scriptsDir);
                                                      SetupHandlers();
                                                      _manager.Run();
+
+                                                     
+
+                                                    ThreadPool.QueueUserWorkItem(ps =>
+                                                                                    {
+                                                                                        if (AddonsEnabled)
+                                                                                        {
+                                                                                            Log.Info(
+                                                                                                "Initializing Addon manager");
+                                                                                            AddonManager.Initialize(
+                                                                                                ref _connection,
+                                                                                                Channels);
+
+                                                                                            AddonManager.
+                                                                                                LoadPluginsFromDirectory
+                                                                                                (AddonDirectory);
+                                                                                        }
+
+                                                                                        
+                                                                                        Log.Info("Setting up commands");
+
+                                                                                        CommandManager.CommandPrefix = "@";
+                                                                                        CommandManager.CreateMappings();
+                                                                                    });
+                                                     
+
                                                  });
 
             }
@@ -171,17 +207,6 @@ namespace Alaris
             }
 
             //_connection = new Connection(cargs, true, false);
-
-            ThreadPool.QueueUserWorkItem(s =>
-                                             {
-                                                 Log.Info("Setting up commands");
-
-                                                 CommandManager.CommandPrefix = "@";
-                                                 CommandManager.CreateMappings();
-                                             });
-
-
-            
 
             Log.Info("Initializing Script manager");
            
@@ -282,7 +307,7 @@ namespace Alaris
             }
 
             _server = config.GetSetting("config/irc/server", "irc.rizon.net");
-            _nick = config.GetSetting("config/irc/nickname", "alaris");
+            _nick = config.GetSetting("config/irc/nickname", "Alaris");
             _nspw = config.GetSetting("config/irc/nickserv", "nothing");
 
             _nickserv = (_nspw != "nothing");
@@ -303,6 +328,13 @@ namespace Alaris
             DBName = config.GetSetting("config/database", "Alaris").ToUpper(CultureInfo.InvariantCulture);
 
             LuaEnabled = config.GetSetting("config/scripts/LUA", "Disabled").Equals("Enabled");
+
+            AddonsEnabled = config.GetSetting("config/addons/enabled", "true").Equals("true",
+                                                                                      StringComparison.
+                                                                                          InvariantCultureIgnoreCase);
+
+            if (AddonsEnabled)
+                AddonDirectory = config.GetSetting("config/addons/directory", "Addons");
 
             Locale = config.GetSetting("config/localization/locale", "enGB");
 

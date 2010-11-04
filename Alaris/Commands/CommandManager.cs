@@ -27,31 +27,43 @@ namespace Alaris.Commands
         /// </summary>
         public static void CreateMappings()
         {
-            var asm = Assembly.GetExecutingAssembly();
+            CommandMethodMap.Clear();
 
-            var types = asm.GetTypes();
-            
-            foreach(var type in types)
+            var tasm = Assembly.GetExecutingAssembly();
+
+            var asms = AddonManager.Assemblies.ToList();
+            asms.Add(tasm);
+
+            foreach (var asm in asms)
             {
-                var methods = type.GetMethods(BindingFlags.Public | BindingFlags.Static);
+                var types = asm.GetTypes();
 
-                foreach(var method in methods)
+                foreach (var type in types)
                 {
-                    foreach(var attribute in Attribute.GetCustomAttributes(method))
+                    var methods = type.GetMethods(BindingFlags.Public | BindingFlags.Static);
+
+                    foreach (var method in methods)
                     {
-                        if(attribute.GetType() == typeof(AlarisCommandAttribute) || attribute.GetType() == typeof(ParameterizedAlarisCommand))
+                        foreach (var attribute in Attribute.GetCustomAttributes(method))
                         {
-                            if (attribute.GetType() == typeof(ParameterizedAlarisCommand) && method.GetParameters().Length != (((ParameterizedAlarisCommand)attribute).ParameterCount+1))
-                                continue;
+                            if (attribute.GetType() == typeof (AlarisCommandAttribute) ||
+                                attribute.GetType() == typeof (ParameterizedAlarisCommand))
+                            {
+                                if (attribute.GetType() == typeof (ParameterizedAlarisCommand) &&
+                                    method.GetParameters().Length !=
+                                    (((ParameterizedAlarisCommand) attribute).ParameterCount + 1))
+                                    continue;
 
-                            var attr = (AlarisCommandAttribute) attribute;
+                                var attr = (AlarisCommandAttribute) attribute;
 
-                            CommandMethodMap.Add(new AlarisCommand
-                                                     {
-                                                         Command = attr.Command,
-                                                         Permission = attr.Permission
-                                                     }, new AlarisMethod(method, attr, attr is ParameterizedAlarisCommand));
+                                CommandMethodMap.Add(new AlarisCommand
+                                                         {
+                                                             Command = attr.Command,
+                                                             Permission = attr.Permission
+                                                         },
+                                                     new AlarisMethod(method, attr, attr is ParameterizedAlarisCommand));
 
+                            }
                         }
                     }
                 }

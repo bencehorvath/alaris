@@ -22,6 +22,10 @@ xsi:schemaLocation="http://github.com/Twl/alaris Alaris.xsd">
       <directory>scripts</directory>
       <AdditionalReferences></AdditionalReferences>
     </scripts>
+    <addons>
+      <enabled>true</enabled>
+      <directory>Addons</directory>
+    </addons>
     <localization>
       <locale>huHU</locale>
     </localization>

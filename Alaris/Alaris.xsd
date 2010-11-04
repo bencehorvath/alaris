@@ -33,6 +33,13 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="addons">
+    <xs:sequence>
+      <xs:element name="enabled" type="xs:boolean" />
+      <xs:element name="directory" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="localization">
     <xs:sequence>
       <xs:element name="locale" type="xs:string" />
@@ -52,6 +59,7 @@
       <xs:element name="irc" type="irc" />
       <xs:element name="database" type="xs:string" />
       <xs:element name="scripts" type="scripts" />
+      <xs:element name="addons" type="addons" />
       <xs:element name="localization" type="localization" />
       <xs:element name="remote" type="remote" />
     </xs:sequence>
