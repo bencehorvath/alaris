@@ -6,26 +6,31 @@ namespace Alaris.API
     /// <summary>
     /// Another attempt to implement a plugin interface.
     /// </summary>
-    public interface IAlarisPlugin
+    public interface IAlarisAddon
     {
         /// <summary>
-        /// Creates the plugin.
+        /// Creates the addon.
         /// </summary>
         /// <param name="conn">IRC connection.</param>
         /// <param name="channels">Channel list.</param>
         void Setup(ref Connection conn, List<string> channels);
         /// <summary>
-        /// Destroys the plugin, releasing all resources.
+        /// Destroys the addon, releasing all resources.
         /// </summary>
         void Destroy();
 
         /// <summary>
-        /// Name of the plugin
+        /// Name of the addon
         /// </summary>
         string Name { get; }
         /// <summary>
-        /// Author of the plugin.
+        /// Author of the addon.
         /// </summary>
         string Author { get; }
+
+        /// <summary>
+        /// Website where the addon is available.
+        /// </summary>
+        string Website { get; }
     }
 }

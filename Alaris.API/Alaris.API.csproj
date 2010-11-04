@@ -108,7 +108,7 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Database\IManager.cs" />
     <Compile Include="IAlarisComponent.cs" />
-    <Compile Include="IAlarisPlugin.cs" />
+    <Compile Include="IAlarisAddon.cs" />
     <Compile Include="Database\DatabaseManager.cs" />
     <Compile Include="Utilities.cs" />
     <Compile Include="WebHelper.cs" />

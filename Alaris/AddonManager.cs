@@ -13,7 +13,7 @@ namespace Alaris
     /// <summary>
     /// Class used to manage (load, unload, reload) plugins dynamically.
     /// </summary>
-    public static class PluginManager
+    public static class AddonManager
     {
         /// <summary>
         /// The IRC connection.
@@ -24,7 +24,7 @@ namespace Alaris
         /// </summary>
         public static List<string> Channels { get; private set; }
 
-        private static readonly List<IAlarisPlugin> Plugins = new List<IAlarisPlugin>();
+        private static readonly List<IAlarisAddon> Plugins = new List<IAlarisAddon>();
 
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
@@ -63,7 +63,7 @@ namespace Alaris
                 if(asm == null)
                     continue;
 
-                var pl = Enumerable.OfType<IAlarisPlugin>(asm.GetTypes().AsParallel()).FirstOrDefault();
+                var pl = Enumerable.OfType<IAlarisAddon>(asm.GetTypes().AsParallel()).FirstOrDefault();
 
                 if (pl == null)
                     break; // not a plugin
