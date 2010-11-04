@@ -3,6 +3,7 @@ using System.IO;
 using System.Net;
 using System.Text.RegularExpressions;
 using Alaris.Irc;
+using NLog;
 
 namespace Alaris.API
 {
@@ -11,6 +12,9 @@ namespace Alaris.API
     /// </summary>
     public static class WebHelper
     {
+
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         ///   Gets the title of the specified webpage.
         /// </summary>
@@ -50,7 +54,7 @@ namespace Alaris.API
             }
             catch(Exception x)
             {
-                Log.Error("Title", x.ToString()); // probably WebException
+                Log.ErrorException("Exception thrown while fetching web title", x);
                 return string.Empty;
             }
         }

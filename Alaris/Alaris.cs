@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Schema;
 using Alaris.Administration;
@@ -15,14 +16,14 @@ using Alaris.Config;
 using Alaris.Exceptions;
 using Alaris.Irc;
 using Alaris.Irc.Ctcp;
-using Alaris.Threading;
+using NLog;
 
 namespace Alaris
 {
     /// <summary>
     ///   The main class for Alaris.
     /// </summary>
-    public partial class AlarisBot : IThreadContext, IDisposable
+    public partial class AlarisBot : IDisposable
     {
         private Connection _connection;
         private ScriptManager _manager;
@@ -39,6 +40,8 @@ namespace Alaris
         private const string ACSHost = "127.0.0.1";
         private const int ACSPort = 35220;
         private string _scriptsDir;
+
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
         
 
         /// <summary>
@@ -103,12 +106,9 @@ namespace Alaris
         }
 
         /// <summary>
-        ///   Gets or sets the thread pool.
+        /// The bot instance (singleton)
         /// </summary>
-        /// <value>
-        ///   The thread pool.
-        /// </value>
-        public CThreadPool Pool { get; private set; }
+        public static AlarisBot Instance { get { return Singleton<AlarisBot>.Instance; } }
 
         /// <summary>
         ///   This is not an unused constructor. Called through singleton!
@@ -123,84 +123,76 @@ namespace Alaris
         /// </summary>
         private AlarisBot(string config)
         {
-            Log.Notice("Alaris", "Initalizing...");
+            Log.Info("Initializing");
             _configfile = config;
             CrashHandler.HandleReadConfig(ReadConfig, _configfile);
             var cargs = new ConnectionArgs(_nick, _server);
-            Log.Debug("Identd", "Starting service...");
-            /*Identd.Start(_nick);
             
-            */
-            Pool = new CThreadPool(4);
+            Log.Info("Running huge amount of parallel tasks");
 
             try
             {
+                
+                ThreadPool.QueueUserWorkItem(o =>
+                                                 {
+                                                     Log.Info("Starting Identd service");
+                                                     Identd.Start(_nick);
+                                                 });
 
-                Parallel.Invoke(() => Identd.Start(_nick),
-                                () => { lock(Pool) {Pool = new CThreadPool(4);} },
-                                () =>
-                                    {
+                ThreadPool.QueueUserWorkItem(obj =>
+                                                 {
+                                                     _connection = new Connection(cargs, true, false)
+                                                     {
+                                                         TextEncoding = Encoding.GetEncoding("Latin1")
+                                                     };
 
+                                                     var responder = new CtcpResponder(_connection)
+                                                     {
+                                                         VersionResponse = "Alaris " + Utilities.BotVersion,
+                                                         SourceResponse = "http://www.wowemuf.org",
+                                                         UserInfoResponse = "Alaris multi-functional bot."
+                                                     };
 
-                                        _connection = new Connection(cargs, true, false)
-                                                            {
-                                                                TextEncoding = Encoding.GetEncoding("Latin1")
-                                                            };
+                                                     Log.Info("Text encoding is {0}", _connection.TextEncoding.WebName);
 
-                                        var responder = new CtcpResponder(_connection)
-                                                            {
-                                                                VersionResponse = "Alaris " + Utilities.BotVersion,
-                                                                SourceResponse = "http://www.wowemuf.org",
-                                                                UserInfoResponse = "Alaris multi-functional bot."
-                                                            };
+                                                     _connection.CtcpResponder = responder;
 
-                                        _connection.CtcpResponder = responder;
+                                                     Log.Info("CTCP is enabled");
 
-                                        Log.Success("CTCP", "Enabled.");
+                                                     _manager = new ScriptManager(ref _connection, _channels, _scriptsDir);
+                                                     SetupHandlers();
+                                                     _manager.Run();
+                                                 });
 
-                                    },
-                                () =>
-                                    {
-                                        _manager =
-                                            new ScriptManager(
-                                                ref _connection,
-                                                _channels,
-                                                _scriptsDir);
-                                        
-                                        lock(Pool){Pool.Enqueue(_manager);}
-                                    });
             }
-            catch(TargetInvocationException x)
+            catch(Exception x)
             {
-                Log.Error("Parallel", x.ToString());
-                Log.LargeWarning("An exception has been thrown in a critical part of the program.");
+                Log.FatalException("An exception has been thrown during one of the parallel executions.", x);          
             }
 
             //_connection = new Connection(cargs, true, false);
 
-            CommandManager.CommandPrefix = "@";
-            CommandManager.CreateMappings();
+            ThreadPool.QueueUserWorkItem(s =>
+                                             {
+                                                 Log.Info("Setting up commands");
 
-            //_connection.CtcpResponder = responder;
-            Log.Notice("Alaris", "Text encoding: UTF-8");
-            //_connection.TextEncoding = Encoding.GetEncoding("Latin1");
+                                                 CommandManager.CommandPrefix = "@";
+                                                 CommandManager.CreateMappings();
+                                             });
 
-            //Log.Success("CTCP", "Enabled.");
 
-            Log.Notice("ScriptManager", "Initalizing...");
-            _manager = new ScriptManager(ref _connection, _channels, _scriptsDir);
-            //_manager.LoadPlugins();
-            //Thread.Sleep(2000);
-            //Log.Success("ScriptManager", "Setup complete");
+            
 
-            Pool.Enqueue(_manager);
+            Log.Info("Initializing Script manager");
+           
+            ThreadPool.QueueUserWorkItem(s => DatabaseManager.Initialize(DBName));
 
-            DatabaseManager.Initialize(DBName);
-
-            Log.Notice("Remoting", string.Format("Starting remoting channel on port {0} with name: {1}", RemotePort, RemoteName));
+            //Log.Notice("Remoting", string.Format("Starting remoting channel on port {0} with name: {1}", RemotePort, RemoteName));
+            Log.Info("Starting remoting service on port {0} with name {1}", RemotePort, RemoteName);
             RemoteManager.StartServives(RemotePort, RemoteName);
 
-            SetupHandlers();
+   
+            Log.Info("Spawning another thread to continue startup.");
         }
 
         /// <summary>
@@ -236,18 +228,16 @@ namespace Alaris
         /// </summary>
         public void Run()
         {
-
             Connect(); 
         }
 
 
         private void SetupHandlers()
         {
-            Log.Notice("ScriptManager", "Setting up event handlers.");
+            Log.Info("Registering event handlers");
             _manager.RegisterOnRegisteredHook(OnRegistered);
             _manager.RegisterOnPublicHook(OnPublicMessage);
             _connection.CtcpListener.OnCtcpRequest += OnCtcpRequest;
-            Log.Success("ScriptManager", "Event handlers are properly setup.");
         }
 
 
@@ -265,8 +255,7 @@ namespace Alaris
                     "The config file specified could not be found. It is essential to have a configuration file in the directory of the bot. " +
                     configfile + " could not be found.");
 
-            // read conf file.
-            Log.Notice("Config", "Reading configuration file: " + configfile);
+            Log.Info("Reading configuration file");
 
             var config = new XmlSettings(configfile, "alaris");
 
@@ -288,7 +277,7 @@ namespace Alaris
             }
             catch(XmlSchemaValidationException x)
             {
-                Log.Error("Config", "Config file is invalid!");
+                Log.ErrorException("Config file is invalid!", x);
                 throw new ConfigFileInvalidException(x.Message);
             }
 
@@ -317,17 +306,18 @@ namespace Alaris
 
             Locale = config.GetSetting("config/localization/locale", "enGB");
 
-            Log.Debug("LocalizationManager", string.Format("Current locale is: {0}", Locale));
+
+            Log.Debug("Current locale is {0}", Locale);
 
             RemotePort = Convert.ToInt32(config.GetSetting("config/remote/port", "5564"));
             RemoteName = config.GetSetting("config/remote/name", "RemoteManager");
             RemotePassword = config.GetSetting("config/remote/password", "alaris00");
 
-            Log.Success("Config", "File read and validated successfully.");
+            Log.Info("Config file successfully loaded and validated");
             _confdone = true;
 
             
-            Log.Notice("Config", string.Format("Connect to: {0} with nick {1}", _server, _nick));
+            Log.Info("Connecting to {0} with nick {1}", _server, _nick);
         }
 
 
@@ -339,14 +329,14 @@ namespace Alaris
             if (!_confdone)
                 throw new Exception("The config file has not been read before connecting.");
 
-            Log.Notice("Alaris", "Establishing connection...");
+           Log.Info("Establishing connection");
             try
             {
                 _connection.Connect();
             }
             catch (Exception x)
             {
-                Log.Error("Alaris", x.Message);
+                Log.FatalException("An exception has been thrown during the connection process.", x);
                 Identd.Stop();
             }
         }
@@ -359,13 +349,12 @@ namespace Alaris
         /// </param>
         public void Disconnect(string rsr)
         {
-            Log.Notice("Alaris", "Disconnecting...");
-            Pool.Free();
+            Log.Info("Disconnecting");
 
             if (Identd.IsRunning())
             {
                 Identd.Stop();
-                Log.Success("Identd", "Stopped service daemon");
+                Log.Info("Stopped Identd daemon");
             }
 
             //_manager.Lua.Free();
@@ -375,7 +364,8 @@ namespace Alaris
             {
             }
 
-            Environment.Exit(0);
+            Process.GetCurrentProcess().CloseMainWindow();
+            Process.GetCurrentProcess().Close();
         }
 
         /// <summary>
@@ -385,17 +375,17 @@ namespace Alaris
         {
             // Stop Identd, no need for it anymore.
             Identd.Stop();
-            Log.Success("Identd", "Stopped service daemon");
-            Log.Success("Alaris", "Bot registered on server");
+            Log.Info("Bot is registered on the server");
+            Log.Info("Stopped Identd service");
 
-            // join channels here
+            // join channels here););
 
             foreach (var chan in _channels)
             {
                 if (Rfc2812Util.IsValidChannelName(chan))
                     _connection.Sender.Join(chan);
 
-                Log.Notice("Alaris", "Joined channel: " + chan);
+                Log.Debug("Joined channel: {0}", chan);
             }
 
         }
@@ -411,7 +401,7 @@ namespace Alaris
         /// </param>
         private static void OnCtcpRequest(string command, UserInfo user)
         {
-            Log.Notice("CTCP", "Received command " + command + " from " + user.Nick);
+            Log.Debug("Received CTCP command {0} from {1}", command, user.Nick);
         }
 
         /// <summary>
@@ -421,5 +411,6 @@ namespace Alaris
         {
             _connection.Dispose();
         }
+
     }
 }

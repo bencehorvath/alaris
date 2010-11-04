@@ -5,6 +5,8 @@ using System.Linq;
 using System.Reflection;
 using Alaris.API;
 using Alaris.Irc;
+using NLog;
+
 
 namespace Alaris
 {
@@ -23,6 +25,8 @@ namespace Alaris
         public static List<string> Channels { get; private set; }
 
         private static readonly List<IAlarisPlugin> Plugins = new List<IAlarisPlugin>();
+
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Initializes the Plugin manager.
@@ -91,23 +95,22 @@ namespace Alaris
         private static void SetupAppDomainDebugHandlers()
         {
             AppDomain.CurrentDomain.DomainUnload +=
-                (sender, args) => Log.Debug("PluginManager",
-                                            string.Format("AppDomain::DomainUnload, hash: {0}",
-                                                          AppDomain.CurrentDomain.GetHashCode()));
+                (sender, args) => Log.Debug("PluginManager: AppDomain::DomainUnload, hash: {0}",
+                                            AppDomain.CurrentDomain.GetHashCode());
 
             AppDomain.CurrentDomain.AssemblyLoad +=
                 (sender, ea) =>
-                Log.Debug("PluginManager",
-                          string.Format("AppDomain::AssemblyLoad, sender is: {0}, loaded assembly: {1}."
+                Log.Debug("PluginManager: AppDomain::AssemblyLoad, sender is: {0}, loaded assembly: {1}."
                                         , sender.GetHashCode()
-                                        , ea.LoadedAssembly.FullName));
+                                        , ea.LoadedAssembly.FullName);
 
            
 
             AppDomain.CurrentDomain.AssemblyResolve +=
                 (sender, eargs) =>
                     {
-                        Log.Debug("PluginManager", string.Format("AppDomain::AssemblyResolve, sender: {0}, name: {1}, asm: {2}", sender.GetHashCode(), eargs.Name, eargs.RequestingAssembly.FullName ));
+                        Log.Debug("PluginManager: AppDomain::AssemblyResolve, sender: {0}, name: {1}, asm: {2}", 
+                            sender.GetHashCode(), eargs.Name, eargs.RequestingAssembly.FullName );
 
                         return null;
                     };

@@ -116,6 +116,7 @@
     <Reference Include="Microsoft.JScript" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualC" />
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
     </Reference>
@@ -165,12 +166,9 @@
     <Compile Include="Exceptions\ConfigFileInvalidException.cs" />
     <Compile Include="PublicMessageHandler.cs" />
     <Compile Include="CrashHandler.cs" />
-    <Compile Include="Threading\ThreadPool.cs" />
-    <Compile Include="Threading\IThreadContext.cs" />
     <Compile Include="Singleton.cs" />
     <Compile Include="Exceptions\SingletonException.cs" />
     <Compile Include="ClusterManager.cs" />
-    <Compile Include="Threading\ThreadRunnable.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Alaris.API\Alaris.API.csproj">
@@ -203,6 +201,9 @@
     <None Include="app.config" />
     <None Include="bin\Debug\alaris.conf" />
     <None Include="..\Doxyfile" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

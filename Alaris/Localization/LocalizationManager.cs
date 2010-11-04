@@ -1,5 +1,6 @@
 ﻿using Alaris.API.Database;
 using Alaris.Irc;
+using NLog;
 
 namespace Alaris.Localization
 {
@@ -8,6 +9,7 @@ namespace Alaris.Localization
     /// </summary>
     public static class LocalizationManager
     {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
         /// <summary>
         /// Retrieves the specified text's translation to the specified language from the database.
         /// </summary>
@@ -28,7 +30,7 @@ namespace Alaris.Localization
 
             if (row == null)
             {
-                Log.Debug("LocalizationManager", "No translations found.");
+                Log.Info("No translations found");
                 return text;
             }
 

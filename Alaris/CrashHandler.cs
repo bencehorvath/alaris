@@ -3,6 +3,7 @@ using System.IO;
 using Alaris.API;
 using Alaris.Exceptions;
 using Alaris.Irc;
+using NLog;
 
 namespace Alaris
 {
@@ -16,6 +17,7 @@ namespace Alaris
     /// </summary>
     public class CrashHandler : IAlarisComponent
     {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
         private readonly Guid _guid;
         /// <summary>
         ///   Creates a new instance of <see cref = "CrashHandler" />
@@ -31,7 +33,7 @@ namespace Alaris
         /// </summary>
         ~CrashHandler()
         {
-            Log.Debug("CrashHandler", "~CrashHandler()");
+            Log.Trace("~CrashHandler()");
         }
 
 
@@ -61,15 +63,15 @@ namespace Alaris
             }
             catch (FileNotFoundException ex)
             {
-                Log.Error("CrashHandler", "FileNotFoundException: " + ex);
+                Log.ErrorException("FileNotFoundException thrown inside Crash Handler", ex);
             }
             catch (ConfigFileInvalidException ex)
             {
-                Log.Error("CrashHandler", "ConfigFileInvalidException: " + ex);
+                Log.ErrorException("ConfigFileInvalidException thrown inside Crash Handler ", ex);
             }
             catch (Exception x)
             {
-                Log.Error("CrashHandler", "Exception: " + x);
+                Log.ErrorException("Exception thrown inside Crash Handler: ", x);
             }
         }
     }

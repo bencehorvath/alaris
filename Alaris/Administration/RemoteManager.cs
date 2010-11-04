@@ -4,6 +4,7 @@ using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Http;
 using Alaris.Irc;
+using NLog;
 
 namespace Alaris.Administration
 {
@@ -17,6 +18,9 @@ namespace Alaris.Administration
         private Connection _connection;
         private List<string> _channels;
         private bool _inited;
+
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
         ///<summary>
         /// Run a remote notice method.
         ///</summary>
@@ -24,7 +28,7 @@ namespace Alaris.Administration
         ///<param name="message"></param>
         public void RemoteNotice(string module, string message)
         {
-            Log.Notice(module,message);
+            Log.Info("{0}: {1}", module, message);
         }
 
         ///<summary>
@@ -37,7 +41,7 @@ namespace Alaris.Administration
 
             if(!pass.Equals(AlarisBot.GetBot().RemotePassword, StringComparison.InvariantCultureIgnoreCase))
             {
-                Log.Warning("Remote", "Connection attempt without valid password!");
+                Log.Warn("Remote connection attempt without valid password!");
                 _inited = false;
                 return false;
             }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Alaris.API;
 using Alaris.Irc;
+using NLog;
 
 namespace Alaris.Commands
 {
@@ -18,6 +19,8 @@ namespace Alaris.Commands
         public static string CommandPrefix { get; set; }
 
         private readonly static Dictionary<AlarisCommand, AlarisMethod> CommandMethodMap = new Dictionary<AlarisCommand, AlarisMethod>();
+
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// This methods loads every method marked as a command and maps it to the specified command.
@@ -54,7 +57,7 @@ namespace Alaris.Commands
                 }
             }
 
-            Log.Success("CommandManager", string.Format("Created {0} mapping(s).", CommandMethodMap.Count));
+            Log.Info("Created {0} command mapping(s)", CommandMethodMap.Count);
         }
 
         /// <summary>
@@ -72,11 +75,11 @@ namespace Alaris.Commands
                     return;
 
                 var commandText = message.Remove(0, 1); // remove prefix
-                Log.Notice("CommandManager", string.Format("Checking for command: {0}", commandText));
+                Log.Info("Checking for command: {0}", commandText);
 
                 if(CommandMethodMap.Count <= 5)
                     foreach (var entry in CommandMethodMap)
-                        Log.Notice("CommandManager", "Mapping contains: " + entry.Key.Command);
+                        Log.Info("Mapping contains command: {0}", entry.Key.Command);
 
 
                 var wr = commandText.Split(' ');
@@ -107,9 +110,8 @@ namespace Alaris.Commands
                 if (perm == CommandPermission.Admin && !Utilities.IsAdmin(user))
                     return;
 
-                Log.Notice("CommandManager",
-                           string.Format("It {0} parameterized. It is about to be called with {1} params",
-                                         (handler.IsParameterized ? "is" : "is not"), parameters.Count));
+                Log.Info("The handler {0} parameterized. It is about to be called with {1} params",
+                         (handler.IsParameterized ? "is" : "is not"), parameters.Count);
 
                 var mp = new AlarisMainParameter
                              {
@@ -144,8 +146,8 @@ namespace Alaris.Commands
                                           ? new object[] {mp, parameters.ToArray()}
                                           : new object[] {mp};*/
 
-                Log.Notice("CommandManager", string.Format("Invoking handler method ({0}). ({1})", handler.Method.Name, parl.Count));
 
+                Log.Info("Invoking command handler method ({0}) ({1})", handler.Method.Name, parl.Count);
                 
 
                 handler.Method.Invoke(null, parl.ToArray());
@@ -153,7 +155,7 @@ namespace Alaris.Commands
             }
             catch(Exception x)
             {
-                Log.Error("CommandManager", x.Message);
+                Log.ErrorException(string.Format("Exception thrown during command recognition ({0})", x.Message), x);
                 return;
             }
         }

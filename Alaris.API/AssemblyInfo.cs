@@ -18,7 +18,7 @@ using System.Runtime.InteropServices;
 // The form "{Major}.{Minor}.*" will automatically update the build and revision,
 // and "{Major}.{Minor}.{Build}.*" will update just the revision.
 
-[assembly: AssemblyVersion("5.0.0.*")]
+[assembly: AssemblyVersion("5.2.*")]
 
 // The following attributes are used to specify the signing key for the assembly, 
 // if desired. See the Mono documentation for more information about signing.
@@ -27,4 +27,4 @@ using System.Runtime.InteropServices;
 //[assembly: AssemblyKeyFile("")]
 
 [assembly: GuidAttribute("863BD649-3495-410F-B6B9-204E62256297")]
-[assembly: AssemblyFileVersionAttribute("5.0.0.0")]
+[assembly: AssemblyFileVersionAttribute("5.2.0.0")]

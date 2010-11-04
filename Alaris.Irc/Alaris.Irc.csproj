@@ -129,7 +129,6 @@ Thanks to Thresher</Description>
     <Compile Include="Delegates\Requests\ListEventHandler.cs" />
     <Compile Include="Delegates\Special\LusersEventHandler.cs" />
     <Compile Include="Delegates\Server\MotdEventHandler.cs" />
-    <Compile Include="Log.cs" />
     <Compile Include="NameGenerator.cs" />
     <Compile Include="Delegates\Server\NickErrorEventHandler.cs" />
     <Compile Include="Delegates\Server\NickEventHandler.cs" />
@@ -181,6 +180,7 @@ Thanks to Thresher</Description>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib" />
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
     </Reference>

@@ -3,6 +3,7 @@ using System.IO;
 using System.Net.Sockets;
 using System.Threading;
 using System.Diagnostics;
+using NLog;
 
 
 namespace Alaris.Irc
@@ -21,6 +22,8 @@ namespace Alaris.Irc
 		private static string _username;
 		private const string Reply = " : USERID : UNIX : ";
 		private const int IdentdPort = 113;
+
+	    private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
 		static Identd() 
 		{
@@ -46,13 +49,14 @@ namespace Alaris.Irc
 				{
 					throw new Exception("Identd already started.");
 				}
-                Log.Notice("Alaris", "Setting up connection...");
+
+                
 				_running = true;
 				_username = userName;
 				var socketThread = new Thread(Run) {Name = "Identd"};
 			    socketThread.Start();
 
-                Log.Success("Identd", "Service daemon running.");
+                Log.Info("Identd Service daemon running.");
                 
 			}
 		}

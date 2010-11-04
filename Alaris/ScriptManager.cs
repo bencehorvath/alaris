@@ -6,7 +6,7 @@ using Alaris.Irc.Delegates.Channel;
 using Alaris.Irc.Delegates.Disconnect;
 using Alaris.Irc.Delegates.Messages;
 using Alaris.Irc.Delegates.Server;
-using Alaris.Threading;
+using NLog;
 
 
 namespace Alaris
@@ -15,12 +15,14 @@ namespace Alaris
     ///   A script manager for the IRC connections.
     ///   Loads plugins, manages events etc.
     /// </summary>
-    public sealed class ScriptManager : IThreadContext
+    public sealed class ScriptManager
     {
         private readonly List<string> _channels = new List<string>();
         private readonly Guid _guid;
         private readonly string _scriptsPath;
         private LuaEngine.LuaEngine _luaEngine;
+
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Gets the Lua engine.
@@ -83,7 +85,7 @@ namespace Alaris
         {
             if(Singleton<AlarisBot>.Instance.LuaEnabled)
                 _luaEngine = new LuaEngine.LuaEngine(ref _connection, Path.Combine(_scriptsPath, "lua"));
-            Log.Debug("ScriptManager", "Lua support is disabled.");
+            Log.Info("Lua support is disabled.");
         }
 
         /// <summary>
@@ -92,7 +94,7 @@ namespace Alaris
         /// </summary>
         ~ScriptManager()
         {
-            Log.Debug("ScriptManager", "~ScriptManager()");
+            Log.Trace("~ScriptManager()");
         }
 
         /// <summary>

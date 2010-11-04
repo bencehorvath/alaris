@@ -1,18 +1,25 @@
 using System;
 using System.IO;
+using System.Net.Mime;
 using System.Threading;
 using Alaris.API;
 using Alaris.Irc;
+using NLog;
 
 
 namespace Alaris
 {
     internal static class Entry
     {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
         private static void Main(string[] args)
         {
+            ThreadPool.SetMaxThreads(40, 20);
+            ThreadPool.SetMinThreads(4, 2);
+
             // setup console.
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            //Console.ForegroundColor = ConsoleColor.Cyan;
 
             Console.WriteLine("Welcome to Alaris!");
             Console.WriteLine("Version: {0}", Utilities.BotVersion);
@@ -25,9 +32,9 @@ namespace Alaris
 
             if (!File.Exists(conf))
             {
-                Log.LargeWarning("The required configuration file is not found!");
+                Log.Warn("The required configuration file is not found!");
                 Thread.Sleep(3000);
-                Log.Error("Alaris", "Terminating...");
+                Log.Info("Terminating");
                 return;
             }
             
@@ -36,15 +43,17 @@ namespace Alaris
             Console.CancelKeyPress += (sender, e) => sBot.Disconnect("Daemon killed.");
 
 
-            sBot.Pool.Enqueue(sBot);
-
+            //sBot.Run();
+            ThreadPool.QueueUserWorkItem(b => sBot.Run());
 
             AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
                                                               {
-                                                                  Log.LargeWarning("Unhandled Exception thrown.");
-                                                                  Log.Error("UnhandledException", eventArgs.ExceptionObject.ToString());
-                                                                  
+                                                                  Log.Warn("Unhandled Exception thrown.");
+                                                                  Log.ErrorException("Unhandled exception has been thrown", eventArgs.ExceptionObject as Exception);
+                                                                 
                                                               };
+
+            
         }
     }
 }

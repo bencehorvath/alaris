@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Alaris.API.Database;
 using Alaris.Irc;
+using NLog;
 
 namespace Alaris.API
 {
@@ -34,6 +35,8 @@ namespace Alaris.API
         public static string AdminHost { get; set; }
 
         private static readonly object SendLock = new object();
+
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Adminsitrator list.
@@ -61,7 +64,7 @@ namespace Alaris.API
         /// </param>
         public static void SendSysStats(ref Connection connection, string chan)
         {
-            Log.Notice("Alaris", "System info request.");
+            Log.Info("System info request.");
             var hostname = Environment.MachineName;
             var username = Environment.UserName;
 
@@ -72,7 +75,8 @@ namespace Alaris.API
             connection.Sender.PublicMessage(chan,
                                             IrcConstants.Bold + "Hosted by " + IrcConstants.Normal + username +
                                             " on machine " + hostname);
-            connection.Sender.PublicMessage(chan, IrcConstants.Bold + "OS version: " + IrcConstants.Normal + os);
+            //connection.Sender.PublicMessage(chan, IrcConstants.Bold + "OS version: " + IrcConstants.Normal + os);
+            connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Thread count: " + IrcConstants.Normal + Process.GetCurrentProcess().Threads.Count);
             connection.Sender.PublicMessage(chan,
                                             IrcConstants.Bold + "CPU: " + IrcConstants.Normal + GetCpuId() + " | " +
                                             Environment.ProcessorCount + " cores.");
@@ -102,7 +106,6 @@ namespace Alaris.API
         /// </param>
         public static void SendInfo(ref Connection connection, string chan)
         {
-            Log.Notice("Alaris", "Info request.");
             connection.Sender.PublicMessage(chan, IrcConstants.Cyan + "Alaris " + BotVersion);
             connection.Sender.PublicMessage(chan, IrcConstants.DarkGreen + "Developer: Twl");
         }

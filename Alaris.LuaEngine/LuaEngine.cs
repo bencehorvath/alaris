@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Alaris.Irc;
 using LuaInterface;
+using NLog;
 
 
 namespace Alaris.LuaEngine
@@ -20,6 +21,8 @@ namespace Alaris.LuaEngine
         private readonly LuaFunctions _functions;
         private readonly Connection _connection;
         private readonly FileSystemWatcher _watcher;
+
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         #region Properties
 
@@ -43,7 +46,7 @@ namespace Alaris.LuaEngine
         /// <param name="scriptsPath">The directory where the Lua scripts are located.</param>
         public LuaEngine(ref Connection conn, string scriptsPath)
         {
-            Log.Notice("LuaEngine", "Initializing...");
+            Log.Info("Initializing Lua engine");
             _lua = new Lua();
             _luaFunctions = new Dictionary<string, LuaFunctionDescriptor>();
             _scriptPath = scriptsPath;
@@ -87,9 +90,12 @@ namespace Alaris.LuaEngine
 
             foreach(var file in di.GetFiles("*.lua").AsParallel())
             {
-                Log.Notice("LuaEngine", string.Format("Loading script: {0}", file.Name));
+                Log.Info("Loading Lua script: {0}", file.Name);
                 try {_lua.DoFile(file.FullName);}
-                catch(Exception x) { Log.Error("LuaEngine", string.Format("Couldn't load: {0} ({1})", file.Name, x.Message)); }
+                catch(Exception x)
+                {
+                    Log.ErrorException(string.Format("Exception thrown while loading Lua script {0}", file.Name), x);
+                }
                 
             }
         }

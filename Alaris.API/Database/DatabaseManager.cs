@@ -1,6 +1,7 @@
 using System.Data;
 using System.Data.SQLite;
 using Alaris.Irc;
+using NLog;
 
 namespace Alaris.API.Database
 {
@@ -11,6 +12,7 @@ namespace Alaris.API.Database
     {
 
 	    private static SQLiteConnection _connection;
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Gets the database connection.
@@ -34,12 +36,12 @@ namespace Alaris.API.Database
         /// <param name="database"></param>
 		public static void Initialize(string database)
 		{
-		    Log.Notice("DatabaseManager", "Reading local database...");
+            Log.Info("Reading local database");
 			Connection = new SQLiteConnection("Data Source=Alaris.s3db");
 
             //_connection.ChangeDatabase(database);
 
-            Log.Success("DatabaseManager", "Databases are correctly set up.");
+            Log.Info("Databases a correctly set up");
 
 		}
 
@@ -70,7 +72,7 @@ namespace Alaris.API.Database
             }
             catch(SQLiteException x)
             {
-                Log.Error("DatabaseManager", string.Format("Couldn't execute query. ({0})", x.Message));
+                Log.ErrorException("Couldn't execute SQL query.", x);
                 return null;
             }
         }

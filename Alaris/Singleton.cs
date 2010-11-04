@@ -76,7 +76,7 @@ namespace Alaris
                             try
                             {
                                 // Binding flags exclude public constructors.
-                                constructor = typeof (T).GetConstructor(BindingFlags.Instance | BindingFlags.NonPublic,
+                                constructor = typeof(T).GetConstructor(BindingFlags.Instance | BindingFlags.NonPublic,
                                                                         null, new Type[0], null);
                             }
                             catch (Exception exception)
@@ -87,16 +87,31 @@ namespace Alaris
                             if (constructor == null || constructor.IsAssembly) // Also exclude internal constructors.
                                 throw new SingletonException(
                                     string.Format("A private or protected constructor is missing for '{0}'.",
-                                                  typeof (T).Name));
+                                                  typeof(T).Name));
 
-                            _instance = (T) constructor.Invoke(null);
+                            _instance = (T)constructor.Invoke(null);
                         }
                     }
 
                 return _instance;
             }
-        }
+
 
         #endregion Properties
+        }
+
+    }
+
+    /// <summary>
+    /// Classing implementing the singleton pattern thus having an Instance property.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public interface ISingleton<out T>
+        where T: class
+    {
+        /// <summary>
+        /// Object's singleton instance.
+        /// </summary>
+        T Instance { get; }
     }
 }

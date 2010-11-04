@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Alaris.Irc;
 using LuaInterface;
+using NLog;
 
 namespace Alaris.LuaEngine
 {
@@ -12,6 +13,8 @@ namespace Alaris.LuaEngine
     /// </summary>
     public static class LuaHelper
     {
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Registers Lua functions found in the specified target.
         /// </summary>
@@ -84,7 +87,7 @@ namespace Alaris.LuaEngine
             }
             catch(Exception x)
             {
-                Log.Error("LuaEngine", string.Format("Lua compile error. ({0})", x.Message));
+                Log.ErrorException("Lua compile error.", x);
             }
         }
     }

@@ -5,7 +5,7 @@ xsi:schemaLocation="http://github.com/Twl/alaris Alaris.xsd">
   <config>
     <irc>
       <server>irc.rizon.net</server>
-      <nickname>alaris</nickname>
+      <nickname>Alaris</nickname>
       <nickserv>nothing</nickserv>
       <channels>#skullbot,#hun_bot</channels>
       <!-- Main admin. Optional ones can be added on-the-fly. -->
