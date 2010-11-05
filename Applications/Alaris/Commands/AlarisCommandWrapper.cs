@@ -17,6 +17,7 @@ namespace Alaris.Commands
         /// </summary>
         public CommandPermission Permission { get; protected set; }
 
+
         /// <summary>
         /// Marks a method as an Alaris command.
         /// </summary>
@@ -32,7 +33,7 @@ namespace Alaris.Commands
     /// <summary>
     /// Alaris IRC command.
     /// </summary>
-    public sealed class AlarisCommand : IEquatable<AlarisCommand>
+    public sealed class AlarisCommandWrapper : IEquatable<AlarisCommandWrapper>
     {
         /// <summary>
         /// The command text.
@@ -44,13 +45,18 @@ namespace Alaris.Commands
         public CommandPermission Permission { get; set; }
 
         /// <summary>
+        /// Gets or sets whether the parameter count is unspecified or not.
+        /// </summary>
+        public bool IsParameterCountUnspecified { get; set; }
+
+        /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
         /// </summary>
         /// <returns>
         /// true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
         /// </returns>
         /// <param name="other">An object to compare with this object.</param>
-        public bool Equals(AlarisCommand other)
+        public bool Equals(AlarisCommandWrapper other)
         {
             return (Command == other.Command && Permission == other.Permission);
         }

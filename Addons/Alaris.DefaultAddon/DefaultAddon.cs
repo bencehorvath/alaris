@@ -30,6 +30,7 @@ namespace Alaris.DefaultAddon
                                                                           {
                                                                               _connection.Sender.PublicMessage(chn, "Hello from DefaultAddon!");
                                                                           }
+
                                                                       });
         }
 

@@ -141,7 +141,7 @@
     <Compile Include="Alaris.cs" />
     <Compile Include="API.cs" />
     <Compile Include="Commands\AdvancedCommands.cs" />
-    <Compile Include="Commands\AlarisCommand.cs" />
+    <Compile Include="Commands\AlarisCommandWrapper.cs" />
     <Compile Include="Commands\AlarisMainParameter.cs" />
     <Compile Include="Commands\AlarisMethod.cs" />
     <Compile Include="Commands\BasicCommands.cs" />
@@ -200,7 +200,7 @@
     </Content>
     <None Include="app.config" />
     <None Include="bin\Debug\alaris.conf" />
-    <None Include="..\Doxyfile" />
+    <None Include="Doxyfile" />
     <None Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

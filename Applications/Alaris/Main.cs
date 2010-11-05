@@ -16,7 +16,7 @@ namespace Alaris
         private static void Main(string[] args)
         {
             ThreadPool.SetMaxThreads(40, 20);
-            ThreadPool.SetMinThreads(4, 2);
+            ThreadPool.SetMinThreads(20, 10);
 
             // setup console.
             //Console.ForegroundColor = ConsoleColor.Cyan;

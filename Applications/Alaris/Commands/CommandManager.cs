@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -18,7 +19,7 @@ namespace Alaris.Commands
         /// </summary>
         public static string CommandPrefix { get; set; }
 
-        private readonly static Dictionary<AlarisCommand, AlarisMethod> CommandMethodMap = new Dictionary<AlarisCommand, AlarisMethod>();
+        private readonly static Dictionary<AlarisCommandWrapper, AlarisMethod> CommandMethodMap = new Dictionary<AlarisCommandWrapper, AlarisMethod>();
 
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
@@ -44,22 +45,32 @@ namespace Alaris.Commands
 
                     foreach (var method in methods)
                     {
+                        var passEverything = false;
+
                         foreach (var attribute in Attribute.GetCustomAttributes(method))
                         {
                             if (attribute.GetType() == typeof (AlarisCommandAttribute) ||
                                 attribute.GetType() == typeof (ParameterizedAlarisCommand))
                             {
-                                if (attribute.GetType() == typeof (ParameterizedAlarisCommand) &&
-                                    method.GetParameters().Length !=
-                                    (((ParameterizedAlarisCommand) attribute).ParameterCount + 1))
-                                    continue;
+                                if (attribute.GetType() == typeof (ParameterizedAlarisCommand))
+                                {
+                                    var patt = (ParameterizedAlarisCommand) attribute;
+
+                                    if (patt.IsParameterCountUnspecified)
+                                        passEverything = true;
+
+                                    else if(method.GetParameters().Length != patt.ParameterCount + 1)
+                                        continue;
+                                }
+                                    
 
                                 var attr = (AlarisCommandAttribute) attribute;
 
-                                CommandMethodMap.Add(new AlarisCommand
+                                CommandMethodMap.Add(new AlarisCommandWrapper
                                                          {
                                                              Command = attr.Command,
-                                                             Permission = attr.Permission
+                                                             Permission = attr.Permission,
+                                                             IsParameterCountUnspecified = passEverything
                                                          },
                                                      new AlarisMethod(method, attr, attr is ParameterizedAlarisCommand));
 
@@ -106,11 +117,13 @@ namespace Alaris.Commands
 
                 var perm = CommandPermission.Normal;
                 AlarisMethod handler = null;
+                AlarisCommandWrapper cmd = null;
 
                 foreach (var entry in CommandMethodMap.Where(entry => entry.Key.Command.Equals(command, StringComparison.InvariantCultureIgnoreCase)))
                 {
                     perm = entry.Key.Permission;
                     handler = entry.Value;
+                    cmd = entry.Key;
                 }
 
                 if (handler == null)
@@ -140,14 +153,18 @@ namespace Alaris.Commands
                 {
                     parl.Add(mp);
 
-                    parl.AddRange(parameters);
+                    
 
-                    var pdiff = handler.Method.GetParameters().Length - (parl.Count + 1);
-
-                    if(pdiff > 0)
+                    if (!cmd.IsParameterCountUnspecified)
                     {
-                        for(var i = 0; i <= pdiff; ++i)
-                            parl.Add(null);
+                        parl.AddRange(parameters);
+                        var pdiff = handler.Method.GetParameters().Length - (parl.Count + 1);
+
+                        if (pdiff > 0)
+                        {
+                            for (var i = 0; i <= pdiff; ++i)
+                                parl.Add(null);
+                        }
                     }
 
                 }
@@ -159,15 +176,24 @@ namespace Alaris.Commands
                                           : new object[] {mp};*/
 
 
-                Log.Info("Invoking command handler method ({0}) ({1})", handler.Method.Name, parl.Count);
                 
+                
+                if(handler.IsParameterized && cmd.IsParameterCountUnspecified)
+                {
+                    var prms = new ArrayList {mp, parameters.ToArray()};
+                    Log.Info("Invoking command handler method ({0}) ({1})", handler.Method.Name, prms.Count);
+                    handler.Method.Invoke(null, prms.ToArray());
+                    return;
+                }
+
+                Log.Info("Invoking command handler method ({0}) ({1})", handler.Method.Name, parl.Count);
 
                 handler.Method.Invoke(null, parl.ToArray());
 
             }
             catch(Exception x)
             {
-                Log.ErrorException(string.Format("Exception thrown during command recognition ({0})", x.Message), x);
+                Log.ErrorException(string.Format("Exception thrown during command recognition ({0})", x), x);
                 return;
             }
         }

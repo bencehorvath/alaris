@@ -41,12 +41,11 @@ namespace Alaris
             {
                 try
                 {
-                    foreach (var task in
-                        urlsin.Select(url1 => new Task(() => Utilities.HandleWebTitle(ref _connection, chan, url1))))
+
+                    foreach(var url in urlsin)
                     {
-                        task.Start();
-                        
-                        Thread.Sleep(400);
+                        var uri = url;
+                        ThreadPool.QueueUserWorkItem(o => Utilities.HandleWebTitle(ref _connection, chan, uri));
                     }
 
                     return;
@@ -59,7 +58,8 @@ namespace Alaris
                 }
             }
 
-            CommandManager.HandleCommand(user, chan, msg);
+            var cmsg = msg;
+            ThreadPool.QueueUserWorkItem(c => CommandManager.HandleCommand(user, chan, cmsg));
 
             if(msg.StartsWith("@calc ", StringComparison.InvariantCultureIgnoreCase) || msg.StartsWith("@c ", StringComparison.InvariantCultureIgnoreCase))
             {
