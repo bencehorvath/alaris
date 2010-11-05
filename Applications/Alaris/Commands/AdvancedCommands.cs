@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using Alaris.API.Crypt;
 using Alaris.API.Database;
 
@@ -56,11 +57,16 @@ namespace Alaris.Commands
         /// Handles AES commands.
         /// </summary>
         /// <param name="mp"></param>
-        /// <param name="action"></param>
-        /// <param name="text"></param>
-        [ParameterizedAlarisCommand("aes", CommandPermission.Normal, 2)]
-        public static void HandleAesCommands(AlarisMainParameter mp, string action, string text)
+        /// <param name="parameters"></param>
+        [ParameterizedAlarisCommand("aes", CommandPermission.Normal, 0, true)]
+        public static void HandleAesCommands(AlarisMainParameter mp, params string[] parameters)
         {
+            var action = parameters[0];
+            var sb = new StringBuilder();
+            for(var i = 1; i < parameters.Length; ++i)
+                sb.AppendFormat("{0} ", parameters[i]);
+
+            var text = sb.ToString();
             if (string.IsNullOrEmpty(action) || string.IsNullOrEmpty(text))
                 return;
 
@@ -69,6 +75,19 @@ namespace Alaris.Commands
             {
                 mp.Bot.SendMsg(mp.Channel, Rijndael.DecryptString(text));
             }
+            else if(action.Equals("encrypt", StringComparison.InvariantCultureIgnoreCase))
+                HandleAesEncryptCommand(mp, text);
+        }
+
+        /// <summary>
+        /// Handles the Rijndael encrypt command.
+        /// </summary>
+        /// <param name="mp"></param>
+        /// <param name="text"></param>
+        [AlarisSubCommand("aes encrypt")]
+        public static void HandleAesEncryptCommand(AlarisMainParameter mp, string text)
+        {
+            mp.Bot.SendMsg(mp.Channel, Rijndael.EncryptString(text));   
         }
     }
 }

@@ -30,6 +30,34 @@ namespace Alaris.Commands
         }
     }
 
+    ///<summary>
+    /// Marks a method as an Alaris sub-command.
+    ///</summary>
+    [AttributeUsage(AttributeTargets.Method)]
+    public class AlarisSubCommandAttribute : Attribute
+    {
+        /// <summary>
+        /// Gets the command.
+        /// </summary>
+        public string Command { get; protected set; }
+        /// <summary>
+        /// Gets the command permission.
+        /// </summary>
+        public CommandPermission Permission { get; protected set; }
+
+
+        /// <summary>
+        /// Marks a method as an Alaris sub-command.
+        /// </summary>
+        /// <param name="command">The command corresponding to this method.</param>
+        /// <param name="permission">Command's access permission</param>
+        public AlarisSubCommandAttribute(string command, CommandPermission permission = CommandPermission.Normal)
+        {
+            Command = command;
+            Permission = permission;
+        }
+    }
+
     /// <summary>
     /// Alaris IRC command.
     /// </summary>

@@ -20,6 +20,7 @@ namespace Alaris.Commands
         public static string CommandPrefix { get; set; }
 
         private readonly static Dictionary<AlarisCommandWrapper, AlarisMethod> CommandMethodMap = new Dictionary<AlarisCommandWrapper, AlarisMethod>();
+        private readonly static Dictionary<AlarisCommandWrapper, AlarisMethod> SubCommandMethodMap = new Dictionary<AlarisCommandWrapper, AlarisMethod>();
 
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
@@ -75,12 +76,35 @@ namespace Alaris.Commands
                                                      new AlarisMethod(method, attr, attr is ParameterizedAlarisCommand));
 
                             }
+                            else if(attribute.GetType() == typeof(AlarisSubCommandAttribute) ||
+                                attribute.GetType() == typeof(ParameterizedAlarisSubCommand))
+                            {
+                                if(attribute.GetType() == typeof(ParameterizedAlarisSubCommand))
+                                {
+                                    var patt = (ParameterizedAlarisSubCommand) attribute;
+
+                                    if (patt.IsParameterCountUnspecified)
+                                        passEverything = true;
+                                    else if (method.GetParameters().Length != patt.ParameterCount + 1)
+                                        continue;
+                                }
+
+                                var attr = (AlarisSubCommandAttribute)attribute;
+
+                                CommandMethodMap.Add(new AlarisCommandWrapper
+                                {
+                                    Command = attr.Command,
+                                    Permission = attr.Permission,
+                                    IsParameterCountUnspecified = passEverything
+                                },
+                                                     new AlarisMethod(method, attr, attr is ParameterizedAlarisSubCommand));
+                            }
                         }
                     }
                 }
             }
 
-            Log.Info("Created {0} command mapping(s)", CommandMethodMap.Count);
+            Log.Info("Created {0} command mapping(s) and {1} sub-command mapping(s)", CommandMethodMap.Count, SubCommandMethodMap.Count);
         }
 
         /// <summary>
@@ -197,5 +221,6 @@ namespace Alaris.Commands
                 return;
             }
         }
+
     }
 }

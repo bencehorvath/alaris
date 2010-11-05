@@ -40,9 +40,6 @@ namespace Alaris
         private readonly CrashHandler _sCrashHandler = Singleton<CrashHandler>.Instance;
         private readonly Guid _guid = Guid.NewGuid();
         private readonly string _configfile;
-        private const int ListenerPort = 35221;
-        private const string ACSHost = "127.0.0.1";
-        private const int ACSPort = 35220;
         private string _scriptsDir;
 
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
@@ -232,17 +229,6 @@ namespace Alaris
 
    
             Log.Info("Spawning another thread to continue startup.");
-        }
-
-        /// <summary>
-        ///   Gets the listener port.
-        /// </summary>
-        /// <returns>
-        ///   The listener port.
-        /// </returns>
-        public static int GetListenerPort()
-        {
-            return ListenerPort;
         }
 
         /// <summary>
