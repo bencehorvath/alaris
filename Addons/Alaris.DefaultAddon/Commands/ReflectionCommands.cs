@@ -41,8 +41,8 @@ namespace Alaris.DefaultAddon.Commands
                 {
                     var ret = method.Invoke(AlarisBot.Instance, pars.ToArray());
 
-                    if(method.ReturnType == typeof(string))
-                        mp.IrcConnection.Sender.PublicMessage(mp.Channel, ret as string);
+
+                    mp.IrcConnection.Sender.PublicMessage(mp.Channel, ret.ToString());
                 }
                 catch(Exception x)
                 {
