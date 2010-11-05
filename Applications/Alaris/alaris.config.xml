@@ -1,38 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<alaris xmlns="http://github.com/Twl/alaris"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://github.com/Twl/alaris Alaris.xsd">
-  <config>
-    <irc>
-      <server>irc.rizon.net</server>
-      <nickname>Alaris</nickname>
-      <nickserv>nothing</nickserv>
-      <channels>#skullbot,#hun_bot</channels>
+<Alaris xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://github.com/Twl/alaris">
+  <Config>
+    <Irc>
+      <Server>irc.rizon.net</Server>
+      <Nickname>Alaris</Nickname>
+      <NickServ>
+        <Enabled>false</Enabled>
+        <Password>nothing</Password>
+      </NickServ>
+      <Channels>#skullbot,#hun_bot</Channels>
       <!-- Main admin. Optional ones can be added on-the-fly. -->
-      <admin>
-        <nick>Twl</nick>
-        <user>Twl</user>
-        <host>evil.from.behind</host>
-      </admin>
-    </irc>
+      <Admin>
+        <Nick>Twl</Nick>
+        <User>Twl</User>
+        <Host>evil.from.behind</Host>
+      </Admin>
+    </Irc>
     <!-- Change only if you know what you're doing. -->
-    <database>Alaris</database>
-    <scripts>
-      <LUA>Disabled</LUA>
-      <directory>scripts</directory>
+    <Database>Alaris</Database>
+    <Scripts>
+      <Lua>false</Lua>
+      <Directory>scripts</Directory>
       <AdditionalReferences></AdditionalReferences>
-    </scripts>
-    <addons>
-      <enabled>true</enabled>
-      <directory>Addons</directory>
-    </addons>
-    <localization>
-      <locale>huHU</locale>
-    </localization>
-    <remote>
-      <port>5564</port>
-      <name>RemoteManager</name>
-      <password>alaris00</password>
-    </remote>
-  </config>
-</alaris>
+    </Scripts>
+    <Addons>
+      <Enabled>true</Enabled>
+      <Directory>Addons</Directory>
+    </Addons>
+    <Localization>
+      <Locale>huHU</Locale>
+    </Localization>
+    <Remote>
+      <Port>5564</Port>
+      <Name>RemoteManager</Name>
+      <Password>alaris00</Password>
+    </Remote>
+    <CLI>
+      <Enabled>false</Enabled>
+    </CLI>
+  </Config>
+</Alaris>

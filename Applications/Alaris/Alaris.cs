@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Schema;
+using System.Xml.Serialization;
 using Alaris.Administration;
 using Alaris.API;
 using Alaris.API.Database;
+using Alaris.CommandLine;
 using Alaris.Commands;
 using Alaris.Config;
 using Alaris.Exceptions;
 using Alaris.Irc;
 using Alaris.Irc.Ctcp;
+using Alaris.Xml;
 using NLog;
+using CLI = Alaris.Xml.CLI;
 
 namespace Alaris
 {
@@ -100,12 +104,22 @@ namespace Alaris
         public string AddonDirectory { get; private set; }
 
         /// <summary>
+        /// Gets whether the CLI is enabled or not.
+        /// </summary>
+        public bool CLIEnabled { get; private set; }
+
+        /// <summary>
         /// Gets the list of channels the bot is on.
         /// </summary>
         public List<string> Channels
         {
             get { return _channels; }
         }
+
+        /// <summary>
+        /// The configuration class.
+        /// </summary>
+        public AlarisConfig Config { get; private set; }
 
         /// <summary>
         /// Gets the IRC connection.
@@ -139,7 +153,7 @@ namespace Alaris
             var cargs = new ConnectionArgs(_nick, _server);
             
             Log.Info("Running huge amount of parallel tasks");
-
+            
             try
             {
                 
@@ -282,68 +296,49 @@ namespace Alaris
 
             Log.Info("Reading configuration file");
 
-            var config = new XmlSettings(configfile, "alaris");
-
-            config.Document.Schemas.Add("http://github.com/Twl/alaris", "Alaris.xsd");
-
-            try
+            using(var reader = new StreamReader(configfile))
             {
-
-                config.Document.Validate((sender, args) =>
-                                             {
-                                                 Log.Debug("XML", args.Message);
-
-                                                 if (args.Exception != null)
-                                                 {
-                                                     Log.Error("Config", args.Exception.Message);
-                                                 }
-
-                                             });
-            }
-            catch(XmlSchemaValidationException x)
-            {
-                Log.ErrorException("Config file is invalid!", x);
-                throw new ConfigFileInvalidException(x.Message);
+                var serializer = new XmlSerializer(typeof (AlarisConfig));
+                Config = (AlarisConfig)serializer.Deserialize(reader);
             }
 
-            _server = config.GetSetting("config/irc/server", "irc.rizon.net");
-            _nick = config.GetSetting("config/irc/nickname", "Alaris");
-            _nspw = config.GetSetting("config/irc/nickserv", "nothing");
+            _server = Config.Config.Irc.Server;
+            _nick = Config.Config.Irc.Nickname;
 
-            _nickserv = (_nspw != "nothing");
+            _nickserv = Config.Config.Irc.NickServ.Enabled;
 
-            var chans = config.GetSetting("config/irc/channels", "#skullbot,#hun_bot");
+            if (_nickserv)
+                _nspw = Config.Config.Irc.NickServ.Password;
+
+            var chans = Config.Config.Irc.Channels;
             var clist = chans.Split(',');
 
             foreach (var chan in clist.Where(Rfc2812Util.IsValidChannelName).AsParallel())
                 _channels.Add(chan);
 
-            Utilities.AdminNick = config.GetSetting("config/irc/admin/nick", "Twl");
-            Utilities.AdminUser = config.GetSetting("config/irc/admin/user", "Twl");
-            Utilities.AdminHost = config.GetSetting("config/irc/admin/host", "evil.from.behind");
+            Utilities.AdminNick = Config.Config.Irc.Admin.Nick;
+            Utilities.AdminUser = Config.Config.Irc.Admin.User;
+            Utilities.AdminHost = Config.Config.Irc.Admin.Host;
 
+            _scriptsDir = Config.Config.Scripts.Directory;
 
-            _scriptsDir = config.GetSetting("config/scripts/directory", "scripts");
+            LuaEnabled = Config.Config.Scripts.Lua;
 
-            DBName = config.GetSetting("config/database", "Alaris").ToUpper(CultureInfo.InvariantCulture);
+            DBName = Config.Config.Database;
 
-            LuaEnabled = config.GetSetting("config/scripts/LUA", "Disabled").Equals("Enabled");
-
-            AddonsEnabled = config.GetSetting("config/addons/enabled", "true").Equals("true",
-                                                                                      StringComparison.
-                                                                                          InvariantCultureIgnoreCase);
+            AddonsEnabled = Config.Config.Addons.Enabled;
 
             if (AddonsEnabled)
-                AddonDirectory = config.GetSetting("config/addons/directory", "Addons");
+                AddonDirectory = Config.Config.Addons.Directory;
 
-            Locale = config.GetSetting("config/localization/locale", "enGB");
-
-
+            Locale = Config.Config.Localization.Locale;
             Log.Debug("Current locale is {0}", Locale);
 
-            RemotePort = Convert.ToInt32(config.GetSetting("config/remote/port", "5564"));
-            RemoteName = config.GetSetting("config/remote/name", "RemoteManager");
-            RemotePassword = config.GetSetting("config/remote/password", "alaris00");
+            RemotePort = Config.Config.Remote.Port;
+            RemoteName = Config.Config.Remote.Name;
+            RemotePassword = Config.Config.Remote.Password;
+
+            CLIEnabled = Config.Config.CLI.Enabled;
 
             Log.Info("Config file successfully loaded and validated");
             _confdone = true;
@@ -395,6 +390,10 @@ namespace Alaris
             catch(InvalidOperationException)
             {
             }
+
+            // stop cli
+
+            CommandLine.CLI.Stop();
 
             Process.GetCurrentProcess().CloseMainWindow();
             Process.GetCurrentProcess().Close();

@@ -71,7 +71,7 @@ namespace Alaris
             }
             catch (Exception x)
             {
-                Log.ErrorException("Exception thrown inside Crash Handler: ", x);
+                Log.ErrorException("Exception thrown inside Crash Handler: " + x, x);
             }
         }
     }

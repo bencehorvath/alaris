@@ -7,70 +7,85 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
 
-  <xs:complexType name="admin">
+  <xs:complexType name="Admin">
     <xs:sequence>
-      <xs:element name="nick" type="xs:string" />
-      <xs:element name="user" type="xs:string" />
-      <xs:element name="host" type="xs:string" />
+      <xs:element name="Nick" type="xs:string" />
+      <xs:element name="User" type="xs:string" />
+      <xs:element name="Host" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="irc">
+  <xs:complexType name="NickServ">
     <xs:sequence>
-      <xs:element name="server" type="xs:string" />
-      <xs:element name="nickname" type="xs:string" />
-      <xs:element name="nickserv" type="xs:string" />
-      <xs:element name="channels" type="xs:string" />
-      <xs:element name="admin" type="admin" />
+      <xs:element name="Enabled" type="xs:boolean" />
+      <xs:element name="Password" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="scripts">
+  <xs:complexType name="Irc">
     <xs:sequence>
-      <xs:element name="LUA" type="xs:string" />
-      <xs:element name="directory" type="xs:string" />
+      <xs:element name="Server" type="xs:string" />
+      <xs:element name="Nickname" type="xs:string" />
+      <xs:element name="NickServ" type="NickServ" />
+      <xs:element name="Channels" type="xs:string" />
+      <xs:element name="Admin" type="Admin" />
+    </xs:sequence>
+  </xs:complexType>
+  
+
+  <xs:complexType name="Scripts">
+    <xs:sequence>
+      <xs:element name="Lua" type="xs:boolean" />
+      <xs:element name="Directory" type="xs:string" />
       <xs:element name="AdditionalReferences" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="addons">
+  <xs:complexType name="Addons">
     <xs:sequence>
-      <xs:element name="enabled" type="xs:boolean" />
-      <xs:element name="directory" type="xs:string" />
+      <xs:element name="Enabled" type="xs:boolean" />
+      <xs:element name="Directory" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="localization">
+  <xs:complexType name="Localization">
     <xs:sequence>
-      <xs:element name="locale" type="xs:string" />
+      <xs:element name="Locale" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="remote">
+  <xs:complexType name="Remote">
     <xs:sequence>
-      <xs:element name="port" type="xs:int" />
-      <xs:element name="name" type="xs:string" />
-      <xs:element name="password" type="xs:string" />
+      <xs:element name="Port" type="xs:int" />
+      <xs:element name="Name" type="xs:string" />
+      <xs:element name="Password" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="config">
+  <xs:complexType name="CLI">
     <xs:sequence>
-      <xs:element name="irc" type="irc" />
-      <xs:element name="database" type="xs:string" />
-      <xs:element name="scripts" type="scripts" />
-      <xs:element name="addons" type="addons" />
-      <xs:element name="localization" type="localization" />
-      <xs:element name="remote" type="remote" />
+      <xs:element name="Enabled" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="alaris">
+  <xs:complexType name="Config">
     <xs:sequence>
-      <xs:element name="config" type="config" />
+      <xs:element name="Irc" type="Irc" />
+      <xs:element name="Database" type="xs:string" />
+      <xs:element name="Scripts" type="Scripts" />
+      <xs:element name="Addons" type="Addons" />
+      <xs:element name="Localization" type="Localization" />
+      <xs:element name="Remote" type="Remote" />
+      <xs:element name="CLI" type="CLI" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:element name="alaris" type="alaris" />
+  <xs:complexType name="Alaris">
+    <xs:sequence>
+      <xs:element name="Config" type="Config" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Alaris" type="Alaris" />
   
 </xs:schema>

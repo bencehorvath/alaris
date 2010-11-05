@@ -149,6 +149,7 @@
     <Compile Include="Commands\CommandPermission.cs" />
     <Compile Include="Commands\ParameterizedAlarisCommand.cs" />
     <Compile Include="Commands\TestCommands.cs" />
+    <Compile Include="CommandLine\CLI.cs" />
     <Compile Include="Config\XmlConfig.cs" />
     <Compile Include="Exceptions\ScriptCollectionInvalidException.cs" />
     <Compile Include="Exceptions\ScriptCompileException.cs" />
@@ -169,6 +170,7 @@
     <Compile Include="Singleton.cs" />
     <Compile Include="Exceptions\SingletonException.cs" />
     <Compile Include="ClusterManager.cs" />
+    <Compile Include="Xml\AlarisConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Alaris.API\Alaris.API.csproj">
