@@ -20,6 +20,7 @@ namespace Alaris.Irc
     ///   This class parses messages received from the IRC server and
     ///   raises the appropriate event.
     /// </summary>
+    [Serializable]
     public sealed class Listener
     {
         /// <summary>

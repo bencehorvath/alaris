@@ -151,6 +151,7 @@
     <Compile Include="Commands\TestCommands.cs" />
     <Compile Include="CommandLine\CLI.cs" />
     <Compile Include="Config\XmlConfig.cs" />
+    <Compile Include="CrashDumper.cs" />
     <Compile Include="Exceptions\ScriptCollectionInvalidException.cs" />
     <Compile Include="Exceptions\ScriptCompileException.cs" />
     <Compile Include="Exceptions\ScriptTypeException.cs" />

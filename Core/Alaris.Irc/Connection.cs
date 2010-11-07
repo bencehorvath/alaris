@@ -24,6 +24,7 @@ namespace Alaris.Irc
     ///   This class manages the connection to the IRC server and provides
     ///   access to all the objects needed to send and receive messages.
     /// </summary>
+    [Serializable]
     public sealed class Connection : IDisposable
     {
         /// <summary>
@@ -41,18 +42,24 @@ namespace Alaris.Irc
 #if SSL
 		private SecureTcpClient client;
 #else
+        [NonSerialized]
         private TcpClient _client;
 #endif
 
         private readonly Regex _propertiesRegex;
         private readonly Listener _listener;
         private readonly Sender _sender;
+        [NonSerialized]
         private CtcpListener _ctcpListener;
+        [NonSerialized]
         private CtcpSender _ctcpSender;
+        [NonSerialized]
         private CtcpResponder _ctcpResponder;
         private bool _ctcpEnabled;
         private bool _dccEnabled;
+        [NonSerialized]
         private Thread _socketListenThread;
+        [NonSerialized]
         private StreamReader _reader;
         private DateTime _timeLastSent;
         //Connected and registered with IRC server
@@ -61,8 +68,10 @@ namespace Alaris.Irc
         private bool _connected;
         private bool _handleNickFailure;
         private readonly ArrayList _parsers;
+        [NonSerialized]
         private ServerProperties _properties;
 
+        [NonSerialized]
         private StreamWriter _writer;
         internal ConnectionArgs ConnectionArgs;
 

@@ -32,6 +32,7 @@ namespace Alaris.Irc
     ///     connection.Sender.PublicMessage("#thresher", "hello");
     ///   </code>
     /// </example>
+    [Serializable]
     public class Sender : CommandBuilder
     {
         /// <summary>

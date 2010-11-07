@@ -15,6 +15,7 @@ namespace Alaris
     /// <summary>
     ///   A class providing functions to run specific method in an exception-handled environment.
     /// </summary>
+    [Serializable]
     public class CrashHandler : IAlarisComponent
     {
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();

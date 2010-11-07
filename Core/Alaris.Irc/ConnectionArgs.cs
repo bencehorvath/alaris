@@ -1,10 +1,12 @@
+using System;
+
 namespace Alaris.Irc
 {
 	/// <summary>
 	/// A collection of parameters necessary to establish
 	/// an IRC connection.
 	/// </summary>
-	
+	[Serializable]
 	public struct ConnectionArgs
 	{
 		private string _realName;

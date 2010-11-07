@@ -9,6 +9,7 @@ namespace Alaris.Irc
     ///   by its subclasses to build correctly formatted messages for
     ///   the IRC server. It is never itself instantiated.
     /// </summary>
+    [Serializable]
     public abstract class CommandBuilder
     {
         // Buffer to hold commands 

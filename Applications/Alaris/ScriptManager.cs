@@ -15,13 +15,16 @@ namespace Alaris
     ///   A script manager for the IRC connections.
     ///   Loads plugins, manages events etc.
     /// </summary>
+    [Serializable]
     public sealed class ScriptManager
     {
         private readonly List<string> _channels = new List<string>();
         private readonly Guid _guid;
         private readonly string _scriptsPath;
+        [NonSerialized]
         private LuaEngine.LuaEngine _luaEngine;
 
+        [NonSerialized]
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         /// <summary>

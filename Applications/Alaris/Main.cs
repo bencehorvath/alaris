@@ -47,15 +47,14 @@ namespace Alaris
 
             Console.CancelKeyPress += (sender, e) => sBot.Disconnect("Daemon killed.");
 
-
             //sBot.Run();
             ThreadPool.QueueUserWorkItem(b => sBot.Run());
 
             AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
                                                               {
-                                                                  Log.Warn("Unhandled Exception thrown.");
-                                                                  Log.ErrorException("Unhandled exception has been thrown", eventArgs.ExceptionObject as Exception);
-                                                                 
+                                                                    Log.Warn("Unhandled Exception thrown.");
+                                                                    Log.ErrorException("Unhandled exception has been thrown", eventArgs.ExceptionObject as Exception);
+                                                                    CrashDumper.CreateCrashDump();
                                                               };
 
             if (sBot.CLIEnabled)
@@ -63,6 +62,8 @@ namespace Alaris
                 Log.Info("Starting CLI");
                 CommandLine.CLI.Start();
             }
+
+
         }
     }
 }

@@ -41,8 +41,8 @@ namespace Alaris.DefaultAddon.Commands
                 {
                     var ret = method.Invoke(AlarisBot.Instance, pars.ToArray());
 
-
-                    mp.IrcConnection.Sender.PublicMessage(mp.Channel, ret.ToString());
+                    if(ret != null) // void
+                        mp.IrcConnection.Sender.PublicMessage(mp.Channel, ret.ToString());
                 }
                 catch(Exception x)
                 {
@@ -113,8 +113,15 @@ namespace Alaris.DefaultAddon.Commands
         [AlarisCommand("ListLoadedAssemblies", CommandPermission.Admin)]
         public static void HandleListAssembliesCommand(AlarisMainParameter mp)
         {
+            var sb = new StringBuilder();
+
             foreach(var asm in AppDomain.CurrentDomain.GetAssemblies())
-                mp.IrcConnection.Sender.PublicMessage(mp.Channel, asm.GetName().Name);
+                sb.AppendFormat("{0} ", asm.GetName().Name);
+
+            var fn = sb.ToString();
+
+            mp.IrcConnection.Sender.PublicMessage(mp.Channel, fn);
+
         }
     }
 }

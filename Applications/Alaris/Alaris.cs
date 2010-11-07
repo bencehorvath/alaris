@@ -27,6 +27,7 @@ namespace Alaris
     /// <summary>
     ///   The main class for Alaris.
     /// </summary>
+    [Serializable]
     public partial class AlarisBot : IDisposable
     {
         private Connection _connection;
@@ -42,6 +43,7 @@ namespace Alaris
         private readonly string _configfile;
         private string _scriptsDir;
 
+        [NonSerialized]
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
         
 
@@ -404,6 +406,8 @@ namespace Alaris
 
                 Log.Debug("Joined channel: {0}", chan);
             }
+
+            
 
         }
 
