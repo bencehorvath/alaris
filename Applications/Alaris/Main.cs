@@ -6,6 +6,7 @@ using System.Xml.Serialization;
 using Alaris.API;
 using Alaris.CommandLine;
 using Alaris.Irc;
+using Alaris.Mathematics;
 using Alaris.Xml;
 using NLog;
 using CLI = Alaris.Xml.CLI;
@@ -22,8 +23,6 @@ namespace Alaris
             ThreadPool.SetMaxThreads(40, 20);
             ThreadPool.SetMinThreads(20, 10);
 
-            // setup console.
-            //Console.ForegroundColor = ConsoleColor.Cyan;
 
             Console.WriteLine("Welcome to Alaris!");
             Console.WriteLine("Version: {0}", Utilities.BotVersion);

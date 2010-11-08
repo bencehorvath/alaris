@@ -36,5 +36,39 @@ namespace Alaris.Mathematics
 
             return qs.Output;
         }
+
+
+        /// <summary>
+        /// Determines whether the specified x is prime.
+        /// </summary>
+        /// <param name="x">The x.</param>
+        /// <returns>
+        /// 	<c>true</c> if the specified x is prime; otherwise, <c>false</c>.
+        /// </returns>
+        public static bool IsPrime(long x)
+        {
+            x = Math.Abs(x);
+
+            if (x == 1 || x == 0)
+                return false;
+
+            if (x == 2)
+                return true;
+
+            if (x % 2 == 0) return false;
+            
+            var p = true;
+
+            for(var i = 3; i <= Math.Floor(Math.Sqrt(x)); i+=2)
+            {
+                if (x % i == 0)
+                {
+                    p = false;
+                    break;
+                }
+            }
+
+            return p;
+        }
     }
 }
