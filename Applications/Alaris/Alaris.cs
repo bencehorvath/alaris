@@ -248,7 +248,7 @@ namespace Alaris
             ThreadPool.QueueUserWorkItem(sv => ServiceManager.StartServices());
         }
 
-
+        
         private void SetupHandlers()
         {
             Log.Info("Registering event handlers");

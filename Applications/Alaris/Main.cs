@@ -46,9 +46,8 @@ namespace Alaris
 
             Console.CancelKeyPress += (sender, e) => sBot.Disconnect("Daemon killed.");
 
-            //sBot.Run();
-            ThreadPool.QueueUserWorkItem(b => sBot.Run());
-
+            sBot.Run();
+            
             //AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
             //                                                  {
             //                                                        Log.Warn("Unhandled Exception thrown.");
