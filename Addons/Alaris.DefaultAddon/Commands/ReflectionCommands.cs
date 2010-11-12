@@ -41,7 +41,7 @@ namespace Alaris.DefaultAddon.Commands
                 {
                     var ret = method.Invoke(AlarisBot.Instance, pars.ToArray());
 
-                    if(ret != null) // void
+                    if(ret != null) // probably void
                         mp.IrcConnection.Sender.PublicMessage(mp.Channel, ret.ToString());
                 }
                 catch(Exception x)

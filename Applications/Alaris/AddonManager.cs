@@ -113,12 +113,12 @@ namespace Alaris
         private static void SetupAppDomainDebugHandlers()
         {
             AppDomain.CurrentDomain.DomainUnload +=
-                (sender, args) => Log.Debug("PluginManager: AppDomain::DomainUnload, hash: {0}",
+                (sender, args) => Log.Trace("PluginManager: AppDomain::DomainUnload, hash: {0}",
                                             AppDomain.CurrentDomain.GetHashCode());
 
             AppDomain.CurrentDomain.AssemblyLoad +=
                 (sender, ea) =>
-                Log.Debug("PluginManager: AppDomain::AssemblyLoad, sender is: {0}, loaded assembly: {1}."
+                Log.Trace("PluginManager: AppDomain::AssemblyLoad, sender is: {0}, loaded assembly: {1}."
                                         , sender.GetHashCode()
                                         , ea.LoadedAssembly.FullName);
 
@@ -127,7 +127,7 @@ namespace Alaris
             AppDomain.CurrentDomain.AssemblyResolve +=
                 (sender, eargs) =>
                     {
-                        Log.Debug("PluginManager: AppDomain::AssemblyResolve, sender: {0}, name: {1}, asm: {2}", 
+                        Log.Trace("PluginManager: AppDomain::AssemblyResolve, sender: {0}, name: {1}, asm: {2}", 
                             sender.GetHashCode(), eargs.Name, eargs.RequestingAssembly.FullName );
 
                         return null;

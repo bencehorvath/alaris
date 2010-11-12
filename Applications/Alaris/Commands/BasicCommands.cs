@@ -27,7 +27,10 @@ namespace Alaris.Commands
         [AlarisCommand("help")]
         public static void HandleHelpCommand(AlarisMainParameter mp)
         {
-            mp.IrcConnection.Sender.PublicMessage(mp.Channel, string.Format("{0}: info | quit | sys | join | title | calc | sort | admin", "Available commands"));
+            mp.IrcConnection.Sender.PublicMessage(mp.Channel,
+                                                  string.Format(
+                                                      "{0}: info | quit | sys | join | title | calc | sort | admin",
+                                                      "Available commands"));
             return;
         }
 

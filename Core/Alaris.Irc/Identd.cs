@@ -47,7 +47,8 @@ namespace Alaris.Irc
 			{
 				if( _running ) 
 				{
-					throw new Exception("Identd already started.");
+				    return;
+					//throw new Exception("Identd already started.");
 				}
 
                 

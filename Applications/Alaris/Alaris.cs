@@ -36,6 +36,7 @@ namespace Alaris
         private readonly Guid _guid = Guid.NewGuid();
         private readonly string _configfile;
         private string _scriptsDir;
+        private static bool _isInstantiated;
 
         [NonSerialized]
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
@@ -140,6 +141,11 @@ namespace Alaris
         /// </summary>
         private AlarisBot(string config)
         {
+            if (_isInstantiated)
+                return;
+
+            _isInstantiated = true;
+
             Log.Info("Initializing");
             _configfile = config;
             CrashHandler.HandleReadConfig(ReadConfig, _configfile);
@@ -149,75 +155,45 @@ namespace Alaris
             
             try
             {
+                Log.Info("Starting Identd service");
+                ThreadPool.QueueUserWorkItem(s => Identd.Start(_nick));
+
+                _connection = new Connection(cargs, true, false)
+                                {
+                                    TextEncoding = Encoding.GetEncoding("Latin1")
+                                };
+
+
+                var responder = new CtcpResponder(_connection)
+                                    {
+                                        VersionResponse =
+                                            "Alaris " + Utilities.BotVersion,
+                                        SourceResponse = "http://www.wowemuf.org",
+                                        UserInfoResponse =
+                                            "Alaris multi-functional bot."
+                                    };
+
+                Log.Info("Text encoding is {0}", _connection.TextEncoding.WebName);
+
+                _connection.CtcpResponder = responder;
+
+                Log.Info("CTCP is enabled");
+
+                _manager = new ScriptManager(ref _connection, _channels,
+                                            _scriptsDir);
+
+                _manager.Run();
+                                                 
+
                 
-                ThreadPool.QueueUserWorkItem(o =>
-                                                 {
-                                                     Log.Info("Starting Identd service");
-                                                     Identd.Start(_nick);
-                                                 });
-
-                ThreadPool.QueueUserWorkItem(sv => ServiceManager.StartServices());
-
-                ThreadPool.QueueUserWorkItem(obj =>
-                                                 {
-                                                     _connection = new Connection(cargs, true, false)
-                                                     {
-                                                         TextEncoding = Encoding.GetEncoding("Latin1")
-                                                     };
-
-                                                     var responder = new CtcpResponder(_connection)
-                                                     {
-                                                         VersionResponse = "Alaris " + Utilities.BotVersion,
-                                                         SourceResponse = "http://www.wowemuf.org",
-                                                         UserInfoResponse = "Alaris multi-functional bot."
-                                                     };
-
-                                                     Log.Info("Text encoding is {0}", _connection.TextEncoding.WebName);
-
-                                                     _connection.CtcpResponder = responder;
-
-                                                     Log.Info("CTCP is enabled");
-
-                                                     _manager = new ScriptManager(ref _connection, _channels, _scriptsDir);
-                                                     SetupHandlers();
-                                                     _manager.Run();
-
-                                                     
-
-                                                    ThreadPool.QueueUserWorkItem(ps =>
-                                                                                    {
-                                                                                        if (AddonsEnabled)
-                                                                                        {
-                                                                                            Log.Info(
-                                                                                                "Initializing Addon manager");
-                                                                                            AddonManager.Initialize(
-                                                                                                ref _connection,
-                                                                                                Channels);
-
-                                                                                            AddonManager.
-                                                                                                LoadPluginsFromDirectory
-                                                                                                (AddonDirectory);
-                                                                                        }
-
-                                                                                        
-                                                                                        Log.Info("Setting up commands");
-
-                                                                                        CommandManager.CommandPrefix = "@";
-                                                                                        CommandManager.CreateMappings();
-                                                                                    });
-                                                     
-
-                                                 });
-
+                                                                                                                         
             }
             catch(Exception x)
             {
-                Log.FatalException("An exception has been thrown during one of the parallel executions.", x);          
+                Log.Fatal("An exception has been thrown during one of the parallel executions ({0})", x);          
             }
 
             //_connection = new Connection(cargs, true, false);
-
-            Log.Info("Initializing Script manager");
            
             ThreadPool.QueueUserWorkItem(s => DatabaseManager.Initialize(DBName));
 
@@ -246,7 +222,30 @@ namespace Alaris
         /// </summary>
         public void Run()
         {
-            Connect(); 
+            ThreadPool.QueueUserWorkItem(r =>
+                                             {
+                                                 if (AddonsEnabled)
+                                                 {
+                                                     Log.Info(
+                                                         "Initializing Addon manager");
+                                                     AddonManager.Initialize(
+                                                         ref _connection,
+                                                         Channels);
+
+                                                     AddonManager.
+                                                         LoadPluginsFromDirectory
+                                                         (AddonDirectory);
+                                                 }
+
+
+                                                 Log.Info("Setting up commands");
+
+                                                 CommandManager.CommandPrefix = "@";
+                                                 CommandManager.CreateMappings();
+                                             });
+
+            Connect();
+            ThreadPool.QueueUserWorkItem(sv => ServiceManager.StartServices());
         }
 
 
@@ -336,15 +335,17 @@ namespace Alaris
                 throw new Exception("The config file has not been read before connecting.");
 
            Log.Info("Establishing connection");
-            try
+           _connection.Connect();
+            /*try
             {
                 _connection.Connect();
             }
             catch (Exception x)
             {
-                Log.FatalException("An exception has been thrown during the connection process.", x);
+                Log.Fatal("An exception has been thrown during the connection process. ({0})", x);
+                Console.WriteLine(x);
                 Identd.Stop();
-            }
+            }*/
         }
 
         /// <summary>
@@ -378,7 +379,7 @@ namespace Alaris
 
             CommandLine.CLI.Stop();
 
-            
+            Thread.Sleep(20000);
 
             Process.GetCurrentProcess().CloseMainWindow();
             Process.GetCurrentProcess().Close();
