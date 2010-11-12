@@ -33,7 +33,7 @@
       <Locale>huHU</Locale>
     </Localization>
     <Remote>
-      <Port>5564</Port>
+      <Port>5565</Port>
       <Name>RemoteManager</Name>
       <Password>alaris00</Password>
     </Remote>

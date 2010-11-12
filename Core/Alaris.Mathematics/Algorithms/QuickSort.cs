@@ -12,7 +12,7 @@ namespace Alaris.Mathematics.Algorithms
         private readonly T[] _input;
 
         /// <summary>
-        /// Creates a new instance of <see>QuickSort</see>
+        /// Creates a new instance of QuickSort
         /// </summary>
         /// <param name="values">List of values the instance should process.</param>
         public QuickSort(IList<T> values)

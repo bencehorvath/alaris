@@ -129,6 +129,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Dependencies\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
     </Reference>
@@ -136,8 +137,6 @@
     <Reference Include="System.Runtime.Remoting" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administration\AlarisExt.cs" />
-    <Compile Include="Administration\RemoteManager.cs" />
     <Compile Include="Alaris.cs" />
     <Compile Include="API.cs" />
     <Compile Include="Commands\AdvancedCommands.cs" />
@@ -168,6 +167,9 @@
     <Compile Include="Exceptions\ConfigFileInvalidException.cs" />
     <Compile Include="PublicMessageHandler.cs" />
     <Compile Include="CrashHandler.cs" />
+    <Compile Include="Services\Remote\IRemote.cs" />
+    <Compile Include="Services\Remote\Remoter.cs" />
+    <Compile Include="Services\ServiceManager.cs" />
     <Compile Include="Singleton.cs" />
     <Compile Include="Exceptions\SingletonException.cs" />
     <Compile Include="ClusterManager.cs" />

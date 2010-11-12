@@ -165,8 +165,8 @@ namespace Alaris.Commands
                 var mp = new AlarisMainParameter
                              {
                                  Channel = channel,
-                                 Channels = AlarisBot.GetBot().Channels,
-                                 IrcConnection = AlarisBot.GetBot().Connection,
+                                 Channels = AlarisBot.Instance.Channels,
+                                 IrcConnection = AlarisBot.Instance.Connection,
                                  User = user
                                  
                              };

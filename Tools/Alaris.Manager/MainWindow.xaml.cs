@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Runtime.Remoting.Channels;
-using System.Runtime.Remoting.Channels.Http;
+using System.ServiceModel;
 using System.Windows;
-using Alaris.Administration;
+using Alaris.API;
 using Alaris.Irc;
 
 namespace Alaris.Manager
@@ -10,13 +9,14 @@ namespace Alaris.Manager
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow
+    public partial class MainWindow : IDisposable
     {
-        private HttpChannel _channel;
-        private RemoteManager _manager;
         private string _server;
         private bool _connected;
         private string _password;
+        private RemoteClient _rmc;
+        private bool _disposed;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace Alaris.Manager
         }
 
         private void ConnectButtonClick(object sender, RoutedEventArgs e)
-        {
+        {           
             if(string.IsNullOrEmpty(serverBox.Text) || string.IsNullOrEmpty(passwordBox.Password))
             {
                 MessageBox.Show("You didn't fill in the required fields.", "Error!",
@@ -43,39 +43,25 @@ namespace Alaris.Manager
 
             try
             {
-                _channel = new HttpChannel();
                 _server = serverBox.Text;
                 _password = passwordBox.Password;
-                ChannelServices.RegisterChannel(_channel, false);
+                _rmc = new RemoteClient("BasicHttpBinding_IRemote",
+                                           new EndpointAddress(_server));
 
-                _manager = (RemoteManager) Activator.GetObject(typeof (RemoteManager), _server);
+                _rmc.Open();
 
-                if (_manager == null)
-                {
-                    MessageBox.Show("Couldn't retrieve the instance from the given server!", "Error!",
-                                    MessageBoxButton.OK,
-                                    MessageBoxImage.Error);
-
-                    ChannelServices.UnregisterChannel(_channel);
-
-                    return;
-                }
-
-                if (!_manager.Initialize(passwordBox.Password))
+                if(!_rmc.Authorize(Utilities.MD5String(_password)))
                 {
                     MessageBox.Show("Invalid password entered!", "Error!", MessageBoxButton.OK,
                                     MessageBoxImage.Error);
 
-                    ChannelServices.UnregisterChannel(_channel);
+                    _rmc.Close();
 
                     return;
                 }
 
-                _connected = true;
-                
 
-                MessageBox.Show("Connection successful!", "Success!", MessageBoxButton.OK,
-                                    MessageBoxImage.Asterisk);
+
             }
             catch(Exception x)
             {
@@ -86,10 +72,15 @@ namespace Alaris.Manager
                     x), "Error!",   MessageBoxButton.OK,
                                     MessageBoxImage.Error);
 
-                ChannelServices.UnregisterChannel(_channel);
+                _rmc.Close();
 
                 return;
             }
+
+            messageTab.IsEnabled = true;
+
+            MessageBox.Show("Connection successful!", "Success!", MessageBoxButton.OK, MessageBoxImage.Information);
+            _connected = true;
         }
 
         private void SendButtonClick(object sender, RoutedEventArgs e)
@@ -119,7 +110,7 @@ namespace Alaris.Manager
                 return;
             }
 
-            _manager.PublicMessage(chan, msg);
+            _rmc.PublicMessage(chan, msg);
 
             MessageBox.Show("Message sent!", "Success!", MessageBoxButton.OK,
                                     MessageBoxImage.Asterisk);
@@ -127,5 +118,36 @@ namespace Alaris.Manager
             messageBox.Text = string.Empty;
 
         }
+
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
+        /// <filterpriority>2</filterpriority>
+        public void Dispose()
+        {
+            if (!_disposed)
+            {
+                Dispose(true);
+                GC.SuppressFinalize(this);
+            }
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if(_rmc.State != CommunicationState.Closed)
+                    _rmc.Close(); 
+            }
+
+            _disposed = true;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            messageTab.IsEnabled = false;
+        }
+
+        
     }
 }

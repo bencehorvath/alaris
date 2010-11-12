@@ -13,7 +13,7 @@ namespace Alaris.Commands
         /// </summary>
         public AlarisBot Bot { get
         {
-            return AlarisBot.GetBot();
+            return AlarisBot.Instance;
         }}
         /// <summary>
         ///  The IRC connection.

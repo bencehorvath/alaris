@@ -1,26 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Xml.Schema;
 using System.Xml.Serialization;
-using Alaris.Administration;
 using Alaris.API;
 using Alaris.API.Database;
-using Alaris.CommandLine;
 using Alaris.Commands;
-using Alaris.Config;
 using Alaris.Exceptions;
 using Alaris.Irc;
 using Alaris.Irc.Ctcp;
+using Alaris.Services;
 using Alaris.Xml;
 using NLog;
-using CLI = Alaris.Xml.CLI;
 
 namespace Alaris
 {
@@ -162,6 +156,8 @@ namespace Alaris
                                                      Identd.Start(_nick);
                                                  });
 
+                ThreadPool.QueueUserWorkItem(sv => ServiceManager.StartServices());
+
                 ThreadPool.QueueUserWorkItem(obj =>
                                                  {
                                                      _connection = new Connection(cargs, true, false)
@@ -225,11 +221,6 @@ namespace Alaris
            
             ThreadPool.QueueUserWorkItem(s => DatabaseManager.Initialize(DBName));
 
-            //Log.Notice("Remoting", string.Format("Starting remoting channel on port {0} with name: {1}", RemotePort, RemoteName));
-            Log.Info("Starting remoting service on port {0} with name {1}", RemotePort, RemoteName);
-            RemoteManager.StartServives(RemotePort, RemoteName);
-
-   
             Log.Info("Spawning another thread to continue startup.");
         }
 
@@ -379,9 +370,15 @@ namespace Alaris
             {
             }
 
+            // stop services
+
+            ServiceManager.StopServices();
+
             // stop cli
 
             CommandLine.CLI.Stop();
+
+            
 
             Process.GetCurrentProcess().CloseMainWindow();
             Process.GetCurrentProcess().Close();
