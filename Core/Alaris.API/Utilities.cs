@@ -69,30 +69,28 @@ namespace Alaris.API
             var username = Environment.UserName;
 
             var os = Environment.OSVersion.ToString();
-            var mem = Process.GetCurrentProcess().WorkingSet64 / 1024 / 1024;
+            var mem = GC.GetTotalMemory(true)/1024/1024;
+            var gen = GC.GetGeneration(connection);
+            
 
             connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Bot version: " + IrcConstants.Normal + BotVersion);
-            connection.Sender.PublicMessage(chan,
-                                            IrcConstants.Bold + "Hosted by " + IrcConstants.Normal + username +
-                                            " on machine " + hostname);
-            //connection.Sender.PublicMessage(chan, IrcConstants.Bold + "OS version: " + IrcConstants.Normal + os);
             connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Thread count: " + IrcConstants.Normal + Process.GetCurrentProcess().Threads.Count);
             connection.Sender.PublicMessage(chan,
                                             IrcConstants.Bold + "CPU: " + IrcConstants.Normal + GetCpuId() + " | " +
                                             Environment.ProcessorCount + " cores.");
 
-            if (mem < 40)
+            if (mem < 60)
                 connection.Sender.PublicMessage(chan,
-                                                IrcConstants.Bold + "Memory eaten: " + IrcConstants.Normal +
-                                                IrcConstants.Green + mem + " MB");
-            else if (mem > 40 && mem < 70)
+                                                string.Format("{0}Memory allocated: {1}{2}{3} MB (gen: {4})", 
+                                                IrcConstants.Bold, IrcConstants.Normal, IrcConstants.Green, mem, gen));
+            else if (mem > 60 && mem < 80)
                 connection.Sender.PublicMessage(chan,
-                                                IrcConstants.Bold + "Memory eaten: " + IrcConstants.Normal +
-                                                IrcConstants.Olive + mem + " MB");
+                                                string.Format("{0}Memory allocated: {1}{2}{3} MB (gen: {4})", 
+                                                IrcConstants.Bold, IrcConstants.Normal, IrcConstants.Olive, mem, gen));
             else
                 connection.Sender.PublicMessage(chan,
-                                                IrcConstants.Bold + "Memory eaten: " + IrcConstants.Normal +
-                                                IrcConstants.Red + mem + " MB");
+                                                string.Format("{0}Memory allocated: {1}{2}{3} MB (gen: {4})", 
+                                                IrcConstants.Bold, IrcConstants.Normal, IrcConstants.Red, mem, gen));
         }
 
         /// <summary>

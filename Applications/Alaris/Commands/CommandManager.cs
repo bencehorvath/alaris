@@ -211,7 +211,7 @@ namespace Alaris.Commands
                 }
 
                 Log.Info("Invoking command handler method ({0}) ({1})", handler.Method.Name, parl.Count);
-
+                
                 handler.Method.Invoke(null, parl.ToArray());
 
             }

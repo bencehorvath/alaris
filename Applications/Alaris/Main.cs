@@ -13,10 +13,6 @@ namespace Alaris
 
         private static void Main(string[] args)
         {
-            ThreadPool.SetMaxThreads(30, 20);
-            ThreadPool.SetMinThreads(10, 10);
-
-
             Console.WriteLine("Welcome to Alaris!");
             Console.WriteLine("Version: {0}", Utilities.BotVersion);
             Console.WriteLine("You can safely use <Ctrl+C> to terminate the process.\n");

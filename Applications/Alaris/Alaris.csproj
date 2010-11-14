@@ -139,6 +139,7 @@
   <ItemGroup>
     <Compile Include="Alaris.cs" />
     <Compile Include="API.cs" />
+    <Compile Include="Extensions\IrcExtensions.cs" />
     <Compile Include="InstanceHolder.cs" />
     <Compile Include="Commands\AdvancedCommands.cs" />
     <Compile Include="Commands\AlarisCommandWrapper.cs" />

@@ -6,16 +6,17 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
-using System.Text;
 using System.Threading;
 
 namespace Alaris.Core
 {
     /// <summary>
-    /// Contains miscellaneous utility method used throughout the project.
+    ///   Contains miscellaneous utility method used throughout the project.
     /// </summary>
-    /// <remarks>Things that can't be added as extension methods, or are too miscellaneous
-    /// will most likely be in this class.</remarks>
+    /// <remarks>
+    ///   Things that can't be added as extension methods, or are too miscellaneous
+    ///   will most likely be in this class.
+    /// </remarks>
     public static class Utility
     {
 // ReSharper disable MemberCanBePrivate.Global
@@ -50,10 +51,10 @@ namespace Alaris.Core
             IntOperators["*"] = DivideHandler;
             IntOperators["/"] = MultiHandler;
 
-            TypeMap.Add("UInt32", typeof(uint));
-            TypeMap.Add("UInt64", typeof(ulong));
-            TypeMap.Add("Int32", typeof(int));
-            TypeMap.Add("Int64", typeof(long));
+            TypeMap.Add("UInt32", typeof (uint));
+            TypeMap.Add("UInt64", typeof (ulong));
+            TypeMap.Add("Int32", typeof (int));
+            TypeMap.Add("Int64", typeof (long));
         }
 
         private static void CurrentDomain_AssemblyLoad(object sender, AssemblyLoadEventArgs args)
@@ -67,10 +68,10 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Adds all non-standard Enum-types of the given Assembly to the TypeMap.
-        /// Also caches all big enums into a dictionary to improve Lookup speed.
+        ///   Adds all non-standard Enum-types of the given Assembly to the TypeMap.
+        ///   Also caches all big enums into a dictionary to improve Lookup speed.
         /// </summary>
-        /// <param name="asm"></param>
+        /// <param name = "asm"></param>
         public static void AddTypesToTypeMap(Assembly asm)
         {
             if (asm.FullName == null)
@@ -113,40 +114,41 @@ namespace Alaris.Core
         }
 
         #region Times
+
         public const int TicksPerSecond = 10000;
         private const long TicksSince1970 = 621355968000000000; // .NET ticks for 1970
 
         public static int ToMilliSecondsInt(this DateTime time)
         {
-            return (int)(time.Ticks / TicksPerSecond);
+            return (int) (time.Ticks/TicksPerSecond);
         }
 
         public static int ToMilliSecondsInt(this TimeSpan time)
         {
-            return (int)(time.Ticks) / TicksPerSecond;
+            return (int) (time.Ticks)/TicksPerSecond;
         }
 
         public static int ToMilliSecondsInt(int ticks)
         {
-            return ticks / TicksPerSecond;
+            return ticks/TicksPerSecond;
         }
 
         /// <summary>
-        /// Gets the system uptime.
+        ///   Gets the system uptime.
         /// </summary>
         /// <returns>the system uptime in milliseconds</returns>
         public static uint GetSystemTime()
         {
-            return (uint)Environment.TickCount;
+            return (uint) Environment.TickCount;
         }
 
         /// <summary>
-        /// Gets the time since the Unix epoch.
+        ///   Gets the time since the Unix epoch.
         /// </summary>
         /// <returns>the time since the unix epoch in seconds</returns>
         public static uint GetEpochTime()
         {
-            return (uint)((DateTime.UtcNow.Ticks - TicksSince1970) / TimeSpan.TicksPerSecond);
+            return (uint) ((DateTime.UtcNow.Ticks - TicksSince1970)/TimeSpan.TicksPerSecond);
         }
 
         public static DateTime GetDateTimeFromUnixTime(uint unixTime)
@@ -165,75 +167,76 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Gets the system uptime.
+        ///   Gets the system uptime.
         /// </summary>
         /// <remarks>
-        /// Even though this returns a long, the original value is a 32-bit integer,
-        /// so it will wrap back to 0 after approximately 49 and half days of system uptime.
+        ///   Even though this returns a long, the original value is a 32-bit integer,
+        ///   so it will wrap back to 0 after approximately 49 and half days of system uptime.
         /// </remarks>
         /// <returns>the system uptime in milliseconds</returns>
         public static long GetSystemTimeLong()
         {
-            return (uint)Environment.TickCount;
+            return (uint) Environment.TickCount;
         }
 
         /// <summary>
-        /// Converts the current time and date into the time and date format of the WoW client.
+        ///   Converts the current time and date into the time and date format of the WoW client.
         /// </summary>
         /// <returns>a packed time and date</returns>
         public static uint GetDateTimeToGameTime(DateTime n)
         {
-            uint dayOfWeek = ((uint)n.DayOfWeek == 0 ? 6 : ((uint)n.DayOfWeek) - 1);
+            uint dayOfWeek = ((uint) n.DayOfWeek == 0 ? 6 : ((uint) n.DayOfWeek) - 1);
 
-            uint gameTime = ((uint)n.Minute & 0x3F);
-            gameTime |= (((uint)n.Hour << 6) & 0x7C0);
+            uint gameTime = ((uint) n.Minute & 0x3F);
+            gameTime |= (((uint) n.Hour << 6) & 0x7C0);
             gameTime |= ((dayOfWeek << 11) & 0x3800);
-            gameTime |= (((uint)(n.Day - 1) << 14) & 0xFC000);
-            gameTime |= (((uint)(n.Month - 1) << 20) & 0xF00000);
-            gameTime |= (((uint)(n.Year - 2000) << 24) & 0x1F000000);
+            gameTime |= (((uint) (n.Day - 1) << 14) & 0xFC000);
+            gameTime |= (((uint) (n.Month - 1) << 20) & 0xF00000);
+            gameTime |= (((uint) (n.Year - 2000) << 24) & 0x1F000000);
 
             return gameTime;
         }
 
         public static DateTime GetGameTimeToDateTime(uint packedDate)
         {
-            int minute = (int)(packedDate & 0x3F);
-            int hour = (int)((packedDate >> 6) & 0x1F);
+            var minute = (int) (packedDate & 0x3F);
+            var hour = (int) ((packedDate >> 6) & 0x1F);
             //DayOfWeek dayOfWeek = (DayOfWeek) ((packedDate >> 11) & 0x3800);
-            int day = (int)((packedDate >> 14) & 0x3F);
-            int month = (int)((packedDate >> 20) & 0xF);
-            int year = (int)((packedDate >> 24) & 0x1F);
+            var day = (int) ((packedDate >> 14) & 0x3F);
+            var month = (int) ((packedDate >> 20) & 0xF);
+            var year = (int) ((packedDate >> 24) & 0x1F);
 
             return new DateTime(year + 2000, month + 1, day + 1, hour, minute, 0);
         }
 
         /// <summary>
-        /// Gets the time between the Unix epich and a specific <see cref="DateTime">time</see>.
+        ///   Gets the time between the Unix epich and a specific <see cref = "DateTime">time</see>.
         /// </summary>
-        /// <param name="time">the end time</param>
-        /// <returns>the time between the unix epoch and the supplied <see cref="DateTime">time</see> in seconds</returns>
+        /// <param name = "time">the end time</param>
+        /// <returns>the time between the unix epoch and the supplied <see cref = "DateTime">time</see> in seconds</returns>
         public static uint GetEpochTimeFromDT()
         {
             return GetEpochTimeFromDT(DateTime.Now);
         }
 
         /// <summary>
-        /// Gets the time between the Unix epich and a specific <see cref="DateTime">time</see>.
+        ///   Gets the time between the Unix epich and a specific <see cref = "DateTime">time</see>.
         /// </summary>
-        /// <param name="time">the end time</param>
-        /// <returns>the time between the unix epoch and the supplied <see cref="DateTime">time</see> in seconds</returns>
+        /// <param name = "time">the end time</param>
+        /// <returns>the time between the unix epoch and the supplied <see cref = "DateTime">time</see> in seconds</returns>
         public static uint GetEpochTimeFromDT(DateTime time)
         {
-            return (uint)((time.Ticks - TicksSince1970) / 10000000L);
+            return (uint) ((time.Ticks - TicksSince1970)/10000000L);
         }
+
         #endregion
 
         /// <summary>
-        /// Swaps one reference with another atomically.
+        ///   Swaps one reference with another atomically.
         /// </summary>
-        /// <typeparam name="T">the type of the reference</typeparam>
-        /// <param name="originalRef">the original reference</param>
-        /// <param name="newRef">the new reference</param>
+        /// <typeparam name = "T">the type of the reference</typeparam>
+        /// <param name = "originalRef">the original reference</param>
+        /// <param name = "newRef">the new reference</param>
         public static void SwapReference<T>(ref T originalRef, ref T newRef) where T : class
         {
             T orig;
@@ -245,12 +248,12 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Swaps one reference with another atomically, and replaces the original with the given value
+        ///   Swaps one reference with another atomically, and replaces the original with the given value
         /// </summary>
-        /// <typeparam name="T">the type of the reference</typeparam>
-        /// <param name="originalRef">the original reference</param>
-        /// <param name="newRef">the new reference</param>
-        /// <param name="replacement">the value to replace the original with</param>
+        /// <typeparam name = "T">the type of the reference</typeparam>
+        /// <param name = "originalRef">the original reference</param>
+        /// <param name = "newRef">the new reference</param>
+        /// <param name = "replacement">the value to replace the original with</param>
         public static void SwapReference<T>(ref T originalRef, ref T newRef, T replacement) where T : class
         {
             do
@@ -260,13 +263,13 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Moves memory from one array to another.
+        ///   Moves memory from one array to another.
         /// </summary>
-        /// <param name="src">the pointer to the source array</param>
-        /// <param name="srcIndex">the index to read from in the source array</param>
-        /// <param name="dest">the destination array</param>
-        /// <param name="destIndex">the index to write to in the destination array</param>
-        /// <param name="len">the number of bytes to move</param>
+        /// <param name = "src">the pointer to the source array</param>
+        /// <param name = "srcIndex">the index to read from in the source array</param>
+        /// <param name = "dest">the destination array</param>
+        /// <param name = "destIndex">the index to write to in the destination array</param>
+        /// <param name = "len">the number of bytes to move</param>
         public static unsafe void MoveMemory(byte* src, int srcIndex, byte[] dest, int destIndex, int len)
         {
             if (len != 0)
@@ -286,13 +289,13 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Moves memory from one array to another.
+        ///   Moves memory from one array to another.
         /// </summary>
-        /// <param name="src">the source array</param>
-        /// <param name="srcIndex">the index to read from in the source array</param>
-        /// <param name="dest">the pointer to the destination array</param>
-        /// <param name="destIndex">the index to write to in the destination array</param>
-        /// <param name="len">the number of bytes to move</param>
+        /// <param name = "src">the source array</param>
+        /// <param name = "srcIndex">the index to read from in the source array</param>
+        /// <param name = "dest">the pointer to the destination array</param>
+        /// <param name = "destIndex">the index to write to in the destination array</param>
+        /// <param name = "len">the number of bytes to move</param>
         public static unsafe void MoveMemory(byte[] src, int srcIndex, byte* dest, int destIndex, int len)
         {
             if (len != 0)
@@ -312,19 +315,19 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Cast one thing into another
+        ///   Cast one thing into another
         /// </summary>
         public static T Cast<T>(object obj)
         {
-            return (T)Convert.ChangeType(obj, typeof(T));
+            return (T) Convert.ChangeType(obj, typeof (T));
         }
 
         #region String Building / Verbosity
 
         /// <summary>
-        /// Returns the string representation of an IEnumerable (all elements, joined by comma)
+        ///   Returns the string representation of an IEnumerable (all elements, joined by comma)
         /// </summary>
-        /// <param name="conj">The conjunction to be used between each elements of the collection</param>
+        /// <param name = "conj">The conjunction to be used between each elements of the collection</param>
         public static string ToString<T>(this IEnumerable<T> collection, string conj)
         {
             string vals;
@@ -339,9 +342,9 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Returns the string representation of an IEnumerable (all elements, joined by comma)
+        ///   Returns the string representation of an IEnumerable (all elements, joined by comma)
         /// </summary>
-        /// <param name="conj">The conjunction to be used between each elements of the collection</param>
+        /// <param name = "conj">The conjunction to be used between each elements of the collection</param>
         public static string ToString<T>(this IEnumerable<T> collection, string conj, Func<T, object> converter)
         {
             string vals;
@@ -356,10 +359,10 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Returns the string representation of an IEnumerable (all elements, joined by comma)
+        ///   Returns the string representation of an IEnumerable (all elements, joined by comma)
         /// </summary>
-        /// <param name="collection"></param>
-        /// <param name="conj">The conjunction to be used between each elements of the collection</param>
+        /// <param name = "collection"></param>
+        /// <param name = "conj">The conjunction to be used between each elements of the collection</param>
         public static string ToStringCol(this ICollection collection, string conj)
         {
             string vals;
@@ -485,12 +488,12 @@ namespace Alaris.Core
 
         public static int Random()
         {
-            return (int)(((_holdrand = _holdrand * 214013L + 2531011L) >> 16) & 0x7fff);
+            return (int) (((_holdrand = _holdrand*214013L + 2531011L) >> 16) & 0x7fff);
         }
 
         public static uint RandomUInt()
         {
-            return (uint)(((_holdrand = _holdrand * 214013L + 2531011L) >> 16) & 0x7fff);
+            return (uint) (((_holdrand = _holdrand*214013L + 2531011L) >> 16) & 0x7fff);
         }
 
         public static bool Chance()
@@ -500,7 +503,7 @@ namespace Alaris.Core
 
         public static bool Chance(double chance)
         {
-            return chance > 1 ? true : chance < 0 ? false : Random() / (double)0x7fff <= chance;
+            return chance > 1 ? true : chance < 0 ? false : Random()/(double) 0x7fff <= chance;
         }
 
         public static bool Chance(float chance)
@@ -515,11 +518,11 @@ namespace Alaris.Core
 
         public static float RandomFloat()
         {
-            return (((_holdrand = _holdrand * 214013L + 2531011L) >> 16) & 0x7fff) / (float)0x7fff;
+            return (((_holdrand = _holdrand*214013L + 2531011L) >> 16) & 0x7fff)/(float) 0x7fff;
         }
 
         /// <summary>
-        /// Generates a pseudo-random number in range [from, to)
+        ///   Generates a pseudo-random number in range [from, to)
         /// </summary>
         public static int Random(int from, int to)
         {
@@ -529,8 +532,8 @@ namespace Alaris.Core
             return from == to
                        ? from
                        : (from > to
-                              ? ((Random() % (from - to)) + to)
-                              : ((Random() % (to - from)) + from));
+                              ? ((Random()%(from - to)) + to)
+                              : ((Random()%(to - from)) + from));
         }
 
         public static uint Random(uint from, uint to)
@@ -541,8 +544,8 @@ namespace Alaris.Core
             return from == to
                        ? from
                        : (from > to
-                              ? ((RandomUInt() % (from - to)) + to)
-                              : ((RandomUInt() % (to - from)) + from));
+                              ? ((RandomUInt()%(from - to)) + to)
+                              : ((RandomUInt()%(to - from)) + from));
         }
 
         public static int Random(int max)
@@ -550,7 +553,7 @@ namespace Alaris.Core
             //return from > to
             //        ? (uint)Math.Round((RandomFloat() * (from - to) + to))
             //        : (uint)Math.Round((RandomFloat() * (to - from) + from));return
-            return Random() % max;
+            return Random()%max;
         }
 
         public static uint RandomUInt(uint max)
@@ -558,17 +561,17 @@ namespace Alaris.Core
             //return from > to
             //        ? (uint)Math.Round((RandomFloat() * (from - to) + to))
             //        : (uint)Math.Round((RandomFloat() * (to - from) + from));return
-            return RandomUInt() % max;
+            return RandomUInt()%max;
         }
 
         public static float Random(float from, float to)
         {
-            return from > to ? RandomFloat() * (from - to) + to : (RandomFloat() * (to - from) + from);
+            return from > to ? RandomFloat()*(from - to) + to : (RandomFloat()*(to - from) + from);
         }
 
         public static double Random(double from, double to)
         {
-            return from > to ? RandomFloat() * (from - to) + to : RandomFloat() * (to - from) + from;
+            return from > to ? RandomFloat()*(from - to) + to : RandomFloat()*(to - from) + from;
         }
 
         #endregion
@@ -577,53 +580,53 @@ namespace Alaris.Core
 
         public static Dictionary<Type, Func<string, object>> TypeParsers =
             new Func<Dictionary<Type, Func<string, object>>>(() =>
-            {
-                var parsers =
-                    new Dictionary<Type, Func<string, object>>();
+                                                                 {
+                                                                     var parsers =
+                                                                         new Dictionary<Type, Func<string, object>>();
 
-                parsers.Add(typeof(int),
-                            strVal => int.Parse(strVal));
+                                                                     parsers.Add(typeof (int),
+                                                                                 strVal => int.Parse(strVal));
 
-                parsers.Add(typeof(float),
-                            strVal => float.Parse(strVal));
+                                                                     parsers.Add(typeof (float),
+                                                                                 strVal => float.Parse(strVal));
 
-                parsers.Add(typeof(long),
-                            strVal => long.Parse(strVal));
+                                                                     parsers.Add(typeof (long),
+                                                                                 strVal => long.Parse(strVal));
 
-                parsers.Add(typeof(ulong),
-                            strVal => ulong.Parse(strVal));
+                                                                     parsers.Add(typeof (ulong),
+                                                                                 strVal => ulong.Parse(strVal));
 
-                parsers.Add(typeof(bool),
-                            strVal =>
-                            strVal.Equals("true",
-                                          StringComparison.
-                                              InvariantCultureIgnoreCase) ||
-                            strVal.Equals("1",
-                                          StringComparison.
-                                              InvariantCultureIgnoreCase) ||
-                            strVal.Equals("yes",
-                                          StringComparison.
-                                              InvariantCultureIgnoreCase));
+                                                                     parsers.Add(typeof (bool),
+                                                                                 strVal =>
+                                                                                 strVal.Equals("true",
+                                                                                               StringComparison.
+                                                                                                   InvariantCultureIgnoreCase) ||
+                                                                                 strVal.Equals("1",
+                                                                                               StringComparison.
+                                                                                                   InvariantCultureIgnoreCase) ||
+                                                                                 strVal.Equals("yes",
+                                                                                               StringComparison.
+                                                                                                   InvariantCultureIgnoreCase));
 
-                parsers.Add(typeof(double),
-                            strVal => double.Parse(strVal));
+                                                                     parsers.Add(typeof (double),
+                                                                                 strVal => double.Parse(strVal));
 
-                parsers.Add(typeof(uint),
-                            strVal => uint.Parse(strVal));
+                                                                     parsers.Add(typeof (uint),
+                                                                                 strVal => uint.Parse(strVal));
 
-                parsers.Add(typeof(short),
-                            strVal => short.Parse(strVal));
+                                                                     parsers.Add(typeof (short),
+                                                                                 strVal => short.Parse(strVal));
 
-                parsers.Add(typeof(ushort),
-                            strVal => short.Parse(strVal));
+                                                                     parsers.Add(typeof (ushort),
+                                                                                 strVal => short.Parse(strVal));
 
-                parsers.Add(typeof(byte),
-                            strVal => byte.Parse(strVal));
+                                                                     parsers.Add(typeof (byte),
+                                                                                 strVal => byte.Parse(strVal));
 
-                parsers.Add(typeof(char), strVal => strVal[0]);
+                                                                     parsers.Add(typeof (char), strVal => strVal[0]);
 
-                return parsers;
-            })();
+                                                                     return parsers;
+                                                                 })();
 
         public static object Parse(string stringVal, Type type)
         {
@@ -638,7 +641,7 @@ namespace Alaris.Core
 
         public static bool Parse(string str, Type type, ref object obj)
         {
-            if (type == typeof(string))
+            if (type == typeof (string))
             {
                 obj = str;
             }
@@ -676,7 +679,7 @@ namespace Alaris.Core
         #endregion
 
         /// <summary>
-        /// Measures how long the given func takes to be executed repeats times
+        ///   Measures how long the given func takes to be executed repeats times
         /// </summary>
         public static void Measure(string name, int repeats, Action action)
         {
@@ -690,19 +693,19 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Gets the biggest value of a numeric enum
+        ///   Gets the biggest value of a numeric enum
         /// </summary>
         public static T GetMaxEnum<T>()
         {
-            var values = (T[])Enum.GetValues(typeof(T));
+            var values = (T[]) Enum.GetValues(typeof (T));
             return values.Max();
         }
 
         #region Sets of set bits
 
         /// <summary>
-        /// Creates and returns an array of all indices that are set within the given flag field.
-        /// eg. {11000011, 11000011} would result into an array containing: 0,1,6,7,8,9,14,15
+        ///   Creates and returns an array of all indices that are set within the given flag field.
+        ///   eg. {11000011, 11000011} would result into an array containing: 0,1,6,7,8,9,14,15
         /// </summary>
         public static uint[] GetSetIndices(uint[] flagsArr)
         {
@@ -715,8 +718,8 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Creates and returns an array of all indices that are set within the given flag field.
-        /// eg. 11000011 would result into an array containing: 0,1,6,7
+        ///   Creates and returns an array of all indices that are set within the given flag field.
+        ///   eg. 11000011 would result into an array containing: 0,1,6,7
         /// </summary>
         public static uint[] GetSetIndices(uint flags)
         {
@@ -728,20 +731,20 @@ namespace Alaris.Core
         public static T[] GetSetIndicesEnum<T>(T flags)
         {
             var indices = new List<uint>();
-            var uintFlags = (uint)Convert.ChangeType(flags, typeof(uint));
+            var uintFlags = (uint) Convert.ChangeType(flags, typeof (uint));
             GetSetIndices(indices, uintFlags);
             if (indices.Count == 0)
             {
-                object box = (uint)0;
-                return new[] { (T)box };
+                object box = (uint) 0;
+                return new[] {(T) box};
             }
 
             var arr = new T[indices.Count];
             for (var i = 0; i < indices.Count; i++)
             {
                 var index = indices[i];
-                object box = (uint)(1 << (int)(index));
-                arr[i] = (T)box;
+                object box = (uint) (1 << (int) (index));
+                arr[i] = (T) box;
             }
             return arr;
         }
@@ -750,7 +753,7 @@ namespace Alaris.Core
         {
             for (uint i = 0; i < 32; i++)
             {
-                if ((flags & 1 << (int)i) != 0)
+                if ((flags & 1 << (int) i) != 0)
                 {
                     indices.Add(i);
                 }
@@ -758,23 +761,23 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Creates and returns an array of all indices that are set within the given flag field.
-        /// eg. 11000011 would result into an array containing: 0,1,6,7
+        ///   Creates and returns an array of all indices that are set within the given flag field.
+        ///   eg. 11000011 would result into an array containing: 0,1,6,7
         /// </summary>
         public static T[] GetSetIndices<T>(uint flags)
         {
             var indices = new List<T>(5);
             for (uint i = 0; i < 32; i++)
             {
-                if ((flags & 1 << (int)i) != 0)
+                if ((flags & 1 << (int) i) != 0)
                 {
-                    if (typeof(T).IsEnum)
+                    if (typeof (T).IsEnum)
                     {
-                        indices.Add((T)Enum.Parse(typeof(T), i.ToString()));
+                        indices.Add((T) Enum.Parse(typeof (T), i.ToString()));
                     }
                     else
                     {
-                        indices.Add((T)Convert.ChangeType(i, typeof(T)));
+                        indices.Add((T) Convert.ChangeType(i, typeof (T)));
                     }
                 }
             }
@@ -785,32 +788,31 @@ namespace Alaris.Core
 
         public static A[] CreateEnumArray<E, A>()
         {
-            var arr = new A[(int)Convert.ChangeType(GetMaxEnum<E>(), typeof(int))];
+            var arr = new A[(int) Convert.ChangeType(GetMaxEnum<E>(), typeof (int))];
             return arr;
         }
 
         /// <summary>
-        /// Delays the given action by the given amount of milliseconds
+        ///   Delays the given action by the given amount of milliseconds
         /// </summary>
         /// <returns>The timer that performs the delayed call (in case that you might want to cancel earlier)</returns>
         public static Timer Delay(uint millis, Action action)
         {
             Timer timer = null;
             timer = new Timer(sender =>
-            {
-                action();
-                timer.Dispose();
-            });
+                                  {
+                                      action();
+                                      timer.Dispose();
+                                  });
             timer.Change(millis, Timeout.Infinite);
             return timer;
         }
 
         /// <summary>
-        /// 
         /// </summary>
         public static bool IsInRange(float sqDistance, float max)
         {
-            return /*sqDistance != 0 &&*/ sqDistance <= max * max;
+            return /*sqDistance != 0 &&*/ sqDistance <= max*max;
         }
 
         #region Evaluate etc
@@ -833,24 +835,24 @@ namespace Alaris.Core
             (x, y) => x - y;
 
         public static readonly OperatorHandler<long> DivideHandler =
-            (x, y) => x / y;
+            (x, y) => x/y;
 
         public static readonly OperatorHandler<long> MultiHandler =
-            (x, y) => x * y;
+            (x, y) => x*y;
 
         public static readonly Dictionary<string, OperatorHandler<long>> IntOperators =
             new Dictionary<string, OperatorHandler<long>>();
 
         /// <summary>
-        /// Evaluates the given (simple) expression
+        ///   Evaluates the given (simple) expression
         /// 
-        /// TODO: Use Polish Notation to allow more efficiency and complexity
-        /// TODO: Add operator priority
+        ///   TODO: Use Polish Notation to allow more efficiency and complexity
+        ///   TODO: Add operator priority
         /// </summary>
         public static bool Eval(Type valType, ref long val, string expr, ref object error, bool startsWithOperator)
         {
             // syntax: <val> <op> <value> [<op> <value> [<op> <value>...]]
-            var args = expr.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            var args = expr.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
             var isOp = startsWithOperator;
             OperatorHandler<long> op = null;
             foreach (var argument in args)
@@ -873,7 +875,7 @@ namespace Alaris.Core
                         return false;
                     }
 
-                    var longVal = (long)Convert.ChangeType(argVal, typeof(long));
+                    var longVal = (long) Convert.ChangeType(argVal, typeof (long));
                     if (op != null)
                     {
                         val = op(val, longVal);
@@ -913,18 +915,19 @@ namespace Alaris.Core
         }
 
         #region Format
+
         public static string FormatMoney(uint money)
         {
             var str = "";
             if (money >= 10000)
             {
-                str += (money / 10000) + "g ";
-                money = money % 10000;
+                str += (money/10000) + "g ";
+                money = money%10000;
             }
             if (money >= 100)
             {
-                str += (money / 100) + "s ";
-                money = money % 100;
+                str += (money/100) + "s ";
+                money = money%100;
             }
             if (money > 0)
             {
@@ -935,7 +938,7 @@ namespace Alaris.Core
 
         public static string Format(this TimeSpan time)
         {
-            return string.Format("{0}{1:00}h {2:00}m {3:00}s", time.TotalDays > 0 ? (int)time.TotalDays + "d " : "",
+            return string.Format("{0}{1:00}h {2:00}m {3:00}s", time.TotalDays > 0 ? (int) time.TotalDays + "d " : "",
                                  time.Hours, time.Minutes, time.Seconds);
         }
 
@@ -944,6 +947,7 @@ namespace Alaris.Core
             return string.Format("{0:00}h {1:00}m {2:00}s {3:00}ms", time.Hour, time.Minute,
                                  time.Second, time.Millisecond);
         }
+
         #endregion
 
         public static O GetRandom<O>(this IList<O> os)
@@ -952,7 +956,7 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Checks whether the given mail-address is valid.
+        ///   Checks whether the given mail-address is valid.
         /// </summary>
         public static bool IsValidEMailAddress(string mail)
         {
@@ -968,20 +972,19 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// When overridden in a derived class, returns an array of custom attributes identified by System.Type.
+        ///   When overridden in a derived class, returns an array of custom attributes identified by System.Type.
         /// </summary>
-        /// <typeparam name="T">The type of attribute to search for. Only attributes that are assignable to this type are returned.</typeparam>
-        /// <param name="methodInfo"></param>
+        /// <typeparam name = "T">The type of attribute to search for. Only attributes that are assignable to this type are returned.</typeparam>
+        /// <param name = "methodInfo"></param>
         /// <returns>An array of custom attributes applied to this member, or an array with zero (0) elements if no attributes have been applied.</returns>
         public static T[] GetCustomAttributes<T>(this MemberInfo methodInfo) where T : Attribute
         {
-            return methodInfo.GetCustomAttributes(typeof(T), false) as T[];
+            return methodInfo.GetCustomAttributes(typeof (T), false) as T[];
         }
 
         /// <summary>
-        /// 
         /// </summary>
-        /// <param name="arrType"></param>
+        /// <param name = "arrType"></param>
         /// <returns></returns>
         public static Type GetArrUnderlyingType(Type arrType)
         {
@@ -997,7 +1000,7 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// One second has 10 million system ticks (DateTime.Ticks etc)
+        ///   One second has 10 million system ticks (DateTime.Ticks etc)
         /// </summary>
         private const string DefaultNameSpace = "WCell.Constants.";
 
@@ -1016,9 +1019,9 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Gets all assemblies that match the given fully qualified name without version checks etc.
+        ///   Gets all assemblies that match the given fully qualified name without version checks etc.
         /// </summary>
-        /// <param name="asmName"></param>
+        /// <param name = "asmName"></param>
         /// <returns></returns>
         public static IEnumerable<Assembly> GetMatchingAssemblies(string asmName)
         {
@@ -1028,10 +1031,10 @@ namespace Alaris.Core
                 asmName = parts[0];
             }
             return AppDomain.CurrentDomain.GetAssemblies().Where(asm =>
-            {
-                var matchName = asm.GetName();
-                return matchName.Name == asmName;
-            });
+                                                                     {
+                                                                         var matchName = asm.GetName();
+                                                                         return matchName.Name == asmName;
+                                                                     });
         }
 
         public static object ChangeType(object obj, Type type)
@@ -1058,7 +1061,7 @@ namespace Alaris.Core
             else
             {
                 // try to find a ctor
-                var ctor = type.GetConstructor(new[] { obj.GetType() });
+                var ctor = type.GetConstructor(new[] {obj.GetType()});
                 if (ctor == null)
                 {
                     try
@@ -1074,7 +1077,7 @@ namespace Alaris.Core
                 }
                 else
                 {
-                    return ctor.Invoke(new[] { obj });
+                    return ctor.Invoke(new[] {obj});
                 }
             }
         }
@@ -1084,10 +1087,10 @@ namespace Alaris.Core
         #region Files & Directories
 
         /// <summary>
-        /// Writes the content of all files in the given directory to the given output file
+        ///   Writes the content of all files in the given directory to the given output file
         /// </summary>
-        /// <param name="directory"></param>
-        /// <param name="outputFile"></param>
+        /// <param name = "directory"></param>
+        /// <param name = "outputFile"></param>
         public static void MergeFiles(string directory, string outputFile)
         {
             MergeFiles(Directory.GetFiles(directory), outputFile);
@@ -1118,11 +1121,11 @@ namespace Alaris.Core
         {
             if (file is DirectoryInfo)
             {
-                return ((DirectoryInfo)file).Parent;
+                return ((DirectoryInfo) file).Parent;
             }
             if (file is FileInfo)
             {
-                return ((FileInfo)file).Directory;
+                return ((FileInfo) file).Directory;
             }
             return null;
         }
@@ -1146,11 +1149,11 @@ namespace Alaris.Core
         }
 
         /// <summary>
-        /// Returns up to the n first lines from the given file.
+        ///   Returns up to the n first lines from the given file.
         /// </summary>
-        /// <param name="fileName"></param>
-        /// <param name="n"></param>
-        /// <param name="ignoreEmpty"></param>
+        /// <param name = "fileName"></param>
+        /// <param name = "n"></param>
+        /// <param name = "ignoreEmpty"></param>
         /// <returns></returns>
         public static string[] ReadLines(string fileName, int n, bool ignoreEmpty)
         {
@@ -1176,23 +1179,24 @@ namespace Alaris.Core
         #endregion
 
         #region Strings
+
         public static string GetStringRepresentation(object val)
         {
             if (val is string)
             {
-                return (string)val;
+                return (string) val;
             }
             if (val is ICollection)
             {
-                return ((ICollection)val).ToStringCol(", ");
+                return ((ICollection) val).ToStringCol(", ");
             }
             if (val is IEnumerable)
             {
-                return ((IEnumerable)val).ToString(", ");
+                return ((IEnumerable) val).ToString(", ");
             }
             if (val is TimeSpan)
             {
-                return ((TimeSpan)val).Format();
+                return ((TimeSpan) val).Format();
             }
             return val.ToString();
         }
@@ -1201,11 +1205,12 @@ namespace Alaris.Core
         {
             return str.IndexOf(part, StringComparison.InvariantCultureIgnoreCase) > -1;
         }
+
         #endregion
 
         public static long MakeLong(int low, int high)
         {
-            return low | ((long)high << 32);
+            return low | ((long) high << 32);
         }
 
         private static readonly Random Rnd = new Random();
@@ -1225,8 +1230,9 @@ namespace Alaris.Core
     }
 
     #region SingleEnumerator
+
     /// <summary>
-    /// Returns a single element
+    ///   Returns a single element
     /// </summary>
     public class SingleEnumerator<T> : IEnumerator<T>
         where T : class
@@ -1250,7 +1256,7 @@ namespace Alaris.Core
 
         public void Reset()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public T Current
@@ -1269,6 +1275,8 @@ namespace Alaris.Core
             get { return Current; }
         }
     }
+
     #endregion
+
     // ReSharper restore MemberCanBePrivate.Global
 }

@@ -10,6 +10,7 @@ using Alaris.API;
 using Alaris.API.Database;
 using Alaris.Commands;
 using Alaris.Exceptions;
+using Alaris.Extensions;
 using Alaris.Irc;
 using Alaris.Irc.Ctcp;
 using Alaris.Services;
@@ -292,8 +293,7 @@ namespace Alaris
             var chans = Config.Config.Irc.Channels;
             var clist = chans.Split(',');
 
-            foreach (var chan in clist.Where(Rfc2812Util.IsValidChannelName).AsParallel())
-                _channels.Add(chan);
+            _channels.GetChannelsFrom(clist);
 
             Utilities.AdminNick = Config.Config.Irc.Admin.Nick;
             Utilities.AdminUser = Config.Config.Irc.Admin.User;
@@ -397,17 +397,12 @@ namespace Alaris
             Log.Info("Stopped Identd service");
 
             // join channels here););
-
-            foreach (var chan in _channels)
-            {
-                if (Rfc2812Util.IsValidChannelName(chan))
-                    _connection.Sender.Join(chan);
-
-                Log.Debug("Joined channel: {0}", chan);
-            }
-
             
+            _channels.JoinToChannels(_connection);
 
+            Thread.Sleep(1000);
+
+            GC.Collect(3, GCCollectionMode.Forced);
         }
 
         /// <summary>
