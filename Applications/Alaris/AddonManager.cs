@@ -69,17 +69,12 @@ namespace Alaris
                 if(asm == null)
                     continue;
 
-                //var pl = Enumerable.OfType<IAlarisAddon>(asm.GetTypes().AsParallel()).FirstOrDefault();
                 IAlarisAddon pl = null;
 
-                foreach(var type in asm.GetTypes())
+                foreach (var type in asm.GetTypes().Where(type => type.GetInterfaces().Contains(typeof (IAlarisAddon))))
                 {
-                    if(type.GetInterfaces().Contains(typeof(IAlarisAddon)))
-                    {
-                        pl = (IAlarisAddon)Activator.CreateInstance(type);
-                    }
+                    pl = (IAlarisAddon)Activator.CreateInstance(type);
                 }
-
 
                 if (pl == null)
                     break; // not a plugin

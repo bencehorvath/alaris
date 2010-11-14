@@ -8,7 +8,7 @@ namespace Alaris.Tests
         [TestMethod]
         public void TestDefaultInstanceThroughSingleton()
         {
-            var bot = Singleton<AlarisBot>.Instance;
+            var bot = AlarisBot.Instance;
 
             Assert.IsNotNull(bot, "Bot instance retrieved from singleton is null.");
         }
@@ -16,7 +16,7 @@ namespace Alaris.Tests
         [TestMethod]
         public void TestScriptManagerFuncionality()
         {
-            var bot = Singleton<AlarisBot>.Instance;
+            var bot = AlarisBot.Instance;
 
             Assert.IsNotNull(bot, "Bot instance retrieved from singleton is null.");
             Assert.IsNotNull(bot.ScriptManager, "The bot's script manager instance is null.");
@@ -26,7 +26,7 @@ namespace Alaris.Tests
         [TestMethod]
         public void TestGeneratedGuids()
         {
-            var bot = Singleton<AlarisBot>.Instance;
+            var bot = AlarisBot.Instance;
 
             Assert.IsNotNull(bot, "Bot instance retrieved from singleton is null.");
 

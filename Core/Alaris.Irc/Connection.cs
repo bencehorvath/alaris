@@ -623,8 +623,7 @@ namespace Alaris.Irc
 
                 _client.Connect(ConnectionArgs.Hostname, ConnectionArgs.Port);
                 _connected = true;
-                _writer = new StreamWriter(_client.GetStream(), TextEncoding);
-                _writer.AutoFlush = true;
+                _writer = new StreamWriter(_client.GetStream(), TextEncoding) {AutoFlush = true};
                 _reader = new StreamReader(_client.GetStream(), TextEncoding);
                 _socketListenThread = new Thread(ReceiveIRCMessages);
                 _socketListenThread.Name = Name;

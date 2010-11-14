@@ -86,7 +86,7 @@ namespace Alaris
         /// </summary>
         public void Run()
         {
-            if(Singleton<AlarisBot>.Instance.LuaEnabled)
+            if(AlarisBot.Instance.LuaEnabled)
                 _luaEngine = new LuaEngine.LuaEngine(ref _connection, Path.Combine(_scriptsPath, "lua"));
             Log.Info("Lua support is disabled.");
         }

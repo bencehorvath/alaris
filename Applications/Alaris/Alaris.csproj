@@ -139,6 +139,7 @@
   <ItemGroup>
     <Compile Include="Alaris.cs" />
     <Compile Include="API.cs" />
+    <Compile Include="InstanceHolder.cs" />
     <Compile Include="Commands\AdvancedCommands.cs" />
     <Compile Include="Commands\AlarisCommandWrapper.cs" />
     <Compile Include="Commands\AlarisMainParameter.cs" />
@@ -170,7 +171,6 @@
     <Compile Include="Services\Remote\IRemote.cs" />
     <Compile Include="Services\Remote\Remoter.cs" />
     <Compile Include="Services\ServiceManager.cs" />
-    <Compile Include="Singleton.cs" />
     <Compile Include="Exceptions\SingletonException.cs" />
     <Compile Include="ClusterManager.cs" />
     <Compile Include="Xml\AlarisConfig.cs" />
@@ -183,6 +183,10 @@
     <ProjectReference Include="..\..\Components\Alaris.Calculator\Alaris.Calculator.csproj">
       <Project>{B11FC091-0F63-4663-82DB-23F592A6596D}</Project>
       <Name>Alaris.Calculator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Alaris.Core\Alaris.Core.csproj">
+      <Project>{03D6CFD4-8C82-4141-BDAE-4E7415C5FAC7}</Project>
+      <Name>Alaris.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\Alaris.Irc\Alaris.Irc.csproj">
       <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>

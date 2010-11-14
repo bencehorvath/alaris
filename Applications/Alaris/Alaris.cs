@@ -32,7 +32,7 @@ namespace Alaris
         private bool _nickserv;
         private string _nspw = "";
         private readonly List<string> _channels = new List<string>();
-        private readonly CrashHandler _sCrashHandler = Singleton<CrashHandler>.Instance;
+        private readonly CrashHandler _sCrashHandler;
         private readonly Guid _guid = Guid.NewGuid();
         private readonly string _configfile;
         private string _scriptsDir;
@@ -126,20 +126,20 @@ namespace Alaris
         /// <summary>
         /// The bot instance (singleton)
         /// </summary>
-        public static AlarisBot Instance { get { return Singleton<AlarisBot>.Instance; } }
+        public static AlarisBot Instance { get { return InstanceHolder<AlarisBot>.Instance; } }
 
         /// <summary>
         ///   This is not an unused constructor. Called through singleton!
         /// </summary>
-        private AlarisBot() : this("alaris.config.xml")
+        public AlarisBot() : this("alaris.config.xml")
         {
         }
 
-
+ 
         /// <summary>
         ///   Creates a new instance of Alaris bot.
         /// </summary>
-        private AlarisBot(string config)
+        public AlarisBot(string config)
         {
             if (_isInstantiated)
                 return;
@@ -147,6 +147,10 @@ namespace Alaris
             _isInstantiated = true;
 
             Log.Info("Initializing");
+
+            _sCrashHandler = new CrashHandler();
+            InstanceHolder<CrashHandler>.Set(_sCrashHandler);
+
             _configfile = config;
             CrashHandler.HandleReadConfig(ReadConfig, _configfile);
             var cargs = new ConnectionArgs(_nick, _server);
@@ -155,8 +159,12 @@ namespace Alaris
             
             try
             {
-                Log.Info("Starting Identd service");
-                ThreadPool.QueueUserWorkItem(s => Identd.Start(_nick));
+                ThreadPool.QueueUserWorkItem(i =>
+                                                 {
+                                                     Log.Info("Starting Identd service");
+                                                     Identd.Start(_nick);
+                                                 });
+
 
                 _connection = new Connection(cargs, true, false)
                                 {
@@ -177,16 +185,15 @@ namespace Alaris
 
                 _connection.CtcpResponder = responder;
 
+                if (!this.SetAsInstance())
+                    throw new Exception();
+
                 Log.Info("CTCP is enabled");
 
-                _manager = new ScriptManager(ref _connection, _channels,
-                                            _scriptsDir);
+                _manager = new ScriptManager(ref _connection, _channels, _scriptsDir);
 
-                _manager.Run();
-                                                 
-
-                
-                                                                                                                         
+                ThreadPool.QueueUserWorkItem(s => _manager.Run());
+                                                                                                      
             }
             catch(Exception x)
             {
@@ -194,10 +201,36 @@ namespace Alaris
             }
 
             //_connection = new Connection(cargs, true, false);
-           
-            ThreadPool.QueueUserWorkItem(s => DatabaseManager.Initialize(DBName));
 
-            Log.Info("Spawning another thread to continue startup.");
+            ThreadPool.QueueUserWorkItem(d => DatabaseManager.Initialize(DBName));
+
+           
+            if (AddonsEnabled)
+            {
+                Log.Info(
+                    "Initializing Addon manager");
+                AddonManager.Initialize(
+                    ref _connection,
+                    Channels);
+
+                AddonManager.
+                    LoadPluginsFromDirectory
+                    (AddonDirectory);
+            }
+
+            ThreadPool.QueueUserWorkItem(c =>
+                                             {
+                                                 Log.Info("Setting up commands");
+
+                                                 CommandManager.CommandPrefix = "@";
+                                                 CommandManager.CreateMappings();
+                                             });
+
+            SetupHandlers();
+            Connect();
+            
+            ThreadPool.QueueUserWorkItem(s => ServiceManager.StartServices());
+      
         }
 
         /// <summary>
@@ -217,38 +250,6 @@ namespace Alaris
             return _guid;
         }
 
-        /// <summary>
-        ///   Run this instance.
-        /// </summary>
-        public void Run()
-        {
-            ThreadPool.QueueUserWorkItem(r =>
-                                             {
-                                                 if (AddonsEnabled)
-                                                 {
-                                                     Log.Info(
-                                                         "Initializing Addon manager");
-                                                     AddonManager.Initialize(
-                                                         ref _connection,
-                                                         Channels);
-
-                                                     AddonManager.
-                                                         LoadPluginsFromDirectory
-                                                         (AddonDirectory);
-                                                 }
-
-
-                                                 Log.Info("Setting up commands");
-
-                                                 CommandManager.CommandPrefix = "@";
-                                                 CommandManager.CreateMappings();
-                                             });
-
-            Connect();
-            ThreadPool.QueueUserWorkItem(sv => ServiceManager.StartServices());
-        }
-
-        
         private void SetupHandlers()
         {
             Log.Info("Registering event handlers");
@@ -335,8 +336,8 @@ namespace Alaris
                 throw new Exception("The config file has not been read before connecting.");
 
            Log.Info("Establishing connection");
-           _connection.Connect();
-            /*try
+           
+            try
             {
                 _connection.Connect();
             }
@@ -345,7 +346,7 @@ namespace Alaris
                 Log.Fatal("An exception has been thrown during the connection process. ({0})", x);
                 Console.WriteLine(x);
                 Identd.Stop();
-            }*/
+            }
         }
 
         /// <summary>

@@ -1,15 +1,8 @@
 using System;
 using System.IO;
-using System.Net.Mime;
 using System.Threading;
-using System.Xml.Serialization;
 using Alaris.API;
-using Alaris.CommandLine;
-using Alaris.Irc;
-using Alaris.Mathematics;
-using Alaris.Xml;
 using NLog;
-using CLI = Alaris.Xml.CLI;
 
 
 namespace Alaris
@@ -20,8 +13,8 @@ namespace Alaris
 
         private static void Main(string[] args)
         {
-            ThreadPool.SetMaxThreads(40, 20);
-            ThreadPool.SetMinThreads(20, 10);
+            ThreadPool.SetMaxThreads(30, 20);
+            ThreadPool.SetMinThreads(10, 10);
 
 
             Console.WriteLine("Welcome to Alaris!");
@@ -41,13 +34,13 @@ namespace Alaris
                 Log.Info("Terminating");
                 return;
             }
-            
-            var sBot = Singleton<AlarisBot>.Instance;
 
-            Console.CancelKeyPress += (sender, e) => sBot.Disconnect("Daemon killed.");
-
-            sBot.Run();
+            var bot = new AlarisBot("alaris.config.xml");
             
+
+            Console.CancelKeyPress += (sender, e) => bot.Disconnect("Daemon killed.");
+
+ 
             //AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
             //                                                  {
             //                                                        Log.Warn("Unhandled Exception thrown.");
@@ -55,7 +48,7 @@ namespace Alaris
             //                                                        CrashDumper.CreateCrashDump();
             //                                                  };
 
-            if (sBot.CLIEnabled)
+            if (AlarisBot.Instance.CLIEnabled)
             {
                 Log.Info("Starting CLI");
                 CommandLine.CLI.Start();

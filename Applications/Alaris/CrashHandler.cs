@@ -23,7 +23,7 @@ namespace Alaris
         /// <summary>
         ///   Creates a new instance of <see cref = "CrashHandler" />
         /// </summary>
-        private CrashHandler()
+        public CrashHandler()
         {
             _guid = Guid.NewGuid();
         }
