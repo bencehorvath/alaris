@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using Alaris.API;
 using Alaris.Irc;
+using Alaris.Extensions;
 using NLog;
 
 namespace Alaris.Commands
@@ -50,12 +51,12 @@ namespace Alaris.Commands
 
                         foreach (var attribute in Attribute.GetCustomAttributes(method))
                         {
-                            if (attribute.GetType() == typeof (AlarisCommandAttribute) ||
-                                attribute.GetType() == typeof (ParameterizedAlarisCommand))
+                            if (attribute.IsOfType(typeof(AlarisCommandAttribute)) ||
+                                attribute.IsOfType(typeof(ParameterizedAlarisCommand)))
                             {
-                                if (attribute.GetType() == typeof (ParameterizedAlarisCommand))
+                                if (attribute.IsOfType(typeof(ParameterizedAlarisCommand)))
                                 {
-                                    var patt = (ParameterizedAlarisCommand) attribute;
+                                    var patt = attribute.Cast<ParameterizedAlarisCommand>();
 
                                     if (patt.IsParameterCountUnspecified)
                                         passEverything = true;
@@ -63,9 +64,9 @@ namespace Alaris.Commands
                                     else if(method.GetParameters().Length != patt.ParameterCount + 1)
                                         continue;
                                 }
-                                    
 
-                                var attr = (AlarisCommandAttribute) attribute;
+
+                                var attr = attribute.Cast<AlarisCommandAttribute>();
 
                                 CommandMethodMap.Add(new AlarisCommandWrapper
                                                          {
@@ -73,15 +74,16 @@ namespace Alaris.Commands
                                                              Permission = attr.Permission,
                                                              IsParameterCountUnspecified = passEverything
                                                          },
-                                                     new AlarisMethod(method, attr, attr is ParameterizedAlarisCommand));
+                                                     new AlarisMethod(method, attr,
+                                                                      attr.CanBeCastedTo<ParameterizedAlarisCommand>()));
 
                             }
-                            else if(attribute.GetType() == typeof(AlarisSubCommandAttribute) ||
-                                attribute.GetType() == typeof(ParameterizedAlarisSubCommand))
+                            else if (attribute.IsOfType(typeof(AlarisSubCommandAttribute)) ||
+                                attribute.IsOfType(typeof(ParameterizedAlarisSubCommand)))
                             {
-                                if(attribute.GetType() == typeof(ParameterizedAlarisSubCommand))
+                                if(attribute.IsOfType(typeof(ParameterizedAlarisSubCommand)))
                                 {
-                                    var patt = (ParameterizedAlarisSubCommand) attribute;
+                                    var patt = attribute.Cast<ParameterizedAlarisSubCommand>();
 
                                     if (patt.IsParameterCountUnspecified)
                                         passEverything = true;
@@ -89,7 +91,7 @@ namespace Alaris.Commands
                                         continue;
                                 }
 
-                                var attr = (AlarisSubCommandAttribute)attribute;
+                                var attr = attribute.Cast<AlarisSubCommandAttribute>();
 
                                 CommandMethodMap.Add(new AlarisCommandWrapper
                                 {
@@ -97,7 +99,7 @@ namespace Alaris.Commands
                                     Permission = attr.Permission,
                                     IsParameterCountUnspecified = passEverything
                                 },
-                                                     new AlarisMethod(method, attr, attr is ParameterizedAlarisSubCommand));
+                                                     new AlarisMethod(method, attr, attr.CanBeCastedTo<ParameterizedAlarisSubCommand>()));
                             }
                         }
                     }

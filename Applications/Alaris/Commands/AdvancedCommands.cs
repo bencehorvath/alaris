@@ -2,6 +2,7 @@
 using System.Text;
 using Alaris.API.Crypt;
 using Alaris.API.Database;
+using Alaris.Extensions;
 
 namespace Alaris.Commands
 {
@@ -21,20 +22,20 @@ namespace Alaris.Commands
         [ParameterizedAlarisCommand("admin", CommandPermission.Admin, 4)]
         public static void HandleAdminCommands(AlarisMainParameter mp, string action, string user, string nick, string host)
         {
-            if (string.IsNullOrEmpty(action))
+            if (action.IsNull())
             {
                 mp.Bot.SendMsg(mp.Channel, "Sub-commands: list | delete | add");
                 return;
             }
 
 
-            if(action.Equals("add", StringComparison.InvariantCultureIgnoreCase) && !string.IsNullOrEmpty(user)
-                                                                                 && !string.IsNullOrEmpty(nick)
-                                                                                 && !string.IsNullOrEmpty(host))
+            if(action.Equals("add", StringComparison.InvariantCultureIgnoreCase) && !user.IsNull()
+                                                                                 && !nick.IsNull()
+                                                                                 && !host.IsNull())
             {
                 DatabaseManager.Query(string.Format("INSERT INTO admins(user,nick,hostname) VALUES('{0}', '{1}', '{2}')", user, nick, host));
 
-                mp.Bot.SendMsg(mp.Channel, string.Format("Admin {0} has been added.", nick));
+                mp.Bot.SendMsg(mp.Channel, "Admin {0} has been added.", nick);
             }
             else if(action.Equals("list", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -42,14 +43,13 @@ namespace Alaris.Commands
                     mp.Bot.SendMsg(mp.Channel, "No admins."); // shouldn't happen.
                 else
                 {
-                    foreach (var adm in AdminManager.GetAdmins())
-                        mp.Bot.SendMsg(mp.Channel, adm);
+                    AdminManager.GetAdmins().SendToChannel(mp.Channel);
                 }
             }
-            else if(action.Equals("delete", StringComparison.InvariantCultureIgnoreCase) && !string.IsNullOrEmpty(user))
+            else if(action.Equals("delete", StringComparison.InvariantCultureIgnoreCase) && !user.IsNull())
             {
                 AdminManager.DeleteAdmin(user);
-                mp.Bot.SendMsg(mp.Channel, string.Format("Admin {0} deleted.", user));      
+                mp.Bot.SendMsg(mp.Channel, "Admin {0} deleted.", user);      
             }
         }
 
@@ -67,7 +67,7 @@ namespace Alaris.Commands
                 sb.AppendFormat("{0} ", parameters[i]);
 
             var text = sb.ToString();
-            if (string.IsNullOrEmpty(action) || string.IsNullOrEmpty(text))
+            if (action.IsNull() || text.IsNull())
                 return;
 
 

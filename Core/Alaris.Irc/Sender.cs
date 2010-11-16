@@ -848,6 +848,28 @@ namespace Alaris.Irc
         }
 
         /// <summary>
+        ///   Send a message to all the users in a channel.
+        /// </summary>
+        /// <remarks>
+        ///   Possible Errors
+        ///   <list type = "bullet">
+        ///     <item><description>ERR_CANNOTSENDTOCHAN</description></item>
+        ///     <item><description>ERR_NOTEXTTOSEND</description></item>
+        ///   </list>
+        /// </remarks>
+        /// <param name = "channel">The target channel.</param>
+        /// <param name = "message">A message. If the message is too long it will be broken
+        ///   up into smaller piecese which will be sent sequentially.</param>
+        /// <param name="args">Format args</param>
+        /// <exception cref = "ArgumentException">If the channel name is not valid or if the message is null.</exception>
+        /// <seealso cref = "Listener.OnPublic" />
+        public void PublicMessage(string channel, string message, params object[] args)
+        {
+            var msg = string.Format(message, args);
+            PublicMessage(channel, msg);
+        }
+
+        /// <summary>
         ///   Send a message to a user.
         /// </summary>
         /// <remarks>

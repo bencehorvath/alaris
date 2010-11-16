@@ -67,6 +67,7 @@ namespace Alaris.Core
             AddTypesToTypeMap(asm);
         }
 
+
         /// <summary>
         ///   Adds all non-standard Enum-types of the given Assembly to the TypeMap.
         ///   Also caches all big enums into a dictionary to improve Lookup speed.

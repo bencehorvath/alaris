@@ -20,7 +20,7 @@ namespace Alaris.Extensions
         {
             foreach (var chan in channels)
             {
-                if (Rfc2812Util.IsValidChannelName(chan))
+                if (chan.IsValidChannelName())
                     connection.Sender.Join(chan);
 
                 Log.Debug("Joined channel: {0}", chan);
@@ -34,7 +34,7 @@ namespace Alaris.Extensions
         /// <param name="chns"></param>
         public static void GetChannelsFrom(this IList<string> channels, IEnumerable<string> chns)
         {
-            foreach (var chan in chns.Where(Rfc2812Util.IsValidChannelName))
+            foreach (var chan in chns.Where(chn => chn.IsValidChannelName()))
             {
                 channels.Add(chan);
             }

@@ -52,7 +52,7 @@ namespace Alaris
                 }
                 catch (Exception ex)
                 {
-                    Log.Error("WebHelper", "Invalid webpage address: " + ex.Message);
+                    Log.Error("Invalid webpage address: {0}", ex.Message);
                     //_connection.Sender.PublicMessage(chan, IrcConstants.Red + "Invalid address.");
                     return;
                 }
@@ -133,8 +133,8 @@ namespace Alaris
                 }
                 catch(Exception x)
                 {
-                    Log.Error("Math", x.ToString());
-                    Log.Debug("Math", double.Parse("3.55", CultureInfo.InvariantCulture).ToString());
+                    Log.Error(x.ToString());
+                    Log.Debug(double.Parse("3.55", CultureInfo.InvariantCulture).ToString());
                     SendMsg(chan, "Hiba!");
 
                 }
