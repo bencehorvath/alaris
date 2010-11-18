@@ -8,6 +8,8 @@ namespace Alaris.Commands
     /// </summary>
     public sealed class AlarisMainParameter
     {
+        #region Properties
+
         /// <summary>
         /// Gets the Alaris instance.
         /// </summary>
@@ -32,5 +34,7 @@ namespace Alaris.Commands
         /// User of the action.
         /// </summary>
         public UserInfo User { get; set; }
+
+        #endregion
     }
 }

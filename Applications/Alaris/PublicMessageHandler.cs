@@ -1,12 +1,8 @@
 using System;
 using System.Globalization;
-using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
 using Alaris.API;
-using Alaris.API.Crypt;
-using Alaris.API.Database;
 using Alaris.Calculator;
 using Alaris.Calculator.lexer;
 using System.IO;
@@ -14,7 +10,6 @@ using Alaris.Calculator.node;
 using Alaris.Calculator.parser;
 using Alaris.Commands;
 using Alaris.Irc;
-using Alaris.Localization;
 using Alaris.Mathematics.Types;
 
 namespace Alaris
@@ -58,8 +53,7 @@ namespace Alaris
                 }
             }
 
-            var cmsg = msg;
-            ThreadPool.QueueUserWorkItem(c => CommandManager.HandleCommand(user, chan, cmsg));
+            
 
             if(msg.StartsWith("@calc ", StringComparison.InvariantCultureIgnoreCase) || msg.StartsWith("@c ", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -146,6 +140,9 @@ namespace Alaris
                 SendMsg(chan, Rijndael.EncryptString(text));        
             }*/
 
+            var cmsg = msg;
+            ThreadPool.QueueUserWorkItem(c => CommandManager.HandleCommand(user, chan, cmsg));
+            
         }
     }
 }

@@ -36,13 +36,12 @@ namespace Alaris
 
             Console.CancelKeyPress += (sender, e) => bot.Disconnect("Daemon killed.");
 
- 
-            //AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
-            //                                                  {
-            //                                                        Log.Warn("Unhandled Exception thrown.");
-            //                                                        Log.ErrorException("Unhandled exception has been thrown", eventArgs.ExceptionObject as Exception);
-            //                                                        CrashDumper.CreateCrashDump();
-            //                                                  };
+
+            AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
+                                                              {
+                                                                  Log.Error("An unnhandled exception has been thrown. ({0})", eventArgs.ExceptionObject as Exception);
+                                                                  CrashDumper.CreateCrashDump();
+                                                              };
 
             if (AlarisBot.Instance.CLIEnabled)
             {

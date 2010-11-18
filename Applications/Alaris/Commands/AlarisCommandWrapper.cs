@@ -8,6 +8,8 @@ namespace Alaris.Commands
     [AttributeUsage(AttributeTargets.Method)]
     public class AlarisCommandAttribute : Attribute
     {
+        #region Properties
+
         /// <summary>
         /// Gets the command.
         /// </summary>
@@ -17,6 +19,9 @@ namespace Alaris.Commands
         /// </summary>
         public CommandPermission Permission { get; protected set; }
 
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Marks a method as an Alaris command.
@@ -28,6 +33,8 @@ namespace Alaris.Commands
             Command = command;
             Permission = permission;
         }
+
+        #endregion
     }
 
     ///<summary>
@@ -36,6 +43,8 @@ namespace Alaris.Commands
     [AttributeUsage(AttributeTargets.Method)]
     public class AlarisSubCommandAttribute : Attribute
     {
+        #region Properties
+
         /// <summary>
         /// Gets the command.
         /// </summary>
@@ -45,6 +54,9 @@ namespace Alaris.Commands
         /// </summary>
         public CommandPermission Permission { get; protected set; }
 
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Marks a method as an Alaris sub-command.
@@ -56,6 +68,8 @@ namespace Alaris.Commands
             Command = command;
             Permission = permission;
         }
+
+        #endregion
     }
 
     /// <summary>
@@ -63,6 +77,8 @@ namespace Alaris.Commands
     /// </summary>
     public sealed class AlarisCommandWrapper : IEquatable<AlarisCommandWrapper>
     {
+        #region Properties
+
         /// <summary>
         /// The command text.
         /// </summary>
@@ -77,6 +93,10 @@ namespace Alaris.Commands
         /// </summary>
         public bool IsParameterCountUnspecified { get; set; }
 
+        #endregion
+
+        #region IEquatable<T>
+
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
         /// </summary>
@@ -88,5 +108,7 @@ namespace Alaris.Commands
         {
             return (Command == other.Command && Permission == other.Permission);
         }
+
+        #endregion
     }
 }

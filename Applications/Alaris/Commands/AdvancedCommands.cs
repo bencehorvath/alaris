@@ -89,5 +89,17 @@ namespace Alaris.Commands
         {
             mp.Bot.SendMsg(mp.Channel, Rijndael.EncryptString(text));   
         }
+
+        /// <summary>
+        /// Handles the add command.
+        /// </summary>
+        /// <param name="mp">The mp.</param>
+        /// <param name="a">A.</param>
+        /// <param name="b">The b.</param>
+        [ParameterizedAlarisCommand("add", CommandPermission.Normal, 2)]
+        public static void HandleAddCommand(AlarisMainParameter mp, string a, string b)
+        {
+            mp.Bot.SendMsg(mp.Channel, (a.Cast<int>() + b.Cast<int>()).ToString());
+        }
     }
 }

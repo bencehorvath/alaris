@@ -7,6 +7,8 @@ namespace Alaris.Commands
     /// </summary>
     public sealed class AlarisMethod
     {
+        #region Properties
+
         /// <summary>
         /// The method contained in this instance.
         /// </summary>
@@ -25,6 +27,10 @@ namespace Alaris.Commands
         /// Gets whether the method and command has params or not.
         /// </summary>
         public bool IsParameterized { get; private set; }
+
+        #endregion
+
+        #region Constructors
 
         /// <summary>
         /// Creates a new instance of AlarisMethod.
@@ -51,6 +57,7 @@ namespace Alaris.Commands
             SubCommandAttribute = attr;
             IsParameterized = isParameterized;
         }
-      
+
+        #endregion
     }
 }

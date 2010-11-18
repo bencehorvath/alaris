@@ -15,15 +15,24 @@ namespace Alaris.Commands
     /// </summary>
     public static class CommandManager
     {
+        #region Properties
         /// <summary>
         /// Prefix of IRC commands.
         /// </summary>
         public static string CommandPrefix { get; set; }
 
+        #endregion
+
+        #region Private Members
+
         private readonly static Dictionary<AlarisCommandWrapper, AlarisMethod> CommandMethodMap = new Dictionary<AlarisCommandWrapper, AlarisMethod>();
         private readonly static Dictionary<AlarisCommandWrapper, AlarisMethod> SubCommandMethodMap = new Dictionary<AlarisCommandWrapper, AlarisMethod>();
 
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
+        #endregion
+
+        #region Command Mappings
 
         /// <summary>
         /// This methods loads every method marked as a command and maps it to the specified command.
@@ -108,6 +117,10 @@ namespace Alaris.Commands
 
             Log.Info("Created {0} command mapping(s) and {1} sub-command mapping(s)", CommandMethodMap.Count, SubCommandMethodMap.Count);
         }
+
+        #endregion
+
+        #region Command Handler
 
         /// <summary>
         /// Handles the command.
@@ -223,6 +236,8 @@ namespace Alaris.Commands
                 return;
             }
         }
+
+        #endregion
 
     }
 }

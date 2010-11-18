@@ -11,16 +11,22 @@ namespace Alaris.CommandLine
     /// </summary>
     public static class CLI
     {
-        
+        #region Properties
         /// <summary>
         /// Gets whether the CLI thread is running or not.
         /// </summary>
         public static bool IsRunning { get; private set; }
 
+        #endregion
+
+        #region Private Members
+
         private static readonly Thread CLIThread;
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         private static string _cmd;
+
+        #endregion
 
         static CLI()
         {

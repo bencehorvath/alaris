@@ -8,6 +8,8 @@ namespace Alaris.Commands
     [AttributeUsage(AttributeTargets.Method)]
     public sealed class ParameterizedAlarisCommand : AlarisCommandAttribute
     {
+        #region Properties
+
         /// <summary>
         /// Number of parameters for the command.
         /// </summary>
@@ -18,6 +20,9 @@ namespace Alaris.Commands
         /// </summary>
         public bool IsParameterCountUnspecified { get; private set; }
 
+        #endregion
+
+        #region Constructor
         /// <summary>
         /// Marks a method as a parameterized Alaris command.
         /// </summary>
@@ -33,7 +38,7 @@ namespace Alaris.Commands
             IsParameterCountUnspecified = (isParamCountUnknown && numParams == 0);
         }
 
-        
+        #endregion
     }
 
     /// <summary>
@@ -42,6 +47,8 @@ namespace Alaris.Commands
     [AttributeUsage(AttributeTargets.Method)]
     public sealed class ParameterizedAlarisSubCommand : AlarisSubCommandAttribute
     {
+        #region Properties
+
         /// <summary>
         /// Number of parameters for the command.
         /// </summary>
@@ -52,6 +59,9 @@ namespace Alaris.Commands
         /// </summary>
         public bool IsParameterCountUnspecified { get; private set; }
 
+        #endregion 
+
+        #region Construtor
         /// <summary>
         /// Marks a method as a parameterized Alaris sub-command.
         /// </summary>
@@ -68,6 +78,6 @@ namespace Alaris.Commands
             IsParameterCountUnspecified = (isParamCountUnknown && numParams == 0);
         }
 
-
+        #endregion
     }
 }

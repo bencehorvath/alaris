@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using Alaris.API;
 using Alaris.Irc;
+using Alaris.Extensions;
 using NLog;
 
 
@@ -73,7 +74,7 @@ namespace Alaris
 
                 foreach (var type in asm.GetTypes().Where(type => type.GetInterfaces().Contains(typeof (IAlarisAddon))))
                 {
-                    pl = (IAlarisAddon)Activator.CreateInstance(type);
+                    pl = Activator.CreateInstance(type).Cast<IAlarisAddon>();
                 }
 
                 if (pl == null)

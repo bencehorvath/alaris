@@ -11,7 +11,7 @@ namespace Alaris
     ///   The delegate used for <see cref = "AlarisBot.ReadConfig" />
     /// </summary>
     public delegate void ReadConfigDelegate(string configfile);
-
+    
     /// <summary>
     ///   A class providing functions to run specific method in an exception-handled environment.
     /// </summary>
@@ -35,6 +35,7 @@ namespace Alaris
         ~CrashHandler()
         {
             Log.Trace("~CrashHandler()");
+            
         }
 
 

@@ -26,6 +26,8 @@ namespace Alaris.API.Crypt
             return (AESEncryption.Encrypt(plain, Pasword, Salt, 2, InitVector, 256));
         }
 
+        #region IEncryptionAlgorithm
+
         /// <summary>
         /// Encrpyts the specified string using this algorithm.
         /// </summary>
@@ -50,6 +52,8 @@ namespace Alaris.API.Crypt
         {
             return DecryptString(encrypted, pass, keySize);
         }
+
+        #endregion
 
         /// <summary>
         /// Encrpyts the specified string using this algorithm.

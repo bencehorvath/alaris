@@ -8,13 +8,12 @@ namespace Alaris.API.Database
     public interface IManager
     {
         /// <summary>
-        /// Initializes the manager.
+        /// Starts the manager.
         /// </summary>
-        void Initialize();
-
+        void Start();
         /// <summary>
-        /// The manager's resource connection.
+        /// Stops the manager.
         /// </summary>
-        SQLiteConnection Connection { get; }
+        void Stop();
     }
 }

@@ -39,5 +39,15 @@ namespace Alaris.Extensions
                 channels.Add(chan);
             }
         }
+
+        /// <summary>
+        /// Joins the channel.
+        /// </summary>
+        /// <param name="channel">The channel.</param>
+        public static void JoinChannel(this string channel)
+        {
+            if(channel.IsValidChannelName())
+                InstanceHolder<AlarisBot>.Get().Connection.Sender.Join(channel);
+        }
     }
 }
