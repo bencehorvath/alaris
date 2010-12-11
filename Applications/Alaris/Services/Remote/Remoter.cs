@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Net.Security;
-using System.ServiceModel;
 using Alaris.API;
 
 namespace Alaris.Services.Remote
@@ -35,6 +33,7 @@ namespace Alaris.Services.Remote
         /// <param name="message">The message.</param>
         public void PublicMessage(string channel, string message)
         {
+            Log.Info("Sending message: {0}: {1}", channel, message);
             AlarisBot.Instance.SendMsg(channel, message);
         }
     }

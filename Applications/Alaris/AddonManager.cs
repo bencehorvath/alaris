@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using Alaris.API;
 using Alaris.Irc;
 using Alaris.Extensions;
@@ -66,28 +67,30 @@ namespace Alaris
             {
                 var asm = Assembly.LoadFrom(dll.FullName);
                 
-
                 if(asm == null)
                     continue;
 
                 IAlarisAddon pl = null;
 
-                foreach (var type in asm.GetTypes().Where(type => type.GetInterfaces().Contains(typeof (IAlarisAddon))))
+                foreach (var type in 
+                    from t in asm.GetTypes().AsParallel() 
+                    where t.GetInterfaces().Contains(typeof(IAlarisAddon)) 
+                    select t)
                 {
                     pl = Activator.CreateInstance(type).Cast<IAlarisAddon>();
+
+                    if (pl == null)
+                        continue;
+
+                    var connection = Connection;
+
+                    pl.Setup(ref connection, Channels);
+
+                    Addons.Add(pl);
+                    Assemblies.Add(asm);
+
+                    Log.Info("Loaded plugin {0} {1} by {2} ({3})", pl.Name, asm.GetName().Version.ToString(), pl.Author, pl.Website);
                 }
-
-                if (pl == null)
-                    break; // not a plugin
-
-                var connection = Connection;
-
-                pl.Setup(ref connection, Channels);
-
-                Addons.Add(pl);
-                Assemblies.Add(asm);
-
-                Log.Info("Loaded plugin {0} {1} by {2} ({3})", pl.Name, asm.GetName().Version.ToString(), pl.Author, pl.Website);
             }
         }
 

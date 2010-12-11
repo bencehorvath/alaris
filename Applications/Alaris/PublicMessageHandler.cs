@@ -2,6 +2,7 @@ using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Threading.Tasks;
 using Alaris.API;
 using Alaris.Calculator;
 using Alaris.Calculator.lexer;
@@ -30,30 +31,25 @@ namespace Alaris
         /// </param>
         private void OnPublicMessage(UserInfo user, string chan, string msg)
         {
-            var urlsin = Utilities.GetUrls(msg);
+            var smsg = msg;
+            ThreadPool.QueueUserWorkItem(wc =>
+                                             {
+                                                 var urlsin = Utilities.GetUrls(smsg);
 
-            if (urlsin.Count > 0)
-            {
-                try
-                {
+                                                 if (urlsin.Count <= 0) return;
 
-                    foreach(var url in urlsin)
-                    {
-                        var uri = url;
-                        ThreadPool.QueueUserWorkItem(o => Utilities.HandleWebTitle(ref _connection, chan, uri));
-                    }
-
-                    return;
-                }
-                catch (Exception ex)
-                {
-                    Log.Error("Invalid webpage address: {0}", ex.Message);
-                    //_connection.Sender.PublicMessage(chan, IrcConstants.Red + "Invalid address.");
-                    return;
-                }
-            }
-
-            
+                                                 try
+                                                 {
+                                                     Parallel.ForEach(urlsin, url => Utilities.HandleWebTitle(ref _connection, chan, url));
+                                                     return;
+                                                 }
+                                                 catch (Exception ex)
+                                                 {
+                                                     Log.Error("Invalid webpage address: {0}", ex.Message);
+                                                     //_connection.Sender.PublicMessage(chan, IrcConstants.Red + "Invalid address.");
+                                                     return;
+                                                 }
+                                             });
 
             if(msg.StartsWith("@calc ", StringComparison.InvariantCultureIgnoreCase) || msg.StartsWith("@c ", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -140,8 +136,8 @@ namespace Alaris
                 SendMsg(chan, Rijndael.EncryptString(text));        
             }*/
 
-            var cmsg = msg;
-            ThreadPool.QueueUserWorkItem(c => CommandManager.HandleCommand(user, chan, cmsg));
+            
+            ThreadPool.QueueUserWorkItem(c => CommandManager.HandleCommand(user, chan, smsg));
             
         }
     }

@@ -420,13 +420,12 @@ namespace Alaris
             Log.Debug("Received CTCP command {0} from {1}", command, user.Nick);
         }
 
-        /// <summary>
+        /// <summary>ddd
         ///   Releases all used resources.
         /// </summary>
         public void Dispose()
         {
             _connection.Dispose();
         }
-
     }
 }

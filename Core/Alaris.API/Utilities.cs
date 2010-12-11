@@ -136,16 +136,12 @@ namespace Alaris.API
         {
             if (fileName == null) throw new ArgumentNullException("fileName");
             byte[] retVal;
-            var file = new FileStream(fileName, FileMode.Open);
-            try
+
+            using(var file = new FileStream(fileName, FileMode.Open))
             {
                 MD5 md5 = new MD5CryptoServiceProvider();
                 retVal = md5.ComputeHash(file);
                 md5.Dispose();
-            }
-            finally
-            {
-                file.Close();
             }
 
             var sb = new StringBuilder();
@@ -171,7 +167,7 @@ namespace Alaris.API
             if (value == null) throw new ArgumentNullException("value");
             var x = new MD5CryptoServiceProvider();
 
-            byte[] data = Encoding.ASCII.GetBytes(value);
+            var data = Encoding.ASCII.GetBytes(value);
             data = x.ComputeHash(data);
             x.Dispose();
             var ret = "";
@@ -230,15 +226,15 @@ namespace Alaris.API
 
                     //urls.AddRange(from Match match in matches select match.Groups["page"].ToString());
 
-                    foreach(Match match in matches)
+                    foreach (var url in from Match match in matches select match.Groups["url"].ToString())
                     {
-                        var url = match.Groups["url"].ToString();
-                        if (!url.StartsWith("http://") && !url.StartsWith("https://"))
-                            url = string.Format("http://{0}", url);
+                        var lurl = url;
+                        if (!lurl.StartsWith("http://") && !url.StartsWith("https://"))
+                            lurl = string.Format("http://{0}", url);
 
                         Log.Debug("Utilities", string.Format("Checking: {0}", url));
 
-                        urls.Add(url);
+                        urls.Add(lurl);
                     }
                 }
             }

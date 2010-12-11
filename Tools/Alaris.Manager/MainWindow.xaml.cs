@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ServiceModel;
 using System.Windows;
+using System.Windows.Input;
 using Alaris.API;
 using Alaris.Irc;
 
@@ -146,6 +147,14 @@ namespace Alaris.Manager
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             messageTab.IsEnabled = false;
+        }
+
+        private void MessageBoxKeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                SendButtonClick(sender, new RoutedEventArgs());
+            }
         }
 
         

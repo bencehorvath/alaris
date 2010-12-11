@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Alaris.Irc;
 
 namespace Alaris.Extensions
@@ -18,13 +19,14 @@ namespace Alaris.Extensions
         /// <param name="connection"></param>
         public static void JoinToChannels(this IEnumerable<string> channels, Connection connection)
         {
-            foreach (var chan in channels)
-            {
-                if (chan.IsValidChannelName())
-                    connection.Sender.Join(chan);
 
-                Log.Debug("Joined channel: {0}", chan);
-            }
+            Parallel.ForEach(channels, chan =>
+                                           {
+                                               if (chan.IsValidChannelName())
+                                                   connection.Sender.Join(chan);
+
+                                               Log.Debug("Joined channel: {0}", chan);
+                                           });
         }
 
         /// <summary>
@@ -34,7 +36,7 @@ namespace Alaris.Extensions
         /// <param name="chns"></param>
         public static void GetChannelsFrom(this IList<string> channels, IEnumerable<string> chns)
         {
-            foreach (var chan in chns.Where(chn => chn.IsValidChannelName()))
+            foreach (var chan in chns.AsParallel().Where(chn => chn.IsValidChannelName()))
             {
                 channels.Add(chan);
             }

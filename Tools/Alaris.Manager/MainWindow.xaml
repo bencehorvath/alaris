@@ -19,7 +19,7 @@
                     <TextBox Height="23" HorizontalAlignment="Left" Margin="73,15,0,0" Name="channelBox" VerticalAlignment="Top" Width="254" />
                     <Label Content="Message:" Height="28" HorizontalAlignment="Left" Margin="5,47,0,0" Name="label3" VerticalAlignment="Top" />
                     <Button Content="Send" Height="23" HorizontalAlignment="Left" Margin="176,162,0,0" Name="sendButton" VerticalAlignment="Top" Width="75" Click="SendButtonClick" />
-                    <TextBox Height="107" HorizontalAlignment="Left" Margin="73,49,0,0" Name="messageBox" VerticalAlignment="Top" Width="254" MaxLength="255" />
+                    <TextBox Height="107" HorizontalAlignment="Left" Margin="73,49,0,0" Name="messageBox" VerticalAlignment="Top" Width="254" MaxLength="255" KeyDown="MessageBoxKeyDown" />
                 </Grid>
             </TabItem>
         </TabControl>
