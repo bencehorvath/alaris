@@ -240,7 +240,7 @@ namespace Alaris.API
             }
             catch (Exception x)
             {
-                Log.Error("TitleFounder", x.Message);
+                Log.Error(x.Message);
             }
 
             return urls;

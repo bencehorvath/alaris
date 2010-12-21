@@ -39,12 +39,15 @@ namespace Alaris.API
                 var response = request.GetResponse();
 
                 var stream = response.GetResponseStream();
+                string data;
 
-                var rdr = new StreamReader(stream);
-                var data = rdr.ReadToEnd();
+                using (var rdr = new StreamReader(stream))
+                {
+                    data = rdr.ReadToEnd();
+                }
 
-                rdr.Close();
                 response.Close();
+               
 
                 var getTitleRegex = new Regex(@"<title>(?<ttl>.*\s*.+\s*.*)\s*</title>", RegexOptions.IgnoreCase);
 
