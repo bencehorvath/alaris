@@ -149,6 +149,8 @@ namespace Alaris
             _isInstantiated = true;
 
             Log.Info("Initializing");
+            var sw = new Stopwatch();
+            sw.Start();
 
             _sCrashHandler = new CrashHandler();
             InstanceHolder<CrashHandler>.Set(_sCrashHandler);
@@ -158,14 +160,18 @@ namespace Alaris
             var cargs = new ConnectionArgs(_nick, _server);
             
             Log.Info("Running huge amount of parallel tasks");
+
+            Task itask = null, mtask = null, dtask, ctask;
             
             try
             {
-                ThreadPool.QueueUserWorkItem(i =>
-                                                 {
-                                                     Log.Info("Starting Identd service");
-                                                     Identd.Start(_nick);
-                                                 });
+
+                itask = Task.Factory.StartNew(() =>
+                                                      {
+                                                          Log.Info("Starting Identd service");
+                                                          Identd.Start(_nick);
+                                                      });
+                
 
 
                 _connection = new Connection(cargs, true, false)
@@ -194,7 +200,7 @@ namespace Alaris
 
                 _manager = new ScriptManager(ref _connection, _channels, _scriptsDir);
 
-                ThreadPool.QueueUserWorkItem(s => _manager.Run());
+                mtask = Task.Factory.StartNew(() => _manager.Run());
                                                                                                       
             }
             catch(Exception x)
@@ -202,10 +208,7 @@ namespace Alaris
                 Log.Fatal("An exception has been thrown during one of the parallel executions ({0})", x);          
             }
 
-            //_connection = new Connection(cargs, true, false);
-
-            ThreadPool.QueueUserWorkItem(d => DatabaseManager.Initialize(DBName));
-
+            dtask = Task.Factory.StartNew(() => DatabaseManager.Initialize(DBName));
            
             if (AddonsEnabled)
             {
@@ -220,18 +223,26 @@ namespace Alaris
                     (AddonDirectory);
             }
 
-            ThreadPool.QueueUserWorkItem(c =>
-                                             {
-                                                 Log.Info("Setting up commands");
+            ctask = Task.Factory.StartNew(() =>
+                                                  {
+                                                      Log.Info("Setting up commands");
 
-                                                 CommandManager.CommandPrefix = "@";
-                                                 CommandManager.CreateMappings();
-                                             });
+                                                      CommandManager.CommandPrefix = "@";
+                                                      CommandManager.CreateMappings();
+                                                  });
 
             SetupHandlers();
             Connect();
-            
-            ThreadPool.QueueUserWorkItem(s => ServiceManager.StartServices());
+
+            var stask = Task.Factory.StartNew(ServiceManager.StartServices);
+
+            Log.Info("Waiting for pending tasks to finish");
+
+            Task.WaitAll(itask, mtask, dtask, ctask, stask);
+
+            sw.Stop();
+
+            Log.Info("Startup took {0}ms", sw.ElapsedMilliseconds);
       
         }
 
