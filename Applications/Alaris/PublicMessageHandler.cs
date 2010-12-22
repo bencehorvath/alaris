@@ -136,9 +136,7 @@ namespace Alaris
                 SendMsg(chan, Rijndael.EncryptString(text));        
             }*/
 
-            
-            ThreadPool.QueueUserWorkItem(c => CommandManager.HandleCommand(user, chan, smsg));
-            
+            Task.Factory.StartNew(() => CommandManager.HandleCommand(user, chan, smsg));
         }
     }
 }

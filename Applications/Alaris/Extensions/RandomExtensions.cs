@@ -115,5 +115,36 @@ namespace Alaris.Extensions
             InstanceHolder<AlarisBot>.Get().SendMsg(channel, snd);
 
         }
+
+        /// <summary>
+        /// Concatenates the string in the specified array and returns the sum string.
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
+        public static string Concatenate(this IEnumerable<string> arr)
+        {
+            var sb = new StringBuilder();
+
+            foreach (var str in arr)
+                sb.Append(str);
+
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Concatenates the string in the specified array and returns the sum string.
+        /// Uses spaces as separators.
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
+        public static string ConcatenateWithSpaces(this IEnumerable<string> arr)
+        {
+            var sb = new StringBuilder();
+
+            foreach (var str in arr)
+                sb.AppendFormat("{0} ", str);
+
+            return sb.ToString();
+        }
     }
 }
