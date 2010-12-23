@@ -18,12 +18,18 @@ namespace Alaris.WolframAlphaAddon.Commands
         [ParameterizedAlarisCommand("wa", CommandPermission.Normal, 0, true)]
         public static void HandleWACommand(AlarisMainParameter mp, params string[] parameters)
         {
-            var rgx =
+            var resultRegex =
                 new Regex(
-                    @"Result\:<\/h2><div.+\sclass\=.sub.><div\sclass=.output\spnt.\sid=.\S+.><img.+\salt=.(?<result>.+).\stitle",
+                    @"(Result)\:<\/h2><div.+\sclass\=.sub.><div\sclass=.output\spnt.\sid=.\S+.><img.+\salt=.(?<result>.+).\stitle",
+                    RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+            var solutionRegex =
+                new Regex(
+                    @"(Solution)\:<\/h2><\S+.+\sclass\=.sub.><div\sclass=.output\spnt.\sid=.\S+.><img.+\salt=.(?<result>.+).\stitle",
                     RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
             var expression = parameters.ConcatenateWithSpaces();
+            expression = expression.Replace("=", " = "); // for equations
 
             var wacode = HttpUtility.UrlEncode(expression);
 
@@ -36,15 +42,19 @@ namespace Alaris.WolframAlphaAddon.Commands
                 return;
             }
 
-            if (!rgx.IsMatch(retdt))
+            Match match;
+
+            if (solutionRegex.IsMatch(retdt))
+                match = solutionRegex.Match(retdt);
+            else if (resultRegex.IsMatch(retdt))
+                match = resultRegex.Match(retdt);
+            else
             {
                 Log.Error("The regular expression didn't match the WA response");
                 return;
             }
 
-            var match = rgx.Match(retdt);
-
-            var result = match.Groups["result"].ToString();
+            var result = match.Groups["result"].ToString().Replace("\\/", "/");
 
             mp.Bot.SendMsg(mp.Channel, result);
         }

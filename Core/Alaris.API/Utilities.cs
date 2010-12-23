@@ -15,7 +15,7 @@ using NLog;
 namespace Alaris.API
 {
     /// <summary>
-    ///   Class providing useful methods for handling different things.
+    /// Class providing useful methods for handling different things.
     /// </summary>
     public static class Utilities
     {
@@ -326,6 +326,24 @@ namespace Alaris.API
             return
                 (from ManagementObject mo in mos.Get() select (Regex.Replace(Convert.ToString(mo["Name"]), @"\s+", " ")))
                     .FirstOrDefault();
+        }
+
+
+        /// <summary>
+        /// Executes the provided action safely.
+        /// </summary>
+        /// <param name="action">The action.</param>
+        public static void ExecuteSafely(Action action)
+        {
+            try
+            {
+                action();
+            }
+            catch(Exception x)
+            {
+                Log.Error("An exception has been thrown inside the safe execution context. ({0})", x.Message);
+                return;
+            }
         }
 
     }

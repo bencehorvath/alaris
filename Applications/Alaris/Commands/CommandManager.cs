@@ -22,6 +22,8 @@ namespace Alaris.Commands
         /// </summary>
         public static string CommandPrefix { get; set; }
 
+        private static readonly object MapLock = new object();
+
         #endregion
 
         #region Private Members
@@ -55,6 +57,9 @@ namespace Alaris.Commands
                                                                        {
                                                                            var methods = type.GetMethods(BindingFlags.Public | BindingFlags.Static);
 
+                                                                           //Utilities.ExecuteSafely(
+                                                                           //    () => ProcessMethods(methods));
+
                                                                            ProcessMethods(methods);
                                                                        });
                                        });
@@ -87,14 +92,22 @@ namespace Alaris.Commands
 
                                                       var attr = attribute.Cast<AlarisCommandAttribute>();
 
-                                                      CommandMethodMap.Add(new AlarisCommandWrapper
-                                                                               {
-                                                                                   Command = attr.Command,
-                                                                                   Permission = attr.Permission,
-                                                                                   IsParameterCountUnspecified = passEverything
-                                                                               },
-                                                                           new AlarisMethod(method, attr,
-                                                                                            attr.CanBeCastedTo<ParameterizedAlarisCommand>()));
+                                                      lock (MapLock)
+                                                      {
+
+                                                          CommandMethodMap.Add(new AlarisCommandWrapper
+                                                                                   {
+                                                                                       Command = attr.Command,
+                                                                                       Permission = attr.Permission,
+                                                                                       IsParameterCountUnspecified =
+                                                                                           passEverything
+                                                                                   },
+                                                                               new AlarisMethod(method, attr,
+                                                                                                attr.CanBeCastedTo
+                                                                                                    <
+                                                                                                    ParameterizedAlarisCommand
+                                                                                                    >()));
+                                                      }
 
                                                   }
                                                   else if (attribute.IsOfType(typeof(AlarisSubCommandAttribute)) ||
@@ -112,13 +125,22 @@ namespace Alaris.Commands
 
                                                       var attr = attribute.Cast<AlarisSubCommandAttribute>();
 
-                                                      CommandMethodMap.Add(new AlarisCommandWrapper
-                                                                               {
-                                                                                   Command = attr.Command,
-                                                                                   Permission = attr.Permission,
-                                                                                   IsParameterCountUnspecified = passEverything
-                                                                               },
-                                                                           new AlarisMethod(method, attr, attr.CanBeCastedTo<ParameterizedAlarisSubCommand>()));
+                                                      lock (MapLock)
+                                                      {
+
+                                                          CommandMethodMap.Add(new AlarisCommandWrapper
+                                                                                   {
+                                                                                       Command = attr.Command,
+                                                                                       Permission = attr.Permission,
+                                                                                       IsParameterCountUnspecified =
+                                                                                           passEverything
+                                                                                   },
+                                                                               new AlarisMethod(method, attr,
+                                                                                                attr.CanBeCastedTo
+                                                                                                    <
+                                                                                                    ParameterizedAlarisSubCommand
+                                                                                                    >()));
+                                                      }
                                                   }
                                               }
                                           });
