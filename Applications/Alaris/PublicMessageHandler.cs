@@ -10,6 +10,7 @@ using System.IO;
 using Alaris.Calculator.node;
 using Alaris.Calculator.parser;
 using Alaris.Commands;
+using Alaris.Framework;
 using Alaris.Irc;
 using Alaris.Mathematics.Types;
 

@@ -1,4 +1,4 @@
-﻿using Alaris.API.Database;
+﻿using Alaris.Framework.Database;
 using Alaris.Irc;
 using NLog;
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using Alaris.API;
+using Alaris.Framework;
 
 namespace Alaris.Services.Remote
 {

@@ -2,7 +2,7 @@
 using System.ServiceModel;
 using System.Windows;
 using System.Windows.Input;
-using Alaris.API;
+using Alaris.Framework;
 using Alaris.Irc;
 
 namespace Alaris.Manager

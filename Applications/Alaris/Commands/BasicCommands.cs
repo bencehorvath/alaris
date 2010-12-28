@@ -1,4 +1,5 @@
 ﻿using Alaris.API;
+using Alaris.Framework;
 using Alaris.Irc;
 using Alaris.Localization;
 

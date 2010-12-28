@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Threading;
 using Alaris.API;
+using Alaris.Framework;
 using NLog;
 
 

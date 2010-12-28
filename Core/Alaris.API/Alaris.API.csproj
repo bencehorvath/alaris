@@ -103,17 +103,10 @@
     <Compile Include="Crypt\HashAlgorithm.cs" />
     <Compile Include="Crypt\IEncrpytionAlgorithm.cs" />
     <Compile Include="Crypt\Rijndael.cs" />
-    <Compile Include="Database\AdminManager.cs" />
-    <Compile Include="Database\DatabaseAccessorAttribute.cs" />
-    <Compile Include="Database\DatabaseAccessType.cs" />
     <Compile Include="IAlaris.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Database\IManager.cs" />
     <Compile Include="IAlarisComponent.cs" />
     <Compile Include="IAlarisAddon.cs" />
-    <Compile Include="Database\DatabaseManager.cs" />
-    <Compile Include="Utilities.cs" />
-    <Compile Include="WebHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Alaris.API.pfx" />

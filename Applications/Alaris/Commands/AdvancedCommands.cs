@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
 using Alaris.API.Crypt;
-using Alaris.API.Database;
 using Alaris.Extensions;
+using Alaris.Framework.Database;
 
 namespace Alaris.Commands
 {

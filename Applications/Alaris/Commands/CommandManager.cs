@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Alaris.API;
+using Alaris.Framework;
 using Alaris.Irc;
 using Alaris.Extensions;
 using NLog;

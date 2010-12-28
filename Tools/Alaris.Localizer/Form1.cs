@@ -2,7 +2,7 @@
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using Alaris.API.Database;
+using Alaris.Framework.Database;
 
 namespace Alaris.Localizer
 {
