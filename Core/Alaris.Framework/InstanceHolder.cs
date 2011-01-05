@@ -1,4 +1,4 @@
-﻿namespace Alaris
+﻿namespace Alaris.Framework
 {
     /// <summary>
     /// Replacement of singleton.

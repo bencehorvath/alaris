@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using Alaris.API;
-using Alaris.Framework;
+using Alaris.Framework.Extensions;
 using Alaris.Irc;
-using Alaris.Extensions;
 using NLog;
 
-namespace Alaris.Commands
+namespace Alaris.Framework.Commands
 {
     /// <summary>
     /// Class used to manage and load Alaris commands.
@@ -49,6 +48,9 @@ namespace Alaris.Commands
 
             var asms = AddonManager.Assemblies.ToList();
             asms.Add(tasm);
+            asms.AddRange(from asm in AppDomain.CurrentDomain.GetAssemblies()
+                              where asm.GetName().FullName.ToLower(CultureInfo.InvariantCulture).Contains("alaris")
+                              select asm);
 
             Parallel.ForEach(asms, asm =>
                                        {
@@ -209,8 +211,8 @@ namespace Alaris.Commands
                 var mp = new AlarisMainParameter
                              {
                                  Channel = channel,
-                                 Channels = AlarisBot.Instance.Channels,
-                                 IrcConnection = AlarisBot.Instance.Connection,
+                                 Channels = AlarisBase.Instance.Channels,
+                                 IrcConnection = AlarisBase.Instance.Connection,
                                  User = user
                                  
                              };
@@ -268,5 +270,19 @@ namespace Alaris.Commands
 
         #endregion
 
+    }
+
+    ///<summary>
+    ///</summary>
+    public static class ManagerCommands
+    {
+        ///<summary>
+        ///</summary>
+        ///<param name="mp"></param>
+        [AlarisCommand("ListCmds")]
+        public static void HandleListCmdsCommand(AlarisMainParameter mp)
+        {
+            
+        }
     }
 }

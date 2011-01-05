@@ -11,6 +11,7 @@ using Alaris.Calculator.node;
 using Alaris.Calculator.parser;
 using Alaris.Commands;
 using Alaris.Framework;
+using Alaris.Framework.Commands;
 using Alaris.Irc;
 using Alaris.Mathematics.Types;
 
@@ -30,7 +31,7 @@ namespace Alaris
         /// <param name = "msg">
         ///   The message that was sent.
         /// </param>
-        private void OnPublicMessage(UserInfo user, string chan, string msg)
+        protected override void OnPublicMessage(UserInfo user, string chan, string msg)
         {
             var smsg = msg;
             ThreadPool.QueueUserWorkItem(wc =>
@@ -41,7 +42,7 @@ namespace Alaris
 
                                                  try
                                                  {
-                                                     Parallel.ForEach(urlsin, url => Utilities.HandleWebTitle(ref _connection, chan, url));
+                                                     Parallel.ForEach(urlsin, url => Utilities.HandleWebTitle(Connection, chan, url));
                                                      return;
                                                  }
                                                  catch (Exception ex)
@@ -80,7 +81,7 @@ namespace Alaris
                     var calc = new AstCalculator();
                     ast.Apply(calc);
 
-                    _connection.Sender.PublicMessage(chan, calc.CalculatedResult.ToString());
+                    SendMsg(chan, calc.CalculatedResult.ToString());
                     return;
                    
                 }
@@ -93,7 +94,7 @@ namespace Alaris
 
             if (msg.Equals("@reload scripts", StringComparison.InvariantCultureIgnoreCase))
             {
-                _manager.Lua.LoadScripts(true);
+                ScriptManager.Lua.LoadScripts(true);
                 SendMsg(chan, "Lua scripts reloaded.");
             }
 
@@ -131,13 +132,7 @@ namespace Alaris
                 }
             }
 
-            /*if(msg.StartsWith("@aes encrypt "))
-            {
-                var text = msg.Replace("@aes encrypt ", string.Empty);
-                SendMsg(chan, Rijndael.EncryptString(text));        
-            }*/
-
-            Task.Factory.StartNew(() => CommandManager.HandleCommand(user, chan, smsg));
+            base.OnPublicMessage(user, chan, smsg);
         }
     }
 }

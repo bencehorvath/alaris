@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading;
-using Alaris.Commands;
+using Alaris.Framework.Commands;
 using Alaris.Irc;
 using NLog;
 
-namespace Alaris.CommandLine
+namespace Alaris.Framework.CommandLine
 {
     /// <summary>
     /// Static class providing CLI functionality.

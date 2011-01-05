@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Alaris.Irc;
 
-namespace Alaris.Extensions
+namespace Alaris.Framework.Extensions
 {
     /// <summary>
     /// Some random extension stuff.
@@ -82,7 +82,7 @@ namespace Alaris.Extensions
                 return;
 
             foreach(var msg in slist)
-                InstanceHolder<AlarisBot>.Get().SendMsg(channel, msg);
+                InstanceHolder<AlarisBase>.Get().SendMsg(channel, msg);
 
         }
 
@@ -112,7 +112,7 @@ namespace Alaris.Extensions
             if (snd.EndsWith(separator))
                 snd.Remove(snd.Length - separator.Length);
 
-            InstanceHolder<AlarisBot>.Get().SendMsg(channel, snd);
+            InstanceHolder<AlarisBase>.Get().SendMsg(channel, snd);
 
         }
 

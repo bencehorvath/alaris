@@ -1,6 +1,6 @@
 using System;
 
-namespace Alaris.Exceptions
+namespace Alaris.Framework.Exceptions
 {
     /// <summary>
     ///   Exception thrown when an invalid config file is detected.

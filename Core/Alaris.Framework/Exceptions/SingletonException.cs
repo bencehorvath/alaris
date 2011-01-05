@@ -2,7 +2,7 @@
 //  SingletonException.cs
 //  
 //  Author:
-//       Twl <twl@root.hu>
+//       Twl <twl@null.net>
 // 
 //  Copyright (c) 2010 Twl <wowemuf.org>
 // 
@@ -22,7 +22,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Alaris.Exceptions
+namespace Alaris.Framework.Exceptions
 {
     /// <summary>
     ///   Represents errors that occur while creating a singleton.

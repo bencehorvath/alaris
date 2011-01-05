@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Alaris.Commands
+namespace Alaris.Framework.Commands
 {
     /// <summary>
     /// A method inside Alaris.

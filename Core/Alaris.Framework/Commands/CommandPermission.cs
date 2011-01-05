@@ -1,4 +1,4 @@
-﻿namespace Alaris.Commands
+﻿namespace Alaris.Framework.Commands
 {
     /// <summary>
     /// Specifies a command's access permission.

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Alaris.Irc;
 
-namespace Alaris.Commands
+namespace Alaris.Framework.Commands
 {
     /// <summary>
     /// Main param passed to command methods.
@@ -13,9 +13,9 @@ namespace Alaris.Commands
         /// <summary>
         /// Gets the Alaris instance.
         /// </summary>
-        public AlarisBot Bot { get
+        public AlarisBase Bot { get
         {
-            return AlarisBot.Instance;
+            return AlarisBase.Instance;
         }}
         /// <summary>
         ///  The IRC connection.

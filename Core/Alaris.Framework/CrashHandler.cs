@@ -1,16 +1,15 @@
 using System;
 using System.IO;
 using Alaris.API;
-using Alaris.Exceptions;
-using Alaris.Irc;
+using Alaris.Framework.Exceptions;
 using NLog;
 
-namespace Alaris
+namespace Alaris.Framework
 {
     /// <summary>
-    ///   The delegate used for <see cref = "AlarisBot.ReadConfig" />
+    ///   The delegate used for ReadConfig />
     /// </summary>
-    public delegate void ReadConfigDelegate(string configfile);
+    public delegate void ReadConfigDelegate();
     
     /// <summary>
     ///   A class providing functions to run specific method in an exception-handled environment.
@@ -25,6 +24,7 @@ namespace Alaris
         /// </summary>
         public CrashHandler()
         {
+            Log.Info("Initializing crash handler");
             _guid = Guid.NewGuid();
         }
 
@@ -57,11 +57,11 @@ namespace Alaris
         /// <param name = "param">
         ///   The parameter passed to the ReadConfig method.
         /// </param>
-        public static void HandleReadConfig(ReadConfigDelegate confread, string param)
+        public static void HandleReadConfig(ReadConfigDelegate confread)
         {
             try
             {
-                confread(param);
+                confread();
             }
             catch (FileNotFoundException ex)
             {

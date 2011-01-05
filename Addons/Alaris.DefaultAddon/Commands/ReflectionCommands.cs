@@ -5,6 +5,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using Alaris.Commands;
+using Alaris.Framework;
+using Alaris.Framework.Commands;
 using NLog;
 
 namespace Alaris.DefaultAddon.Commands
@@ -55,7 +57,7 @@ namespace Alaris.DefaultAddon.Commands
             Log.Debug("Searching for method in all available assemblies. (Parameter count is {0})", pars.Count);
 
             var asms = AddonManager.Assemblies.ToList();
-            asms.Add(AlarisBot.Instance.GetType().Assembly);
+            asms.Add(AlarisBase.Instance.GetType().Assembly);
             asms.AddRange(AppDomain.CurrentDomain.GetAssemblies());
 
             foreach(var asm in asms)

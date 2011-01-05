@@ -2,7 +2,7 @@ using System;
 using System.Xml;
 using Alaris.API;
 
-namespace Alaris.Config
+namespace Alaris.Framework.Xml
 {
     /// <summary>
     ///   XML settings class, used for config files.

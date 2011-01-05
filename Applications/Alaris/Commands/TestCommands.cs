@@ -1,4 +1,5 @@
 ﻿using System;
+using Alaris.Framework.Commands;
 
 namespace Alaris.Commands
 {

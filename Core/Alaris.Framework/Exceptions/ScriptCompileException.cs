@@ -1,7 +1,6 @@
 ﻿using System;
 
-
-namespace Alaris.Exceptions
+namespace Alaris.Framework.Exceptions
 {
     /// <summary>
     /// Exception thrown when there was an error compiling a script.

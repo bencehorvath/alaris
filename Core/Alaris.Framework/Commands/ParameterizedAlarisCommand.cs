@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Alaris.Commands
+namespace Alaris.Framework.Commands
 {
     /// <summary>
     /// Marks a method as a parameterized Alaris command.

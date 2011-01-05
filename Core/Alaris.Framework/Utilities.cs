@@ -259,7 +259,7 @@ namespace Alaris.Framework
         /// <param name = "msg">
         ///   The message containing the url.
         /// </param>
-        public static void HandleWebTitle(ref Connection connection, string chan, string msg)
+        public static void HandleWebTitle(Connection connection, string chan, string msg)
         {
            
             if (connection == null) throw new ArgumentNullException("connection");

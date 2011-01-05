@@ -2,7 +2,8 @@
 using System.Text.RegularExpressions;
 using System.Web;
 using Alaris.Commands;
-using Alaris.Extensions;
+using Alaris.Framework.Commands;
+using Alaris.Framework.Extensions;
 using NLog;
 
 namespace Alaris.WolframAlphaAddon.Commands

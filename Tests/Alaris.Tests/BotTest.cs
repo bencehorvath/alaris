@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Alaris.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Alaris.Tests
 {

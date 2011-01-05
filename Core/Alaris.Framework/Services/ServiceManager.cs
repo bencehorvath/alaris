@@ -1,10 +1,10 @@
 ﻿using System;
 using System.ServiceModel;
 using System.ServiceModel.Description;
-using Alaris.Services.Remote;
+using Alaris.Framework.Services.Remote;
 using NLog;
 
-namespace Alaris.Services
+namespace Alaris.Framework.Services
 {
     /// <summary>
     /// Class used to manage every service in Alaris.
@@ -22,8 +22,8 @@ namespace Alaris.Services
             // start remote
             Log.Info("Starting remoting service...");
             var uri =
-                new Uri(string.Format("http://localhost:{0}/{1}/Service", AlarisBot.Instance.Config.Config.Remote.Port,
-                                      AlarisBot.Instance.Config.Config.Remote.Name));
+                new Uri(string.Format("http://localhost:{0}/{1}/Service", AlarisBase.Instance.Config.Config.Remote.Port,
+                                      AlarisBase.Instance.Config.Config.Remote.Name));
 
             _remoteHost = new ServiceHost(typeof(Remoter), uri);
 

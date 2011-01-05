@@ -86,6 +86,10 @@
       <Project>{827FC720-BEE2-4357-B29F-0C2BDF51472D}</Project>
       <Name>Alaris</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Core\Alaris.Framework\Alaris.Framework.csproj">
+      <Project>{9C146FF3-1908-431F-AB7C-25AD9D0AA0B4}</Project>
+      <Name>Alaris.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\Alaris.Irc\Alaris.Irc.csproj">
       <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
       <Name>Alaris.Irc</Name>

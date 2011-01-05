@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Alaris.Irc;
 
-namespace Alaris.Extensions
+namespace Alaris.Framework.Extensions
 {
     /// <summary>
     /// IRC related extension methods.
@@ -49,7 +49,7 @@ namespace Alaris.Extensions
         public static void JoinChannel(this string channel)
         {
             if(channel.IsValidChannelName())
-                InstanceHolder<AlarisBot>.Get().Connection.Sender.Join(channel);
+                InstanceHolder<AlarisBase>.Get().Connection.Sender.Join(channel);
         }
     }
 }

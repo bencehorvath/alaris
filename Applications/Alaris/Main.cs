@@ -3,6 +3,7 @@ using System.IO;
 using System.Threading;
 using Alaris.API;
 using Alaris.Framework;
+using Alaris.Framework.CommandLine;
 using NLog;
 
 
@@ -47,7 +48,7 @@ namespace Alaris
             if (AlarisBot.Instance.CLIEnabled)
             {
                 Log.Info("Starting CLI");
-                CommandLine.CLI.Start();
+                CLI.Start();
             }
 
 

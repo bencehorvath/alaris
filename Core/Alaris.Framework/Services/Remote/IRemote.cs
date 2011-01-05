@@ -1,7 +1,6 @@
-﻿using System.Net.Security;
-using System.ServiceModel;
+﻿using System.ServiceModel;
 
-namespace Alaris.Services.Remote
+namespace Alaris.Framework.Services.Remote
 {
     /// <summary>
     /// Interface which should be implemented by the remoting service class.
