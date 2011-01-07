@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using Alaris.API;
@@ -15,12 +16,13 @@ namespace Alaris
 
         private static void Main(string[] args)
         {
+            Console.CursorVisible = false;
             Console.WriteLine("Welcome to Alaris!");
             Console.WriteLine("Version: {0}", Utilities.BotVersion);
             Console.WriteLine("You can safely use <Ctrl+C> to terminate the process.\n");
             Thread.Sleep(2000);
 
-            string conf = "alaris.config.xml";
+            var conf = "alaris.config.xml";
 
             if (args.Length > 0)
                 conf = args[0];
@@ -45,7 +47,7 @@ namespace Alaris
                                                                   CrashDumper.CreateCrashDump();
                                                               };
 
-            if (AlarisBot.Instance.CLIEnabled)
+            if (AlarisBase.Instance.CLIEnabled)
             {
                 Log.Info("Starting CLI");
                 CLI.Start();

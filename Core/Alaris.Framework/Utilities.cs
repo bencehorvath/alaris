@@ -347,5 +347,50 @@ namespace Alaris.Framework
             }
         }
 
+        /// <summary>
+        /// Draws a progress bar to the console.
+        /// </summary>
+        /// <param name="progress">Current progress</param>
+        /// <param name="total">Total progress</param>
+        /// <param name="postfix">If set, when reporting, the values are postfixed with this string.</param>
+        public static void DrawTextProgressBar(int progress, int total, string postfix = "")
+        {
+            const int pstart = 0;
+            const int pend = 60;
+
+            const float distanceFromEnd = 1.0f;
+           
+            //draw empty progress bar
+            Console.CursorLeft = pstart;
+            Console.Write("|"); //start
+            Console.CursorLeft = pend;
+            Console.Write("|"); //end
+            Console.CursorLeft = 1;
+
+            var onechunk = (pend - distanceFromEnd) / total;
+
+            //draw filled part
+            var position = pstart + 1;
+            for (var i = 0; i < onechunk * progress; i++)
+            {
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.CursorLeft = position++;
+                Console.Write(" ");
+            }
+
+            //draw unfilled part
+            for (var i = position; i <= pend-1; i++)
+            {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.CursorLeft = position++;
+                Console.Write(" ");
+            }
+
+            //draw totals
+            Console.CursorLeft = pend + 3; // the text is aligned
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Write("{0}{1} of {2}{1}    ", progress, postfix, total); //blanks at the end remove any excess
+        }
+
     }
 }
