@@ -1,21 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Alaris.API;
-using Alaris.Commands;
 using Alaris.Framework;
-using Alaris.Framework.Commands;
-using Alaris.Framework.Database;
-using Alaris.Framework.Extensions;
-using Alaris.Framework.Services;
-using Alaris.Irc;
-using Alaris.Irc.Ctcp;
 using NLog;
-using CLI = Alaris.Framework.CommandLine.CLI;
 
 namespace Alaris
 {
@@ -23,7 +8,7 @@ namespace Alaris
     ///   The main class for Alaris.
     /// </summary>
     [Serializable]
-    public partial class AlarisBot : AlarisBase, IDisposable
+    public sealed partial class AlarisBot : AlarisBase, IDisposable
     {
         [NonSerialized]
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
@@ -60,7 +45,7 @@ namespace Alaris
         /// </summary>
         public Guid GetGuid()
         {
-            return _guid;
+            return Guid;
         }
 
 

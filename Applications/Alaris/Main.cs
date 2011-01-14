@@ -1,8 +1,6 @@
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Threading;
-using Alaris.API;
 using Alaris.Framework;
 using Alaris.Framework.CommandLine;
 using NLog;

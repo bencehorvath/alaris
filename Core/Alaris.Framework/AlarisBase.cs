@@ -27,8 +27,8 @@ namespace Alaris.Framework
         private readonly bool _isInstantiated;
 
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
-        private Connection _connection;
-        private ScriptManager _manager;
+        private readonly Connection _connection;
+        private readonly ScriptManager _manager;
         private string _nick;
         private string _server;
         private bool _confdone;
@@ -36,7 +36,7 @@ namespace Alaris.Framework
         private string _nspw = "";
         private readonly List<string> _channels = new List<string>();
         private readonly CrashHandler _sCrashHandler;
-        protected readonly Guid _guid = Guid.NewGuid();
+        protected readonly Guid Guid = Guid.NewGuid();
         private string _scriptsDir;
 
         /// <summary>
@@ -142,6 +142,12 @@ namespace Alaris.Framework
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AlarisBase"/> class.
+        /// </summary>
+        /// <param name="configFile">The config file.</param>
+        /// <param name="parallelized">if set to <c>true</c> [parallelized].</param>
+        /// <param name="additionalCommandAssemblies">The additional command assemblies.</param>
         protected AlarisBase(string configFile = "alaris.config.xml", bool parallelized = true, params Assembly[] additionalCommandAssemblies)
         {
             if (_isInstantiated)
@@ -242,6 +248,9 @@ namespace Alaris.Framework
 
                 var stask = Task.Factory.StartNew(ServiceManager.StartServices);
 
+                sw.Stop();
+                Log.Info("Startup took {0}ms", sw.ElapsedMilliseconds);
+
                 Log.Info("Waiting for pending tasks to finish");
 
                 Task.WaitAll(itask, mtask, dtask, ctask, stask);
@@ -315,6 +324,11 @@ namespace Alaris.Framework
             _connection.CtcpListener.OnCtcpRequest += OnCtcpRequest;
         }
 
+        /// <summary>
+        /// Called when a CTCP command is received..
+        /// </summary>
+        /// <param name="command">The command.</param>
+        /// <param name="who">From whom.</param>
         protected virtual void OnCtcpRequest(string command, UserInfo who)
         {
              Log.Debug("Received CTCP command {0} from {1}", command, who.Nick);

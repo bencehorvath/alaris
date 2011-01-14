@@ -34,24 +34,25 @@ namespace Alaris
         protected override void OnPublicMessage(UserInfo user, string chan, string msg)
         {
             var smsg = msg;
-            ThreadPool.QueueUserWorkItem(wc =>
-                                             {
-                                                 var urlsin = Utilities.GetUrls(smsg);
 
-                                                 if (urlsin.Count <= 0) return;
+            Task.Factory.StartNew(() =>
+                                      {
+                                          var urlsin = Utilities.GetUrls(smsg);
 
-                                                 try
-                                                 {
-                                                     Parallel.ForEach(urlsin, url => Utilities.HandleWebTitle(Connection, chan, url));
-                                                     return;
-                                                 }
-                                                 catch (Exception ex)
-                                                 {
-                                                     Log.Error("Invalid webpage address: {0}", ex.Message);
-                                                     //_connection.Sender.PublicMessage(chan, IrcConstants.Red + "Invalid address.");
-                                                     return;
-                                                 }
-                                             });
+                                          if (urlsin.Count <= 0) return;
+
+                                          try
+                                          {
+                                              Parallel.ForEach(urlsin, url => Utilities.HandleWebTitle(Connection, chan, url));
+                                              return;
+                                          }
+                                          catch (Exception ex)
+                                          {
+                                              Log.Error("Invalid webpage address: {0}", ex.Message);
+                                              //_connection.Sender.PublicMessage(chan, IrcConstants.Red + "Invalid address.");
+                                              return;
+                                          }
+                                      });
 
             if(msg.StartsWith("@calc ", StringComparison.InvariantCultureIgnoreCase) || msg.StartsWith("@c ", StringComparison.InvariantCultureIgnoreCase))
             {
