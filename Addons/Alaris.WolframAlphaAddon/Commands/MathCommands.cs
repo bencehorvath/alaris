@@ -33,9 +33,10 @@ namespace Alaris.WolframAlphaAddon.Commands
             expression = expression.Replace("=", " = "); // for equations
 
             var wacode = HttpUtility.UrlEncode(expression);
+            string retdt;
 
-            var client = new WebClient();
-            var retdt = client.DownloadString(string.Format("http://www.wolframalpha.com/input/?i={0}", wacode));
+            using (var client = new WebClient())
+                retdt = client.DownloadString(string.Format("http://www.wolframalpha.com/input/?i={0}", wacode));
 
             if (retdt.IsNull())
             {

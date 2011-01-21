@@ -18,10 +18,6 @@ namespace Alaris.WolframAlphaAddon
             // nothing
         }
 
-        #endregion
-
-        #region Implementation of IAlarisAddon
-
         /// <summary>
         /// Destroys the addon, releasing all resources.
         /// </summary>

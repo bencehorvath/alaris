@@ -42,8 +42,7 @@ namespace Alaris.Commands
         [AlarisCommand("info")]
         public static void HandleInfoCommand(AlarisMainParameter mp)
         {
-            var ircConnection = mp.IrcConnection;
-            Utilities.SendInfo(ref ircConnection, mp.Channel);
+            Utilities.SendInfo(mp.Channel);
             return;
         }
 
@@ -54,8 +53,7 @@ namespace Alaris.Commands
         [AlarisCommand("sys")]
         public static void HandleSysCommand(AlarisMainParameter mp)
         {
-            var connection = mp.IrcConnection;
-            Utilities.SendSysStats(ref connection, mp.Channel);
+            Utilities.SendSysStats(mp.Channel);
 
             return;
         }

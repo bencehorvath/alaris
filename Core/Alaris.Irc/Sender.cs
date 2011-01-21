@@ -817,7 +817,6 @@ namespace Alaris.Irc
         {
             lock (this)
             {
-                channel.Substring(0, (channel.Length - 1) - channel.IndexOf(":"));
                 if (IsEmpty(message))
                 {
                     ClearBuffer();

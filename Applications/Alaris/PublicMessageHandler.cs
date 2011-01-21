@@ -12,6 +12,7 @@ using Alaris.Calculator.parser;
 using Alaris.Commands;
 using Alaris.Framework;
 using Alaris.Framework.Commands;
+using Alaris.Framework.General;
 using Alaris.Irc;
 using Alaris.Mathematics.Types;
 
@@ -43,7 +44,7 @@ namespace Alaris
 
                                           try
                                           {
-                                              Parallel.ForEach(urlsin, url => Utilities.HandleWebTitle(Connection, chan, url));
+                                              Parallel.ForEach(urlsin, url => Utilities.HandleWebTitle(chan, url));
                                               return;
                                           }
                                           catch (Exception ex)
@@ -85,7 +86,7 @@ namespace Alaris
                     SendMsg(chan, calc.CalculatedResult.ToString());
                     return;
                    
-                }
+                }               
             }
 
             // Lua code runner.
@@ -116,9 +117,7 @@ namespace Alaris
                     var nums = new AutoSortedArray<double>();
 
                     foreach (Match match in matches)
-                    {
                         nums.SimpleAdd(double.Parse(match.Groups["num"].ToString()));
-                    }
 
                     nums.Sort();
 

@@ -53,10 +53,6 @@ namespace Alaris.Framework
         /// </summary>
         /// <param name = "confread">
         ///   The ReadConfig method.
-        /// </param>
-        /// <param name = "param">
-        ///   The parameter passed to the ReadConfig method.
-        /// </param>
         public static void HandleReadConfig(ReadConfigDelegate confread)
         {
             try

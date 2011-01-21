@@ -27,7 +27,7 @@ namespace Alaris.DefaultAddon.Commands
                 pars.Add(parameters[i]);
             }
 
-            var atype = AlarisBot.Instance.GetType();
+            var atype = AlarisBase.Instance.GetType();
 
             var method = atype.GetMethods().FirstOrDefault(minfo => minfo.Name.Equals(methodName, 
                 StringComparison.InvariantCultureIgnoreCase) 
@@ -41,7 +41,7 @@ namespace Alaris.DefaultAddon.Commands
             {
                 try
                 {
-                    var ret = method.Invoke(AlarisBot.Instance, pars.ToArray());
+                    var ret = method.Invoke(AlarisBase.Instance, pars.ToArray());
 
                     if(ret != null) // probably void
                         mp.IrcConnection.Sender.PublicMessage(mp.Channel, ret.ToString());
@@ -58,19 +58,18 @@ namespace Alaris.DefaultAddon.Commands
 
             var asms = AddonManager.Assemblies.ToList();
             asms.Add(AlarisBase.Instance.GetType().Assembly);
-            asms.AddRange(AppDomain.CurrentDomain.GetAssemblies());
+            asms.AddRange(from asm in AppDomain.CurrentDomain.GetAssemblies()
+                              where asm.GetName().FullName.ToLower().Contains("alaris")
+                              select asm);
 
-            foreach(var asm in asms)
+            foreach (var type in asms.SelectMany(asm => asm.GetTypes()))
             {
-                foreach(var type in asm.GetTypes())
+                foreach(var mi in type.GetMethods(BindingFlags.Static | BindingFlags.InvokeMethod))
                 {
-                    foreach(var mi in type.GetMethods(BindingFlags.Static | BindingFlags.InvokeMethod))
+                    if(mi.Name.Equals(methodName, StringComparison.InvariantCultureIgnoreCase) && mi.GetParameters().Length == pars.Count)
                     {
-                        if(mi.Name.Equals(methodName, StringComparison.InvariantCultureIgnoreCase) && mi.GetParameters().Length == pars.Count)
-                        {
-                            method = mi;
-                            break;
-                        }
+                        method = mi;
+                        break;
                     }
                 }
             }

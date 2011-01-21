@@ -57,15 +57,14 @@ namespace Alaris.Framework
         /// <summary>
         ///   Sends system stats using the specified connection.
         /// </summary>
-        /// <param name = "connection">
-        ///   The IRC connection.
-        /// </param>
         /// <param name = "chan">
         ///   The channel to send to.
         /// </param>
-        public static void SendSysStats(ref Connection connection, string chan)
+        public static void SendSysStats(string chan)
         {
             Log.Info("System info request.");
+            var connection = AlarisBase.Instance.Connection;
+
             var hostname = Environment.MachineName;
             var username = Environment.UserName;
 
@@ -103,8 +102,9 @@ namespace Alaris.Framework
         /// <param name = "chan">
         ///   The channel to send to.
         /// </param>
-        public static void SendInfo(ref Connection connection, string chan)
+        public static void SendInfo(string chan)
         {
+            var connection = AlarisBase.Instance.Connection;
             connection.Sender.PublicMessage(chan, IrcConstants.Cyan + "Alaris " + BotVersion);
             connection.Sender.PublicMessage(chan, IrcConstants.DarkGreen + "Developer: Twl");
         }
@@ -259,12 +259,13 @@ namespace Alaris.Framework
         /// <param name = "msg">
         ///   The message containing the url.
         /// </param>
-        public static void HandleWebTitle(Connection connection, string chan, string msg)
+        public static void HandleWebTitle(string chan, string msg)
         {
            
-            if (connection == null) throw new ArgumentNullException("connection");
             if (chan == null) throw new ArgumentNullException("chan");
             if (msg == null) throw new ArgumentNullException("msg");
+
+            var connection = AlarisBase.Instance.Connection;
 
             try
             {
