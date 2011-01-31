@@ -133,18 +133,29 @@ namespace Alaris.Framework.Extensions
 
         /// <summary>
         /// Concatenates the string in the specified array and returns the sum string.
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="separator">The separator to use between parts.</param>
+        /// <returns></returns>
+        public static string Concatenate(this IEnumerable<string> arr, string separator)
+        {
+            var sb = new StringBuilder();
+
+            foreach (var str in arr)
+                sb.AppendFormat("{0}{1}", str, separator);
+
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Concatenates the string in the specified array and returns the sum string.
         /// Uses spaces as separators.
         /// </summary>
         /// <param name="arr"></param>
         /// <returns></returns>
         public static string ConcatenateWithSpaces(this IEnumerable<string> arr)
         {
-            var sb = new StringBuilder();
-
-            foreach (var str in arr)
-                sb.AppendFormat("{0} ", str);
-
-            return sb.ToString();
+            return arr.Concatenate(" ");
         }
     }
 }

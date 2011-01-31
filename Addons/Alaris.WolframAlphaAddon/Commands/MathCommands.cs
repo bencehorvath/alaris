@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Web;
 using Alaris.Commands;
+using Alaris.Framework;
 using Alaris.Framework.Commands;
 using Alaris.Framework.Extensions;
 using NLog;
@@ -21,22 +22,20 @@ namespace Alaris.WolframAlphaAddon.Commands
         {
             var resultRegex =
                 new Regex(
-                    @"(Result)\:<\/h2><div.+\sclass\=.sub.><div\sclass=.output\spnt.\sid=.\S+.><img.+\salt=.(?<result>.+).\stitle",
+                    @"(Result[s]?)\:<\/h2><div.+\sclass\=.sub.><div\sclass=.output\spnt.\sid=.\S+.><img.+\salt=.(?<result>.+).\stitle",
                     RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
             var solutionRegex =
                 new Regex(
-                    @"(Solution)\:<\/h2><\S+.+\sclass\=.sub.><div\sclass=.output\spnt.\sid=.\S+.><img.+\salt=.(?<result>.+).\stitle",
+                    @"(Solution[s]?)\:<\/h2><\S+.+\sclass\=.sub.><div\sclass=.output\spnt.\sid=.\S+.><img.+\salt=.(?<result>.+).\stitle",
                     RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
             var expression = parameters.ConcatenateWithSpaces();
             expression = expression.Replace("=", " = "); // for equations
 
             var wacode = HttpUtility.UrlEncode(expression);
-            string retdt;
 
-            using (var client = new WebClient())
-                retdt = client.DownloadString(string.Format("http://www.wolframalpha.com/input/?i={0}", wacode));
+            var retdt = Utilities.GetWebsiteString(string.Format("http://www.wolframalpha.com/input/?i={0}", wacode));
 
             if (retdt.IsNull())
             {

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Management;
+using System.Net;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
@@ -345,6 +346,49 @@ namespace Alaris.Framework
             {
                 Log.Error("An exception has been thrown inside the safe execution context. ({0})", x.Message);
                 return;
+            }
+        }
+
+        /// <summary>
+        /// Downloads the specified web page's source as string.
+        /// <para>Shouldn't be used to download files (only text-based).</para>
+        /// </summary>
+        /// <param name="address">The URL to download.</param>
+        /// <returns>The downloaded source</returns>
+        public static string GetWebsiteString(string address)
+        {
+            try
+            {
+                var url = new Uri(address);
+
+                return GetWebsiteString(url);
+            }
+            catch(UriFormatException x)
+            {
+                Log.Error("Invalid url received as argument ({0}). Exception: {1}", address, x);
+                return string.Empty;
+            }
+        }
+
+        /// <summary>
+        /// Downloads the specified web page's source as string.
+        /// <para>Shouldn't be used to download files (only text-based).</para>
+        /// </summary>
+        /// <param name="address">The URL to download.</param>
+        /// <returns>The downloaded source</returns>
+        public static string GetWebsiteString(Uri address)
+        {
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    return client.DownloadString(address);
+                }
+            }
+            catch(WebException x)
+            {
+                Log.Error("Exception thrown while downloading a website's source! Exception: {0}", x);
+                return string.Empty;
             }
         }
 

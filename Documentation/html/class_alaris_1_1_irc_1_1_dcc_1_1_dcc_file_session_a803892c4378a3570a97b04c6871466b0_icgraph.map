@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session.html#a956fc78cf87664cd2d6fbb0481dd99b9" title="Another user has offered to send a file. This method should be called to accept the offer and save th..." alt="" coords="303,5,545,35"/>
-<area shape="rect" id="node5" href="$class_alaris_1_1_irc_1_1_dcc_1_1_dcc_file_session.html#a6c0d4a5bfa71cd17fb20a5543f8fd0bf" title="Attempt to send a file to a remote user. Start listening on the given port and address. If the remote user does not accept the offer within the timeout period the the session will be closed." alt="" coords="309,59,539,88"/>
-</map>

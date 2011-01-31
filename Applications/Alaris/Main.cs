@@ -34,7 +34,6 @@ namespace Alaris
             }
 
             var bot = new AlarisBot("alaris.config.xml");
-            
 
             Console.CancelKeyPress += (sender, e) => bot.Disconnect("Daemon killed.");
 

@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$class_alaris_1_1_calculator_1_1lexer_1_1_lexer_1_1_state.html" title="Alaris.Calculator.lexer.Lexer.State" alt="" coords="697,47,916,76"/>
-<area shape="rect" id="node5" href="$class_alaris_1_1_calculator_1_1node_1_1_token.html" title="Alaris.Calculator.node.Token" alt="" coords="713,100,900,129"/>
-<area shape="rect" id="node7" href="$class_alaris_1_1_calculator_1_1node_1_1_node.html" title="Node" alt="" coords="577,100,628,129"/>
-<area shape="rect" id="node9" href="$interface_alaris_1_1_calculator_1_1node_1_1_switchable.html" title="Alaris.Calculator.node.Switchable" alt="" coords="5,141,221,171"/>
-<area shape="rect" id="node12" href="$class_alaris_1_1_calculator_1_1node_1_1_node.html" title="Alaris.Calculator.node.Node" alt="" coords="273,205,455,235"/>
-<area shape="rect" id="node18" href="$class_alaris_1_1_calculator_1_1lexer_1_1_pushback_reader.html" title="Alaris.Calculator.lexer.PushbackReader" alt="" coords="681,153,932,183"/>
-</map>

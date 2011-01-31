@@ -2,6 +2,8 @@
 using Alaris.API;
 using Alaris.Irc;
 
+// appid: 557QYQ-UUUWTKX95V
+
 namespace Alaris.WolframAlphaAddon
 {
     public class WolframAlphaAddon : IAlarisAddon

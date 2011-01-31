@@ -1,9 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node9" href="$class_alaris_1_1_calculator_1_1analysis_1_1_depth_first_adapter.html" title="Alaris.Calculator.analysis.DepthFirstAdapter" alt="" coords="709,32,987,61"/>
-<area shape="rect" id="node16" href="$class_alaris_1_1_calculator_1_1analysis_1_1_reversed_depth_first_adapter.html" title="Alaris.Calculator.analysis.ReversedDepthFirstAdapter" alt="" coords="683,85,1013,115"/>
-<area shape="rect" id="node19" href="$class_alaris_1_1_calculator_1_1parser_1_1_token_index.html" title="Alaris.Calculator.parser.TokenIndex" alt="" coords="735,139,961,168"/>
-<area shape="rect" id="node2" href="$interface_alaris_1_1_calculator_1_1analysis_1_1_analysis.html" title="Analysis" alt="" coords="245,85,317,115"/>
-<area shape="rect" id="node4" href="$interface_alaris_1_1_calculator_1_1node_1_1_switch.html" title="Alaris.Calculator.node.Switch" alt="" coords="5,85,197,115"/>
-<area shape="rect" id="node11" href="$class_alaris_1_1_calculator_1_1_ast_calculator.html" title="Alaris.Calculator.AstCalculator" alt="" coords="1063,5,1260,35"/>
-<area shape="rect" id="node13" href="$class_alaris_1_1_calculator_1_1_ast_printer.html" title="Alaris.Calculator.AstPrinter" alt="" coords="1072,59,1251,88"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$class_alaris_1_1_calculator_1_1node_1_1_node.html#a5a9b8029425755ba21b2e5247b6e88e0" title="Alaris.Calculator.node.Node.Apply" alt="" coords="501,5,720,35"/>
-<area shape="rect" id="node5" href="$class_alaris_1_1_calculator_1_1node_1_1_a_pow_exp.html#a0085c19cdfbaaa632b3bea6bd2366d92" title="Alaris.Calculator.node.APowExp.GetLeft" alt="" coords="483,59,739,88"/>
-<area shape="rect" id="node7" href="$class_alaris_1_1_calculator_1_1node_1_1_a_pow_exp.html#a082d657f853f1926837673ab1f0c20e5" title="Alaris.Calculator.node.APowExp.GetRight" alt="" coords="479,112,743,141"/>
-</map>

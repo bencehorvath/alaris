@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node2" href="$class_alaris_1_1_calculator_1_1node_1_1_p_exp.html" title="PExp" alt="" coords="93,235,147,264"/>
-<area shape="rect" id="node4" href="$class_alaris_1_1_calculator_1_1node_1_1_node.html" title="Alaris.Calculator.node.Node" alt="" coords="29,85,211,115"/>
-<area shape="rect" id="node16" href="$class_alaris_1_1_calculator_1_1node_1_1_node.html" title="Node" alt="" coords="288,181,339,211"/>
-<area shape="rect" id="node6" href="$interface_alaris_1_1_calculator_1_1node_1_1_switchable.html" title="Alaris.Calculator.node.Switchable" alt="" coords="175,5,391,35"/>
-<area shape="rect" id="node12" href="$class_alaris_1_1_calculator_1_1node_1_1_t_number.html" title="Alaris.Calculator.node.TNumber" alt="" coords="211,368,416,397"/>
-<area shape="rect" id="node14" href="$class_alaris_1_1_calculator_1_1node_1_1_token.html" title="Alaris.Calculator.node.Token" alt="" coords="220,288,407,317"/>
-</map>
