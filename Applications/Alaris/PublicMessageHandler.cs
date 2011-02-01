@@ -1,18 +1,13 @@
 using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using System.Threading;
 using System.Threading.Tasks;
-using Alaris.API;
 using Alaris.Calculator;
 using Alaris.Calculator.lexer;
 using System.IO;
 using Alaris.Calculator.node;
 using Alaris.Calculator.parser;
-using Alaris.Commands;
 using Alaris.Framework;
-using Alaris.Framework.Commands;
-using Alaris.Framework.General;
 using Alaris.Irc;
 using Alaris.Mathematics.Types;
 
