@@ -22,6 +22,7 @@ namespace Alaris.Framework
     ///<summary>
     /// Base abstract class for Alaris-based bots.
     ///</summary>
+    [Serializable]
     public abstract class AlarisBase
     {
         private readonly bool _isInstantiated;
@@ -322,6 +323,41 @@ namespace Alaris.Framework
             _manager.RegisterOnRegisteredHook(OnRegistered);
             _manager.RegisterOnPublicHook(OnPublicMessage);
             _connection.CtcpListener.OnCtcpRequest += OnCtcpRequest;
+        }
+
+        /// <summary>
+        /// Reloads everything possible (addons, commands etc.)
+        /// </summary>
+        protected virtual void ReloadAll()
+        {
+            UnloadAll();
+
+            Log.Info("Loading things back...");
+
+            LoadAll();
+        }
+
+        /// <summary>
+        /// Loads everything possible (addons, commands etc.)
+        /// </summary>
+        protected virtual void LoadAll()
+        {
+            AddonManager.LoadPluginsFromDirectory(AddonDirectory);
+
+            // here we can re-map commands since addons are back.
+            // note: reloads from main assemblies (non-plugins) as well.
+
+            CommandManager.CreateMappings();
+        }
+
+        /// <summary>
+        /// Unloads everything possible (addons, commands etc.)
+        /// </summary>
+        protected virtual void UnloadAll()
+        {
+            Log.Info("Unloading everything possible...");
+            CommandManager.DeleteMappings();
+            AddonManager.UnloadPlugins();
         }
 
         /// <summary>

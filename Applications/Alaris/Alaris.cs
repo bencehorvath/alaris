@@ -28,7 +28,7 @@ namespace Alaris
         public AlarisBot(string config)
             : base(config)
         {
-
+            this.SetAsInstance();
         }
 
         /// <summary>

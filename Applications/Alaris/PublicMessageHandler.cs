@@ -95,6 +95,24 @@ namespace Alaris
                 SendMsg(chan, "Lua scripts reloaded.");
             }
 
+            if(msg.Equals("@UnloadPlugins", StringComparison.InvariantCultureIgnoreCase))
+            {
+                InstanceHolder<AlarisBot>.Instance.UnloadAll();
+                SendMsg(chan, "Done.");
+            }
+
+            if(msg.Equals("@LoadPlugins", StringComparison.InvariantCultureIgnoreCase))
+            {
+                InstanceHolder<AlarisBot>.Instance.LoadAll();
+                SendMsg(chan, "Done.");
+            }
+
+            if(msg.Equals("@ReloadPlugins", StringComparison.InvariantCultureIgnoreCase))
+            {
+                InstanceHolder<AlarisBot>.Instance.ReloadAll();
+                SendMsg(chan, "Done.");
+            }
+
 
             if(msg.StartsWith("@sort "))
             {

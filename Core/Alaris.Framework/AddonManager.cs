@@ -31,6 +31,8 @@ namespace Alaris.Framework
         /// </summary>
         public static readonly List<Assembly> Assemblies = new List<Assembly>();
 
+        private static readonly object LoadLock = new object();
+
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         /// <summary>
@@ -84,8 +86,11 @@ namespace Alaris.Framework
 
                     pl.Setup(ref connection, Channels);
 
-                    Addons.Add(pl);
-                    Assemblies.Add(asm);
+                    lock (LoadLock)
+                    {
+                        Addons.Add(pl);
+                        Assemblies.Add(asm);
+                    }
 
                     Log.Info("Loaded plugin {0} {1} by {2} ({3})", pl.Name, asm.GetName().Version.ToString(), pl.Author, pl.Website);
                 }
@@ -95,16 +100,19 @@ namespace Alaris.Framework
         /// <summary>
         /// Unloads all addons.
         /// </summary>
-        [Obsolete("Do not use this method as it can screw up the command system.", true)]
         public static void UnloadPlugins()
         {
-            foreach (var pl in Addons.AsParallel())
+            lock (LoadLock)
             {
-                pl.Destroy();
-                Addons.Remove(pl);
-            }
+                for (var i = 0; i < Addons.Count; ++i )
+                {
+                    var pl = Addons[i];
+                    pl.Destroy();
+                    Addons.Remove(pl);
+                }
 
-            Assemblies.Clear();  
+                Assemblies.Clear();  
+            }
         }
 
         private static void SetupAppDomainDebugHandlers()

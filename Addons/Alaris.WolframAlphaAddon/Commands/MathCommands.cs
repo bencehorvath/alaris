@@ -1,8 +1,5 @@
-﻿using System.Net;
-using System.Text.RegularExpressions;
-using System.Web;
-using Alaris.Commands;
-using Alaris.Framework;
+﻿using System;
+using System.Linq;
 using Alaris.Framework.Commands;
 using Alaris.Framework.Extensions;
 using NLog;
@@ -25,9 +22,20 @@ namespace Alaris.WolframAlphaAddon.Commands
             expression = expression.Replace("=", " = "); // for equations
 
             var client = new WAClient("557QYQ-UUUWTKX95V");
-            var result = client.Solve(expression);
+            var result = client.GetResult(expression);
+
+            var results = from pod in result.Pods
+                          where pod.Title.ToLower().Contains("solution")
+                                || pod.Title.ToLower().Contains("result")
+                                || pod.Title.ToLower().Contains("derivative")
+                          select pod;
+
+            foreach (var rs in results.Select(pod => pod.SubPods[0].PlainText))
+            {
+                mp.Bot.SendMsg(mp.Channel, rs);
+            }
+
             
-            mp.Bot.SendMsg(mp.Channel, result);
         }
     }
 }

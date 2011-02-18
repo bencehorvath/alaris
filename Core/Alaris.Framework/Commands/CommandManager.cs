@@ -71,6 +71,19 @@ namespace Alaris.Framework.Commands
             Log.Info("Created {0} command mapping(s) and {1} sub-command mapping(s)", CommandMethodMap.Count, SubCommandMethodMap.Count);
         }
 
+        /// <summary>
+        /// Deletes every loaded mapping.
+        /// <para>Used for unloading stuff.</para>
+        /// </summary>
+        public static void DeleteMappings()
+        {
+            lock(MapLock)
+            {
+                CommandMethodMap.Clear();
+                SubCommandMethodMap.Clear();
+            }
+        }
+
         private static void ProcessMethods(IEnumerable<MethodInfo> methods)
         {
             Parallel.ForEach(methods, method =>
@@ -223,8 +236,6 @@ namespace Alaris.Framework.Commands
                 {
                     parl.Add(mp);
 
-                    
-
                     if (!cmd.IsParameterCountUnspecified)
                     {
                         parl.AddRange(parameters);
@@ -246,8 +257,6 @@ namespace Alaris.Framework.Commands
                                           : new object[] {mp};*/
 
 
-                
-                
                 if(handler.IsParameterized && cmd.IsParameterCountUnspecified)
                 {
                     var prms = new ArrayList {mp, parameters.ToArray()};
