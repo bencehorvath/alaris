@@ -75,7 +75,7 @@ namespace Alaris.Framework
             
 
             connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Bot version: " + IrcConstants.Normal + BotVersion);
-            connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Thread count: " + IrcConstants.Normal + Process.GetCurrentProcess().Threads.Count);
+            connection.Sender.PublicMessage(chan, IrcConstants.Bold + "Runtime ({0}): " + IrcConstants.Normal + Environment.Version.ToString(), os);
             connection.Sender.PublicMessage(chan,
                                             IrcConstants.Bold + "CPU: " + IrcConstants.Normal + GetCpuId() + " | " +
                                             Environment.ProcessorCount + " cores.");
@@ -143,7 +143,8 @@ namespace Alaris.Framework
             {
                 MD5 md5 = new MD5CryptoServiceProvider();
                 retVal = md5.ComputeHash(file);
-                md5.Dispose();
+				// todo: not yet in Mono
+                //md5.Dispose();
             }
 
             var sb = new StringBuilder();
@@ -171,7 +172,7 @@ namespace Alaris.Framework
 
             var data = Encoding.ASCII.GetBytes(value);
             data = x.ComputeHash(data);
-            x.Dispose();
+            //x.Dispose();
             var ret = "";
 
             for (var i = 0; i < data.Length; i++)
@@ -324,11 +325,42 @@ namespace Alaris.Framework
         /// </returns>
         private static string GetCpuId()
         {
+#if MONO
+			string content;
+			
+			using(var reader = new StreamReader("/proc/cpuinfo"))
+			{
+				content = reader.ReadToEnd();
+			}
+
+			var getBrandRegex = new Regex(@"model\sname\s:\s*(?<first>.+\sCPU)\s*(?<second>.+)", RegexOptions.IgnoreCase);
+
+			if(!getBrandRegex.IsMatch(content))
+			{
+				// not intel
+				var amdRegex = new Regex(@"model\sname\s:\s*(?<cpu>.+)");
+
+				if(!amdRegex.IsMatch(content))
+					return "Not found";
+
+				var amatch = amdRegex.Match(content);
+				string amd = amatch.Groups["cpu"].ToString();
+
+				return amd;
+			}
+
+			var match = getBrandRegex.Match(content);
+			string cpu = (match.Groups["first"].ToString() + " " + match.Groups["second"].ToString());
+			
+			return cpu;
+			
+#else
             var mos = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_Processor");
 
             return
                 (from ManagementObject mo in mos.Get() select (Regex.Replace(Convert.ToString(mo["Name"]), @"\s+", " ")))
                     .FirstOrDefault();
+#endif
         }
 
 

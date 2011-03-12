@@ -247,14 +247,14 @@ namespace Alaris.Framework
                 SetupHandlers();
                 Connect();
 
-                var stask = Task.Factory.StartNew(ServiceManager.StartServices);
+                //var stask = Task.Factory.StartNew(ServiceManager.StartServices); todo: write manager for Mono
 
                 sw.Stop();
                 Log.Info("Startup took {0}ms", sw.ElapsedMilliseconds);
 
                 Log.Info("Waiting for pending tasks to finish");
 
-                Task.WaitAll(itask, mtask, dtask, ctask, stask);
+                Task.WaitAll(itask, mtask, dtask, ctask/*, stask*/);
             }
         }
 
@@ -308,9 +308,10 @@ namespace Alaris.Framework
 
             CommandLine.CLI.Stop();
 
-            Thread.Sleep(20000);
+            Thread.Sleep(2000);
+			
+			Console.CursorVisible = true;
 
-            Process.GetCurrentProcess().CloseMainWindow();
             Process.GetCurrentProcess().Close();
         }
 

@@ -1,0 +1,36 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Alaris.Framework/Utilities.cs">
+    <Files>
+      <File FileName="Core/Alaris.Irc/Identd.cs" Line="26" Column="78" />
+      <File FileName="Core/Alaris.Framework/CrashHandler.cs" Line="5" Column="7" />
+      <File FileName="Core/Alaris.Framework/ScriptManager.cs" Line="80" Column="17" />
+      <File FileName="Core/Alaris.Framework/Utilities.cs" Line="339" Column="105" />
+      <File FileName="Core/Alaris.Framework/Utility.cs" Line="1441" Column="10" />
+      <File FileName="Applications/Alaris/PublicMessageHandler.cs" Line="90" Column="1" />
+      <File FileName="Addons/Alaris.DefaultAddon/DefaultAddon.cs" Line="32" Column="27" />
+      <File FileName="Applications/Alaris/alaris.config.xml" Line="18" Column="23" />
+      <File FileName="Applications/Alaris/Alaris.cs" Line="51" Column="3" />
+      <File FileName="Core/Alaris.Framework/AlarisBase.cs" Line="266" Column="28" />
+      <File FileName="Core/Alaris.Framework/AddonManager.cs" Line="79" Column="2" />
+      <File FileName="Applications/Alaris/NLog.config" Line="18" Column="46" />
+      <File FileName="Applications/Alaris/Main.cs" Line="40" Column="87" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Applications" expanded="True">
+            <Node name="Alaris" expanded="True" />
+          </Node>
+          <Node name="Core" expanded="True">
+            <Node name="Alaris.Framework" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

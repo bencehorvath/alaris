@@ -88,13 +88,6 @@ namespace Alaris
 
             //LuaEngine.LuaHelper.HandleLuaCommands(_manager.Lua.LuaVM, chan, msg);
 
-
-            if (msg.Equals("@reload scripts", StringComparison.InvariantCultureIgnoreCase))
-            {
-                ScriptManager.Lua.LoadScripts(true);
-                SendMsg(chan, "Lua scripts reloaded.");
-            }
-
             if(msg.Equals("@UnloadPlugins", StringComparison.InvariantCultureIgnoreCase))
             {
                 InstanceHolder<AlarisBot>.Instance.UnloadAll();

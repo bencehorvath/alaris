@@ -1429,7 +1429,6 @@ namespace Alaris.Framework
 
         #endregion
 
-
         /// <summary>
         /// Creates a long.
         /// </summary>

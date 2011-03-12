@@ -20,16 +20,9 @@ namespace Alaris.Framework
         private readonly List<string> _channels = new List<string>();
         private readonly Guid _guid;
         private readonly string _scriptsPath;
-        [NonSerialized]
-        private LuaEngine.LuaEngine _luaEngine;
 
         [NonSerialized]
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
-
-        /// <summary>
-        /// Gets the Lua engine.
-        /// </summary>
-        public LuaEngine.LuaEngine Lua { get { return _luaEngine; } }
 
         /// <summary>
         ///   The IRC connection instance.
@@ -85,8 +78,6 @@ namespace Alaris.Framework
         /// </summary>
         public void Run()
         {
-            if(AlarisBase.Instance.LuaEnabled)
-                _luaEngine = new LuaEngine.LuaEngine(ref _connection, Path.Combine(_scriptsPath, "lua"));
             Log.Info("Lua support is disabled.");
         }
 

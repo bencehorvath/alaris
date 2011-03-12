@@ -60,41 +60,51 @@ namespace Alaris.Framework
         /// <param name="directory">The directory to check in</param>
         public static void LoadPluginsFromDirectory(string directory)
         {
-            var dir = new DirectoryInfo(Path.Combine(Environment.CurrentDirectory, directory));
-            Log.Info("Loading addons from: {0}", dir.FullName);
-
-            foreach(var dll in dir.GetFiles("*.dll").AsParallel())
-            {
-                var asm = Assembly.LoadFrom(dll.FullName);
-                
-                if(asm == null)
-                    continue;
-
-                IAlarisAddon pl = null;
-
-                foreach (var type in 
-                    from t in asm.GetTypes().AsParallel() 
-                    where t.GetInterfaces().Contains(typeof(IAlarisAddon)) 
-                    select t)
-                {
-                    pl = Activator.CreateInstance(type).Cast<IAlarisAddon>();
-
-                    if (pl == null)
-                        continue;
-
-                    var connection = Connection;
-
-                    pl.Setup(ref connection, Channels);
-
-                    lock (LoadLock)
-                    {
-                        Addons.Add(pl);
-                        Assemblies.Add(asm);
-                    }
-
-                    Log.Info("Loaded plugin {0} {1} by {2} ({3})", pl.Name, asm.GetName().Version.ToString(), pl.Author, pl.Website);
-                }
-            }
+			try 
+			{
+	            var dir = new DirectoryInfo(Path.Combine(Environment.CurrentDirectory, directory));
+	            Log.Info("Loading addons from: {0}", dir.FullName);
+	
+	            foreach(var dll in dir.GetFiles("*.dll").AsParallel())
+	            {
+					if(!dll.FullName.Contains("Alaris"))
+						continue;
+					
+	                var asm = Assembly.LoadFrom(dll.FullName);
+	                
+	                if(asm == null)
+	                    continue;
+	
+	                IAlarisAddon pl = null;
+	
+	                foreach (var type in 
+	                    from t in asm.GetTypes().AsParallel() 
+	                    where t.GetInterfaces().Contains(typeof(IAlarisAddon)) 
+	                    select t)
+	                {
+	                    pl = Activator.CreateInstance(type).Cast<IAlarisAddon>();
+	
+	                    if (pl == null)
+	                        continue;
+	
+	                    var connection = Connection;
+	
+	                    pl.Setup(ref connection, Channels);
+	
+	                    lock (LoadLock)
+	                    {
+	                        Addons.Add(pl);
+	                        Assemblies.Add(asm);
+	                    }
+	
+	                    Log.Info("Loaded plugin {0} {1} by {2} ({3})", pl.Name, asm.GetName().Version.ToString(), pl.Author, pl.Website);
+	                }
+            	}
+			}
+			catch(Exception x)
+			{
+				Log.Info("Error while loading one of directories! Detail: {0}", x.Message);
+			}
         }
 
         /// <summary>
