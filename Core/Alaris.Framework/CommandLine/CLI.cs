@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Alaris.Framework.Commands;
+using Alaris.Framework.Extensions;
 using Alaris.Irc;
 using NLog;
 
@@ -24,12 +25,15 @@ namespace Alaris.Framework.CommandLine
         private static readonly Thread CLIThread;
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
+        private static string _currentChannel;
+
         private static string _cmd;
 
         #endregion
 
         static CLI()
         {
+            _currentChannel = "#skullbot";
             CLIThread = new Thread(Run) {Name = "CLI Thread"};
         }
 
@@ -43,10 +47,26 @@ namespace Alaris.Framework.CommandLine
                 if (string.IsNullOrEmpty(_cmd))
                     continue;
 
+                if(_cmd.StartsWith("setchannel", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    var channel = _cmd.Remove(0, 10);
+
+                    if(channel.IsValidChannelName())
+                    {
+                        _currentChannel = channel;
+                    }
+                    else
+                    {
+                        Log.Error("Specified channel name ({0}) is invalid!", channel);
+                    }
+
+                    return;
+                }
+
                 if (!_cmd.StartsWith("@"))
                     _cmd = string.Format("@{0}", _cmd);
 
-                CommandManager.HandleCommand(new UserInfo("SysOp", "SysOp", "SysOp.Local.Host"), "#skullbot", _cmd);
+                CommandManager.HandleCommand(new UserInfo("SysOp", "SysOp", "SysOp.Local.Host"), _currentChannel, _cmd);
 
                 Thread.Sleep(150);
             }

@@ -176,7 +176,6 @@ namespace Alaris.Framework.Commands
         {
             try
             {
-
                 if (!message.StartsWith(CommandPrefix))
                     return;
                 

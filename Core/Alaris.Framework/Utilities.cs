@@ -11,8 +11,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Alaris.API;
 using Alaris.Framework.Database;
+using Alaris.Functional;
 using Alaris.Irc;
 using NLog;
+
+
 
 namespace Alaris.Framework
 {
@@ -53,6 +56,8 @@ namespace Alaris.Framework
                                Nick = AdminNick,
                                Host = AdminHost
                            });
+
+            
         }
 
         /// <summary>

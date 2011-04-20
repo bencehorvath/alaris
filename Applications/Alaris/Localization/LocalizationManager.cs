@@ -14,14 +14,14 @@ namespace Alaris.Localization
         /// Retrieves the specified text's translation to the specified language from the database.
         /// </summary>
         /// <param name="text">Text to translate</param>
-        /// <param name="locale">Locale (default: enGB)</param>
+        /// <param name="locale">Locale (default: enUS)</param>
         /// <returns></returns>
-        public static string GetLocalizedText(string text, string locale)
+        public static string GetLocalizedText(string text, string locale = "enUS")
         {
             if (string.IsNullOrEmpty(text) || string.IsNullOrEmpty(locale) || locale.Length != 4)
                 return string.Empty;
 
-            if (locale == "enGB")
+            if (locale == "enUS")
                 return text;
 
             text = text.ToLowerInvariant();
