@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WolframAPI</name>
+    </assembly>
+    <members>
+        <member name="T:WolframAPI.WASubPod">
+            <summary>
+            The subpod element in the response.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WASubPod.Title">
+            <summary>
+            Gets or sets the subpod's title.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WASubPod.PlainText">
+            <summary>
+            Gets or sets the expression submitted as plain text.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WASubPod.Image">
+            <summary>
+            Gets or sets the image representation of the submitted expression.
+            </summary>
+        </member>
+        <member name="T:WolframAPI.ResponseReceivedEventHandler">
+            <summary>
+            Used to handle the response received event which occurs when a response is successfully
+            retrieved using the API.
+            </summary>
+            <param name="response">The (raw) response returned.</param>
+            <param name="expression">The expression submitted.</param>
+        </member>
+        <member name="T:WolframAPI.WAClient">
+            <summary>
+            Used to access Wolfram Alpha. 
+            Submits expressions, retrieves and parses responses.
+            </summary>
+        </member>
+        <member name="F:WolframAPI.WAClient.BaseUrl">
+            <summary>
+            The base WA API url.
+            </summary>
+        </member>
+        <member name="F:WolframAPI.WAClient._appId">
+            <summary>
+            The application ID.
+            </summary>
+        </member>
+        <member name="M:WolframAPI.WAClient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:WolframAPI.WAClient"/> class.
+            </summary>
+            <param name="appId">The application ID provided by Wolfram. You have to request one for each of your apps.</param>
+        </member>
+        <member name="M:WolframAPI.WAClient.Solve(System.String)">
+            <summary>
+            Solves the specified expression.
+            </summary>
+            <param name="expression">The expression.</param>
+            <exception cref="T:WolframAPI.Exceptions.WolframException">Throws in case of any error.</exception>
+            <exception cref="T:System.ArgumentNullException">Throws if the specified argument is null.</exception>
+            <returns>The solution of the given expression</returns>
+        </member>
+        <member name="M:WolframAPI.WAClient.GetResult(System.String)">
+            <summary>
+            Gets the result of the specified expression.
+            <para>The expression is returned as <see cref="T:WolframAPI.WAResult"/></para> 
+            so you can manually go through the pods of the response (to get ANY information you'd like)
+            <para>It is encouraged to use this method instead of <see cref="M:WolframAPI.WAClient.Solve(System.String)"/></para>
+            </summary>
+            <param name="expression">The expression to solve.</param>
+            <exception cref="T:WolframAPI.Exceptions.WolframException">Throws in case of any error.</exception>
+            <exception cref="T:System.ArgumentNullException">Throws if the specified argument is null.</exception>
+            <returns>The result</returns>
+        </member>
+        <member name="M:WolframAPI.WAClient.Submit(System.String)">
+            <summary>
+            Submits the specified expression and returns the raw result.
+            </summary>
+            <param name="expression">The expression to post.</param>
+            <exception cref="T:WolframAPI.Exceptions.WolframException">Throws in case of any error.</exception>
+            <exception cref="T:System.ArgumentNullException">Throws if the specified argument is null.</exception>
+            <returns>Raw response</returns>
+        </member>
+        <member name="M:WolframAPI.WAClient.Parse(System.String)">
+            <summary>
+            Parses the raw response.
+            </summary>
+            <param name="response">The response to parse</param>
+            <returns>The parsed response</returns>
+            <exception cref="T:WolframAPI.Exceptions.WolframException">Throws in case of any error.</exception>
+            <exception cref="T:System.ArgumentNullException">Throws if the specified argument is null.</exception>
+        </member>
+        <member name="E:WolframAPI.WAClient.OnResponseReceived">
+            <summary>
+            Occurs when a response is successfully retrieved using the API.
+            </summary>
+        </member>
+        <member name="T:WolframAPI.XmlSerialized">
+            <summary>
+             Base class for XML-serialized types.
+            </summary>
+        </member>
+        <member name="M:WolframAPI.ISerializableType.Serialize">
+            <summary>
+            Serializes the current instance and returns the result as a <see cref="T:System.String"/>
+            <para>Should be used with XML serialization only.</para>
+            </summary>
+            <returns>The serialized instance.</returns>
+        </member>
+        <member name="M:WolframAPI.XmlSerialized.Serialize">
+            <summary>
+            Serializes the current instance and returns the result as a <see cref="T:System.String"/>
+            <para>Should be used with XML serialization only.</para>
+            </summary>
+            <returns>The serialized instance.</returns>
+        </member>
+        <member name="T:WolframAPI.WAPod">
+            <summary>
+            The pod element in the response.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAPod.Title">
+            <summary>
+            Gets or sets the pod's title.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAPod.Scanner">
+            <summary>
+            No information.
+            Seen: Identity
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAPod.Id">
+            <summary>
+            Gets or sets the identifier for the pod.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAPod.Position">
+            <summary>
+            Gets or sets the pod position.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAPod.Error">
+            <summary>
+            Gets or sets a value indicating whether there was an error in this pod or not.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAPod.NumSubPods">
+            <summary>
+            Gets or sets the number of sub pods.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAPod.SubPods">
+            <summary>
+            Gets or sets the list of sub pods.
+            </summary>
+        </member>
+        <member name="T:WolframAPI.WAResult">
+            <summary>
+            The QueryResult (main) part of the response.
+            </summary>
+        </member>
+        <member name="M:WolframAPI.WAResult.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:WolframAPI.WAResult"/> class.
+            </summary>
+        </member>
+        <member name="M:WolframAPI.WAResult.Equals(WolframAPI.WAResult)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <returns>
+            true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
+            </returns>
+            <param name="other">An object to compare with this object.</param>
+        </member>
+        <member name="M:WolframAPI.WAResult.Equals(System.String)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <returns>
+            true if the current object is equal to the <paramref name="other"/> parameter; otherwise, false.
+            </returns>
+            <param name="other">An object to compare with this object.</param>
+        </member>
+        <member name="M:WolframAPI.WAResult.op_Equality(WolframAPI.WAResult,WolframAPI.WAResult)">
+            <summary>
+            Implements the operator ==.
+            </summary>
+            <param name="a">A.</param>
+            <param name="b">The b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:WolframAPI.WAResult.op_Inequality(WolframAPI.WAResult,WolframAPI.WAResult)">
+            <summary>
+            Implements the operator !=.
+            </summary>
+            <param name="a">A.</param>
+            <param name="b">The b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:WolframAPI.WAResult.ToString">
+            <summary>
+            Returns the <see cref="T:System.String"/> representation of this <see cref="T:WolframAPI.WAResult"/> instance.
+            </summary>
+            <returns>The string representation</returns>
+        </member>
+        <member name="M:WolframAPI.WAResult.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"/> to compare with this instance.</param>
+            <returns>
+            	<c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:WolframAPI.WAResult.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:WolframAPI.WAResult.Clone">
+            <summary>
+            Creates a new object that is a copy of the current <see cref="T:WolframAPI.WAResult"/> instance.
+            </summary>
+            <returns>
+            A new object that is a copy of this instance.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="P:WolframAPI.WAResult.Success">
+            <summary>
+            Gets or sets a value indicating whether the processing was successful or not.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAResult.Error">
+            <summary>
+            Gets or sets a value indicating whether there was an error or not.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAResult.NumPods">
+            <summary>
+            Gets or sets the number of pods in the response.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAResult.DataTypes">
+            <summary>
+            Gets or sets the data types passed in the response.
+            Usually blank.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAResult.TimedOut">
+            <summary>
+            Gets or sets the timedout value.
+            It's a string because it's empty in the response.
+            Probaby set to true or something in case of timeout.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAResult.Timing">
+            <summary>
+            Gets or sets the time it took for the response.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAResult.ParseTiming">
+            <summary>
+            Gets or sets the time it took to parse.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAResult.ParseTimedOut">
+            <summary>
+            Gets or sets a value indicating whether the parse timed out or not.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAResult.Recalculate">
+            <summary>
+            Gets or sets a value which is empty when there is no recalculation (?)
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAResult.Version">
+            <summary>
+            Gets or sets the API's version.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAResult.Pods">
+            <summary>
+            Gets or sets the list of pods.
+            </summary>
+        </member>
+        <member name="T:WolframAPI.Exceptions.WolframException">
+            <summary>
+            Thrown by Wolfram API components.
+            </summary>
+        </member>
+        <member name="M:WolframAPI.Exceptions.WolframException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:WolframAPI.Exceptions.WolframException"/> class.
+            </summary>
+        </member>
+        <member name="M:WolframAPI.Exceptions.WolframException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:WolframAPI.Exceptions.WolframException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error. </param>
+        </member>
+        <member name="M:WolframAPI.Exceptions.WolframException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:WolframAPI.Exceptions.WolframException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception. </param><param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified. </param>
+        </member>
+        <member name="M:WolframAPI.Exceptions.WolframException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:WolframAPI.Exceptions.WolframException"/> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown. </param><param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination. </param><exception cref="T:System.ArgumentNullException">The <paramref name="info"/> parameter is null. </exception><exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult"/> is zero (0). </exception>
+        </member>
+        <member name="T:WolframAPI.WAImage">
+            <summary>
+            Provides the Image (img) element's datas.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAImage.Source">
+            <summary>
+            Gets or sets the source (url) where the image resides.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAImage.Alt">
+            <summary>
+            Gets or sets the alternative form of the image.
+            Usually the text representation of the image.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAImage.Title">
+            <summary>
+            Gets or sets the image's title.
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAImage.Width">
+            <summary>
+            Gets or sets the image's width
+            </summary>
+        </member>
+        <member name="P:WolframAPI.WAImage.Height">
+            <summary>
+            Gets or sets the image's height
+            </summary>
+        </member>
+    </members>
+</doc>

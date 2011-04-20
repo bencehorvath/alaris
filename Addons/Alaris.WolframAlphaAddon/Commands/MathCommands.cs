@@ -22,7 +22,7 @@ namespace Alaris.WolframAlphaAddon.Commands
             expression = expression.Replace("=", " = "); // for equations
 
             var client = new WAClient("557QYQ-UUUWTKX95V");
-            var result = client.GetResult(expression);
+            /*var result = client.GetResult(expression);
 
             var results = from pod in result.Pods
                           where pod.Title.ToLower().Contains("solution")
@@ -33,9 +33,12 @@ namespace Alaris.WolframAlphaAddon.Commands
             foreach (var rs in results.Select(pod => pod.SubPods[0].PlainText))
             {
                 mp.Bot.SendMsg(mp.Channel, rs);
-            }
+            }*/
 
-            
+
+            var result = client.Solve(expression);
+
+            mp.Bot.SendMsg(mp.Channel, result);
         }
     }
 }

@@ -385,7 +385,8 @@ namespace Alaris.Irc
                     _properties = new ServerProperties();
                 }
                 //Populate properties from name/value matches
-                MatchCollection matches = _propertiesRegex.Matches(info);
+                var matches = _propertiesRegex.Matches(info);
+
                 if (matches.Count > 0)
                 {
                     foreach (Match match in matches)
@@ -625,8 +626,7 @@ namespace Alaris.Irc
                 _connected = true;
                 _writer = new StreamWriter(_client.GetStream(), TextEncoding) {AutoFlush = true};
                 _reader = new StreamReader(_client.GetStream(), TextEncoding);
-                _socketListenThread = new Thread(ReceiveIRCMessages);
-                _socketListenThread.Name = Name;
+                _socketListenThread = new Thread(ReceiveIRCMessages) {Name = Name};
                 _socketListenThread.Start();
                 _sender.RegisterConnection(ConnectionArgs);
             }

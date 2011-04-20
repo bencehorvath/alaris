@@ -72,9 +72,10 @@ namespace Alaris.Irc
         {
             var pieces = (int) Math.Ceiling(message.Length/(float) maxSize);
             var parts = new string[pieces];
-            for (int i = 0; i < pieces; i++)
+
+            for (var i = 0; i < pieces; i++)
             {
-                int start = i*maxSize;
+                var start = i*maxSize;
                 if (i == pieces - 1)
                 {
                     parts[i] = message.Substring(start);

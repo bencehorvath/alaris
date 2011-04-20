@@ -81,17 +81,12 @@ namespace Alaris.Irc
 		/// an array of channel names is valid.
 		/// </summary>
 		/// <returns>True if the channel names are all valid.</returns>
-		public static bool IsValidChannelList( string[] channels ) 
+		public static bool IsValidChannelList( string[] channels )
 		{
-			if( channels == null || channels.Length == 0 ) 
-			{
-				return false;
-			}
-
-		    return channels.All(IsValidChannelName);
+		    return channels != null && channels.Length != 0 && channels.All(IsValidChannelName);
 		}
 
-		/// <summary>
+	    /// <summary>
 		/// Using the rules set forth in RFC 2812 determine if
 		/// the channel name is valid.
 		/// </summary>
@@ -128,15 +123,8 @@ namespace Alaris.Irc
 			{
 				return false;
 			}
-			if( ContainsSpace( nick ) ) 
-			{
-				return false;
-			}
-			if ( NickRegex.IsMatch( nick ) ) 
-			{
-				return true;
-			}
-			return false;
+
+			return !ContainsSpace( nick ) && NickRegex.IsMatch( nick );
 		}
 		
 		/// <summary>
@@ -277,9 +265,6 @@ namespace Alaris.Irc
 			return (StatsQuery) Enum.Parse( typeof( StatsQuery), b.ToString(CultureInfo.InvariantCulture), false );
 		}
 
-
-
-		
 		private static bool IsValidModeChar( char c, string validList ) 
 		{
 			return validList.IndexOf( c ) != -1;

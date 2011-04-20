@@ -67,7 +67,7 @@ namespace Alaris.Framework
             {
                 var asm = Assembly.LoadFrom(dll.FullName);
                 
-                if(asm == null)
+                if(asm == null || Assemblies.Contains(asm))
                     continue;
 
                 IAlarisAddon pl = null;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Alaris.API;
+using Alaris.Framework;
 using Alaris.Irc;
 
 namespace Alaris.DefaultAddon
@@ -22,7 +23,7 @@ namespace Alaris.DefaultAddon
             _connection = conn;
             _channels = channels;
 
-            AlarisBot.Instance.ScriptManager.RegisterOnPublicHook((usr, chn, msg) =>
+            AlarisBase.Instance.ScriptManager.RegisterOnPublicHook((usr, chn, msg) =>
                                                                       {
                                                                           if(msg.Equals("@sayhd", StringComparison.InvariantCultureIgnoreCase))
                                                                           {
