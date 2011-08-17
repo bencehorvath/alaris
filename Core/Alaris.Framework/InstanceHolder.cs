@@ -1,4 +1,6 @@
-﻿namespace Alaris.Framework
+﻿using System;
+
+namespace Alaris.Framework
 {
     /// <summary>
     /// Replacement of singleton.
@@ -19,7 +21,7 @@
             {
                 if(_instance == null)
                     Log.Warn("WARNING! Null instance returned by Instance Holder.");
-
+                
                 return _instance;
             }
 
@@ -84,6 +86,40 @@
             where T: class
         {
             return InstanceHolder<T>.Set(inst);
+        }
+    }
+
+    /// <summary>
+    /// A base class for other classes that are forced to have only a single active instance.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    internal abstract class SingleInstance<T>
+        where T: class
+    {
+        private readonly T _instance;
+
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SingleInstance&lt;T&gt;"/> class.
+        /// </summary>
+        /// <param name="instance">The instance.</param>
+        internal protected SingleInstance(T instance)
+        {
+            _instance = instance;
+        }
+
+        /// <summary>
+        /// Gets the single instance of the class.
+        /// </summary>
+        public virtual T Instance
+        {
+            get
+            {   
+                if(_instance == null)
+                    throw new InvalidOperationException("SingleInstance: The returnable instance is NULL!");
+
+                return _instance;
+            }
         }
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading;
@@ -10,7 +9,6 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Alaris.Framework.Commands;
 using Alaris.Framework.Config;
-using Alaris.Framework.Database;
 using Alaris.Framework.Extensions;
 using Alaris.Framework.Services;
 using Alaris.Irc;
@@ -37,7 +35,12 @@ namespace Alaris.Framework
         private string _nspw = "";
         private readonly List<string> _channels = new List<string>();
         private readonly CrashHandler _sCrashHandler;
+
+        /// <summary>
+        /// Guid of this instance.
+        /// </summary>
         protected readonly Guid Guid = Guid.NewGuid();
+
         private string _scriptsDir;
 
         /// <summary>
@@ -174,17 +177,16 @@ namespace Alaris.Framework
             {
                 Log.Info("Running huge amount of parallel tasks");
 
-                Task itask = null, mtask = null, dtask, ctask;
+                var tasks = new List<Task>();
 
                 try
                 {
-
-                    itask = Task.Factory.StartNew(() =>
-                    {
-                        Log.Info("Starting Identd service");
-                        Identd.Start(_nick);
-                    });
-
+                    
+                    tasks.Add(Task.Factory.StartNew(() =>
+                                                        {
+                                                            Log.Info("Starting Identd service");
+                                                            Identd.Start(_nick);
+                                                        }));
 
 
                     _connection = new Connection(cargs, true, false)
@@ -211,17 +213,17 @@ namespace Alaris.Framework
 
                     Log.Info("CTCP is enabled");
 
-                    _manager = new ScriptManager(ref _connection, _channels, _scriptsDir);
+                    _manager = new ScriptManager(ref _connection, _channels, _scriptsDir); // Lua support is not really feature-complete, highly WIP
 
-                    mtask = Task.Factory.StartNew(() => _manager.Run());
-
+                    tasks.Add(Task.Factory.StartNew(() => _manager.Run()));
+                   
                 }
                 catch (Exception x)
                 {
                     Log.Fatal("An exception has been thrown during one of the parallel executions ({0})", x);
                 }
 
-                dtask = Task.Factory.StartNew(() => DatabaseManager.Initialize(DBName));
+                //dtask = Task.Factory.StartNew(() => DatabaseManager.Initialize(DBName));
 
                 if (AddonsEnabled)
                 {
@@ -236,25 +238,25 @@ namespace Alaris.Framework
                         (AddonDirectory);
                 }
 
-                ctask = Task.Factory.StartNew(() =>
-                {
-                    Log.Info("Setting up commands");
+                tasks.Add(Task.Factory.StartNew(() =>
+                                                    {
+                                                        Log.Info("Setting up commands");
 
-                    CommandManager.CommandPrefix = "@";
-                    CommandManager.CreateMappings();
-                });
+                                                        CommandManager.CommandPrefix = "@";
+                                                        CommandManager.CreateMappings();
+                                                    }));
 
                 SetupHandlers();
                 Connect();
 
-                var stask = Task.Factory.StartNew(ServiceManager.StartServices);
+                tasks.Add(Task.Factory.StartNew(ServiceManager.StartServices));
 
                 sw.Stop();
                 Log.Info("Startup took {0}ms", sw.ElapsedMilliseconds);
 
                 Log.Info("Waiting for pending tasks to finish");
 
-                Task.WaitAll(itask, mtask, dtask, ctask, stask);
+               tasks.WaitTasks();
             }
         }
 
@@ -381,6 +383,9 @@ namespace Alaris.Framework
             Task.Factory.StartNew(() => CommandManager.HandleCommand(user, channel, message));
         }
 
+        /// <summary>
+        /// Called when registered.
+        /// </summary>
         protected virtual void OnRegistered()
         {
             // Stop Identd, no need for it anymore.
@@ -394,7 +399,7 @@ namespace Alaris.Framework
 
             Thread.Sleep(1000);
 
-            GC.Collect(3, GCCollectionMode.Forced);
+            GC.Collect(3, GCCollectionMode.Optimized);
         }
 
         /// <summary>

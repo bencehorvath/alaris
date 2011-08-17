@@ -51,8 +51,9 @@ namespace Alaris.Framework
         /// <summary>
         ///   Executes the specified <see cref = "ReadConfigDelegate">ReadConfig</see> method in an exception-safe environment.
         /// </summary>
-        /// <param name = "confread">
+        /// <param name="confread">
         ///   The ReadConfig method.
+        /// </param>
         public static void HandleReadConfig(ReadConfigDelegate confread)
         {
             try

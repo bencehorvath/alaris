@@ -29,12 +29,23 @@ namespace Alaris.Framework.CommandLine
 
         private static string _cmd;
 
+        /// <summary>
+        /// Gets or sets the console user info.
+        /// </summary>
+        /// <value>The console user.</value>
+        public static UserInfo ConsoleUser
+        {
+            get; private set;
+        }
+
         #endregion
 
         static CLI()
         {
             _currentChannel = "#skullbot";
             CLIThread = new Thread(Run) {Name = "CLI Thread"};
+            ConsoleUser = new UserInfo("SysOp", "SysOp", "SysOp.Local.Host");
+
         }
 
         private static void Run()
@@ -66,11 +77,13 @@ namespace Alaris.Framework.CommandLine
                 if (!_cmd.StartsWith("@"))
                     _cmd = string.Format("@{0}", _cmd);
 
-                CommandManager.HandleCommand(new UserInfo("SysOp", "SysOp", "SysOp.Local.Host"), _currentChannel, _cmd);
+                CommandManager.HandleCommand(ConsoleUser, _currentChannel, _cmd);
 
                 Thread.Sleep(150);
             }
         }
+
+
 
         /// <summary>
         /// Starts the CLI thread.

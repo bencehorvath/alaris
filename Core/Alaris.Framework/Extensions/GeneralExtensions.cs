@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Alaris.Irc;
 
 namespace Alaris.Framework.Extensions
@@ -8,7 +10,7 @@ namespace Alaris.Framework.Extensions
     /// <summary>
     /// Some random extension stuff.
     /// </summary>
-    public static class RandomExtensions
+    public static class GeneralExtensions
     {
         /// <summary>
         /// Casts the object to the specified type.
@@ -156,6 +158,18 @@ namespace Alaris.Framework.Extensions
         public static string ConcatenateWithSpaces(this IEnumerable<string> arr)
         {
             return arr.Concatenate(" ");
+        }
+
+        /// <summary>
+        /// Waits for the pending tasks in the specified collection.
+        /// </summary>
+        /// <param name="coll">The collection.</param>
+        public static void WaitTasks(this IEnumerable<Task> coll)
+        {
+            if(coll == null)
+                throw new ArgumentNullException("coll");
+
+            Task.WaitAll(coll.ToArray());
         }
     }
 }

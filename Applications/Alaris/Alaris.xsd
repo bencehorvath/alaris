@@ -27,7 +27,7 @@
       <xs:element name="Server" type="xs:string" />
       <xs:element name="Nickname" type="xs:string" />
       <xs:element name="NickServ" type="NickServ" />
-      <xs:element name="Channels" type="xs:string" />
+      <xs:element name="Channels"  />
       <xs:element name="Admin" type="Admin" />
     </xs:sequence>
   </xs:complexType>

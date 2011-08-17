@@ -1438,7 +1438,7 @@ namespace Alaris.Framework
         /// <returns></returns>
         public static long MakeLong(int low, int high)
         {
-            return low | ((long) high << 32);
+            return (uint)low | ((long) high << 32);
         }
 
         private static readonly Random Rnd = new Random();

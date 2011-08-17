@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using Alaris.API;
+using Alaris.Framework.CommandLine;
 using Alaris.Framework.Database;
 using Alaris.Functional;
 using Alaris.Irc;
@@ -102,9 +103,6 @@ namespace Alaris.Framework
         /// <summary>
         ///   Sends info using the specified connection.
         /// </summary>
-        /// <param name = "connection">
-        ///   The IRC connection.
-        /// </param>
         /// <param name = "chan">
         ///   The channel to send to.
         /// </param>
@@ -127,7 +125,12 @@ namespace Alaris.Framework
         public static bool IsAdmin(UserInfo user)
         {
             if (user == null) throw new ArgumentNullException("user");
-            return ((user.Hostname == AdminHost && user.Nick == AdminNick && user.User == AdminUser) || AdminManager.IsAdmin(user));
+            return ((IsMainAdmin(user)) || AdminManager.IsAdmin(user) || user == CLI.ConsoleUser);
+        }
+
+        private static bool IsMainAdmin(UserInfo user)
+        {
+            return user.Hostname == AdminHost && user.Nick == AdminNick && user.User == AdminUser;
         }
 
         /// <summary>
@@ -256,9 +259,6 @@ namespace Alaris.Framework
         /// <summary>
         ///   Handles the web title command.
         /// </summary>
-        /// <param name = "connection">
-        ///   The IRC connection used.
-        /// </param>
         /// <param name = "chan">
         ///   The channel to send title to.
         /// </param>

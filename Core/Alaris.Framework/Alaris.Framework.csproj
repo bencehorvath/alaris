@@ -82,7 +82,7 @@
     <Compile Include="Exceptions\ScriptTypeException.cs" />
     <Compile Include="Exceptions\SingletonException.cs" />
     <Compile Include="Extensions\IrcExtensions.cs" />
-    <Compile Include="Extensions\RandomExtensions.cs" />
+    <Compile Include="Extensions\GeneralExtensions.cs" />
     <Compile Include="InstanceHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities.cs" />
