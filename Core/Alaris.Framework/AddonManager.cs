@@ -104,12 +104,12 @@ namespace Alaris.Framework
         {
             lock (LoadLock)
             {
-                for (var i = 0; i < Addons.Count; ++i )
+                foreach(var addon in Addons)
                 {
-                    var pl = Addons[i];
-                    pl.Destroy();
-                    Addons.Remove(pl);
+                    addon.Destroy();
                 }
+
+                Addons.Clear();
 
                 Assemblies.Clear();  
             }
