@@ -8,6 +8,7 @@ using Alaris.Framework.Extensions;
 using Alaris.Irc;
 using NLog;
 
+
 namespace Alaris.Framework
 {
     /// <summary>
@@ -108,7 +109,6 @@ namespace Alaris.Framework
                 {
                     addon.Destroy();
                 }
-
                 Addons.Clear();
 
                 Assemblies.Clear();  

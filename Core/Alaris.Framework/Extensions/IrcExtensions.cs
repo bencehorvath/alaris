@@ -36,7 +36,7 @@ namespace Alaris.Framework.Extensions
         /// <param name="chns"></param>
         public static void GetChannelsFrom(this IList<string> channels, IEnumerable<string> chns)
         {
-            foreach (var chan in chns.AsParallel().Where(chn => chn.IsValidChannelName()))
+            foreach (var chan in chns.Where(chn => chn.IsValidChannelName()))
             {
                 channels.Add(chan);
             }

@@ -173,6 +173,8 @@ namespace Alaris.Framework
             CrashHandler.HandleReadConfig(ReadConfig);
             var cargs = new ConnectionArgs(_nick, _server);
 
+  
+
             if(IsParallelized)
             {
                 Log.Info("Running huge amount of parallel tasks");

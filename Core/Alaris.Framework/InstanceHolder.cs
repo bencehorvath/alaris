@@ -25,7 +25,7 @@ namespace Alaris.Framework
                 return _instance;
             }
 
-            set
+            private set
             {
                 if (_instanceAssigned)
                     return;
@@ -78,6 +78,7 @@ namespace Alaris.Framework
 
         /// <summary>
         /// Sets the current object as the main instance of this type.
+        /// 
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="inst"></param>
