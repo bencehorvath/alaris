@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -769,6 +770,8 @@ namespace Alaris.Framework
         /// <returns></returns>
         public static bool Parse(string str, Type type, ref object obj)
         {
+            Contract.Requires(str != null);
+
             if (type == typeof (string))
             {
                 obj = str;

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Management;
@@ -220,6 +221,9 @@ namespace Alaris.Framework
         /// </returns>
         public static List<string> GetUrls(string text)
         {
+            Contract.Requires(text != null);
+            Contract.Ensures(Contract.Result<List<string>>() != null);
+
             var urls = new List<string>();
 
             try

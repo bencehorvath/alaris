@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Diagnostics.Contracts;
+using System.Text.RegularExpressions;
 
 namespace Alaris.Framework
 {
@@ -358,6 +359,13 @@ namespace Alaris.Framework
                 RegexOptions.IgnoreCase | RegexOptions.Singleline
                 );
         }
+
+        [ContractInvariantMethod]
+        void ObjectInvariant()
+        {
+            Contract.Invariant(_domain != null);
+        }
+
 
         /// <summary>
         /// Determines if an email has valid syntax

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.IO;
 using System.Reflection;
 using System.Text;
@@ -488,6 +489,7 @@ namespace Alaris.Framework
         /// <param name="args">The args.</param>
         public void SendMsg(string channel, string message, params object[] args)
         {
+            Contract.Assume(args != null);
             var msg = string.Format(message, args);
             SendMsg(channel, msg);
         }
