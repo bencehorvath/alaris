@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -61,6 +62,9 @@ namespace Alaris.Framework
         /// <param name="directory">The directory to check in</param>
         public static void LoadPluginsFromDirectory(string directory)
         {
+            Contract.Requires(!string.IsNullOrEmpty(directory));
+
+
             var dir = new DirectoryInfo(Path.Combine(Environment.CurrentDirectory, directory));
             Log.Info("Loading addons from: {0}", dir.FullName);
 
@@ -71,12 +75,9 @@ namespace Alaris.Framework
                 if(asm == null || Assemblies.Contains(asm))
                     continue;
 
-                IAlarisAddon pl = null;
+                IAlarisAddon pl;
 
-                foreach (var type in 
-                    from t in asm.GetTypes().AsParallel() 
-                    where t.GetInterfaces().Contains(typeof(IAlarisAddon)) 
-                    select t)
+                foreach (var type in asm.GetTypesWithInterface(typeof(IAlarisAddon)))
                 {
                     pl = Activator.CreateInstance(type).Cast<IAlarisAddon>();
 
@@ -109,6 +110,7 @@ namespace Alaris.Framework
                 {
                     addon.Destroy();
                 }
+
                 Addons.Clear();
 
                 Assemblies.Clear();  

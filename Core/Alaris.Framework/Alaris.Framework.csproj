@@ -87,6 +87,7 @@
     <Compile Include="Commands\CommandManager.cs" />
     <Compile Include="Commands\CommandPermission.cs" />
     <Compile Include="Commands\ParameterizedAlarisCommand.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
     <Compile Include="Extensions\ReflectionExtensions.cs" />
     <Compile Include="ScriptManager.cs" />
     <Compile Include="Services\Remote\IRemote.cs" />
