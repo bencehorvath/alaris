@@ -106,7 +106,7 @@ namespace Alaris.Framework.Commands
                                                       }
 
 
-                                                      var attr = attribute.Cast<AlarisCommandAttribute>();
+                                                      var attr = (AlarisCommandAttribute)attribute;
 
                                                       lock (MapLock)
                                                       {
@@ -131,7 +131,7 @@ namespace Alaris.Framework.Commands
                                                   {
                                                       if (attribute.IsOfType(typeof(ParameterizedAlarisSubCommand)))
                                                       {
-                                                          var patt = attribute.Cast<ParameterizedAlarisSubCommand>();
+                                                          var patt = (ParameterizedAlarisSubCommand)attribute;
 
                                                           if (patt.IsParameterCountUnspecified)
                                                               passEverything = true;
@@ -139,7 +139,7 @@ namespace Alaris.Framework.Commands
                                                               continue;
                                                       }
 
-                                                      var attr = attribute.Cast<AlarisSubCommandAttribute>();
+                                                      var attr = (AlarisSubCommandAttribute)attribute;
 
                                                       lock (MapLock)
                                                       {

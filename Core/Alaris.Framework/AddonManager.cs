@@ -79,7 +79,7 @@ namespace Alaris.Framework
 
                 foreach (var type in asm.GetTypesWithInterface(typeof(IAlarisAddon)))
                 {
-                    pl = Activator.CreateInstance(type).Cast<IAlarisAddon>();
+                    pl = (IAlarisAddon)Activator.CreateInstance(type);
 
                     if (pl == null)
                         continue;

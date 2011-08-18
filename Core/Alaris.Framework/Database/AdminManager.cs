@@ -50,10 +50,14 @@ namespace Alaris.Framework.Database
         [DatabaseAccessor("Determines whether the given user is admin or not.", DatabaseAccessType.Select, "admins")]
         internal static bool IsAdmin(UserInfo user)
         {
+            return false; // we're not currently utilizing a database.
+
+/*
             return
                 (DatabaseManager.QueryFirstRow(
                     string.Format("SELECT * FROM admins WHERE user = '{0}' AND nick = '{1}' AND hostname = '{2}'",
                                   user.User, user.Nick, user.Hostname))) != null;
+*/
         }
 
         /// <summary>

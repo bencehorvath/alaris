@@ -292,7 +292,7 @@ namespace Alaris.Framework
 
 
                 // check if it's youtube.
-                var youtubeRegex = new Regex(@"\s*YouTube\s*\-(?<song>.+)", RegexOptions.IgnoreCase);
+                var youtubeRegex = new Regex(@"(?<song>.+)\-\sYouTube", RegexOptions.IgnoreCase);
 
                 if (youtubeRegex.IsMatch(title))
                 {

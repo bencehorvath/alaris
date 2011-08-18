@@ -36,7 +36,7 @@ namespace Alaris.Framework
                 request.Referer = "http://www.wowemuf.org";
 
                 var response = request.GetResponse();
-
+               
                 var stream = response.GetResponseStream();
                 string data;
 
