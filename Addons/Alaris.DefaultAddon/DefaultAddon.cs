@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using Alaris.Framework;
-using Alaris.Irc;
 
 namespace Alaris.DefaultAddon
 {
     public class DefaultAddon : IAlarisAddon
     {
-        private Connection _connection;
-        private List<string> _channels;
         private readonly Guid _guid;
+        private AlarisBase _alaris;
 
         public DefaultAddon()
         {
@@ -21,18 +18,15 @@ namespace Alaris.DefaultAddon
         /// <summary>
         /// Creates the addon.
         /// </summary>
-        /// <param name="conn">IRC connection.</param>
-        /// <param name="channels">Channel list.</param>
-        public void Setup(ref Connection conn, List<string> channels)
+        /// <param name="alaris">The bot instance</param>
+        public void Setup(AlarisBase alaris)
         {
-            _connection = conn;
-            _channels = channels;
-
+            _alaris = alaris;
             AlarisBase.Instance.ScriptManager.RegisterOnPublicHook((usr, chn, msg) =>
                                                                       {
                                                                           if(msg.Equals("@sayhd", StringComparison.InvariantCultureIgnoreCase))
                                                                           {
-                                                                              _connection.Sender.PublicMessage(chn, "Hello from DefaultAddon!");
+                                                                              _alaris.Connection.Sender.PublicMessage(chn, "Hello from DefaultAddon!");
                                                                           }
 
                                                                       });

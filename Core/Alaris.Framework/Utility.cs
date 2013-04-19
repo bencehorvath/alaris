@@ -3,7 +3,7 @@
 // /* Copyright (C) 2013 Bence Horváth <horvathb@me.com>
 //      alaris: Alaris.Framework: Utility.cs
 // 
-//      Last updated: 2013/04/19 8:20 PM
+//      Last updated: 2013/04/19 8:22 PM
 // 
 // */
 
@@ -25,7 +25,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using Alaris.Framework.CommandLine;
-using Alaris.Framework.Database;
 using Alaris.Irc;
 using NLog;
 
@@ -80,12 +79,12 @@ namespace Alaris.Framework
             TypeMap.Add("Int32", typeof (int));
             TypeMap.Add("Int64", typeof (long));
 
-            Admins.Add(new Admin
+            /*Admins.Add(new Admin
                 {
-                    User = AdminUser,
-                    Nick = AdminNick,
-                    Host = AdminHost
-                });
+                    User = Operator.User,
+                    Nick = Operator.Nick,
+                    Host = Operator.Host
+                });*/
         }
 
         /// <summary>
@@ -1552,19 +1551,9 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///     The admin user's username.
+        /// The Bot operator.
         /// </summary>
-        public static string AdminUser { get; set; }
-
-        /// <summary>
-        ///     The admin user's nick.
-        /// </summary>
-        public static string AdminNick { get; set; }
-
-        /// <summary>
-        ///     The admin user's hostname.
-        /// </summary>
-        public static string AdminHost { get; set; }
+        public static Alaris.Framework.Config.Operator Operator { get; set; }
 
         /// <summary>
         ///     Sends system stats using the specified connection.
@@ -1587,7 +1576,7 @@ namespace Alaris.Framework
 
             connection.Sender.PublicMessage(chan,
                                             IrcConstants.Bold + "Bot version: " + IrcConstants.Normal +
-                                            Utility.BotVersion);
+                                            BotVersion);
             connection.Sender.PublicMessage(chan,
                                             IrcConstants.Bold + "Thread count: " + IrcConstants.Normal +
                                             Process.GetCurrentProcess().Threads.Count);
@@ -1621,7 +1610,7 @@ namespace Alaris.Framework
         public static void SendInfo(string chan)
         {
             var connection = AlarisBase.Instance.Connection;
-            connection.Sender.PublicMessage(chan, IrcConstants.Cyan + "Alaris " + Utility.BotVersion);
+            connection.Sender.PublicMessage(chan, IrcConstants.Cyan + "Alaris " + BotVersion);
             connection.Sender.PublicMessage(chan, IrcConstants.DarkGreen + "Developer: Twl");
         }
 
@@ -1637,12 +1626,13 @@ namespace Alaris.Framework
         public static bool IsAdmin(UserInfo user)
         {
             if (user == null) throw new ArgumentNullException("user");
-            return ((IsMainAdmin(user)) || AdminManager.IsAdmin(user) || user == CLI.ConsoleUser);
+            return ((IsMainAdmin(user)) || user == CLI.ConsoleUser);
         }
 
         private static bool IsMainAdmin(UserInfo user)
         {
-            return user.Hostname == AdminHost && user.Nick == AdminNick && user.User == AdminUser;
+            return user.Hostname.Equals(Operator.Host, StringComparison.InvariantCultureIgnoreCase) && user.Nick.Equals(Operator.Nick, StringComparison.InvariantCultureIgnoreCase) 
+                && user.User.Equals(Operator.User, StringComparison.InvariantCultureIgnoreCase);
         }
 
         /// <summary>

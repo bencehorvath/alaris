@@ -1,5 +1,6 @@
 ﻿using System;
 using Alaris.Framework;
+using Alaris.Framework.Config;
 using NLog;
 
 namespace Alaris
@@ -13,20 +14,11 @@ namespace Alaris
         [NonSerialized]
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
         
-
-        /// <summary>
-        ///   This is not an unused constructor. Called through singleton!
-        /// </summary>
-        public AlarisBot() : this("alaris.config.xml")
-        {
-        }
-
- 
         /// <summary>
         ///   Creates a new instance of Alaris bot.
         /// </summary>
-        public AlarisBot(string config)
-            : base(config)
+        public AlarisBot(AlarisConfig configuration)
+            : base(configuration)
         {
             this.SetAsInstance();
         }
@@ -52,7 +44,7 @@ namespace Alaris
         /// <summary>
         /// Sets up event handlers.
         /// </summary>
-        protected override void SetupHandlers()
+        private new void SetupHandlers()
         {
             base.SetupHandlers();
         }

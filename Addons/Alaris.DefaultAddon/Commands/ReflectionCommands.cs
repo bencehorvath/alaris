@@ -56,7 +56,7 @@ namespace Alaris.DefaultAddon.Commands
 
             Log.Debug("Searching for method in all available assemblies. (Parameter count is {0})", pars.Count);
 
-            var asms = AddonManager.Assemblies.ToList();
+            var asms = AlarisBase.Instance.AddonManager.Assemblies.ToList();
             asms.Add(AlarisBase.Instance.GetType().Assembly);
             asms.AddRange(from asm in AppDomain.CurrentDomain.GetAssemblies()
                               where asm.GetName().FullName.ToLower().Contains("alaris")

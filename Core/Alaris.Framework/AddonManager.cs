@@ -5,7 +5,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Alaris.Framework.Extensions;
-using Alaris.Irc;
 using NLog;
 
 
@@ -14,37 +13,29 @@ namespace Alaris.Framework
     /// <summary>
     /// Class used to manage (load, unload, reload) plugins dynamically.
     /// </summary>
-    public static class AddonManager
+    public class AddonManager
     {
-        /// <summary>
-        /// The IRC connection.
-        /// </summary>
-        public static Connection Connection { get; private set; }
         /// <summary>
         /// IRC channel list.
         /// </summary>
-        public static List<string> Channels { get; private set; }
+        public List<string> Channels { get; private set; }
 
-        private static readonly List<IAlarisAddon> Addons = new List<IAlarisAddon>();
+        private readonly List<IAlarisAddon> _addons = new List<IAlarisAddon>();
 
         /// <summary>
         /// List of found assemblies.
         /// </summary>
-        public static readonly List<Assembly> Assemblies = new List<Assembly>();
+        public readonly List<Assembly> Assemblies = new List<Assembly>();
 
-        private static readonly object LoadLock = new object();
+        private readonly object _loadLock = new object();
 
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Initializes the Plugin manager.
         /// </summary>
-        /// <param name="con">IRC connection</param>
-        /// <param name="channels">IRC channel list</param>
-        public static void Initialize(ref Connection con, List<string> channels) 
+        public static void Initialize() 
         {
-            Connection = con;
-            Channels = channels;
             SetupAppDomainDebugHandlers();
         }
 
@@ -52,14 +43,14 @@ namespace Alaris.Framework
         /// Loads plugins from the specified directory.
         /// </summary>
         /// <param name="directory">The directory to check in</param>
-        public static void LoadPluginsFromDirectory(DirectoryInfo directory) { LoadPluginsFromDirectory(directory.FullName);}
+        public void LoadPluginsFromDirectory(DirectoryInfo directory) { LoadPluginsFromDirectory(directory.FullName);}
 
 
         /// <summary>
         /// Loads plugins from the specified directory.
         /// </summary>
         /// <param name="directory">The directory to check in</param>
-        public static void LoadPluginsFromDirectory(string directory)
+        public void LoadPluginsFromDirectory(string directory)
         {
             Contract.Requires(!string.IsNullOrEmpty(directory));
 
@@ -74,22 +65,13 @@ namespace Alaris.Framework
                 if(asm == null || Assemblies.Contains(asm))
                     continue;
 
-                IAlarisAddon pl;
-
-                foreach (var type in asm.GetTypesWithInterface(typeof(IAlarisAddon)))
+                foreach (var pl in asm.GetTypesWithInterface(typeof(IAlarisAddon)).Select(type => (IAlarisAddon)Activator.CreateInstance(type)))
                 {
-                    pl = (IAlarisAddon)Activator.CreateInstance(type);
+                    pl.Setup(AlarisBase.Instance);
 
-                    if (pl == null)
-                        continue;
-
-                    var connection = Connection;
-
-                    pl.Setup(ref connection, Channels);
-
-                    lock (LoadLock)
+                    lock (_loadLock)
                     {
-                        Addons.Add(pl);
+                        _addons.Add(pl);
                         Assemblies.Add(asm);
                     }
 
@@ -101,16 +83,16 @@ namespace Alaris.Framework
         /// <summary>
         /// Unloads all addons.
         /// </summary>
-        public static void UnloadPlugins()
+        public void UnloadPlugins()
         {
-            lock (LoadLock)
+            lock (_loadLock)
             {
-                foreach(var addon in Addons)
+                foreach(var addon in _addons)
                 {
                     addon.Destroy();
                 }
 
-                Addons.Clear();
+                _addons.Clear();
 
                 Assemblies.Clear();  
             }

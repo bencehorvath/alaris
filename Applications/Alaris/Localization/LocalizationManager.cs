@@ -1,6 +1,4 @@
-﻿using Alaris.Framework.Database;
-using Alaris.Irc;
-using NLog;
+﻿using NLog;
 
 namespace Alaris.Localization
 {
@@ -24,19 +22,7 @@ namespace Alaris.Localization
             if (locale == "enUS")
                 return text;
 
-            text = text.ToLowerInvariant();
-
-            var row = DatabaseManager.QueryFirstRow(string.Format("SELECT text FROM localization WHERE LOWER(originalText) = '{0}' AND locale = '{1}'", text, locale));
-
-            if (row == null)
-            {
-                Log.Info("No translations found");
-                return text;
-            }
-
-            var localizedText = row["text"].ToString();
-
-            return localizedText;
+            return text;
         }
     }
 }

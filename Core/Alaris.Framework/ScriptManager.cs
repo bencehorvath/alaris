@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using Alaris.Irc;
 using Alaris.Irc.Delegates.Channel;
 using Alaris.Irc.Delegates.Disconnect;
 using Alaris.Irc.Delegates.Messages;
@@ -17,11 +15,10 @@ namespace Alaris.Framework
     [Serializable]
     public sealed class ScriptManager
     {
-        private readonly List<string> _channels = new List<string>();
         private readonly Guid _guid;
         private readonly string _scriptsPath;
         [NonSerialized]
-        private LuaEngine.LuaEngine _luaEngine;
+        private Lua.LuaEngine _luaEngine;
 
         [NonSerialized]
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
@@ -29,15 +26,7 @@ namespace Alaris.Framework
         /// <summary>
         /// Gets the Lua engine.
         /// </summary>
-        public LuaEngine.LuaEngine Lua { get { return _luaEngine; } }
-
-        /// <summary>
-        ///   The IRC connection instance.
-        /// </summary>
-        public Connection Connection
-        {
-            get { return _connection; }
-        }
+        public Lua.LuaEngine Lua { get { return _luaEngine; } }
 
         /// <summary>
         /// Gets or sets the directory where the scripts reside.
@@ -47,24 +36,12 @@ namespace Alaris.Framework
             get; set;
         }
 
-        private Connection _connection;
-
-
         /// <summary>
         ///   Creates a new instance of ScriptManager
         /// </summary>
-        /// <param name = "con">
-        ///   The IRC connection. See <see cref = "Alaris.Irc.Connection" />
-        /// </param>
-        /// ///
-        /// <param name = "chans">
-        ///   Channels the bot is on.
-        /// </param>
         /// <param name="scriptPath">Path to scripts.</param>
-        public ScriptManager(ref Connection con, List<string> chans, string scriptPath)
+        public ScriptManager(string scriptPath)
         {
-            _connection = con;
-            _channels = chans;
             _guid = Guid.NewGuid();
             _scriptsPath = scriptPath;
         }
@@ -86,7 +63,7 @@ namespace Alaris.Framework
         public void Run()
         {
             if(AlarisBase.Instance.LuaEnabled)
-                _luaEngine = new LuaEngine.LuaEngine(ref _connection, Path.Combine(_scriptsPath, "lua"));
+                _luaEngine = new Lua.LuaEngine(Path.Combine(_scriptsPath, "lua"));
             Log.Info("Lua support is disabled.");
         }
 
@@ -107,7 +84,7 @@ namespace Alaris.Framework
         /// </param>
         public void RegisterOnPublicHook(PublicMessageEventHandler handler)
         {
-            Connection.Listener.OnPublic += handler;
+            AlarisBase.Instance.Connection.Listener.OnPublic += handler;
         }
 
         /// <summary>
@@ -118,7 +95,7 @@ namespace Alaris.Framework
         /// </param>
         public void RegisterOnPartHook(PartEventHandler handler)
         {
-            Connection.Listener.OnPart += handler;
+            AlarisBase.Instance.Connection.Listener.OnPart += handler;
         }
 
         /// <summary>
@@ -129,7 +106,7 @@ namespace Alaris.Framework
         /// </param>
         public void RegisterOnQuitHook(QuitEventHandler handler)
         {
-            Connection.Listener.OnQuit += handler;
+            AlarisBase.Instance.Connection.Listener.OnQuit += handler;
         }
 
         /// <summary>
@@ -140,7 +117,7 @@ namespace Alaris.Framework
         /// </param>
         public void RegisterOnPrivateHook(PrivateMessageEventHandler handler)
         {
-            Connection.Listener.OnPrivate += handler;
+            AlarisBase.Instance.Connection.Listener.OnPrivate += handler;
         }
 
         /// <summary>
@@ -151,7 +128,7 @@ namespace Alaris.Framework
         /// </param>
         public void RegisterOnDisconnectedHook(DisconnectedEventHandler handler)
         {
-            Connection.Listener.OnDisconnected += handler;
+            AlarisBase.Instance.Connection.Listener.OnDisconnected += handler;
         }
 
         /// <summary>
@@ -162,7 +139,7 @@ namespace Alaris.Framework
         /// </param>
         public void RegisterOnRegisteredHook(RegisteredEventHandler handler)
         {
-            Connection.Listener.OnRegistered += handler;
+            AlarisBase.Instance.Connection.Listener.OnRegistered += handler;
         }
 
         /// <summary>
@@ -173,7 +150,7 @@ namespace Alaris.Framework
         /// </param>
         public void RegisterOnErrorHook(ErrorMessageEventHandler handler)
         {
-            Connection.Listener.OnError += handler;
+            AlarisBase.Instance.Connection.Listener.OnError += handler;
         }
 
     }

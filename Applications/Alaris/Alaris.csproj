@@ -149,9 +149,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="ScriptManager.cs" />
     <Compile Include="PublicMessageHandler.cs" />
-    <Compile Include="Xml\AlarisConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Alaris.Framework\Alaris.Framework.csproj">
@@ -159,12 +157,8 @@
       <Name>Alaris.Framework</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\Alaris.Irc\Alaris.Irc.csproj">
-      <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
+      <Project>{efcdd130-c3fa-4560-a936-69f683ae071f}</Project>
       <Name>Alaris.Irc</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Components\Alaris.LuaEngine\Alaris.LuaEngine.csproj">
-      <Project>{D6E5F82D-5385-45AD-A0D1-1091EC6A5393}</Project>
-      <Name>Alaris.LuaEngine</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -174,7 +168,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="app.config" />
-    <None Include="bin\Debug\alaris.conf" />
     <None Include="Doxyfile" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

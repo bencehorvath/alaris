@@ -1,23 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Alaris xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns="http://github.com/Twl/alaris">
   <Config>
-    <Irc>
-      <Server>irc.rizon.net</Server>
-      <Nickname>Alaris</Nickname>
-      <NickServ>
-        <Enabled>false</Enabled>
-        <Password>nothing</Password>
-      </NickServ>
-      <Channels>#skullbot,#hun_bot</Channels>
-      <!-- Main admin. Optional ones can be added on-the-fly. -->
-      <Admin>
-        <Nick>Twl</Nick>
-        <User>Twl</User>
-        <Host>evil.from.behind</Host>
-      </Admin>
-    </Irc>
+    <Servers>
+      <Server id="0">
+        <Address>irc.rizon.net</Address>
+        <Port>6667</Port>
+        <Nickname>Alaris</Nickname>
+        <NickServ>
+          <Enabled>false</Enabled>
+          <Password>nothing</Password>
+        </NickServ>
+        <Channels>#twl</Channels>
+        <!-- Main admin. Optional ones can be added on-the-fly. -->
+        <BotOperator>
+          <Nick>Twl</Nick>
+          <User>Twl</User>
+          <Host>the.one.who.knocks</Host>
+        </BotOperator>
+      </Server>
+    </Servers>
     <!-- Change only if you know what you're doing. -->
     <Database>Alaris</Database>
     <Scripts>
@@ -30,7 +34,7 @@
       <Directory>Addons</Directory>
     </Addons>
     <Localization>
-      <Locale>huHU</Locale>
+      <Locale>enUS</Locale>
     </Localization>
     <Remote>
       <Port>5565</Port>

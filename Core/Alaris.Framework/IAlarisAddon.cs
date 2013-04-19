@@ -11,9 +11,7 @@ namespace Alaris.Framework
         /// <summary>
         /// Creates the addon.
         /// </summary>
-        /// <param name="conn">IRC connection.</param>
-        /// <param name="channels">Channel list.</param>
-        void Setup(ref Connection conn, List<string> channels);
+        void Setup(AlarisBase alaris);
         /// <summary>
         /// Destroys the addon, releasing all resources.
         /// </summary>

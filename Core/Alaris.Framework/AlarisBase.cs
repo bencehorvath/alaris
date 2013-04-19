@@ -27,13 +27,14 @@ namespace Alaris.Framework
         private readonly bool _isInstantiated;
 
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
+
         private readonly Connection _connection;
-        private readonly ScriptManager _manager;
-        private string _nick;
-        private string _server;
+        private readonly ScriptManager _scriptManager;
         private bool _confdone;
-        private bool _nickserv;
-        private string _nspw = "";
+        private readonly Server _server;
+        private readonly byte _serverId;
+
+
         private readonly List<string> _channels = new List<string>();
         private readonly CrashHandler _sCrashHandler;
 
@@ -43,6 +44,11 @@ namespace Alaris.Framework
         protected readonly Guid Guid = Guid.NewGuid();
 
         private string _scriptsDir;
+
+        /// <summary>
+        /// List of server the bot connects to.
+        /// </summary>
+        public Server Server { get { return _server; } } 
 
         /// <summary>
         /// Whether the bot instance is using parallelization (mainly on startup).
@@ -96,7 +102,7 @@ namespace Alaris.Framework
         /// </summary>
         public ScriptManager ScriptManager
         {
-            get { return _manager; }
+            get { return _scriptManager; }
         }
 
         /// <summary>
@@ -108,6 +114,16 @@ namespace Alaris.Framework
         /// Directory where the Addons are located
         /// </summary>
         public string AddonDirectory { get; private set; }
+
+        /// <summary>
+        /// The addon manager utility for this bot instance.
+        /// </summary>
+        public AddonManager AddonManager { get; private set; }
+
+        /// <summary>
+        /// The command manager utility for this bot instance.
+        /// </summary>
+        public CommandManager CommandManager { get; private set; }
 
         /// <summary>
         /// Gets whether the CLI is enabled or not.
@@ -125,7 +141,7 @@ namespace Alaris.Framework
         /// <summary>
         /// The configuration class.
         /// </summary>
-        public AlarisConfig Config { get; private set; }
+        public Alaris.Framework.Config.Config Config { get; private set; }
 
         /// <summary>
         /// Gets the IRC connection.
@@ -139,21 +155,16 @@ namespace Alaris.Framework
         /// Gets the instance.
         /// </summary>
         /// <value>The instance.</value>
-        public static AlarisBase Instance
-        {
-            get
-            {
-                return InstanceHolder<AlarisBase>.Instance;
-            }
-        }
+        public static AlarisBase Instance { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AlarisBase"/> class.
         /// </summary>
-        /// <param name="configFile">The config file.</param>
+        /// <param name="configuration">The configuration object.</param>
+        /// <param name="serverId"></param>
         /// <param name="parallelized">if set to <c>true</c> [parallelized].</param>
         /// <param name="additionalCommandAssemblies">The additional command assemblies.</param>
-        protected AlarisBase(string configFile = "alaris.config.xml", bool parallelized = true, params Assembly[] additionalCommandAssemblies)
+        protected AlarisBase(AlarisConfig configuration, byte serverId = 0, bool parallelized = true, params Assembly[] additionalCommandAssemblies)
         {
             if (_isInstantiated)
                 return;
@@ -161,9 +172,15 @@ namespace Alaris.Framework
             _isInstantiated = true;
 
             IsParallelized = parallelized;
-            ConfigFile = configFile;
+            Config = configuration.Config;
+            _server = Config.Servers[serverId];
+            _serverId = serverId;
+            ProcessConfiguration();
+            Instance = this;
 
             Log.Info("Initializing");
+
+
 
             var sw = new Stopwatch();
             sw.Start();
@@ -171,102 +188,55 @@ namespace Alaris.Framework
             _sCrashHandler = new CrashHandler();
             InstanceHolder<CrashHandler>.Set(_sCrashHandler);
 
-            CrashHandler.HandleReadConfig(ReadConfig);
-            var cargs = new ConnectionArgs(_nick, _server);
+            
+            //var cargs = new ConnectionArgs(_nick, _server);
 
-  
+            Log.Info("Starting Identd");
+            Identd.Start(_server.Nickname);
 
-            if(IsParallelized)
+            var connectionArgs = new ConnectionArgs(_server.Nickname, _server.Address);
+
+            _connection = new Connection(connectionArgs, true, false)
             {
-                Log.Info("Running huge amount of parallel tasks");
-
-                var tasks = new List<Task>();
-
-                try
-                {
-                    
-                    tasks.Add(Task.Factory.StartNew(() =>
-                                                        {
-                                                            Log.Info("Starting Identd service");
-                                                            Identd.Start(_nick);
-                                                        }));
+                TextEncoding = Encoding.GetEncoding("Latin1")
+            };
 
 
-                    _connection = new Connection(cargs, true, false)
-                    {
-                        TextEncoding = Encoding.GetEncoding("Latin1")
-                    };
+            _connection.CtcpResponder = new CtcpResponder(_connection)
+            {
+                VersionResponse =
+                    "Alaris " + Utility.BotVersion,
+                SourceResponse = "https://www.github.com/twl/alaris",
+                UserInfoResponse =
+                    "Alaris multi-functional bot."
+            };
 
+            Log.Info("Text encoding is {0}", _connection.TextEncoding.WebName);
+            Log.Info("CTCP is enabled");
 
-                    var responder = new CtcpResponder(_connection)
-                    {
-                        VersionResponse =
-                            "Alaris " + Utility.BotVersion,
-                        SourceResponse = "http://www.wowemuf.org",
-                        UserInfoResponse =
-                            "Alaris multi-functional bot."
-                    };
+            _scriptManager = new ScriptManager(_scriptsDir);
+            _scriptManager.Run();
 
-                    Log.Info("Text encoding is {0}", _connection.TextEncoding.WebName);
-
-                    _connection.CtcpResponder = responder;
-
-                    if (!this.SetAsInstance())
-                        throw new Exception();
-
-                    Log.Info("CTCP is enabled");
-
-                    _manager = new ScriptManager(ref _connection, _channels, _scriptsDir); // Lua support is not really feature-complete, highly WIP
-
-                    tasks.Add(Task.Factory.StartNew(() => _manager.Run()));
-                   
-                }
-                catch (Exception x)
-                {
-                    Log.Fatal("An exception has been thrown during one of the parallel executions ({0})", x);
-                }
-
-                //dtask = Task.Factory.StartNew(() => DatabaseManager.Initialize(DBName));
-
-                if (AddonsEnabled)
-                {
-                    Log.Info(
-                        "Initializing Addon manager");
-                    AddonManager.Initialize(
-                        ref _connection,
-                        Channels);
-
-                    AddonManager.
-                        LoadPluginsFromDirectory
-                        (AddonDirectory);
-                }
-
-                tasks.Add(Task.Factory.StartNew(() =>
-                                                    {
-                                                        Log.Info("Setting up commands");
-
-                                                        CommandManager.CommandPrefix = "@";
-                                                        CommandManager.CreateMappings();
-                                                    }));
-
-                SetupHandlers();
-                Connect();
-
-                tasks.Add(Task.Factory.StartNew(ServiceManager.StartServices));
-
-                sw.Stop();
-                Log.Info("Startup took {0}ms", sw.ElapsedMilliseconds);
-
-                Log.Info("Waiting for pending tasks to finish");
-
-               tasks.WaitTasks();
+            if (AddonsEnabled)
+            {
+                Log.Info("Initializing AddonManager");
+                AddonManager = new AddonManager();
+                AddonManager.Initialize();
+                AddonManager.LoadPluginsFromDirectory(AddonDirectory);
             }
+            
+            Log.Info("Setting up commands");
+            CommandManager = new CommandManager {CommandPrefix = "@"};
+            CommandManager.CreateMappings();
+
+            SetupHandlers();
+            Connect();
         }
 
         /// <summary>
         /// Connect to the IRC server.
         /// </summary>
-        public void Connect()
+        private void Connect()
         {
             if (!_confdone)
                 throw new Exception("The config file has not been read before connecting.");
@@ -298,7 +268,7 @@ namespace Alaris.Framework
                 Log.Info("Stopped Identd daemon");
             }
 
-            //_manager.Lua.Free();
+            //_scriptManager.Lua.Free();
 
             try { _connection.Disconnect(reason); }
             catch (InvalidOperationException)
@@ -322,11 +292,11 @@ namespace Alaris.Framework
         /// <summary>
         /// Sets up event handlers.
         /// </summary>
-        protected virtual void SetupHandlers()
+        protected void SetupHandlers()
         {
             Log.Info("Registering event handlers");
-            _manager.RegisterOnRegisteredHook(OnRegistered);
-            _manager.RegisterOnPublicHook(OnPublicMessage);
+            _scriptManager.RegisterOnRegisteredHook(OnRegistered);
+            _scriptManager.RegisterOnPublicHook(OnPublicMessage);
             _connection.CtcpListener.OnCtcpRequest += OnCtcpRequest;
         }
 
@@ -408,63 +378,39 @@ namespace Alaris.Framework
         /// <summary>
         /// Reads and parses the configuration file
         /// </summary>
-        protected virtual void ReadConfig()
+        private void ProcessConfiguration()
         {
-            if (!File.Exists("./" + ConfigFile))
-                throw new FileNotFoundException(
-                    "The config file specified could not be found. It is essential to have a configuration file in the directory of the bot. " +
-                    ConfigFile + " could not be found.");
 
-            Log.Info("Reading configuration file");
+            Log.Info("Processing configuration");
 
-            using (var reader = new StreamReader(ConfigFile))
-            {
-                var serializer = new XmlSerializer(typeof(AlarisConfig));
-                Config = (AlarisConfig)serializer.Deserialize(reader);
-            }
 
-            _server = Config.Config.Irc.Server;
-            _nick = Config.Config.Irc.Nickname;
+            _channels.GetChannelsFrom(Config.Servers[_serverId].Channels.Split(','));
 
-            _nickserv = Config.Config.Irc.NickServ.Enabled;
+            Utility.Operator = Config.Servers[_serverId].BotOperator;
 
-            if (_nickserv)
-                _nspw = Config.Config.Irc.NickServ.Password;
+            _scriptsDir = Config.Scripts.Directory;
 
-            var chans = Config.Config.Irc.Channels;
-            var clist = chans.Split(',');
+            LuaEnabled = Config.Scripts.Lua;
 
-            _channels.GetChannelsFrom(clist);
+            DBName = Config.Database;
 
-            Utility.AdminNick = Config.Config.Irc.Admin.Nick;
-            Utility.AdminUser = Config.Config.Irc.Admin.User;
-            Utility.AdminHost = Config.Config.Irc.Admin.Host;
-
-            _scriptsDir = Config.Config.Scripts.Directory;
-
-            LuaEnabled = Config.Config.Scripts.Lua;
-
-            DBName = Config.Config.Database;
-
-            AddonsEnabled = Config.Config.Addons.Enabled;
+            AddonsEnabled = Config.Addons.Enabled;
 
             if (AddonsEnabled)
-                AddonDirectory = Config.Config.Addons.Directory;
+                AddonDirectory = Config.Addons.Directory;
 
-            Locale = Config.Config.Localization.Locale;
+            Locale = Config.Localization.Locale;
             Log.Debug("Current locale is {0}", Locale);
 
-            RemotePort = Config.Config.Remote.Port;
-            RemoteName = Config.Config.Remote.Name;
-            RemotePassword = Config.Config.Remote.Password;
+            RemotePort = Config.Remote.Port;
+            RemoteName = Config.Remote.Name;
+            RemotePassword = Config.Remote.Password;
 
-            CLIEnabled = Config.Config.CLI.Enabled;
+            CLIEnabled = Config.CLI.Enabled;
 
-            Log.Info("Config file successfully loaded and validated");
+            Log.Info("Config info successfully loaded and validated");
             _confdone = true;
 
-
-            Log.Info("Connecting to {0} with nick {1}", _server, _nick);
         }
 
         /// <summary>

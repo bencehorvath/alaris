@@ -77,7 +77,7 @@ namespace Alaris.Framework.CommandLine
                 if (!_cmd.StartsWith("@"))
                     _cmd = string.Format("@{0}", _cmd);
 
-                CommandManager.HandleCommand(ConsoleUser, _currentChannel, _cmd);
+                AlarisBase.Instance.CommandManager.HandleCommand(ConsoleUser, _currentChannel, _cmd);
 
                 Thread.Sleep(150);
             }

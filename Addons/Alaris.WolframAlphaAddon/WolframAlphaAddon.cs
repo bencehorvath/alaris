@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using Alaris.Framework;
-using Alaris.Irc;
 
 
 // appid: 557QYQ-UUUWTKX95V
@@ -11,6 +9,8 @@ namespace Alaris.WolframAlphaAddon
     public class WolframAlphaAddon : IAlarisAddon
     {
         private readonly Guid _guid;
+        private AlarisBase _alaris;
+
         public WolframAlphaAddon()
         {
             _guid = new Guid("{6EFBC75A-BD57-43C2-B84A-AD58376FB5C6}");
@@ -23,8 +23,9 @@ namespace Alaris.WolframAlphaAddon
         /// </summary>
         /// <param name="conn">IRC connection.</param>
         /// <param name="channels">Channel list.</param>
-        public void Setup(ref Connection conn, List<string> channels)
+        public void Setup(AlarisBase alaris)
         {
+            _alaris = alaris;
             // nothing
         }
 

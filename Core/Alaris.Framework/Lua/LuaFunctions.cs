@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using Alaris.Irc;
 using Alaris.Irc.Delegates.Messages;
-using LuaInterface;
 
-namespace Alaris.LuaEngine
+namespace Alaris.Framework.Lua
 {
     /// <summary>
     /// Class containing most of the exported Lua functions.
@@ -11,8 +9,7 @@ namespace Alaris.LuaEngine
     /// </summary>
     public sealed class LuaFunctions
     {
-        private readonly Connection _connection;
-        private readonly Lua _lua;
+        private readonly LuaInterface.Lua _lua;
         private readonly List<PublicMessageEventHandler> _registeredOnPM = new List<PublicMessageEventHandler>();
 
         #region Properites
@@ -34,10 +31,8 @@ namespace Alaris.LuaEngine
         /// Creates a new instance of <c>LuaFunctions</c>
         /// </summary>
         /// <param name="vm">Lua VM</param>
-        /// <param name="conn">IRC connection</param>
-        public LuaFunctions(ref Lua vm, ref Connection conn)
+        public LuaFunctions(ref LuaInterface.Lua vm)
         {
-            _connection = conn;
             _lua = vm;
         }
 
@@ -58,7 +53,9 @@ namespace Alaris.LuaEngine
 
                 var handler = func as PublicMessageEventHandler;
 
-                _connection.Listener.OnPublic += handler;
+                //_connection.Listener.OnPublic += handler;
+                //foreach(var server in AlarisBase.Instance.Servers)
+
                 _registeredOnPM.Add(handler);
             }
             
@@ -72,7 +69,7 @@ namespace Alaris.LuaEngine
         [LuaFunction("SendMsg", "Sends a message to the IRC server.")]
         public void SendMessage(string chan, string message)
         {
-            _connection.Sender.PublicMessage(chan, message);
+            AlarisBase.Instance.Connection.Sender.PublicMessage(chan, message);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Alaris.LuaEngine
+namespace Alaris.Framework.Lua
 {
     /// <summary>
     /// Attribute used to mark functions which are exposed to the Lua VM.

@@ -22,8 +22,8 @@ namespace Alaris.Framework.Services
             // start remote
             Log.Info("Starting remoting service...");
             var uri =
-                new Uri(string.Format("http://127.0.0.1:{0}/{1}/Service", AlarisBase.Instance.Config.Config.Remote.Port,
-                                      AlarisBase.Instance.Config.Config.Remote.Name));
+                new Uri(string.Format("http://127.0.0.1:{0}/{1}/Service", AlarisBase.Instance.Config.Remote.Port,
+                                      AlarisBase.Instance.Config.Remote.Name));
 
             _remoteHost = new ServiceHost(typeof(Remoter), uri);
 
@@ -51,7 +51,13 @@ namespace Alaris.Framework.Services
         /// </summary>
         public static void StopServices()
         {
-            _remoteHost.Close();
+            try
+            {
+                _remoteHost.Close();
+            }
+            catch
+            {
+            }
             Log.Info("Remote service stopped.");
         }
     }

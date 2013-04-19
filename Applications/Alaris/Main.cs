@@ -1,9 +1,11 @@
 using System;
 using System.IO;
 using System.Threading;
+using System.Xml.Serialization;
 using Alaris.Framework;
-using Alaris.Framework.CommandLine;
+using Alaris.Framework.Config;
 using NLog;
+using CLI = Alaris.Framework.CommandLine.CLI;
 
 
 namespace Alaris
@@ -19,7 +21,7 @@ namespace Alaris
             Console.WriteLine("Version: {0}", Utility.BotVersion);
             Console.WriteLine("You can safely use <Ctrl+C> to terminate the process.\n");
             Thread.Sleep(2000);
-
+            
             var conf = "alaris.config.xml";
 
             if (args.Length > 0)
@@ -33,7 +35,16 @@ namespace Alaris
                 return;
             }
 
-            var bot = new AlarisBot("alaris.config.xml");
+            // parse config
+            AlarisConfig config;
+            var serializer = new XmlSerializer(typeof (AlarisConfig));
+            using (var sr = new StreamReader(conf))
+            {
+                config = (AlarisConfig) serializer.Deserialize(sr);
+            }
+            
+
+            var bot = new AlarisBot(config);
 
             Console.CancelKeyPress += (sender, e) => bot.Disconnect("Daemon killed.");
 

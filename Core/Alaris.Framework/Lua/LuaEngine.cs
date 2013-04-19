@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Alaris.Irc;
-using LuaInterface;
 using NLog;
 
-
-namespace Alaris.LuaEngine
+namespace Alaris.Framework.Lua
 {
     /// <summary>
     /// Class used to load Lua script files.
@@ -15,11 +12,10 @@ namespace Alaris.LuaEngine
     /// </summary>
     public sealed class LuaEngine
     {
-        private readonly Lua _lua;
+        private readonly LuaInterface.Lua _lua;
         private readonly Dictionary<string, LuaFunctionDescriptor> _luaFunctions;
         private readonly string _scriptPath;
         private readonly LuaFunctions _functions;
-        private readonly Connection _connection;
         private readonly FileSystemWatcher _watcher;
 
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
@@ -29,7 +25,7 @@ namespace Alaris.LuaEngine
         /// <summary>
         /// Gets the Lua virtual machine.
         /// </summary>
-        public Lua LuaVM
+        public LuaInterface.Lua LuaVM
         {
             get
             {
@@ -42,16 +38,14 @@ namespace Alaris.LuaEngine
         /// <summary>
         /// Creates a new instance of <c>LuaEngine</c>
         /// </summary>
-        /// <param name="conn">IRC Connection</param>
         /// <param name="scriptsPath">The directory where the Lua scripts are located.</param>
-        public LuaEngine(ref Connection conn, string scriptsPath)
+        public LuaEngine(string scriptsPath)
         {
             Log.Info("Initializing Lua engine");
-            _lua = new Lua();
+            _lua = new LuaInterface.Lua();
             _luaFunctions = new Dictionary<string, LuaFunctionDescriptor>();
             _scriptPath = scriptsPath;
-            _connection = conn;
-            _functions = new LuaFunctions(ref _lua, ref _connection);
+            _functions = new LuaFunctions(ref _lua);
 
             LuaHelper.RegisterLuaFunctions(_lua, ref _luaFunctions, _functions);
 
@@ -82,7 +76,7 @@ namespace Alaris.LuaEngine
             {
                 foreach(var handler in _functions.RegisteredOnPM.AsParallel())
                 {
-                    _connection.Listener.OnPublic -= handler;
+                    AlarisBase.Instance.Connection.Listener.OnPublic -= handler;
                 }
             }
 

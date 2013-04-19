@@ -1,5 +1,6 @@
 ﻿using System;
 using System.CodeDom.Compiler;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Xml.Serialization;
@@ -25,7 +26,7 @@ namespace Alaris.Framework.Config
     public class Config
     {
         /// <remarks />
-        public Irc Irc { get; set; }
+        public List<Server> Servers { get; set; }
 
         /// <remarks />
         public string Database { get; set; }
@@ -46,14 +47,26 @@ namespace Alaris.Framework.Config
         public CLI CLI { get; set; }
     }
 
+
+
     /// <remarks />
     [Serializable]
     [DebuggerStepThrough]
     [XmlType(Namespace = "http://github.com/Twl/alaris")]
-    public class Irc
+    public class Server
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        [XmlAttribute("id")]
+        public int Id { get; set; }
         /// <remarks />
-        public string Server { get; set; }
+        public string Address { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public int Port { get; set; }
 
         /// <remarks />
         public string Nickname { get; set; }
@@ -65,7 +78,7 @@ namespace Alaris.Framework.Config
         public string Channels { get; set; }
 
         /// <remarks />
-        public Admin Admin { get; set; }
+        public Operator BotOperator { get; set; }
     }
 
     /// <remarks />
@@ -150,7 +163,7 @@ namespace Alaris.Framework.Config
     [Serializable]
     [DebuggerStepThrough]
     [XmlType(Namespace = "http://github.com/Twl/alaris")]
-    public class Admin
+    public class Operator
     {
         /// <remarks />
         public string Nick { get; set; }

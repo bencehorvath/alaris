@@ -7,7 +7,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
 
-  <xs:complexType name="Admin">
+  <xs:complexType name="Operator">
     <xs:sequence>
       <xs:element name="Nick" type="xs:string" />
       <xs:element name="User" type="xs:string" />
@@ -22,13 +22,21 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="Irc">
+  <xs:complexType name="Server">
     <xs:sequence>
-      <xs:element name="Server" type="xs:string" />
+      <xs:element name="Address" type="xs:string" />
+      <xs:element name="Port" type="xs:int"/>
       <xs:element name="Nickname" type="xs:string" />
       <xs:element name="NickServ" type="NickServ" />
       <xs:element name="Channels"  />
-      <xs:element name="Admin" type="Admin" />
+      <xs:element name="BotOperator" type="Operator" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:int" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="Servers">
+    <xs:sequence>
+      <xs:element name="Server" minOccurs="1" maxOccurs="unbounded" type="Server" />
     </xs:sequence>
   </xs:complexType>
   
@@ -68,9 +76,10 @@
     </xs:sequence>
   </xs:complexType>
 
+
   <xs:complexType name="Config">
     <xs:sequence>
-      <xs:element name="Irc" type="Irc" />
+      <xs:element name="Servers" type="Servers" />
       <xs:element name="Database" type="xs:string" />
       <xs:element name="Scripts" type="Scripts" />
       <xs:element name="Addons" type="Addons" />

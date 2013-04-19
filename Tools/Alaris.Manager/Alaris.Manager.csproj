@@ -182,9 +182,8 @@
       <Name>Alaris.Framework</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\Alaris.Irc\Alaris.Irc.csproj">
-      <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
+      <Project>{efcdd130-c3fa-4560-a936-69f683ae071f}</Project>
       <Name>Alaris.Irc</Name>
-      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -14,13 +14,13 @@ namespace Alaris.Framework.Commands
     /// <summary>
     /// Class used to manage and load Alaris commands.
     /// </summary>
-    public static class CommandManager
+    public sealed class CommandManager
     {
         #region Properties
         /// <summary>
         /// Prefix of IRC commands.
         /// </summary>
-        public static string CommandPrefix { get; set; }
+        public string CommandPrefix { get; set; }
 
         private static readonly object MapLock = new object();
 
@@ -28,8 +28,8 @@ namespace Alaris.Framework.Commands
 
         #region Private Members
 
-        private readonly static Dictionary<AlarisCommandWrapper, AlarisMethod> CommandMethodMap = new Dictionary<AlarisCommandWrapper, AlarisMethod>();
-        private readonly static Dictionary<AlarisCommandWrapper, AlarisMethod> SubCommandMethodMap = new Dictionary<AlarisCommandWrapper, AlarisMethod>();
+        private readonly Dictionary<AlarisCommandWrapper, AlarisMethod> _commandMethodMap = new Dictionary<AlarisCommandWrapper, AlarisMethod>();
+        private readonly Dictionary<AlarisCommandWrapper, AlarisMethod> _subCommandMethodMap = new Dictionary<AlarisCommandWrapper, AlarisMethod>();
 
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
@@ -40,13 +40,13 @@ namespace Alaris.Framework.Commands
         /// <summary>
         /// This methods loads every method marked as a command and maps it to the specified command.
         /// </summary>
-        public static void CreateMappings()
+        public void CreateMappings()
         {
-            CommandMethodMap.Clear();
+            _commandMethodMap.Clear();
 
             var tasm = Assembly.GetExecutingAssembly();
 
-            var asms = AddonManager.Assemblies.ToList();
+            var asms = AlarisBase.Instance.AddonManager.Assemblies.ToList();
             asms.Add(tasm);
             asms.AddRange(from asm in AppDomain.CurrentDomain.GetAssemblies()
                               where asm.GetName().FullName.ToLower(CultureInfo.InvariantCulture).Contains("alaris")
@@ -68,23 +68,23 @@ namespace Alaris.Framework.Commands
                                        });
 
 
-            Log.Info("Created {0} command mapping(s) and {1} sub-command mapping(s)", CommandMethodMap.Count, SubCommandMethodMap.Count);
+            Log.Info("Created {0} command mapping(s) and {1} sub-command mapping(s)", _commandMethodMap.Count, _subCommandMethodMap.Count);
         }
 
         /// <summary>
         /// Deletes every loaded mapping.
         /// <para>Used for unloading stuff.</para>
         /// </summary>
-        public static void DeleteMappings()
+        public void DeleteMappings()
         {
             lock(MapLock)
             {
-                CommandMethodMap.Clear();
-                SubCommandMethodMap.Clear();
+                _commandMethodMap.Clear();
+                _subCommandMethodMap.Clear();
             }
         }
 
-        private static void ProcessMethods(IEnumerable<MethodInfo> methods)
+        private void ProcessMethods(IEnumerable<MethodInfo> methods)
         {
             Parallel.ForEach(methods, method =>
                                           {
@@ -111,7 +111,7 @@ namespace Alaris.Framework.Commands
                                                       lock (MapLock)
                                                       {
 
-                                                          CommandMethodMap.Add(new AlarisCommandWrapper
+                                                          _commandMethodMap.Add(new AlarisCommandWrapper
                                                                                    {
                                                                                        Command = attr.Command,
                                                                                        Permission = attr.Permission,
@@ -144,7 +144,7 @@ namespace Alaris.Framework.Commands
                                                       lock (MapLock)
                                                       {
 
-                                                          CommandMethodMap.Add(new AlarisCommandWrapper
+                                                          _commandMethodMap.Add(new AlarisCommandWrapper
                                                                                    {
                                                                                        Command = attr.Command,
                                                                                        Permission = attr.Permission,
@@ -172,7 +172,7 @@ namespace Alaris.Framework.Commands
         /// <param name="user">The irc user</param>
         /// <param name="channel">IRC channel</param>
         /// <param name="message">IRC msg.</param>
-        public static void HandleCommand(UserInfo user, string channel, string message)
+        public void HandleCommand(UserInfo user, string channel, string message)
         {
             try
             {
@@ -182,8 +182,8 @@ namespace Alaris.Framework.Commands
                 var commandText = message.Remove(0, 1); // remove prefix
                 Log.Info("Checking for command: {0}", commandText);
 
-                if(CommandMethodMap.Count <= 5)
-                    foreach (var entry in CommandMethodMap)
+                if(_commandMethodMap.Count <= 5)
+                    foreach (var entry in _commandMethodMap)
                         Log.Info("Mapping contains command: {0}", entry.Key.Command);
 
 
@@ -201,7 +201,7 @@ namespace Alaris.Framework.Commands
                 AlarisMethod handler = null;
                 AlarisCommandWrapper cmd = null;
 
-                foreach (var entry in CommandMethodMap.AsParallel().Where(entry => entry.Key.Command.Equals(command, StringComparison.InvariantCultureIgnoreCase)))
+                foreach (var entry in _commandMethodMap.AsParallel().Where(entry => entry.Key.Command.Equals(command, StringComparison.InvariantCultureIgnoreCase)))
                 {
                     perm = entry.Key.Permission;
                     handler = entry.Value;

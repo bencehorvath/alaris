@@ -2,7 +2,6 @@
 using System.Text;
 using Alaris.Framework.Commands;
 using Alaris.Framework.Crypt;
-using Alaris.Framework.Database;
 using Alaris.Framework.Extensions;
 
 namespace Alaris.Commands
@@ -12,48 +11,6 @@ namespace Alaris.Commands
     /// </summary>
     public static class AdvancedCommands
     {
-        /// <summary>
-        /// Handles admin commands.
-        /// </summary>
-        /// <param name="mp"></param>
-        /// <param name="action"></param>
-        /// <param name="user"></param>
-        /// <param name="nick"></param>
-        /// <param name="host"></param>
-        [ParameterizedAlarisCommand("admin", CommandPermission.Admin, 4)]
-        public static void HandleAdminCommands(AlarisMainParameter mp, string action, string user, string nick, string host)
-        {
-            if (action.IsNull())
-            {
-                mp.Bot.SendMsg(mp.Channel, "Sub-commands: list | delete | add");
-                return;
-            }
-
-
-            if(action.Equals("add", StringComparison.InvariantCultureIgnoreCase) && !user.IsNull()
-                                                                                 && !nick.IsNull()
-                                                                                 && !host.IsNull())
-            {
-                DatabaseManager.Query(string.Format("INSERT INTO admins(user,nick,hostname) VALUES('{0}', '{1}', '{2}')", user, nick, host));
-
-                mp.Bot.SendMsg(mp.Channel, "Admin {0} has been added.", nick);
-            }
-            else if(action.Equals("list", StringComparison.InvariantCultureIgnoreCase))
-            {
-                if (AdminManager.GetAdmins() == null)
-                    mp.Bot.SendMsg(mp.Channel, "No admins."); // shouldn't happen.
-                else
-                {
-                    AdminManager.GetAdmins().SendToChannel(mp.Channel);
-                }
-            }
-            else if(action.Equals("delete", StringComparison.InvariantCultureIgnoreCase) && !user.IsNull())
-            {
-                AdminManager.DeleteAdmin(user);
-                mp.Bot.SendMsg(mp.Channel, "Admin {0} deleted.", user);      
-            }
-        }
-
         /// <summary>
         /// Handles AES commands.
         /// </summary>

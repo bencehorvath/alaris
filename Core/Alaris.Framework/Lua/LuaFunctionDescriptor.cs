@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 
-
-namespace Alaris.LuaEngine
+namespace Alaris.Framework.Lua
 {
     /// <summary>
     /// Class used to describe and register Lua functions. Mainly related to attribute-based registering.
