@@ -32,7 +32,7 @@ namespace Alaris.Framework
                 request.Timeout = 3500;
                 request.AllowAutoRedirect = true;
                 
-                request.UserAgent = "Alaris Bot " + Utilities.BotVersion + " / .NET " + Environment.Version;
+                request.UserAgent = "Alaris Bot " + Utility.BotVersion + " / .NET " + Environment.Version;
                 request.Referer = "http://www.wowemuf.org";
 
                 var response = request.GetResponse();

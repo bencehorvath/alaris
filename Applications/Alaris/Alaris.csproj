@@ -113,7 +113,6 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Reference Include="ICSharpCode.SharpZipLib" />
     <Reference Include="LuaInterface, Version=2.0.0.42883, Culture=neutral, PublicKeyToken=1e1fb15b02227b8a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.JScript" />
@@ -155,10 +154,6 @@
     <Compile Include="Xml\AlarisConfig.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Alaris.API\Alaris.API.csproj">
-      <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
-      <Name>Alaris.API</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Core\Alaris.Framework\Alaris.Framework.csproj">
       <Project>{9C146FF3-1908-431F-AB7C-25AD9D0AA0B4}</Project>
       <Name>Alaris.Framework</Name>

@@ -51,7 +51,7 @@ namespace Alaris.Manager
 
                 _rmc.Open();
 
-                if(!_rmc.Authorize(Utilities.MD5String(_password)))
+                if(!_rmc.Authorize(Utility.MD5String(_password)))
                 {
                     System.Windows.MessageBox.Show("Invalid password entered!", "Error!", MessageBoxButton.OK,
                                     MessageBoxImage.Error);

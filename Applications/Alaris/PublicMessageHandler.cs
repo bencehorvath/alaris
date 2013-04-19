@@ -4,8 +4,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.IO;
 using Alaris.Framework;
+using Alaris.Framework.Maths.Types;
 using Alaris.Irc;
-using Alaris.Mathematics.Types;
 
 namespace Alaris
 {
@@ -29,13 +29,13 @@ namespace Alaris
 
             Task.Factory.StartNew(() =>
                                       {
-                                          var urlsin = Utilities.GetUrls(smsg);
+                                          var urlsin = Utility.GetUrls(smsg);
 
                                           if (urlsin.Count <= 0) return;
 
                                           try
                                           {
-                                              Parallel.ForEach(urlsin, url => Utilities.HandleWebTitle(chan, url));
+                                              Parallel.ForEach(urlsin, url => Utility.HandleWebTitle(chan, url));
                                               return;
                                           }
                                           catch (Exception ex)

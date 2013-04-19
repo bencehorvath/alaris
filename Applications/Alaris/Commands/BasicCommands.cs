@@ -1,8 +1,6 @@
-﻿using Alaris.API;
-using Alaris.Framework;
+﻿using Alaris.Framework;
 using Alaris.Framework.Commands;
 using Alaris.Irc;
-using Alaris.Localization;
 
 namespace Alaris.Commands
 {
@@ -42,7 +40,7 @@ namespace Alaris.Commands
         [AlarisCommand("info")]
         public static void HandleInfoCommand(AlarisMainParameter mp)
         {
-            Utilities.SendInfo(mp.Channel);
+            Utility.SendInfo(mp.Channel);
             return;
         }
 
@@ -53,7 +51,7 @@ namespace Alaris.Commands
         [AlarisCommand("sys")]
         public static void HandleSysCommand(AlarisMainParameter mp)
         {
-            Utilities.SendSysStats(mp.Channel);
+            Utility.SendSysStats(mp.Channel);
 
             return;
         }

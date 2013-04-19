@@ -4,7 +4,6 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Alaris.API;
 using Alaris.Framework.Extensions;
 using Alaris.Irc;
 using NLog;

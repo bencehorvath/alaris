@@ -1,4 +1,4 @@
-﻿namespace Alaris.API.Crypt
+﻿namespace Alaris.Framework.Crypt
 {
     /// <summary>
     /// Enum used to list available hash algorithms.

@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using Alaris.API;
+﻿using System;
+using System.Collections.Generic;
+using Alaris.Framework;
 using Alaris.Irc;
 
 
@@ -9,6 +10,12 @@ namespace Alaris.WolframAlphaAddon
 {
     public class WolframAlphaAddon : IAlarisAddon
     {
+        private readonly Guid _guid;
+        public WolframAlphaAddon()
+        {
+            _guid = new Guid("{6EFBC75A-BD57-43C2-B84A-AD58376FB5C6}");
+        }
+
         #region Implementation of IAlarisAddon
 
         /// <summary>
@@ -54,5 +61,10 @@ namespace Alaris.WolframAlphaAddon
         }
 
         #endregion
+
+        public Guid GetGuid()
+        {
+            return _guid;
+        }
     }
 }

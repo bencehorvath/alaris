@@ -1,34 +1,52 @@
-﻿using System;
+﻿#region Header
+
+// /* Copyright (C) 2013 Bence Horváth <horvathb@me.com>
+//      alaris: Alaris.Framework: Utility.cs
+// 
+//      Last updated: 2013/04/19 8:20 PM
+// 
+// */
+
+#endregion
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
+using System.Management;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
+using Alaris.Framework.CommandLine;
+using Alaris.Framework.Database;
+using Alaris.Irc;
+using NLog;
 
 // Author: The WCell Team
 
 namespace Alaris.Framework
 {
     /// <summary>
-    /// Contains miscellaneous utility method used throughout the project.
+    ///     Contains miscellaneous utility method used throughout the project.
     /// </summary>
     /// <remarks>
-    /// Things that can't be added as extension methods, or are too miscellaneous
-    /// will most likely be in this class.
+    ///     Things that can't be added as extension methods, or are too miscellaneous
+    ///     will most likely be in this class.
     /// </remarks>
     public static class Utility
     {
         private static readonly DateTime UnixTimeStart = new DateTime(1970, 1, 1, 0, 0, 0);
 
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
-        /// <summary>
-        /// Empty object array.
-        /// </summary>
-        public static readonly object[] EmptyObjectArray = new object[0];
+        private static readonly Object SendLock = new Object();
 
         private static readonly Dictionary<string, Type> TypeMap =
             new Dictionary<string, Type>(StringComparer.InvariantCultureIgnoreCase);
@@ -42,6 +60,7 @@ namespace Alaris.Framework
             {
                 InitEnums(asm);
             }
+
             AppDomain.CurrentDomain.AssemblyLoad += CurrentDomain_AssemblyLoad;
             // init all operators
 
@@ -60,6 +79,24 @@ namespace Alaris.Framework
             TypeMap.Add("UInt64", typeof (ulong));
             TypeMap.Add("Int32", typeof (int));
             TypeMap.Add("Int64", typeof (long));
+
+            Admins.Add(new Admin
+                {
+                    User = AdminUser,
+                    Nick = AdminNick,
+                    Host = AdminHost
+                });
+        }
+
+        /// <summary>
+        ///     Gets the bot version.
+        /// </summary>
+        /// <value>
+        ///     The bot version.
+        /// </value>
+        public static string BotVersion
+        {
+            get { return Assembly.GetExecutingAssembly().GetName().Version.ToString(); }
         }
 
         private static void CurrentDomain_AssemblyLoad(object sender, AssemblyLoadEventArgs args)
@@ -74,10 +111,10 @@ namespace Alaris.Framework
 
 
         /// <summary>
-        ///   Adds all non-standard Enum-types of the given Assembly to the TypeMap.
-        ///   Also caches all big enums into a dictionary to improve Lookup speed.
+        ///     Adds all non-standard Enum-types of the given Assembly to the TypeMap.
+        ///     Also caches all big enums into a dictionary to improve Lookup speed.
         /// </summary>
-        /// <param name = "asm"></param>
+        /// <param name="asm"></param>
         public static void AddTypesToTypeMap(Assembly asm)
         {
             if (asm.FullName == null)
@@ -125,7 +162,7 @@ namespace Alaris.Framework
         private const long TicksSince1970 = 621355968000000000; // .NET ticks for 1970
 
         /// <summary>
-        /// Converts DateTime to miliseconds.
+        ///     Converts DateTime to miliseconds.
         /// </summary>
         /// <param name="time"></param>
         /// <returns></returns>
@@ -135,7 +172,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Converts TimeSpan to miliseconds.
+        ///     Converts TimeSpan to miliseconds.
         /// </summary>
         /// <param name="time"></param>
         /// <returns></returns>
@@ -145,7 +182,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Converts ticks to miliseconds.
+        ///     Converts ticks to miliseconds.
         /// </summary>
         /// <param name="ticks"></param>
         /// <returns></returns>
@@ -155,7 +192,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Gets the system uptime.
+        ///     Gets the system uptime.
         /// </summary>
         /// <returns>the system uptime in milliseconds</returns>
         public static uint GetSystemTime()
@@ -164,7 +201,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Gets the time since the Unix epoch.
+        ///     Gets the time since the Unix epoch.
         /// </summary>
         /// <returns>the time since the unix epoch in seconds</returns>
         public static uint GetEpochTime()
@@ -173,7 +210,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Gets the date time from unix time.
+        ///     Gets the date time from unix time.
         /// </summary>
         /// <param name="unixTime">The unix time.</param>
         /// <returns></returns>
@@ -183,7 +220,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Gets the UTC time from seconds.
+        ///     Gets the UTC time from seconds.
         /// </summary>
         /// <param name="seconds">The seconds.</param>
         /// <returns></returns>
@@ -193,7 +230,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Gets the UTC time from millis.
+        ///     Gets the UTC time from millis.
         /// </summary>
         /// <param name="millis">The millis.</param>
         /// <returns></returns>
@@ -203,11 +240,11 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Gets the system uptime.
+        ///     Gets the system uptime.
         /// </summary>
         /// <remarks>
-        ///   Even though this returns a long, the original value is a 32-bit integer,
-        ///   so it will wrap back to 0 after approximately 49 and half days of system uptime.
+        ///     Even though this returns a long, the original value is a 32-bit integer,
+        ///     so it will wrap back to 0 after approximately 49 and half days of system uptime.
         /// </remarks>
         /// <returns>the system uptime in milliseconds</returns>
         public static long GetSystemTimeLong()
@@ -216,19 +253,23 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Gets the time between the Unix epich and a specific <see cref = "DateTime">time</see>.
+        ///     Gets the time between the Unix epich and a specific <see cref="DateTime">time</see>.
         /// </summary>
-        /// <returns>the time between the unix epoch and the supplied <see cref = "DateTime">time</see> in seconds</returns>
+        /// <returns>
+        ///     the time between the unix epoch and the supplied <see cref="DateTime">time</see> in seconds
+        /// </returns>
         public static uint GetEpochTimeFromDT()
         {
             return GetEpochTimeFromDT(DateTime.Now);
         }
 
         /// <summary>
-        ///   Gets the time between the Unix epich and a specific <see cref = "DateTime">time</see>.
+        ///     Gets the time between the Unix epich and a specific <see cref="DateTime">time</see>.
         /// </summary>
-        /// <param name = "time">the end time</param>
-        /// <returns>the time between the unix epoch and the supplied <see cref = "DateTime">time</see> in seconds</returns>
+        /// <param name="time">the end time</param>
+        /// <returns>
+        ///     the time between the unix epoch and the supplied <see cref="DateTime">time</see> in seconds
+        /// </returns>
         public static uint GetEpochTimeFromDT(DateTime time)
         {
             return (uint) ((time.Ticks - TicksSince1970)/10000000L);
@@ -237,11 +278,11 @@ namespace Alaris.Framework
         #endregion
 
         /// <summary>
-        ///   Swaps one reference with another atomically.
+        ///     Swaps one reference with another atomically.
         /// </summary>
-        /// <typeparam name = "T">the type of the reference</typeparam>
-        /// <param name = "originalRef">the original reference</param>
-        /// <param name = "newRef">the new reference</param>
+        /// <typeparam name="T">the type of the reference</typeparam>
+        /// <param name="originalRef">the original reference</param>
+        /// <param name="newRef">the new reference</param>
         public static void SwapReference<T>(ref T originalRef, ref T newRef) where T : class
         {
             T orig;
@@ -253,12 +294,12 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Swaps one reference with another atomically, and replaces the original with the given value
+        ///     Swaps one reference with another atomically, and replaces the original with the given value
         /// </summary>
-        /// <typeparam name = "T">the type of the reference</typeparam>
-        /// <param name = "originalRef">the original reference</param>
-        /// <param name = "newRef">the new reference</param>
-        /// <param name = "replacement">the value to replace the original with</param>
+        /// <typeparam name="T">the type of the reference</typeparam>
+        /// <param name="originalRef">the original reference</param>
+        /// <param name="newRef">the new reference</param>
+        /// <param name="replacement">the value to replace the original with</param>
         public static void SwapReference<T>(ref T originalRef, ref T newRef, T replacement) where T : class
         {
             do
@@ -268,13 +309,13 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Moves memory from one array to another.
+        ///     Moves memory from one array to another.
         /// </summary>
-        /// <param name = "src">the pointer to the source array</param>
-        /// <param name = "srcIndex">the index to read from in the source array</param>
-        /// <param name = "dest">the destination array</param>
-        /// <param name = "destIndex">the index to write to in the destination array</param>
-        /// <param name = "len">the number of bytes to move</param>
+        /// <param name="src">the pointer to the source array</param>
+        /// <param name="srcIndex">the index to read from in the source array</param>
+        /// <param name="dest">the destination array</param>
+        /// <param name="destIndex">the index to write to in the destination array</param>
+        /// <param name="len">the number of bytes to move</param>
         public static unsafe void MoveMemory(byte* src, int srcIndex, byte[] dest, int destIndex, int len)
         {
             if (len != 0)
@@ -294,13 +335,13 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Moves memory from one array to another.
+        ///     Moves memory from one array to another.
         /// </summary>
-        /// <param name = "src">the source array</param>
-        /// <param name = "srcIndex">the index to read from in the source array</param>
-        /// <param name = "dest">the pointer to the destination array</param>
-        /// <param name = "destIndex">the index to write to in the destination array</param>
-        /// <param name = "len">the number of bytes to move</param>
+        /// <param name="src">the source array</param>
+        /// <param name="srcIndex">the index to read from in the source array</param>
+        /// <param name="dest">the pointer to the destination array</param>
+        /// <param name="destIndex">the index to write to in the destination array</param>
+        /// <param name="len">the number of bytes to move</param>
         public static unsafe void MoveMemory(byte[] src, int srcIndex, byte* dest, int destIndex, int len)
         {
             if (len != 0)
@@ -320,7 +361,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Cast one thing into another
+        ///     Cast one thing into another
         /// </summary>
         public static T Cast<T>(object obj)
         {
@@ -330,16 +371,16 @@ namespace Alaris.Framework
         #region String Building / Verbosity
 
         /// <summary>
-        ///   Returns the string representation of an IEnumerable (all elements, joined by comma)
+        ///     Returns the string representation of an IEnumerable (all elements, joined by comma)
         /// </summary>
         /// <param name="collection"></param>
-        /// <param name = "conj">The conjunction to be used between each elements of the collection</param>
+        /// <param name="conj">The conjunction to be used between each elements of the collection</param>
         public static string ToString<T>(this IEnumerable<T> collection, string conj)
         {
             string vals;
             if (collection != null)
             {
-                vals = string.Join(conj, ToStringArrT(collection));
+                vals = String.Join(conj, ToStringArrT(collection));
             }
             else
                 vals = "(null)";
@@ -348,17 +389,17 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Returns the string representation of an IEnumerable (all elements, joined by comma)
+        ///     Returns the string representation of an IEnumerable (all elements, joined by comma)
         /// </summary>
         /// <param name="collection"></param>
-        /// <param name = "conj">The conjunction to be used between each elements of the collection</param>
+        /// <param name="conj">The conjunction to be used between each elements of the collection</param>
         /// <param name="converter"></param>
         public static string ToString<T>(this IEnumerable<T> collection, string conj, Func<T, object> converter)
         {
             string vals;
             if (collection != null)
             {
-                vals = string.Join(conj, ToStringArrT(collection, converter));
+                vals = String.Join(conj, ToStringArrT(collection, converter));
             }
             else
                 vals = "(null)";
@@ -367,16 +408,16 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Returns the string representation of an IEnumerable (all elements, joined by comma)
+        ///     Returns the string representation of an IEnumerable (all elements, joined by comma)
         /// </summary>
-        /// <param name = "collection"></param>
-        /// <param name = "conj">The conjunction to be used between each elements of the collection</param>
+        /// <param name="collection"></param>
+        /// <param name="conj">The conjunction to be used between each elements of the collection</param>
         public static string ToStringCol(this ICollection collection, string conj)
         {
             string vals;
             if (collection != null)
             {
-                vals = string.Join(conj, ToStringArr(collection));
+                vals = String.Join(conj, ToStringArr(collection));
             }
             else
                 vals = "(null)";
@@ -401,19 +442,19 @@ namespace Alaris.Framework
         //}
 
         /// <summary>
-        /// Returns a <see cref="System.String"/> that represents this instance.
+        ///     Returns a <see cref="System.String" /> that represents this instance.
         /// </summary>
         /// <param name="collection">The collection.</param>
         /// <param name="conj">The conj.</param>
         /// <returns>
-        /// A <see cref="System.String"/> that represents this instance.
+        ///     A <see cref="System.String" /> that represents this instance.
         /// </returns>
         public static string ToString(this IEnumerable collection, string conj)
         {
             string vals;
             if (collection != null)
             {
-                vals = string.Join(conj, ToStringArr(collection));
+                vals = String.Join(conj, ToStringArr(collection));
             }
             else
                 vals = "(null)";
@@ -422,7 +463,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Converts the collection to a string array.
+        ///     Converts the collection to a string array.
         /// </summary>
         /// <param name="collection">The collection.</param>
         /// <returns></returns>
@@ -432,7 +473,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Converts the collection to a string array.
+        ///     Converts the collection to a string array.
         /// </summary>
         /// <param name="collection">The collection.</param>
         /// <returns></returns>
@@ -452,7 +493,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Converts the collection to a string array.
+        ///     Converts the collection to a string array.
         /// </summary>
         /// <param name="collection">The collection.</param>
         /// <param name="converter"></param>
@@ -474,7 +515,6 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="col">The collection.</param>
@@ -493,18 +533,18 @@ namespace Alaris.Framework
                 if (i == partCount)
                 {
                     i = 0;
-                    list.Add(string.Join(conj, current.ToArray()));
+                    list.Add(String.Join(conj, current.ToArray()));
                     current.Clear();
                 }
             }
             if (current.Count > 0)
-                list.Add(string.Join(conj, current.ToArray()));
+                list.Add(String.Join(conj, current.ToArray()));
 
             return list.ToArray();
         }
 
         /// <summary>
-        /// Returns a <see cref="System.String"/> that represents this instance.
+        ///     Returns a <see cref="System.String" /> that represents this instance.
         /// </summary>
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
@@ -512,7 +552,7 @@ namespace Alaris.Framework
         /// <param name="indent">The indent.</param>
         /// <param name="seperator">The seperator.</param>
         /// <returns>
-        /// A <see cref="System.String"/> that represents this instance.
+        ///     A <see cref="System.String" /> that represents this instance.
         /// </returns>
         public static string ToString<K, V>(this IEnumerable<KeyValuePair<K, V>> args, string indent, string seperator)
         {
@@ -538,7 +578,7 @@ namespace Alaris.Framework
         private static long _holdrand = DateTime.Now.Ticks;
 
         /// <summary>
-        /// Returns a pseudo-random integer.
+        ///     Returns a pseudo-random integer.
         /// </summary>
         /// <returns></returns>
         public static int Random()
@@ -547,7 +587,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Returns a pseudo-random unsigned integer.
+        ///     Returns a pseudo-random unsigned integer.
         /// </summary>
         /// <returns></returns>
         public static uint RandomUInt()
@@ -556,7 +596,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Returns a random chance value
+        ///     Returns a random chance value
         /// </summary>
         /// <returns>True or false</returns>
         public static bool Chance()
@@ -565,7 +605,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Returns a chance value using a seed
+        ///     Returns a chance value using a seed
         /// </summary>
         /// <param name="chance">Chance seed</param>
         /// <returns>True or false</returns>
@@ -575,7 +615,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Returns a chance value using a seed
+        ///     Returns a chance value using a seed
         /// </summary>
         /// <param name="chance">Chance seed</param>
         /// <returns>True or false</returns>
@@ -590,7 +630,7 @@ namespace Alaris.Framework
         }*/
 
         /// <summary>
-        /// Returns a random single-precision floating point number.
+        ///     Returns a random single-precision floating point number.
         /// </summary>
         /// <returns>Random number</returns>
         public static float RandomFloat()
@@ -599,23 +639,23 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Generates a pseudo-random number in range [from, to)
+        ///     Generates a pseudo-random number in range [from, to)
         /// </summary>
         public static int Random(int from, int to)
         {
             //return from > to
             //        ? (int)Math.Round(RandomFloat() * (from - to) + to)
             //        : (int)Math.Round((RandomFloat() * (to - from) + from));
-            return from == to
-                       ? from
-                       : (from > to
-                              ? ((Random()%(from - to)) + to)
-                              : ((Random()%(to - from)) + from));
+            return @from == to
+                       ? @from
+                       : (@from > to
+                              ? ((Random()%(@from - to)) + to)
+                              : ((Random()%(to - @from)) + @from));
         }
 
 
         /// <summary>
-        /// Returns a pseudo-random integer between the specified numbers..
+        ///     Returns a pseudo-random integer between the specified numbers..
         /// </summary>
         /// <param name="from">From.</param>
         /// <param name="to">To.</param>
@@ -625,15 +665,15 @@ namespace Alaris.Framework
             //return from > to
             //        ? (uint)Math.Round((RandomFloat() * (from - to) + to))
             //        : (uint)Math.Round((RandomFloat() * (to - from) + from));return
-            return from == to
-                       ? from
-                       : (from > to
-                              ? ((RandomUInt()%(from - to)) + to)
-                              : ((RandomUInt()%(to - from)) + from));
+            return @from == to
+                       ? @from
+                       : (@from > to
+                              ? ((RandomUInt()%(@from - to)) + to)
+                              : ((RandomUInt()%(to - @from)) + @from));
         }
 
         /// <summary>
-        /// Returns a pseudo-random integer.
+        ///     Returns a pseudo-random integer.
         /// </summary>
         /// <param name="max">The maximum random value.</param>
         /// <returns></returns>
@@ -646,7 +686,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Returns a pseudo-random unsigned integer.
+        ///     Returns a pseudo-random unsigned integer.
         /// </summary>
         /// <param name="max">The maximum random value.</param>
         /// <returns></returns>
@@ -659,21 +699,21 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Returns a random single-precision floating point number.
+        ///     Returns a random single-precision floating point number.
         /// </summary>
         /// <returns>Random number</returns>
         public static float Random(float from, float to)
         {
-            return from > to ? RandomFloat()*(from - to) + to : (RandomFloat()*(to - from) + from);
+            return @from > to ? RandomFloat()*(@from - to) + to : (RandomFloat()*(to - @from) + @from);
         }
 
         /// <summary>
-        /// Returns a random double-precision floating point number.
+        ///     Returns a random double-precision floating point number.
         /// </summary>
         /// <returns>Random number</returns>
         public static double Random(double from, double to)
         {
-            return from > to ? RandomFloat()*(from - to) + to : RandomFloat()*(to - from) + from;
+            return @from > to ? RandomFloat()*(@from - to) + to : RandomFloat()*(to - @from) + @from;
         }
 
         #endregion
@@ -682,70 +722,64 @@ namespace Alaris.Framework
 
         private static readonly Dictionary<Type, Func<string, object>> TypeParsers =
             new Func<Dictionary<Type, Func<string, object>>>(() =>
-                                                                 {
-                                                                     var parsers =
-                                                                         new Dictionary<Type, Func<string, object>>
-                                                                             {
-                                                                                 {
-                                                                                     typeof (int),
-                                                                                     strVal => int.Parse(strVal)
-                                                                                     },
-                                                                                 {
-                                                                                     typeof (float),
-                                                                                     strVal => float.Parse(strVal)
-                                                                                     },
-                                                                                 {
-                                                                                     typeof (long),
-                                                                                     strVal => long.Parse(strVal)
-                                                                                     },
-                                                                                 {
-                                                                                     typeof (ulong),
-                                                                                     strVal => ulong.Parse(strVal)
-                                                                                     },
-                                                                                 {
-                                                                                     typeof (bool), strVal =>
-                                                                                                    strVal.Equals(
-                                                                                                        "true",
-                                                                                                        StringComparison
-                                                                                                            .
-                                                                                                            InvariantCultureIgnoreCase) ||
-                                                                                                    strVal.Equals("1",
-                                                                                                                  StringComparison
-                                                                                                                      .
-                                                                                                                      InvariantCultureIgnoreCase) ||
-                                                                                                    strVal.Equals("yes",
-                                                                                                                  StringComparison
-                                                                                                                      .
-                                                                                                                      InvariantCultureIgnoreCase)
-                                                                                     },
-                                                                                 {
-                                                                                     typeof (double),
-                                                                                     strVal => double.Parse(strVal)
-                                                                                     },
-                                                                                 {
-                                                                                     typeof (uint),
-                                                                                     strVal => uint.Parse(strVal)
-                                                                                     },
-                                                                                 {
-                                                                                     typeof (short),
-                                                                                     strVal => short.Parse(strVal)
-                                                                                     },
-                                                                                 {
-                                                                                     typeof (ushort),
-                                                                                     strVal => short.Parse(strVal)
-                                                                                     },
-                                                                                 {
-                                                                                     typeof (byte),
-                                                                                     strVal => byte.Parse(strVal)
-                                                                                     },
-                                                                                 {typeof (char), strVal => strVal[0]}
-                                                                             };
+                {
+                    var parsers =
+                        new Dictionary<Type, Func<string, object>>
+                            {
+                                {
+                                    typeof (int),
+                                    strVal => Int32.Parse(strVal)
+                                },
+                                {
+                                    typeof (float),
+                                    strVal => Single.Parse(strVal)
+                                },
+                                {
+                                    typeof (long),
+                                    strVal => Int64.Parse(strVal)
+                                },
+                                {
+                                    typeof (ulong),
+                                    strVal => UInt64.Parse(strVal)
+                                },
+                                {
+                                    typeof (bool), strVal =>
+                                                   strVal.Equals(
+                                                       "true",
+                                                       StringComparison.InvariantCultureIgnoreCase) ||
+                                                   strVal.Equals("1",
+                                                                 StringComparison.InvariantCultureIgnoreCase) ||
+                                                   strVal.Equals("yes",
+                                                                 StringComparison.InvariantCultureIgnoreCase)
+                                },
+                                {
+                                    typeof (double),
+                                    strVal => Double.Parse(strVal)
+                                },
+                                {
+                                    typeof (uint),
+                                    strVal => UInt32.Parse(strVal)
+                                },
+                                {
+                                    typeof (short),
+                                    strVal => Int16.Parse(strVal)
+                                },
+                                {
+                                    typeof (ushort),
+                                    strVal => Int16.Parse(strVal)
+                                },
+                                {
+                                    typeof (byte),
+                                    strVal => Byte.Parse(strVal)
+                                },
+                                {typeof (char), strVal => strVal[0]}
+                            };
 
-                                                                     return parsers;
-                                                                 })();
+                    return parsers;
+                })();
 
         /// <summary>
-        /// Parses the specified string as the type.
+        ///     Parses the specified string as the type.
         /// </summary>
         /// <param name="stringVal">The string val.</param>
         /// <param name="type">The type.</param>
@@ -755,14 +789,14 @@ namespace Alaris.Framework
             object obj = null;
             if (!Parse(stringVal, type, ref obj))
             {
-                throw new Exception(string.Format("Unable to parse string-Value \"{0}\" as Type \"{1}\"", stringVal,
+                throw new Exception(String.Format("Unable to parse string-Value \"{0}\" as Type \"{1}\"", stringVal,
                                                   type));
             }
             return obj;
         }
 
         /// <summary>
-        /// Parses the specified STR.
+        ///     Parses the specified STR.
         /// </summary>
         /// <param name="str">The STR.</param>
         /// <param name="type">The type.</param>
@@ -810,7 +844,7 @@ namespace Alaris.Framework
         #endregion
 
         /// <summary>
-        ///   Measures how long the given func takes to be executed repeats times
+        ///     Measures how long the given func takes to be executed repeats times
         /// </summary>
         public static void Measure(string name, int repeats, Action action)
         {
@@ -824,7 +858,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Gets the biggest value of a numeric enum
+        ///     Gets the biggest value of a numeric enum
         /// </summary>
         public static T GetMaxEnum<T>()
         {
@@ -835,8 +869,8 @@ namespace Alaris.Framework
         #region Sets of set bits
 
         /// <summary>
-        ///   Creates and returns an array of all indices that are set within the given flag field.
-        ///   eg. {11000011, 11000011} would result into an array containing: 0,1,6,7,8,9,14,15
+        ///     Creates and returns an array of all indices that are set within the given flag field.
+        ///     eg. {11000011, 11000011} would result into an array containing: 0,1,6,7,8,9,14,15
         /// </summary>
         public static uint[] GetSetIndices(uint[] flagsArr)
         {
@@ -849,8 +883,8 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Creates and returns an array of all indices that are set within the given flag field.
-        ///   eg. 11000011 would result into an array containing: 0,1,6,7
+        ///     Creates and returns an array of all indices that are set within the given flag field.
+        ///     eg. 11000011 would result into an array containing: 0,1,6,7
         /// </summary>
         public static uint[] GetSetIndices(uint flags)
         {
@@ -860,7 +894,6 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="flags">The flags.</param>
@@ -887,7 +920,6 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="indices">The indices.</param>
         /// <param name="flags">The flags.</param>
@@ -903,8 +935,8 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Creates and returns an array of all indices that are set within the given flag field.
-        ///   eg. 11000011 would result into an array containing: 0,1,6,7
+        ///     Creates and returns an array of all indices that are set within the given flag field.
+        ///     eg. 11000011 would result into an array containing: 0,1,6,7
         /// </summary>
         public static T[] GetSetIndices<T>(uint flags)
         {
@@ -929,7 +961,7 @@ namespace Alaris.Framework
         #endregion
 
         /// <summary>
-        /// Creates the enum array.
+        ///     Creates the enum array.
         /// </summary>
         /// <typeparam name="E"></typeparam>
         /// <typeparam name="A"></typeparam>
@@ -941,17 +973,17 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Delays the given action by the given amount of milliseconds
+        ///     Delays the given action by the given amount of milliseconds
         /// </summary>
         /// <returns>The timer that performs the delayed call (in case that you might want to cancel earlier)</returns>
         public static Timer Delay(uint millis, Action action)
         {
             Timer timer = null;
             timer = new Timer(sender =>
-                                  {
-                                      action();
-                                      timer.Dispose();
-                                  });
+                {
+                    action();
+                    timer.Dispose();
+                });
             timer.Change(millis, Timeout.Infinite);
             return timer;
         }
@@ -996,10 +1028,9 @@ namespace Alaris.Framework
 #pragma warning restore 1591
 
         /// <summary>
-        ///   Evaluates the given (simple) expression
-        /// 
-        ///   TODO: Use Polish Notation to allow more efficiency and complexity
-        ///   TODO: Add operator priority
+        ///     Evaluates the given (simple) expression
+        ///     TODO: Use Polish Notation to allow more efficiency and complexity
+        ///     TODO: Add operator priority
         /// </summary>
         public static bool Eval(Type valType, ref long val, string expr, ref object error, bool startsWithOperator)
         {
@@ -1045,7 +1076,7 @@ namespace Alaris.Framework
         #endregion
 
         /// <summary>
-        /// Gets the absolute path.
+        ///     Gets the absolute path.
         /// </summary>
         /// <param name="file">The file.</param>
         /// <returns></returns>
@@ -1055,7 +1086,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Parses or resolves the specified IP address.
+        ///     Parses or resolves the specified IP address.
         /// </summary>
         /// <param name="input">The input IP.</param>
         /// <returns></returns>
@@ -1079,7 +1110,7 @@ namespace Alaris.Framework
         #region Format
 
         /// <summary>
-        /// Formats the money.
+        ///     Formats the money.
         /// </summary>
         /// <param name="money">The money.</param>
         /// <returns></returns>
@@ -1104,31 +1135,31 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Formats the specified time.
+        ///     Formats the specified time.
         /// </summary>
         /// <param name="time">The time.</param>
         /// <returns></returns>
         public static string Format(this TimeSpan time)
         {
-            return string.Format("{0}{1:00}h {2:00}m {3:00}s", time.TotalDays > 0 ? (int) time.TotalDays + "d " : "",
+            return String.Format("{0}{1:00}h {2:00}m {3:00}s", time.TotalDays > 0 ? (int) time.TotalDays + "d " : "",
                                  time.Hours, time.Minutes, time.Seconds);
         }
 
         /// <summary>
-        /// Formats the millis.
+        ///     Formats the millis.
         /// </summary>
         /// <param name="time">The time.</param>
         /// <returns></returns>
         public static string FormatMillis(this DateTime time)
         {
-            return string.Format("{0:00}h {1:00}m {2:00}s {3:00}ms", time.Hour, time.Minute,
+            return String.Format("{0:00}h {1:00}m {2:00}s {3:00}ms", time.Hour, time.Minute,
                                  time.Second, time.Millisecond);
         }
 
         #endregion
 
         /// <summary>
-        /// Gets a random element from the list.
+        ///     Gets a random element from the list.
         /// </summary>
         /// <typeparam name="TO"></typeparam>
         /// <param name="os">The os.</param>
@@ -1139,7 +1170,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Checks whether the given mail-address is valid.
+        ///     Checks whether the given mail-address is valid.
         /// </summary>
         public static bool IsValidEMailAddress(string mail)
         {
@@ -1149,11 +1180,11 @@ namespace Alaris.Framework
         #region Types
 
         /// <summary>
-        /// Determines whether the specified type is static.
+        ///     Determines whether the specified type is static.
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns>
-        /// 	<c>true</c> if the specified type is static; otherwise, <c>false</c>.
+        ///     <c>true</c> if the specified type is static; otherwise, <c>false</c>.
         /// </returns>
         public static bool IsStatic(this Type type)
         {
@@ -1162,10 +1193,10 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   When overridden in a derived class, returns an array of custom attributes identified by System.Type.
+        ///     When overridden in a derived class, returns an array of custom attributes identified by System.Type.
         /// </summary>
-        /// <typeparam name = "T">The type of attribute to search for. Only attributes that are assignable to this type are returned.</typeparam>
-        /// <param name = "methodInfo"></param>
+        /// <typeparam name="T">The type of attribute to search for. Only attributes that are assignable to this type are returned.</typeparam>
+        /// <param name="methodInfo"></param>
         /// <returns>An array of custom attributes applied to this member, or an array with zero (0) elements if no attributes have been applied.</returns>
         public static T[] GetCustomAttributes<T>(this MemberInfo methodInfo) where T : Attribute
         {
@@ -1174,7 +1205,7 @@ namespace Alaris.Framework
 
         /// <summary>
         /// </summary>
-        /// <param name = "arrType"></param>
+        /// <param name="arrType"></param>
         /// <returns></returns>
         public static Type GetArrUnderlyingType(Type arrType)
         {
@@ -1190,12 +1221,12 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   One second has 10 million system ticks (DateTime.Ticks etc)
+        ///     One second has 10 million system ticks (DateTime.Ticks etc)
         /// </summary>
         private const string DefaultNameSpace = "WCell.Constants.";
 
         /// <summary>
-        /// Gets the type.
+        ///     Gets the type.
         /// </summary>
         /// <param name="typeName">Name of the type.</param>
         /// <returns></returns>
@@ -1214,9 +1245,9 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Gets all assemblies that match the given fully qualified name without version checks etc.
+        ///     Gets all assemblies that match the given fully qualified name without version checks etc.
         /// </summary>
-        /// <param name = "asmName"></param>
+        /// <param name="asmName"></param>
         /// <returns></returns>
         public static IEnumerable<Assembly> GetMatchingAssemblies(string asmName)
         {
@@ -1226,18 +1257,20 @@ namespace Alaris.Framework
                 asmName = parts[0];
             }
             return AppDomain.CurrentDomain.GetAssemblies().Where(asm =>
-                                                                     {
-                                                                         var matchName = asm.GetName();
-                                                                         return matchName.Name == asmName;
-                                                                     });
+                {
+                    var matchName = asm.GetName();
+                    return matchName.Name == asmName;
+                });
         }
 
         /// <summary>
-        /// Changes the type.
+        ///     Changes the type.
         /// </summary>
         /// <param name="obj">The obj.</param>
         /// <param name="type">The type.</param>
-        /// <param name="underlyingType">if set to <c>true</c> [underlying type].</param>
+        /// <param name="underlyingType">
+        ///     if set to <c>true</c> [underlying type].
+        /// </param>
         /// <returns></returns>
         public static object ChangeType(object obj, Type type, bool underlyingType = false)
         {
@@ -1266,7 +1299,7 @@ namespace Alaris.Framework
                 }
                 catch (Exception e)
                 {
-                    throw new InvalidOperationException(string.Format(
+                    throw new InvalidOperationException(String.Format(
                         "Could not convert \"{0}\" from {1} to {2} - {2} has no public ctor with one argument of type \"{1}\".",
                         obj, obj.GetType(), type), e);
                 }
@@ -1280,17 +1313,17 @@ namespace Alaris.Framework
         #region Files & Directories
 
         /// <summary>
-        ///   Writes the content of all files in the given directory to the given output file
+        ///     Writes the content of all files in the given directory to the given output file
         /// </summary>
-        /// <param name = "directory"></param>
-        /// <param name = "outputFile"></param>
+        /// <param name="directory"></param>
+        /// <param name="outputFile"></param>
         public static void MergeFiles(string directory, string outputFile)
         {
             MergeFiles(Directory.GetFiles(directory), outputFile);
         }
 
         /// <summary>
-        ///   Writes the content of all files in the given list to the given output file
+        ///     Writes the content of all files in the given list to the given output file
         /// </summary>
         public static void MergeFiles(IEnumerable<string> inputFiles, string outputFile)
         {
@@ -1314,7 +1347,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Gets the directory.
+        ///     Gets the directory.
         /// </summary>
         /// <param name="file">The fileinfo.</param>
         /// <returns></returns>
@@ -1332,7 +1365,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Creates directories.
+        ///     Creates directories.
         /// </summary>
         /// <param name="file"></param>
         public static void MKDirs(this FileInfo file)
@@ -1341,7 +1374,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Creates directories.
+        ///     Creates directories.
         /// </summary>
         /// <param name="dir"></param>
         public static void MKDirs(this DirectoryInfo dir)
@@ -1358,11 +1391,11 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///   Returns up to the n first lines from the given file.
+        ///     Returns up to the n first lines from the given file.
         /// </summary>
-        /// <param name = "fileName"></param>
-        /// <param name = "n"></param>
-        /// <param name = "ignoreEmpty"></param>
+        /// <param name="fileName"></param>
+        /// <param name="n"></param>
+        /// <param name="ignoreEmpty"></param>
         /// <returns></returns>
         public static string[] ReadLines(string fileName, int n, bool ignoreEmpty)
         {
@@ -1389,9 +1422,8 @@ namespace Alaris.Framework
 
         #region Strings
 
-
         /// <summary>
-        /// Gets the string representation of the specified object.
+        ///     Gets the string representation of the specified object.
         /// </summary>
         /// <param name="val">The object.</param>
         /// <returns></returns>
@@ -1418,12 +1450,12 @@ namespace Alaris.Framework
 
 
         /// <summary>
-        /// Determines whether the string contains the specified string, ignroing culture and case.
+        ///     Determines whether the string contains the specified string, ignroing culture and case.
         /// </summary>
         /// <param name="str">The STR.</param>
         /// <param name="part">The part.</param>
         /// <returns>
-        /// 	<c>true</c> if contains; otherwise, <c>false</c>.
+        ///     <c>true</c> if contains; otherwise, <c>false</c>.
         /// </returns>
         public static bool ContainsIgnoreCase(this string str, string part)
         {
@@ -1432,22 +1464,22 @@ namespace Alaris.Framework
 
         #endregion
 
-
         /// <summary>
-        /// Creates a long.
+        ///     Creates a long.
         /// </summary>
         /// <param name="low">The low.</param>
         /// <param name="high">The high.</param>
         /// <returns></returns>
         public static long MakeLong(int low, int high)
         {
-            return (uint)low | ((long) high << 32);
+            return (uint) low | ((long) high << 32);
         }
 
         private static readonly Random Rnd = new Random();
+        private static readonly List<Admin> Admins = new List<Admin>();
 
         /// <summary>
-        /// Shuffles the specified collection.
+        ///     Shuffles the specified collection.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="col">The collection.</param>
@@ -1463,12 +1495,348 @@ namespace Alaris.Framework
                 col.Add(item);
             }
         }
+
+        /// <summary>
+        ///     Calculates the MD5 sum of a file.
+        /// </summary>
+        /// <param name="fileName">
+        ///     The file to check.
+        /// </param>
+        /// <returns>
+        ///     The MD5 hash.
+        /// </returns>
+        public static string MD5File(string fileName)
+        {
+            if (fileName == null) throw new ArgumentNullException("fileName");
+            byte[] retVal;
+
+            using (var file = new FileStream(fileName, FileMode.Open))
+            {
+                MD5 md5 = new MD5CryptoServiceProvider();
+                retVal = md5.ComputeHash(file);
+                md5.Dispose();
+            }
+
+            var sb = new StringBuilder();
+
+            if (retVal != null)
+                for (var i = 0; i < retVal.Length; i++)
+                    sb.Append(retVal[i].ToString("x2"));
+
+            return sb.ToString();
+        }
+
+        /// <summary>
+        ///     Calculates the MD5 hash of a string.
+        /// </summary>
+        /// <param name="value">
+        ///     The string to calculate MD5 hash of.
+        /// </param>
+        /// <returns>
+        ///     The MD5 hash.
+        /// </returns>
+        public static string MD5String(string value)
+        {
+            if (value == null) throw new ArgumentNullException("value");
+            var x = new MD5CryptoServiceProvider();
+
+            var data = Encoding.ASCII.GetBytes(value);
+            data = x.ComputeHash(data);
+            x.Dispose();
+            var ret = "";
+
+            for (var i = 0; i < data.Length; i++)
+                ret += data[i].ToString("x2").ToLower();
+
+            return ret;
+        }
+
+        /// <summary>
+        ///     The admin user's username.
+        /// </summary>
+        public static string AdminUser { get; set; }
+
+        /// <summary>
+        ///     The admin user's nick.
+        /// </summary>
+        public static string AdminNick { get; set; }
+
+        /// <summary>
+        ///     The admin user's hostname.
+        /// </summary>
+        public static string AdminHost { get; set; }
+
+        /// <summary>
+        ///     Sends system stats using the specified connection.
+        /// </summary>
+        /// <param name="chan">
+        ///     The channel to send to.
+        /// </param>
+        public static void SendSysStats(string chan)
+        {
+            //Log.Info("System info request.");
+            var connection = AlarisBase.Instance.Connection;
+
+            var hostname = Environment.MachineName;
+            var username = Environment.UserName;
+
+            var os = Environment.OSVersion.ToString();
+            var mem = GC.GetTotalMemory(true)/1024/1024;
+            var gen = GC.GetGeneration(connection);
+
+
+            connection.Sender.PublicMessage(chan,
+                                            IrcConstants.Bold + "Bot version: " + IrcConstants.Normal +
+                                            Utility.BotVersion);
+            connection.Sender.PublicMessage(chan,
+                                            IrcConstants.Bold + "Thread count: " + IrcConstants.Normal +
+                                            Process.GetCurrentProcess().Threads.Count);
+            connection.Sender.PublicMessage(chan,
+                                            IrcConstants.Bold + "CPU: " + IrcConstants.Normal + GetCpuId() + " | " +
+                                            Environment.ProcessorCount + " cores.");
+
+            if (mem < 60)
+                connection.Sender.PublicMessage(chan,
+                                                String.Format("{0}Memory allocated: {1}{2}{3} MB (gen: {4})",
+                                                              IrcConstants.Bold, IrcConstants.Normal, IrcConstants.Green,
+                                                              mem, gen));
+            else if (mem > 60 && mem < 80)
+                connection.Sender.PublicMessage(chan,
+                                                String.Format("{0}Memory allocated: {1}{2}{3} MB (gen: {4})",
+                                                              IrcConstants.Bold, IrcConstants.Normal, IrcConstants.Olive,
+                                                              mem, gen));
+            else
+                connection.Sender.PublicMessage(chan,
+                                                String.Format("{0}Memory allocated: {1}{2}{3} MB (gen: {4})",
+                                                              IrcConstants.Bold, IrcConstants.Normal, IrcConstants.Red,
+                                                              mem, gen));
+        }
+
+        /// <summary>
+        ///     Sends info using the specified connection.
+        /// </summary>
+        /// <param name="chan">
+        ///     The channel to send to.
+        /// </param>
+        public static void SendInfo(string chan)
+        {
+            var connection = AlarisBase.Instance.Connection;
+            connection.Sender.PublicMessage(chan, IrcConstants.Cyan + "Alaris " + Utility.BotVersion);
+            connection.Sender.PublicMessage(chan, IrcConstants.DarkGreen + "Developer: Twl");
+        }
+
+        /// <summary>
+        ///     Determines whether the specified user is admin or not.
+        /// </summary>
+        /// <param name="user">
+        ///     The user to check.
+        /// </param>
+        /// <returns>
+        ///     True if admin, otherwise false.
+        /// </returns>
+        public static bool IsAdmin(UserInfo user)
+        {
+            if (user == null) throw new ArgumentNullException("user");
+            return ((IsMainAdmin(user)) || AdminManager.IsAdmin(user) || user == CLI.ConsoleUser);
+        }
+
+        private static bool IsMainAdmin(UserInfo user)
+        {
+            return user.Hostname == AdminHost && user.Nick == AdminNick && user.User == AdminUser;
+        }
+
+        /// <summary>
+        ///     Gets the cpu brand string.
+        /// </summary>
+        /// <returns>
+        ///     The CPU brand string.
+        /// </returns>
+        private static string GetCpuId()
+        {
+            var mos = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_Processor");
+
+            return
+                (from ManagementObject mo in mos.Get() select (Regex.Replace(Convert.ToString(mo["Name"]), @"\s+", " ")))
+                    .FirstOrDefault();
+        }
+
+        /// <summary>
+        ///     Gets the URLs in the specified text.
+        /// </summary>
+        /// <param name="text">
+        ///     The text to search in.
+        /// </param>
+        /// <returns>
+        ///     The list of urls.
+        /// </returns>
+        public static List<string> GetUrls(string text)
+        {
+            Contract.Requires(text != null);
+            Contract.Ensures(Contract.Result<List<string>>() != null);
+
+            var urls = new List<string>();
+
+            try
+            {
+                //var urlFind = new Regex(@"(?<page>http://(www\.)?\S+\.\S{2,6}(/\S*\s*)?)", RegexOptions.IgnoreCase);
+                //var urlFind = new Regex(@"(?<page>http://(www\.)?\S+\.\S{2,6}(/*\S*))", RegexOptions.IgnoreCase);
+
+                var urlFind = new Regex(@"(?<url>(http://)?(www\.)?\S+\.\S{2,6}([/]*\S+))",
+                                        RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+                if (urlFind.IsMatch(text))
+                {
+                    var matches = urlFind.Matches(text);
+
+                    //urls.AddRange(from Match match in matches select match.Groups["page"].ToString());
+
+                    foreach (var url in from Match match in matches select match.Groups["url"].ToString())
+                    {
+                        var lurl = url;
+                        if (!lurl.StartsWith("http://") && !url.StartsWith("https://"))
+                            lurl = string.Format("http://{0}", url);
+
+                        Log.Debug("Utilities", string.Format("Checking: {0}", url));
+
+                        urls.Add(lurl);
+                    }
+                }
+            }
+            catch (Exception x)
+            {
+                Log.Error(x.Message);
+            }
+
+            return urls;
+        }
+
+        /// <summary>
+        ///     Handles the web title command.
+        /// </summary>
+        /// <param name="chan">
+        ///     The channel to send title to.
+        /// </param>
+        /// <param name="msg">
+        ///     The message containing the url.
+        /// </param>
+        public static void HandleWebTitle(string chan, string msg)
+        {
+            if (chan == null) throw new ArgumentNullException("chan");
+            if (msg == null) throw new ArgumentNullException("msg");
+
+            var connection = AlarisBase.Instance.Connection;
+
+            try
+            {
+                var tt = msg.Replace("@title ", string.Empty);
+
+                var url = new Uri(tt);
+                var webTitle = WebHelper.GetWebTitle(url);
+
+                if (string.IsNullOrEmpty(webTitle))
+                    return;
+
+                var title = Regex.Replace(webTitle, @"\s+", " ");
+
+
+                // check if it's youtube.
+                var youtubeRegex = new Regex(@"(?<song>.+)\-\sYouTube", RegexOptions.IgnoreCase);
+
+                if (youtubeRegex.IsMatch(title))
+                {
+                    var match = youtubeRegex.Match(title);
+                    var song = match.Groups["song"].ToString();
+
+                    lock (SendLock)
+                    {
+                        connection.Sender.PublicMessage(chan,
+                                                        IrcConstants.Purple + "[YouTube]: " + IrcConstants.DarkGreen +
+                                                        song.Substring(1));
+                        // about substr: remove the space before song name
+                    }
+                    return;
+                }
+
+                lock (SendLock)
+                {
+                    Log.Debug("WebHelper", string.Format("Title: {0}", title));
+                    connection.Sender.PublicMessage(chan,
+                                                    IrcConstants.Bold + "[Title]: " + IrcConstants.Normal +
+                                                    IrcConstants.DarkGreen + title);
+                }
+            }
+            catch (Exception x)
+            {
+                Log.Debug("Utilities", x.Message);
+                return;
+            }
+        }
+
+        /// <summary>
+        ///     Executes the provided action safely.
+        /// </summary>
+        /// <param name="action">The action.</param>
+        public static void ExecuteSafely(Action action)
+        {
+            try
+            {
+                action();
+            }
+            catch (Exception x)
+            {
+                Log.Error("An exception has been thrown inside the safe execution context. ({0})", x.Message);
+                return;
+            }
+        }
+
+        /// <summary>
+        ///     Downloads the specified web page's source as string.
+        ///     <para>Shouldn't be used to download files (only text-based).</para>
+        /// </summary>
+        /// <param name="address">The URL to download.</param>
+        /// <returns>The downloaded source</returns>
+        public static string GetWebsiteString(string address)
+        {
+            try
+            {
+                var url = new Uri(address);
+
+                return GetWebsiteString(url);
+            }
+            catch (UriFormatException x)
+            {
+                Log.Error("Invalid url received as argument ({0}). Exception: {1}", address, x);
+                return string.Empty;
+            }
+        }
+
+        /// <summary>
+        ///     Downloads the specified web page's source as string.
+        ///     <para>Shouldn't be used to download files (only text-based).</para>
+        /// </summary>
+        /// <param name="address">The URL to download.</param>
+        /// <returns>The downloaded source</returns>
+        public static string GetWebsiteString(Uri address)
+        {
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    return client.DownloadString(address);
+                }
+            }
+            catch (WebException x)
+            {
+                Log.Error("Exception thrown while downloading a website's source! Exception: {0}", x);
+                return string.Empty;
+            }
+        }
     }
 
     #region SingleEnumerator
 
     /// <summary>
-    ///   Returns a single element
+    ///     Returns a single element
     /// </summary>
     public class SingleEnumerator<T> : IEnumerator<T>
         where T : class
@@ -1476,7 +1844,7 @@ namespace Alaris.Framework
         private T _current;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SingleEnumerator&lt;T&gt;"/> class.
+        ///     Initializes a new instance of the <see cref="SingleEnumerator&lt;T&gt;" /> class.
         /// </summary>
         /// <param name="element">The element.</param>
         public SingleEnumerator(T element)
@@ -1485,7 +1853,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        ///     Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
         /// </summary>
         public void Dispose()
         {
@@ -1493,10 +1861,10 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Advances the enumerator to the next element of the collection.
+        ///     Advances the enumerator to the next element of the collection.
         /// </summary>
         /// <returns>
-        /// true if the enumerator was successfully advanced to the next element; false if the enumerator has passed the end of the collection.
+        ///     true if the enumerator was successfully advanced to the next element; false if the enumerator has passed the end of the collection.
         /// </returns>
         /// <exception cref="T:System.InvalidOperationException">The collection was modified after the enumerator was created. </exception>
         public bool MoveNext()
@@ -1505,7 +1873,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Sets the enumerator to its initial position, which is before the first element in the collection.
+        ///     Sets the enumerator to its initial position, which is before the first element in the collection.
         /// </summary>
         /// <exception cref="T:System.InvalidOperationException">The collection was modified after the enumerator was created. </exception>
         public void Reset()
@@ -1514,7 +1882,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// The current enumeration value
+        ///     The current enumeration value
         /// </summary>
         public T Current
         {
@@ -1528,7 +1896,7 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        /// Gets the current.
+        ///     Gets the current.
         /// </summary>
         /// <value>The current.</value>
         object IEnumerator.Current

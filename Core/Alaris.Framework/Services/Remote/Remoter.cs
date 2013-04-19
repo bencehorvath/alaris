@@ -16,7 +16,7 @@ namespace Alaris.Framework.Services.Remote
         /// <returns>True if successfully authenticated otherwise false.</returns>
         public bool Authorize(string passHash)
         {
-            if (passHash.Equals(Utilities.MD5String(AlarisBase.Instance.Config.Config.Remote.Password), StringComparison.InvariantCultureIgnoreCase))
+            if (passHash.Equals(Utility.MD5String(AlarisBase.Instance.Config.Config.Remote.Password), StringComparison.InvariantCultureIgnoreCase))
             {
                 //TODO: use this to check in later methods if the client is authorized or not.
                 return true;

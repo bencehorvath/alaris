@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using Alaris.API;
 using Alaris.Framework.Exceptions;
 using NLog;
 

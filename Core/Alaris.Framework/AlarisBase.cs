@@ -201,7 +201,7 @@ namespace Alaris.Framework
                     var responder = new CtcpResponder(_connection)
                     {
                         VersionResponse =
-                            "Alaris " + Utilities.BotVersion,
+                            "Alaris " + Utility.BotVersion,
                         SourceResponse = "http://www.wowemuf.org",
                         UserInfoResponse =
                             "Alaris multi-functional bot."
@@ -436,9 +436,9 @@ namespace Alaris.Framework
 
             _channels.GetChannelsFrom(clist);
 
-            Utilities.AdminNick = Config.Config.Irc.Admin.Nick;
-            Utilities.AdminUser = Config.Config.Irc.Admin.User;
-            Utilities.AdminHost = Config.Config.Irc.Admin.Host;
+            Utility.AdminNick = Config.Config.Irc.Admin.Nick;
+            Utility.AdminUser = Config.Config.Irc.Admin.User;
+            Utility.AdminHost = Config.Config.Irc.Admin.Host;
 
             _scriptsDir = Config.Config.Scripts.Directory;
 

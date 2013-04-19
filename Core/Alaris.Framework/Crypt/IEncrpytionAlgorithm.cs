@@ -1,4 +1,4 @@
-﻿namespace Alaris.API.Crypt
+﻿namespace Alaris.Framework.Crypt
 {
     /// <summary>
     /// An interface which should be implemented by all encryption

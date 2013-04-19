@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
-using Alaris.API.Crypt;
 using Alaris.Framework.Commands;
+using Alaris.Framework.Crypt;
 using Alaris.Framework.Database;
 using Alaris.Framework.Extensions;
 

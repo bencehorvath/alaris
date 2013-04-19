@@ -77,6 +77,7 @@
       <HintPath>..\..\Dependencies\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -87,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddonManager.cs" />
+    <Compile Include="Admin.cs" />
     <Compile Include="AlarisBase.cs" />
     <Compile Include="CommandLine\CLI.cs" />
     <Compile Include="Commands\AlarisCommandWrapper.cs" />
@@ -95,8 +97,14 @@
     <Compile Include="Commands\CommandManager.cs" />
     <Compile Include="Commands\CommandPermission.cs" />
     <Compile Include="Commands\ParameterizedAlarisCommand.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Crypt\HashAlgorithm.cs" />
+    <Compile Include="Crypt\IEncrpytionAlgorithm.cs" />
+    <Compile Include="Crypt\Rijndael.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
     <Compile Include="Extensions\ReflectionExtensions.cs" />
+    <Compile Include="IAlarisAddon.cs" />
+    <Compile Include="IAlarisComponent.cs" />
     <Compile Include="Maths\Algorithms\QuickSort.cs" />
     <Compile Include="Maths\MathFunctions.cs" />
     <Compile Include="Maths\Types\AutoSortedArray.cs" />
@@ -129,10 +137,6 @@
     <ProjectReference Include="..\..\Components\Alaris.LuaEngine\Alaris.LuaEngine.csproj">
       <Project>{D6E5F82D-5385-45AD-A0D1-1091EC6A5393}</Project>
       <Name>Alaris.LuaEngine</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Alaris.API\Alaris.API.csproj">
-      <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
-      <Name>Alaris.API</Name>
     </ProjectReference>
     <ProjectReference Include="..\Alaris.Irc\Alaris.Irc.csproj">
       <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>

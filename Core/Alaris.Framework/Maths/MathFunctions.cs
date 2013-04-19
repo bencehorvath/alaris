@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Alaris.Mathematics.Algorithms;
+using Alaris.Framework.Maths.Algorithms;
 
-namespace Alaris.Mathematics
+namespace Alaris.Framework.Maths
 {
     /// <summary>
     /// Provides simple mathematic methods.

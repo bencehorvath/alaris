@@ -214,7 +214,7 @@ namespace Alaris.Framework.Commands
                 if (parameters.Count != 0 && !handler.IsParameterized)
                     return;
 
-                if (perm == CommandPermission.Admin && !Utilities.IsAdmin(user))
+                if (perm == CommandPermission.Admin && !Utility.IsAdmin(user))
                     return;
 
                 Log.Info("The handler {0} parameterized. It is about to be called with {1} params",

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Alaris.API
+namespace Alaris.Framework
 {
     /// <summary>
     /// Class used to store information about IRC admins.

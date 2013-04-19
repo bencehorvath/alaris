@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using Alaris.Irc;
 
-namespace Alaris.API
+namespace Alaris.Framework
 {
     /// <summary>
     /// Another attempt to implement a plugin interface.
     /// </summary>
-    public interface IAlarisAddon
+    public interface IAlarisAddon : IAlarisComponent
     {
         /// <summary>
         /// Creates the addon.

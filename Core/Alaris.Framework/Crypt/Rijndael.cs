@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Alaris.API.Crypt
+namespace Alaris.Framework.Crypt
 {
     /// <summary>
     /// Implementation of the secure Rijndael algorithm (also known as the AES encryption)

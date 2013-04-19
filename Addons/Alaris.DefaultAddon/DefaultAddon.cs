@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Alaris.API;
 using Alaris.Framework;
 using Alaris.Irc;
 
@@ -10,6 +9,12 @@ namespace Alaris.DefaultAddon
     {
         private Connection _connection;
         private List<string> _channels;
+        private readonly Guid _guid;
+
+        public DefaultAddon()
+        {
+            _guid = new Guid("{201C2C12-181B-46E5-854E-CC19893C6614}");
+        }
 
         #region Implementation of IAlarisAddon
 
@@ -32,10 +37,6 @@ namespace Alaris.DefaultAddon
 
                                                                       });
         }
-
-        #endregion
-
-        #region Implementation of IAlarisAddon
 
         /// <summary>
         /// Destroys the addon, releasing all resources.
@@ -70,5 +71,10 @@ namespace Alaris.DefaultAddon
         }
 
         #endregion
+
+        public Guid GetGuid()
+        {
+            return _guid;
+        }
     }
 }

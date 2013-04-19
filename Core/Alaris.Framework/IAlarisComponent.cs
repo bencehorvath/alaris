@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Alaris.API
+namespace Alaris.Framework
 {
     /// <summary>
     /// Interface which forces a component to have a GUID.

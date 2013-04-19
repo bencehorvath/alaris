@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Alaris.Mathematics.Algorithms
+namespace Alaris.Framework.Maths.Algorithms
 {
     /// <summary>
     /// Provides a generic implementation of the quick sort algorithm

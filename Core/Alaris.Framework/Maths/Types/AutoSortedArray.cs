@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
-namespace Alaris.Mathematics.Types
+namespace Alaris.Framework.Maths.Types
 {
     /// <summary>
     /// An array which automatically sorts itself.
