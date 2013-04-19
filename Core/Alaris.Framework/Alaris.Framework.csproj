@@ -10,9 +10,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Alaris.Framework</RootNamespace>
     <AssemblyName>Alaris.Framework</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,6 +48,7 @@
     <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
     <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
     <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -55,9 +57,15 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL" />
+    <Reference Include="NLog">
+      <HintPath>..\..\packages\NLog.2.0.1.2\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extended">
+      <HintPath>..\..\packages\NLog.Extended.2.0.1.2\lib\net40-full\NLog.Extended.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
@@ -89,6 +97,9 @@
     <Compile Include="Commands\ParameterizedAlarisCommand.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
     <Compile Include="Extensions\ReflectionExtensions.cs" />
+    <Compile Include="Maths\Algorithms\QuickSort.cs" />
+    <Compile Include="Maths\MathFunctions.cs" />
+    <Compile Include="Maths\Types\AutoSortedArray.cs" />
     <Compile Include="ScriptManager.cs" />
     <Compile Include="Services\Remote\IRemote.cs" />
     <Compile Include="Services\Remote\Remoter.cs" />
@@ -115,10 +126,6 @@
     <Compile Include="Config\AlarisConfig.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Components\Alaris.Calculator\Alaris.Calculator.csproj">
-      <Project>{B11FC091-0F63-4663-82DB-23F592A6596D}</Project>
-      <Name>Alaris.Calculator</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Components\Alaris.LuaEngine\Alaris.LuaEngine.csproj">
       <Project>{D6E5F82D-5385-45AD-A0D1-1091EC6A5393}</Project>
       <Name>Alaris.LuaEngine</Name>
@@ -127,21 +134,16 @@
       <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
       <Name>Alaris.API</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Alaris.Functional\Alaris.Functional.fsproj">
-      <Project>{6B0199AD-669F-4FF7-B79E-1BCC80447B06}</Project>
-      <Name>Alaris.Functional</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Alaris.Irc\Alaris.Irc.csproj">
       <Project>{EFCDD130-C3FA-4560-A936-69F683AE071F}</Project>
       <Name>Alaris.Irc</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Alaris.Mathematics\Alaris.Mathematics.csproj">
-      <Project>{E428DA77-9439-4E3B-9619-21DFDBA206DC}</Project>
-      <Name>Alaris.Mathematics</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Xml\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

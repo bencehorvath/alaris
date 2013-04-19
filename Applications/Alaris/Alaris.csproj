@@ -8,11 +8,10 @@
     <ProjectGuid>{827FC720-BEE2-4357-B29F-0C2BDF51472D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AssemblyName>Alaris</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Description>Alaris IRC Bot</Description>
     <RootNamespace>Alaris</RootNamespace>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>Alaris.Entry</StartupObject>
     <CodePage>65001</CodePage>
     <ReleaseVersion>2.3</ReleaseVersion>
     <TargetFrameworkProfile>
@@ -48,6 +47,7 @@
     <DocumentationFile>..\..\Run\Debug\Documentation\Alaris.XML</DocumentationFile>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -56,6 +56,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -84,6 +85,7 @@
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -98,6 +100,7 @@
     <Optimize>true</Optimize>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <DocumentationFile>bin\x64\Release\Alaris.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -116,7 +119,12 @@
     <Reference Include="Microsoft.JScript" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualC" />
-    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL" />
+    <Reference Include="NLog">
+      <HintPath>..\..\packages\NLog.2.0.1.2\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extended">
+      <HintPath>..\..\packages\NLog.Extended.2.0.1.2\lib\net40-full\NLog.Extended.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
     </Reference>
@@ -151,10 +159,6 @@
       <Project>{580A88E6-4327-4F70-AE9C-4A16B2DB8B94}</Project>
       <Name>Alaris.API</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Components\Alaris.Calculator\Alaris.Calculator.csproj">
-      <Project>{B11FC091-0F63-4663-82DB-23F592A6596D}</Project>
-      <Name>Alaris.Calculator</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Core\Alaris.Framework\Alaris.Framework.csproj">
       <Project>{9C146FF3-1908-431F-AB7C-25AD9D0AA0B4}</Project>
       <Name>Alaris.Framework</Name>
@@ -167,10 +171,6 @@
       <Project>{D6E5F82D-5385-45AD-A0D1-1091EC6A5393}</Project>
       <Name>Alaris.LuaEngine</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core\Alaris.Mathematics\Alaris.Mathematics.csproj">
-      <Project>{E428DA77-9439-4E3B-9619-21DFDBA206DC}</Project>
-      <Name>Alaris.Mathematics</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Alaris.snk.pfx" />
@@ -181,9 +181,13 @@
     <None Include="app.config" />
     <None Include="bin\Debug\alaris.conf" />
     <None Include="Doxyfile" />
-    <None Include="NLog.config">
+    <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

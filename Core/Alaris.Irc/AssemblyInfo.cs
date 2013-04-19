@@ -11,9 +11,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Alaris IRC Library")]
 [assembly: AssemblyDescription("An IRC client library used by Alaris (based) bots.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Twl Productions")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Alaris")]
-[assembly: AssemblyCopyright("Copyright (c) 2010 Twl")]
+[assembly: AssemblyCopyright("Copyright (C) 2013 Bence Horváth <horvathb@me.com>")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
 
@@ -28,7 +28,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("4.0.0.*")]
+[assembly: AssemblyVersion("7.0.0.*")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 
@@ -58,5 +58,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDelaySign(false)]
 [assembly: AssemblyKeyFile("")]
 [assembly: AssemblyKeyName("")]
-[assembly: NeutralResourcesLanguageAttribute("en-GB")]
+[assembly: NeutralResourcesLanguageAttribute("en")]
 [assembly: GuidAttribute("646F285D-1367-4A4C-B423-58A6FBB9F33B")]
+[assembly: AssemblyFileVersionAttribute("7.0.0.0")]

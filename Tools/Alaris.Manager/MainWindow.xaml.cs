@@ -28,15 +28,15 @@ namespace Alaris.Manager
             var diffHeight = Height - e.PreviousSize.Height;
             var diffWidth = Width - e.PreviousSize.Width;
 
-            tabbedView.Width += (diffWidth);
-            tabbedView.Height += (diffHeight);
+            TabbedView.Width += (diffWidth);
+            TabbedView.Height += (diffHeight);
         }
 
         private void ConnectButtonClick(object sender, RoutedEventArgs e)
         {           
-            if(string.IsNullOrEmpty(serverBox.Text) || string.IsNullOrEmpty(passwordBox.Password))
+            if(string.IsNullOrEmpty(ServerBox.Text) || string.IsNullOrEmpty(PasswordBox.Password))
             {
-                MessageBox.Show("You didn't fill in the required fields.", "Error!",
+                System.Windows.MessageBox.Show("You didn't fill in the required fields.", "Error!",
                                     MessageBoxButton.OK,
                                     MessageBoxImage.Error);
                 return;
@@ -44,8 +44,8 @@ namespace Alaris.Manager
 
             try
             {
-                _server = serverBox.Text;
-                _password = passwordBox.Password;
+                _server = ServerBox.Text;
+                _password = PasswordBox.Password;
                 _rmc = new RemoteClient("BasicHttpBinding_IRemote",
                                            new EndpointAddress(_server));
 
@@ -53,7 +53,7 @@ namespace Alaris.Manager
 
                 if(!_rmc.Authorize(Utilities.MD5String(_password)))
                 {
-                    MessageBox.Show("Invalid password entered!", "Error!", MessageBoxButton.OK,
+                    System.Windows.MessageBox.Show("Invalid password entered!", "Error!", MessageBoxButton.OK,
                                     MessageBoxImage.Error);
 
                     _rmc.Close();
@@ -66,7 +66,7 @@ namespace Alaris.Manager
             }
             catch(Exception x)
             {
-                MessageBox.Show(string.Format("Something unexpexted happened! Please report this to devs!{0}{1}---------------------------------------------------------------------------{2}{3}", 
+                System.Windows.MessageBox.Show(string.Format("Something unexpexted happened! Please report this to devs!{0}{1}---------------------------------------------------------------------------{2}{3}", 
                     Environment.NewLine, 
                     Environment.NewLine, 
                     Environment.NewLine, 
@@ -78,9 +78,9 @@ namespace Alaris.Manager
                 return;
             }
 
-            messageTab.IsEnabled = true;
+            MessageTab.IsEnabled = true;
 
-            MessageBox.Show("Connection successful!", "Success!", MessageBoxButton.OK, MessageBoxImage.Information);
+            System.Windows.MessageBox.Show("Connection successful!", "Success!", MessageBoxButton.OK, MessageBoxImage.Information);
             _connected = true;
         }
 
@@ -89,12 +89,12 @@ namespace Alaris.Manager
             if (!_connected)
                 return;
 
-            var chan = channelBox.Text;
-            var msg = messageBox.Text;
+            var chan = ChannelBox.Text;
+            var msg = MessageBox.Text;
 
             if(string.IsNullOrEmpty(chan) || string.IsNullOrEmpty(msg))
             {
-                MessageBox.Show("You didn't fill in the required fields.", "Error!",
+                System.Windows.MessageBox.Show("You didn't fill in the required fields.", "Error!",
                                     MessageBoxButton.OK,
                                     MessageBoxImage.Error);
                 return;
@@ -105,7 +105,7 @@ namespace Alaris.Manager
 
             if(!Rfc2812Util.IsValidChannelName(chan))
             {
-                MessageBox.Show("Invalid channel name!", "Error!",
+                System.Windows.MessageBox.Show("Invalid channel name!", "Error!",
                                     MessageBoxButton.OK,
                                     MessageBoxImage.Error);
                 return;
@@ -113,10 +113,10 @@ namespace Alaris.Manager
 
             _rmc.PublicMessage(chan, msg);
 
-            MessageBox.Show("Message sent!", "Success!", MessageBoxButton.OK,
+            System.Windows.MessageBox.Show("Message sent!", "Success!", MessageBoxButton.OK,
                                     MessageBoxImage.Asterisk);
 
-            messageBox.Text = string.Empty;
+            MessageBox.Text = string.Empty;
 
         }
 
@@ -146,7 +146,7 @@ namespace Alaris.Manager
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            messageTab.IsEnabled = false;
+            MessageTab.IsEnabled = false;
         }
 
         private void MessageBoxKeyDown(object sender, KeyEventArgs e)

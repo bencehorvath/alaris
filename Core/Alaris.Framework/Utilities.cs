@@ -13,7 +13,6 @@ using System.Text.RegularExpressions;
 using Alaris.API;
 using Alaris.Framework.CommandLine;
 using Alaris.Framework.Database;
-using Alaris.Functional;
 using Alaris.Irc;
 using NLog;
 

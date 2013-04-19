@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("Alaris.Manager")]
 [assembly: AssemblyDescription("Alaris Remote Manager")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Twl Productions")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Alaris.Manager")]
-[assembly: AssemblyCopyright("Copyright © Twl 2010")]
+[assembly: AssemblyCopyright("Copyright (C) 2013 Bence Horváth <horvathb@me.com>")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -51,5 +51,7 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.2.1.0")]
-[assembly: AssemblyFileVersion("1.2.1.0")]
+[assembly: AssemblyVersion("2.0.0.0")]
+[assembly: AssemblyFileVersion("2.0.0.0")]
+[assembly: NeutralResourcesLanguageAttribute("en")]
+[assembly: GuidAttribute("D3DE577D-FEEB-428D-9A7F-29333CD345B2")]

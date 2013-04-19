@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -8,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Alaris.LuaEngine")]
 [assembly: AssemblyDescription("Alaris bot's Lua interpreter engine.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Twl Productions")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Alaris")]
-[assembly: AssemblyCopyright("Copyright © Twl 2010")]
+[assembly: AssemblyCopyright("Copyright (C) 2013 Bence Horváth <horvathb@me.com>")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +33,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.0.*")]
-[assembly: AssemblyFileVersion("3")]
+[assembly: AssemblyVersion("3.5.*")]
+[assembly: AssemblyFileVersion("3.5")]
+[assembly: NeutralResourcesLanguageAttribute("en")]

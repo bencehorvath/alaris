@@ -2,11 +2,7 @@ using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Alaris.Calculator;
-using Alaris.Calculator.lexer;
 using System.IO;
-using Alaris.Calculator.node;
-using Alaris.Calculator.parser;
 using Alaris.Framework;
 using Alaris.Irc;
 using Alaris.Mathematics.Types;
@@ -50,39 +46,6 @@ namespace Alaris
                                           }
                                       });
 
-            if(msg.StartsWith("@calc ", StringComparison.InvariantCultureIgnoreCase) || msg.StartsWith("@c ", StringComparison.InvariantCultureIgnoreCase))
-            {
-                if (msg.StartsWith("@calc ", StringComparison.InvariantCultureIgnoreCase)) msg = msg.Replace("@calc ", string.Empty);
-                else if (msg.StartsWith("@c ", StringComparison.InvariantCultureIgnoreCase)) msg = msg.Replace("@c ", string.Empty);
-
-                using (var reader = new StringReader(msg))
-                {
-                    var lexer = new Lexer(reader);
-
-                    var parser = new Parser(lexer);
-
-                    Start ast;
-
-                    try {
-                        ast = parser.Parse(); }
-                    catch(Exception x)
-                    {
-                        Log.Error("Math", x.ToString());
-                        return;
-                    }
-
-                    var printer = new AstPrinter();
-                    ast.Apply(printer);
-                    printer.Dispose();
-
-                    var calc = new AstCalculator();
-                    ast.Apply(calc);
-
-                    SendMsg(chan, calc.CalculatedResult.ToString());
-                    return;
-                   
-                }               
-            }
 
             // Lua code runner.
 
