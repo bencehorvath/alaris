@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E06AA091-0749-4CBC-AE83-BA3866E024F5}"
 	ProjectSection(SolutionItems) = preProject
 		basic.lua = basic.lua
@@ -18,9 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Application
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Addons", "Addons", "{03AB2DAF-7B78-4BFA-9BF7-5F59C2B9249F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.DefaultAddon", "Addons\Alaris.DefaultAddon\Alaris.DefaultAddon.csproj", "{062B6A8C-F14A-4754-81E0-66BF1E557CEF}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{15FD5E95-8FF6-4EDE-988F-0580A11DCD1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.DefaultAddon", "Addons\Alaris.DefaultAddon\Alaris.DefaultAddon.csproj", "{062B6A8C-F14A-4754-81E0-66BF1E557CEF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alaris.Manager", "Tools\Alaris.Manager\Alaris.Manager.csproj", "{0959F9F6-0D07-4482-9825-CEF2F1B03740}"
 EndProject
