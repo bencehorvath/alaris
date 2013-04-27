@@ -60,19 +60,19 @@ namespace Alaris
 
             if(msg.Equals("@UnloadPlugins", StringComparison.InvariantCultureIgnoreCase))
             {
-                InstanceHolder<AlarisBot>.Instance.UnloadAll();
+                UnloadAll();
                 SendMsg(chan, "Done.");
             }
 
             if(msg.Equals("@LoadPlugins", StringComparison.InvariantCultureIgnoreCase))
             {
-                InstanceHolder<AlarisBot>.Instance.LoadAll();
+                LoadAll();
                 SendMsg(chan, "Done.");
             }
 
             if(msg.Equals("@ReloadPlugins", StringComparison.InvariantCultureIgnoreCase))
             {
-                InstanceHolder<AlarisBot>.Instance.ReloadAll();
+                ReloadAll();
                 SendMsg(chan, "Done.");
             }
 

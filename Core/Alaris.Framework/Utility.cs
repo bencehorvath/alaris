@@ -181,31 +181,12 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///     Converts ticks to miliseconds.
-        /// </summary>
-        /// <param name="ticks"></param>
-        /// <returns></returns>
-        public static int ToMilliSecondsInt(int ticks)
-        {
-            return ticks/TicksPerSecond;
-        }
-
-        /// <summary>
         ///     Gets the system uptime.
         /// </summary>
         /// <returns>the system uptime in milliseconds</returns>
         public static uint GetSystemTime()
         {
             return (uint) Environment.TickCount;
-        }
-
-        /// <summary>
-        ///     Gets the time since the Unix epoch.
-        /// </summary>
-        /// <returns>the time since the unix epoch in seconds</returns>
-        public static uint GetEpochTime()
-        {
-            return (uint) ((DateTime.UtcNow.Ticks - TicksSince1970)/TimeSpan.TicksPerSecond);
         }
 
         /// <summary>
@@ -228,54 +209,9 @@ namespace Alaris.Framework
             return UnixTimeStart.AddSeconds(seconds);
         }
 
-        /// <summary>
-        ///     Gets the UTC time from millis.
-        /// </summary>
-        /// <param name="millis">The millis.</param>
-        /// <returns></returns>
-        public static DateTime GetUTCTimeMillis(long millis)
-        {
-            return UnixTimeStart.AddMilliseconds(millis);
-        }
-
-        /// <summary>
-        ///     Gets the system uptime.
-        /// </summary>
-        /// <remarks>
-        ///     Even though this returns a long, the original value is a 32-bit integer,
-        ///     so it will wrap back to 0 after approximately 49 and half days of system uptime.
-        /// </remarks>
-        /// <returns>the system uptime in milliseconds</returns>
-        public static long GetSystemTimeLong()
-        {
-            return (uint) Environment.TickCount;
-        }
-
-        /// <summary>
-        ///     Gets the time between the Unix epich and a specific <see cref="DateTime">time</see>.
-        /// </summary>
-        /// <returns>
-        ///     the time between the unix epoch and the supplied <see cref="DateTime">time</see> in seconds
-        /// </returns>
-        public static uint GetEpochTimeFromDT()
-        {
-            return GetEpochTimeFromDT(DateTime.Now);
-        }
-
-        /// <summary>
-        ///     Gets the time between the Unix epich and a specific <see cref="DateTime">time</see>.
-        /// </summary>
-        /// <param name="time">the end time</param>
-        /// <returns>
-        ///     the time between the unix epoch and the supplied <see cref="DateTime">time</see> in seconds
-        /// </returns>
-        public static uint GetEpochTimeFromDT(DateTime time)
-        {
-            return (uint) ((time.Ticks - TicksSince1970)/10000000L);
-        }
-
         #endregion
 
+        #region Objects
         /// <summary>
         ///     Swaps one reference with another atomically.
         /// </summary>
@@ -308,64 +244,14 @@ namespace Alaris.Framework
         }
 
         /// <summary>
-        ///     Moves memory from one array to another.
-        /// </summary>
-        /// <param name="src">the pointer to the source array</param>
-        /// <param name="srcIndex">the index to read from in the source array</param>
-        /// <param name="dest">the destination array</param>
-        /// <param name="destIndex">the index to write to in the destination array</param>
-        /// <param name="len">the number of bytes to move</param>
-        public static unsafe void MoveMemory(byte* src, int srcIndex, byte[] dest, int destIndex, int len)
-        {
-            if (len != 0)
-            {
-                src += srcIndex;
-
-                fixed (byte* destRef = &dest[destIndex])
-                {
-                    byte* pDest = destRef;
-
-                    while (len-- > 0)
-                    {
-                        *pDest++ = *src++;
-                    }
-                }
-            }
-        }
-
-        /// <summary>
-        ///     Moves memory from one array to another.
-        /// </summary>
-        /// <param name="src">the source array</param>
-        /// <param name="srcIndex">the index to read from in the source array</param>
-        /// <param name="dest">the pointer to the destination array</param>
-        /// <param name="destIndex">the index to write to in the destination array</param>
-        /// <param name="len">the number of bytes to move</param>
-        public static unsafe void MoveMemory(byte[] src, int srcIndex, byte* dest, int destIndex, int len)
-        {
-            if (len != 0)
-            {
-                dest += destIndex;
-
-                fixed (byte* srcRef = &src[srcIndex])
-                {
-                    byte* pSrc = srcRef;
-
-                    while (len-- > 0)
-                    {
-                        *dest++ = *pSrc++;
-                    }
-                }
-            }
-        }
-
-        /// <summary>
         ///     Cast one thing into another
         /// </summary>
         public static T Cast<T>(object obj)
         {
             return (T) Convert.ChangeType(obj, typeof (T));
         }
+
+        #endregion
 
         #region String Building / Verbosity
 
@@ -843,20 +729,6 @@ namespace Alaris.Framework
         #endregion
 
         /// <summary>
-        ///     Measures how long the given func takes to be executed repeats times
-        /// </summary>
-        public static void Measure(string name, int repeats, Action action)
-        {
-            var start = DateTime.Now;
-            for (int i = 0; i < repeats; i++)
-            {
-                action();
-            }
-            var span = DateTime.Now - start;
-            Console.WriteLine(name + " (" + repeats + " time(s)) took: " + span);
-        }
-
-        /// <summary>
         ///     Gets the biggest value of a numeric enum
         /// </summary>
         public static T GetMaxEnum<T>()
@@ -865,99 +737,6 @@ namespace Alaris.Framework
             return values.Max();
         }
 
-        #region Sets of set bits
-
-        /// <summary>
-        ///     Creates and returns an array of all indices that are set within the given flag field.
-        ///     eg. {11000011, 11000011} would result into an array containing: 0,1,6,7,8,9,14,15
-        /// </summary>
-        public static uint[] GetSetIndices(uint[] flagsArr)
-        {
-            var indices = new List<uint>();
-            foreach (var flags in flagsArr)
-            {
-                GetSetIndices(indices, flags);
-            }
-            return indices.ToArray();
-        }
-
-        /// <summary>
-        ///     Creates and returns an array of all indices that are set within the given flag field.
-        ///     eg. 11000011 would result into an array containing: 0,1,6,7
-        /// </summary>
-        public static uint[] GetSetIndices(uint flags)
-        {
-            var indices = new List<uint>();
-            GetSetIndices(indices, flags);
-            return indices.ToArray();
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="flags">The flags.</param>
-        /// <returns></returns>
-        public static T[] GetSetIndicesEnum<T>(T flags)
-        {
-            var indices = new List<uint>();
-            var uintFlags = (uint) Convert.ChangeType(flags, typeof (uint));
-            GetSetIndices(indices, uintFlags);
-            if (indices.Count == 0)
-            {
-                object box = (uint) 0;
-                return new[] {(T) box};
-            }
-
-            var arr = new T[indices.Count];
-            for (var i = 0; i < indices.Count; i++)
-            {
-                var index = indices[i];
-                object box = (uint) (1 << (int) (index));
-                arr[i] = (T) box;
-            }
-            return arr;
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <param name="indices">The indices.</param>
-        /// <param name="flags">The flags.</param>
-        public static void GetSetIndices(List<uint> indices, uint flags)
-        {
-            for (uint i = 0; i < 32; i++)
-            {
-                if ((flags & 1 << (int) i) != 0)
-                {
-                    indices.Add(i);
-                }
-            }
-        }
-
-        /// <summary>
-        ///     Creates and returns an array of all indices that are set within the given flag field.
-        ///     eg. 11000011 would result into an array containing: 0,1,6,7
-        /// </summary>
-        public static T[] GetSetIndices<T>(uint flags)
-        {
-            var indices = new List<T>(5);
-            for (uint i = 0; i < 32; i++)
-            {
-                if ((flags & 1 << (int) i) != 0)
-                {
-                    if (typeof (T).IsEnum)
-                    {
-                        indices.Add((T) Enum.Parse(typeof (T), i.ToString()));
-                    }
-                    else
-                    {
-                        indices.Add((T) Convert.ChangeType(i, typeof (T)));
-                    }
-                }
-            }
-            return indices.ToArray();
-        }
-
-        #endregion
 
         /// <summary>
         ///     Creates the enum array.
@@ -985,13 +764,6 @@ namespace Alaris.Framework
                 });
             timer.Change(millis, Timeout.Infinite);
             return timer;
-        }
-
-        /// <summary>
-        /// </summary>
-        public static bool IsInRange(float sqDistance, float max)
-        {
-            return /*sqDistance != 0 &&*/ sqDistance <= max*max;
         }
 
         #region Evaluate etc
@@ -1101,37 +873,12 @@ namespace Alaris.Framework
             var addresses = Dns.GetHostAddresses(input);
 
             // for now only do Ipv4 address (apparently the wow client doesnt support Ipv6 yet)
-            addr = addresses.Where(address => address.AddressFamily == AddressFamily.InterNetwork).FirstOrDefault();
+            addr = addresses.FirstOrDefault(address => address.AddressFamily == AddressFamily.InterNetwork);
 
             return addr ?? IPAddress.Loopback;
         }
 
         #region Format
-
-        /// <summary>
-        ///     Formats the money.
-        /// </summary>
-        /// <param name="money">The money.</param>
-        /// <returns></returns>
-        public static string FormatMoney(uint money)
-        {
-            var str = "";
-            if (money >= 10000)
-            {
-                str += (money/10000) + "g ";
-                money = money%10000;
-            }
-            if (money >= 100)
-            {
-                str += (money/100) + "s ";
-                money = money%100;
-            }
-            if (money > 0)
-            {
-                str += money + "c";
-            }
-            return str;
-        }
 
         /// <summary>
         ///     Formats the specified time.
@@ -1142,17 +889,6 @@ namespace Alaris.Framework
         {
             return String.Format("{0}{1:00}h {2:00}m {3:00}s", time.TotalDays > 0 ? (int) time.TotalDays + "d " : "",
                                  time.Hours, time.Minutes, time.Seconds);
-        }
-
-        /// <summary>
-        ///     Formats the millis.
-        /// </summary>
-        /// <param name="time">The time.</param>
-        /// <returns></returns>
-        public static string FormatMillis(this DateTime time)
-        {
-            return String.Format("{0:00}h {1:00}m {2:00}s {3:00}ms", time.Hour, time.Minute,
-                                 time.Second, time.Millisecond);
         }
 
         #endregion
@@ -1428,17 +1164,20 @@ namespace Alaris.Framework
         /// <returns></returns>
         public static string GetStringRepresentation(object val)
         {
-            if (val is string)
+            var s = val as string;
+            if (s != null)
             {
-                return (string) val;
+                return s;
             }
-            if (val is ICollection)
+            var collection = val as ICollection;
+            if (collection != null)
             {
-                return ((ICollection) val).ToStringCol(", ");
+                return collection.ToStringCol(", ");
             }
-            if (val is IEnumerable)
+            var enumerable = val as IEnumerable;
+            if (enumerable != null)
             {
-                return ((IEnumerable) val).ToString(", ");
+                return enumerable.ToString(", ");
             }
             if (val is TimeSpan)
             {
@@ -1462,17 +1201,6 @@ namespace Alaris.Framework
         }
 
         #endregion
-
-        /// <summary>
-        ///     Creates a long.
-        /// </summary>
-        /// <param name="low">The low.</param>
-        /// <param name="high">The high.</param>
-        /// <returns></returns>
-        public static long MakeLong(int low, int high)
-        {
-            return (uint) low | ((long) high << 32);
-        }
 
         private static readonly Random Rnd = new Random();
         private static readonly List<Admin> Admins = new List<Admin>();
@@ -1553,7 +1281,7 @@ namespace Alaris.Framework
         /// <summary>
         /// The Bot operator.
         /// </summary>
-        public static Alaris.Framework.Config.Operator Operator { get; set; }
+        public static Config.Operator Operator { get; set; }
 
         /// <summary>
         ///     Sends system stats using the specified connection.
@@ -1570,13 +1298,13 @@ namespace Alaris.Framework
             var username = Environment.UserName;
 
             var os = Environment.OSVersion.ToString();
-            var mem = GC.GetTotalMemory(true)/1024/1024;
-            var gen = GC.GetGeneration(connection);
+            var mem = Process.GetCurrentProcess().PrivateMemorySize64/1024/1024;
+            
 
 
             connection.Sender.PublicMessage(chan,
                                             IrcConstants.Bold + "Bot version: " + IrcConstants.Normal +
-                                            BotVersion);
+                                            BotVersion + " (running on: " + os + ")");
             connection.Sender.PublicMessage(chan,
                                             IrcConstants.Bold + "Thread count: " + IrcConstants.Normal +
                                             Process.GetCurrentProcess().Threads.Count);
@@ -1586,19 +1314,19 @@ namespace Alaris.Framework
 
             if (mem < 60)
                 connection.Sender.PublicMessage(chan,
-                                                String.Format("{0}Memory allocated: {1}{2}{3} MB (gen: {4})",
+                                                String.Format("{0}Memory used: {1}{2}{3} MB",
                                                               IrcConstants.Bold, IrcConstants.Normal, IrcConstants.Green,
-                                                              mem, gen));
+                                                              mem));
             else if (mem > 60 && mem < 80)
                 connection.Sender.PublicMessage(chan,
-                                                String.Format("{0}Memory allocated: {1}{2}{3} MB (gen: {4})",
+                                                String.Format("{0}Memory used: {1}{2}{3} MB",
                                                               IrcConstants.Bold, IrcConstants.Normal, IrcConstants.Olive,
-                                                              mem, gen));
+                                                              mem));
             else
                 connection.Sender.PublicMessage(chan,
-                                                String.Format("{0}Memory allocated: {1}{2}{3} MB (gen: {4})",
+                                                String.Format("{0}Memory used: {1}{2}{3} MB",
                                                               IrcConstants.Bold, IrcConstants.Normal, IrcConstants.Red,
-                                                              mem, gen));
+                                                              mem));
         }
 
         /// <summary>
@@ -1643,11 +1371,15 @@ namespace Alaris.Framework
         /// </returns>
         private static string GetCpuId()
         {
+#if !__MonoCS__
             var mos = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_Processor");
 
             return
                 (from ManagementObject mo in mos.Get() select (Regex.Replace(Convert.ToString(mo["Name"]), @"\s+", " ")))
                     .FirstOrDefault();
+#else
+            return "Not available.";
+#endif
         }
 
         /// <summary>

@@ -1,27 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Alaris.Framework;
 using Alaris.Framework.Extensions;
 using Alaris.Irc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 
 namespace Alaris.Tests
 {
-    [TestClass]
-    public class BotTest
+    [TestFixture]
+    public class UtilityTests
     {
-        [TestMethod]
-        public void TestDefaultInstanceThroughHolder()
-        {
-            var uf = new UserInfo("test", "test", "test");
-            uf.SetAsInstance();
 
-            Assert.IsNotNull(InstanceHolder<UserInfo>.Instance, "The instance holder's value is null.");
-            Assert.AreEqual(uf, InstanceHolder<UserInfo>.Instance, "The value held is not equal to the one set.");
-        }
-
-        [TestMethod]
+        [Test]
         public void TestChannelListParsingAndExtracting()
         {
             var chanList = new List<string> {"#chan1", "#chan2", "#chan3"};
@@ -37,7 +29,48 @@ namespace Alaris.Tests
             }
         }
 
-        [TestMethod]
+        [Test]
+        public void TestDelayedFunctionCall()
+        {
+            var watch = new Stopwatch();
+            watch.Start();
+
+            Utility.Delay(500, () =>
+                {
+                    watch.Stop();
+                    Assert.GreaterOrEqual(watch.ElapsedMilliseconds, 500);
+                });
+        }
+
+        [Test]
+        public void TestMD5HashCalculation()
+        {
+            var references = new Dictionary<string, string>
+                {
+                    {"test1", "5a105e8b9d40e1329780d62ea2265d8a"},
+                    {"test2", "ad0234829205b9033196ba818f7a872b"},
+                    {"another test with spaces", "0c2e4d83f5b88e2e3cfc132ff616507b"},
+                    {"and numb3rs", "8b26572d1abbdc27ad43d9ef5aed3eae"}
+                };
+
+            foreach(var item in references)
+                Assert.AreEqual(Utility.MD5String(item.Key), item.Value);
+        }
+
+        [Test]
+        public void TestSafeExecutionMethod()
+        {
+            try
+            {
+                Utility.ExecuteSafely(() => { throw new Exception("test"); });
+            }
+            catch 
+            {
+                Assert.Fail("Exception thrown in safe context.");
+            }
+        }
+
+        [Test]
         public void TestChannelListParsingFilter()
         {
             var chanList = new List<string> { "#chan1", "#chan2", "@chan3" };
@@ -53,23 +86,24 @@ namespace Alaris.Tests
             }
         }
 
-        [TestMethod]
+        [Test]
         public void TestExtensionMetaCasting()
         {
-            var im = Int32.MaxValue;
+            const int im = Int32.MaxValue;
 
             var lm = im.Cast<long>();
 
             Assert.AreEqual(lm, im, "Cast value mismatch.");
-            Assert.IsInstanceOfType(lm, typeof(long));
-            Assert.IsInstanceOfType(im, typeof(int));
+            Assert.IsInstanceOf<long>(lm);
+            Assert.IsInstanceOf<int>(im);
+            
         }
 
-        [TestMethod]
+        [Test]
         public void TestIsNullExtensionAlsoOnStrings()
         {
             object bn = null;
-            object bnn = new object();
+            var bnn = new object();
 
             const string nos = "";
             var emps = string.Empty;
@@ -82,7 +116,7 @@ namespace Alaris.Tests
             Assert.IsFalse(noemps.IsNull());
         }
 
-        [TestMethod]
+        [Test]
         public void TestStringRelatedExtensions()
         {
             var sa = new[] {"this", "is", "to", "be", "one", "string"};
@@ -91,9 +125,10 @@ namespace Alaris.Tests
             var sspace = sa.ConcatenateWithSpaces();
             var scustom = sa.Concatenate(":");
 
-            Assert.AreEqual(snospace, "thisistobeonestring", true, "Default concat failed.");
-            Assert.AreEqual(sspace, "this is to be one string", true, "Space concat failed.");
-            Assert.AreEqual(scustom, "this:is:to:be:one:string", true, "Custom concat failed.");
+            
+            Assert.AreEqual(snospace, "thisistobeonestring", "Default concat failed.");
+            Assert.AreEqual(sspace, "this is to be one string", "Space concat failed.");
+            Assert.AreEqual(scustom, "this:is:to:be:one:string", "Custom concat failed.");
         }
 
 

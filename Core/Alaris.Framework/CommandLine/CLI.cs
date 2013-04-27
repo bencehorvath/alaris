@@ -42,7 +42,7 @@ namespace Alaris.Framework.CommandLine
 
         static CLI()
         {
-            _currentChannel = "#skullbot";
+            _currentChannel = "#twl";
             CLIThread = new Thread(Run) {Name = "CLI Thread"};
             ConsoleUser = new UserInfo("SysOp", "SysOp", "SysOp.Local.Host");
 

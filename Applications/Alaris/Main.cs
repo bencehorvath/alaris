@@ -20,7 +20,7 @@ namespace Alaris
             Console.WriteLine("Welcome to Alaris!");
             Console.WriteLine("Version: {0}", Utility.BotVersion);
             Console.WriteLine("You can safely use <Ctrl+C> to terminate the process.\n");
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
             
             var conf = "alaris.config.xml";
 
@@ -29,8 +29,8 @@ namespace Alaris
 
             if (!File.Exists(conf))
             {
-                Log.Warn("The required configuration file is not found!");
-                Thread.Sleep(3000);
+                Log.Error("The required configuration file is not found!");
+                Thread.Sleep(2000);
                 Log.Info("Terminating");
                 return;
             }

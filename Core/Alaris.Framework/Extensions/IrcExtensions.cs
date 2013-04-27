@@ -49,7 +49,7 @@ namespace Alaris.Framework.Extensions
         public static void JoinChannel(this string channel)
         {
             if(channel.IsValidChannelName())
-                InstanceHolder<AlarisBase>.Get().Connection.Sender.Join(channel);
+                AlarisBase.Instance.Connection.Sender.Join(channel);
         }
     }
 }

@@ -29,14 +29,19 @@ namespace Alaris.Framework
         private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         private readonly Connection _connection;
-        private readonly ScriptManager _scriptManager;
+        private ScriptManager _scriptManager;
         private bool _confdone;
         private readonly Server _server;
         private readonly byte _serverId;
 
 
         private readonly List<string> _channels = new List<string>();
-        private readonly CrashHandler _sCrashHandler;
+        private readonly CrashHandler _crashHandler;
+
+        /// <summary>
+        /// Gets the bot's crash handler instance.
+        /// </summary>
+        public CrashHandler CrashHandler { get { return _crashHandler; } }
 
         /// <summary>
         /// Guid of this instance.
@@ -84,13 +89,6 @@ namespace Alaris.Framework
         /// </summary>
         public string RemotePassword { get; private set; }
 
-        /// <summary>
-        ///   The bot's crash handler instance.
-        /// </summary>
-        public CrashHandler CrashHandler
-        {
-            get { return _sCrashHandler; }
-        }
 
         /// <summary>
         /// Gets the current locale.
@@ -180,16 +178,35 @@ namespace Alaris.Framework
 
             Log.Info("Initializing");
 
-
-
             var sw = new Stopwatch();
             sw.Start();
 
-            _sCrashHandler = new CrashHandler();
-            InstanceHolder<CrashHandler>.Set(_sCrashHandler);
+            _crashHandler = new CrashHandler();
 
-            
-            //var cargs = new ConnectionArgs(_nick, _server);
+            var addonInitializationTask = new Task(() =>
+                {
+                    if (AddonsEnabled)
+                    {
+                        Log.Info("Initializing AddonManager");
+                        AddonManager = new AddonManager();
+                        AddonManager.Initialize();
+                        AddonManager.LoadPluginsFromDirectory(AddonDirectory);
+                    }
+                });
+
+            var commandManagerInitializationTask = addonInitializationTask.ContinueWith(prev =>
+                {
+                    Log.Info("Setting up commands");
+                    CommandManager = new CommandManager {CommandPrefix = "@"};
+                    CommandManager.CreateMappings();
+                });
+
+            addonInitializationTask.Start();
+            Task.Factory.StartNew(() =>
+                {
+                    _scriptManager = new ScriptManager(_scriptsDir);
+                    _scriptManager.Run();
+                });
 
             Log.Info("Starting Identd");
             Identd.Start(_server.Nickname);
@@ -214,23 +231,10 @@ namespace Alaris.Framework
             Log.Info("Text encoding is {0}", _connection.TextEncoding.WebName);
             Log.Info("CTCP is enabled");
 
-            _scriptManager = new ScriptManager(_scriptsDir);
-            _scriptManager.Run();
-
-            if (AddonsEnabled)
-            {
-                Log.Info("Initializing AddonManager");
-                AddonManager = new AddonManager();
-                AddonManager.Initialize();
-                AddonManager.LoadPluginsFromDirectory(AddonDirectory);
-            }
-            
-            Log.Info("Setting up commands");
-            CommandManager = new CommandManager {CommandPrefix = "@"};
-            CommandManager.CreateMappings();
-
             SetupHandlers();
             Connect();
+            sw.Stop();
+            Log.Info("Startup time: {0} ms", sw.ElapsedMilliseconds);
         }
 
         /// <summary>
@@ -246,6 +250,7 @@ namespace Alaris.Framework
             try
             {
                 _connection.Connect();
+                
             }
             catch (Exception x)
             {

@@ -20,7 +20,7 @@ namespace Alaris
         public AlarisBot(AlarisConfig configuration)
             : base(configuration)
         {
-            this.SetAsInstance();
+
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Alaris
 
 
 
-        /// <summary>ddd
+        /// <summary>
         ///   Releases all used resources.
         /// </summary>
         public void Dispose()

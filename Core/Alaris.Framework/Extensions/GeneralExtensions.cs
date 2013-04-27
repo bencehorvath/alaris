@@ -129,7 +129,7 @@ namespace Alaris.Framework.Extensions
                 return;
 
             foreach(var msg in slist)
-                InstanceHolder<AlarisBase>.Get().SendMsg(channel, msg);
+                AlarisBase.Instance.SendMsg(channel, msg);
 
         }
 
@@ -159,7 +159,7 @@ namespace Alaris.Framework.Extensions
             if (snd.EndsWith(separator))
                 snd.Remove(snd.Length - separator.Length);
 
-            InstanceHolder<AlarisBase>.Get().SendMsg(channel, snd);
+            AlarisBase.Instance.SendMsg(channel, snd);
 
         }
 
